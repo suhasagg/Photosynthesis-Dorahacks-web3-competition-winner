@@ -65,7 +65,8 @@ Social tokens: The photosynthesis algorithm can be used to create and manage soc
 Supply chain management:
 Tracking of goods: The photosynthesis algorithm can be used to create a system for tracking goods through the supply chain, using liquid staking to generate rewards for participants who provide data or perform other tasks.
 
-# Management of inventory: The photosynthesis algorithm can be used to manage inventory and supply chain data, using liquid staking to incentivize participants to perform tasks related to inventory management.
+# Management of inventory: 
+The photosynthesis algorithm can be used to manage inventory and supply chain data, using liquid staking to incentivize participants to perform tasks related to inventory management.
 
 # Real estate:
 Tokenized real estate assets: The photosynthesis algorithm can be used to create tokenized real estate assets, which can be bought and sold like other digital assets. Liquid staking can be used to generate rewards for investors who hold these assets.
