@@ -84,6 +84,6 @@ Photosynthesis can be used in governance systems to optimize the distribution of
 
 Photosynthesis can be used to distribute tokens in a fair and efficient manner. With photosynthesis, tokens can be distributed based on staking activity or other metrics, which can help incentivize users to participate in the ecosystem and help distribute tokens in a more equitable way.
 
-#Network Security
+# Network Security
 
 Photosynthesis can be used to incentivize users to participate in network security. With photosynthesis, users can earn rewards for staking tokens, which can help secure the network and protect against attacks.
