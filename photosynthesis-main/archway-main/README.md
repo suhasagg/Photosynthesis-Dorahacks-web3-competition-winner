@@ -1,7 +1,6 @@
-![]([https://imgur.com/Os2PnLF])
-# Photosynthesis
+![image](https://imgur.com/Os2PnLF)
 
-Specification for the Presentation on Photosynthesis in Dapps:
+# Photosynthesis
 
 Title: Photosynthesis in Dapps: A Liquid Staking Solution for Archway
 
