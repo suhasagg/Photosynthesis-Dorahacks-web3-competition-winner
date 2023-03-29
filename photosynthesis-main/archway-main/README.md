@@ -1,4 +1,4 @@
-![](https://github.com/archway-network/archway/blob/main/banner.png)
+![]([https://imgur.com/Os2PnLF])
 # Photosynthesis
 
 Specification for the Presentation on Photosynthesis in Dapps:
