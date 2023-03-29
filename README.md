@@ -1,5 +1,7 @@
 # Photosynthesis-Dorahacks-web3-competition-winner
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0263121d427c4bc2aa2012ac97c2d2dd)](https://app.codacy.com/gh/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner?utm_source=github.com&utm_medium=referral&utm_content=suhasagg/Photosynthesis-Dorahacks-web3-competition-winner&utm_campaign=Badge_Grade)
+
 Detailed presentation -
 
 https://docs.google.com/presentation/d/1Q67YKZkqZuK9tCAeGU6eWeCkjPSlA1HS/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
