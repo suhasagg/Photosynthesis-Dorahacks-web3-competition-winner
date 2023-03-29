@@ -1,46 +1,40 @@
 ![](https://github.com/archway-network/archway/blob/main/banner.png)
-# Archway
+# Photosynthesis
 
-The core implementation of the Archway protocol leverages the [Cosmos SDK](https://cosmos.network) and [CosmWasm](https://cosmwasm.com) to reward validators and creators for their contributions to the network.
+Specification for the Presentation on Photosynthesis in Dapps:
 
-# Installation
+Title: Photosynthesis in Dapps: A Liquid Staking Solution for Archway
 
-## Install Golang
+Objective: To present a solution for Dapps to gain energy through liquid staking using the Archway chain and liquidity protocols.
 
-Go 1.18 is required for Archway.
+Outline:
+I. Introduction
+A. Definition of photosynthesis in Dapps context
+B. Revenue sources of Dapps in Archway
 
-If you haven't already, download and install Go. See the official [go.dev documentation](https://golang.org/doc/install). Make sure your `GOBIN` and `GOPATH` are setup.
+II. Liquid Staking for Dapps
+A. Staking revenue generation
+B. Benefits of restaking/autocompounding staking
+C. Applications of liquidity tokens
+D. Liquid staking strategy using epoch middleware
 
-## Get the Archway source code
+III. Liquid Staking for Archway
+A. Revenue generation for Archway
+B. Key value store for epoch information
+C. Types of epoch intervals
+D. Before and after epoch start hooks
 
-Retrieve the source code from the official [archway-network/archway](https://github.com/archway-network/archway) GitHub repository.
+IV. Airdrops for Dapps
+A. Additional source of revenue
+B. Claiming vesting or free amount
+C. Token expiration and community pool
 
-```
-git clone https://github.com/archway-network/archway
-cd archway
-git checkout main
-```
+V. Staking and Reinvestment Steps
+A. Staking every 6 hours in 3 epochs
+B. Auto-compounding rewards
+C. Transfer and delegation of tokens
+D. Withdrawal of rewards and creation of new DR
 
-## Build the Archway binary
-
-You can build with:
-
-```
-make install
-```
-
-This command installs the `archwayd` to your `GOPATH`.
-
-## Dockerized
-
-A docker image is provided to help with test setups. 
-
-To build a docker image:
-
-```
-docker build -t archwaynetwork/archwayd:latest .
-```
-
-## Documentation
-
-To learn more, see the official [Archway documentation](https://docs.archway.io). 
+VI. Conclusion
+A. Recap of liquid staking solution
+B. Future developments
