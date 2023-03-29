@@ -1,4 +1,4 @@
-![image](https://imgur.com/Os2PnLF)
+![image](https://i.imgur.com/Os2PnLF.jpg)
 
 # Photosynthesis
 
