@@ -111,7 +111,7 @@ Overall, the photosynthesis algorithm provides a powerful mechanism for Dapps to
 
 https://docs.google.com/document/d/1dBiXoF6Z460nJxziE06b9JFu15co36Cm/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
-# Mission Impossible baed NFTs
+# Mission Impossible based NFTs
 
 https://docs.google.com/document/d/1BVwVHjStAMk0f0IYKlBXW9OoAZ6N0JBo/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
