@@ -107,20 +107,20 @@ Overall, the photosynthesis algorithm provides a powerful mechanism for Dapps to
 # Some Movie / Music Studios based NFTs
 
 
-#Matrix movie based NFTs
+# Matrix movie based NFTs
 
 https://docs.google.com/document/d/1dBiXoF6Z460nJxziE06b9JFu15co36Cm/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
-#Mission Impossible baed NFTs
+# Mission Impossible baed NFTs
 
 https://docs.google.com/document/d/1BVwVHjStAMk0f0IYKlBXW9OoAZ6N0JBo/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
-#Justin Bieber music studios based NFTs
+# Justin Bieber music studios based NFTs
 https://docs.google.com/document/d/1JWbt_HTbAacJCPfN_55iTAHrSz7uaXBd/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 
 
-#Some P2E Games 
+# Some P2E Games 
 
 Matrix Movie based P2E Game  - Matrix infinity
 
