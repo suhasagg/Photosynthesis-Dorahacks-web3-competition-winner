@@ -102,3 +102,36 @@ Another potential application is to use liquidity tokens to fund the production 
 Additionally, Dapps could use liquidity tokens to purchase movie rights or licensing agreements, which would allow them to create and sell NFTs based on popular movies. This could be a particularly attractive option for Dapps that specialize in creating and selling collectible items, as movie-based NFTs could be highly sought after by collectors and fans.
 
 Overall, the photosynthesis algorithm provides a powerful mechanism for Dapps to generate and harness energy in the form of rewards, liquidity, and unique digital assets, including movie-based NFTs. By using liquidity tokens to mint NFTs or invest in movie projects, Dapps can potentially generate significant revenue streams and expand their offerings to include new and exciting digital assets.
+
+
+# Some Movie / Music Studios based NFTs
+
+
+#Matrix movie based NFTs
+
+https://docs.google.com/document/d/1dBiXoF6Z460nJxziE06b9JFu15co36Cm/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
+#Mission Impossible baed NFTs
+
+https://docs.google.com/document/d/1BVwVHjStAMk0f0IYKlBXW9OoAZ6N0JBo/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
+#Justin Bieber music studios based NFTs
+https://docs.google.com/document/d/1JWbt_HTbAacJCPfN_55iTAHrSz7uaXBd/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
+
+
+#Some P2E Games 
+
+Matrix Movie based P2E Game  - Matrix infinity
+
+https://docs.google.com/document/d/1VYHsaFEsLstoP8ht56IZXzqwWGfC9pSD/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
+
+Mission Impossible based P2E game - Mission impossible
+
+https://docs.google.com/document/d/15BiFBWG_WbizrmiBwXIgdayjypqwUcDK/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
+
+WWE based P2E game - WWE universe
+
+https://docs.google.com/document/d/1CSBXgFoX03_WUhLrChHUWwrE9jncgZDi/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
