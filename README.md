@@ -147,4 +147,23 @@ https://www.facebook.com/groups/682232515824097/permalink/990246285022717/
 
 https://www.facebook.com/groups/682232515824097/permalink/993054448075234/
 
+# Application in Adserving 
+
+The smart contract can be used by advertisers to create ads and by publishers to display those ads on their platforms. The smart contract can be configured to incentivize publishers to display ads by offering them rewards based on the number of views the ads receive.
+
+Here are some possible applications for this smart contract:
+
+Ad Networks: An ad network can use this smart contract to manage their ad inventory and track the number of views each ad receives. Advertisers can create new ads and set the reward amount they are willing to pay per view. Publishers can then select the ads they want to display on their platforms and earn rewards based on the number of views their ads receive.
+
+Content Creators: Bloggers, vloggers, and other content creators can use this smart contract to monetize their content. They can create ads for their websites or videos and earn rewards based on the number of views their ads receive. This provides an additional revenue stream for content creators who want to monetize their content without relying on traditional advertising platforms.
+
+E-commerce Platforms: E-commerce platforms can use this smart contract to display ads for their products and services. They can offer rewards to publishers who display their ads and track the number of views each ad receives. This can help them increase their visibility and attract more customers to their platform.
+
+Game Developers: Game developers can use this smart contract to display ads in their games and earn rewards based on the number of views those ads receive. They can also offer rewards to players who watch ads in their games, incentivizing them to engage with the ads and providing an additional revenue stream for the game developer.
+
+Overall, this smart contract can be used in a variety of applications to manage and monetize ad inventory, track ad views, and incentivize publishers and viewers to engage with ads.
+
+
+
+
 
