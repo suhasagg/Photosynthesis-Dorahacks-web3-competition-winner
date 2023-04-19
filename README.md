@@ -173,5 +173,10 @@ The smart contract could also include a query message that allows users to view 
 
 Overall, the Archway Rewards program in the Cookie Sync smart contract could help incentivize user engagement and encourage more users to participate in the Archway protocol.
 
+Liquid tokens can be beneficial in the context of the Cookie Sync application as they can provide liquidity to the platform and incentivize users to participate in the ecosystem. In this case, the PLT token can be used as a liquid token that is used to incentivize users to sync their cookies across different chains.
+
+Users who sync their cookies can be rewarded with PLT tokens, which can then be used to participate in governance and decision-making processes on the platform. Additionally, PLT tokens can be traded on decentralized exchanges, which provides liquidity to the platform and allows users to realize the value of their contributions.
+
+By using liquid tokens, the platform can incentivize user participation and engagement, which can lead to increased adoption and usage of the platform. This can also help to build a strong and supportive community around the platform, which can be beneficial in the long term.
 
 
