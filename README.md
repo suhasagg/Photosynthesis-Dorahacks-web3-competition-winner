@@ -163,7 +163,15 @@ Game Developers: Game developers can use this smart contract to display ads in t
 
 Overall, this smart contract can be used in a variety of applications to manage and monetize ad inventory, track ad views, and incentivize publishers and viewers to engage with ads.
 
+# Application in Cookie Sync
 
+The smart contract could implement a reward system that grants users a certain amount of Archway tokens for each cookie that is successfully synced between two domains. The amount of tokens awarded could be determined by various factors, such as the number of cookies synced or the level of difficulty involved in syncing the cookies.
+
+To implement this feature, the smart contract could be updated to include a new handle message that allows users to claim their Archway rewards. The message could take in the user's address and the number of tokens they wish to claim, and then validate the claim by checking if the user has successfully synced the required number of cookies.
+
+The smart contract could also include a query message that allows users to view their current reward balance and the number of cookies they need to sync in order to claim their rewards.
+
+Overall, the Archway Rewards program in the Cookie Sync smart contract could help incentivize user engagement and encourage more users to participate in the Archway protocol.
 
 
 
