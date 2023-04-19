@@ -179,4 +179,16 @@ Users who sync their cookies can be rewarded with PLT tokens, which can then be 
 
 By using liquid tokens, the platform can incentivize user participation and engagement, which can lead to increased adoption and usage of the platform. This can also help to build a strong and supportive community around the platform, which can be beneficial in the long term.
 
+# Application of Matrix brain battery
 
+MatrixBrainBattery, which are essentially digital pets with genetic makeup represented by a unique DNA sequence. The contract provides several functionalities to manage these MatrixBrainBattery including creating a new one, feeding and multiplying two MatrixBrainBattery to create a new one, attacking other MatrixBrainBattery, changing name and DNA, and transferring ownership.
+
+The contract is designed to be used in the context of a game or application where users can own and interact with these MatrixBrainBattery. The following are some potential use cases:
+
+Virtual Pet Game: The contract can be used to create a virtual pet game where users can create, own, and manage their MatrixBrainBattery. Users can feed their pets, level them up, and battle them against other MatrixBrainBattery.
+
+Collectible Game: The MatrixBrainBattery can also be used as collectibles in a game where users can collect rare MatrixBrainBattery with unique DNA sequences. The game can use the contract to ensure the uniqueness of each MatrixBrainBattery and track their ownership.
+
+Decentralized Pet Marketplace: The contract can be used to create a decentralized marketplace for MatrixBrainBattery where users can buy, sell, and trade their pets with other users. The contract can ensure that ownership is properly transferred and track the transaction history of each pet.
+
+Overall, the contract provides a flexible and scalable solution for managing and interacting with MatrixBrainBattery in a variety of different contexts.
