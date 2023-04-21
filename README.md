@@ -197,3 +197,17 @@ Collectible Game: The MatrixBrainBattery can also be used as collectibles in a g
 Decentralized Pet Marketplace: The contract can be used to create a decentralized marketplace for MatrixBrainBattery where users can buy, sell, and trade their pets with other users. The contract can ensure that ownership is properly transferred and track the transaction history of each pet.
 
 Overall, the contract provides a flexible and scalable solution for managing and interacting with MatrixBrainBattery in a variety of different contexts.
+
+
+1)Photosynthesis Cosmwasm port documentation
+https://docs.google.com/document/d/14A_hQHDp35WWcs5QaGqJ26TWRGKgK0qX/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
+
+2)MatrixBrainBattery - P2E game and NFT Minting –  Ultimate choice for Archway Rewards and Photosynthesis Algorithm
+
+https://docs.google.com/document/d/1PqFbmda3N09y3TfOuCQZUSSKpxzclvku/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
+
+3)Heavy Transaction Guaranteed Dapps on Daily Basis – A strong candidate for Archway Rewards and Photosynthesis liquid token  
+https://docs.google.com/document/d/1-pGzhqz7UHgB2O9qD4fcLAhwhTUgUI4A/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
