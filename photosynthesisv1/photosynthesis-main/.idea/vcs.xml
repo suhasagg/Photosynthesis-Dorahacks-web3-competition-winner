@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/archway-main/archway-with-cosmos-sdk-v0.45.11" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/archway-main/cosmos-sdk-v0.45.11" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/archway-main/cosmos-sdk-v0.45.11/v0.47.0" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/archway-main/cosmos-sdk-v0.47.0" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/archway-main/cosmos-sdk-v0.47.1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/archway-main/cosmwasm-go" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/archway-main/ibc-go" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/archway-main/stride-v5-with-cosmos-sdk-v0.47.1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/archway-main/wasmd" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/archway-main/wasmvm" vcs="Git" />
+  </component>
+</project>
