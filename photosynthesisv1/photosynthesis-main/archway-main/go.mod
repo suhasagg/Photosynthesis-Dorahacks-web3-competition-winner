@@ -144,9 +144,3 @@ replace github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alp
 replace github.com/CosmWasm/wasmd => github.com/archway-network/archway-wasmd v0.29.2-archway
 
 replace github.com/archway-network/voter => ./contracts/go/voter
-
-//replace github.com/cosmos/cosmos-sdk => ./cosmos-sdk-v0.45.11
-
-//replace github.com/cosmos/cosmos-sdk@v0.45.11 => ./cosmos-sdk-v0.45.11
-
-//replace github.com/Stride-Labs/stride/v4/ => ./stridev4
