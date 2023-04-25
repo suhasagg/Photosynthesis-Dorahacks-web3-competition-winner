@@ -13,8 +13,7 @@ import "cosmos/base/query/v1beta1/pagination.proto";
 message DepositRecord {
   string contract_address = 1;
   int64 epoch = 2;
-  int64 amount = 3; // Use string to represent sdk.Int, you'll need to handle
-                    // the conversion in your application logic
+  int64 amount = 3; 
   string status = 4;
 }
 
@@ -33,14 +32,10 @@ message DepositRecords { repeated DepositRecord records = 1; }
 message RedemptionRecords { repeated RedemptionRecord records = 1; }
 
 message Contract {
-  string address = 1; // Use string to represent sdk.AccAddress, you'll need to
-                      // handle the conversion in your application logic
-  string creator = 2; // Use string to represent sdk.AccAddress, you'll need to
-                      // handle the conversion in your application logic
+  string address = 1; 
+  string creator = 2; 
   string name = 3;
-  int64 stake = 4;   // Use string to represent sdk.Int, you'll need to handle
-                     // the conversion in your application logic
-  int64 rewards = 5; // Use string to represent sdk.Int, you'll need to handle
-                     // the conversion in your application logic
+  int64 stake = 4;   
+  int64 rewards = 5; 
   bool activated = 6;
 }
