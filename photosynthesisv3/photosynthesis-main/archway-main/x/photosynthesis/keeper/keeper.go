@@ -163,10 +163,10 @@ func (k PhotosynthesisKeeper) GetLatestRedemptionTime(ctx sdk.Context) time.Time
 }
 
 // CreateContractLiquidStakeDepositRecordsForEpoch creates a new deposit record for the given contract and epoch
-func (k PhotosynthesisKeeper) CreateContractLiquidStakeDepositRecordsForEpoch(ctx sdk.Context, contractAddress sdk.AccAddress, epoch int64) *types.DepositRecord {
+func (k PhotosynthesisKeeper) CreateContractLiquidStakeDepositRecordsForEpoch(ctx sdk.Context, state rewardKeeper.State, contractAddress sdk.AccAddress, epoch int64) *types.DepositRecord {
 	// Determine the contract's liquid stake deposit amount for the given epoch
 	// This will depend on your specific application logic and may involve calculations or querying other modules
-	amount := k.GetCumulativeRewardAmount(ctx, contractAddress.String())
+	amount := k.GetCumulativeRewardAmount(ctx, state, contractAddress.String())
 
 	// Create a new deposit record with the appropriate fields
 	depositRecord := types.DepositRecord{
@@ -822,7 +822,7 @@ func (k PhotosynthesisKeeper) BeginBlocker(ctx sdk.Context) abci.ResponseBeginBl
 						// Create liquid stake deposit records and add them to the queue
 						rewardAmount := k.GetCumulativeRewardAmount(ctx, state, meta.RewardsAddress)
 						if rewardAmount.AmountOf("stake").Int64() >= int64(meta.MinimumRewardAmount) {
-							record := k.CreateContractLiquidStakeDepositRecordsForEpoch(ctx, sdk.AccAddress(meta.RewardsAddress), info.CurrentEpoch)
+							record := k.CreateContractLiquidStakeDepositRecordsForEpoch(ctx, state, sdk.AccAddress(meta.RewardsAddress), info.CurrentEpoch)
 							_ = k.EnqueueLiquidStakeRecord(ctx, *record)
 							types.EmitLiquidStakeDepositRecordCreatedEvent(ctx, record.String(), record.Amount)
 						}
