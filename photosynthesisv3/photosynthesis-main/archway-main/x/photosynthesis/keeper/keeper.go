@@ -171,7 +171,7 @@ func (k PhotosynthesisKeeper) CreateContractLiquidStakeDepositRecordsForEpoch(ct
 	depositRecord := types.DepositRecord{
 		ContractAddress: contractAddress.String(),
 		Epoch:           epoch,
-		Amount:          amount.AmountOf("").Int64(),
+		Amount:          amount.AmountOf("stake").Int64(),
 		Status:          "pending",
 	}
 
