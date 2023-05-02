@@ -14,7 +14,6 @@ import (
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/query"
 	paramTypes "github.com/cosmos/cosmos-sdk/x/params/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"log"
@@ -792,11 +791,11 @@ func (k PhotosynthesisKeeper) QueryAirdropStatus(ctx sdk.Context, addr sdk.AccAd
 
 func (k PhotosynthesisKeeper) GetCumulativeRewardAmount(ctx sdk.Context, state rewardKeeper.State, contractAddress string) sdk.Coins {
 	//records, _, _ := k.rewardKeeper.GetState().RewardsRecord(ctx)GetRewardsRecords(ctx, sdk.AccAddress(contractAddress), nil)
-	recordsLimitMax := k.rewardKeeper.MaxWithdrawRecords(ctx)
+	//recordsLimitMax := k.rewardKeeper.MaxWithdrawRecords(ctx)
 
 	// Get all rewards records for the given address by limit
-	pageReq := &query.PageRequest{Limit: recordsLimitMax}
-	records, _, _ := state.RewardsRecord(ctx).GetRewardsRecordByRewardsAddressPaginated(sdk.AccAddress(contractAddress), pageReq)
+	//pageReq := &query.PageRequest{Limit: recordsLimitMax}
+	_, records := state.RewardsRecord(ctx).Export()
 	totalRewards := sdk.NewCoins()
 	for _, record := range records {
 		totalRewards = totalRewards.Add(record.Rewards...)
@@ -811,6 +810,7 @@ func (k PhotosynthesisKeeper) BeginBlocker(ctx sdk.Context) abci.ResponseBeginBl
 	//for _, contract := range contracts {
 	state := k.rewardKeeper.GetState()
 	contractmeta := state.ContractMetadataState(ctx)
+	//rewardstate := state.RewardsRecord(ctx)
 	contractmeta.IterateContractMetadata(func(meta *rewardstypes.ContractMetadata) (stop bool) {
 		for _, epochInfo := range k.epochKeeper.AllEpochInfos(ctx) {
 			switch epochInfo.Identifier {
