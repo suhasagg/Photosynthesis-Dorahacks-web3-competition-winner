@@ -184,16 +184,16 @@ func (k PhotosynthesisKeeper) EnqueueLiquidStakeRecord(ctx sdk.Context, record t
 	// For example, you can store the deposit records in a store using contract addresses as keys
 	store := ctx.KVStore(k.storeKey)
 	contractAddress := record.ContractAddress
-	recordsBytes := store.Get([]byte(contractAddress))
+	//recordsBytes := store.Get([]byte(contractAddress))
 
-	var records *types.DepositRecords
-	if recordsBytes != nil {
-		k.cdc.MustUnmarshal(recordsBytes, records)
-	}
-	for _, record := range records.Records {
-		records.Records = append(records.Records, record)
-	}
-	store.Set([]byte(contractAddress), k.cdc.MustMarshal(records))
+	//var records *types.DepositRecords
+	//if recordsBytes != nil {
+	//	k.cdc.MustUnmarshal(recordsBytes, records)
+	//}
+	//for _, record := range records.Records {
+	//	records.Records = append(records.Records, record)
+	//}
+	store.Set([]byte(contractAddress), k.cdc.MustMarshal(&record))
 	return nil
 }
 
@@ -245,7 +245,7 @@ func (k PhotosynthesisKeeper) GetTotalLiquidStake(ctx sdk.Context, epoch int64) 
 	contractmeta := k.rewardKeeper.GetState().ContractMetadataState(ctx)
 	contractmeta.IterateContractMetadata(func(meta *rewardstypes.ContractMetadata) (stop bool) {
 		// Retrieve deposit records for the contract
-		depositRecords, err := k.GetContractLiquidStakeDepositsTillEpoch(ctx, sdk.AccAddress(meta.ContractAddress), epoch)
+		depositRecords, err := k.GetContractLiquidStakeDepositsTillEpoch(ctx, sdk.AccAddress(meta.RewardsAddress), epoch)
 		if err != nil {
 			return true
 		}
@@ -845,12 +845,12 @@ func (k PhotosynthesisKeeper) BeginBlocker(ctx sdk.Context) abci.ResponseBeginBl
 
 								amount, _ := k.RedeemLiquidTokens(ctx, &types.Coin{Amount: tls.Int64()})
 
-								k.DistributeRedeemedTokens(ctx, &types.Coin{Amount: amount})
+								//k.DistributeRedeemedTokens(ctx, &types.Coin{Amount: amount})
 								//k.RedeemAndDistribute(ctx, epochstypes.REDEMPTION_RATE_QUERY_EPOCH, redemptionRate)
 								// Update latest redemption time
-								k.SetLatestRedemptionTime(ctx, ctx.BlockTime())
-								_ = k.DeleteRedemptionRecord(ctx)
-								types.EmitRewardsDistributedEvent(ctx, meta.RewardsAddress, tls.Int64(), 1)
+								//k.SetLatestRedemptionTime(ctx, ctx.BlockTime())
+								//_ = k.DeleteRedemptionRecord(ctx)
+								types.EmitRewardsDistributedEvent(ctx, meta.RewardsAddress, amount, 1)
 							}
 						}
 					}
@@ -859,11 +859,17 @@ func (k PhotosynthesisKeeper) BeginBlocker(ctx sdk.Context) abci.ResponseBeginBl
 				// Distribute rewards to contracts with enabled rewards withdrawal
 				info, _ := k.epochKeeper.GetEpochInfo(ctx, epochInfo.Identifier)
 				if meta.RewardsWithdrawalInterval > 0 && info.CurrentEpoch%int64(meta.RewardsWithdrawalInterval) == 0 {
-					records, _, _ := k.rewardKeeper.GetRewardsRecords(ctx, sdk.AccAddress(meta.RewardsAddress), nil)
+					//records, _, _ := k.rewardKeeper.GetRewardsRecords(ctx, sdk.AccAddress(meta.RewardsAddress), nil)
+					//totalRewards := sdk.NewCoins()
+					//for _, record := range records {
+					//	totalRewards = totalRewards.Add(record.Rewards...)
+					//}
+					_, records := state.RewardsRecord(ctx).Export()
 					totalRewards := sdk.NewCoins()
 					for _, record := range records {
 						totalRewards = totalRewards.Add(record.Rewards...)
 					}
+
 					if totalRewards.IsAllGTE(sdk.Coins{}) {
 						k.rewardKeeper.WithdrawRewardsByRecordsLimit(ctx, sdk.AccAddress(meta.RewardsAddress), k.rewardKeeper.MaxWithdrawRecords(ctx))
 					}
