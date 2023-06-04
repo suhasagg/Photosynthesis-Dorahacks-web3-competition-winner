@@ -1,5 +1,7 @@
 # Photosynthesis-Archway  <-> Stride integrations
 
+![Photosynthesis](https://i.imgur.com/Tn1GUZnb.jpg)
+
 
 1)START RELAYER
 
