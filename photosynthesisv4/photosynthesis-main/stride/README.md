@@ -1,38 +1,68 @@
 # Photosynthesis-Archway stride integrations
 
+
 1)START RELAYER
+
 2)CREATING CONNECTIONS WITH THE GO RELAYER 
+
 3)Create connections and channels
 
+
 a)Get channel ID created on the photosynthesis-archway
+
 b)Start Go Relayer 
+
 c)IBC Transfer from Photosynthesis-archway to stride (from relayer account)
+
 d)Confirm funds were recieved on stride and get IBC denom
+
 e)Register host zone
+
 f)Add validator
+
 g)Confirm ICA channels were registered
 
+
 FLOW
+
 Go Through Flow
 
+
 a)Liquid stake (then wait and LS again)
+
 b)Confirm stTokens, StakedBal, and Redemption Rate
+
 c)Redeem
+
 d)Confirm stTokens and StakedBal
+
 e)Add another validator
+
 f)Liquid stake and confirm the stake was split 50/50 between the validators
+
 g)Change validator weights
+
 h)LS and confirm delegation aligned with new weights
+
 i)Update delegations (just submit this query and confirm the ICQ callback displays in the stride logs)
+
+
 # Must be submitted in ICQ window
+
 j)Restore closed channel
 
-Photosynthesis-Archway ibc integrations. 
+
+
+# Photosynthesis-Archway IBC integrations. 
 
 1)evmos
+
 2)gaia
+
 3)juno
+
 4)osmosis
+
 5)stargaze
 
 global:
@@ -165,7 +195,7 @@ chains:
         - ethermint
 
 
-Relayer registry 
+#Relayer registry 
 
 Cosmos relayer
 1)https://github.com/cosmos/relayer.git
