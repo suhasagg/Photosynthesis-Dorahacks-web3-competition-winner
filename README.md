@@ -1,5 +1,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0ded88aa8d4b401d953f42e0fc6af9b5)](https://app.codacy.com/gh/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
+![Photosynthesis](https://i.imgur.com/Tn1GUZn.jpg)
+
 ![Photosynthesis](https://i.imgur.com/0D8R8FLm.jpg) ![Photosynthesis](https://i.imgur.com/Os2PnLFm.jpg)
 
 Codacy A grade in both Golang and Rust repository.
