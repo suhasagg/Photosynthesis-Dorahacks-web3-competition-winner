@@ -1,4 +1,4 @@
-# Photosynthesis-Archway stride integrations
+# Photosynthesis-Archway  <-> Stride integrations
 
 
 1)START RELAYER
