@@ -65,6 +65,7 @@ j)Restore closed channel
 
 5)stargaze
 
+```
 global:
   api-listen-addr: :5183
   timeout: 10s
@@ -193,7 +194,7 @@ chains:
       sign-mode: direct
       extra-codecs:
         - ethermint
-
+```
 
 #Relayer registry 
 
