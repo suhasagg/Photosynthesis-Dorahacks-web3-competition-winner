@@ -207,7 +207,7 @@ Hermes relayer
 2)https://github.com/informalsystems/ibc-rs 
 
 
-# Record Keeping/Queue Creation for Liquid Staking Worflow in Photosynthesis-Archway
+# Record Keeping/Queue Creation for Liquid Staking Workflow in Photosynthesis-Archway
 # Interchain Accounts fully Integrated in Photosynthesis-Archway
 
 ```
