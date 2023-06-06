@@ -208,6 +208,8 @@ Hermes relayer
 
 
 # Record Keeping/Queue Creation for Liquid Staking Worflow in Photosynthesis-Archway
+# Interchain Accounts fully Integrated in Photosynthesis-Archway
+
 ```
 Liquid staking workflow in Photosynthesis-Archway
  STRIDE @ 343 | 1 VALS
