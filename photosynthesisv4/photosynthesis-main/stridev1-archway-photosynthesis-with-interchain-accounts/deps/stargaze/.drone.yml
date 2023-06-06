@@ -1,0 +1,404 @@
+---
+kind: pipeline
+type: docker
+name: default-build
+
+workspace:
+  path: /stargaze
+
+steps:
+  - name: fetch
+    image: alpine/git
+    commands:
+      - git fetch --tags
+  - name: restore-cache
+    image: meltwater/drone-cache:dev
+    volumes:
+      - name: cache
+        path: /go
+    environment:
+      AWS_ACCESS_KEY_ID:
+        from_secret: minio_key_id
+      AWS_SECRET_ACCESS_KEY:
+        from_secret: minio_secret_key
+    pull: true
+    settings:
+      restore: true
+      bucket:
+        from_secret: minio_bucket
+      region: us-east-1
+      mount:
+        - '/go/pkg/mod'
+
+  - name: test
+    image: publicawesome/golang:1.20.2-devtooling
+    volumes:
+      - name: cache
+        path: /go
+    commands:
+      - ./scripts/go-test.sh
+    environment:
+      GOPROXY: http://goproxy
+  - name: build
+    image: golang:1.20.2-alpine3.17
+    volumes:
+      - name: cache
+        path: /go
+    commands:
+      - apk add --no-cache ca-certificates build-base git
+      - wget https://github.com/CosmWasm/wasmvm/releases/download/v1.1.1/libwasmvm_muslc.x86_64.a -O /lib/libwasmvm_muslc.a
+      - echo "6e4de7ba9bad4ae9679c7f9ecf7e283dd0160e71567c6a7be6ae47c81ebe7f32  /lib/libwasmvm_muslc.a" | sha256sum -c
+      - LEDGER_ENABLED=false BUILD_TAGS=muslc LINK_STATICALLY=true  make build
+      - echo "Ensuring binary is statically linked ..." && (file $PWD/bin/starsd | grep "statically linked")
+    environment:
+      GOPROXY: http://goproxy
+  - name: coverage
+    image: plugins/codecov
+    volumes:
+      - name: cache
+        path: /go
+    settings:
+      required: true
+      token:
+        from_secret: codecov-token
+    when:
+      event:
+        - push
+        - pull_request
+  - name: publish-alpha
+    image: plugins/docker:18
+    settings:
+      dockerfile: docker/Dockerfile
+      repo: publicawesome/stargaze
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      tags:
+        - 9.0.0-rc.3
+    when:
+      event:
+        - push
+      branch:
+        - v9-release
+  - name: docker_release
+    image: plugins/docker:18
+    settings:
+      dockerfile: docker/Dockerfile
+      repo: publicawesome/stargaze
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      auto_tag: true
+    when:
+      event:
+        - tag
+
+  - name: release
+    image: golang:1.20.2
+    environment:
+      GITHUB_TOKEN:
+        from_secret: github_token
+    commands:
+      - curl -sL https://git.io/goreleaser | bash
+    environment:
+      GOPROXY: http://goproxy
+    when:
+      event:
+        - tag
+  - name: rebuild-cache
+    image: meltwater/drone-cache:dev
+    volumes:
+      - name: cache
+        path: /go
+    environment:
+      AWS_ACCESS_KEY_ID:
+        from_secret: minio_key_id
+      AWS_SECRET_ACCESS_KEY:
+        from_secret: minio_secret_key
+    pull: true
+    settings:
+      rebuild: true
+      bucket:
+        from_secret: minio_bucket
+      region: us-east-1
+      mount:
+        - '/go/pkg/mod'
+  - name: discord
+    image: appleboy/drone-discord
+    settings:
+      webhook_id: 
+        from_secret: discord_webhook_id
+      webhook_token: 
+        from_secret: discord_webhook_token
+    when:
+      status: [success, failure]
+
+volumes:
+- name: cache
+  temp: {}
+---
+kind: pipeline
+type: docker
+name: ibc-integration-test
+
+steps:
+  - name: restore-cache
+    image: meltwater/drone-cache:dev
+    volumes:
+      - name: cache
+        path: /go
+    environment:
+      AWS_ACCESS_KEY_ID:
+        from_secret: minio_key_id
+      AWS_SECRET_ACCESS_KEY:
+        from_secret: minio_secret_key
+    pull: true
+    settings:
+      restore: true
+      bucket:
+        from_secret: minio_bucket
+      region: us-east-1
+      mount:
+        - '/go/pkg/mod'
+  - name: gaia
+    image: publicawesome/gaia:7.0.2
+    detach: true
+    commands:
+      - ./scripts/ci/setup-gaia.sh
+    environment:
+      GOPROXY: http://goproxy
+  - name: osmosis
+    image: publicawesome/osmosis:10.1.1
+    detach: true
+    commands:
+      - ./scripts/ci/setup-osmosis.sh
+    environment:
+      GOPROXY: http://goproxy
+  - name: icad
+    image: publicawesome/icad:0.1.6-stargaze.1
+    pull: true
+    detach: true
+    commands:
+      - echo $PWD
+      - ls -ltrah
+      - ./scripts/ci/setup-icad.sh
+    environment:
+      GOPROXY: http://goproxy
+  - name: stargaze
+    image: publicawesome/golang:1.20.2-devtooling
+    volumes:
+      - name: cache
+        path: /go
+    commands:
+      - ./scripts/ci/setup-stargaze.sh
+    environment:
+      GOPROXY: http://goproxy
+    detach: true
+  - name: readiness
+    pull: true
+    image: publicawesome/stargaze-readiness-checker:latest
+    settings:
+      timeout: 300
+      blocks: 10
+      chain_list:
+        - http://stargaze:26657
+        - http://gaia:26657
+        - http://osmosis:26657
+        - http://icad:26657
+  - name: relayer
+    image: publicawesome/hermes:0.15.0
+    commands:
+      - /bin/bash ./scripts/ci/setup-relayer.sh
+
+  - name: relayer-start
+    image: publicawesome/hermes:0.15.0
+    commands:
+      - /bin/bash ./scripts/ci/start-relayer.sh
+    detach: true
+  - name: relayer-sender
+    image: publicawesome/hermes:0.15.0
+    commands:
+      - /bin/bash ./scripts/ci/transfer-relayer.sh
+  - name: ica-test
+    image: publicawesome/icad:0.1.6-stargaze.1
+    pull: true
+    commands:
+      - /bin/sh ./scripts/ci/test-ica.sh
+  - name: discord
+    image: appleboy/drone-discord
+    settings:
+      webhook_id: 
+        from_secret: discord_webhook_id
+      webhook_token: 
+        from_secret: discord_webhook_token
+    when:
+      status: [success, failure]
+
+trigger:
+  branch:
+    - main
+  event:
+    - pull_request
+    - push
+volumes:
+- name: cache
+  temp: {}
+node:
+  runner: integration
+---
+kind: pipeline
+type: docker
+name: upgrade-integration-test
+workspace:
+  path: /stargaze
+steps:
+  - name: restore-cache
+    image: meltwater/drone-cache:dev
+    volumes:
+      - name: cache
+        path: /go
+    environment:
+      AWS_ACCESS_KEY_ID:
+        from_secret: minio_key_id
+      AWS_SECRET_ACCESS_KEY:
+        from_secret: minio_secret_key
+    pull: true
+    settings:
+      restore: true
+      bucket:
+        from_secret: minio_bucket
+      region: us-east-1
+      mount:
+        - '/go/pkg/mod'
+  - name: build-wrapper
+    image: publicawesome/golang:1.20.2-devtooling
+    volumes:
+      - name: cache
+        path: /go
+    commands:
+      - mkdir -p /stargaze/bin/
+      - CGO_ENABLED=0 go build -o /stargaze/bin/upgrade-watcher ./testutil/watcher/
+      - chmod +x /stargaze/bin/upgrade-watcher
+    environment:
+      GOPROXY: http://goproxy
+  - name: gaia
+    image: publicawesome/gaia:7.0.2
+    detach: true
+    commands:
+      - ./scripts/ci/setup-gaia.sh
+    environment:
+      GOPROXY: http://goproxy
+  - name: osmosis
+    image: publicawesome/osmosis:10.1.1
+    detach: true
+    commands:
+      - ./scripts/ci/setup-osmosis.sh
+    environment:
+      GOPROXY: http://goproxy
+  - name: icad
+    image: publicawesome/icad:0.1.6-stargaze.1
+    pull: true
+    detach: true
+    commands:
+      - ./scripts/ci/setup-icad.sh
+    environment:
+      GOPROXY: http://goproxy
+  - name: stargaze
+    image: publicawesome/stargaze:8.0.0
+    commands:
+      - ./scripts/ci/upgrade/setup-preinstalled-stargaze.sh
+    environment:
+      GOPROXY: http://goproxy
+    detach: true
+  - name: readiness
+    pull: true
+    image: publicawesome/stargaze-readiness-checker:latest
+    settings:
+      timeout: 300
+      blocks: 10
+      chain_list:
+        - http://stargaze:26657
+        - http://gaia:26657
+        - http://osmosis:26657
+        - http://icad:26657
+  - name: relayer
+    image: publicawesome/hermes:0.15.0
+    commands:
+      - /bin/bash ./scripts/ci/setup-relayer.sh
+
+  - name: relayer-start
+    image: publicawesome/hermes:0.15.0
+    commands:
+      - /bin/bash ./scripts/ci/start-relayer.sh
+    detach: true
+  - name: relayer-sender
+    image: publicawesome/hermes:0.15.0
+    commands:
+      - /bin/bash ./scripts/ci/transfer-relayer.sh
+  - name: proposal
+    image: publicawesome/stargaze:8.0.0
+    commands:
+      - ./scripts/ci/upgrade/proposal.sh
+  - name: stargaze-upgraded
+    pull: true
+    image: publicawesome/stargaze:9.0.0-rc.3
+    commands:
+      - ./scripts/ci/upgrade/run-upgrade.sh
+    environment:
+      GOPROXY: http://goproxy
+    detach: true
+  - name: readiness-upgrade
+    pull: true
+    image: publicawesome/stargaze-readiness-checker:latest
+    settings:
+      timeout: 300
+      blocks: 10
+      chain_list:
+        - http://stargaze-upgraded:26657
+        - http://gaia:26657
+        - http://osmosis:26657
+        - http://icad:26657
+  - name: relayer-upgrade-start
+    image: publicawesome/hermes:0.15.0
+    commands:
+      - /bin/bash ./scripts/ci/upgrade/start-relayer.sh
+    detach: true
+  - name: relayer-upgrade-sender
+    image: publicawesome/hermes:0.15.0
+    commands:
+      - /bin/bash ./scripts/ci/upgrade/transfer-relayer.sh
+  - name: ica-upgrade-test
+    image: publicawesome/icad:0.1.6-stargaze.1
+    pull: true
+    commands:
+      - /bin/sh ./scripts/ci/upgrade/test-ica.sh
+  - name: discord
+    image: appleboy/drone-discord
+    settings:
+      webhook_id: 
+        from_secret: discord_webhook_id
+      webhook_token: 
+        from_secret: discord_webhook_token
+    when:
+      status: [success, failure]
+
+trigger:
+  branch:
+    - main
+  event:
+    - pull_request
+    - push
+volumes:
+- name: cache
+  temp: {}
+node:
+  runner: integration
+depends_on:
+  - ibc-integration-test
+---
+kind: signature
+hmac: 14d7527b77ad8e3ebcc875e305e12b133fb5f5f90d96e0e6d283e9f8fddffee3
+
+...
