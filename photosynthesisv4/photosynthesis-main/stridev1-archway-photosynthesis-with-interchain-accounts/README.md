@@ -205,3 +205,134 @@ Cosmos relayer
 
 Hermes relayer 
 2)https://github.com/informalsystems/ibc-rs 
+
+
+# Record Keeping/Queue Creation for Liquid Staking Worflow in Photosynthesis-Archway
+```
+Liquid staking workflow in Photosynthesis-Archway
+ STRIDE @ 343 | 1 VALS
+PHOTO   @ 337 | 1 VALS
+GAIA   @ 337 | 1 VALS
+
+LIST-HOST-ZONES STRIDE
+host_zone:
+- address: stride1755g4dkhpw73gz9h9nwhlcefc6sdf8kcmvcwrk4rxfrz8xpxxjms7savm8
+  bech32prefix: cosmos
+  blacklisted_validators: []
+  chain_id: GAIA
+  connection_id: connection-1
+  delegation_account:
+    address: cosmos1rkth5ywkueewvs29xkalckhhl3w5esg9jwn03ywp30k3dh2ys6aqffvtav
+    target: DELEGATION
+  fee_account:
+    address: cosmos1a8ue6w4x9yv2rxq2m3l7urua39ffzed457x3yeetk94yl59w322qpavyph
+    target: FEE
+  halted: false
+  host_denom: uatom
+  ibc_denom: ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9
+  last_redemption_rate: "1.000000000000000000"
+  max_redemption_rate: "1.500000000000000000"
+  min_redemption_rate: "0.900000000000000000"
+  redemption_account:
+    address: cosmos19mtvgh3mezrqttxnddtqx3hnfhnkt7xqjylladj7qmsl4edn23tqcv5dyz
+    target: REDEMPTION
+  redemption_rate: "1.000000000000000000"
+  staked_bal: "0"
+  transfer_channel_id: channel-1
+  unbonding_frequency: "1"
+  validators:
+  - address: cosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795pcosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795p
+    delegation_amt: "0"
+    internal_exchange_rate: null
+    name: gval1
+    weight: "5"
+  withdrawal_account:
+    address: cosmos1svjuhjlw8mea66tj2phnmtg050dljpx4ku3qzcgehdpxslxnen6sc68j0u
+    target: WITHDRAWAL
+- address: stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag
+  bech32prefix: archway
+  blacklisted_validators: []
+  chain_id: localnet
+  connection_id: connection-0
+  delegation_account:
+    address: archway1c9zxssf4u9rcmlx9pdsfsqzgvhdgjykjckn9apevr9ht46kputmq9v738w
+    target: DELEGATION
+  fee_account:
+    address: archway1ds0m5f2mp4j9jr5hpzayaefjguxc8l92zvfurd34gdpz3zpu4fuqmzvznt
+    target: FEE
+  halted: false
+  host_denom: uarch
+  ibc_denom: ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2
+  last_redemption_rate: "1.000000000000000000"
+  max_redemption_rate: "1.500000000000000000"
+  min_redemption_rate: "0.900000000000000000"
+  redemption_account:
+    address: archway1q8v4vlmwlextv4mm5eyh203hv98dey2fzwuc3y6d8evhhuhp3zvsdmsc7x
+    target: REDEMPTION
+  redemption_rate: "1.000000000000000000"
+  staked_bal: "0"
+  transfer_channel_id: channel-0
+  unbonding_frequency: "1"
+  validators:
+  - address: cosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795p
+    delegation_amt: "0"
+    internal_exchange_rate: null
+    name: pval1
+    weight: "5"
+  withdrawal_account:
+    address: archway16mxc3u8cy0lz9w98ep5xecn8m7n8uegvj402u03099t7k792gxhqqtlsrk
+    target: WITHDRAWAL
+pagination:
+  next_key: null
+  total: "0"
+
+LIST-DEPOSIT-RECORDS
+deposit_record:
+- amount: "0"
+  denom: uarch
+  deposit_epoch_number: "10"
+  host_zone_id: localnet
+  id: "1"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "0"
+  denom: uatom
+  deposit_epoch_number: "10"
+  host_zone_id: GAIA
+  id: "2"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+pagination:
+  next_key: null
+  total: "0"
+
+LIST-EPOCH-UNBONDING-RECORDS
+epoch_unbonding_record:
+- epoch_number: "4"
+  host_zone_unbondings:
+  - denom: uarch
+    host_zone_id: localnet
+    native_token_amount: "0"
+    st_token_amount: "0"
+    status: UNBONDING_QUEUE
+    unbonding_time: "0"
+    user_redemption_records: []
+  - denom: uatom
+    host_zone_id: GAIA
+    native_token_amount: "0"
+    st_token_amount: "0"
+    status: UNBONDING_QUEUE
+    unbonding_time: "0"
+    user_redemption_records: []
+pagination:
+  next_key: null
+  total: "0"
+
+LIST-USER-REDEMPTION-RECORDS
+pagination:
+  next_key: null
+  total: "0"
+user_redemption_record: []
+```
+
+
