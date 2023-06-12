@@ -1,0 +1,28 @@
+=============== May 30, 2023 (UTC) ===============
+22:10:10.185094 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+22:10:10.190765 db@open opening
+22:10:10.191251 version@stat F·[] S·0B[] Sc·[]
+22:10:10.193182 db@janitor F·2 G·0
+22:10:10.193237 db@open done T·2.425354ms
+22:29:19.197215 memdb@flush N·37620 S·3MiB
+22:29:19.379830 memdb@flush created L0@3 N·37620 S·966KiB "\x04I\t..:\x80\xb0,v5638":"\xff\"\x9b..\x90\xb9A,v12902"
+22:29:19.380130 version@stat F·[1] S·966KiB[966KiB] Sc·[0.25]
+22:29:19.387752 memdb@flush committed F·1 T·190.123036ms
+22:29:19.391288 journal@remove removed @1
+22:43:19.848223 memdb@flush N·31478 S·3MiB
+22:43:19.944303 memdb@flush created L0@5 N·31478 S·1MiB "\f\xa6\x1d..\x91s\x14,v65046":"\xfd\xb6Y..\xbf\xe3H,v67346"
+22:43:19.945601 version@stat F·[2] S·2MiB[2MiB] Sc·[0.50]
+22:43:19.949063 memdb@flush committed F·1 T·100.591396ms
+22:43:19.950089 journal@remove removed @2
+22:45:21.504910 table@compaction L0·2 -> L1·0 S·2MiB Q·74269
+22:45:22.007325 table@build created L1@6 N·69094 S·2MiB "\x04I\t..:\x80\xb0,v5638":"\xf4\xe1{..{\xc8w,v65696"
+22:45:22.012100 table@build created L1@7 N·4 S·29KiB "\xfa|1..ʀt,v29818":"\xff\"\x9b..\x90\xb9A,v12902"
+22:45:22.012280 version@stat F·[0 2] S·2MiB[0B 2MiB] Sc·[0.00 0.02]
+22:45:22.014236 table@compaction committed F~ S+22KiB Ke·0 D·0 T·492.04506ms
+22:45:22.014712 table@remove removed @5
+22:45:22.015218 table@remove removed @3
+22:52:37.455516 memdb@flush N·23635 S·3MiB
+22:52:37.708994 memdb@flush created L0@9 N·23635 S·1MiB "\x00\x03\x93..7M\x83,v80000":"\xfc\x97\x06..cyW,v84653"
+22:52:37.709353 version@stat F·[1 2] S·3MiB[1MiB 2MiB] Sc·[0.25 0.02]
+22:52:37.711502 memdb@flush committed F·1 T·255.555986ms
+22:52:37.713323 journal@remove removed @4
