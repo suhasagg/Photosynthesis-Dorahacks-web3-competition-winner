@@ -1,23 +1,23 @@
 use cosmwasm_std::{
-    Deps, DepsMut, Env, MessageInfo, Response, StdResult, Uint128, to_binary, ContractResult, WasmQuery
+    Deps, DepsMut, Env, BlockInfo,ContractInfo,MessageInfo,Response, StdResult, Uint128, to_binary, ContractResult, WasmQuery
 };
 use cw_storage_plus::Item;
-use cw20::{Cw20CoinHuman, Cw20ExecuteMsg, Cw20ReceiveMsg};
+use cw20::{Cw20ExecuteMsg, Cw20ReceiveMsg};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
-
+use cosmwasm_std::StdError;
 use cw2::set_contract_version;
-
-use crate::error::ContractError;
-use crate::msg::{ExecuteMsg, GetCountResponse, InstantiateMsg, QueryMsg};
-use crate::state::{State, STATE};
+use schemars::JsonSchema;
+use sha2::{Sha256, Digest};
+use rand::Rng;
+use cosmwasm_std::Timestamp;
+use cosmwasm_std::TransactionInfo;
+use cosmwasm_std::Addr;
+use std::time::{SystemTime, UNIX_EPOCH};
 
 // version info for migration info
 const CONTRACT_NAME: &str = "crates.io:dapps";
 const CONTRACT_VERSION: &str = env!("CARGO_PKG_VERSION");
-
-
-
 
 pub const DNA_DIGITS: u32 = 16;
 pub const DNA_MODULUS: u64 = 10u64.pow(DNA_DIGITS);
@@ -58,7 +58,10 @@ pub struct MatrixBrainBatteryFactory {
     pub kitty_interface: KittyInterface,
     pub matrix_brain_batteries: Vec<MatrixBrainBattery>,
     pub matrix_brain_battery_to_owner: HashMap<u64, String>,
+    pub matrix_brain_battery_approvals: HashMap<u64, String>,
     pub owner_matrix_brain_battery_count: HashMap<String, u64>,
+    pub level_up_fee:  Uint128,
+    pub rand_nonce: u32,
 }
 
 impl MatrixBrainBatteryFactory {
@@ -67,16 +70,22 @@ impl MatrixBrainBatteryFactory {
             kitty_interface: KittyInterface,
             matrix_brain_batteries: Vec::new(),
             matrix_brain_battery_to_owner: HashMap::new(),
+            matrix_brain_battery_approvals:  HashMap::new(),
             owner_matrix_brain_battery_count: HashMap::new(),
+            level_up_fee: Uint128::zero(),
+            rand_nonce: 0,
         }
     }
 
     pub fn generate_random_dna(&self, _input_str: &str) -> u64 {
+        //let mut rng = rand::thread_rng();
+        //rng.gen_range(0, DNA_MODULUS)
         let mut rng = rand::thread_rng();
-        rng.gen_range(0, DNA_MODULUS)
+        rng.gen_range(0..DNA_MODULUS)
+        
     }
 
-    pub fn create_random_matrix_brain_battery(&mut self, name: String, owner: String) -> StdResult<()> {
+    pub fn create_random_matrix_brain_battery(&mut self, name: String, owner: String, env: Env) -> StdResult<()> {
         let count = self.owner_matrix_brain_battery_count.get(&owner).cloned().unwrap_or(0);
         if count > 0 {
             return Err(StdError::generic_err("Owner already has a MatrixBrainBattery"));
@@ -98,11 +107,11 @@ impl MatrixBrainBatteryFactory {
         Ok(())
     }
 
-      pub fn trigger_cooldown(&mut self, matrix_brain_battery: &mut MatrixBrainBattery) {
+      pub fn trigger_cooldown(&mut self, matrix_brain_battery: &mut MatrixBrainBattery, env: Env) {
         matrix_brain_battery.ready_time = env.block.time.plus_seconds(COOLDOWN_TIME).seconds();
     }
 
-    pub fn is_ready(&self, matrix_brain_battery: &MatrixBrainBattery) -> bool {
+    pub fn is_ready(&self, matrix_brain_battery: &MatrixBrainBattery, env: Env) -> bool {
         matrix_brain_battery.ready_time <= env.block.time.seconds()
     }
 
@@ -112,11 +121,12 @@ impl MatrixBrainBatteryFactory {
         target_dna: u64,
         species: &str,
         owner: &str,
+        env: Env
     ) -> StdResult<()> {
         let mut matrix_brain_battery = self.matrix_brain_batteries
             .get_mut(matrix_brain_battery_id as usize)
             .ok_or_else(|| StdError::generic_err("Invalid MatrixBrainBattery ID"))?;
-        if !self.is_ready(&matrix_brain_battery) {
+        if !self.is_ready(&matrix_brain_battery, env) {
             return Err(StdError::generic_err("MatrixBrainBattery not ready"));
         }
 
@@ -142,7 +152,7 @@ impl MatrixBrainBatteryFactory {
             .entry(owner.to_string())
             .and_modify(|count| *count += 1)
             .or_insert(1);
-        self.trigger_cooldown(&mut matrix_brain_battery);
+        self.trigger_cooldown(&mut matrix_brain_battery, env);
         Ok(())
     }
 
@@ -151,17 +161,14 @@ impl MatrixBrainBatteryFactory {
         matrix_brain_battery_id: u64,
         kitty_id: u64,
         owner: &str,
+        env: Env
     ) -> StdResult<()> {
         let (_, _, _, _, _, _, _, _, _, kitty_dna) = self.kitty_interface.get_kitty(kitty_id);
-        self.feed_and_multiply(matrix_brain_battery_id, kitty_dna, "kitty", owner)
+        self.feed_and_multiply(matrix_brain_battery_id, kitty_dna, "kitty", owner, env)
     }
 }
 
-use cosmwasm_std::{
-    // Other required imports
-    Uint128, StdResult,
-};
-use cw721::{Cw721, Cw721Contract, Expiration, Approval};
+use cw721::{Cw721, Expiration, Approval};
 
 // MatrixBrainBatteryHelper
 impl MatrixBrainBatteryFactory {
@@ -213,30 +220,34 @@ impl MatrixBrainBatteryFactory {
 impl MatrixBrainBatteryFactory {
     pub const ATTACK_VICTORY_PROBABILITY: u64 = 70;
 
-    pub fn rand_mod(&mut self, modulus: u64) -> u64 {
+    pub fn rand_mod(&mut self, modulus: u64, env: Env) -> u64 {
         self.rand_nonce += 1;
-        let seed = format!("{}{}{}", env.block.time.seconds(), env.message.sender, self.rand_nonce);
-        let hash = std::u64::from_be_bytes(sha256(seed.as_bytes()));
-        hash % modulus
+        let seed = format!("{}{}", env.block.time.seconds(), self.rand_nonce);
+        //let hash = u64::from_be_bytes(Sha256::digest(seed.as_bytes()));
+        let hash = Sha256::digest(seed.as_bytes());
+        let mut array = [0u8; 8];
+        array.copy_from_slice(&hash[0..8]);
+        let num = u64::from_be_bytes(array);
+        num
     }
 
-    pub fn attack(&mut self, matrix_brain_battery_id: u64, target_id: u64) -> StdResult<()> {
+    pub fn attack(&mut self, matrix_brain_battery_id: u64, target_id: u64, owner: &str, env: Env) -> StdResult<()> {
         let mut my_matrix_brain_battery = self.matrix_brain_batteries
             .get_mut(matrix_brain_battery_id as usize)
             .ok_or_else(|| StdError::generic_err("Invalid MatrixBrainBattery ID"))?;
         let enemy_matrix_brain_battery = self.matrix_brain_batteries
             .get(target_id as usize)
             .ok_or_else(|| StdError::generic_err("Invalid target MatrixBrainBattery ID"))?;
-        let rand = self.rand_mod(100);
+        let rand = self.rand_mod(100, env);
                 if rand <= Self::ATTACK_VICTORY_PROBABILITY {
             my_matrix_brain_battery.win_count += 1;
             my_matrix_brain_battery.level += 1;
             enemy_matrix_brain_battery.loss_count += 1;
-            self.feed_and_multiply(matrix_brain_battery_id, enemy_matrix_brain_battery.dna, "matrixbrainbattery")?;
+            self.feed_and_multiply(matrix_brain_battery_id, enemy_matrix_brain_battery.dna, "matrixbrainbattery", owner, env)?;
         } else {
             my_matrix_brain_battery.loss_count += 1;
             enemy_matrix_brain_battery.win_count += 1;
-            self.trigger_cooldown(my_matrix_brain_battery)?;
+            self.trigger_cooldown(my_matrix_brain_battery, env);
         }
         Ok(())
     }
@@ -274,6 +285,79 @@ impl MatrixBrainBatteryFactory {
         })?;
 
         self.transfer_ownership(&owner, new_owner, matrix_brain_battery_id)
-    }
+    }  
 }
 
+fn main() {
+    // Initialize the factory
+    let mut factory = MatrixBrainBatteryFactory::new();
+    let now = SystemTime::now();
+    // Assume the following initial parameters
+    let owner = "Owner1".to_string();
+    let name = "Battery1".to_string();
+    let timestamp = now.duration_since(UNIX_EPOCH)
+    .expect("System time is before the UNIX epoch")
+    .as_secs();
+    // Initialize the environment
+    // Note: You'll need to replace this with a real Env initialization
+    let env = Env {
+            block: BlockInfo {
+                height: 0,
+                time: Timestamp::from_nanos(1_571_797_419_879_305_533),
+                chain_id: "localnet".to_string(),
+                },
+            transaction: Some(TransactionInfo { index: 3 }),
+            contract: ContractInfo {
+                   address: Addr::unchecked("contract"),
+            },
+        };
+
+    // Create a new MatrixBrainBattery
+    let result = factory.create_random_matrix_brain_battery(name, owner.clone(), env.clone());
+
+    match result {
+        Ok(()) => println!("MatrixBrainBattery created successfully"),
+        Err(e) => eprintln!("Failed to create MatrixBrainBattery: {}", e),
+    }
+
+    // Feed on Kitty and multiply
+    let kitty_id: u64 = 1; // Assume an existing Kitty id
+    let matrix_brain_battery_id: u64 = 0; // Assume the first MatrixBrainBattery's id
+    let result = factory.feed_on_kitty(matrix_brain_battery_id, kitty_id, &owner, env.clone());
+
+    match result {
+        Ok(()) => println!("MatrixBrainBattery fed on Kitty and multiplied successfully"),
+        Err(e) => eprintln!("Failed to feed on Kitty and multiply: {}", e),
+    }
+
+    // Perform an attack
+    let target_id: u64 = 1; // Assume another MatrixBrainBattery id for target
+    let result = factory.attack(matrix_brain_battery_id, target_id, &owner, env.clone());
+
+    match result {
+        Ok(()) => println!("Attack was successful"),
+        Err(e) => eprintln!("Attack failed: {}", e),
+    }
+
+    // Level up the MatrixBrainBattery
+    let result = factory.level_up(matrix_brain_battery_id);
+
+    match result {
+        Ok(()) => println!("MatrixBrainBattery leveled up successfully"),
+        Err(e) => eprintln!("Failed to level up MatrixBrainBattery: {}", e),
+    }
+
+    // Change the name of the MatrixBrainBattery
+    let new_name = "Super Battery";
+    let result = factory.change_name(matrix_brain_battery_id, new_name);
+
+    match result {
+        Ok(()) => println!("MatrixBrainBattery name changed successfully"),
+        Err(e) => eprintln!("Failed to change MatrixBrainBattery name: {}", e),
+    }
+    
+    // List all MatrixBrainBatteries by owner
+    let owned_matrix_brain_batteries = factory.get_matrix_brain_batteries_by_owner(&owner);
+
+    println!("{} owns the following MatrixBrainBatteries: {:?}", owner, owned_matrix_brain_batteries);
+}
