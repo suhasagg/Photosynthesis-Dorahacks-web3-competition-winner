@@ -64,6 +64,19 @@ pub struct MatrixBrainBatteryFactory {
     pub rand_nonce: u32,
 }
 
+impl Default for MatrixBrainBattery {
+    fn default() -> Self {
+        Self {
+            name: "".to_string(),
+            dna: 0, // Or any default value
+            level: 0, // Or any default value
+            ready_time: 0, // Or any default value
+            win_count: 0, // Or any default value
+            loss_count: 0, // Or any default value
+        }
+    }
+}
+
 impl MatrixBrainBatteryFactory {
     pub fn new() -> Self {
         MatrixBrainBatteryFactory {
@@ -85,7 +98,7 @@ impl MatrixBrainBatteryFactory {
         
     }
 
-    pub fn create_random_matrix_brain_battery(&mut self, name: String, owner: String, env: Env) -> StdResult<()> {
+    pub fn create_random_matrix_brain_battery(&mut self, name: String, owner: String, env: Env) -> StdResult<MatrixBrainBattery> {
         let count = self.owner_matrix_brain_battery_count.get(&owner).cloned().unwrap_or(0);
         if count > 0 {
             return Err(StdError::generic_err("Owner already has a MatrixBrainBattery"));
@@ -100,24 +113,53 @@ impl MatrixBrainBatteryFactory {
             win_count: 0,
             loss_count: 0,
         };
-        self.matrix_brain_batteries.push(new_battery);
+        let new_battery_clone = new_battery.clone();
+        
+        //self.matrix_brain_batteries.push(new_battery);
+        self.matrix_brain_batteries.push(new_battery_clone);
         let id = self.matrix_brain_batteries.len() - 1;
         self.matrix_brain_battery_to_owner.insert(id as u64, owner.clone());
         self.owner_matrix_brain_battery_count.insert(owner, 1);
-        Ok(())
+        Ok(new_battery)
     }
 
-      pub fn trigger_cooldown(&mut self, matrix_brain_battery: &mut MatrixBrainBattery, env: Env) {
-        matrix_brain_battery.ready_time = env.block.time.plus_seconds(COOLDOWN_TIME).seconds();
+    //  pub fn trigger_cooldown(&mut self, matrix_brain_battery: &mut MatrixBrainBattery, env: Env) {
+    //    matrix_brain_battery.ready_time = env.block.time.plus_seconds(COOLDOWN_TIME).seconds();
+   // }
+     
+     // Instead of taking a reference to MatrixBrainBattery,
+// trigger_cooldown should take an index
+//fn trigger_cooldown(&mut self, index: usize, env: &Env) {
+ //   let matrix_brain_battery = self.matrix_brain_batteries
+  //      .get_mut(index)
+  //      .expect("MatrixBrainBattery not found");
+     
+    pub fn trigger_cooldown(&mut self, index: usize, env: &Env) {
+    let matrix_brain_battery = self.matrix_brain_batteries
+        .get_mut(index)
+        .expect("MatrixBrainBattery not found"); 
+     matrix_brain_battery.ready_time = env.block.time.plus_seconds(COOLDOWN_TIME).seconds();
     }
 
-    pub fn is_ready(&self, matrix_brain_battery: &MatrixBrainBattery, env: Env) -> bool {
-        matrix_brain_battery.ready_time <= env.block.time.seconds()
-    }
+
+
+    //pub fn is_ready(&self, matrix_brain_battery: &MatrixBrainBattery, env: Env) -> bool {
+    //    matrix_brain_battery.ready_time <= env.block.time.seconds()
+   // }
+
+    //pub fn is_ready(matrix_brain_battery: &MatrixBrainBattery, env: Env) -> bool {
+    //    matrix_brain_battery.ready_time <= env.block.time.seconds()
+   // }
+   
+   pub fn is_ready(matrix_brain_battery: &MatrixBrainBattery, env: &Env) -> bool {
+    matrix_brain_battery.ready_time <= env.block.time.seconds()
+   }
+
 
     pub fn feed_and_multiply(
         &mut self,
         matrix_brain_battery_id: u64,
+        //matrix_brain_battery: &mut MatrixBrainBattery,
         target_dna: u64,
         species: &str,
         owner: &str,
@@ -126,9 +168,12 @@ impl MatrixBrainBatteryFactory {
         let mut matrix_brain_battery = self.matrix_brain_batteries
             .get_mut(matrix_brain_battery_id as usize)
             .ok_or_else(|| StdError::generic_err("Invalid MatrixBrainBattery ID"))?;
-        if !self.is_ready(&matrix_brain_battery, env) {
+        if !MatrixBrainBatteryFactory::is_ready(&matrix_brain_battery, &env) {
             return Err(StdError::generic_err("MatrixBrainBattery not ready"));
         }
+       // if !!Self::is_ready(matrix_brain_battery, &env) {
+       //    return Err(StdError::generic_err("MatrixBrainBattery not ready"));
+       // }
 
         let new_dna = (matrix_brain_battery.dna + target_dna % DNA_MODULUS) / 2;
         let new_dna = if species == "kitty" {
@@ -137,6 +182,7 @@ impl MatrixBrainBatteryFactory {
             new_dna
         };
 
+      /*
         let new_battery = MatrixBrainBattery {
             name: "NoName".to_string(),
             dna: new_dna,
@@ -147,13 +193,41 @@ impl MatrixBrainBatteryFactory {
         };
         self.matrix_brain_batteries.push(new_battery);
         let id = self.matrix_brain_batteries.len() - 1;
-        self.matrix_brain_battery_to_owner.insert(id as u64, owner.to_string());
+        self.matrix_brain_battery_to_owner.inser t(id as u64, owner.to_string());
         self.owner_matrix_brain_battery_count
             .entry(owner.to_string())
             .and_modify(|count| *count += 1)
             .or_insert(1);
         self.trigger_cooldown(&mut matrix_brain_battery, env);
         Ok(())
+       */
+       
+     let new_battery = MatrixBrainBattery {
+        name: "BrainAxie".to_string(),
+        dna: new_dna,
+        level: 1,
+        ready_time: env.block.time.plus_seconds(COOLDOWN_TIME).seconds(),
+        win_count: 0,
+        loss_count: 0,
+    };
+    
+    // After this line, we are no longer borrowing self.matrix_brain_batteries
+    self.matrix_brain_batteries.push(new_battery);
+    let id = self.matrix_brain_batteries.len() - 1;
+    self.matrix_brain_battery_to_owner.insert(id as u64, owner.to_string());
+    self.owner_matrix_brain_battery_count
+        .entry(owner.to_string())
+        .and_modify(|count| *count += 1)
+        .or_insert(1);
+    
+    // We can now safely borrow self.matrix_brain_batteries again
+    //let mut matrix_brain_battery = self.matrix_brain_batteries
+    //    .get_mut(matrix_brain_battery_id as usize);
+    //self.trigger_cooldown(matrix_brain_battery.as_mut().unwrap(), env);
+    self.trigger_cooldown(matrix_brain_battery_id as usize, &env);
+    Ok(())
+       
+
     }
 
     pub fn feed_on_kitty(
@@ -220,7 +294,7 @@ impl MatrixBrainBatteryFactory {
 impl MatrixBrainBatteryFactory {
     pub const ATTACK_VICTORY_PROBABILITY: u64 = 70;
 
-    pub fn rand_mod(&mut self, modulus: u64, env: Env) -> u64 {
+    fn rand_mod(&mut self, modulo: u64, env: &Env) -> u64 {
         self.rand_nonce += 1;
         let seed = format!("{}{}", env.block.time.seconds(), self.rand_nonce);
         //let hash = u64::from_be_bytes(Sha256::digest(seed.as_bytes()));
@@ -231,23 +305,45 @@ impl MatrixBrainBatteryFactory {
         num
     }
 
-    pub fn attack(&mut self, matrix_brain_battery_id: u64, target_id: u64, owner: &str, env: Env) -> StdResult<()> {
-        let mut my_matrix_brain_battery = self.matrix_brain_batteries
-            .get_mut(matrix_brain_battery_id as usize)
-            .ok_or_else(|| StdError::generic_err("Invalid MatrixBrainBattery ID"))?;
-        let enemy_matrix_brain_battery = self.matrix_brain_batteries
-            .get(target_id as usize)
-            .ok_or_else(|| StdError::generic_err("Invalid target MatrixBrainBattery ID"))?;
-        let rand = self.rand_mod(100, env);
-                if rand <= Self::ATTACK_VICTORY_PROBABILITY {
+    pub fn attack(&mut self,matrix_brain_battery_id: u64, my_matrix_brain_battery:&mut MatrixBrainBattery,enemy_matrix_brain_battery:&mut MatrixBrainBattery, owner: &str, env: Env) -> StdResult<()> {
+      //  let mut my_matrix_brain_battery = self.matrix_brain_batteries
+      //      .get_mut(matrix_brain_battery_id as usize)
+      //      .ok_or_else(|| StdError::generic_err("Invalid MatrixBrainBattery ID"))?;
+        //let enemy_matrix_brain_battery = self.matrix_brain_batteries
+        //    .get(target_id as usize)
+        //    .ok_or_else(|| StdError::generic_err("Invalid target MatrixBrainBattery ID"))?;
+        //let rand = self.rand_mod(100, env);
+      //  let mut enemy_matrix_brain_battery = self.matrix_brain_batteries
+      //  .get_mut(target_id as usize)
+      //  .ok_or_else(|| StdError::generic_err("Invalid MatrixBrainBattery ID"))?;
+      //let (first_half, second_half) = self.matrix_brain_batteries.split_at_mut(matrix_brain_battery_id as usize);
+      //let my_matrix_brain_battery = &mut first_half[matrix_brain_battery_id as usize];
+      //let enemy_matrix_brain_battery = &mut second_half[target_id as usize]; 
+      
+      
+      let rand = self.rand_mod(100, &env);  
+        if rand <= Self::ATTACK_VICTORY_PROBABILITY {
             my_matrix_brain_battery.win_count += 1;
             my_matrix_brain_battery.level += 1;
             enemy_matrix_brain_battery.loss_count += 1;
             self.feed_and_multiply(matrix_brain_battery_id, enemy_matrix_brain_battery.dna, "matrixbrainbattery", owner, env)?;
+            //Self::feed_and_multiply(my_matrix_brain_battery, enemy_matrix_brain_battery.dna, "matrixbrainbattery", owner, env)?;
+
         } else {
             my_matrix_brain_battery.loss_count += 1;
             enemy_matrix_brain_battery.win_count += 1;
-            self.trigger_cooldown(my_matrix_brain_battery, env);
+           // self.trigger_cooldown(my_matrix_brain_battery, &env);
+        //   let my_matrix_brain_battery_index = self.matrix_brain_batteries.iter()
+        //   .position(|battery| /* condition to match my_matrix_brain_battery */)
+        //   .expect("Battery not found");
+       
+          let target_name = "BrainAxie".to_string();
+          let my_matrix_brain_battery_index = self.matrix_brain_batteries.iter()
+            .position(|battery| battery.name == target_name)
+            .expect("Battery not found");
+
+           self.trigger_cooldown(my_matrix_brain_battery_index, &env);
+        
         }
         Ok(())
     }
@@ -273,6 +369,7 @@ impl MatrixBrainBatteryFactory {
         Ok(())
     }
 
+    /*
     pub fn take_ownership(&mut self, new_owner: &str, matrix_brain_battery_id: u64) -> StdResult<()> {
         let approval = self.matrix_brain_battery_approvals.get(&matrix_brain_battery_id);
 
@@ -280,16 +377,40 @@ impl MatrixBrainBatteryFactory {
             return Err(StdError::generic_err("Only approved address can take ownership"));
         }
 
-        let owner = self.matrix_brain_battery_to_owner.get(&matrix_brain_battery_id).ok_or_else(|| {
-            StdError::generic_err("MatrixBrainBattery not found")
-        })?;
+       // let owner = self.matrix_brain_battery_to_owner.get(&matrix_brain_battery_id).ok_or_else(|| {
+       //     StdError::generic_err("MatrixBrainBattery not found")
+       // })?;
 
+       // self.transfer_ownership(&owner, new_owner, matrix_brain_battery_id)
+       let owner = self.matrix_brain_battery_to_owner.get(&matrix_brain_battery_id)
+       .ok_or_else(|| {
+          StdError::generic_err("MatrixBrainBattery not found")
+       })?.clone();  // note the clone() here
+
+        self.transfer_ownership(&owner, new_owner, matrix_brain_battery_id)?; 
+   
+   
+    }
+    */
+    
+    pub fn take_ownership(&mut self, new_owner: &str, matrix_brain_battery_id: u64) -> StdResult<()> {
+        let approval = self.matrix_brain_battery_approvals.get(&matrix_brain_battery_id);
+    
+        if approval != Some(&new_owner.to_string()) {
+            return Err(StdError::generic_err("Only approved address can take ownership"));
+        }
+    
+        let owner = self.matrix_brain_battery_to_owner.get(&matrix_brain_battery_id)
+        .ok_or_else(|| {
+            StdError::generic_err("MatrixBrainBattery not found")
+        })?.clone();  // note the clone() here
+    
         self.transfer_ownership(&owner, new_owner, matrix_brain_battery_id)
     }  
 }
 
 fn main() {
-    // Initialize the factory
+    // Initialize the factory  
     let mut factory = MatrixBrainBatteryFactory::new();
     let now = SystemTime::now();
     // Assume the following initial parameters
@@ -298,6 +419,12 @@ fn main() {
     let timestamp = now.duration_since(UNIX_EPOCH)
     .expect("System time is before the UNIX epoch")
     .as_secs();
+
+    let owner2 = "Owner2".to_string();
+    let name2 = "Battery2".to_string();
+    let timestamp = now.duration_since(UNIX_EPOCH)
+    .expect("System time is before the UNIX epoch")
+    .as_secs(); 
     // Initialize the environment
     // Note: You'll need to replace this with a real Env initialization
     let env = Env {
@@ -313,18 +440,45 @@ fn main() {
         };
 
     // Create a new MatrixBrainBattery
-    let result = factory.create_random_matrix_brain_battery(name, owner.clone(), env.clone());
+    //let result = factory.create_random_matrix_brain_battery(name, owner.clone(), env.clone());
+    //let result1 = factory.create_random_matrix_brain_battery(name2, owner2.clone(), env.clone()); 
+      
+    let mut matrix_brain_battery1 = MatrixBrainBattery::default();
 
-    match result {
-        Ok(()) => println!("MatrixBrainBattery created successfully"),
-        Err(e) => eprintln!("Failed to create MatrixBrainBattery: {}", e),
+    let result1 = factory.create_random_matrix_brain_battery(name, owner.clone(), env.clone());
+   
+     if let Ok(battery) = result1 {
+       // Copy the battery to your placeholder
+         matrix_brain_battery1 = battery;
+     } else {
+    // Handle error if result1 is Err
+    println!("Error creating battery");
     }
+
+
+    let mut matrix_brain_battery2 = MatrixBrainBattery::default();
+
+    let result2 = factory.create_random_matrix_brain_battery(name2, owner2.clone(), env.clone()); 
+   
+     if let Ok(battery) = result2 {
+       // Copy the battery to your placeholder
+         matrix_brain_battery2 = battery;
+     } else {
+    // Handle error if result1 is Err
+    println!("Error creating battery");
+    }
+
+   // match result {
+   //     Ok(()) => println!("MatrixBrainBattery created successfully"),
+   //     Err(e) => eprintln!("Failed to create MatrixBrainBattery: {}", e),
+  //  }
 
     // Feed on Kitty and multiply
     let kitty_id: u64 = 1; // Assume an existing Kitty id
     let matrix_brain_battery_id: u64 = 0; // Assume the first MatrixBrainBattery's id
     let result = factory.feed_on_kitty(matrix_brain_battery_id, kitty_id, &owner, env.clone());
-
+    let kitty_id_usize = kitty_id as usize;
+    let matrix_brain_battery_id_usize = matrix_brain_battery_id as usize;
     match result {
         Ok(()) => println!("MatrixBrainBattery fed on Kitty and multiplied successfully"),
         Err(e) => eprintln!("Failed to feed on Kitty and multiply: {}", e),
@@ -332,8 +486,11 @@ fn main() {
 
     // Perform an attack
     let target_id: u64 = 1; // Assume another MatrixBrainBattery id for target
-    let result = factory.attack(matrix_brain_battery_id, target_id, &owner, env.clone());
-
+   // let (first_half, second_half) = factory.matrix_brain_batteries.split_at_mut(kitty_id_usize);
+   // let matrix_brain_battery = &mut first_half[kitty_id_usize];
+   // let matrix_brain_battery1 = &mut second_half[matrix_brain_battery_id_usize];
+    let result = factory.attack(matrix_brain_battery_id, &mut matrix_brain_battery1, &mut matrix_brain_battery2, &owner, env.clone());
+    
     match result {
         Ok(()) => println!("Attack was successful"),
         Err(e) => eprintln!("Attack failed: {}", e),
