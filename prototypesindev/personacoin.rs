@@ -203,7 +203,7 @@ pub fn handle(
      match msg {
          HandleMsg::Sync{cookie, source_pub, dest_pub} => sync(deps, env, source_pub, dest_pub, cookie),
          HandleMsg::CreateCookie => {
-            Ok(Response::new()) // Do nothing for this case, just return an Ok response
+            Ok(Response::new()) 
         },
      }
  }
