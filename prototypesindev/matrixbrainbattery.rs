@@ -260,32 +260,44 @@ impl MatrixBrainBatteryFactory {
         let num = u64::from_be_bytes(array);
         num
     }
+  
+    pub fn attack(&mut self, matrix_brain_battery_id: u64, my_matrix_brain_battery: &mut MatrixBrainBattery, enemy_matrix_brain_battery: &mut MatrixBrainBattery, owner: &str, env: Env) -> StdResult<()> {     
 
-    pub fn attack(&mut self,matrix_brain_battery_id: u64, my_matrix_brain_battery:&mut MatrixBrainBattery,enemy_matrix_brain_battery:&mut MatrixBrainBattery, owner: &str, env: Env) -> StdResult<()> {     
-      
-      let rand = self.rand_mod(100, &env);  
+        let my_index = self.matrix_brain_batteries.iter()
+            .position(|battery| battery.name == my_matrix_brain_battery.name)
+            .expect("My battery not found");
+    
+        let enemy_index = self.matrix_brain_batteries.iter()
+            .position(|battery| battery.name == enemy_matrix_brain_battery.name)
+            .expect("Enemy battery not found");
+    
+        let rand = self.rand_mod(100, &env);  
         if rand <= Self::ATTACK_VICTORY_PROBABILITY {
             my_matrix_brain_battery.win_count += 1;
             my_matrix_brain_battery.level += 1;
             enemy_matrix_brain_battery.loss_count += 1;
             self.feed_and_multiply(matrix_brain_battery_id, enemy_matrix_brain_battery.dna, "matrixbrainbattery", owner, env)?;
-            //Self::feed_and_multiply(my_matrix_brain_battery, enemy_matrix_brain_battery.dna, "matrixbrainbattery", owner, env)?;
-
         } else {
             my_matrix_brain_battery.loss_count += 1;
             enemy_matrix_brain_battery.win_count += 1;
-       
-          let target_name = "BrainAxie".to_string();
-          let my_matrix_brain_battery_index = self.matrix_brain_batteries.iter()
-            .position(|battery| battery.name == target_name)
-            .expect("Battery not found");
-
-           self.trigger_cooldown(my_matrix_brain_battery_index, &env);
-        
+    
+            let target_name = "BrainAxie".to_string();
+            let my_battery_index = self.matrix_brain_batteries.iter()
+                .position(|battery| battery.name == target_name)
+                .expect("Battery not found");
+    
+            self.trigger_cooldown(my_battery_index, &env);
         }
+    
+        self.matrix_brain_batteries[my_index] = my_matrix_brain_battery.clone();
+        self.matrix_brain_batteries[enemy_index] = enemy_matrix_brain_battery.clone();
+    
         Ok(())
     }
-}
+    
+}   
+
+
 
 // MatrixBrainBatteryOwnership
 impl MatrixBrainBatteryFactory {
