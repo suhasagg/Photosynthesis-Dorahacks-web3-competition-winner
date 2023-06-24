@@ -353,8 +353,7 @@ fn main() {
     let timestamp = now.duration_since(UNIX_EPOCH)
     .expect("System time is before the UNIX epoch")
     .as_secs(); 
-    // Initialize the environment
-    // Note: You'll need to replace this with a real Env initialization
+    
     let env = Env {
             block: BlockInfo {
                 height: 0,
