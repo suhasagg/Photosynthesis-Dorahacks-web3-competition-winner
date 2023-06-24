@@ -71,8 +71,11 @@ pub struct State {
     pub plt_address: String,
 }
 
+
 impl State {
     pub fn save(&self, storage: &mut dyn Storage) -> StdResult<()> {
+        println!("Saving state: {:#?}", self);
+        
         let mut singleton = singleton(storage, STATE_KEY);
         let data = to_vec(self)?;
         singleton.save(&data)
@@ -83,8 +86,12 @@ impl State {
         let data: Vec<u8> = singleton.load()
             .map_err(|_err| StdError::generic_err("Failed to load state"))?;
 
-        from_slice(&data)
-            .map_err(|_err| StdError::generic_err("Failed to deserialize state"))
+        let loaded_state = from_slice(&data)
+            .map_err(|_err| StdError::generic_err("Failed to deserialize state"))?;
+
+        println!("Loaded state: {:#?}", loaded_state);
+        
+        Ok(loaded_state)
     }
 
     fn default() -> Self {
@@ -188,7 +195,8 @@ pub fn handle(
 
 pub fn update_ad(storage: &mut dyn Storage, ad: Ad) -> StdResult<()> {
     let mut ad_storage = singleton(storage, ad.id.as_bytes());
-    ad_storage.save(&ad)
+    println!("Saving state: {:#?}", ad);
+    ad_storage.save(&ad)    
 }
 
 pub fn serve_ad(storage: &mut dyn Storage, env: Env, id: String) -> StdResult<Response> {
@@ -199,6 +207,7 @@ pub fn serve_ad(storage: &mut dyn Storage, env: Env, id: String) -> StdResult<Re
     attributes.push(attr("image_url", ad.image_url.clone()));
     attributes.push(attr("target_url", ad.target_url.clone()));
     let event = Event::new("serve_ad").add_attributes(attributes);
+    println!("Event created: {:#?}", event);
     Ok(Response::new().add_event(event))
 }
 
@@ -243,6 +252,9 @@ let plt_address = "0x123abc...";
 let staking_attrs = vec![    attr("action", "staking"),    attr("contract_address", plt_address),    attr("staker_address", env.contract.address.clone()),    attr("amount", plt_amount),];
 let staking_event = Event::new("staking").add_attributes(staking_attrs);
 const PLT_REWARDS_CONTRACT: &'static str = "0x123abc...";
+println!("Event created: {:#?}", event);
+println!("Event created: {:#?}", reward_event);
+println!("Event created: {:#?}", staking_event);
 Ok(Response::new()
     .add_messages(vec![
        // CosmosMsg::Wasm(WasmMsg::Execute {
@@ -281,6 +293,7 @@ fn delete_ad(storage: &mut dyn Storage, ad_id: String) -> StdResult<Response> {
         attr("id", ad_id),
     ];
     let event = Event::new("delete_ad").add_attributes(attributes);
+    println!("Event created: {:#?}", event);
     Ok(Response::new().add_event(event))
 }
 
@@ -311,6 +324,7 @@ for mut ad in state.ads.iter_mut() {
     };
     let reward_attrs = vec![        attr("action", "reward"),        attr("recipient", ad.reward_address.clone()),        attr("amount", ad_reward_amountv1),    ];
     let reward_event = Event::new("reward").add_attributes(reward_attrs);
+    println!("Event created: {:#?}", reward_event);
 }
 
 State::save(&state, storage)?;
