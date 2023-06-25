@@ -1,0 +1,12 @@
+/media/swordfish/Titanaboa/matrix/dapp/dapps/target/debug/deps/spki-3735f7986bd9e036.rmeta: /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/lib.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/algorithm.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/error.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/spki.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/traits.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/../README.md
+
+/media/swordfish/Titanaboa/matrix/dapp/dapps/target/debug/deps/libspki-3735f7986bd9e036.rlib: /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/lib.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/algorithm.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/error.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/spki.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/traits.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/../README.md
+
+/media/swordfish/Titanaboa/matrix/dapp/dapps/target/debug/deps/spki-3735f7986bd9e036.d: /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/lib.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/algorithm.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/error.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/spki.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/traits.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/../README.md
+
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/lib.rs:
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/algorithm.rs:
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/error.rs:
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/spki.rs:
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/traits.rs:
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.6.0/src/../README.md:

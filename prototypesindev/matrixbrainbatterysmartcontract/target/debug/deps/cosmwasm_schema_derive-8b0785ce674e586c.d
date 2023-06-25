@@ -1,0 +1,9 @@
+/media/swordfish/Titanaboa/matrix/dapp/dapps/target/debug/deps/libcosmwasm_schema_derive-8b0785ce674e586c.so: /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/lib.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/cw_serde.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/generate_api.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/query_responses.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/query_responses/context.rs
+
+/media/swordfish/Titanaboa/matrix/dapp/dapps/target/debug/deps/cosmwasm_schema_derive-8b0785ce674e586c.d: /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/lib.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/cw_serde.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/generate_api.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/query_responses.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/query_responses/context.rs
+
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/lib.rs:
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/cw_serde.rs:
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/generate_api.rs:
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/query_responses.rs:
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/cosmwasm-schema-derive-1.2.3/src/query_responses/context.rs:

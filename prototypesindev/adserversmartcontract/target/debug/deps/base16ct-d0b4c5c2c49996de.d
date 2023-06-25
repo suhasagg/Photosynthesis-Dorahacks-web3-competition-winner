@@ -1,0 +1,12 @@
+/media/swordfish/Titanaboa/matrix/dapp/dapps/target/debug/deps/base16ct-d0b4c5c2c49996de.rmeta: /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/lib.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/lower.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/mixed.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/upper.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/display.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/error.rs
+
+/media/swordfish/Titanaboa/matrix/dapp/dapps/target/debug/deps/libbase16ct-d0b4c5c2c49996de.rlib: /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/lib.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/lower.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/mixed.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/upper.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/display.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/error.rs
+
+/media/swordfish/Titanaboa/matrix/dapp/dapps/target/debug/deps/base16ct-d0b4c5c2c49996de.d: /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/lib.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/lower.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/mixed.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/upper.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/display.rs /home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/error.rs
+
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/lib.rs:
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/lower.rs:
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/mixed.rs:
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/upper.rs:
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/display.rs:
+/home/swordfish/.cargo/registry/src/github.com-1ecc6299db9ec823/base16ct-0.1.1/src/error.rs:

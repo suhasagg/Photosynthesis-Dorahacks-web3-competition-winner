@@ -1,0 +1,1 @@
+/media/swordfish/Hydra8/matrixv1/matrix/dapp/dapps2/target/debug/matrixbrainbattery: /media/swordfish/Hydra8/matrixv1/matrix/dapp/dapps2/src/contract.rs /media/swordfish/Hydra8/matrixv1/matrix/dapp/dapps2/src/lib.rs

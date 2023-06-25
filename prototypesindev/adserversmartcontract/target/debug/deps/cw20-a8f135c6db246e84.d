@@ -1,0 +1,15 @@
+/media/swordfish/Titanaboa/matrix/dapp/dapps/target/debug/deps/cw20-a8f135c6db246e84.rmeta: /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/lib.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/balance.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/coin.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/denom.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/helpers.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/logo.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/msg.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/query.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/receiver.rs
+
+/media/swordfish/Titanaboa/matrix/dapp/dapps/target/debug/deps/libcw20-a8f135c6db246e84.rlib: /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/lib.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/balance.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/coin.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/denom.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/helpers.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/logo.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/msg.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/query.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/receiver.rs
+
+/media/swordfish/Titanaboa/matrix/dapp/dapps/target/debug/deps/cw20-a8f135c6db246e84.d: /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/lib.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/balance.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/coin.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/denom.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/helpers.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/logo.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/msg.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/query.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/receiver.rs
+
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/lib.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/balance.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/coin.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/denom.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/helpers.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/logo.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/msg.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/query.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/cw20-1.0.1/src/receiver.rs:
