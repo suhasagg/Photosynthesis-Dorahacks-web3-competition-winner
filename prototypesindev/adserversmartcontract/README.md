@@ -3,7 +3,7 @@
 #Heavy Transaction Guaranteed Dapps on Daily Basis – A strong candidate for Archway Rewards and Photosynthesis liquid token
 
 https://docs.google.com/document/d/1-pGzhqz7UHgB2O9qD4fcLAhwhTUgUI4A/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
-
+```
 Saving state: State {
     ads: [],
     total_views: 0,
@@ -166,3 +166,4 @@ Event created: Event {
     ],
 }
 Ad deleted successfully.
+```
