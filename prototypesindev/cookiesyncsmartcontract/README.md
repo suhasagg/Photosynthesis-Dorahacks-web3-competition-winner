@@ -1,77 +1,62 @@
-# Archway Network Starter Pack
+# Cookie Sync Smart Contract
+# Heavy Transaction Guaranteed Dapps on Daily Basis – A strong candidate for Archway Rewards and Photosynthesis liquid token
 
-This is a template to build smart contracts in Rust to run inside a
-[Cosmos SDK](https://github.com/cosmos/cosmos-sdk) module on all chains that enable it.
-To understand the framework better, please read the overview in the
-[archway repo](https://github.com/archway-network/archway/blob/main/README.md),
-and dig into the [archway docs](https://docs.archway.io).
+https://docs.google.com/document/d/1-pGzhqz7UHgB2O9qD4fcLAhwhTUgUI4A/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
-The below instructions assume you understand the theory and just want to get coding.
-
-## Creating a new project from a template
-
-Assuming you have a recent version of rust and cargo (v1.51.0+) installed
-(via [rustup](https://rustup.rs/)),
-then the following should get you a new repo to start a contract:
-
-Install [cargo-generate](https://github.com/ashleygwilliams/cargo-generate) and cargo-run-script.
-If you didn't install them already, run the following commands:
-
-```sh
-cargo install cargo-generate --features vendored-openssl
-cargo install cargo-run-script
 ```
-
-Now, use it to create your new contract.
-Go to the folder in which you want to place it and run:
-
-```sh
-cargo generate --git https://github.com/archway-network/archway-templates.git --name PROJECT_NAME default
+Saving state: CookiePacketData {
+    cookie: Cookie {
+        id: "default_id",
+        domain: "default_domain",
+        data: "default_data",
+        expiration: 0,
+    },
+    source_pub: "new york times",
+    dest_pub: "cnn",
+}
+State instantiated successfully.
+Event created: Event {
+    ty: "sync",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "sync",
+        },
+        Attribute {
+            key: "from",
+            value: "new york times",
+        },
+        Attribute {
+            key: "to",
+            value: "cnn",
+        },
+        Attribute {
+            key: "cookie",
+            value: "123",
+        },
+    ],
+}
+Cookie Synced successfully.
+Event created: Event {
+    ty: "sync",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "sync",
+        },
+        Attribute {
+            key: "from",
+            value: "new york times",
+        },
+        Attribute {
+            key: "to",
+            value: "cnn",
+        },
+        Attribute {
+            key: "cookie",
+            value: "456",
+        },
+    ],
+}
+Cookie Synced successfully.
 ```
-
-You will now have a new folder called `PROJECT_NAME` (I hope you changed that to something else)
-containing a simple working contract and build system that you can customize.
-
-## Create a Repo
-
-After generating, you have a initialized local git repo, but no commits, and no remote.
-Go to a server (eg. github) and create a new upstream repo (called `YOUR-GIT-URL` below).
-Then run the following:
-
-```sh
-# this is needed to create a valid Cargo.lock file (see below)
-cargo check
-git branch -M main
-git add .
-git commit -m 'Initial Commit'
-git remote add origin YOUR-GIT-URL
-git push -u origin main
-```
-
-## CI Support
-
-We have template configurations for [GitHub Actions](.github/workflows/Basic.yml) in the generated project,
-so you can get up and running with CI right away.
-
-One note is that the CI runs all `cargo` commands
-with `--locked` to ensure it uses the exact same versions as you have locally. This also means
-you must have an up-to-date `Cargo.lock` file, which is not auto-generated.
-The first time you set up the project (or after adding any dep), you should ensure the
-`Cargo.lock` file is updated, so the CI will test properly. This can be done simply by
-running `cargo check` or `cargo unit-test`.
-
-## Using your project
-
-Once you have your custom repo, you should check out [Developing](./Developing.md) to explain
-more on how to run tests and develop code. Or go through the
-[online tutorial](https://docs.archway.io/docs/create/guides/my-first-dapp/start) to get a better feel
-of how to develop.
-
-[Publishing](./Publishing.md) contains useful information on how to publish your contract
-to the world, once you are ready to deploy it on a running blockchain. And
-[Importing](./Importing.md) contains information about pulling in other contracts or crates
-that have been published.
-
-Please replace this README file with information about your specific project. You can keep
-the `Developing.md` and `Publishing.md` files as useful referenced, but please set some
-proper description in the README.
