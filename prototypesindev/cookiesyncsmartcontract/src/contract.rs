@@ -197,7 +197,13 @@ pub fn init(
 // The HandleMsg enum represents the different types of messages that the contract can handle.
 // Each variant of the enum corresponds to a different action that can be taken on the contract.
 pub enum HandleMsg {
-   // The Sync variant is used when a Cookie needs to be synced from a source to a destination.
+    BatchSyncSave {
+        source_pub: String,
+        dest_pub: String,
+        cookies: Vec<Cookie>,
+    },
+   
+    // The Sync variant is used when a Cookie needs to be synced from a source to a destination.
     // It includes the Cookie to be synced, and the public identifiers of the source and destination.
     Sync {
         cookie: Cookie,  // The Cookie to be synced
@@ -251,6 +257,8 @@ pub fn handle(
      let storage: &mut dyn Storage = deps.storage;
        // Match on the HandleMsg to determine what action to take.
      match msg {
+         HandleMsg::BatchSyncSave { source_pub, dest_pub, cookies } => 
+                batch_sync_save(deps, env, source_pub, dest_pub, cookies),           
          // If the message is a Sync message, call the sync function with the appropriate parameters.
          HandleMsg::Sync{cookie, source_pub, dest_pub} => sync(deps, env, source_pub, dest_pub, cookie),
         // If the message is a CreateCookie message, respond with an empty response.
@@ -258,9 +266,9 @@ pub fn handle(
          HandleMsg::CreateCookie => {
             Ok(Response::new()) 
         },
-     }
- }
- 
+    }
+}
+
 
 // This function is responsible for syncing CookiePacketData and updates the state of the contract.
 pub fn sync(
@@ -281,6 +289,50 @@ pub fn sync(
     println!("Event created: {:#?}", event);
     // Returns a successful response with the event.
     Ok(Response::new().add_event(event)) 
+
+}
+
+pub fn batch_sync_save(
+    deps: DepsMut,
+    env: Env,
+    source_pub: String,
+    dest_pub: String,
+    cookies: Vec<Cookie>,
+) -> StdResult<Response> {
+let mut events = Vec::new();
+// Define a vector to store serialized cookies key-value pairs
+let mut kv_pairs: Vec<(Vec<u8>, Binary)> = Vec::new();
+let mut cookie_ids: Vec<String> = Vec::new();
+
+for cookie in cookies {
+    // Format the key and serialize the cookie
+    let result = format!("{}:{}:{}", &dest_pub, &source_pub, &cookie.id);
+    let serialized_cookie = match to_binary(&cookie) {
+        Ok(cookie) => cookie,
+        Err(e) => return Err(e), // If cookie serialization fails, return the error
+    };
+
+    // Add key-value pair to the kv_pairs vector
+    kv_pairs.push((result.as_bytes().to_vec(), serialized_cookie));
+    cookie_ids.push(cookie.id.clone());
+
+    // Create an event for each synchronization
+    let mut attributes = vec![attr("action", "sync"), attr("from", &source_pub), attr("to", &dest_pub), attr("cookie", &cookie.id)];
+    let event = Event::new("batch-sync").add_attributes(attributes);
+    println!("Event created: {:#?}", event); // print the event
+    events.push(event);
+    
+}
+
+// Define a key for batch storage
+let batch_storage_key = format!("{}:{}:{}", &dest_pub, &source_pub, cookie_ids.last().unwrap_or(&String::new()));
+let serialized_cookie_ids = to_binary(&cookie_ids)?;
+
+// Save the serialized cookie_ids vector in storage under the batch_storage_key
+deps.storage.set(batch_storage_key.as_bytes(), &serialized_cookie_ids);
+
+// Return a successful response with all events
+Ok(Response::new().add_events(events))
 
 }
 
@@ -317,9 +369,11 @@ pub fn handle_msg(
              // Return the result with the event included in the response
             Ok(Response::new().add_event(event))
         
-        }
+        },
          // When the message is of type Sync, call the sync function
         HandleMsg::Sync { cookie, source_pub, dest_pub } => sync(deps, env, dest_pub, source_pub, cookie),
+        HandleMsg::BatchSyncSave { source_pub, dest_pub, cookies } => 
+                batch_sync_save(deps, env, source_pub, dest_pub, cookies),   
     }
 }
 // This function is the main entry point for query handling of the contract.
@@ -394,6 +448,29 @@ fn main() {
         data: "cookie_data1".to_string(),
         expiration: 0, // Cookie does not expire
     };
+
+    let cookie2 = Cookie {
+        id: "789".to_string(),
+        domain: "test2".to_string(),
+        data: "cookie_data2".to_string(),
+        expiration: 0,
+    };
+    
+    let cookie3 = Cookie {
+        id: "012".to_string(),
+        domain: "test3".to_string(),
+        data: "cookie_data3".to_string(),
+        expiration: 0,
+    };
+    
+    let cookie4 = Cookie {
+        id: "345".to_string(),
+        domain: "test4".to_string(),
+        data: "cookie_data4".to_string(),
+        expiration: 0,
+    };
+
+    let cookies = vec![cookie.clone(), cookie1.clone(), cookie2.clone(), cookie3.clone(), cookie4.clone()];
     // Define source and destination for the cookies.
     let source_pub = "new york times".to_string();
     let dest_pub = "cnn".to_string();
@@ -405,6 +482,23 @@ fn main() {
         Ok(_response) => println!("State instantiated successfully."),
         Err(e) => println!("Failed to instantiate state: {}", e),
     }
+
+   {
+         match handle(
+             deps.as_mut(),
+             env.clone(),
+             info.clone(),
+             HandleMsg::BatchSyncSave {
+                  source_pub: source_pub.clone(),
+                  dest_pub: dest_pub.clone(),
+                  cookies,
+            },
+        ) {
+           Ok(_response) => println!("Cookies batch synced successfully."),
+           Err(e) => println!("Failed to batch sync cookies: {}", e),
+          }
+    }
+
     // Try to handle the Sync message with the created cookies.
 // The success or failure of the operation will be printed to the console.
     {
