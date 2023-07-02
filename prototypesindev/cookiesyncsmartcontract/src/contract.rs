@@ -291,7 +291,7 @@ pub fn sync(
     Ok(Response::new().add_event(event)) 
 
 }
-
+//Cookie batch size can be tuned to optimise gas usage
 pub fn batch_sync_save(
     deps: DepsMut,
     env: Env,
