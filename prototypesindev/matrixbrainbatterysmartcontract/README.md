@@ -4,6 +4,28 @@
 
 https://docs.google.com/document/d/1PqFbmda3N09y3TfOuCQZUSSKpxzclvku/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
+Some P2E Games of similar genre
+Matrix Movie based P2E Game - Matrix infinity
+
+https://docs.google.com/document/d/1VYHsaFEsLstoP8ht56IZXzqwWGfC9pSD/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
+Mission Impossible based P2E game - Mission impossible
+
+https://docs.google.com/document/d/15BiFBWG_WbizrmiBwXIgdayjypqwUcDK/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
+WWE based P2E game - WWE universe
+
+https://docs.google.com/document/d/1CSBXgFoX03_WUhLrChHUWwrE9jncgZDi/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
+In the News :
+https://www.facebook.com/groups/682232515824097/permalink/990244991689513/
+
+https://www.facebook.com/groups/682232515824097/permalink/994170227963656/
+
+https://www.facebook.com/groups/682232515824097/permalink/990246285022717/
+
+https://www.facebook.com/groups/682232515824097/permalink/993054448075234/
+
 ```
 [
     MatrixBrainBattery {
