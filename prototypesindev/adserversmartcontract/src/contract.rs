@@ -141,6 +141,9 @@ pub enum HandleMsg {
     DeleteAd {
         id: String,
     },
+    BatchServeAds {
+        ids: Vec<String>,
+   },
 }
 
 #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
@@ -191,6 +194,9 @@ pub fn handle(
         } => add_ad(deps.storage, env, info, id, image_url, target_url, reward_address, number),
         HandleMsg::ServeAd { id } => serve_ad(deps.storage, env, id),
         HandleMsg::DeleteAd { id } => delete_ad(deps.storage, id),
+        HandleMsg::BatchServeAds { ids } => {
+            batch_serve_ads(storage, env, ids)
+        },
     }
 }
 
@@ -223,6 +229,34 @@ pub fn serve_ad(storage: &mut dyn Storage, env: Env, id: String) -> StdResult<Re
     println!("Event created: {:#?}", event);
     // Return a response with the created event
     Ok(Response::new().add_event(event))
+}
+
+
+pub fn batch_serve_ads(storage: &mut dyn Storage, env: Env, ids: Vec<String>) -> StdResult<Response> {
+    let mut events = Vec::new();
+
+    for id in ids {
+        // Retrieve the ad with the specified id from the storage
+        let mut ad = get_ad(storage, id.clone())?;
+        // Increment the view count of the ad
+        ad.views += 1;
+        // Update the ad in the storage with the new view count
+        update_ad(storage, ad.clone())?;
+        // Prepare a list of attributes for the event of serving an ad
+        let mut attributes = vec![attr("action", "serve_ad"), attr("id", id)];
+        // Add additional attributes, the image_url and target_url of the ad
+        attributes.push(attr("image_url", ad.image_url.clone()));
+        attributes.push(attr("target_url", ad.target_url.clone()));
+        // Create a new event "serve_ad" with the prepared attributes
+        let event = Event::new("serve_ad").add_attributes(attributes);
+        // Print the created event to the console
+        println!("Event created: {:#?}", event);
+        // Add the event to the events vector
+        events.push(event);
+    }
+
+    // Return a response with all the created events
+    Ok(Response::new().add_events(events))
 }
 
 // This function is responsible for adding advertisements in our ad system. It accepts
@@ -437,34 +471,65 @@ total_views: state.total_views,
 })
 }
 
-
 fn main() {
-     // Create mock dependencies to be used for testing
+    // Create mock dependencies
     let mut deps = mock_dependencies();
-// Create mock environment that includes contract information
+
+    // Create a mock environment
     let env = mock_env(); 
- // Create mock information about the invoker, including the sent coins
+
+    // Create mock info about the sender
     let info = mock_info("sender_address", &coins(1000, "earth")); 
- // Define ad details for testing
-    let ad_id = String::from("test_id");
-    let image_url = String::from("test_image_url");
-    let target_url = String::from("test_target_url");
-    let reward_address = String::from("test_reward_address");
-   // Create a mock storage to be used for testing
-    let mut storage: Box<dyn Storage> = Box::new(cosmwasm_std::testing::MockStorage::new());
-    let storage_ref: &mut dyn Storage = &mut *storage;
-  // Initialize a new contract
+
+    // Define multiple ads details for testing
+    let ad_ids = vec![
+        String::from("test_id1"),
+        String::from("test_id2"),
+        String::from("test_id3"),
+    ];
+    let image_urls = vec![
+        String::from("test_image_url1"),
+        String::from("test_image_url2"),
+        String::from("test_image_url3"),
+    ];
+    let target_urls = vec![
+        String::from("test_target_url1"),
+        String::from("test_target_url2"),
+        String::from("test_target_url3"),
+    ];
+    let reward_addresses = vec![
+        String::from("test_reward_address1"),
+        String::from("test_reward_address2"),
+        String::from("test_reward_address3"),
+    ];
+
+    // Initialize a new contract
     let msg = InitMsg {};
-// Try to instantiate the contract and check for errors
+
+    // Try to instantiate the contract
     match instantiate(deps.as_mut(), env.clone(), info.clone(), msg) {
         Ok(_response) => println!("State instantiated successfully."),
         Err(e) => println!("Failed to instantiate state: {}", e),
     }
 
-      // Try to add an ad and check for errors
-    {
+    let single_ad_id = ad_ids.first().unwrap();  // Get the first ad ID
+    match handle(
+        deps.as_mut(),
+        env.clone(),
+        info.clone(),
+        HandleMsg::ServeAd {
+            id: single_ad_id.clone(),
+        },
+    ) {
+        Ok(_response) => println!("Ad {} served successfully.", single_ad_id),
+        Err(e) => println!("Failed to serve ad {}: {}", single_ad_id, e),
+    }
+
+
+
+    // Add multiple ads
+    for (((ad_id, image_url), target_url), reward_address) in ad_ids.iter().zip(&image_urls).zip(&target_urls).zip(&reward_addresses) {
         match handle(
-           // storage_ref,
             deps.as_mut(),
             env.clone(),
             info.clone(),
@@ -475,42 +540,36 @@ fn main() {
                 reward_address: reward_address.clone(),
             },
         ) {
-            Ok(_response) => println!("Ad added successfully."),
-            Err(e) => println!("Failed to add ad: {}", e),
+            Ok(_response) => println!("Ad {} added successfully.", ad_id),
+            Err(e) => println!("Failed to add ad {}: {}", ad_id, e),
         }
     }
-    
-    // Try to serve the ad and check for errors
-    {
+
+    // Serve multiple ads
+    match handle(
+        deps.as_mut(),
+        env.clone(),
+        info.clone(),
+        HandleMsg::BatchServeAds {
+            ids: ad_ids.clone(),
+        },
+    ) {
+        Ok(_response) => println!("Ads served successfully."),
+        Err(e) => println!("Failed to serve ads: {}", e),
+    }
+
+    // Delete the ads
+    for ad_id in ad_ids {
         match handle(
-          //  storage_ref,
             deps.as_mut(),
             env.clone(),
             info.clone(),
-            HandleMsg::ServeAd {
+            HandleMsg::DeleteAd {
                 id: ad_id.clone(),
             },
         ) {
-            Ok(_response) => println!("Ad served successfully."),
-            Err(e) => println!("Failed to serve ad: {}", e),
+            Ok(_response) => println!("Ad {} deleted successfully.", ad_id),
+            Err(e) => println!("Failed to delete ad {}: {}", ad_id, e),
         }
     }
-     // Try to delete the ad and check for errors
-    
-    {
-        match handle(
-          //  storage_ref,
-            deps.as_mut(),
-            env,
-            info,
-            HandleMsg::DeleteAd {
-                id: ad_id,
-            },
-        ) {
-            Ok(_response) => println!("Ad deleted successfully."),
-            Err(e) => println!("Failed to delete ad: {}", e),
-        }
-    }
-    
-
 }
