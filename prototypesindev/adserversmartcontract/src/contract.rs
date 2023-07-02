@@ -230,7 +230,7 @@ pub fn serve_ad(storage: &mut dyn Storage, env: Env, id: String) -> StdResult<Re
     // Return a response with the created event
     Ok(Response::new().add_event(event))
 }
-
+//Optimised gas usage
 //Performance Improvement: Batch serving allows for the processing of multiple ads in a single transaction, reducing the overhead and latency associated with sending multiple individual transactions. This can lead to significant performance improvements, especially when serving a large number of ads.
 pub fn batch_serve_ads(storage: &mut dyn Storage, env: Env, ids: Vec<String>) -> StdResult<Response> {
     let mut events = Vec::new();
