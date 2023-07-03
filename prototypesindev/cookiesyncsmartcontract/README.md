@@ -3,6 +3,8 @@
 
 https://twitter.com/coolcaptchas/status/1652382322153652225?s=20
 
+https://twitter.com/coolcaptchas/status/1652391219086131200?s=20
+
 https://docs.google.com/document/d/1-pGzhqz7UHgB2O9qD4fcLAhwhTUgUI4A/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 ```
