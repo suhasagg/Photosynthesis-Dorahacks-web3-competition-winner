@@ -175,7 +175,7 @@ Event created: Event {
 }
 Ad deleted successfully.
 
-Batch Ad Serving Demo for gas optimisation
+Batch Ad Serving Demo for gas and Archway rewards optimisation
 
 Saving state: State {
     ads: [],
