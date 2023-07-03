@@ -21,7 +21,6 @@ https://docs.google.com/document/d/1CSBXgFoX03_WUhLrChHUWwrE9jncgZDi/edit?usp=sh
 
 In the News :
 
-
 https://www.facebook.com/groups/682232515824097/permalink/990244991689513/
 
 https://www.facebook.com/groups/682232515824097/permalink/994170227963656/
@@ -31,6 +30,8 @@ https://www.facebook.com/groups/682232515824097/permalink/990246285022717/
 https://www.facebook.com/groups/682232515824097/permalink/993054448075234/
 
 https://twitter.com/coolcaptchas/status/1652385347148582916?s=20
+
+https://twitter.com/coolcaptchas/status/1652391219086131200?s=20
 
 ```
 [
