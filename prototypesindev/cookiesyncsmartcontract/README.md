@@ -1,6 +1,8 @@
 # Cookie Sync Smart Contract
 # Heavy Transaction Guaranteed Dapps on Daily Basis – A strong candidate for Archway Rewards and Photosynthesis liquid token
 
+https://twitter.com/coolcaptchas/status/1652382322153652225?s=20
+
 https://docs.google.com/document/d/1-pGzhqz7UHgB2O9qD4fcLAhwhTUgUI4A/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 ```
