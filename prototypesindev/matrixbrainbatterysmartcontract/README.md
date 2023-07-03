@@ -19,6 +19,21 @@ WWE based P2E game - WWE universe
 
 https://docs.google.com/document/d/1CSBXgFoX03_WUhLrChHUWwrE9jncgZDi/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
+
+Matrix movie based NFTs
+
+https://docs.google.com/document/d/1dBiXoF6Z460nJxziE06b9JFu15co36Cm/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
+Mission Impossible based NFTs
+
+https://docs.google.com/document/d/1BVwVHjStAMk0f0IYKlBXW9OoAZ6N0JBo/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
+Justin Bieber music studios based NFTs
+
+https://docs.google.com/document/d/1JWbt_HTbAacJCPfN_55iTAHrSz7uaXBd/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
+
+
 In the News :
 
 https://www.facebook.com/groups/682232515824097/permalink/990244991689513/
