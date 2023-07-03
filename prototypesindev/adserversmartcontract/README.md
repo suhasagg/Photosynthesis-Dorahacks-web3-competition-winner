@@ -188,12 +188,6 @@ Loaded state: State {
     total_views: 0,
     plt_address: "",
 }
-Failed to serve ad test_id1: Ad not found
-Loaded state: State {
-    ads: [],
-    total_views: 0,
-    plt_address: "",
-}
 Saving state: State {
     ads: [
         Ad {
