@@ -174,4 +174,617 @@ Event created: Event {
     ],
 }
 Ad deleted successfully.
+
+Batch Ad Serving Demo for gas optimisation
+
+Saving state: State {
+    ads: [],
+    total_views: 0,
+    plt_address: "",
+}
+State instantiated successfully.
+Loaded state: State {
+    ads: [],
+    total_views: 0,
+    plt_address: "",
+}
+Failed to serve ad test_id1: Ad not found
+Loaded state: State {
+    ads: [],
+    total_views: 0,
+    plt_address: "",
+}
+Saving state: State {
+    ads: [
+        Ad {
+            id: "test_id1",
+            image_url: "test_image_url1",
+            target_url: "test_target_url1",
+            views: 0,
+            reward_address: "test_reward_address1",
+        },
+    ],
+    total_views: 0,
+    plt_address: "",
+}
+Event created: Event {
+    ty: "add_ad",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "add_ad",
+        },
+        Attribute {
+            key: "reward_address",
+            value: "test_reward_address1",
+        },
+        Attribute {
+            key: "id",
+            value: "test_id1",
+        },
+        Attribute {
+            key: "image_url",
+            value: "test_image_url1",
+        },
+        Attribute {
+            key: "target_url",
+            value: "test_target_url1",
+        },
+    ],
+}
+Event created: Event {
+    ty: "reward",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "reward",
+        },
+        Attribute {
+            key: "recipient",
+            value: "0x123abc...",
+        },
+        Attribute {
+            key: "amount",
+            value: "20",
+        },
+    ],
+}
+Event created: Event {
+    ty: "staking",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "staking",
+        },
+        Attribute {
+            key: "contract_address",
+            value: "0x123abc...",
+        },
+        Attribute {
+            key: "staker_address",
+            value: "cosmos2contract",
+        },
+        Attribute {
+            key: "amount",
+            value: "20",
+        },
+    ],
+}
+Ad test_id1 added successfully.
+Loaded state: State {
+    ads: [
+        Ad {
+            id: "test_id1",
+            image_url: "test_image_url1",
+            target_url: "test_target_url1",
+            views: 0,
+            reward_address: "test_reward_address1",
+        },
+    ],
+    total_views: 0,
+    plt_address: "",
+}
+Saving state: State {
+    ads: [
+        Ad {
+            id: "test_id1",
+            image_url: "test_image_url1",
+            target_url: "test_target_url1",
+            views: 0,
+            reward_address: "test_reward_address1",
+        },
+        Ad {
+            id: "test_id2",
+            image_url: "test_image_url2",
+            target_url: "test_target_url2",
+            views: 0,
+            reward_address: "test_reward_address2",
+        },
+    ],
+    total_views: 0,
+    plt_address: "",
+}
+Event created: Event {
+    ty: "add_ad",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "add_ad",
+        },
+        Attribute {
+            key: "reward_address",
+            value: "test_reward_address2",
+        },
+        Attribute {
+            key: "id",
+            value: "test_id2",
+        },
+        Attribute {
+            key: "image_url",
+            value: "test_image_url2",
+        },
+        Attribute {
+            key: "target_url",
+            value: "test_target_url2",
+        },
+    ],
+}
+Event created: Event {
+    ty: "reward",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "reward",
+        },
+        Attribute {
+            key: "recipient",
+            value: "0x123abc...",
+        },
+        Attribute {
+            key: "amount",
+            value: "20",
+        },
+    ],
+}
+Event created: Event {
+    ty: "staking",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "staking",
+        },
+        Attribute {
+            key: "contract_address",
+            value: "0x123abc...",
+        },
+        Attribute {
+            key: "staker_address",
+            value: "cosmos2contract",
+        },
+        Attribute {
+            key: "amount",
+            value: "20",
+        },
+    ],
+}
+Ad test_id2 added successfully.
+Loaded state: State {
+    ads: [
+        Ad {
+            id: "test_id1",
+            image_url: "test_image_url1",
+            target_url: "test_target_url1",
+            views: 0,
+            reward_address: "test_reward_address1",
+        },
+        Ad {
+            id: "test_id2",
+            image_url: "test_image_url2",
+            target_url: "test_target_url2",
+            views: 0,
+            reward_address: "test_reward_address2",
+        },
+    ],
+    total_views: 0,
+    plt_address: "",
+}
+Saving state: State {
+    ads: [
+        Ad {
+            id: "test_id1",
+            image_url: "test_image_url1",
+            target_url: "test_target_url1",
+            views: 0,
+            reward_address: "test_reward_address1",
+        },
+        Ad {
+            id: "test_id2",
+            image_url: "test_image_url2",
+            target_url: "test_target_url2",
+            views: 0,
+            reward_address: "test_reward_address2",
+        },
+        Ad {
+            id: "test_id3",
+            image_url: "test_image_url3",
+            target_url: "test_target_url3",
+            views: 0,
+            reward_address: "test_reward_address3",
+        },
+    ],
+    total_views: 0,
+    plt_address: "",
+}
+Event created: Event {
+    ty: "add_ad",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "add_ad",
+        },
+        Attribute {
+            key: "reward_address",
+            value: "test_reward_address3",
+        },
+        Attribute {
+            key: "id",
+            value: "test_id3",
+        },
+        Attribute {
+            key: "image_url",
+            value: "test_image_url3",
+        },
+        Attribute {
+            key: "target_url",
+            value: "test_target_url3",
+        },
+    ],
+}
+Event created: Event {
+    ty: "reward",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "reward",
+        },
+        Attribute {
+            key: "recipient",
+            value: "0x123abc...",
+        },
+        Attribute {
+            key: "amount",
+            value: "20",
+        },
+    ],
+}
+Event created: Event {
+    ty: "staking",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "staking",
+        },
+        Attribute {
+            key: "contract_address",
+            value: "0x123abc...",
+        },
+        Attribute {
+            key: "staker_address",
+            value: "cosmos2contract",
+        },
+        Attribute {
+            key: "amount",
+            value: "20",
+        },
+    ],
+}
+Ad test_id3 added successfully.
+Loaded state: State {
+    ads: [
+        Ad {
+            id: "test_id1",
+            image_url: "test_image_url1",
+            target_url: "test_target_url1",
+            views: 0,
+            reward_address: "test_reward_address1",
+        },
+        Ad {
+            id: "test_id2",
+            image_url: "test_image_url2",
+            target_url: "test_target_url2",
+            views: 0,
+            reward_address: "test_reward_address2",
+        },
+        Ad {
+            id: "test_id3",
+            image_url: "test_image_url3",
+            target_url: "test_target_url3",
+            views: 0,
+            reward_address: "test_reward_address3",
+        },
+    ],
+    total_views: 0,
+    plt_address: "",
+}
+Saving state: Ad {
+    id: "test_id1",
+    image_url: "test_image_url1",
+    target_url: "test_target_url1",
+    views: 1,
+    reward_address: "test_reward_address1",
+}
+Event created: Event {
+    ty: "serve_ad",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "serve_ad",
+        },
+        Attribute {
+            key: "id",
+            value: "test_id1",
+        },
+        Attribute {
+            key: "image_url",
+            value: "test_image_url1",
+        },
+        Attribute {
+            key: "target_url",
+            value: "test_target_url1",
+        },
+    ],
+}
+Loaded state: State {
+    ads: [
+        Ad {
+            id: "test_id1",
+            image_url: "test_image_url1",
+            target_url: "test_target_url1",
+            views: 0,
+            reward_address: "test_reward_address1",
+        },
+        Ad {
+            id: "test_id2",
+            image_url: "test_image_url2",
+            target_url: "test_target_url2",
+            views: 0,
+            reward_address: "test_reward_address2",
+        },
+        Ad {
+            id: "test_id3",
+            image_url: "test_image_url3",
+            target_url: "test_target_url3",
+            views: 0,
+            reward_address: "test_reward_address3",
+        },
+    ],
+    total_views: 0,
+    plt_address: "",
+}
+Saving state: Ad {
+    id: "test_id2",
+    image_url: "test_image_url2",
+    target_url: "test_target_url2",
+    views: 1,
+    reward_address: "test_reward_address2",
+}
+Event created: Event {
+    ty: "serve_ad",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "serve_ad",
+        },
+        Attribute {
+            key: "id",
+            value: "test_id2",
+        },
+        Attribute {
+            key: "image_url",
+            value: "test_image_url2",
+        },
+        Attribute {
+            key: "target_url",
+            value: "test_target_url2",
+        },
+    ],
+}
+Loaded state: State {
+    ads: [
+        Ad {
+            id: "test_id1",
+            image_url: "test_image_url1",
+            target_url: "test_target_url1",
+            views: 0,
+            reward_address: "test_reward_address1",
+        },
+        Ad {
+            id: "test_id2",
+            image_url: "test_image_url2",
+            target_url: "test_target_url2",
+            views: 0,
+            reward_address: "test_reward_address2",
+        },
+        Ad {
+            id: "test_id3",
+            image_url: "test_image_url3",
+            target_url: "test_target_url3",
+            views: 0,
+            reward_address: "test_reward_address3",
+        },
+    ],
+    total_views: 0,
+    plt_address: "",
+}
+Saving state: Ad {
+    id: "test_id3",
+    image_url: "test_image_url3",
+    target_url: "test_target_url3",
+    views: 1,
+    reward_address: "test_reward_address3",
+}
+Event created: Event {
+    ty: "serve_ad",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "serve_ad",
+        },
+        Attribute {
+            key: "id",
+            value: "test_id3",
+        },
+        Attribute {
+            key: "image_url",
+            value: "test_image_url3",
+        },
+        Attribute {
+            key: "target_url",
+            value: "test_target_url3",
+        },
+    ],
+}
+Ads served successfully.
+Loaded state: State {
+    ads: [
+        Ad {
+            id: "test_id1",
+            image_url: "test_image_url1",
+            target_url: "test_target_url1",
+            views: 0,
+            reward_address: "test_reward_address1",
+        },
+        Ad {
+            id: "test_id2",
+            image_url: "test_image_url2",
+            target_url: "test_target_url2",
+            views: 0,
+            reward_address: "test_reward_address2",
+        },
+        Ad {
+            id: "test_id3",
+            image_url: "test_image_url3",
+            target_url: "test_target_url3",
+            views: 0,
+            reward_address: "test_reward_address3",
+        },
+    ],
+    total_views: 0,
+    plt_address: "",
+}
+Saving state: State {
+    ads: [
+        Ad {
+            id: "test_id2",
+            image_url: "test_image_url2",
+            target_url: "test_target_url2",
+            views: 0,
+            reward_address: "test_reward_address2",
+        },
+        Ad {
+            id: "test_id3",
+            image_url: "test_image_url3",
+            target_url: "test_target_url3",
+            views: 0,
+            reward_address: "test_reward_address3",
+        },
+    ],
+    total_views: 0,
+    plt_address: "",
+}
+Event created: Event {
+    ty: "delete_ad",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "delete_ad",
+        },
+        Attribute {
+            key: "id",
+            value: "test_id1",
+        },
+    ],
+}
+Ad test_id1 deleted successfully.
+Loaded state: State {
+    ads: [
+        Ad {
+            id: "test_id2",
+            image_url: "test_image_url2",
+            target_url: "test_target_url2",
+            views: 0,
+            reward_address: "test_reward_address2",
+        },
+        Ad {
+            id: "test_id3",
+            image_url: "test_image_url3",
+            target_url: "test_target_url3",
+            views: 0,
+            reward_address: "test_reward_address3",
+        },
+    ],
+    total_views: 0,
+    plt_address: "",
+}
+Saving state: State {
+    ads: [
+        Ad {
+            id: "test_id3",
+            image_url: "test_image_url3",
+            target_url: "test_target_url3",
+            views: 0,
+            reward_address: "test_reward_address3",
+        },
+    ],
+    total_views: 0,
+    plt_address: "",
+}
+Event created: Event {
+    ty: "delete_ad",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "delete_ad",
+        },
+        Attribute {
+            key: "id",
+            value: "test_id2",
+        },
+    ],
+}
+Ad test_id2 deleted successfully.
+Loaded state: State {
+    ads: [
+        Ad {
+            id: "test_id3",
+            image_url: "test_image_url3",
+            target_url: "test_target_url3",
+            views: 0,
+            reward_address: "test_reward_address3",
+        },
+    ],
+    total_views: 0,
+    plt_address: "",
+}
+Saving state: State {
+    ads: [],
+    total_views: 0,
+    plt_address: "",
+}
+Event created: Event {
+    ty: "delete_ad",
+    attributes: [
+        Attribute {
+            key: "action",
+            value: "delete_ad",
+        },
+        Attribute {
+            key: "id",
+            value: "test_id3",
+        },
+    ],
+}
+Ad test_id3 deleted successfully.
+
+
 ```
