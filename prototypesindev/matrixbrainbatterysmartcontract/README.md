@@ -66,6 +66,10 @@ https://twitter.com/coolcaptchas/status/1529947947873406977?s=20
 
 https://twitter.com/coolcaptchas/status/1526703357972606977?s=20
 
+https://twitter.com/coolcaptchas/status/1526690290584932353?s=20
+
+https://twitter.com/coolcaptchas/status/1526400514073989121?s=20
+
 ```
 [
     MatrixBrainBattery {
