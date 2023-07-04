@@ -18,6 +18,10 @@ Photosynthesis Code Walkthrough
 https://twitter.com/DoraHacks/status/1651979334398382080
 
 
+# Liquid Staking Ebook 
+
+https://docs.google.com/document/d/19AIiO3EF6lUvVFPg2UgY3W5fs4Hb6G7Y/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+
 # Photosynthesis-Dorahacks-web3-competition-winner
 
 Detailed presentation -
