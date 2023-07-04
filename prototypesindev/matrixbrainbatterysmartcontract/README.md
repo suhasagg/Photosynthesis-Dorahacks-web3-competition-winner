@@ -2,6 +2,8 @@
 
 # MatrixBrainBattery - P2E game and NFT Minting – Ultimate choice for Archway Rewards and Photosynthesis Algorithm
 
+Codacy grade - https://app.codacy.com/gh/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/file/93328442120/issues/source?bid=34568294&fileBranchId=34568294
+
 https://docs.google.com/document/d/1PqFbmda3N09y3TfOuCQZUSSKpxzclvku/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 Some P2E Games of similar genre
