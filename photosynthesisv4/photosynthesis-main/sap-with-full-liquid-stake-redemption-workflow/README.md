@@ -905,4 +905,111 @@ pagination:
   total: "0"
 ```
 
+Epoch based Central liquid stake of Archway Rewards and Redemption at maximum redemption rate of host zone, here Photosynthesis-Archway chain. 
 
+```
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/cronenable exists.
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 1DFC0DA65103B032E57884FAC7F78E29643CFD4E9A4D4FAB9BFDF9B195A4EB97
+strided track balance
+balances:
+- amount: "2100"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "692"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 9EE7B25286398E6DDB335AF0370A30932DC3698F14070D19A7A6EE63FDC40814
+strided track balance
+balances:
+- amount: "2400"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "788"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/cronenable exists.
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: D8DDAB63FBC74CBC0DC1E83D420A9285B59F4AC3B3C8254DFCF4315BD190EA87
+strided track balance
+balances:
+- amount: "2400"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "788"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 58E1F9E5E47134C38B058FE397967BF7ACA326C624476D10E1B1F4DA0EEFCE3F
+strided track balance
+balances:
+- amount: "2700"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "884"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+```
