@@ -1014,7 +1014,9 @@ pagination:
   total: "0"
 ```
 
-Photosynthesis-Archway chain run log snapshot
+
+Photosynthesis-Archway chain run Log snapshot
+
 
 ```
 dockernet-photo1-1  | 10:58PM INF Iterating over contract metadata: airdrop_recipient_address: archway1wmuuy0eqvhq5s3j9e80p8judf55c8v8mgwfytr
