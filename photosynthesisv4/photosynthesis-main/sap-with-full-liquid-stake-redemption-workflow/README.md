@@ -1273,3 +1273,82 @@ dockernet-relayer-photo-1  | ts=2023-07-06T22:08:22.230404Z lvl=info msg="Succes
 dockernet-relayer-photo-1  | ts=2023-07-06T22:08:25.427595Z lvl=info msg="Successful transaction" provider_type=cosmos chain_id=STRIDE packet_src_channel=channel-6 packet_dst_channel=channel-6 gas_used=136353 fees=1576ustrd fee_payer=stride1jx7ns7v9s3nes9k7p0sez7nq2hvmae5cmley3h height=823 msg_types=/ibc.core.client.v1.MsgUpdateClient,/ibc.core.channel.v1.MsgAcknowledgement tx_hash=54FB496CB5E2F9D575CB4D9D6D1F64218F8983BCDD417B1D27DCAE5527D7B6F3
 
 ```
+
+
+Hostzone Parameters
+
+
+```
+
+host_zone:
+- address: stride1755g4dkhpw73gz9h9nwhlcefc6sdf8kcmvcwrk4rxfrz8xpxxjms7savm8
+  bech32prefix: cosmos
+  blacklisted_validators: []
+  chain_id: GAIA
+  connection_id: connection-0
+  delegation_account:
+    address: cosmos1d48lulv6cad8hhgezvfeglhqds5hf50k295n3dhqvjwdhjjeq9asdalwt5
+    target: DELEGATION
+  fee_account:
+    address: cosmos1sf5a2zl7gr6llllvvywfrq8ec2valgxrjqjjd0qxpj5qr6zexstqqmmur9
+    target: FEE
+  halted: false
+  host_denom: uatom
+  ibc_denom: ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2
+  last_redemption_rate: "1.000000000000000000"
+  max_redemption_rate: "1.500000000000000000"
+  min_redemption_rate: "0.900000000000000000"
+  redemption_account:
+    address: cosmos1tyh4vkp267rtfhfm8xfqvlj2n0fq4xceelr7av2gn9kzs9dpktzqtw3hxm
+    target: REDEMPTION
+  redemption_rate: "1.000000000000000000"
+  staked_bal: "0"
+  transfer_channel_id: channel-0
+  unbonding_frequency: "1"
+  validators:
+  - address: cosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795pcosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795p
+    delegation_amt: "0"
+    internal_exchange_rate: null
+    name: gval1
+    weight: "5"
+  withdrawal_account:
+    address: cosmos1dndts20gfszqhlz2vyal903yd57wrg6jx8xwwntyck2enp3e49dsalcjnq
+    target: WITHDRAWAL
+- address: stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag
+  bech32prefix: archway
+  blacklisted_validators: []
+  chain_id: localnet
+  connection_id: connection-1
+  delegation_account:
+    address: archway10kgq25m2v2738hxh8ene03cu4n87ruhrh823x2rmuwpa4grhs2zq4gt55n
+    target: DELEGATION
+  fee_account:
+    address: archway1zadujthv3mpwu9wj7l7cmpwk34tcwu7mphzqpyxeyemntsk99fksf3vlx4
+    target: FEE
+  halted: false
+  host_denom: uarch
+  ibc_denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+  last_redemption_rate: "1.162616339193381593"
+  max_redemption_rate: "1.500000000000000000"
+  min_redemption_rate: "0.900000000000000000"
+  redemption_account:
+    address: archway1d8ellefkcjsvxqwf5ahny0dxwfa0lxl7zkcwcapuju4n4ahspqtqtv3jg4
+    target: REDEMPTION
+  redemption_rate: "1.162616339193381593"
+  staked_bal: "2393"
+  transfer_channel_id: channel-1
+  unbonding_frequency: "1"
+  validators:
+  - address: archwayvaloper15js809uedxqs2wl0lyt58httasr5rlplj45fqw
+    delegation_amt: "2393"
+    internal_exchange_rate: null
+    name: pval1
+    weight: "5"
+  withdrawal_account:
+    address: archway1x73qfxvs0dakrn7z9mj3fhpmdfc8xnnxs86cg6zavkgfs8mdwaasgk0hrf
+    target: WITHDRAWAL
+pagination:
+  next_key: null
+  total: "0"
+
+```
