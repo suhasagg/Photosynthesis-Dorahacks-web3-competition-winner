@@ -1352,3 +1352,415 @@ pagination:
   total: "0"
 
 ```
+
+Record Keeping Logs 
+
+```
+
+STRIDE @ 5584 | 3 VALS
+GAIA   @ 8604 | 1 VALS
+PHOTO   @ 8588 | 1 VALS
+
+LIST-HOST-ZONES STRIDE
+host_zone:
+- address: stride1755g4dkhpw73gz9h9nwhlcefc6sdf8kcmvcwrk4rxfrz8xpxxjms7savm8
+  bech32prefix: cosmos
+  blacklisted_validators: []
+  chain_id: GAIA
+  connection_id: connection-0
+  delegation_account:
+    address: cosmos1d48lulv6cad8hhgezvfeglhqds5hf50k295n3dhqvjwdhjjeq9asdalwt5
+    target: DELEGATION
+  fee_account:
+    address: cosmos1sf5a2zl7gr6llllvvywfrq8ec2valgxrjqjjd0qxpj5qr6zexstqqmmur9
+    target: FEE
+  halted: false
+  host_denom: uatom
+  ibc_denom: ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2
+  last_redemption_rate: "1.000000000000000000"
+  max_redemption_rate: "1.500000000000000000"
+  min_redemption_rate: "0.900000000000000000"
+  redemption_account:
+    address: cosmos1tyh4vkp267rtfhfm8xfqvlj2n0fq4xceelr7av2gn9kzs9dpktzqtw3hxm
+    target: REDEMPTION
+  redemption_rate: "1.000000000000000000"
+  staked_bal: "0"
+  transfer_channel_id: channel-0
+  unbonding_frequency: "1"
+  validators:
+  - address: cosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795pcosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795p
+    delegation_amt: "0"
+    internal_exchange_rate: null
+    name: gval1
+    weight: "5"
+  withdrawal_account:
+    address: cosmos1dndts20gfszqhlz2vyal903yd57wrg6jx8xwwntyck2enp3e49dsalcjnq
+    target: WITHDRAWAL
+- address: stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag
+  bech32prefix: archway
+  blacklisted_validators: []
+  chain_id: localnet
+  connection_id: connection-1
+  delegation_account:
+    address: archway10kgq25m2v2738hxh8ene03cu4n87ruhrh823x2rmuwpa4grhs2zq4gt55n
+    target: DELEGATION
+  fee_account:
+    address: archway1zadujthv3mpwu9wj7l7cmpwk34tcwu7mphzqpyxeyemntsk99fksf3vlx4
+    target: FEE
+  halted: false
+  host_denom: uarch
+  ibc_denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+  last_redemption_rate: "1.162627241880756180"
+  max_redemption_rate: "1.500000000000000000"
+  min_redemption_rate: "0.900000000000000000"
+  redemption_account:
+    address: archway1d8ellefkcjsvxqwf5ahny0dxwfa0lxl7zkcwcapuju4n4ahspqtqtv3jg4
+    target: REDEMPTION
+  redemption_rate: "1.162627241880756180"
+  staked_bal: "2393"
+  transfer_channel_id: channel-1
+  unbonding_frequency: "1"
+  validators:
+  - address: archwayvaloper15js809uedxqs2wl0lyt58httasr5rlplj45fqw
+    delegation_amt: "2393"
+    internal_exchange_rate: null
+    name: pval1
+    weight: "5"
+  withdrawal_account:
+    address: archway1x73qfxvs0dakrn7z9mj3fhpmdfc8xnnxs86cg6zavkgfs8mdwaasgk0hrf
+    target: WITHDRAWAL
+pagination:
+  next_key: null
+  total: "0"
+
+LIST-DEPOSIT-RECORDS
+deposit_record:
+- amount: "4"
+  denom: uarch
+  deposit_epoch_number: "113"
+  host_zone_id: localnet
+  id: "286"
+  source: WITHDRAWAL_ICA
+  status: DELEGATION_IN_PROGRESS
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "117"
+  host_zone_id: localnet
+  id: "294"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "120"
+  host_zone_id: localnet
+  id: "300"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "125"
+  host_zone_id: localnet
+  id: "310"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "129"
+  host_zone_id: localnet
+  id: "318"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "134"
+  host_zone_id: localnet
+  id: "328"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "138"
+  host_zone_id: localnet
+  id: "336"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "143"
+  host_zone_id: localnet
+  id: "346"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "147"
+  host_zone_id: localnet
+  id: "354"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "152"
+  host_zone_id: localnet
+  id: "364"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "156"
+  host_zone_id: localnet
+  id: "372"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "161"
+  host_zone_id: localnet
+  id: "382"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "165"
+  host_zone_id: localnet
+  id: "390"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "170"
+  host_zone_id: localnet
+  id: "400"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "174"
+  host_zone_id: localnet
+  id: "408"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "179"
+  host_zone_id: localnet
+  id: "418"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "183"
+  host_zone_id: localnet
+  id: "426"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "188"
+  host_zone_id: localnet
+  id: "436"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "192"
+  host_zone_id: localnet
+  id: "444"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "197"
+  host_zone_id: localnet
+  id: "454"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "201"
+  host_zone_id: localnet
+  id: "462"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "206"
+  host_zone_id: localnet
+  id: "472"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "210"
+  host_zone_id: localnet
+  id: "480"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "215"
+  host_zone_id: localnet
+  id: "490"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "100"
+  denom: uarch
+  deposit_epoch_number: "219"
+  host_zone_id: localnet
+  id: "498"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "0"
+  denom: uatom
+  deposit_epoch_number: "223"
+  host_zone_id: GAIA
+  id: "505"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "0"
+  denom: uarch
+  deposit_epoch_number: "223"
+  host_zone_id: localnet
+  id: "506"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+pagination:
+  next_key: null
+  total: "0"
+
+LIST-EPOCH-UNBONDING-RECORDS
+epoch_unbonding_record:
+- epoch_number: "90"
+  host_zone_unbondings:
+  - denom: uatom
+    host_zone_id: GAIA
+    native_token_amount: "0"
+    st_token_amount: "0"
+    status: UNBONDING_QUEUE
+    unbonding_time: "0"
+    user_redemption_records: []
+  - denom: uarch
+    host_zone_id: localnet
+    native_token_amount: "0"
+    st_token_amount: "0"
+    status: UNBONDING_QUEUE
+    unbonding_time: "0"
+    user_redemption_records: []
+pagination:
+  next_key: null
+  total: "0"
+
+LIST-USER-REDEMPTION-RECORDS
+pagination:
+  next_key: null
+  total: "0"
+user_redemption_record: []
+
+```
+
+Accounts State Logs
+
+```
+
+STRIDE @ 5644 | 3 VALS
+GAIA   @ 8698 | 1 VALS
+PHOTO   @ 8682 | 1 VALS
+
+BALANCES STRIDE
+balances:
+- amount: "4995000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+
+==========================  GAIA  =============================
+
+BALANCES GAIA (DELEGATION ACCT)
+balances: []
+pagination:
+  next_key: null
+  total: "0"
+
+DELEGATIONS GAIA (DELEGATION ACCT)
+delegation_responses: []
+pagination:
+  next_key: null
+  total: "0"
+
+UNBONDING-DELEGATIONS GAIA (DELEGATION ACCT)
+pagination:
+  next_key: null
+  total: "0"
+unbonding_responses: []
+
+BALANCES GAIA (REDEMPTION ACCT)
+balances: []
+pagination:
+  next_key: null
+  total: "0"
+
+BALANCES GAIA (FEE ACCT)
+balances: []
+pagination:
+  next_key: null
+  total: "0"
+
+BALANCES GAIA (WITHDRAWAL ACCT)
+balances: []
+pagination:
+  next_key: null
+  total: "0"
+
+==========================  PHOTO  =============================
+
+BALANCES PHOTO (DELEGATION ACCT)
+balances:
+- amount: "4"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+
+DELEGATIONS PHOTO (DELEGATION ACCT)
+delegation_responses:
+- balance:
+    amount: "2393"
+    denom: uarch
+  delegation:
+    delegator_address: archway10kgq25m2v2738hxh8ene03cu4n87ruhrh823x2rmuwpa4grhs2zq4gt55n
+    shares: "2393.000000000000000000"
+    validator_address: archwayvaloper15js809uedxqs2wl0lyt58httasr5rlplj45fqw
+pagination:
+  next_key: null
+  total: "0"
+
+UNBONDING-DELEGATIONS PHOTO (DELEGATION ACCT)
+pagination:
+  next_key: null
+  total: "0"
+unbonding_responses: []
+
+BALANCES PHOTO (REDEMPTION ACCT)
+balances: []
+pagination:
+  next_key: null
+  total: "0"
+
+BALANCES PHOTO (FEE ACCT)
+balances: []
+pagination:
+  next_key: null
+  total: "0"
+
+BALANCES PHOTO (WITHDRAWAL ACCT)
+balances:
+- amount: "5"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+```
+
+
+
