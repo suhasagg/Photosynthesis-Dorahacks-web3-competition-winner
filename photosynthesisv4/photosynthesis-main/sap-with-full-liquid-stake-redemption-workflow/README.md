@@ -1762,5 +1762,88 @@ pagination:
   total: "0"
 ```
 
+Automatic Reward Withdrawal - epochstypes.REWARDS_WITHDRAWAL_EPOCH (Transfer reward funds from rewardstypes.ContractRewardCollector to Dapp reward address), epochstypes.LIQUID_STAKING_DApp_Rewards_EPOCH (Liquid Stake - Generate LiquidStakeDepositRecords, Enqueue LiquidStakeRecord) , epochstypes.ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH (Process Liquid stake Deposit records, compute total amount to liquid stake for Dapp at the time of Central Liquid Stake, do Central Liquid stake at stride for all Dapps), Ensure there is no rewards fund loss 
+
+```
+dockernet-photo1-1  | 1:27PM INF Iterating over contract metadata: airdrop_recipient_address: archway1wmuuy0eqvhq5s3j9e80p8judf55c8v8mgwfytr
+dockernet-photo1-1  | airdrop_vesting_period: 6000
+dockernet-photo1-1  | archway_reward_funds_transfer_address: archway1gnvac03v6xgtz3vt00p25j2nq28j9c55jlfntt
+dockernet-photo1-1  | liquid_stake_interval: 1
+dockernet-photo1-1  | liquidity_provider_address: archway1eseyc4j72lyy40uzs5llgx45m67suanxj0guv7
+dockernet-photo1-1  | liquidity_provider_commission: 2
+dockernet-photo1-1  | liquidity_token_address: archway1smd403gckfc4m3upzxfuwxkree5lr9854u4un9
+dockernet-photo1-1  | maximum_threshold: 4
+dockernet-photo1-1  | minimum_reward_amount: 100
+dockernet-photo1-1  | owner_address: archway1qygx0pxuttycdddzz5lre5rlxcxjemthwmlh63
+dockernet-photo1-1  | redemption_address: archway18kpsdc76xg5884ey3qnesqtw8l9n06yw0u898p
+dockernet-photo1-1  | redemption_interval: 1
+dockernet-photo1-1  | redemption_interval_threshold: 1
+dockernet-photo1-1  | redemption_rate_threshold: 1
+dockernet-photo1-1  | rewards_address: archway1j4rp2f66q7jwxl4455rqcafwdlcnlhn5sfa553
+dockernet-photo1-1  | rewards_withdrawal_interval: 1
+dockernet-photo1-1  |  module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Checking epoch info: {arch-central-liquid-stake-interval-epoch 2023-07-09 10:28:42.723278375 +0000 UTC 3m20s 54 2023-07-09 13:25:22.723278375 +0000 UTC true 10376} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Processing ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH: {arch-central-liquid-stake-interval-epoch 2023-07-09 10:28:42.723278375 +0000 UTC 3m20s 54 2023-07-09 13:25:22.723278375 +0000 UTC true 10376} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Retrieved EpochInfo for epochstypes.ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH: {arch-central-liquid-stake-interval-epoch 2023-07-09 10:28:42.723278375 +0000 UTC 3m20s 54 2023-07-09 13:25:22.723278375 +0000 UTC true 10376} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Retrieved EpochInfo for epochstypes.LIQUID_STAKING_DApp_Rewards_EPOCH: {liquid-staking-epoch 2023-07-09 10:28:42.723278375 +0000 UTC 2m30s 72 2023-07-09 13:26:12.723278375 +0000 UTC true 10425} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF MinimumRewardAmount is greater than 0: 100 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF CurrentEpoch 54 is not 0 and is a multiple of 1 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Retrieved TotalLiquidStake: 3360000 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Liquid stake amount: 3360000 
+dockernet-photo1-1  |  module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Liquid stake amount: 3360000 
+dockernet-photo1-1  |  module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Retrieved TotalLiquidStake: 3360000 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Computed LiquidStake: 3360000 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Contract Address: archway1j4rp2f66q7jwxl4455rqcafwdlcnlhn5sfa553, Liquid Token Amount: 3360000
+dockernet-photo1-1  |  module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Distributed Liquidity for epoch 72 and liquid stake 3360000 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Checking epoch info: {day 2023-07-09 10:28:42.723278375 +0000 UTC 1m0s 179 2023-07-09 13:26:42.723278375 +0000 UTC true 10454} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Checking epoch info: {liquid-staking-epoch 2023-07-09 10:28:42.723278375 +0000 UTC 2m30s 72 2023-07-09 13:26:12.723278375 +0000 UTC true 10425} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Processing LiquidStakeDappRewards epoch: {liquid-staking-epoch 2023-07-09 10:28:42.723278375 +0000 UTC 2m30s 72 2023-07-09 13:26:12.723278375 +0000 UTC true 10425} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Retrieved EpochInfo: {liquid-staking-epoch 2023-07-09 10:28:42.723278375 +0000 UTC 2m30s 72 2023-07-09 13:26:12.723278375 +0000 UTC true 10425} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF MinimumRewardAmount is greater than 0: 100 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF CurrentEpoch 72 is not 0 and is a multiple of LiquidStakeInterval 1 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF RewardsAddress is not empty: archway1j4rp2f66q7jwxl4455rqcafwdlcnlhn5sfa553 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Retrieved CumulativeRewardAmount: 3360000 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF CumulativeRewardAmount is greater than or equal to MinimumRewardAmount module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Created ContractLiquidStakeDepositRecordsForEpoch: contract_address:"archway1j4rp2f66q7jwxl4455rqcafwdlcnlhn5sfa553" epoch:72 amount:3360000 status:"pending"  module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Enqueued LiquidStakeRecord module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF EmitLiquidStakeDepositRecordCreatedEvent for record: contract_address:"archway1j4rp2f66q7jwxl4455rqcafwdlcnlhn5sfa553" epoch:72 amount:3360000 status:"pending"  and amount: 3360000 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Checking epoch info: {mint 2023-07-09 10:28:42.723278375 +0000 UTC 1m0s 179 2023-07-09 13:26:42.723278375 +0000 UTC true 10454} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Checking epoch info: {redemption-rate-query-epoch 2023-07-09 10:28:42.723278375 +0000 UTC 6h0m0s 1 2023-07-09 10:28:42.723278375 +0000 UTC true 1} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Processing REDEMPTION_RATE_QUERY_EPOCH: {redemption-rate-query-epoch 2023-07-09 10:28:42.723278375 +0000 UTC 6h0m0s 1 2023-07-09 10:28:42.723278375 +0000 UTC true 1} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Retrieved EpochInfo for epochstypes.REDEMPTION_RATE_QUERY_EPOCH: {Identifier:redemption-rate-query-epoch StartTime:2023-07-09 10:28:42.723278375 +0000 UTC Duration:6h0m0s CurrentEpoch:1 CurrentEpochStartTime:2023-07-09 10:28:42.723278375 +0000 UTC EpochCountingStarted:true CurrentEpochStartHeight:1} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF CurrentEpoch 1 is a multiple of RedemptionIntervalThreshold 1 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Using RedemptionRateThreshold: 1 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF CurrentEpoch 1 is not 0 and is a multiple of RedemptionRateThreshold 1 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Successfully queried RedemptionRate: 1.2 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Checking epoch info: {rewards_withdrawal-epoch 2023-07-09 10:28:42.723278375 +0000 UTC 2m0s 90 2023-07-09 13:26:42.723278375 +0000 UTC true 10454} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Processing REWARDS_WITHDRAWAL_EPOCH: {Identifier:rewards_withdrawal-epoch StartTime:2023-07-09 10:28:42.723278375 +0000 UTC Duration:2m0s CurrentEpoch:90 CurrentEpochStartTime:2023-07-09 13:26:42.723278375 +0000 UTC EpochCountingStarted:true CurrentEpochStartHeight:10454} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Retrieved EpochInfo for epochstypes.REWARDS_WITHDRAWAL_EPOCH: {Identifier:rewards_withdrawal-epoch StartTime:2023-07-09 10:28:42.723278375 +0000 UTC Duration:2m0s CurrentEpoch:90 CurrentEpochStartTime:2023-07-09 13:26:42.723278375 +0000 UTC EpochCountingStarted:true CurrentEpochStartHeight:10454} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF CurrentEpoch 90 is not 0 and is a multiple of RewardsWithdrawalInterval 1 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Retrieved 1 reward records module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Accumulated rewards: 10000uarch module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Total rewards is not zero. Proceeding with sending the coins. module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Successfully sent 10000uarch coins to address archway1j4rp2f66q7jwxl4455rqcafwdlcnlhn5sfa553 module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Emitting rewards withdrawal event for address archway1j4rp2f66q7jwxl4455rqcafwdlcnlhn5sfa553 with total rewards 10000uarch module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Deleted 1 reward records module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Checking epoch info: {stride_epoch 2023-07-09 10:28:42.723278375 +0000 UTC 6h0m0s 1 2023-07-09 10:28:42.723278375 +0000 UTC true 1} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Checking epoch info: {week 2023-07-09 10:28:42.723278375 +0000 UTC 1m0s 179 2023-07-09 13:26:42.723278375 +0000 UTC true 10454} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Inflation rewards - block module=x/rewards rewards=82543
+dockernet-photo1-1  | 1:27PM INF executed block height=10473 module=state num_invalid_txs=0 num_valid_txs=0
+dockernet-photo1-1  | 1:27PM INF commit synced commit=436F6D6D697449447B5B32313720313635203220313630203334203234322037332032303220323036203237203237203139382032303420313637203631203133322034382031333720323035203735203837203133302039322033352037392037332031363720383520323420323620323030203139355D3A323845397D
+dockernet-photo1-1  | 1:27PM INF committed state app_hash=D9A502A022F249CACE1B1BC6CCA73D843089CD4B57825C234F49A755181AC8C3 height=10473 module=state num_txs=0
+dockernet-photo1-1  | 1:27PM INF indexed block exents height=10473 module=txindex
+dockernet-photo1-1  | 1:27PM INF Timed out dur=957.079514 height=10474 module=consensus round=0 step=1
+dockernet-photo1-1  | 1:27PM INF received proposal module=consensus proposal={"Type":32,"block_id":{"hash":"47A7A9B9C0DB3860CAA67FFA65C709EB8345E8816147681DEFB384A7349686C9","parts":{"hash":"CEFF9EA49DF872C2EA99793477D03A71535F3EE902CC498B31075A5307A46C5B","total":1}},"height":10474,"pol_round":-1,"round":0,"signature":"l40qUccZQ3zcZqP5TQnQzLdC5Si3+53aMaVWToEPy/6q9kf+7TOG1JRC6lhDJ/tKWFt6qmiAQdarS82bTuvEAQ==","timestamp":"2023-07-09T13:27:04.162850026Z"}
+dockernet-photo1-1  | 1:27PM INF received complete proposal block hash=47A7A9B9C0DB3860CAA67FFA65C709EB8345E8816147681DEFB384A7349686C9 height=10474 module=consensus
+dockernet-photo1-1  | 1:27PM INF finalizing commit of block hash={} height=10474 module=consensus num_txs=0 root=D9A502A022F249CACE1B1BC6CCA73D843089CD4B57825C234F49A755181AC8C3
+dockernet-photo1-1  | 1:27PM INF minted coins from module account amount=412717uarch from=mint module=x/bank
+dockernet-photo1-1  | 1:27PM INF Minimum consensus fee update fee={"amount":"0.082543000000000000","denom":"uarch"} module=x/rewards
+dockernet-photo1-1  | 1:27PM INF Retrieved state from rewardKeeper: {0xc001149820 0xc000f7ab50} module=x/photosynthesis
+dockernet-photo1-1  | 1:27PM INF Retrieved contract metadata state: {{0xc008f48600 [0]} 0xc000f7ab50 {0xc000136020 {0xc008f2ef80 map[0xc001149710:0xc008f2f440 0xc001149720:0xc008f2f3c0 0xc001149730:0xc008f2f200 0xc001149740:0xc008f2f2c0 0xc001149750:0xc008f2f0c0 0xc001149760:0xc008f2f1c0 0xc001149770:0xc008f2f240 0xc001149780:0xc008f2f040 0xc001149790:0xc008f2f400 0xc0011497a0:0xc008f2f4c0 0xc0011497b0:0xc008f2f380 0xc0011497c0:0xc008f2f340 0xc0011497d0:0xc008f2f280 0xc0011497e0:0xc008f2f080 0xc0011497f0:0xc008f2f180 0xc001149800:0xc008f2f000 0xc001149810:0xc008f2f480 0xc001149820:0xc008f2f500 0xc001149830:0xc008f2f540 0xc001149840:0xc008f2efc0 0xc001149850:0xc008f2f300 0xc001149890:0xc008f2f140 0xc001149870:0xc008f2f100] map[acc:0xc001149710 authz:0xc0011497f0 bank:0xc001149720 capability:0xc0011497d0 distribution:0xc001149750 epochs:0xc001149830 evidence:0xc0011497b0 feegrant:0xc0011497e0 gov:0xc001149770 ibc:0xc001149790 icahost:0xc001149850 mem_capability:0xc001149890 mint:0xc001149740 params:0xc001149780 photosynthesis:0xc001149840 rewards:0xc001149820 slashing:0xc001149760 staking:0xc001149730 tracking:0xc001149810 transfer:0xc0011497c0 transient_params:0xc001149870 upgrade:0xc0011497a0 wasm:0xc001149800] <nil> map[] map[]} {{11 0} localnet 10474 {155772337 63824506023 <nil>} {[184 144 201 66 230 187 151 0 130 157 199 1 7 54 125 218 198 237 88 84 145 46 211 83 151 89 195 221 251 98 148 55] {1 [171 63 110 168 157 229 104 225 187 158 21 214 231 46 81 135 98 222 151 152 94 33 16 7 102 70 173 251 220 154 221 10]}} [195 178 33 98 205 218 33 96 133 3 11 237 7 41 76 205 111 126 168 17 67 36 199 1 229 137 93 112 140 10 2 22] [227 176 196 66 152 252 28 20 154 251 244 200 153 111 185 36 39 174 65 228 100 155 147 76 164 149 153 27 120 82 184 85] [193 147 100 78 31 238 179 85 34 178 209 120 93 62 183 165 231 91 1 133 92 140 53 159 217 68 13 13 70 125 93 156] [193 147 100 78 31 238 179 85 34 178 209 120 93 62 183 165 231 91 1 133 92 140 53 159 217 68 13 13 70 125 93 156] [4 128 145 188 125 220 40 63 119 191 191 145 215 60 68 218 88 195 223 138 156 188 134 116 5 216 183 243 218 173 162 47] [217 165 2 160 34 242 73 202 206 27 27 198 204 167 61 132 48 137 205 75 87 130 92 35 79 73 167 85 24 26 200 195] [227 176 196 66 152 252 28 20 154 251 244 200 153 111 185 36 39 174 65 228 100 155 147 76 164 149 153 27 120 82 184 85] [227 176 196 66 152 252 28 20 154 251 244 200 153 111 185 36 39 174 65 228 100 155 147 76 164 149 153 27 120 82 184 85] [239 107 40 43 20 228 205 59 243 56 158 128 251 207 52 87 56 143 2 40]} [71 167 169 185 192 219 56 96 202 166 127 250 101 199 9 235 131 69 232 129 97 71 104 29 239 179 132 167 52 150 134 201] localnet [] {{{{0xc000130010 false  [] [] [] <nil> <nil> <nil> <nil> <nil> <nil> <nil> <nil>}} 1 <nil> [123] [{}] false}} [] 0xc00e191b88 0xc00e191cc8 false false [] 0xc009409700 0xc011601a88}} module=x/photosynthesis
+```
+
 
 
