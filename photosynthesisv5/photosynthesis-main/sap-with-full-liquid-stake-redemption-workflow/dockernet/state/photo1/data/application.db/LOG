@@ -1,0 +1,24 @@
+=============== Jul 14, 2023 (UTC) ===============
+04:18:10.502499 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+04:18:10.508207 db@open opening
+04:18:10.508775 version@stat F·[] S·0B[] Sc·[]
+04:18:10.510250 db@janitor F·2 G·0
+04:18:10.510267 db@open done T·2.048581ms
+04:23:39.862555 memdb@flush N·36029 S·3MiB
+04:23:39.894661 memdb@flush created L0@3 N·36029 S·2MiB "s/1,v271":"s/p..hts,v273"
+04:23:39.894754 version@stat F·[1] S·2MiB[2MiB] Sc·[0.25]
+04:23:39.896366 memdb@flush committed F·1 T·33.598739ms
+04:23:39.897914 journal@remove removed @1
+04:28:21.449450 memdb@flush N·35444 S·3MiB
+04:28:21.482534 memdb@flush created L0@5 N·35444 S·2MiB "s/323,v36113":"s/p..hts,v36115"
+04:28:21.482576 version@stat F·[2] S·4MiB[4MiB] Sc·[0.50]
+04:28:21.484219 memdb@flush committed F·1 T·34.731323ms
+04:28:21.485902 journal@remove removed @2
+04:28:29.557767 table@compaction L0·2 -> L1·0 S·4MiB Q·72489
+04:28:29.600215 table@build created L1@6 N·27018 S·2MiB "s/1,v271":"s/k..\xdb\b\x9e,v51251"
+04:28:29.642836 table@build created L1@7 N·30805 S·2MiB "s/k..\x9cؗ,v51252":"s/k...ba,v9527"
+04:28:29.665979 table@build created L1@8 N·12456 S·799KiB "s/k..\xbc\tb,v66084":"s/p..hts,v71312"
+04:28:29.666028 version@stat F·[0 3] S·4MiB[0B 4MiB] Sc·[0.00 0.05]
+04:28:29.667473 table@compaction committed F+1 S+35KiB Ke·0 D·1194 T·109.678312ms
+04:28:29.668582 table@remove removed @5
+04:28:29.668837 table@remove removed @3
