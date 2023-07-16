@@ -1,1 +1,0 @@
-4eff197f2cdad9d7d31bd600a4dd2e9b44169764970825565e4a9f3b8c00bf3b  noop_counter.wasm

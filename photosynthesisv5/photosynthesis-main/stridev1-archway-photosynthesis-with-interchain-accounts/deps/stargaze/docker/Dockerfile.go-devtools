@@ -1,6 +1,0 @@
-# docker build . -t publicawesome/golang:1.20.2-devtooling -f docker/Dockerfile.go-devtools
-FROM golang:1.20.2
-RUN apt-get update && \
-  apt-get install -y cmake && \
-  apt-get -y clean && \
-  rm -rf /var/lib/apt/lists/*
