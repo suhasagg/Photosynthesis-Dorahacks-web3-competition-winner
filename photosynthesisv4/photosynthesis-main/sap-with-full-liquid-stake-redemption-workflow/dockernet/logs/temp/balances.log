@@ -1,6 +1,6 @@
-STRIDE @ 232 | 3 VALS
-GAIA   @ 358 | 1 VALS
-PHOTO   @ 361 | 1 VALS
+STRIDE @ 1721 | 3 VALS
+GAIA   @ 2653 | 1 VALS
+PHOTO   @ 2652 | 1 VALS
 
 BALANCES STRIDE
 balances:
@@ -13,41 +13,3 @@ pagination:
 ==========================  GAIA  =============================
 
 BALANCES GAIA (DELEGATION ACCT)
-balances: []
-pagination:
-  next_key: null
-  total: "0"
-
-DELEGATIONS GAIA (DELEGATION ACCT)
-delegation_responses: []
-pagination:
-  next_key: null
-  total: "0"
-
-UNBONDING-DELEGATIONS GAIA (DELEGATION ACCT)
-pagination:
-  next_key: null
-  total: "0"
-unbonding_responses: []
-
-BALANCES GAIA (REDEMPTION ACCT)
-balances: []
-pagination:
-  next_key: null
-  total: "0"
-
-BALANCES GAIA (FEE ACCT)
-balances: []
-pagination:
-  next_key: null
-  total: "0"
-
-BALANCES GAIA (WITHDRAWAL ACCT)
-balances: []
-pagination:
-  next_key: null
-  total: "0"
-
-==========================  PHOTO  =============================
-
-BALANCES PHOTO (DELEGATION ACCT)
