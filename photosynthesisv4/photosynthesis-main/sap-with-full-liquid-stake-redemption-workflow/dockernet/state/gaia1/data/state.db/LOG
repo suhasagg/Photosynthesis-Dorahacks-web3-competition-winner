@@ -1,35 +1,11 @@
-=============== Jun 12, 2023 (UTC) ===============
-19:11:32.032821 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-19:11:32.039442 db@open opening
-19:11:32.041003 version@stat F·[] S·0B[] Sc·[]
-19:11:32.041867 db@janitor F·2 G·0
-19:11:32.041879 db@open done T·2.430138ms
-19:25:13.776732 memdb@flush N·4035 S·3MiB
-19:25:13.790857 memdb@flush created L0@3 N·4035 S·926KiB "abc..y:1,v6":"val..:99,v488"
-19:25:13.790893 version@stat F·[1] S·926KiB[926KiB] Sc·[0.25]
-19:25:13.791947 memdb@flush committed F·1 T·15.185826ms
-19:25:13.793466 journal@remove removed @1
-19:38:28.770915 memdb@flush N·3916 S·3MiB
-19:38:28.793912 memdb@flush created L0@5 N·3916 S·936KiB "abc..000,v5001":"val..999,v4988"
-19:38:28.793956 version@stat F·[2] S·1MiB[1MiB] Sc·[0.50]
-19:38:28.794863 memdb@flush committed F·1 T·23.885592ms
-19:38:28.797811 journal@remove removed @2
-19:38:44.868562 table@compaction L0·2 -> L1·0 S·1MiB Q·8030
-19:38:44.887116 table@build created L1@6 N·4774 S·817KiB "abc..y:1,v6":"val..999,v4988"
-19:38:44.887154 version@stat F·[0 1] S·817KiB[0B 817KiB] Sc·[0.00 0.01]
-19:38:44.887994 table@compaction committed F-1 S-1MiB Ke·0 D·3177 T·19.402294ms
-19:38:44.888531 table@remove removed @5
-19:38:44.888898 table@remove removed @3
-19:51:40.695765 memdb@flush N·3916 S·3MiB
-19:51:40.707182 memdb@flush created L0@8 N·3916 S·936KiB "abc..591,v7956":"val..374,v11863"
-19:51:40.707225 version@stat F·[1 1] S·1MiB[936KiB 817KiB] Sc·[0.25 0.01]
-19:51:40.708990 memdb@flush committed F·1 T·13.190326ms
-19:51:40.710750 journal@remove removed @4
-19:51:59.295395 table@compaction L0·1 -> L1·1 S·1MiB Q·11960
-19:51:59.319546 table@build created L1@9 N·7123 S·1MiB "abc..y:1,v6":"val..999,v4988"
-19:51:59.319585 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.01]
-19:51:59.320419 table@compaction committed F-1 S-524KiB Ke·0 D·1567 T·25.00012ms
-19:51:59.320902 table@remove removed @8
-19:51:59.321261 table@remove removed @6
-19:57:07.705122 db@close closing
-19:57:07.705231 db@close done T·104.49µs
+=============== Jul 17, 2023 (UTC) ===============
+10:45:40.594186 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:45:40.599842 db@open opening
+10:45:40.620744 version@stat F·[] S·0B[] Sc·[]
+10:45:40.622418 db@janitor F·2 G·0
+10:45:40.622433 db@open done T·22.584023ms
+10:59:21.721617 memdb@flush N·4021 S·3MiB
+10:59:23.009359 memdb@flush created L0@3 N·4021 S·928KiB "abc..y:1,v6":"val..:99,v488"
+10:59:23.009391 version@stat F·[1] S·928KiB[928KiB] Sc·[0.25]
+10:59:23.020062 memdb@flush committed F·1 T·1.298417193s
+10:59:23.029253 journal@remove removed @1

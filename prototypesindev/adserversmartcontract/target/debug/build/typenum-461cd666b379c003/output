@@ -1,3 +1,0 @@
-cargo:rerun-if-changed=build/main.rs
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=/media/swordfish/Titanaboa/matrix/dapp/dapps/target/debug/build/typenum-461cd666b379c003/out/consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=/media/swordfish/Titanaboa/matrix/dapp/dapps/target/debug/build/typenum-461cd666b379c003/out/op.rs

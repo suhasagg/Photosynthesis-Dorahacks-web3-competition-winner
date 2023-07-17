@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2023-06-12T19:11:11.434087097Z",
+  "genesis_time": "2023-07-17T10:45:18.904435828Z",
   "chain_id": "GAIA",
   "initial_height": "1",
   "consensus_params": {
@@ -142,7 +142,7 @@
                 "validator_address": "cosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795p",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "4fnUgLiIA8OIIYnaxE1HBjqvcYxjwfUFDeRUu7K4fl8="
+                  "key": "55wirG1V6+Z4qHqWYXYFqeXl4SN9JMNH2fTj5K4unpY="
                 },
                 "value": {
                   "denom": "uatom",
@@ -150,7 +150,7 @@
                 }
               }
             ],
-            "memo": "e7a8255672d3a4c4ecdadd17b7b6ef73e2c45e79@192.168.29.47:26656",
+            "memo": "8751a06ffdc5724fea82940a67713a7c0d1eca72@192.168.29.132:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -178,7 +178,7 @@
             }
           },
           "signatures": [
-            "MhwWHQIKc3X0xos8RgmwDGPYYkqn0cGNJmeTLxqpm94WUSM4Veo5JA/OpYJoO6esBkV2XRmal9zXlWA/5kv+yQ=="
+            "JY0z22gG+kkkgMoty9DqKeI59zcnGxy4VJfc7Au6YqpdMjy6Z1jEy7cncs/+0lpWUStspCrnwyJiNR6rx8dWGQ=="
           ]
         }
       ]
