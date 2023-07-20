@@ -1,0 +1,70 @@
+host_zone:
+- address: stride1755g4dkhpw73gz9h9nwhlcefc6sdf8kcmvcwrk4rxfrz8xpxxjms7savm8
+  bech32prefix: cosmos
+  blacklisted_validators: []
+  chain_id: GAIA
+  connection_id: connection-0
+  delegation_account:
+    address: cosmos1u7g2ay3ehhtgq96asmv0smmwyp05t3jjp79ljgmv6qgjg62sd72sadzfkc
+    target: DELEGATION
+  fee_account:
+    address: cosmos14megtem64n8u34sjysgwx8n6qphwts6f8rwll2cxy7p8t38v0lfs7vfkse
+    target: FEE
+  halted: false
+  host_denom: uatom
+  ibc_denom: ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2
+  last_redemption_rate: "1.000000000000000000"
+  max_redemption_rate: "1.500000000000000000"
+  min_redemption_rate: "0.900000000000000000"
+  redemption_account:
+    address: cosmos1gduxxsz82y0h2qlumgrgst0dfu0z4mwujp39e5r594s7mt4f7sess8w9dx
+    target: REDEMPTION
+  redemption_rate: "1.000000000000000000"
+  staked_bal: "0"
+  transfer_channel_id: channel-0
+  unbonding_frequency: "1"
+  validators:
+  - address: cosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795pcosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795p
+    delegation_amt: "0"
+    internal_exchange_rate: null
+    name: gval1
+    weight: "5"
+  withdrawal_account:
+    address: cosmos1k7rhryh4zjh0l6cw8dx2x8gf0s9wlc0xxv7n2ertqru9svj0udxqwfyvu5
+    target: WITHDRAWAL
+- address: stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag
+  bech32prefix: archway
+  blacklisted_validators: []
+  chain_id: localnet
+  connection_id: connection-1
+  delegation_account:
+    address: archway1vwlnlas3x66hqx9fzll5yelyfszph6j87xr849jhjsxqhzuhccyqrm4sgr
+    target: DELEGATION
+  fee_account:
+    address: archway1gyfprq8wl4kn4d6czsruve0pms9q4v3vc2qr22gn306hu7yx9qjs9pg846
+    target: FEE
+  halted: false
+  host_denom: uarch
+  ibc_denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+  last_redemption_rate: "1.056756178435773077"
+  max_redemption_rate: "1.500000000000000000"
+  min_redemption_rate: "0.900000000000000000"
+  redemption_account:
+    address: archway1hylfwuvytlgpuhzkg3jfw965c9zdztwemlk5vucqxnfnr0gtrktq8qh3up
+    target: REDEMPTION
+  redemption_rate: "1.058309434262756722"
+  staked_bal: "556200624"
+  transfer_channel_id: channel-1
+  unbonding_frequency: "1"
+  validators:
+  - address: archwayvaloper15js809uedxqs2wl0lyt58httasr5rlplj45fqw
+    delegation_amt: "556200624"
+    internal_exchange_rate: null
+    name: pval1
+    weight: "5"
+  withdrawal_account:
+    address: archway16ddhw45hlu4tfh7j5dr3dptd6237x6atv4jhwnxj9ms4szu5vs9qs6v7zx
+    target: WITHDRAWAL
+pagination:
+  next_key: null
+  total: "0"

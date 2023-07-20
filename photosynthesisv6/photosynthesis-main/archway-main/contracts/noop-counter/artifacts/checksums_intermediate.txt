@@ -1,0 +1,1 @@
+4f82cfdd72161a93f0594b520325f2a89a632cbd57b6371a5d3c5c097a976cbb  ./target/wasm32-unknown-unknown/release/noop_counter.wasm
