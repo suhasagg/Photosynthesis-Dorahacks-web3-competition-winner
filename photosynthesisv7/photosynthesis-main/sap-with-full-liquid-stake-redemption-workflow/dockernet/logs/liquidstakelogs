@@ -1,0 +1,1129 @@
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters does not exist.
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters does not exist.
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 0
+Last line of file is: 3
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+strided track balance
+balances:
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+strided track balance
+balances:
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+liquid_token_amount
+
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+
+Script execution completed.
+
+
+archway liquidity account balance
+balances:
+- amount: "10000000000"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 6460000
+Last line of file is: 4
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 3A9323074B8E38D6E70F8F35590737436DCAC612A6EB7570890111BEAB9007CC
+strided track balance
+balances:
+- amount: "6460000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: CBB8F38ECA7447D22C57682D89B79B438E896FE7FB314ECC1B6778125980D873
+strided track balance
+balances:
+- amount: "6460000"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+Amount: 6460000
+liquid_token_amount
+6460000
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: FF11E3805B69BC10614EF1EF536E6A3F78D0221B22F7E94F19CCA8FEF16254C4
+Script execution completed.
+FF11E3805B69BC10614EF1EF536E6A3F78D0221B22F7E94F19CCA8FEF16254C4
+
+archway liquidity account balance
+balances:
+- amount: "6430000"
+  denom: ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145
+- amount: "10000000000"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 17190000
+Last line of file is: 5
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 550931C60730A6011A3C6383C1D93A16CA72339C07811D8DEC0A9291092FA0DC
+strided track balance
+balances:
+- amount: "17190000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 5B028E9426CDF854E1EA7727D30ACDDAF2FF7A4261457C440D4C22ED9EC72B6B
+strided track balance
+balances:
+- amount: "17190000"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+Amount: 17190000
+liquid_token_amount
+17190000
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: BA01FE84FC3F47B87C265A0BE7E387DE25EE71DBC0E79F787A53A9F315123169
+Script execution completed.
+BA01FE84FC3F47B87C265A0BE7E387DE25EE71DBC0E79F787A53A9F315123169
+
+archway liquidity account balance
+balances:
+- amount: "23550000"
+  denom: ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145
+- amount: "9999983000"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 27630000
+Last line of file is: 6
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 1BAADF6D8AD9C3A8FDA9101E11DCF6DA75AA5AB09FA08464311674F5FC011684
+strided track balance
+balances:
+- amount: "27630000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: E275D3EEDA7DA18708A7673D084E8688EFA3C25C11E89AD3750BC54AC81ABAE0
+strided track balance
+balances:
+- amount: "27549735"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+Amount: 27549735
+liquid_token_amount
+27549735
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 7269E40C6E604AECF1DF46D6921AA50BCB55AD4B870BDB24E08F048B77689F33
+Script execution completed.
+7269E40C6E604AECF1DF46D6921AA50BCB55AD4B870BDB24E08F048B77689F33
+
+archway liquidity account balance
+balances:
+- amount: "51029735"
+  denom: ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145
+- amount: "9999966000"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 37900000
+Last line of file is: 7
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 09C07B2E7DFB333553C342FADC1237BD91AA2AA07C415F809388F71F9E471EEE
+strided track balance
+balances:
+- amount: "37900000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 56A35F4A9865D9680F3E007B9E231E3CFF744CD492ECA51A9A0A55DD6C8B27A9
+strided track balance
+balances:
+- amount: "37552572"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+Amount: 37552572
+liquid_token_amount
+37552572
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 5C9CB610E6A2CDD31D8A7C87D17BB57E34A2841F416D9893906701F214709F62
+Script execution completed.
+5C9CB610E6A2CDD31D8A7C87D17BB57E34A2841F416D9893906701F214709F62
+
+archway liquidity account balance
+balances:
+- amount: "88512307"
+  denom: ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145
+- amount: "9999949000"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 48740000
+Last line of file is: 8
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 0002695BA574AA088CA3F2249519EC44886D9B2AC25FBE20E53F96B5487C6848
+strided track balance
+balances:
+- amount: "48740000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 132C57922BEF96396C4F7554483B87FE90E63A08D41430D8A6A60F9EBB348A71
+strided track balance
+balances:
+- amount: "48053849"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+Amount: 48053849
+liquid_token_amount
+48053849
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 4E42CD4EEF6A5F18B25AC43EED67CE11B8B5F3BC753D73422DCE0976ADDF182E
+Script execution completed.
+4E42CD4EEF6A5F18B25AC43EED67CE11B8B5F3BC753D73422DCE0976ADDF182E
+
+archway liquidity account balance
+balances:
+- amount: "136656156"
+  denom: ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145
+- amount: "9999949000"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 58600000
+Last line of file is: 8
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 63204F5C3D24FBD1EFF60C5280D1248D70673CECA3A0D98106E83C2714324F42
+strided track balance
+balances:
+- amount: "58600000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: FDB0158CF8A3D3744BFFB79774A35D76275BE40A0A4D21A446C72B0FCA9D0AAB
+strided track balance
+balances:
+- amount: "57335212"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+Amount: 57335212
+liquid_token_amount
+57335212
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 09B5E4C2FFD64751FA60590FD3A2732442BCE2EC0F16793029AF88B4AA44537B
+Script execution completed.
+09B5E4C2FFD64751FA60590FD3A2732442BCE2EC0F16793029AF88B4AA44537B
+
+archway liquidity account balance
+balances:
+- amount: "193961368"
+  denom: ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145
+- amount: "9999932000"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 69000000
+Last line of file is: 9
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 59B92612F907400CE554C6700D8BFDD447258827685B7CAC178E35F49CA78331
+strided track balance
+balances:
+- amount: "69000000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 5EA3ECEC57FA73A1937D9D11434846A2EA2DC0F940ED1B2D6C618588291D146B
+strided track balance
+balances:
+- amount: "67121173"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+Amount: 67121173
+liquid_token_amount
+67121173
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 86B20C82F18E08946A1A6C997B7040B6AA1134CEB9C9EB6EDA74FA4DA6E03817
+Script execution completed.
+86B20C82F18E08946A1A6C997B7040B6AA1134CEB9C9EB6EDA74FA4DA6E03817
+
+archway liquidity account balance
+balances:
+- amount: "261052541"
+  denom: ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145
+- amount: "9999915000"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 79510000
+Last line of file is: 10
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 348AA57544E8422E255997316A51B3EBC4D4AEECF4DC84E57DA8C51255A71BFC
+strided track balance
+balances:
+- amount: "79510000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 99B852A775B832E2081E0EF14CB44A0A4E18E3136B2341F2A5421E99CA5E7514
+strided track balance
+balances:
+- amount: "76723695"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+Amount: 76723695
+liquid_token_amount
+76723695
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: F4C88759C94A2641442532A2C9352A7106F6C8D38AA05268DC34133163AFD939
+Script execution completed.
+F4C88759C94A2641442532A2C9352A7106F6C8D38AA05268DC34133163AFD939
+
+archway liquidity account balance
+balances:
+- amount: "337746236"
+  denom: ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145
+- amount: "9999898000"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 90490000
+Last line of file is: 11
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: E19DCEED3E13FD4E31E89C3647924B7D9E50A6A77EA09FF0CE6D4754F06F91C4
+strided track balance
+balances:
+- amount: "90490000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: B52322BCB1C90B5517E5B5E7DE355A1669BCEE78C6FC540EBE08B0B54C2E813E
+strided track balance
+balances:
+- amount: "86759509"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+Amount: 86759509
+liquid_token_amount
+86759509
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 209642CA99FE97D45CF7A41076B9729D1F0FD012C5499100D53A1E6AE2919936
+Script execution completed.
+209642CA99FE97D45CF7A41076B9729D1F0FD012C5499100D53A1E6AE2919936
+
+archway liquidity account balance
+balances:
+- amount: "424475745"
+  denom: ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145
+- amount: "9999898000"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 100350000
+Last line of file is: 12
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 988FAFB3DCB1B4B4694305A724E867FF76930B37FA838F43F1D39C9D23346BFB
+strided track balance
+balances:
+- amount: "100350000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 3003EF9696B65C27F4EEB736E3FAC2037BC81F47480163BB4DD3D6B48F6E494E
+strided track balance
+balances:
+- amount: "95404285"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+Amount: 95404285
+liquid_token_amount
+95404285
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 6A4C3BA0C15E15B8A7616F19DF1A5F5814702CB0A2B987FE7AAEADA1ACA654DA
+Script execution completed.
+6A4C3BA0C15E15B8A7616F19DF1A5F5814702CB0A2B987FE7AAEADA1ACA654DA
+
+archway liquidity account balance
+balances:
+- amount: "519850030"
+  denom: ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145
+- amount: "9999881000"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 110190000
+Last line of file is: 13
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 5C086A3BF6CA53867DFEE44D1388A5E148E11AA37670DD63C0869B4ACD1ABD83
+strided track balance
+balances:
+- amount: "110190000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 6BA1F936B7F1B1E2A512D100194DC84AE7A323069D2EDD6F06C1016EC7661CFC
+strided track balance
+balances:
+- amount: "104100907"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+Amount: 104100907
+liquid_token_amount
+104100907
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 93615A7BBC71E00D2AE8535CF98B8BB7C00B4771E801C707FCEAE95E99EF358A
+Script execution completed.
+93615A7BBC71E00D2AE8535CF98B8BB7C00B4771E801C707FCEAE95E99EF358A
+
+archway liquidity account balance
+balances:
+- amount: "623920937"
+  denom: ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145
+- amount: "9999864000"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 124040000
+Last line of file is: 14
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 31F9AA53B0FFDCCC6C09AF1835076EF049054176BEB9ECDA4ED728F69A6FCF0F
+strided track balance
+balances:
+- amount: "124040000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 345FADD2CE17DA461AA644F4523F051B0E7F52DF8D40AF3BF0262CFAD521E46A
+strided track balance
+balances:
+- amount: "116191547"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+Amount: 116191547
+liquid_token_amount
+116191547
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: E5778DE80F7975303965595D56C9765AFFEBF3481686CCEC2913F6D8CB1E0F46
+Script execution completed.
+E5778DE80F7975303965595D56C9765AFFEBF3481686CCEC2913F6D8CB1E0F46
+
+archway liquidity account balance
+balances:
+- amount: "740082484"
+  denom: ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145
+- amount: "9999847000"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 133230000
+Last line of file is: 15
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: CAD2D874BE1DFB6AF6E464910A1EE183842B16EDD54741BBFD94C6722263CDB5
+strided track balance
+balances:
+- amount: "133230000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+strided liquid stake
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 492419B5D5F40D9B57C2B68671AFE29F554A68615D3A0879D1E90D2CCF134BA8
+strided track balance
+balances:
+- amount: "124009125"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+Amount: 124009125
+liquid_token_amount
+124009125
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: BC26910567564BFA42AA90D76CB3630425DA69DA24247C9C3D67982557DAD274
+Script execution completed.
+BC26910567564BFA42AA90D76CB3630425DA69DA24247C9C3D67982557DAD274
+
+archway liquidity account balance
+balances:
+- amount: "864061609"
+  denom: ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145
+- amount: "9999847000"
+  denom: uarch
+pagination:
+  next_key: null
+  total: "0"
+strided binary
+archwayd binary
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakeparameters exists.
+Liquid stake total amount: 49800000
+Last line of file is: 31
+Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch
+archwayd ibc transfer
+strided track balance
+strided liquid stake
+strided track balance
+
+liquid_token_amount
+
+Script execution completed.
+strided ibc liquid tokens transfer to Archway
+
+Script execution completed.
+
+
+archway liquidity account balance

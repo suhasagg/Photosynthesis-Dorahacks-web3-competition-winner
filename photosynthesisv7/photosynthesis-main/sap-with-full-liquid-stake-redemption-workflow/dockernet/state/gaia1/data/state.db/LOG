@@ -1,0 +1,33 @@
+=============== Jul 24, 2023 (UTC) ===============
+11:34:10.581019 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:34:10.586431 db@open opening
+11:34:10.588231 version@stat F·[] S·0B[] Sc·[]
+11:34:10.590007 db@janitor F·2 G·0
+11:34:10.590027 db@open done T·3.587901ms
+11:47:53.274824 memdb@flush N·4015 S·3MiB
+11:47:53.292995 memdb@flush created L0@3 N·4015 S·935KiB "abc..y:1,v6":"val..:99,v488"
+11:47:53.293065 version@stat F·[1] S·935KiB[935KiB] Sc·[0.25]
+11:47:53.294596 memdb@flush committed F·1 T·19.705011ms
+11:47:53.297221 journal@remove removed @1
+12:01:16.055664 memdb@flush N·3919 S·3MiB
+12:01:16.074277 memdb@flush created L0@5 N·3919 S·938KiB "abc..000,v5001":"val..999,v4988"
+12:01:16.074346 version@stat F·[2] S·1MiB[1MiB] Sc·[0.50]
+12:01:16.076075 memdb@flush committed F·1 T·20.355169ms
+12:01:16.079283 journal@remove removed @2
+12:01:27.463557 table@compaction L0·2 -> L1·0 S·1MiB Q·7990
+12:01:27.497697 table@build created L1@6 N·4764 S·822KiB "abc..y:1,v6":"val..999,v4988"
+12:01:27.497776 version@stat F·[0 1] S·822KiB[0B 822KiB] Sc·[0.00 0.01]
+12:01:27.499288 table@compaction committed F-1 S-1MiB Ke·0 D·3170 T·35.680048ms
+12:01:27.499898 table@remove removed @5
+12:01:27.500470 table@remove removed @3
+12:14:45.189839 memdb@flush N·3916 S·3MiB
+12:14:45.216926 memdb@flush created L0@8 N·3916 S·933KiB "abc..587,v7936":"val..371,v11848"
+12:14:45.217394 version@stat F·[1 1] S·1MiB[933KiB 822KiB] Sc·[0.25 0.01]
+12:14:45.219789 memdb@flush committed F·1 T·29.694927ms
+12:14:45.220818 journal@remove removed @4
+12:15:06.145857 table@compaction L0·1 -> L1·1 S·1MiB Q·11955
+12:15:06.196407 table@build created L1@9 N·7113 S·1MiB "abc..y:1,v6":"val..999,v4988"
+12:15:06.196503 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.01]
+12:15:06.199156 table@compaction committed F-1 S-520KiB Ke·0 D·1567 T·53.234053ms
+12:15:06.200088 table@remove removed @8
+12:15:06.200288 table@remove removed @6
