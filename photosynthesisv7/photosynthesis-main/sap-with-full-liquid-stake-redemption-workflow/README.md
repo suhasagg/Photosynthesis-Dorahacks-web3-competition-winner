@@ -906,7 +906,7 @@ pagination:
 ```
 
 
-Cron schedule
+A/B Test Cron schedule 
 
 ```
 
