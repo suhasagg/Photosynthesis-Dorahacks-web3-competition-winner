@@ -1,0 +1,5 @@
+ing/legacy/v040/types.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../archway-main/vendor/github.com/cosmos/cosmos-sdk/x/staking/legacy/v043/store.go" beforeDir="false" afterPath="$PROJECT_DIR$/../archway-main/vendor/github.com/cosmos/cosmos-sdk/x/staking/legacy/v043/store.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../archway-main/vendor/github.com/cosmos/cosmos-sdk/x/staking/module.go" beforeDir="false" afterPath="$PROJECT_DIR$/../archway-main/vendor/github.com/cosmos/cosmos-sdk/x/staking/module.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../archway-main/vendor/github.com/cosmos/cosmos-sdk/x/staking/simulation/decoder.go" beforeDir="false" afterPath="$PROJECT_DIR$/../archway-main/vendor/github.com/cosmos/cosmos-sdk/x/staking/simulation/decoder.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../archway-main/vendor/github.com/cosmos/cosmos-sdk/x/staking/simulation/genesis.go" beforeDir="false" afterPath="$PROJECT_

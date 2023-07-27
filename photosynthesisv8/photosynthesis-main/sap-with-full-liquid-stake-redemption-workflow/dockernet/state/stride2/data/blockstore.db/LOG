@@ -1,0 +1,11 @@
+=============== Jul 27, 2023 (UTC) ===============
+05:54:00.789151 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+05:54:00.817935 db@open opening
+05:54:00.820642 version@stat F·[] S·0B[] Sc·[]
+05:54:00.840021 db@janitor F·2 G·0
+05:54:00.840037 db@open done T·22.095013ms
+06:35:56.800231 memdb@flush N·8299 S·3MiB
+06:35:59.120254 memdb@flush created L0@3 N·8299 S·2MiB "BH:..958,v1053":"blo..ore,v6"
+06:35:59.120357 version@stat F·[1] S·2MiB[2MiB] Sc·[0.25]
+06:35:59.151362 memdb@flush committed F·1 T·2.347029064s
+06:35:59.162052 journal@remove removed @1
