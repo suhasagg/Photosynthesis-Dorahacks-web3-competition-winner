@@ -923,6 +923,47 @@ pagination:
   ![Photosynthesis Archway Data Lake](https://lh3.googleusercontent.com/pw/AIL4fc_eowtm-JGZedQemuL-wxtXHX8S48luVheutD2Z-qvh0uxtOQSKAdcCydk5m5e0ImWW6HuuxvDUoOMDbq2LJla8tsPktA3_Rkg6gkMtmNV7clg10ANRh7_hU_zo6B4TV4ZPOdCiMGcHXJAdHMtFZFtqTA=w3484-h1960-s-no?authuser=0)
    
 
+# Photosynthesis Archway Data Points List (Small Subset View)
+
+Accumulated rewards
+
+central archway epoch
+
+Checking epoch info
+
+coins to address
+
+contractAddress
+
+Created ContractLiquidStakeDepositRecordsForEpoch
+
+CurrentEpoch
+
+Deleted reward records
+
+Deposit Record Stake ratio determination for liquidity distribution
+
+Distributed Liquidity for epoch
+
+EmitLiquidStakeDepositRecordCreatedEvent for record
+
+Emitting rewards withdrawal event for address
+
+epoch
+
+Error in QueryRedemptionRate
+
+Error in redemption rate query strconv.ParseFloat
+
+Finish Get Cumulative Reward Amount epoch
+
+Finish Query Redemption rate
+
+Get Cumulative Reward Amount
+
+Get Cumulative Reward Amount Enqueued
+
+
 
 
 
