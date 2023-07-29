@@ -1126,6 +1126,296 @@ Total Stake
 
 ts
 
+```
+Some A/B Testing curl based Elasticsearch queries that to get insights about the data:
+
+Get total rewards per contract address:
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "rewards_by_contract": {
+      "terms": {
+        "field": "ContractAddress.keyword"
+      },
+      "aggs": {
+        "total_rewards": {
+          "sum": {
+            "field": "AccumulatedRewards"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query aggregates the total accumulated rewards by contract address.
+
+Get the number of rewards withdrawal events per address:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "withdrawals_by_address": {
+      "terms": {
+        "field": "Emitting rewards withdrawal event for address.keyword"
+      }
+    }
+  }
+}
+'
+This query counts the number of rewards withdrawal events per address.
+
+Get the sum of liquid stake amount per epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "stakes_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "total_stakes": {
+          "sum": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query aggregates the total liquid stake amount per epoch.
+
+
+Get the number of transactions per contract address:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "transactions_by_contract": {
+      "terms": {
+        "field": "ContractAddress.keyword"
+      }
+    }
+  }
+}
+'
+This query counts the number of transactions per contract address.
+
+Get the total liquid stake amount deposited per dapp address:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "stake_by_address": {
+      "terms": {
+        "field": "Coins to address.keyword"
+      },
+      "aggs": {
+        "total_stakes": {
+          "sum": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query aggregates the total liquid stake amount per user address.
+
+Get the average liquid stake amount per epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "average_stakes_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "average_stakes": {
+          "avg": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query calculates the average liquid stake amount per epoch.
+
+Get the maximum and minimum liquid stake amount per epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "stakes_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "max_stakes": {
+          "max": {
+            "field": "liquid stake amount"
+          }
+        },
+        "min_stakes": {
+          "min": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query calculates the maximum and minimum liquid stake amount per epoch.
+
+
+Count the total number of transactions for each method:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "transactions_by_method": {
+      "terms": {
+        "field": "method.keyword"
+      }
+    }
+  }
+}
+'
+This query gives you the number of times each method is invoked.
+
+Find the average, maximum and minimum redemption rate per epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "redemption_rate_stats_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "average_redemption_rate": {
+          "avg": {
+            "field": "Last redemption rate"
+          }
+        },
+        "max_redemption_rate": {
+          "max": {
+            "field": "Last redemption rate"
+          }
+        },
+        "min_redemption_rate": {
+          "min": {
+            "field": "Last redemption rate"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query calculates the average, maximum and minimum redemption rate per epoch.
+
+Find the total number of LiquidStakeDepositsTillEpoch Epoch by epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "deposit_counts_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "total_deposits": {
+          "sum": {
+            "field": "LiquidStakeDepositsTillEpoch Epoch"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query gives the total number of LiquidStakeDepositsTillEpoch Epoch for each epoch.
+
+Find the total liquidityAmount by address:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "liquidity_by_address": {
+      "terms": {
+        "field": "Coins to address.keyword"
+      },
+      "aggs": {
+        "total_liquidity": {
+          "sum": {
+            "field": "liquidityAmount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+
+
+Query to find the top earning contract addresses by summing up the liquid stake amount field for each contract.
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "earnings_by_contract": {
+      "terms": {
+        "field": "ContractAddress.keyword",
+        "order": {
+          "total_earnings": "desc"
+        },
+        "size": 10
+      },
+      "aggs": {
+        "total_earnings": {
+          "sum": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+```
+
+
 
 
 
