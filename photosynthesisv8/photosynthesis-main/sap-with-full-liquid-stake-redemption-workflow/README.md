@@ -1127,7 +1127,7 @@ Total Stake
 ts
 
 ```
-Some A/B Testing curl based Elasticsearch queries that to get insights about the data:
+Some A/B Testing curl based Elasticsearch queries to get insights about the data:
 
 Get total rewards per contract address:
 
