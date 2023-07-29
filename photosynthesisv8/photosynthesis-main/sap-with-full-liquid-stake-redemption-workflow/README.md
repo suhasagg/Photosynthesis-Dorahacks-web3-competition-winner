@@ -953,8 +953,6 @@ epoch
 
 Error in QueryRedemptionRate
 
-Error in redemption rate query strconv.ParseFloat
-
 Finish Get Cumulative Reward Amount epoch
 
 Finish Query Redemption rate
