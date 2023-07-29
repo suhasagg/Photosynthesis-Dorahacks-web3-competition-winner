@@ -925,41 +925,206 @@ pagination:
 
 # Photosynthesis Archway Data Points List (Small Subset View)
 
+
 Accumulated rewards
+
 
 central archway epoch
 
+
 Checking epoch info
+
 
 coins to address
 
+
 contractAddress
+
 
 Created ContractLiquidStakeDepositRecordsForEpoch
 
+
 CurrentEpoch
+
 
 Deleted reward records
 
+
 Deposit Record Stake ratio determination for liquidity distribution
+
 
 Distributed Liquidity for epoch
 
+
 EmitLiquidStakeDepositRecordCreatedEvent for record
+
 
 Emitting rewards withdrawal event for address
 
+
 epoch
 
-Error in QueryRedemptionRate
 
 Finish Get Cumulative Reward Amount epoch
 
+
 Finish Query Redemption rate
+
 
 Get Cumulative Reward Amount
 
+
 Get Cumulative Reward Amount Enqueued
+
+
+is a multiple of RedemptionIntervalThreshold
+
+
+is not 0 and is a multiple of LiquidStakeInterval
+
+
+is not 0 and is a multiple of RedemptionRateThreshold
+
+
+is not 0 and is a multiple of RewardsWithdrawalInterval
+
+
+Last redemption rate
+
+
+log level
+
+
+liquid stake amount
+
+
+liquid stake dapp rewards epoch
+
+
+Liquid stake deposit record amount
+
+
+Liquid stake deposit record created amount
+
+
+Liquid stake deposit record enqueued amount
+
+
+Liquid stake enqueue operation - Epoch
+
+
+Liquid Token Amount
+
+
+Liquid Token Distribution Amount
+
+
+liquidityAmount
+
+
+liquidstakeamount
+
+
+LiquidStakeDepositsTillEpoch Epoch
+
+
+LiquidStakeScheduled
+
+
+message
+
+
+method
+
+
+MinimumRewardAmount is greater than 0
+
+
+module
+
+
+Processing ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH
+
+
+Processing LiquidStakeDappRewards epoch
+
+
+Processing REDEMPTION_RATE_QUERY_EPOCH
+
+
+Processing REWARDS_WITHDRAWAL_EPOCH
+
+
+Record
+
+
+record status
+
+
+records
+
+
+Retrieved contract metadata state
+
+
+Retrieved CumulativeRewardAmount
+
+
+Retrieved EpochInfo
+
+
+Retrieved EpochInfo for epochstypes.​ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH
+
+
+Retrieved EpochInfo for epochstypes.​LIQUID_STAKING_DApp_Rewards_EPOCH
+
+
+Retrieved EpochInfo for epochstypes.​REDEMPTION_RATE_QUERY_EPOCH
+
+
+Retrieved EpochInfo for epochstypes.​REWARDS_WITHDRAWAL_EPOCH
+
+
+Retrieved reward records
+
+
+Retrieved state from rewardKeeper
+
+
+Retrieved TotalLiquidStake
+
+
+Reward Address
+
+
+rewardaddr
+
+
+RewardsAddress is not empty
+
+
+Stake proportion
+
+
+Start Get Cumulative Reward Amount epoch
+
+
+Successfully queried RedemptionRate
+
+
+Till Epoch considered for distribution
+
+
+Total liquid stake
+
+
+total rewards
+
+
+Total Stake
+
+
+ts
 
 
 
