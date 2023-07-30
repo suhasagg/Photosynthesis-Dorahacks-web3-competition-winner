@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+package photosynthesis;
+
+import "google/protobuf/timestamp.proto";
+
+// MsgMintNFT represents the message to mint an NFT
+message MsgMintNFT {
+  string denom = 1;
+  string token_id = 2;
+  string token_uri = 3;
+  repeated string properties = 4;
+  google.protobuf.Timestamp creation_time = 5;
+  google.protobuf.Timestamp last_update_time = 6;
+}
+
+// MsgLiquidStakeDeposit defines the message for liquid staking Archway rewards.
+message MsgLiquidStakeDeposit {
+  string contract_address = 1;
+  repeated Coin amount = 2;
+}
+
+// MsgRedeemLiquidTokens defines the message for redeeming liquid tokens.
+message MsgRedeemLiquidTokens {
+  string contract_address = 1;
+  repeated Coin amount = 2;
+}
+
+// QueryLiquidTokensParams defines the parameters for the QueryLiquidTokens query.
+message QueryLiquidTokensParams {
+  string contract_address = 1;
+}
+
+// QueryLiquidStakingDepositParams defines the parameters for the QueryLiquidStakingDeposit query.
+message QueryLiquidStakingDepositParams {
+  string sender_address = 1;
+  string contract_address = 2;
+}
+
+// QueryLiquidityTokenBalanceParams defines the parameters for the QueryLiquidityTokenBalance query.
+message QueryLiquidityTokenBalanceParams {
+  string sender_address = 1;
+}
+
+// QueryRedemptionRateParams defines the parameters for the QueryRedemptionRate query.
+message QueryRedemptionRateParams {}
+
+// QueryAirdropStatusParams defines the parameters for the QueryAirdropStatus query.
+message QueryAirdropStatusParams {
+  string sender_address = 1;
+}
+
+// QueryLiquidStakingDepositResponse defines the response to the QueryLiquidStakingDeposit query.
+message QueryLiquidStakingDepositResponse {
+  repeated Coin deposit_amount = 1;
+  repeated Coin liquidity_token_amount = 2;
+  int64 next_redemption_time = 3;
+}
+
+// QueryLiquidityTokenBalanceResponse defines the response to the QueryLiquidityTokenBalance query.
+message QueryLiquidityTokenBalanceResponse {
+  repeated Coin balance = 1;
+}
+
+// QueryRedemptionRateResponse defines the response to the QueryRedemptionRate query.
+message QueryRedemptionRateResponse {
+  string redemption_rate = 1;
+}
+
+// QueryAirdropStatusResponse defines the response to the QueryAirdropStatus query.
+message QueryAirdropStatusResponse {
+  repeated Coin total_amount = 1;
+  string vesting_schedule = 2;
+  repeated Coin current_balance = 3;
+}
