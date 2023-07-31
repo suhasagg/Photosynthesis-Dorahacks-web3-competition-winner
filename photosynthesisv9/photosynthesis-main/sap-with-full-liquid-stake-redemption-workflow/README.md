@@ -1423,11 +1423,13 @@ curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content
    
   ![Reports B](https://i.imgur.com/sosGqS0.png)
 
-  
-  ![Reports C](https://i.imgur.com/OJFUO4A.png)
 
-  
-  ![Reports D](https://i.imgur.com/BvSBzi2.png)
+  ![Reports C](https://i.imgur.com/BvSBzi2.png)
+
+
+   ML based reports
+
+   ![Reports C](https://i.imgur.com/OJFUO4A.png)
 
 
 
