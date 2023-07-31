@@ -1415,7 +1415,7 @@ curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content
 '
 ```
 
-# Reporting Dashboard Preview 
+# Reporting Dashboard Preview (Subset of reports preview)
 
 
   ![Reports A](https://i.imgur.com/t3Qhbvj.png)
