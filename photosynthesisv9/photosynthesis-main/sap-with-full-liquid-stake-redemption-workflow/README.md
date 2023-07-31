@@ -1434,5 +1434,5 @@ curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content
 
    Anomaly Detection Reports
 
-  ![Reports E](https://i.imgur.com/quTxJGs.png)]
+  ![Reports E](https://i.imgur.com/quTxJGs.png)
 
