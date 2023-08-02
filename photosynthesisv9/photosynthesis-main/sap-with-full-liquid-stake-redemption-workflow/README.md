@@ -1429,7 +1429,7 @@ curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content
 
    ML based reports
 
-   ![Reports D](https://i.imgur.com/OJFUO4A.png)
+   ![Reports D](https://i.imgur.com/wMUlEYT.png)
 
 
    Anomaly Detection Reports
