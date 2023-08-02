@@ -1418,13 +1418,13 @@ curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content
 # Reporting Dashboard Preview (Subset of reports preview)
 
 
-  ![Reports A](https://i.imgur.com/t3Qhbvj.png)
+  ![Reports A](https://i.imgur.com/KSMui7R.png)
 
    
-  ![Reports B](https://i.imgur.com/sosGqS0.png)
+  ![Reports B](https://i.imgur.com/30CRoOm.png)
 
 
-  ![Reports C](https://i.imgur.com/BvSBzi2.png)
+  ![Reports C](https://i.imgur.com/gTiL0jT.png)
 
 
    ML based reports
