@@ -1420,11 +1420,20 @@ curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content
 
   ![Reports A](https://i.imgur.com/KSMui7R.png)
 
+
+
    
   ![Reports B](https://i.imgur.com/30CRoOm.png)
 
 
+
+
   ![Reports C](https://i.imgur.com/gTiL0jT.png)
+
+
+
+
+  Rewards Earned vs Corresponding Liquid stake Tally Algorithm Report
 
 
   ![Rewards Earned - Corresponding Liquid stake Tally Algorithm report](https://i.imgur.com/YxbqbUD.png) 
