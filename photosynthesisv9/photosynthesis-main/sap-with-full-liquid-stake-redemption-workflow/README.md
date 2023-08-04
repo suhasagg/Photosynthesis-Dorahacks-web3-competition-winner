@@ -1448,7 +1448,7 @@ curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content
    
    2)Identifying liquid tokens obtained trends. Quarter of the day, which hour of the day is most optimum for liquid staking tokens,to get maximum stuarch. 
    
-   Contract metadata parameters can be tuned based on ML reports above to optimse epoch based schedulars. 
+   Contract metadata parameters can be tuned based on ML reports above to optimise epoch based schedulars. 
 
    Anomaly Detection Reports
 
