@@ -1445,6 +1445,7 @@ curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content
    Application of ML forecasting reports 
    1)Identifying redemption rate trends. Quarter of the day, which hour of the day is most optimum for redemption.
    2)Identifying liquid tokens obtained trends. Quarter of the day, which hour of the day is most optimum for liquid staking tokens,to get maximum stuarch. 
+   Contract metadata parameters can be tuned based on ML reports above to optimse epoch based schedulars. 
 
    Anomaly Detection Reports
 
