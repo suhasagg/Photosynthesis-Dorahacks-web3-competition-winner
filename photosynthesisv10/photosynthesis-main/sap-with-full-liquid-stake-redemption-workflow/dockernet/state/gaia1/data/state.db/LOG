@@ -1,0 +1,36 @@
+=============== Aug 10, 2023 (UTC) ===============
+23:18:14.166064 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+23:18:14.173278 db@open opening
+23:18:14.174527 version@stat F·[] S·0B[] Sc·[]
+23:18:14.175994 db@janitor F·2 G·0
+23:18:14.176009 db@open done T·2.724361ms
+23:31:56.207542 memdb@flush N·4015 S·3MiB
+23:31:56.218086 memdb@flush created L0@3 N·4015 S·932KiB "abc..y:1,v6":"val..:99,v488"
+23:31:56.218114 version@stat F·[1] S·932KiB[932KiB] Sc·[0.25]
+23:31:56.219549 memdb@flush committed F·1 T·11.975389ms
+23:31:56.221002 journal@remove removed @1
+23:45:25.257107 memdb@flush N·3916 S·3MiB
+23:45:26.803196 memdb@flush created L0@5 N·3916 S·934KiB "abc..000,v5001":"val..999,v4988"
+23:45:26.803240 version@stat F·[2] S·1MiB[1MiB] Sc·[0.50]
+23:45:26.813346 memdb@flush committed F·1 T·1.556190644s
+23:45:26.818262 journal@remove removed @2
+23:45:40.429529 table@compaction L0·2 -> L1·0 S·1MiB Q·8005
+23:45:41.641574 table@build created L1@6 N·4762 S·819KiB "abc..y:1,v6":"val..999,v4988"
+23:45:41.642990 version@stat F·[0 1] S·819KiB[0B 819KiB] Sc·[0.00 0.01]
+23:45:41.652542 table@compaction committed F-1 S-1MiB Ke·0 D·3169 T·1.222973343s
+23:45:41.664763 table@remove removed @5
+23:45:41.669563 table@remove removed @3
+23:59:06.016281 memdb@flush N·3888 S·3MiB
+23:59:06.031625 memdb@flush created L0@8 N·3888 S·944KiB "abc..587,v7936":"val..365,v11818"
+23:59:06.031672 version@stat F·[1 1] S·1MiB[944KiB 819KiB] Sc·[0.25 0.01]
+23:59:06.033172 memdb@flush committed F·1 T·16.848424ms
+23:59:06.035159 journal@remove removed @4
+23:59:26.928116 table@compaction L0·1 -> L1·1 S·1MiB Q·11920
+23:59:26.952946 table@build created L1@9 N·7095 S·1MiB "abc..y:1,v6":"val..999,v4988"
+23:59:26.952982 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.01]
+23:59:26.954512 table@compaction committed F-1 S-522KiB Ke·0 D·1555 T·26.363172ms
+23:59:26.955058 table@remove removed @8
+23:59:26.955340 table@remove removed @6
+=============== Aug 11, 2023 (UTC) ===============
+00:03:32.031260 db@close closing
+00:03:32.031327 db@close done T·67.4µs

@@ -1,0 +1,692 @@
+Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway17z8fpj73duagvz4yfgk24m8jtdk9p0zuvqmdms 310000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend=test --chain-id localnet --fees 17000uarch -y
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 611FF6640D3B866D66C3B7FFE700742A890B26E12A4DD649937CB63A2DC783A3
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway17z8fpj73duagvz4yfgk24m8jtdk9p0zuvqmdms 750000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend=test --chain-id localnet --fees 17000uarch -y
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: A9118B195D52400683EF08322EA16FAFCF76906712E1E9CCC5C4978E292F8A17
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway17z8fpj73duagvz4yfgk24m8jtdk9p0zuvqmdms 500000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend=test --chain-id localnet --fees 17000uarch -y
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 4804F15E6A95F09DFF943925CE1FF453C01D8FA4CEAA52FA6CEE7AABA356B92D
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway17z8fpj73duagvz4yfgk24m8jtdk9p0zuvqmdms 730000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend=test --chain-id localnet --fees 17000uarch -y
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 7D54CF476F09FED4D31CBA3BC1FCF7758C4180D820D984324ED8A62EF1715EE1
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway17z8fpj73duagvz4yfgk24m8jtdk9p0zuvqmdms 400000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend=test --chain-id localnet --fees 17000uarch -y
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: AAD653DC0401FAE564936B70A414533D3E1FE396B1D9223E4D0964EC0E75A11A
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
+part4 should not be equal to zero
