@@ -905,10 +905,558 @@ pagination:
   total: "0"
 ```
 
-# Updated A/B Testing Cron Schedule
+# A/B testing Cron schedule
 
 ```
-*/2 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/rewardswithdrawal.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/rewardslogs.log
+*/2 * * * * /bin/sh /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/liquidstake.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakelogs
+* * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q stakeibc list-host-zone > /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redemptionrate
+* * * * * /bin/sh /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/transactions.sh >> /root/transactions.txt
+*/3 * * * * /bin/sh /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/DistributeLiquidity.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributeliquiditylogs
+5,9,13,19,23,27,31,35,39,43,47,51,55 * * * * /bin/sh /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/redeemstake.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemstake.log
+3,6,9,12,15,18,21,24,27 * * * * /bin/sh /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/gasfiller.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/gasfillerlogs.log
+```
+
+
+# Photosynthesis Archway Blockchain Data Lake
+
+
+  ![Photosynthesis Archway Data Lake](https://lh3.googleusercontent.com/pw/AIL4fc_eowtm-JGZedQemuL-wxtXHX8S48luVheutD2Z-qvh0uxtOQSKAdcCydk5m5e0ImWW6HuuxvDUoOMDbq2LJla8tsPktA3_Rkg6gkMtmNV7clg10ANRh7_hU_zo6B4TV4ZPOdCiMGcHXJAdHMtFZFtqTA=w3484-h1960-s-no?authuser=0)
+   
+
+# Photosynthesis Archway Data Points List (Small Subset View)
+
+
+Accumulated rewards
+
+
+central archway epoch
+
+
+Checking epoch info
+
+
+coins to address
+
+
+contractAddress
+
+
+Created ContractLiquidStakeDepositRecordsForEpoch
+
+
+CurrentEpoch
+
+
+Deleted reward records
+
+
+Deposit Record Stake ratio determination for liquidity distribution
+
+
+Distributed Liquidity for epoch
+
+
+EmitLiquidStakeDepositRecordCreatedEvent for record
+
+
+Emitting rewards withdrawal event for address
+
+
+epoch
+
+
+Finish Get Cumulative Reward Amount epoch
+
+
+Finish Query Redemption rate
+
+
+Get Cumulative Reward Amount
+
+
+Get Cumulative Reward Amount Enqueued
+
+
+is a multiple of RedemptionIntervalThreshold
+
+
+is not 0 and is a multiple of LiquidStakeInterval
+
+
+is not 0 and is a multiple of RedemptionRateThreshold
+
+
+is not 0 and is a multiple of RewardsWithdrawalInterval
+
+
+Last redemption rate
+
+
+log level
+
+
+liquid stake amount
+
+
+liquid stake dapp rewards epoch
+
+
+Liquid stake deposit record amount
+
+
+Liquid stake deposit record created amount
+
+
+Liquid stake deposit record enqueued amount
+
+
+Liquid stake enqueue operation - Epoch
+
+
+Liquid Token Amount
+
+
+Liquid Token Distribution Amount
+
+
+liquidityAmount
+
+
+liquidstakeamount
+
+
+LiquidStakeDepositsTillEpoch Epoch
+
+
+LiquidStakeScheduled
+
+
+message
+
+
+method
+
+
+MinimumRewardAmount is greater than 0
+
+
+module
+
+
+Processing ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH
+
+
+Processing LiquidStakeDappRewards epoch
+
+
+Processing REDEMPTION_RATE_QUERY_EPOCH
+
+
+Processing REWARDS_WITHDRAWAL_EPOCH
+
+
+Record
+
+
+record status
+
+
+records
+
+
+Retrieved contract metadata state
+
+
+Retrieved CumulativeRewardAmount
+
+
+Retrieved EpochInfo
+
+
+Retrieved EpochInfo for epochstypes.​ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH
+
+
+Retrieved EpochInfo for epochstypes.​LIQUID_STAKING_DApp_Rewards_EPOCH
+
+
+Retrieved EpochInfo for epochstypes.​REDEMPTION_RATE_QUERY_EPOCH
+
+
+Retrieved EpochInfo for epochstypes.​REWARDS_WITHDRAWAL_EPOCH
+
+
+Retrieved reward records
+
+
+Retrieved state from rewardKeeper
+
+
+Retrieved TotalLiquidStake
+
+
+Reward Address
+
+
+rewardaddr
+
+
+RewardsAddress is not empty
+
+
+Stake proportion
+
+
+Start Get Cumulative Reward Amount epoch
+
+
+Successfully queried RedemptionRate
+
+
+Till Epoch considered for distribution
+
+
+Total liquid stake
+
+
+total rewards
+
+
+Total Stake
+
+
+ts
+
+```
+Some A/B Testing curl based Elasticsearch queries to get insights about the data:
+
+Get total rewards per contract address:
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "rewards_by_contract": {
+      "terms": {
+        "field": "ContractAddress.keyword"
+      },
+      "aggs": {
+        "total_rewards": {
+          "sum": {
+            "field": "AccumulatedRewards"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query aggregates the total accumulated rewards by contract address.
+
+Get the number of rewards withdrawal events per address:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "withdrawals_by_address": {
+      "terms": {
+        "field": "Emitting rewards withdrawal event for address.keyword"
+      }
+    }
+  }
+}
+'
+This query counts the number of rewards withdrawal events per address.
+
+Get the sum of liquid stake amount per epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "stakes_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "total_stakes": {
+          "sum": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query aggregates the total liquid stake amount per epoch.
+
+
+Get the number of transactions per contract address:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "transactions_by_contract": {
+      "terms": {
+        "field": "ContractAddress.keyword"
+      }
+    }
+  }
+}
+'
+This query counts the number of transactions per contract address.
+
+Get the total liquid stake amount deposited per dapp address:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "stake_by_address": {
+      "terms": {
+        "field": "Coins to address.keyword"
+      },
+      "aggs": {
+        "total_stakes": {
+          "sum": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query aggregates the total liquid stake amount per user address.
+
+Get the average liquid stake amount per epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "average_stakes_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "average_stakes": {
+          "avg": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query calculates the average liquid stake amount per epoch.
+
+Get the maximum and minimum liquid stake amount per epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "stakes_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "max_stakes": {
+          "max": {
+            "field": "liquid stake amount"
+          }
+        },
+        "min_stakes": {
+          "min": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query calculates the maximum and minimum liquid stake amount per epoch.
+
+
+Count the total number of transactions for each method:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "transactions_by_method": {
+      "terms": {
+        "field": "method.keyword"
+      }
+    }
+  }
+}
+'
+This query gives you the number of times each method is invoked.
+
+Find the average, maximum and minimum redemption rate per epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "redemption_rate_stats_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "average_redemption_rate": {
+          "avg": {
+            "field": "Last redemption rate"
+          }
+        },
+        "max_redemption_rate": {
+          "max": {
+            "field": "Last redemption rate"
+          }
+        },
+        "min_redemption_rate": {
+          "min": {
+            "field": "Last redemption rate"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query calculates the average, maximum and minimum redemption rate per epoch.
+
+Find the total number of LiquidStakeDepositsTillEpoch Epoch by epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "deposit_counts_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "total_deposits": {
+          "sum": {
+            "field": "LiquidStakeDepositsTillEpoch Epoch"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query gives the total number of LiquidStakeDepositsTillEpoch Epoch for each epoch.
+
+Find the total liquidityAmount by address:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "liquidity_by_address": {
+      "terms": {
+        "field": "Coins to address.keyword"
+      },
+      "aggs": {
+        "total_liquidity": {
+          "sum": {
+            "field": "liquidityAmount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+
+
+Query to find the top earning contract addresses by summing up the liquid stake amount field for each contract.
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "earnings_by_contract": {
+      "terms": {
+        "field": "ContractAddress.keyword",
+        "order": {
+          "total_earnings": "desc"
+        },
+        "size": 10
+      },
+      "aggs": {
+        "total_earnings": {
+          "sum": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+```
+
+# Reporting Dashboard Preview (Subset of reports preview)
+
+
+  ![Reports A](https://i.imgur.com/KSMui7R.png)
+
+
+
+   
+  ![Reports B](https://i.imgur.com/30CRoOm.png)
+
+
+
+
+  ![Reports C](https://i.imgur.com/gTiL0jT.png)
+
+
+
+
+  Rewards Earned vs Corresponding Liquid stake Tally Algorithm Report
+
+
+  ![Rewards Earned - Corresponding Liquid stake Tally Algorithm report](https://i.imgur.com/YxbqbUD.png) 
+  
+   ML based reports
+
+   ![Reports D](https://i.imgur.com/wMUlEYT.png)
+
+   Application of ML forecasting reports -
+   
+   1)Identifying redemption rate trends. Quarter of the day, which hour of the day is most optimum for redemption.
+   
+   2)Identifying liquid tokens obtained trends. Quarter of the day, which hour of the day is most optimum for liquid staking tokens,to get maximum stuarch. 
+   
+   Contract metadata parameters can be tuned based on ML reports above to optimise epoch based schedulars. 
+
+   Anomaly Detection Reports
+
+  ![Reports E](https://i.imgur.com/quTxJGs.png)
+
+  Updated A/B Testing Cron schedule 
+```
+  */2 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/rewardswithdrawal.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/rewardslogs.log
 */4 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/liquidstake.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakelogs
 * * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q stakeibc list-host-zone > /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redemptionrate
 * * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/transactions.sh >> /root/transactions.txt
