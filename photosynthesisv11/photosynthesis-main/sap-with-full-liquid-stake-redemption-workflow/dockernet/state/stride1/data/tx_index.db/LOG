@@ -1,0 +1,37 @@
+=============== Aug 13, 2023 (UTC) ===============
+18:28:11.638262 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+18:28:11.654326 db@open opening
+18:28:11.655424 version@stat F·[] S·0B[] Sc·[]
+18:28:11.658755 db@janitor F·2 G·0
+18:28:11.658768 db@open done T·4.433112ms
+18:51:02.436677 memdb@flush N·28916 S·3MiB
+18:51:02.471662 memdb@flush created L0@3 N·28916 S·1MiB "\x00\a5..\xfd\xf3\xdc,v22357":"\xff\x84G..E\x15\xa0,v23673"
+18:51:02.471745 version@stat F·[1] S·1MiB[1MiB] Sc·[0.25]
+18:51:02.473493 memdb@flush committed F·1 T·36.728527ms
+18:51:02.477772 journal@remove removed @1
+19:02:11.752894 memdb@flush N·20739 S·3MiB
+19:02:11.774634 memdb@flush created L0@5 N·20739 S·1MiB "\x00\xb3\xea..\xd3\x1d\x16,v46253":"\xff\x86u..t#\x9f,v38948"
+19:02:11.774667 version@stat F·[2] S·2MiB[2MiB] Sc·[0.50]
+19:02:11.777076 memdb@flush committed F·1 T·24.140939ms
+19:02:11.779006 journal@remove removed @2
+19:03:00.802146 table@compaction L0·2 -> L1·0 S·2MiB Q·51308
+19:03:00.836216 table@build created L1@6 N·49479 S·2MiB "\x00\a5..\xfd\xf3\xdc,v22357":"|\x14\xaa..\xe2'\xaf,v37705"
+19:03:00.843590 table@build created L1@7 N·176 S·861KiB "|\xbf\xff..E\xa9\x83,v18787":"\xff\x86u..t#\x9f,v38948"
+19:03:00.843618 version@stat F·[0 2] S·2MiB[0B 2MiB] Sc·[0.00 0.03]
+19:03:00.845034 table@compaction committed F~ S+27KiB Ke·0 D·0 T·42.865705ms
+19:03:00.845751 table@remove removed @5
+19:03:00.846326 table@remove removed @3
+19:13:15.404058 memdb@flush N·20720 S·3MiB
+19:13:15.420649 memdb@flush created L0@9 N·20720 S·1MiB "\x00\xde9..\xa1:%,v58967":"\xff\xf1G..\xda\x14~,v68888"
+19:13:15.420683 version@stat F·[1 2] S·4MiB[1MiB 2MiB] Sc·[0.25 0.03]
+19:13:15.422245 memdb@flush committed F·1 T·18.155309ms
+19:13:15.424107 journal@remove removed @4
+19:14:21.259899 table@compaction L0·1 -> L1·2 S·4MiB Q·72416
+19:14:21.328751 table@build created L1@10 N·57606 S·2MiB "\x00\a5..\xfd\xf3\xdc,v22357":"mes..212,v45507"
+19:14:21.355958 table@build created L1@11 N·12688 S·2MiB "mes..216,v45521":"ۗD..\x8d\x83\xca,v15945"
+19:14:21.360403 table@build created L1@12 N·81 S·409KiB "\xdcP\a..\vׇ,v29195":"\xff\xf1G..\xda\x14~,v68888"
+19:14:21.360445 version@stat F·[0 3] S·4MiB[0B 4MiB] Sc·[0.00 0.05]
+19:14:21.361968 table@compaction committed F~ S+41KiB Ke·0 D·0 T·101.976017ms
+19:14:21.362727 table@remove removed @9
+19:14:21.363647 table@remove removed @6
+19:14:21.363999 table@remove removed @7

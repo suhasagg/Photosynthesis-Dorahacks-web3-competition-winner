@@ -1,0 +1,35 @@
+=============== Aug 13, 2023 (UTC) ===============
+18:28:11.775730 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+18:28:11.782351 db@open opening
+18:28:11.783435 version@stat F·[] S·0B[] Sc·[]
+18:28:11.785118 db@janitor F·2 G·0
+18:28:11.785153 db@open done T·2.779615ms
+18:41:43.650736 memdb@flush N·4016 S·3MiB
+18:41:43.661519 memdb@flush created L0@3 N·4016 S·925KiB "abc..y:1,v6":"val..:99,v488"
+18:41:43.661618 version@stat F·[1] S·925KiB[925KiB] Sc·[0.25]
+18:41:43.663531 memdb@flush committed F·1 T·12.759759ms
+18:41:43.665381 journal@remove removed @1
+18:55:09.786061 memdb@flush N·3904 S·3MiB
+18:55:09.797859 memdb@flush created L0@5 N·3904 S·937KiB "abc..000,v5001":"val..999,v4988"
+18:55:09.797894 version@stat F·[2] S·1MiB[1MiB] Sc·[0.50]
+18:55:09.799332 memdb@flush committed F·1 T·13.230524ms
+18:55:09.801483 journal@remove removed @2
+18:55:25.459252 table@compaction L0·2 -> L1·0 S·1MiB Q·7995
+18:55:25.483571 table@build created L1@6 N·4755 S·819KiB "abc..y:1,v6":"val..999,v4988"
+18:55:25.483618 version@stat F·[0 1] S·819KiB[0B 819KiB] Sc·[0.00 0.01]
+18:55:25.486067 table@compaction committed F-1 S-1MiB Ke·0 D·3165 T·26.774535ms
+18:55:25.486781 table@remove removed @5
+18:55:25.487411 table@remove removed @3
+19:08:28.552425 memdb@flush N·3915 S·3MiB
+19:08:29.022413 memdb@flush created L0@8 N·3915 S·931KiB "abc..584,v7921":"val..368,v11833"
+19:08:29.022487 version@stat F·[1 1] S·1MiB[931KiB 819KiB] Sc·[0.25 0.01]
+19:08:29.033310 memdb@flush committed F·1 T·480.741382ms
+19:08:29.049047 journal@remove removed @4
+19:08:49.941336 table@compaction L0·1 -> L1·1 S·1MiB Q·11940
+19:08:51.146788 table@build created L1@9 N·7104 S·1MiB "abc..y:1,v6":"val..999,v4988"
+19:08:51.146985 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.01]
+19:08:51.155806 table@compaction committed F-1 S-519KiB Ke·0 D·1566 T·1.214368653s
+19:08:51.157740 table@remove removed @8
+19:08:51.160096 table@remove removed @6
+19:18:31.963047 db@close closing
+19:18:31.963121 db@close done T·73.664µs
