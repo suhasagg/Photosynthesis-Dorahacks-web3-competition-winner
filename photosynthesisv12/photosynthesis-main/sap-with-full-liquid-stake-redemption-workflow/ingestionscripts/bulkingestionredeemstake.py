@@ -173,7 +173,7 @@ def main():
     if not es.indices.exists(index=index_name):
         es.indices.create(index=index_name)
 
-    # Assuming the read_and_process_log_file function is defined elsewhere in your code
+   
     read_and_process_log_file(log_file_path, index_name)
 
 
