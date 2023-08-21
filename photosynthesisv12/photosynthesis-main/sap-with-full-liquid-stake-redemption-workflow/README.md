@@ -1528,20 +1528,38 @@ txhash.keyword
 # Liquid stake job
 
 balances.amount
+	
+balances.amount.keyword
 
 balances.denom
+	
+balances.denom.keyword
 
+code
+	
 codespace
+	
+codespace.keyword
 
 data
-
+	
+data.keyword
+	
 gas_used
 
+gas_used.keyword
+
 gas_wanted
+	
+gas_wanted.keyword
 
 height
 
+height.keyword
+
 info
+
+info.keyword
 
 message
 
@@ -1549,11 +1567,17 @@ message.keyword
 
 pagination.total
 
+pagination.total.keyword
+
 raw_log
+
+raw_log.keyword
 
 timestamp
 
 txhash
+
+txhash.keyword
 
 
 # Redeem stake job
