@@ -1787,3 +1787,5 @@ txhash.keyword
   ![Reports C](https://i.imgur.com/I8Gqz8A.png)
 
   ![Reports D](https://i.imgur.com/aKY1Vvg.png)
+
+  ![Reports E](https://i.imgur.com/vAdWN4n.png)
