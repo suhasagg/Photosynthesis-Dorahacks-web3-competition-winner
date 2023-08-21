@@ -1784,4 +1784,5 @@ txhash.keyword
  
   ![Reports B](https://i.imgur.com/m6HDDcv.png)
 
+  ![Reports C](https://i.imgur.com/I8Gqz8A.png)
 
