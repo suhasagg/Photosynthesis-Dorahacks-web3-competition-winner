@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  node:
+    image: photo60
+    build:
+      context: .
+    entrypoint:
+      - sh
+      - /opt/localnet.sh
+    ports:
+      - 40000:40000
+      - 9090:9090
+      - 26657:26657
+    volumes:
+      - ./contrib/localnet:/opt:z
+      - ./contracts:/contracts:z
+    working_dir: /opt

@@ -1,0 +1,6 @@
+=============== Aug 18, 2023 (UTC) ===============
+22:16:36.706867 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+22:16:36.719725 db@open opening
+22:16:36.721175 version@stat F·[] S·0B[] Sc·[]
+22:16:36.723406 db@janitor F·2 G·0
+22:16:36.723418 db@open done T·3.686018ms

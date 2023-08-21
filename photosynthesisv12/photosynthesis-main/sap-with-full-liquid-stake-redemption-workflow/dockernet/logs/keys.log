@@ -1,0 +1,70 @@
+
+- address: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+  name: admin
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A3ZqkrrLNDVlI97RP4onAgAmjb+j3K8MqN2KcxJjrwXk"}'
+  type: local
+
+
+- address: stride16lmf7t0jhaatan6vnxlgv47h2wf0k5ln58y9qm
+  name: rly2
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Ai8MAMmYSuBQBdger1oLSzOSS7FYR9MIT2KvMlU5eGYm"}'
+  type: local
+
+
+- address: stride1jx7ns7v9s3nes9k7p0sez7nq2hvmae5cmley3h
+  name: rly3
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AqT7/l0U902GvtvGpCHzkXiZRiTxR9DgCUOEpnZ34ntn"}'
+  type: local
+
+
+- address: stride1jrmtt5c6z8h5yrrwml488qnm7p3vxrrml2kgvl
+  name: rly4
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A4Oqa6M31k8mLiJHUsUSq3oTj/vPifF2HYFO6NbKVXLc"}'
+  type: local
+
+
+- address: stride1zwj4yr264fr9au20gur3qapt3suwkgp09lzfsn
+  name: rly5
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A5MeAirupyLOZsCePm25GNDBADC9uutFO9LgH9oByZAZ"}'
+  type: local
+
+
+- address: stride1kwll0uet4mkj867s4q8dgskp03txgjnswc2u4z
+  name: rly6
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A9XvaZIoK1ocQsd+h7qSZRtlMJ3QDCKiAM5ywd9bJVkH"}'
+  type: local
+
+
+- address: stride1tpvutc2ffjq9n964e8h0gxl7fd89y4764q2jz8
+  name: rly7
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A+/r/dnv8jkFZjDxZzp4igSki2eYuQ14xFQJ4aMRPKRm"}'
+  type: local
+
+
+- name: grev1
+  type: local
+  address: cosmos1wdplq6qjh2xruc7qqagma9ya665q6qhcwju3ng
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Al7nuVKQEhJF/xGHRrIwqzVG35B3uhndbzpPv1IAZxzH"}'
+  mnemonic: ""
+
+
+- name: rly2
+  type: local
+  address: cosmos16lmf7t0jhaatan6vnxlgv47h2wf0k5lnhvye5h
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Ai8MAMmYSuBQBdger1oLSzOSS7FYR9MIT2KvMlU5eGYm"}'
+  mnemonic: ""
+
+
+- name: prev1
+  type: local
+  address: archway1wdplq6qjh2xruc7qqagma9ya665q6qhcmeq4el
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Al7nuVKQEhJF/xGHRrIwqzVG35B3uhndbzpPv1IAZxzH"}'
+  mnemonic: ""
+
+
+- name: rly0
+  type: local
+  address: archway1jx7ns7v9s3nes9k7p0sez7nq2hvmae5cdl9u0v
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AqT7/l0U902GvtvGpCHzkXiZRiTxR9DgCUOEpnZ34ntn"}'
+  mnemonic: ""
+

@@ -1,0 +1,42 @@
+=============== Aug 18, 2023 (UTC) ===============
+22:16:36.173672 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+22:16:36.183665 db@open opening
+22:16:36.184251 version@stat F·[] S·0B[] Sc·[]
+22:16:36.186900 db@janitor F·2 G·0
+22:16:36.186915 db@open done T·3.242027ms
+22:55:18.223940 memdb@flush N·8928 S·3MiB
+22:55:18.257127 memdb@flush created L0@3 N·8928 S·2MiB "BH:..0f9,v51":"blo..ore,v6"
+22:55:18.257145 version@stat F·[1] S·2MiB[2MiB] Sc·[0.25]
+22:55:18.259801 memdb@flush committed F·1 T·35.626035ms
+22:55:18.260821 journal@remove removed @1
+23:28:59.801236 memdb@flush N·7782 S·3MiB
+23:28:59.819659 memdb@flush created L0@5 N·7782 S·2MiB "BH:..1f8,v11805":"blo..ore,v8934"
+23:28:59.819714 version@stat F·[2] S·5MiB[5MiB] Sc·[0.50]
+23:28:59.821283 memdb@flush committed F·1 T·19.804147ms
+23:28:59.821549 journal@remove removed @2
+23:29:34.767631 table@compaction L0·2 -> L1·0 S·5MiB Q·16848
+23:29:34.793544 table@build created L1@6 N·8567 S·2MiB "BH:..1f8,v11805":"P:1191:0,v7141"
+23:29:34.813173 table@build created L1@7 N·1754 S·2MiB "P:1192:0,v7147":"P:2770:0,v16615"
+23:29:34.827122 table@build created L1@8 N·3605 S·1MiB "P:2771:0,v16621":"blo..ore,v16710"
+23:29:34.827158 version@stat F·[0 3] S·5MiB[0B 5MiB] Sc·[0.00 0.06]
+23:29:34.828580 table@compaction committed F+1 S-15KiB Ke·0 D·2784 T·60.924215ms
+23:29:34.830027 table@remove removed @5
+23:29:34.830364 table@remove removed @3
+=============== Aug 19, 2023 (UTC) ===============
+00:02:42.897503 memdb@flush N·7776 S·3MiB
+00:02:42.915769 memdb@flush created L0@10 N·7776 S·2MiB "BH:..be8,v17715":"blo..ore,v16716"
+00:02:42.915795 version@stat F·[1 3] S·8MiB[2MiB 5MiB] Sc·[0.25 0.06]
+00:02:42.917522 memdb@flush committed F·1 T·19.663771ms
+00:02:42.918001 journal@remove removed @4
+00:04:13.096772 table@compaction L0·1 -> L1·3 S·8MiB Q·24834
+00:04:13.116630 table@build created L1@11 N·9793 S·2MiB "BH:..be8,v17715":"H:2466,v14792"
+00:04:13.135656 table@build created L1@12 N·3700 S·2MiB "H:2467,v14798":"P:2125:0,v12745"
+00:04:13.154856 table@build created L1@13 N·1723 S·2MiB "P:2126:0,v12751":"P:3677:0,v22057"
+00:04:13.171129 table@build created L1@14 N·4084 S·2MiB "P:3678:0,v22063":"SC:3677,v22061"
+00:04:13.175672 table@build created L1@15 N·1106 S·365KiB "SC:3678,v22067":"blo..ore,v24486"
+00:04:13.175718 version@stat F·[0 5] S·8MiB[0B 8MiB] Sc·[0.00 0.08]
+00:04:13.177496 table@compaction committed F+1 S+2KiB Ke·0 D·1296 T·80.704955ms
+00:04:13.178865 table@remove removed @10
+00:04:13.179141 table@remove removed @6
+00:04:13.179368 table@remove removed @7
+00:04:13.179549 table@remove removed @8

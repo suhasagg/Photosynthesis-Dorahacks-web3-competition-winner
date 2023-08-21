@@ -1,0 +1,22 @@
+=============== Aug 18, 2023 (UTC) ===============
+22:16:36.174326 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+22:16:36.184306 db@open opening
+22:16:36.186613 version@stat F·[] S·0B[] Sc·[]
+22:16:36.189491 db@janitor F·2 G·0
+22:16:36.189508 db@open done T·5.192916ms
+22:55:18.325305 memdb@flush N·8928 S·3MiB
+22:55:18.345320 memdb@flush created L0@3 N·8928 S·2MiB "BH:..0f9,v51":"blo..ore,v6"
+22:55:18.345347 version@stat F·[1] S·2MiB[2MiB] Sc·[0.25]
+22:55:18.347063 memdb@flush committed F·1 T·21.444364ms
+22:55:18.347996 journal@remove removed @1
+23:28:59.702874 memdb@flush N·7782 S·3MiB
+23:28:59.721210 memdb@flush created L0@5 N·7782 S·2MiB "BH:..1f8,v11805":"blo..ore,v8934"
+23:28:59.721246 version@stat F·[2] S·5MiB[5MiB] Sc·[0.50]
+23:28:59.722821 memdb@flush committed F·1 T·19.751562ms
+23:28:59.723090 journal@remove removed @2
+=============== Aug 19, 2023 (UTC) ===============
+00:02:42.800897 memdb@flush N·7776 S·3MiB
+00:02:42.823153 memdb@flush created L0@7 N·7776 S·2MiB "BH:..be8,v17715":"blo..ore,v16716"
+00:02:42.823191 version@stat F·[3] S·8MiB[8MiB] Sc·[0.75]
+00:02:42.824830 memdb@flush committed F·1 T·23.515034ms
+00:02:42.825398 journal@remove removed @4
