@@ -1679,7 +1679,7 @@ user_redemption_records
 user_redemption_records.keyword
 
 
-# Distribute liquidity data
+# Distribute liquidity Tokens data
 
 code
 
