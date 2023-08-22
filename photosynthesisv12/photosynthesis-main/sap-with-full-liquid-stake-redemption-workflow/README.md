@@ -1789,4 +1789,26 @@ txhash.keyword
   ![Reports D](https://i.imgur.com/aKY1Vvg.png)
 
   ![Reports E](https://i.imgur.com/fdYNln5.png)
+
+
+# Few snapshots of reports (All comprehensive reports will be available very shortly)
+
+# Rewards Module Dashboard
+
+  Rewards Transactions Data Time Series  Data Table
+
+  https://i.imgur.com/hWob2Zt.png
+
+  
+# Liquid Stake Module Dashboard 
+
+  Liquid Stake job events Time series Data Table
+
+  https://i.imgur.com/14G44Ek.png
+
+  Liquid Stake Transactions Data table
+
+  https://i.imgur.com/nNwBa4X.png
+  
+  
  
