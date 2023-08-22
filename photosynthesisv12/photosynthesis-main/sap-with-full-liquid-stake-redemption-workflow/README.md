@@ -1811,4 +1811,9 @@ txhash.keyword
  ![Liquid Stake Transactions Data table](https://i.imgur.com/nNwBa4X.png)
   
   
+ # Redeem Stake Module Dashboard 
+
+  Redeem Stake Transactions Data table
+
+ ![Redeem Stake Transactions Data Table](https://i.imgur.com/CXngIW4.png)
  
