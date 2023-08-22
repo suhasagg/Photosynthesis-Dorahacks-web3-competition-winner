@@ -1818,8 +1818,13 @@ txhash.keyword
  ![Redeem Stake Transactions Data Table](https://i.imgur.com/CXngIW4.png)
 
 
-# Distribute Liquidity Module Job Dshboard  
+# Distribute Liquidity Module Job Dashboard  
 
  Distribute Liquidity Transactions Data table
 
  ![Distribute Liquidity Transactions Data table](https://i.imgur.com/uXNw6pz.png)
+
+
+# Distribute Redeem Tokens Module Job Dashboard 
+
+ ![Distribute Redeem Tokens Transactions Data table](https://i.imgur.com/f6R1vst.png)
