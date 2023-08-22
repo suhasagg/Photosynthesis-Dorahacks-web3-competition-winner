@@ -1831,6 +1831,6 @@ txhash.keyword
  
   Distribute Redeemed Tokens to Dapps Transactions Data table
 
- ![Distribute Redeem Tokens Transactions Data table](https://i.imgur.com/f6R1vst.png)
+ ![Distribute Redeem Tokens Transactions Data table](https://i.imgur.com/619MM2G.png)
 
   Filters (Dapps specific and more) and other aggregation parameters applicable based on reports corresponding to different job types.
