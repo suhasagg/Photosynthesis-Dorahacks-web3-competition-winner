@@ -1793,14 +1793,14 @@ txhash.keyword
 
 # Few snapshots of reports (All comprehensive reports will be available very shortly)
 
-# Rewards Module Dashboard
+# Rewards Module Job Dashboard
 
  Rewards Transactions Data Time Series Data Table
 
  ![Rewards Transactions Data Time Series Data Table](https://i.imgur.com/hWob2Zt.png)
 
 
-# Liquid Stake Module Dashboard 
+# Liquid Stake Module Job Dashboard 
 
  Liquid Stake job events Time series Data Table
 
@@ -1811,9 +1811,15 @@ txhash.keyword
  ![Liquid Stake Transactions Data table](https://i.imgur.com/nNwBa4X.png)
   
   
- # Redeem Stake Module Dashboard 
+ # Redeem Stake Module Job Dashboard 
 
   Redeem Stake Transactions Data table
 
  ![Redeem Stake Transactions Data Table](https://i.imgur.com/CXngIW4.png)
- 
+
+
+# Distribute Liquidity Module Job Dshboard  
+
+ Distribute Liquidity Transactions Data table
+
+ ![Distribute Liquidity Transactions Data table](https://i.imgur.com/uXNw6pz.png)
