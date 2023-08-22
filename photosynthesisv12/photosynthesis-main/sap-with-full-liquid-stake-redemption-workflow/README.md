@@ -1797,7 +1797,7 @@ txhash.keyword
 
  Rewards Transactions Data Time Series Data Table
 
- Bulk rewards claim for Different Dapps (for optimum gas consumption)
+ Bulk rewards claim transactions for Different Dapps (for optimum gas consumption)
 
  ![Rewards Transactions Data Time Series Data Table](https://i.imgur.com/hWob2Zt.png)
 
