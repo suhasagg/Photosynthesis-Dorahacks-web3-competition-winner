@@ -1795,12 +1795,18 @@ txhash.keyword
 
 # Rewards Module Dashboard
 
+ Rewards Transactions Data Time Series Data Table
+
  ![Rewards Transactions Data Time Series Data Table](https://i.imgur.com/hWob2Zt.png)
 
 
 # Liquid Stake Module Dashboard 
 
+ Liquid Stake job events Time series Data Table
+
  ![Liquid Stake job events Time series Data Table](https://i.imgur.com/14G44Ek.png)
+
+ Liquid Stake Transactions Data table
 
  ![Liquid Stake Transactions Data table](https://i.imgur.com/nNwBa4X.png)
   
