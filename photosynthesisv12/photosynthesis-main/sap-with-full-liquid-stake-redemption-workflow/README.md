@@ -1797,6 +1797,8 @@ txhash.keyword
 
  Rewards Transactions Data Time Series Data Table
 
+ Bulk rewards claim for Different Dapps (for optimum gas consumption)
+
  ![Rewards Transactions Data Time Series Data Table](https://i.imgur.com/hWob2Zt.png)
 
 
@@ -1806,25 +1808,27 @@ txhash.keyword
 
  ![Liquid Stake job events Time series Data Table](https://i.imgur.com/14G44Ek.png)
 
- Liquid Stake Transactions Data table
+ Liquid Stake (Central Liquid stake of uarch for optimum gas consmuption) Transactions Data table
 
  ![Liquid Stake Transactions Data table](https://i.imgur.com/nNwBa4X.png)
-  
-  
- # Redeem Stake Module Job Dashboard 
-
-  Redeem Stake Transactions Data table
-
- ![Redeem Stake Transactions Data Table](https://i.imgur.com/CXngIW4.png)
 
 
 # Distribute Liquidity Module Job Dashboard  
 
- Distribute Liquidity Transactions Data table
+ Distribute Liquidity (stuarch) Transactions Data table
 
  ![Distribute Liquidity Transactions Data table](https://i.imgur.com/uXNw6pz.png)
 
 
+# Redeem Stake Module Job Dashboard 
+
+  Redeem Stake (Central Redemption at maximum Redemption Rate) Transactions Data table
+
+ ![Redeem Stake Transactions Data Table](https://i.imgur.com/CXngIW4.png)
+
+ 
 # Distribute Redeem Tokens Module Job Dashboard 
+ 
+  Distribute Redeemed Tokens to Dapps Transactions Data table
 
  ![Distribute Redeem Tokens Transactions Data table](https://i.imgur.com/f6R1vst.png)
