@@ -171,8 +171,6 @@ def create_or_update_index_with_mappings(index_name):
     if not es.indices.exists(index=index_name):
         es.indices.create(index=index_name, body=mapping)
     else:
-        # Be cautious with this, as reindexing will be needed if you're updating an existing index's mapping
-        # For this example, I'm assuming the index is either new or can be safely overwritten
         es.indices.delete(index=index_name)
         es.indices.create(index=index_name, body=mapping)
 
