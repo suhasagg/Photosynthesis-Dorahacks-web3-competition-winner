@@ -1805,6 +1805,7 @@ txhash.keyword
  ![Bulk Rewards Claim Time Series Plot](https://i.imgur.com/1Igkg7R.png)
 
 
+
 # Liquid Stake Module Job Dashboard 
 
  Liquid Stake job events Time series Data Table
@@ -1815,7 +1816,7 @@ txhash.keyword
 
  ![Liquid Stake Transactions Data table](https://i.imgur.com/nNwBa4X.png)
  
- ![Cumulative Liquid Stake Amount (For all Dapps) Time Series Data](https://i.imgur.com/1Igkg7R.png)
+ ![Cumulative Liquid Stake Amount (For all Dapps) Time Series Data](https://i.imgur.com/uu9phQs.png)
 
 
 
