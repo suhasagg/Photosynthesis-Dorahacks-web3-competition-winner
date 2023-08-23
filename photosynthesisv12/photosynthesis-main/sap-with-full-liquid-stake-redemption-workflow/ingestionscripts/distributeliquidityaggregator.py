@@ -3,9 +3,14 @@ from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk, scan
 import json
 
+# Establish a connection to the Elasticsearch instance
 es = Elasticsearch('http://localhost:9200')
 
 def format_value(value):
+    """
+    Attempt to format the provided value into int, float, or boolean.
+    If none of these fit, return the original value.
+    """
     try:
         return int(value)
     except ValueError:
@@ -22,19 +27,24 @@ def format_value(value):
     return value
 
 def process_log(document):
+    """
+    Extract the '_source' field from the provided Elasticsearch document.
+    If '_source' is not present or an error occurs, return None.
+    """
     try:
         if '_source' in document:
-            log = document['_source']
-            #print(log)
-            return log
+            return document['_source']
         else:
-            #print(f"Document does not contain '_source' field: {document}")
             return None
     except Exception as e:
-        #print(f"Failed to process document: {document}. Error: {e}")
         return None
 
 def get_latest_timestamp(index_name):
+    """
+    Fetch the latest timestamp ('ts') from the provided Elasticsearch index.
+    If no documents are present or the 'ts' field is not found, return None.
+    """
+    # Elasticsearch query to sort by timestamp in descending order and fetch the top document
     body = {
         "size": 1,
         "sort": [
@@ -51,11 +61,13 @@ def get_latest_timestamp(index_name):
     if res['hits']['hits'] and '_source' in res['hits']['hits'][0] and 'ts' in res['hits']['hits'][0]['_source']:
         return res['hits']['hits'][0]['_source']['ts']
     else:
-        print("No 'ts' field found in the latest document or no documents present in the index.")
         return None
 
-      
 def fetch_documents_after_timestamp(index_name, timestamp):
+    """
+    Retrieve all Elasticsearch documents from the provided index that have a timestamp greater than the given timestamp.
+    This function uses the 'scroll' feature to fetch large amounts of data in chunks.
+    """
     body = {
         "query": {
             "range": {
@@ -65,117 +77,110 @@ def fetch_documents_after_timestamp(index_name, timestamp):
             }
         }
     }
+
     res = es.search(index=index_name, body=body, scroll='1m')
     scroll_id = res['_scroll_id']
-    scroll_size = len(res['hits']['hits'])
-
     documents = res['hits']['hits']
-    while scroll_size > 0:
+
+    # Continue scrolling until all documents have been retrieved
+    while len(res['hits']['hits']) > 0:
         res = es.scroll(scroll_id=scroll_id, scroll='1m')
-        scroll_id = res['_scroll_id']
-        scroll_size = len(res['hits']['hits'])
         documents.extend(res['hits']['hits'])
 
     return documents
 
-
-
-
 def transform_document(log):
     """
-    Modify this function to apply transformations on the document fetched from source index.
-    For now, this will return the log as is.
+    Apply transformations to the document fetched from the source index.
+    In this case, it's just adding a 'processed' field.
     """
-    # Example transformation: add a new field
     log['processed'] = True
     return log
-    
-
-from datetime import datetime, timedelta
-from elasticsearch.helpers import scan, bulk
 
 def process_log(document):
-    # Placeholder function for processing the log.
-    # Modify it to suit your actual log processing needs.
+    """
+    A placeholder function for further processing of the log.
+    Currently, it just returns the '_source' field of the provided document.
+    """
     return document['_source']
 
 def round_to_nearest_three_minutes(ts_str):
+    """
+    Round the provided timestamp string to the nearest three-minute mark.
+    """
     dt = datetime.strptime(ts_str, "%Y-%m-%dT%H:%M")
     rounded_minute = (dt.minute // 3) * 3
     return dt.replace(minute=rounded_minute, second=0)
 
 def process_and_aggregate_documents_from_index(source_index, target_index, bulk_size=20000):
+    """
+    Fetch documents from the source index, aggregate them based on their rounded timestamps,
+    and then store the aggregated data into the target index using bulk operations.
+    """
     bulk_ops = []
     grouped_docs = {}
 
-    # Using scan to get all the documents from the source index
+    # Retrieve all documents from the source index
     for document in scan(es, index=source_index):
         processed_log = process_log(document)
         if processed_log and 'message' in processed_log:
-            # Convert and round the timestamp to the nearest 3-minute mark
             rounded_time = round_to_nearest_three_minutes(processed_log['timestamp'][:16])
             ts_str = rounded_time.strftime("%Y-%m-%dT%H:%M")
 
+            # Group messages by their rounded timestamps
             if ts_str not in grouped_docs:
-                grouped_docs[ts_str] = {
-                    'timestamp': ts_str + ':00Z',
-                    'message_1': processed_log['message']
-                }
+                grouped_docs[ts_str] = {'timestamp': ts_str + ':00Z', 'message_1': processed_log['message']}
             else:
-                count = 2  # starting from the second message
+                count = 2
                 while f"message_{count}" in grouped_docs[ts_str]:
                     count += 1
                 grouped_docs[ts_str][f"message_{count}"] = processed_log['message']
 
+    # Prepare bulk operations for the aggregated data
     for ts, doc in grouped_docs.items():
-        print(f"Preparing bulk operation for timestamp {ts}")  # Debugging line
-        print(doc)
-        bulk_ops.append({
-            "_index": target_index,
-            "_source": doc
-        })
+        bulk_ops.append({"_index": target_index, "_source": doc})
 
+        # Execute bulk operations in chunks to avoid overloading the system
         if len(bulk_ops) == bulk_size:
-            print(f"Bulk operation size reached: {bulk_size}. Committing bulk operation.")  # Debugging line
             bulk(es, bulk_ops)
             bulk_ops = []
 
+    # Commit any remaining operations
     if bulk_ops:
-        print(f"Committing remaining operations. Count: {len(bulk_ops)}")  # Debugging line
         bulk(es, bulk_ops)
 
-
 def create_or_update_index_with_mappings(index_name):
-    # Define the mapping
+    """
+    Create or update an Elasticsearch index with the specified mappings.
+    """
+    # Define the index mappings
     mapping = {
         "mappings": {
             "properties": {
-                "ts": {
-                    "type": "date",
-                    "format": "strict_date_optional_time||epoch_millis"
-                },
-                "message": {
-                    "type": "text",
-                    "fields": {
-                        "keyword": {
-                            "type": "keyword",
-                            "ignore_above": 2147483647
-                        }
-                    }
-                },
-                # Add other fields as needed
+                "ts": {"type": "date", "format": "strict_date_optional_time||epoch_millis"},
+                "message": {"type": "text", "fields": {"keyword": {"type": "keyword", "ignore_above": 2147483647}}}
             }
         }
     }
 
+    # Check if the index exists
     if not es.indices.exists(index=index_name):
         es.indices.create(index=index_name, body=mapping)
     else:
+        # If index exists, delete and recreate it with the new mapping
         es.indices.delete(index=index_name)
         es.indices.create(index=index_name, body=mapping)
 
 def main():
+    """
+    Main execution function:
+    - Sets source and target index names.
+    - Creates or updates the target index with necessary mappings.
+    - Fetches new documents from the source index based on the latest timestamp in the target index.
+    - Processes and aggregates these documents, then stores them in the target index.
+    """
     source_index_name = "distributeliquiditydata"
+
     target_index_name = "distributeliquiditydataaggregated"
 
     create_or_update_index_with_mappings(target_index_name)
@@ -190,4 +195,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
