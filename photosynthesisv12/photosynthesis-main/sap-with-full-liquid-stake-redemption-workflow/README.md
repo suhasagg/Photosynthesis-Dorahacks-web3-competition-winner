@@ -1793,6 +1793,7 @@ txhash.keyword
 
 # Few snapshots of reports (All comprehensive reports will be available very shortly)
 
+
 # Rewards Module Job Dashboard
 
  Rewards Transactions Data Time Series Data Table
@@ -1800,6 +1801,8 @@ txhash.keyword
  Bulk rewards claim transactions for Different Dapps (for optimum gas consumption)
 
  ![Rewards Transactions Data Time Series Data Table](https://i.imgur.com/hWob2Zt.png)
+
+ ![Bulk Rewards Claim Time Series Plot](https://i.imgur.com/1Igkg7R.png)
 
 
 # Liquid Stake Module Job Dashboard 
@@ -1811,6 +1814,9 @@ txhash.keyword
  Liquid Stake (Central Liquid stake of uarch for optimum gas consmuption) Transactions Data table
 
  ![Liquid Stake Transactions Data table](https://i.imgur.com/nNwBa4X.png)
+ 
+ ![Cumulative Liquid Stake Amount (For all Dapps) Time Series Data](https://i.imgur.com/1Igkg7R.png)
+
 
 
 # Distribute Liquidity Module Job Dashboard  
@@ -1818,6 +1824,7 @@ txhash.keyword
  Distribute Liquidity (stuarch) Transactions Data table
 
  ![Distribute Liquidity Transactions Data table](https://i.imgur.com/uXNw6pz.png)
+ 
 
 
 # Redeem Stake Module Job Dashboard 
@@ -1826,6 +1833,9 @@ txhash.keyword
 
  ![Redeem Stake Transactions Data Table](https://i.imgur.com/CXngIW4.png)
 
+ ![Total Redemption Amount (For all Dapps) Time Series Data](https://i.imgur.com/nD7cOlW.png)
+
+ 
  
 # Distribute Redeem Tokens Module Job Dashboard 
  
@@ -1834,6 +1844,7 @@ txhash.keyword
  ![Distribute Redeem Tokens Transactions Data table](https://i.imgur.com/619MM2G.png)
 
   Filters (Dapps specific and more) and other aggregation parameters applicable based on reports corresponding to different job types.
+
 
 
 # Rewards Module Job Index
