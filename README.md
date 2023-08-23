@@ -20,6 +20,4374 @@ Photosynthesis Code Walkthrough
 
 https://twitter.com/DoraHacks/status/1651979334398382080
 
+# Photosynthesis-Archway  <-> Stride integrations
+
+![Photosynthesis](https://i.imgur.com/Tn1GUZnb.jpg)
+
+
+1)START RELAYER
+
+2)CREATING CONNECTIONS WITH THE GO RELAYER 
+
+3)Create connections and channels
+
+
+a)Get channel ID created on the photosynthesis-archway
+
+b)Start Go Relayer 
+
+c)IBC Transfer from Photosynthesis-archway to stride (from relayer account)
+
+d)Confirm funds were recieved on stride and get IBC denom
+
+e)Register host zone
+
+f)Add validator
+
+g)Confirm ICA channels were registered
+
+
+FLOW
+
+Go Through Flow
+
+
+a)Liquid stake (then wait and LS again)
+
+b)Confirm stTokens, StakedBal, and Redemption Rate
+
+c)Redeem
+
+d)Confirm stTokens and StakedBal
+
+e)Add another validator
+
+f)Liquid stake and confirm the stake was split 50/50 between the validators
+
+g)Change validator weights
+
+h)LS and confirm delegation aligned with new weights
+
+i)Update delegations (just submit this query and confirm the ICQ callback displays in the stride logs)
+
+
+# Must be submitted in ICQ window
+
+j)Restore closed channel
+
+
+
+# Photosynthesis-Archway IBC integrations. 
+
+1)evmos
+
+2)gaia
+
+3)juno
+
+4)osmosis
+
+5)stargaze
+
+```
+global:
+  api-listen-addr: :5183
+  timeout: 10s
+  memo: ""
+  light-cache-size: 20
+chains:
+  photo:
+    type: cosmos
+    value:
+      key: rly0
+      chain-id: localnet
+      rpc-addr: http://photo1:26657
+      account-prefix: archway
+      keyring-backend: test
+      gas-adjustment: 1.3
+      gas-prices: 100uatom
+      coin-type: 118
+      debug: false
+      timeout: 20s
+      output-format: json
+      sign-mode: direct  
+  stride:
+    type: cosmos
+    value:
+      key: rly1
+      chain-id: STRIDE
+      rpc-addr: http://stride1:26657
+      account-prefix: stride
+      keyring-backend: test
+      gas-adjustment: 1.3
+      gas-prices: 0.01ustrd
+      coin-type: 118
+      debug: false
+      timeout: 20s
+      output-format: json
+      sign-mode: direct
+  gaia:
+    type: cosmos
+    value:
+      key: rly2
+      chain-id: GAIA
+      rpc-addr: http://gaia1:26657
+      account-prefix: cosmos
+      keyring-backend: test
+      gas-adjustment: 1.2
+      gas-prices: 0.01uatom
+      coin-type: 118
+      debug: false
+      timeout: 20s
+      output-format: json
+      sign-mode: direct
+  juno:
+    type: cosmos
+    value:
+      key: rly3
+      chain-id: JUNO
+      rpc-addr: http://juno1:26657
+      account-prefix: juno
+      keyring-backend: test
+      gas-adjustment: 1.2
+      gas-prices: 0.01ujuno
+      coin-type: 118
+      debug: false
+      timeout: 20s
+      output-format: json
+      sign-mode: direct
+  osmo:
+    type: cosmos
+    value:
+      key: rly4
+      chain-id: OSMO
+      rpc-addr: http://osmo1:26657
+      account-prefix: osmo
+      keyring-backend: test
+      gas-adjustment: 1.2
+      gas-prices: 0.01uosmo
+      coin-type: 118
+      debug: false
+      timeout: 20s
+      output-format: json
+      sign-mode: direct
+  stars:
+    type: cosmos
+    value:
+      key: rly5
+      chain-id: STARS
+      rpc-addr: http://stars1:26657
+      account-prefix: stars
+      keyring-backend: test
+      gas-adjustment: 1.2
+      gas-prices: 0.01ustars
+      coin-type: 118
+      debug: false
+      timeout: 20s
+      output-format: json
+      sign-mode: direct
+  host:
+    type: cosmos
+    value:
+      key: rly6
+      chain-id: HOST
+      rpc-addr: http://host1:26657
+      account-prefix: stride
+      keyring-backend: test
+      gas-adjustment: 1.3
+      gas-prices: 0.01uwalk
+      coin-type: 118
+      debug: false
+      timeout: 20s
+      output-format: json
+      sign-mode: direct
+  evmos:
+    type: cosmos
+    value:
+      key: rly7
+      chain-id: evmos_9001-2
+      rpc-addr: http://evmos1:26657
+      account-prefix: evmos
+      keyring-backend: test
+      gas-adjustment: 1.2
+      gas-prices: 0.01aevmos
+      coin-type: 60
+      debug: false
+      timeout: 20s
+      output-format: json
+      sign-mode: direct
+      extra-codecs:
+        - ethermint
+```
+
+# Relayer registry 
+
+Cosmos relayer
+1)https://github.com/cosmos/relayer.git
+
+Hermes relayer 
+2)https://github.com/informalsystems/ibc-rs 
+
+
+# Record Keeping/Queue Creation for Liquid Staking Workflow in Photosynthesis-Archway
+# Interchain Accounts fully Integrated in Photosynthesis-Archway
+
+```
+Liquid staking workflow in Photosynthesis-Archway
+ STRIDE @ 343 | 1 VALS
+PHOTO   @ 337 | 1 VALS
+GAIA   @ 337 | 1 VALS
+
+LIST-HOST-ZONES STRIDE
+host_zone:
+- address: stride1755g4dkhpw73gz9h9nwhlcefc6sdf8kcmvcwrk4rxfrz8xpxxjms7savm8
+  bech32prefix: cosmos
+  blacklisted_validators: []
+  chain_id: GAIA
+  connection_id: connection-1
+  delegation_account:
+    address: cosmos1rkth5ywkueewvs29xkalckhhl3w5esg9jwn03ywp30k3dh2ys6aqffvtav
+    target: DELEGATION
+  fee_account:
+    address: cosmos1a8ue6w4x9yv2rxq2m3l7urua39ffzed457x3yeetk94yl59w322qpavyph
+    target: FEE
+  halted: false
+  host_denom: uatom
+  ibc_denom: ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9
+  last_redemption_rate: "1.000000000000000000"
+  max_redemption_rate: "1.500000000000000000"
+  min_redemption_rate: "0.900000000000000000"
+  redemption_account:
+    address: cosmos19mtvgh3mezrqttxnddtqx3hnfhnkt7xqjylladj7qmsl4edn23tqcv5dyz
+    target: REDEMPTION
+  redemption_rate: "1.000000000000000000"
+  staked_bal: "0"
+  transfer_channel_id: channel-1
+  unbonding_frequency: "1"
+  validators:
+  - address: cosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795pcosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795p
+    delegation_amt: "0"
+    internal_exchange_rate: null
+    name: gval1
+    weight: "5"
+  withdrawal_account:
+    address: cosmos1svjuhjlw8mea66tj2phnmtg050dljpx4ku3qzcgehdpxslxnen6sc68j0u
+    target: WITHDRAWAL
+- address: stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag
+  bech32prefix: archway
+  blacklisted_validators: []
+  chain_id: localnet
+  connection_id: connection-0
+  delegation_account:
+    address: archway1c9zxssf4u9rcmlx9pdsfsqzgvhdgjykjckn9apevr9ht46kputmq9v738w
+    target: DELEGATION
+  fee_account:
+    address: archway1ds0m5f2mp4j9jr5hpzayaefjguxc8l92zvfurd34gdpz3zpu4fuqmzvznt
+    target: FEE
+  halted: false
+  host_denom: uarch
+  ibc_denom: ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2
+  last_redemption_rate: "1.000000000000000000"
+  max_redemption_rate: "1.500000000000000000"
+  min_redemption_rate: "0.900000000000000000"
+  redemption_account:
+    address: archway1q8v4vlmwlextv4mm5eyh203hv98dey2fzwuc3y6d8evhhuhp3zvsdmsc7x
+    target: REDEMPTION
+  redemption_rate: "1.000000000000000000"
+  staked_bal: "0"
+  transfer_channel_id: channel-0
+  unbonding_frequency: "1"
+  validators:
+  - address: cosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795p
+    delegation_amt: "0"
+    internal_exchange_rate: null
+    name: pval1
+    weight: "5"
+  withdrawal_account:
+    address: archway16mxc3u8cy0lz9w98ep5xecn8m7n8uegvj402u03099t7k792gxhqqtlsrk
+    target: WITHDRAWAL
+pagination:
+  next_key: null
+  total: "0"
+
+LIST-DEPOSIT-RECORDS
+deposit_record:
+- amount: "0"
+  denom: uarch
+  deposit_epoch_number: "10"
+  host_zone_id: localnet
+  id: "1"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+- amount: "0"
+  denom: uatom
+  deposit_epoch_number: "10"
+  host_zone_id: GAIA
+  id: "2"
+  source: STRIDE
+  status: TRANSFER_QUEUE
+pagination:
+  next_key: null
+  total: "0"
+
+LIST-EPOCH-UNBONDING-RECORDS
+epoch_unbonding_record:
+- epoch_number: "4"
+  host_zone_unbondings:
+  - denom: uarch
+    host_zone_id: localnet
+    native_token_amount: "0"
+    st_token_amount: "0"
+    status: UNBONDING_QUEUE
+    unbonding_time: "0"
+    user_redemption_records: []
+  - denom: uatom
+    host_zone_id: GAIA
+    native_token_amount: "0"
+    st_token_amount: "0"
+    status: UNBONDING_QUEUE
+    unbonding_time: "0"
+    user_redemption_records: []
+pagination:
+  next_key: null
+  total: "0"
+
+LIST-USER-REDEMPTION-RECORDS
+pagination:
+  next_key: null
+  total: "0"
+user_redemption_record: []
+```
+
+### Full Liquid staking - uarch and Full Redemption Workflow
+
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/archwayd --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 4000000uarch --from pval1 -y
+```
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 54BBCC0D3B6F1EDA3ECB396654AD10C2E8269D937AAED90061F245D3DE0E0640
+```
+
+#build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q bank balances stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+```
+balances:
+- amount: "4000000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+```
+
+#build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc liquid-stake 1000000 uarch --keyring-backend test --from admin --chain-id STRIDE -y
+```
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
+```
+
+#root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q tx 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
+```
+code: 0
+codespace: ""
+data: 12290A272F7374726964652E7374616B656962632E4D73674C69717569645374616B65526573706F6E7365
+events:
+- attributes:
+  - index: true
+    key: fee
+    value: ""
+  - index: true
+    key: fee_payer
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+  type: tx
+- attributes:
+  - index: true
+    key: acc_seq
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8/5
+  type: tx
+- attributes:
+  - index: true
+    key: signature
+    value: LnosCKm4Ae5/YpHs15OcVJNJu5zZsJYg6asmLgx+6P5x89+vx2XaTe+l3nk6LfmyK4O2azjIuBU6I3UnxcpJMA==
+  type: tx
+- attributes:
+  - index: true
+    key: action
+    value: /stride.stakeibc.MsgLiquidStake
+  - index: true
+    key: sender
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+  type: message
+- attributes:
+  - index: true
+    key: spender
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+  - index: true
+    key: amount
+    value: 1000000ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+  type: coin_spent
+- attributes:
+  - index: true
+    key: receiver
+    value: stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag
+  - index: true
+    key: amount
+    value: 1000000ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+  type: coin_received
+- attributes:
+  - index: true
+    key: recipient
+    value: stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag
+  - index: true
+    key: sender
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+  - index: true
+    key: amount
+    value: 1000000ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+  type: transfer
+- attributes:
+  - index: true
+    key: sender
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+  type: message
+- attributes:
+  - index: true
+    key: receiver
+    value: stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza
+  - index: true
+    key: amount
+    value: 1000000stuarch
+  type: coin_received
+- attributes:
+  - index: true
+    key: minter
+    value: stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza
+  - index: true
+    key: amount
+    value: 1000000stuarch
+  type: coinbase
+- attributes:
+  - index: true
+    key: spender
+    value: stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza
+  - index: true
+    key: amount
+    value: 1000000stuarch
+  type: coin_spent
+- attributes:
+  - index: true
+    key: receiver
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+  - index: true
+    key: amount
+    value: 1000000stuarch
+  type: coin_received
+- attributes:
+  - index: true
+    key: recipient
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+  - index: true
+    key: sender
+    value: stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza
+  - index: true
+    key: amount
+    value: 1000000stuarch
+  type: transfer
+- attributes:
+  - index: true
+    key: sender
+    value: stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza
+  type: message
+- attributes:
+  - index: true
+    key: module
+    value: stakeibc
+  - index: true
+    key: liquid_staker
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+  - index: true
+    key: host_zone
+    value: localnet
+  - index: true
+    key: native_base_denom
+    value: uarch
+  - index: true
+    key: native_ibc_denom
+    value: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+  - index: true
+    key: native_amount
+    value: "1000000"
+  - index: true
+    key: sttoken_amount
+    value: "1000000"
+  type: liquid_stake
+gas_used: "103371"
+gas_wanted: "200000"
+height: "486"
+info: ""
+logs:
+- events:
+  - attributes:
+    - key: action
+      value: /stride.stakeibc.MsgLiquidStake
+    - key: sender
+      value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+    type: message
+  - attributes:
+    - key: spender
+      value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+    - key: amount
+      value: 1000000ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+    type: coin_spent
+  - attributes:
+    - key: receiver
+      value: stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag
+    - key: amount
+      value: 1000000ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+    type: coin_received
+  - attributes:
+    - key: recipient
+      value: stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag
+    - key: sender
+      value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+    - key: amount
+      value: 1000000ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+    type: transfer
+  - attributes:
+    - key: sender
+      value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+    type: message
+  - attributes:
+    - key: receiver
+      value: stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza
+    - key: amount
+      value: 1000000stuarch
+    type: coin_received
+  - attributes:
+    - key: minter
+      value: stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza
+    - key: amount
+      value: 1000000stuarch
+    type: coinbase
+  - attributes:
+    - key: spender
+      value: stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza
+    - key: amount
+      value: 1000000stuarch
+    type: coin_spent
+  - attributes:
+    - key: receiver
+      value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+    - key: amount
+      value: 1000000stuarch
+    type: coin_received
+  - attributes:
+    - key: recipient
+      value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+    - key: sender
+      value: stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza
+    - key: amount
+      value: 1000000stuarch
+    type: transfer
+  - attributes:
+    - key: sender
+      value: stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza
+    type: message
+  - attributes:
+    - key: module
+      value: stakeibc
+    - key: liquid_staker
+      value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+    - key: host_zone
+      value: localnet
+    - key: native_base_denom
+      value: uarch
+    - key: native_ibc_denom
+      value: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+    - key: native_amount
+      value: "1000000"
+    - key: sttoken_amount
+      value: "1000000"
+    type: liquid_stake
+  log: ""
+  msg_index: 0
+raw_log: '[{"msg_index":0,"events":[{"type":"message","attributes":[{"key":"action","value":"/stride.stakeibc.MsgLiquidStake"},{"key":"sender","value":"stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"}]},{"type":"coin_spent","attributes":[{"key":"spender","value":"stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"},{"key":"amount","value":"1000000ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034"}]},{"type":"coin_received","attributes":[{"key":"receiver","value":"stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag"},{"key":"amount","value":"1000000ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag"},{"key":"sender","value":"stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"},{"key":"amount","value":"1000000ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034"}]},{"type":"message","attributes":[{"key":"sender","value":"stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"}]},{"type":"coin_received","attributes":[{"key":"receiver","value":"stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza"},{"key":"amount","value":"1000000stuarch"}]},{"type":"coinbase","attributes":[{"key":"minter","value":"stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza"},{"key":"amount","value":"1000000stuarch"}]},{"type":"coin_spent","attributes":[{"key":"spender","value":"stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza"},{"key":"amount","value":"1000000stuarch"}]},{"type":"coin_received","attributes":[{"key":"receiver","value":"stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"},{"key":"amount","value":"1000000stuarch"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"},{"key":"sender","value":"stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza"},{"key":"amount","value":"1000000stuarch"}]},{"type":"message","attributes":[{"key":"sender","value":"stride1mvdq4nlupl39243qjz7sds5ez3rl9mnx253lza"}]},{"type":"liquid_stake","attributes":[{"key":"module","value":"stakeibc"},{"key":"liquid_staker","value":"stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"},{"key":"host_zone","value":"localnet"},{"key":"native_base_denom","value":"uarch"},{"key":"native_ibc_denom","value":"ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034"},{"key":"native_amount","value":"1000000"},{"key":"sttoken_amount","value":"1000000"}]}]}]'
+timestamp: "2023-06-12T19:24:13Z"
+tx:
+  '@type': /cosmos.tx.v1beta1.Tx
+  auth_info:
+    fee:
+      amount: []
+      gas_limit: "200000"
+      granter: ""
+      payer: ""
+    signer_infos:
+    - mode_info:
+        single:
+          mode: SIGN_MODE_DIRECT
+      public_key:
+        '@type': /cosmos.crypto.secp256k1.PubKey
+        key: A3ZqkrrLNDVlI97RP4onAgAmjb+j3K8MqN2KcxJjrwXk
+      sequence: "5"
+    tip: null
+  body:
+    extension_options: []
+    memo: ""
+    messages:
+    - '@type': /stride.stakeibc.MsgLiquidStake
+      amount: "1000000"
+      creator: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+      host_denom: uarch
+    non_critical_extension_options: []
+    timeout_height: "0"
+  signatures:
+  - LnosCKm4Ae5/YpHs15OcVJNJu5zZsJYg6asmLgx+6P5x89+vx2XaTe+l3nk6LfmyK4O2azjIuBU6I3UnxcpJMA==
+txhash: 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
+```
+
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q stakeibc list-host-zone
+```
+host_zone:
+- address: stride1755g4dkhpw73gz9h9nwhlcefc6sdf8kcmvcwrk4rxfrz8xpxxjms7savm8
+  bech32prefix: cosmos
+  blacklisted_validators: []
+  chain_id: GAIA
+  connection_id: connection-0
+  delegation_account:
+    address: cosmos18kf4ehs3pvqw9pp2pzq7q9fhurzrkememc0gg4zvjuk4xav5vurq8ra6pk
+    target: DELEGATION
+  fee_account:
+    address: cosmos1v4k7xa4a8h3d90zawznhltuyvqpj640y47azpq9g5qzzjsdw4m4ste46vl
+    target: FEE
+  halted: false
+  host_denom: uatom
+  ibc_denom: ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2
+  last_redemption_rate: "1.000000000000000000"
+  max_redemption_rate: "1.500000000000000000"
+  min_redemption_rate: "0.900000000000000000"
+  redemption_account:
+    address: cosmos19d9kj4n3mcdlvj8l5rrqh0qmk35u7qltu8nrmfgxpu0q6e9jc8msdq7hgv
+    target: REDEMPTION
+  redemption_rate: "1.000000000000000000"
+  staked_bal: "0"
+  transfer_channel_id: channel-0
+  unbonding_frequency: "1"
+  validators:
+  - address: cosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795pcosmosvaloper1uk4ze0x4nvh4fk0xm4jdud58eqn4yxhrdt795p
+    delegation_amt: "0"
+    internal_exchange_rate: null
+    name: gval1
+    weight: "5"
+  withdrawal_account:
+    address: cosmos15ytq6r77chp4edvzjvdt75xt2x6cststypu94tnknjhzwv6vqqksjz5r0j
+    target: WITHDRAWAL
+- address: stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag
+  bech32prefix: archway
+  blacklisted_validators: []
+  chain_id: localnet
+  connection_id: connection-1
+  delegation_account:
+    address: archway1j8k542t5tjmnlc4f7lw4p4xnjg6hz6hxxx59yt2cfjwu2053w3wssyh9pd
+    target: DELEGATION
+  fee_account:
+    address: archway1942qt84f0wj9e3hes9ncg4rqasp67xe4f73nz456rchw6u99trjq2m8udd
+    target: FEE
+  halted: false
+  host_denom: uarch
+  ibc_denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+  last_redemption_rate: "1.000000000000000000"
+  max_redemption_rate: "1.500000000000000000"
+  min_redemption_rate: "0.900000000000000000"
+  redemption_account:
+    address: archway18jhfzqj250rsvdwyvmcyju6c8vxarvfyhghw4xj3ez7p5urly2vqsgsg0t
+    target: REDEMPTION
+  redemption_rate: "1.000000000000000000"
+  staked_bal: "1000000"
+  transfer_channel_id: channel-1
+  unbonding_frequency: "1"
+  validators:
+  - address: archwayvaloper15js809uedxqs2wl0lyt58httasr5rlplj45fqw
+    delegation_amt: "1000000"
+    internal_exchange_rate: null
+    name: pval1
+    weight: "5"
+  withdrawal_account:
+    address: archway1r27yqfceelgjlxl8rd5kvlxl2nv67c7ell99hvyfnwhjfky7e63ssklwvv
+    target: WITHDRAWAL
+pagination:
+  next_key: null
+  total: "0"
+```
+
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc redeem-stake 1000 PHOTO archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y
+```
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 4ECC6062BE5B794005A1FAF5D9CC4F32CBEA18F6586EEA9B15D7DB342204608B
+```
+
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc redeem-stake 1000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y
+```
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
+```
+
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q tx 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
+```
+code: 0
+codespace: ""
+data: 12290A272F7374726964652E7374616B656962632E4D736752656465656D5374616B65526573706F6E7365
+events:
+- attributes:
+  - index: true
+    key: fee
+    value: ""
+  - index: true
+    key: fee_payer
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+  type: tx
+- attributes:
+  - index: true
+    key: acc_seq
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8/7
+  type: tx
+- attributes:
+  - index: true
+    key: signature
+    value: T7oOOGG7SGYR0lKDJjMtz00mvxOtvb0ymBCbVeUmNI8rDY0XW2AFKcEvQXJaLb6i2jZGRPwExL8pluli0IummA==
+  type: tx
+- attributes:
+  - index: true
+    key: action
+    value: /stride.stakeibc.MsgRedeemStake
+  - index: true
+    key: sender
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+  - index: true
+    key: module
+    value: stakeibc
+  type: message
+- attributes:
+  - index: true
+    key: spender
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+  - index: true
+    key: amount
+    value: 1000stuarch
+  type: coin_spent
+- attributes:
+  - index: true
+    key: receiver
+    value: stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag
+  - index: true
+    key: amount
+    value: 1000stuarch
+  type: coin_received
+- attributes:
+  - index: true
+    key: recipient
+    value: stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag
+  - index: true
+    key: sender
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+  - index: true
+    key: amount
+    value: 1000stuarch
+  type: transfer
+- attributes:
+  - index: true
+    key: sender
+    value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+  type: message
+gas_used: "70867"
+gas_wanted: "200000"
+height: "925"
+info: ""
+logs:
+- events:
+  - attributes:
+    - key: action
+      value: /stride.stakeibc.MsgRedeemStake
+    - key: sender
+      value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+    - key: module
+      value: stakeibc
+    type: message
+  - attributes:
+    - key: spender
+      value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+    - key: amount
+      value: 1000stuarch
+    type: coin_spent
+  - attributes:
+    - key: receiver
+      value: stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag
+    - key: amount
+      value: 1000stuarch
+    type: coin_received
+  - attributes:
+    - key: recipient
+      value: stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag
+    - key: sender
+      value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+    - key: amount
+      value: 1000stuarch
+    type: transfer
+  - attributes:
+    - key: sender
+      value: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+    type: message
+  log: ""
+  msg_index: 0
+raw_log: '[{"msg_index":0,"events":[{"type":"message","attributes":[{"key":"action","value":"/stride.stakeibc.MsgRedeemStake"},{"key":"sender","value":"stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"},{"key":"module","value":"stakeibc"}]},{"type":"coin_spent","attributes":[{"key":"spender","value":"stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"},{"key":"amount","value":"1000stuarch"}]},{"type":"coin_received","attributes":[{"key":"receiver","value":"stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag"},{"key":"amount","value":"1000stuarch"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"stride19467hx6r0qkj5crjff3yr38uzts5hwj7detdw4tr0qdsc5rufelsm88tag"},{"key":"sender","value":"stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"},{"key":"amount","value":"1000stuarch"}]},{"type":"message","attributes":[{"key":"sender","value":"stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"}]}]}]'
+timestamp: "2023-06-12T19:35:38Z"
+tx:
+  '@type': /cosmos.tx.v1beta1.Tx
+  auth_info:
+    fee:
+      amount: []
+      gas_limit: "200000"
+      granter: ""
+      payer: ""
+    signer_infos:
+    - mode_info:
+        single:
+          mode: SIGN_MODE_DIRECT
+      public_key:
+        '@type': /cosmos.crypto.secp256k1.PubKey
+        key: A3ZqkrrLNDVlI97RP4onAgAmjb+j3K8MqN2KcxJjrwXk
+      sequence: "7"
+    tip: null
+  body:
+    extension_options: []
+    memo: ""
+    messages:
+    - '@type': /stride.stakeibc.MsgRedeemStake
+      amount: "1000"
+      creator: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+      host_zone: localnet
+      receiver: archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m
+    non_critical_extension_options: []
+    timeout_height: "0"
+  signatures:
+  - T7oOOGG7SGYR0lKDJjMtz00mvxOtvb0ymBCbVeUmNI8rDY0XW2AFKcEvQXJaLb6i2jZGRPwExL8pluli0IummA==
+txhash: 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q bank balances stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+balances:
+- amount: "3000000"
+  denom: ibc/EAEB74E11A7BFFC17E79B802EF01D3307A285F7AA802745037B021609ECFB034
+- amount: "999000"
+  denom: stuarch
+- amount: "1000000000"
+  denom: ustrd
+pagination:
+  next_key: null
+  total: "0"
+```
+
+# A/B testing Cron schedule
+
+```
+*/2 * * * * /bin/sh /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/liquidstake.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakelogs
+* * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q stakeibc list-host-zone > /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redemptionrate
+* * * * * /bin/sh /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/transactions.sh >> /root/transactions.txt
+*/3 * * * * /bin/sh /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/DistributeLiquidity.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributeliquiditylogs
+5,9,13,19,23,27,31,35,39,43,47,51,55 * * * * /bin/sh /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/redeemstake.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemstake.log
+3,6,9,12,15,18,21,24,27 * * * * /bin/sh /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/gasfiller.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/gasfillerlogs.log
+```
+
+
+# Photosynthesis Archway Blockchain Data Lake
+
+
+  ![Photosynthesis Archway Data Lake](https://lh3.googleusercontent.com/pw/AIL4fc_eowtm-JGZedQemuL-wxtXHX8S48luVheutD2Z-qvh0uxtOQSKAdcCydk5m5e0ImWW6HuuxvDUoOMDbq2LJla8tsPktA3_Rkg6gkMtmNV7clg10ANRh7_hU_zo6B4TV4ZPOdCiMGcHXJAdHMtFZFtqTA=w3484-h1960-s-no?authuser=0)
+   
+
+# Photosynthesis Archway Data Points List (Small Subset View)
+
+
+Accumulated rewards
+
+
+central archway epoch
+
+
+Checking epoch info
+
+
+coins to address
+
+
+contractAddress
+
+
+Created ContractLiquidStakeDepositRecordsForEpoch
+
+
+CurrentEpoch
+
+
+Deleted reward records
+
+
+Deposit Record Stake ratio determination for liquidity distribution
+
+
+Distributed Liquidity for epoch
+
+
+EmitLiquidStakeDepositRecordCreatedEvent for record
+
+
+Emitting rewards withdrawal event for address
+
+
+epoch
+
+
+Finish Get Cumulative Reward Amount epoch
+
+
+Finish Query Redemption rate
+
+
+Get Cumulative Reward Amount
+
+
+Get Cumulative Reward Amount Enqueued
+
+
+is a multiple of RedemptionIntervalThreshold
+
+
+is not 0 and is a multiple of LiquidStakeInterval
+
+
+is not 0 and is a multiple of RedemptionRateThreshold
+
+
+is not 0 and is a multiple of RewardsWithdrawalInterval
+
+
+Last redemption rate
+
+
+log level
+
+
+liquid stake amount
+
+
+liquid stake dapp rewards epoch
+
+
+Liquid stake deposit record amount
+
+
+Liquid stake deposit record created amount
+
+
+Liquid stake deposit record enqueued amount
+
+
+Liquid stake enqueue operation - Epoch
+
+
+Liquid Token Amount
+
+
+Liquid Token Distribution Amount
+
+
+liquidityAmount
+
+
+liquidstakeamount
+
+
+LiquidStakeDepositsTillEpoch Epoch
+
+
+LiquidStakeScheduled
+
+
+message
+
+
+method
+
+
+MinimumRewardAmount is greater than 0
+
+
+module
+
+
+Processing ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH
+
+
+Processing LiquidStakeDappRewards epoch
+
+
+Processing REDEMPTION_RATE_QUERY_EPOCH
+
+
+Processing REWARDS_WITHDRAWAL_EPOCH
+
+
+Record
+
+
+record status
+
+
+records
+
+
+Retrieved contract metadata state
+
+
+Retrieved CumulativeRewardAmount
+
+
+Retrieved EpochInfo
+
+
+Retrieved EpochInfo for epochstypes.​ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH
+
+
+Retrieved EpochInfo for epochstypes.​LIQUID_STAKING_DApp_Rewards_EPOCH
+
+
+Retrieved EpochInfo for epochstypes.​REDEMPTION_RATE_QUERY_EPOCH
+
+
+Retrieved EpochInfo for epochstypes.​REWARDS_WITHDRAWAL_EPOCH
+
+
+Retrieved reward records
+
+
+Retrieved state from rewardKeeper
+
+
+Retrieved TotalLiquidStake
+
+
+Reward Address
+
+
+rewardaddr
+
+
+RewardsAddress is not empty
+
+
+Stake proportion
+
+
+Start Get Cumulative Reward Amount epoch
+
+
+Successfully queried RedemptionRate
+
+
+Till Epoch considered for distribution
+
+
+Total liquid stake
+
+
+total rewards
+
+
+Total Stake
+
+
+ts
+
+```
+Some A/B Testing curl based Elasticsearch queries to get insights about the data:
+
+Get total rewards per contract address:
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "rewards_by_contract": {
+      "terms": {
+        "field": "ContractAddress.keyword"
+      },
+      "aggs": {
+        "total_rewards": {
+          "sum": {
+            "field": "AccumulatedRewards"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query aggregates the total accumulated rewards by contract address.
+
+Get the number of rewards withdrawal events per address:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "withdrawals_by_address": {
+      "terms": {
+        "field": "Emitting rewards withdrawal event for address.keyword"
+      }
+    }
+  }
+}
+'
+This query counts the number of rewards withdrawal events per address.
+
+Get the sum of liquid stake amount per epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "stakes_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "total_stakes": {
+          "sum": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query aggregates the total liquid stake amount per epoch.
+
+
+Get the number of transactions per contract address:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "transactions_by_contract": {
+      "terms": {
+        "field": "ContractAddress.keyword"
+      }
+    }
+  }
+}
+'
+This query counts the number of transactions per contract address.
+
+Get the total liquid stake amount deposited per dapp address:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "stake_by_address": {
+      "terms": {
+        "field": "Coins to address.keyword"
+      },
+      "aggs": {
+        "total_stakes": {
+          "sum": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query aggregates the total liquid stake amount per user address.
+
+Get the average liquid stake amount per epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "average_stakes_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "average_stakes": {
+          "avg": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query calculates the average liquid stake amount per epoch.
+
+Get the maximum and minimum liquid stake amount per epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "stakes_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "max_stakes": {
+          "max": {
+            "field": "liquid stake amount"
+          }
+        },
+        "min_stakes": {
+          "min": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query calculates the maximum and minimum liquid stake amount per epoch.
+
+
+Count the total number of transactions for each method:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "transactions_by_method": {
+      "terms": {
+        "field": "method.keyword"
+      }
+    }
+  }
+}
+'
+This query gives you the number of times each method is invoked.
+
+Find the average, maximum and minimum redemption rate per epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "redemption_rate_stats_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "average_redemption_rate": {
+          "avg": {
+            "field": "Last redemption rate"
+          }
+        },
+        "max_redemption_rate": {
+          "max": {
+            "field": "Last redemption rate"
+          }
+        },
+        "min_redemption_rate": {
+          "min": {
+            "field": "Last redemption rate"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query calculates the average, maximum and minimum redemption rate per epoch.
+
+Find the total number of LiquidStakeDepositsTillEpoch Epoch by epoch:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "deposit_counts_by_epoch": {
+      "terms": {
+        "field": "CurrentEpoch"
+      },
+      "aggs": {
+        "total_deposits": {
+          "sum": {
+            "field": "LiquidStakeDepositsTillEpoch Epoch"
+          }
+        }
+      }
+    }
+  }
+}
+'
+This query gives the total number of LiquidStakeDepositsTillEpoch Epoch for each epoch.
+
+Find the total liquidityAmount by address:
+
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "liquidity_by_address": {
+      "terms": {
+        "field": "Coins to address.keyword"
+      },
+      "aggs": {
+        "total_liquidity": {
+          "sum": {
+            "field": "liquidityAmount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+
+
+Query to find the top earning contract addresses by summing up the liquid stake amount field for each contract.
+
+curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "size": 0,
+  "aggs": {
+    "earnings_by_contract": {
+      "terms": {
+        "field": "ContractAddress.keyword",
+        "order": {
+          "total_earnings": "desc"
+        },
+        "size": 10
+      },
+      "aggs": {
+        "total_earnings": {
+          "sum": {
+            "field": "liquid stake amount"
+          }
+        }
+      }
+    }
+  }
+}
+'
+```
+
+# Reporting Dashboard Preview (Subset of reports preview)
+
+
+  ![Reports A](https://i.imgur.com/KSMui7R.png)
+
+
+
+   
+  ![Reports B](https://i.imgur.com/30CRoOm.png)
+
+
+
+
+  ![Reports C](https://i.imgur.com/gTiL0jT.png)
+
+
+
+
+  Rewards Earned vs Corresponding Liquid stake Tally Algorithm Report
+
+
+  ![Rewards Earned - Corresponding Liquid stake Tally Algorithm report](https://i.imgur.com/YxbqbUD.png) 
+  
+   ML based reports
+
+   ![Reports D](https://i.imgur.com/wMUlEYT.png)
+
+   Application of ML forecasting reports -
+   
+   1)Identifying redemption rate trends. Quarter of the day, which hour of the day is most optimum for redemption.
+   
+   2)Identifying liquid tokens obtained trends. Quarter of the day, which hour of the day is most optimum for liquid staking tokens,to get maximum stuarch. 
+   
+   Contract metadata parameters can be tuned based on ML reports above to optimise epoch based schedulars. 
+
+   Anomaly Detection Reports
+
+  ![Reports E](https://i.imgur.com/quTxJGs.png)
+
+  Updated A/B Testing Cron schedule 
+```
+  */2 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/rewardswithdrawal.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/rewardslogs.log
+*/4 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/liquidstake.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakelogs
+* * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q stakeibc list-host-zone > /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redemptionrate
+* * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/transactions.sh >> /root/transactions.txt
+*/6 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/DistributeLiquidity.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributeliquiditylogs
+8,16,22,30,34,40,46,52,58 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/redeemstake.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemstake.log
+10,18,24,32,36,42,48,54,2 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/DistributeRedeemedTokens.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/Distributeredeemtokens.log
+1,15,30,45 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/gasfiller.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/gasfillerlogs.log
+```
+
+# Data points for different jobs 
+
+  Full Data Lake View 
+
+# Rewards Module job
+
+balances.amount
+
+balances.amount.keyword
+
+balances.denom
+
+balances.denom.keyword
+
+code
+
+codespace
+
+codespace.keyword
+
+data
+
+data.keyword
+
+gas_used
+
+gas_used.keyword
+
+gas_wanted
+
+gas_wanted.keyword
+
+height
+
+height.keyword
+
+info
+
+info.keyword
+
+message
+
+message.keyword
+
+pagination.total
+
+pagination.total.keyword
+
+raw_log
+
+raw_log.keyword
+
+timestamp
+
+txhash
+
+txhash.keyword
+
+
+# Liquid stake job
+
+balances.amount
+	
+balances.amount.keyword
+
+balances.denom
+	
+balances.denom.keyword
+
+code
+	
+codespace
+	
+codespace.keyword
+
+data
+	
+data.keyword
+	
+gas_used
+
+gas_used.keyword
+
+gas_wanted
+	
+gas_wanted.keyword
+
+height
+
+height.keyword
+
+info
+
+info.keyword
+
+message
+
+message.keyword
+
+pagination.total
+
+pagination.total.keyword
+
+raw_log
+
+raw_log.keyword
+
+timestamp
+
+txhash
+
+txhash.keyword
+
+
+# Redeem stake job
+
+amount
+
+amount.keyword
+
+balances.amount
+
+balances.denom
+
+balances.denom.keyword
+
+claim_is_pending
+
+code
+
+codespace
+
+codespace.keyword
+
+data
+
+data.keyword
+
+denom
+
+denom.keyword
+
+epoch_number
+
+epoch_number.keyword
+
+gas_used
+
+gas_wanted
+
+gas_wanted.keyword
+
+height
+
+height.keyword
+
+host_zone_id
+
+host_zone_id.keyword
+
+id.keyword
+
+info
+
+info.keyword
+
+message
+
+message.keyword
+
+native_token_amount
+
+native_token_amount.keyword
+
+pagination.total
+
+pagination.total.keyword
+
+raw_log
+
+raw_log.keyword
+
+receiver
+
+receiver.keyword
+
+sender
+
+sender.keyword
+
+st_token_amount
+
+st_token_amount.keyword
+
+status
+
+status.keyword
+
+timestamp
+
+txhash
+
+txhash.keyword
+
+unbonding_time
+
+unbonding_time.keyword
+
+user_redemption_records
+
+user_redemption_records.keyword
+
+
+# Distribute liquidity Tokens data
+
+code
+
+codespace
+
+codespace.keyword
+
+data
+
+data.keyword
+
+gas_used
+
+gas_used.keyword
+
+gas_wanted
+
+gas_wanted.keyword
+
+height
+
+height.keyword
+
+info
+
+info.keyword
+
+message
+
+message.keyword
+
+raw_log
+
+raw_log.keyword
+
+timestamp
+
+txhash
+
+txhash.keyword
+
+
+# Distribute Redeem Tokens data
+
+balances.amount
+
+balances.amount.keyword
+
+balances.denom
+
+balances.denom.keyword
+
+code
+
+codespace
+
+codespace.keyword
+
+data
+
+data.keyword
+
+gas_used
+
+gas_used.keyword
+
+gas_wanted
+
+gas_wanted.keyword
+
+height
+
+height.keyword
+
+info
+
+info.keyword
+
+message
+
+message.keyword
+
+pagination.total
+
+pagination.total.keyword
+
+raw_log
+
+raw_log.keyword
+
+timestamp
+
+txhash
+
+txhash.keyword
+
+
+# Data points for Above Jobs ingested in ES 
+
+
+  ![Reports A](https://i.imgur.com/ioT1Dq3.png)
+ 
+  ![Reports B](https://i.imgur.com/m6HDDcv.png)
+
+  ![Reports C](https://i.imgur.com/I8Gqz8A.png)
+
+  ![Reports D](https://i.imgur.com/aKY1Vvg.png)
+
+  ![Reports E](https://i.imgur.com/fdYNln5.png)
+
+
+# Few snapshots of reports (All comprehensive reports will be available very shortly)
+
+
+# Rewards Module Job Dashboard
+
+ Rewards Transactions Data Time Series Data Table
+
+ Bulk rewards claim transactions for Different Dapps (for optimum gas consumption)
+
+ ![Rewards Transactions Data Time Series Data Table](https://i.imgur.com/hWob2Zt.png)
+
+ ![Bulk Rewards Claim Time Series Plot](https://i.imgur.com/1Igkg7R.png)
+
+
+
+# Liquid Stake Module Job Dashboard 
+
+ Liquid Stake job events Time series Data Table
+
+ ![Liquid Stake job events Time series Data Table](https://i.imgur.com/14G44Ek.png)
+
+ Liquid Stake (Central Liquid stake of uarch for optimum gas consmuption) Transactions Data table
+
+ ![Liquid Stake Transactions Data table](https://i.imgur.com/nNwBa4X.png)
+ 
+ ![Cumulative Liquid Stake Amount (For all Dapps) Time Series Data](https://i.imgur.com/uu9phQs.png)
+
+
+
+# Distribute Liquidity Module Job Dashboard  
+
+ Distribute Liquidity (stuarch) Transactions Data table
+
+ ![Distribute Liquidity Transactions Data table](https://i.imgur.com/uXNw6pz.png)
+ 
+
+
+# Redeem Stake Module Job Dashboard 
+
+  Redeem Stake (Central Redemption at maximum Redemption Rate) Transactions Data table
+
+ ![Redeem Stake Transactions Data Table](https://i.imgur.com/CXngIW4.png)
+
+ ![Total Redemption Amount (For all Dapps) Time Series Data](https://i.imgur.com/0xjp0xs.png)
+
+ 
+ 
+# Distribute Redeem Tokens Module Job Dashboard 
+ 
+  Distribute Redeemed Tokens to Dapps Transactions Data table
+
+ ![Distribute Redeem Tokens Transactions Data table](https://i.imgur.com/619MM2G.png)
+
+  Filters (Dapps specific and more) and other aggregation parameters applicable based on reports corresponding to different job types.
+
+
+
+# Rewards Module Job Index
+  ```
+  {
+  "_index": "rewardsmoduleaggregated",
+  "_type": "_doc",
+  "_id": "mT7ZHooBxzWNeDEhT24S",
+  "_version": 1,
+  "_score": 1,
+  "_ignored": [
+    "message_23.keyword",
+    "message_17.keyword",
+    "message_20.keyword",
+    "message_22.keyword",
+    "message_19.keyword"
+  ],
+  "_source": {
+    "timestamp": "2023-08-19T04:06:00Z",
+    "message_1": "Read key: l111",
+    "message_2": "Read key: l211",
+    "message_3": "Read key: l311",
+    "message_4": "Read key: l411",
+    "message_5": "Read key: prev1",
+    "message_6": "Read key: pval1",
+    "message_7": "Read key: pval2",
+    "message_8": "Read key: pval3",
+    "message_9": "Read key: pval4",
+    "message_10": "Read key: pval5",
+    "message_11": "Read key: rly0",
+    "message_12": "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines...",
+    "message_13": "Cumulative Reward amount: 610000",
+    "message_14": "Iterations: 0",
+    "message_15": "Remaining Record Limit: 61",
+    "message_16": "Reward Amount: 610000",
+    "message_17": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y",
+    "message_18": "archway account balance",
+    "message_19": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd",
+    "message_20": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y",
+    "message_21": "archway account balance",
+    "message_22": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd",
+    "message_23": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+  },
+  "fields": {
+    "message_16.keyword": [
+      "Reward Amount: 610000"
+    ],
+    "message_2.keyword": [
+      "Read key: l211"
+    ],
+    "message_23": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+    ],
+    "message_22": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
+    ],
+    "message_15.keyword": [
+      "Remaining Record Limit: 61"
+    ],
+    "message_1.keyword": [
+      "Read key: l111"
+    ],
+    "message_4.keyword": [
+      "Read key: l411"
+    ],
+    "message_3.keyword": [
+      "Read key: l311"
+    ],
+    "message_21": [
+      "archway account balance"
+    ],
+    "message_20": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y"
+    ],
+    "message_3": [
+      "Read key: l311"
+    ],
+    "message_2": [
+      "Read key: l211"
+    ],
+    "message_12.keyword": [
+      "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines..."
+    ],
+    "message_11.keyword": [
+      "Read key: rly0"
+    ],
+    "message_1": [
+      "Read key: l111"
+    ],
+    "message_7": [
+      "Read key: pval2"
+    ],
+    "message_6": [
+      "Read key: pval1"
+    ],
+    "message_5": [
+      "Read key: prev1"
+    ],
+    "message_4": [
+      "Read key: l411"
+    ],
+    "message_14.keyword": [
+      "Iterations: 0"
+    ],
+    "message_19": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
+    ],
+    "timestamp": [
+      "2023-08-19T04:06:00.000Z"
+    ],
+    "message_13.keyword": [
+      "Cumulative Reward amount: 610000"
+    ],
+    "message_12": [
+      "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines..."
+    ],
+    "message_11": [
+      "Read key: rly0"
+    ],
+    "message_14": [
+      "Iterations: 0"
+    ],
+    "message_13": [
+      "Cumulative Reward amount: 610000"
+    ],
+    "message_16": [
+      "Reward Amount: 610000"
+    ],
+    "message_15": [
+      "Remaining Record Limit: 61"
+    ],
+    "message_18": [
+      "archway account balance"
+    ],
+    "message_17": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+    ],
+    "message_9.keyword": [
+      "Read key: pval4"
+    ],
+    "message_9": [
+      "Read key: pval4"
+    ],
+    "message_8": [
+      "Read key: pval3"
+    ],
+    "message_8.keyword": [
+      "Read key: pval3"
+    ],
+    "message_10": [
+      "Read key: pval5"
+    ],
+    "message_10.keyword": [
+      "Read key: pval5"
+    ],
+    "message_7.keyword": [
+      "Read key: pval2"
+    ],
+    "message_21.keyword": [
+      "archway account balance"
+    ],
+    "message_18.keyword": [
+      "archway account balance"
+    ],
+    "message_5.keyword": [
+      "Read key: prev1"
+    ],
+    "message_6.keyword": [
+      "Read key: pval1"
+    ]
+  },
+  "ignored_field_values": {
+    "message_17.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+    ],
+    "message_23.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+    ],
+    "message_20.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y"
+    ],
+    "message_22.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
+    ],
+    "message_19.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
+    ]
+  }
+}
+```
+
+# Liquid Stake Module Job Index 
+
+```
+{
+  "_index": "liquidstakedataaggregated",
+  "_type": "_doc",
+  "_id": "8oxJH4oBs_qmCEIOiGNc",
+  "_version": 1,
+  "_score": 1,
+  "_ignored": [
+    "message_12.keyword",
+    "message_31.keyword",
+    "message_9.keyword",
+    "message_5.keyword",
+    "message_27.keyword",
+    "message_6.keyword"
+  ],
+  "_source": {
+    "timestamp": "2023-08-19T04:06:00Z",
+    "message_1": "Liquid stake total amount: 1600000",
+    "message_2": "Last line of file is: 7",
+    "message_3": "Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch",
+    "message_4": "archwayd ibc transfer",
+    "message_5": "Attempt 1: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 1600000uarch --from pval2 --keyring-backend test -y --gas auto --gas-prices 0.082490000000000000uarch --gas-adjustment 1.4'",
+    "message_6": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 1600000uarch --from pval2 --keyring-backend test -y --gas auto --gas-prices 0.082490000000000000uarch --gas-adjustment 1.4",
+    "message_7": "Command executed successfully.",
+    "message_8": "strided track balance",
+    "message_9": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q bank balances --chain-id STRIDE stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8",
+    "message_10": "strided liquid stake",
+    "message_11": "strided liquid stake",
+    "message_12": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc liquid-stake 1600000 uarch --keyring-backend test --from admin --chain-id STRIDE -y",
+    "message_13": "Transaction hash: 2F03939E17064F07243774F97A77A85BB3BFA3FB141AE443148BF6DE56DE3AFC",
+    "message_14": "strided track balance",
+    "message_15": "balances:",
+    "message_16": "- amount: \"1600000\"",
+    "message_17": "  denom: stuarch",
+    "message_18": "- amount: \"1000000000\"",
+    "message_19": "  denom: ustrd",
+    "message_20": "pagination:",
+    "message_21": "  next_key: null",
+    "message_22": "  total: \"0\"",
+    "message_23": "Amount: 1600000",
+    "message_24": "liquid_token_amount",
+    "message_25": "1600000",
+    "message_26": "Script execution completed.",
+    "message_27": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx ibc-transfer transfer transfer channel-1 --chain-id STRIDE archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m 1570000stuarch --from admin --keyring-backend test -y --fees 30000stuarch",
+    "message_28": "Transaction hash for strided ibc liquid tokens transfer to Archway: FDB81AE894DAFADB52259F0D9868F3F5C668F99A5A2687D98EF0696007D8C2D6",
+    "message_29": "Script execution completed.",
+    "message_30": "archway liquidity account balance",
+    "message_31": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"
+  },
+  "fields": {
+    "message_16.keyword": [
+      "- amount: \"1600000\""
+    ],
+    "message_2.keyword": [
+      "Last line of file is: 7"
+    ],
+    "message_4.keyword": [
+      "archwayd ibc transfer"
+    ],
+    "message_29.keyword": [
+      "Script execution completed."
+    ],
+    "message_14.keyword": [
+      "strided track balance"
+    ],
+    "message_23.keyword": [
+      "Amount: 1600000"
+    ],
+    "message_9": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q bank balances --chain-id STRIDE stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"
+    ],
+    "message_8": [
+      "strided track balance"
+    ],
+    "message_25.keyword": [
+      "1600000"
+    ],
+    "message_30": [
+      "archway liquidity account balance"
+    ],
+    "message_31": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"
+    ],
+    "message_7.keyword": [
+      "Command executed successfully."
+    ],
+    "message_21.keyword": [
+      "  next_key: null"
+    ],
+    "message_18.keyword": [
+      "- amount: \"1000000000\""
+    ],
+    "message_23": [
+      "Amount: 1600000"
+    ],
+    "message_30.keyword": [
+      "archway liquidity account balance"
+    ],
+    "message_22": [
+      "  total: \"0\""
+    ],
+    "message_25": [
+      "1600000"
+    ],
+    "message_24": [
+      "liquid_token_amount"
+    ],
+    "message_15.keyword": [
+      "balances:"
+    ],
+    "message_27": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx ibc-transfer transfer transfer channel-1 --chain-id STRIDE archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m 1570000stuarch --from admin --keyring-backend test -y --fees 30000stuarch"
+    ],
+    "message_1.keyword": [
+      "Liquid stake total amount: 1600000"
+    ],
+    "message_26": [
+      "Script execution completed."
+    ],
+    "message_17.keyword": [
+      "  denom: stuarch"
+    ],
+    "message_29": [
+      "Script execution completed."
+    ],
+    "message_28": [
+      "Transaction hash for strided ibc liquid tokens transfer to Archway: FDB81AE894DAFADB52259F0D9868F3F5C668F99A5A2687D98EF0696007D8C2D6"
+    ],
+    "message_3.keyword": [
+      "Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch"
+    ],
+    "message_21": [
+      "  next_key: null"
+    ],
+    "message_20": [
+      "pagination:"
+    ],
+    "message_3": [
+      "Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributionepoch"
+    ],
+    "message_2": [
+      "Last line of file is: 7"
+    ],
+    "message_11.keyword": [
+      "strided liquid stake"
+    ],
+    "message_1": [
+      "Liquid stake total amount: 1600000"
+    ],
+    "message_28.keyword": [
+      "Transaction hash for strided ibc liquid tokens transfer to Archway: FDB81AE894DAFADB52259F0D9868F3F5C668F99A5A2687D98EF0696007D8C2D6"
+    ],
+    "message_7": [
+      "Command executed successfully."
+    ],
+    "message_6": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 1600000uarch --from pval2 --keyring-backend test -y --gas auto --gas-prices 0.082490000000000000uarch --gas-adjustment 1.4"
+    ],
+    "message_26.keyword": [
+      "Script execution completed."
+    ],
+    "message_5": [
+      "Attempt 1: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 1600000uarch --from pval2 --keyring-backend test -y --gas auto --gas-prices 0.082490000000000000uarch --gas-adjustment 1.4'"
+    ],
+    "message_4": [
+      "archwayd ibc transfer"
+    ],
+    "message_19": [
+      "  denom: ustrd"
+    ],
+    "timestamp": [
+      "2023-08-19T04:06:00.000Z"
+    ],
+    "message_13.keyword": [
+      "Transaction hash: 2F03939E17064F07243774F97A77A85BB3BFA3FB141AE443148BF6DE56DE3AFC"
+    ],
+    "message_12": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc liquid-stake 1600000 uarch --keyring-backend test --from admin --chain-id STRIDE -y"
+    ],
+    "message_11": [
+      "strided liquid stake"
+    ],
+    "message_14": [
+      "strided track balance"
+    ],
+    "message_13": [
+      "Transaction hash: 2F03939E17064F07243774F97A77A85BB3BFA3FB141AE443148BF6DE56DE3AFC"
+    ],
+    "message_16": [
+      "- amount: \"1600000\""
+    ],
+    "message_15": [
+      "balances:"
+    ],
+    "message_18": [
+      "- amount: \"1000000000\""
+    ],
+    "message_17": [
+      "  denom: stuarch"
+    ],
+    "message_8.keyword": [
+      "strided track balance"
+    ],
+    "message_24.keyword": [
+      "liquid_token_amount"
+    ],
+    "message_10": [
+      "strided liquid stake"
+    ],
+    "message_10.keyword": [
+      "strided liquid stake"
+    ],
+    "message_20.keyword": [
+      "pagination:"
+    ],
+    "message_22.keyword": [
+      "  total: \"0\""
+    ],
+    "message_19.keyword": [
+      "  denom: ustrd"
+    ]
+  },
+  "ignored_field_values": {
+    "message_31.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"
+    ],
+    "message_12.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc liquid-stake 1600000 uarch --keyring-backend test --from admin --chain-id STRIDE -y"
+    ],
+    "message_27.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx ibc-transfer transfer transfer channel-1 --chain-id STRIDE archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m 1570000stuarch --from admin --keyring-backend test -y --fees 30000stuarch"
+    ],
+    "message_9.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q bank balances --chain-id STRIDE stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"
+    ],
+    "message_5.keyword": [
+      "Attempt 1: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 1600000uarch --from pval2 --keyring-backend test -y --gas auto --gas-prices 0.082490000000000000uarch --gas-adjustment 1.4'"
+    ],
+    "message_6.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 1600000uarch --from pval2 --keyring-backend test -y --gas auto --gas-prices 0.082490000000000000uarch --gas-adjustment 1.4"
+    ]
+  }
+}
+```
+
+# Redeem Stake Module Job Index
+
+```
+{
+  "_index": "redeemstakedataaggregated",
+  "_type": "_doc",
+  "_id": "x4xPH4oBs_qmCEIO7WZy",
+  "_version": 1,
+  "_score": 1,
+  "_ignored": [
+    "message_2.keyword",
+    "message_16.keyword",
+    "message_30.keyword",
+    "message_39.keyword",
+    "message_46.keyword",
+    "message_51.keyword",
+    "message_8.keyword",
+    "message_24.keyword",
+    "message_11.keyword",
+    "message_26.keyword",
+    "message_20.keyword",
+    "message_22.keyword",
+    "message_36.keyword"
+  ],
+  "_source": {
+    "timestamp": "2023-08-19T04:39:00Z",
+    "message_1": "2023-08-19 04:40:01",
+    "message_2": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1rxj0k2h6tnfl46tcu0kupvrfl3u7vd90aggx6y --chain-id localnet",
+    "message_3": "2023-08-19 04:40:04",
+    "message_4": "2023-08-19 04:40:04",
+    "message_5": "2023-08-19 04:40:04",
+    "message_6": "total redemption amount: 570000",
+    "message_7": "Amount: 570000",
+    "message_8": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send  archway1rxj0k2h6tnfl46tcu0kupvrfl3u7vd90aggx6y archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m 570000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from l311 --keyring-backend=test --chain-id localnet --fees 17000uarch -y",
+    "message_9": "2023-08-19 04:40:11",
+    "message_10": "archway liquidity account balance",
+    "message_11": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m",
+    "message_12": "2023-08-19 04:40:11",
+    "message_13": "2023-08-19 04:40:13",
+    "message_14": "Attempt 1: Executing archwayd command",
+    "message_15": "2023-08-19 04:40:13",
+    "message_16": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 570000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend test -y --gas auto --gas-prices 0.082518000000000000uarch --gas-adjustment 1.4",
+    "message_17": "Archwayd command executed successfully.",
+    "message_18": "2023-08-19 04:40:18",
+    "message_19": "strided redeem stake",
+    "message_20": "Attempt 1: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 570000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y'",
+    "message_21": "2023-08-19 04:40:18",
+    "message_22": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 570000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y",
+    "message_23": "Account sequence mismatch detected. Retrying in 5 seconds...",
+    "message_24": "Attempt 2: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 570000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y'",
+    "message_25": "2023-08-19 04:40:23",
+    "message_26": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 570000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y",
+    "message_27": "Command executed successfully.",
+    "message_28": "2023-08-19 04:40:28",
+    "message_29": "archway balance uarch",
+    "message_30": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m",
+    "message_31": "2023-08-19 04:40:32",
+    "message_32": "2023-08-19 04:40:32",
+    "message_33": "Amount before claim: 10001605471",
+    "message_34": "2023-08-19 04:40:32",
+    "message_35": "list user redemption  record",
+    "message_36": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-user-redemption-record -o=json",
+    "message_37": "2023-08-19 04:40:36",
+    "message_38": "list epoch unbonding record",
+    "message_39": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-epoch-unbonding-record -o=json",
+    "message_40": "2023-08-19 04:40:40",
+    "message_41": "2023-08-19 04:40:41",
+    "message_42": "Hostzone: localnet",
+    "message_43": "Epoch: 30",
+    "message_44": "Stride Address: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8",
+    "message_45": "claim undelegated tokens",
+    "message_46": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc claim-undelegated-tokens localnet 30 stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 --from admin --keyring-backend test --chain-id STRIDE -y",
+    "message_47": "Transaction hash for claim undelegated tokens: 5DEAAF7CE37FC6B1CF6709FAE931F55B5C573AFEEE9E1F14C5135C13E0F7278F",
+    "message_48": "2023-08-19 04:40:49",
+    "message_49": "2023-08-19 04:40:49",
+    "message_50": "archway redeemed uarch",
+    "message_51": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m",
+    "message_52": "2023-08-19 04:41:04",
+    "message_53": "Amount after claim: 10002193622",
+    "message_54": "2023-08-19 04:41:04",
+    "message_55": "Last line of file is: \f",
+    "message_56": "Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemepoch",
+    "message_57": "2023-08-19 04:41:04"
+  },
+  "fields": {
+    "message_31.keyword": [
+      "2023-08-19 04:40:32"
+    ],
+    "message_48.keyword": [
+      "2023-08-19 04:40:49"
+    ],
+    "message_12.keyword": [
+      "2023-08-19 04:40:11"
+    ],
+    "message_29.keyword": [
+      "archway balance uarch"
+    ],
+    "message_57.keyword": [
+      "2023-08-19 04:41:04"
+    ],
+    "message_44.keyword": [
+      "Stride Address: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"
+    ],
+    "message_54.keyword": [
+      "2023-08-19 04:41:04"
+    ],
+    "message_9.keyword": [
+      "2023-08-19 04:40:11"
+    ],
+    "message_9": [
+      "2023-08-19 04:40:11"
+    ],
+    "message_8": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send  archway1rxj0k2h6tnfl46tcu0kupvrfl3u7vd90aggx6y archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m 570000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from l311 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+    ],
+    "message_25.keyword": [
+      "2023-08-19 04:40:23"
+    ],
+    "message_50.keyword": [
+      "archway redeemed uarch"
+    ],
+    "message_35.keyword": [
+      "list user redemption  record"
+    ],
+    "message_40.keyword": [
+      "2023-08-19 04:40:40"
+    ],
+    "message_21.keyword": [
+      "2023-08-19 04:40:18"
+    ],
+    "message_5.keyword": [
+      "2023-08-19 04:40:04"
+    ],
+    "message_23": [
+      "Account sequence mismatch detected. Retrying in 5 seconds..."
+    ],
+    "message_22": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 570000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y"
+    ],
+    "message_25": [
+      "2023-08-19 04:40:23"
+    ],
+    "message_24": [
+      "Attempt 2: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 570000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y'"
+    ],
+    "message_15.keyword": [
+      "2023-08-19 04:40:13"
+    ],
+    "message_27": [
+      "Command executed successfully."
+    ],
+    "message_1.keyword": [
+      "2023-08-19 04:40:01"
+    ],
+    "message_26": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 570000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y"
+    ],
+    "message_29": [
+      "archway balance uarch"
+    ],
+    "message_28": [
+      "2023-08-19 04:40:28"
+    ],
+    "message_32.keyword": [
+      "2023-08-19 04:40:32"
+    ],
+    "message_21": [
+      "2023-08-19 04:40:18"
+    ],
+    "message_20": [
+      "Attempt 1: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 570000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y'"
+    ],
+    "message_28.keyword": [
+      "2023-08-19 04:40:28"
+    ],
+    "message_19": [
+      "strided redeem stake"
+    ],
+    "message_45.keyword": [
+      "claim undelegated tokens"
+    ],
+    "timestamp": [
+      "2023-08-19T04:39:00.000Z"
+    ],
+    "message_12": [
+      "2023-08-19 04:40:11"
+    ],
+    "message_53.keyword": [
+      "Amount after claim: 10002193622"
+    ],
+    "message_11": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"
+    ],
+    "message_14": [
+      "Attempt 1: Executing archwayd command"
+    ],
+    "message_13": [
+      "2023-08-19 04:40:13"
+    ],
+    "message_16": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 570000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend test -y --gas auto --gas-prices 0.082518000000000000uarch --gas-adjustment 1.4"
+    ],
+    "message_15": [
+      "2023-08-19 04:40:13"
+    ],
+    "message_18": [
+      "2023-08-19 04:40:18"
+    ],
+    "message_17": [
+      "Archwayd command executed successfully."
+    ],
+    "message_41.keyword": [
+      "2023-08-19 04:40:41"
+    ],
+    "message_10": [
+      "archway liquidity account balance"
+    ],
+    "message_19.keyword": [
+      "strided redeem stake"
+    ],
+    "message_45": [
+      "claim undelegated tokens"
+    ],
+    "message_44": [
+      "Stride Address: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"
+    ],
+    "message_47": [
+      "Transaction hash for claim undelegated tokens: 5DEAAF7CE37FC6B1CF6709FAE931F55B5C573AFEEE9E1F14C5135C13E0F7278F"
+    ],
+    "message_46": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc claim-undelegated-tokens localnet 30 stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 --from admin --keyring-backend test --chain-id STRIDE -y"
+    ],
+    "message_49": [
+      "2023-08-19 04:40:49"
+    ],
+    "message_48": [
+      "2023-08-19 04:40:49"
+    ],
+    "message_4.keyword": [
+      "2023-08-19 04:40:04"
+    ],
+    "message_41": [
+      "2023-08-19 04:40:41"
+    ],
+    "message_40": [
+      "2023-08-19 04:40:40"
+    ],
+    "message_33.keyword": [
+      "Amount before claim: 10001605471"
+    ],
+    "message_43": [
+      "Epoch: 30"
+    ],
+    "message_42": [
+      "Hostzone: localnet"
+    ],
+    "message_42.keyword": [
+      "Hostzone: localnet"
+    ],
+    "message_14.keyword": [
+      "Attempt 1: Executing archwayd command"
+    ],
+    "message_27.keyword": [
+      "Command executed successfully."
+    ],
+    "message_34": [
+      "2023-08-19 04:40:32"
+    ],
+    "message_23.keyword": [
+      "Account sequence mismatch detected. Retrying in 5 seconds..."
+    ],
+    "message_33": [
+      "Amount before claim: 10001605471"
+    ],
+    "message_36": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-user-redemption-record -o=json"
+    ],
+    "message_35": [
+      "list user redemption  record"
+    ],
+    "message_38": [
+      "list epoch unbonding record"
+    ],
+    "message_37": [
+      "2023-08-19 04:40:36"
+    ],
+    "message_39": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-epoch-unbonding-record -o=json"
+    ],
+    "message_56.keyword": [
+      "Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemepoch"
+    ],
+    "message_30": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"
+    ],
+    "message_32": [
+      "2023-08-19 04:40:32"
+    ],
+    "message_31": [
+      "2023-08-19 04:40:32"
+    ],
+    "message_7.keyword": [
+      "Amount: 570000"
+    ],
+    "message_37.keyword": [
+      "2023-08-19 04:40:36"
+    ],
+    "message_49.keyword": [
+      "2023-08-19 04:40:49"
+    ],
+    "message_18.keyword": [
+      "2023-08-19 04:40:18"
+    ],
+    "message_52.keyword": [
+      "2023-08-19 04:41:04"
+    ],
+    "message_17.keyword": [
+      "Archwayd command executed successfully."
+    ],
+    "message_3.keyword": [
+      "2023-08-19 04:40:04"
+    ],
+    "message_47.keyword": [
+      "Transaction hash for claim undelegated tokens: 5DEAAF7CE37FC6B1CF6709FAE931F55B5C573AFEEE9E1F14C5135C13E0F7278F"
+    ],
+    "message_3": [
+      "2023-08-19 04:40:04"
+    ],
+    "message_2": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1rxj0k2h6tnfl46tcu0kupvrfl3u7vd90aggx6y --chain-id localnet"
+    ],
+    "message_1": [
+      "2023-08-19 04:40:01"
+    ],
+    "message_7": [
+      "Amount: 570000"
+    ],
+    "message_43.keyword": [
+      "Epoch: 30"
+    ],
+    "message_6": [
+      "total redemption amount: 570000"
+    ],
+    "message_5": [
+      "2023-08-19 04:40:04"
+    ],
+    "message_4": [
+      "2023-08-19 04:40:04"
+    ],
+    "message_13.keyword": [
+      "2023-08-19 04:40:13"
+    ],
+    "message_56": [
+      "Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemepoch"
+    ],
+    "message_55": [
+      "Last line of file is: \f"
+    ],
+    "message_57": [
+      "2023-08-19 04:41:04"
+    ],
+    "message_50": [
+      "archway redeemed uarch"
+    ],
+    "message_55.keyword": [
+      "Last line of file is: \f"
+    ],
+    "message_38.keyword": [
+      "list epoch unbonding record"
+    ],
+    "message_52": [
+      "2023-08-19 04:41:04"
+    ],
+    "message_51": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"
+    ],
+    "message_54": [
+      "2023-08-19 04:41:04"
+    ],
+    "message_53": [
+      "Amount after claim: 10002193622"
+    ],
+    "message_10.keyword": [
+      "archway liquidity account balance"
+    ],
+    "message_34.keyword": [
+      "2023-08-19 04:40:32"
+    ],
+    "message_6.keyword": [
+      "total redemption amount: 570000"
+    ]
+  },
+  "ignored_field_values": {
+    "message_16.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 570000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend test -y --gas auto --gas-prices 0.082518000000000000uarch --gas-adjustment 1.4"
+    ],
+    "message_2.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1rxj0k2h6tnfl46tcu0kupvrfl3u7vd90aggx6y --chain-id localnet"
+    ],
+    "message_39.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-epoch-unbonding-record -o=json"
+    ],
+    "message_11.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"
+    ],
+    "message_8.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send  archway1rxj0k2h6tnfl46tcu0kupvrfl3u7vd90aggx6y archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m 570000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from l311 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+    ],
+    "message_24.keyword": [
+      "Attempt 2: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 570000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y'"
+    ],
+    "message_20.keyword": [
+      "Attempt 1: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 570000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y'"
+    ],
+    "message_36.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-user-redemption-record -o=json"
+    ],
+    "message_46.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc claim-undelegated-tokens localnet 30 stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 --from admin --keyring-backend test --chain-id STRIDE -y"
+    ],
+    "message_30.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"
+    ],
+    "message_26.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 570000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y"
+    ],
+    "message_51.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"
+    ],
+    "message_22.keyword": [
+      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 570000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y"
+    ]
+  }
+}
+```
+Distribute Liquidity Job Index 
+
+```
+{
+  "_index": "distributeliquiditydataaggregated",
+  "_type": "_doc",
+  "_id": "iYxWH4oBs_qmCEIOb2ev",
+  "_version": 1,
+  "_score": 1,
+  "_ignored": [
+    "message_1.keyword"
+  ],
+  "_source": {
+    "timestamp": "2023-08-19T04:42:00Z",
+    "message_1": "Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1rxj0k2h6tnfl46tcu0kupvrfl3u7vd90aggx6y 650000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend=test --chain-id localnet --fees 17000uarch -y",
+    "message_2": "part4 should not be equal to zero",
+    "message_3": "part4 should not be equal to zero",
+    "message_4": "part4 should not be equal to zero",
+    "message_5": "part4 should not be equal to zero",
+    "message_6": "part4 should not be equal to zero",
+    "message_7": "part4 should not be equal to zero",
+    "message_8": "part4 should not be equal to zero",
+    "message_9": "part4 should not be equal to zero",
+    "message_10": "part4 should not be equal to zero",
+    "message_11": "part4 should not be equal to zero",
+    "message_12": "part4 should not be equal to zero",
+    "message_13": "part4 should not be equal to zero",
+    "message_14": "part4 should not be equal to zero",
+    "message_15": "part4 should not be equal to zero",
+    "message_16": "part4 should not be equal to zero",
+    "message_17": "part4 should not be equal to zero",
+    "message_18": "part4 should not be equal to zero",
+    "message_19": "part4 should not be equal to zero",
+    "message_20": "part4 should not be equal to zero",
+    "message_21": "part4 should not be equal to zero",
+    "message_22": "part4 should not be equal to zero",
+    "message_23": "part4 should not be equal to zero",
+    "message_24": "part4 should not be equal to zero",
+    "message_25": "part4 should not be equal to zero",
+    "message_26": "part4 should not be equal to zero",
+    "message_27": "part4 should not be equal to zero",
+    "message_28": "part4 should not be equal to zero",
+    "message_29": "part4 should not be equal to zero",
+    "message_30": "part4 should not be equal to zero",
+    "message_31": "part4 should not be equal to zero",
+    "message_32": "part4 should not be equal to zero",
+    "message_33": "part4 should not be equal to zero",
+    "message_34": "part4 should not be equal to zero",
+    "message_35": "part4 should not be equal to zero",
+    "message_36": "part4 should not be equal to zero",
+    "message_37": "part4 should not be equal to zero",
+    "message_38": "part4 should not be equal to zero",
+    "message_39": "part4 should not be equal to zero",
+    "message_40": "part4 should not be equal to zero",
+    "message_41": "part4 should not be equal to zero",
+    "message_42": "part4 should not be equal to zero",
+    "message_43": "part4 should not be equal to zero",
+    "message_44": "part4 should not be equal to zero",
+    "message_45": "part4 should not be equal to zero",
+    "message_46": "part4 should not be equal to zero",
+    "message_47": "part4 should not be equal to zero",
+    "message_48": "part4 should not be equal to zero",
+    "message_49": "part4 should not be equal to zero",
+    "message_50": "part4 should not be equal to zero",
+    "message_51": "part4 should not be equal to zero",
+    "message_52": "part4 should not be equal to zero",
+    "message_53": "part4 should not be equal to zero",
+    "message_54": "part4 should not be equal to zero",
+    "message_55": "part4 should not be equal to zero",
+    "message_56": "part4 should not be equal to zero",
+    "message_57": "part4 should not be equal to zero",
+    "message_58": "part4 should not be equal to zero",
+    "message_59": "part4 should not be equal to zero",
+    "message_60": "part4 should not be equal to zero",
+    "message_61": "part4 should not be equal to zero",
+    "message_62": "part4 should not be equal to zero",
+    "message_63": "part4 should not be equal to zero",
+    "message_64": "part4 should not be equal to zero",
+    "message_65": "part4 should not be equal to zero",
+    "message_66": "part4 should not be equal to zero",
+    "message_67": "part4 should not be equal to zero",
+    "message_68": "part4 should not be equal to zero",
+    "message_69": "part4 should not be equal to zero",
+    "message_70": "part4 should not be equal to zero",
+    "message_71": "part4 should not be equal to zero",
+    "message_72": "part4 should not be equal to zero",
+    "message_73": "part4 should not be equal to zero",
+    "message_74": "part4 should not be equal to zero",
+    "message_75": "part4 should not be equal to zero",
+    "message_76": "part4 should not be equal to zero",
+    "message_77": "part4 should not be equal to zero",
+    "message_78": "part4 should not be equal to zero",
+    "message_79": "part4 should not be equal to zero",
+    "message_80": "part4 should not be equal to zero",
+    "message_81": "part4 should not be equal to zero",
+    "message_82": "part4 should not be equal to zero",
+    "message_83": "part4 should not be equal to zero",
+    "message_84": "part4 should not be equal to zero",
+    "message_85": "part4 should not be equal to zero",
+    "message_86": "part4 should not be equal to zero",
+    "message_87": "part4 should not be equal to zero",
+    "message_88": "part4 should not be equal to zero",
+    "message_89": "part4 should not be equal to zero",
+    "message_90": "part4 should not be equal to zero",
+    "message_91": "part4 should not be equal to zero",
+    "message_92": "part4 should not be equal to zero",
+    "message_93": "part4 should not be equal to zero",
+    "message_94": "part4 should not be equal to zero",
+    "message_95": "part4 should not be equal to zero",
+    "message_96": "part4 should not be equal to zero",
+    "message_97": "part4 should not be equal to zero",
+    "message_98": "part4 should not be equal to zero",
+    "message_99": "part4 should not be equal to zero",
+    "message_100": "part4 should not be equal to zero",
+    "message_101": "part4 should not be equal to zero",
+    "message_102": "part4 should not be equal to zero",
+    "message_103": "part4 should not be equal to zero",
+    "message_104": "part4 should not be equal to zero",
+    "message_105": "part4 should not be equal to zero",
+    "message_106": "part4 should not be equal to zero",
+    "message_107": "part4 should not be equal to zero",
+    "message_108": "part4 should not be equal to zero",
+    "message_109": "part4 should not be equal to zero",
+    "message_110": "part4 should not be equal to zero",
+    "message_111": "part4 should not be equal to zero",
+    "message_112": "part4 should not be equal to zero",
+    "message_113": "part4 should not be equal to zero",
+    "message_114": "part4 should not be equal to zero"
+  },
+  "fields": {
+    "message_2.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_76.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_91.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_12.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_29.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_44.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_111": [
+      "part4 should not be equal to zero"
+    ],
+    "message_110": [
+      "part4 should not be equal to zero"
+    ],
+    "message_109.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_113": [
+      "part4 should not be equal to zero"
+    ],
+    "message_99.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_112": [
+      "part4 should not be equal to zero"
+    ],
+    "message_114": [
+      "part4 should not be equal to zero"
+    ],
+    "message_85.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_9": [
+      "part4 should not be equal to zero"
+    ],
+    "message_8": [
+      "part4 should not be equal to zero"
+    ],
+    "message_50.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_35.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_108": [
+      "part4 should not be equal to zero"
+    ],
+    "message_107": [
+      "part4 should not be equal to zero"
+    ],
+    "message_21.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_109": [
+      "part4 should not be equal to zero"
+    ],
+    "message_5.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_100": [
+      "part4 should not be equal to zero"
+    ],
+    "message_23": [
+      "part4 should not be equal to zero"
+    ],
+    "message_22": [
+      "part4 should not be equal to zero"
+    ],
+    "message_102": [
+      "part4 should not be equal to zero"
+    ],
+    "message_25": [
+      "part4 should not be equal to zero"
+    ],
+    "message_101": [
+      "part4 should not be equal to zero"
+    ],
+    "message_24": [
+      "part4 should not be equal to zero"
+    ],
+    "message_15.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_104": [
+      "part4 should not be equal to zero"
+    ],
+    "message_27": [
+      "part4 should not be equal to zero"
+    ],
+    "message_103": [
+      "part4 should not be equal to zero"
+    ],
+    "message_26": [
+      "part4 should not be equal to zero"
+    ],
+    "message_106": [
+      "part4 should not be equal to zero"
+    ],
+    "message_29": [
+      "part4 should not be equal to zero"
+    ],
+    "message_105": [
+      "part4 should not be equal to zero"
+    ],
+    "message_28": [
+      "part4 should not be equal to zero"
+    ],
+    "message_32.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_73.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_21": [
+      "part4 should not be equal to zero"
+    ],
+    "message_20": [
+      "part4 should not be equal to zero"
+    ],
+    "message_110.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_94.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_19": [
+      "part4 should not be equal to zero"
+    ],
+    "message_62.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "timestamp": [
+      "2023-08-19T04:42:00.000Z"
+    ],
+    "message_12": [
+      "part4 should not be equal to zero"
+    ],
+    "message_53.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_11": [
+      "part4 should not be equal to zero"
+    ],
+    "message_14": [
+      "part4 should not be equal to zero"
+    ],
+    "message_13": [
+      "part4 should not be equal to zero"
+    ],
+    "message_16": [
+      "part4 should not be equal to zero"
+    ],
+    "message_15": [
+      "part4 should not be equal to zero"
+    ],
+    "message_82.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_18": [
+      "part4 should not be equal to zero"
+    ],
+    "message_17": [
+      "part4 should not be equal to zero"
+    ],
+    "message_106.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_8.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_24.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_41.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_10": [
+      "part4 should not be equal to zero"
+    ],
+    "message_65.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_70.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_45": [
+      "part4 should not be equal to zero"
+    ],
+    "message_44": [
+      "part4 should not be equal to zero"
+    ],
+    "message_47": [
+      "part4 should not be equal to zero"
+    ],
+    "message_46": [
+      "part4 should not be equal to zero"
+    ],
+    "message_49": [
+      "part4 should not be equal to zero"
+    ],
+    "message_48": [
+      "part4 should not be equal to zero"
+    ],
+    "message_41": [
+      "part4 should not be equal to zero"
+    ],
+    "message_78.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_40": [
+      "part4 should not be equal to zero"
+    ],
+    "message_33.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_43": [
+      "part4 should not be equal to zero"
+    ],
+    "message_42": [
+      "part4 should not be equal to zero"
+    ],
+    "message_42.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_113.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_14.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_93.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_59.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_23.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_34": [
+      "part4 should not be equal to zero"
+    ],
+    "message_33": [
+      "part4 should not be equal to zero"
+    ],
+    "message_36": [
+      "part4 should not be equal to zero"
+    ],
+    "message_35": [
+      "part4 should not be equal to zero"
+    ],
+    "message_38": [
+      "part4 should not be equal to zero"
+    ],
+    "message_68.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_37": [
+      "part4 should not be equal to zero"
+    ],
+    "message_39": [
+      "part4 should not be equal to zero"
+    ],
+    "message_56.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_87.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_30": [
+      "part4 should not be equal to zero"
+    ],
+    "message_107.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_32": [
+      "part4 should not be equal to zero"
+    ],
+    "message_31": [
+      "part4 should not be equal to zero"
+    ],
+    "message_30.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_67": [
+      "part4 should not be equal to zero"
+    ],
+    "message_60.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_66": [
+      "part4 should not be equal to zero"
+    ],
+    "message_69": [
+      "part4 should not be equal to zero"
+    ],
+    "message_68": [
+      "part4 should not be equal to zero"
+    ],
+    "message_17.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_101.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_61": [
+      "part4 should not be equal to zero"
+    ],
+    "message_60": [
+      "part4 should not be equal to zero"
+    ],
+    "message_3.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_63": [
+      "part4 should not be equal to zero"
+    ],
+    "message_62": [
+      "part4 should not be equal to zero"
+    ],
+    "message_47.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_65": [
+      "part4 should not be equal to zero"
+    ],
+    "message_64": [
+      "part4 should not be equal to zero"
+    ],
+    "message_26.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_75.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_56": [
+      "part4 should not be equal to zero"
+    ],
+    "message_55": [
+      "part4 should not be equal to zero"
+    ],
+    "message_58": [
+      "part4 should not be equal to zero"
+    ],
+    "message_57": [
+      "part4 should not be equal to zero"
+    ],
+    "message_59": [
+      "part4 should not be equal to zero"
+    ],
+    "message_51.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_50": [
+      "part4 should not be equal to zero"
+    ],
+    "message_38.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_52": [
+      "part4 should not be equal to zero"
+    ],
+    "message_51": [
+      "part4 should not be equal to zero"
+    ],
+    "message_54": [
+      "part4 should not be equal to zero"
+    ],
+    "message_53": [
+      "part4 should not be equal to zero"
+    ],
+    "message_104.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_72.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_96.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_84.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_6.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_16.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_89": [
+      "part4 should not be equal to zero"
+    ],
+    "message_88": [
+      "part4 should not be equal to zero"
+    ],
+    "message_31.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_81": [
+      "part4 should not be equal to zero"
+    ],
+    "message_80": [
+      "part4 should not be equal to zero"
+    ],
+    "message_83": [
+      "part4 should not be equal to zero"
+    ],
+    "message_63.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_48.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_82": [
+      "part4 should not be equal to zero"
+    ],
+    "message_85": [
+      "part4 should not be equal to zero"
+    ],
+    "message_84": [
+      "part4 should not be equal to zero"
+    ],
+    "message_87": [
+      "part4 should not be equal to zero"
+    ],
+    "message_86": [
+      "part4 should not be equal to zero"
+    ],
+    "message_95.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_111.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_89.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_57.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_78": [
+      "part4 should not be equal to zero"
+    ],
+    "message_77": [
+      "part4 should not be equal to zero"
+    ],
+    "message_39.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_79": [
+      "part4 should not be equal to zero"
+    ],
+    "message_54.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_70": [
+      "part4 should not be equal to zero"
+    ],
+    "message_9.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_81.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_72": [
+      "part4 should not be equal to zero"
+    ],
+    "message_71": [
+      "part4 should not be equal to zero"
+    ],
+    "message_25.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_74": [
+      "part4 should not be equal to zero"
+    ],
+    "message_73": [
+      "part4 should not be equal to zero"
+    ],
+    "message_76": [
+      "part4 should not be equal to zero"
+    ],
+    "message_75": [
+      "part4 should not be equal to zero"
+    ],
+    "message_66.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_40.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_105.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_90.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_114.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_77.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_11.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_28.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_45.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_99": [
+      "part4 should not be equal to zero"
+    ],
+    "message_69.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_92": [
+      "part4 should not be equal to zero"
+    ],
+    "message_91": [
+      "part4 should not be equal to zero"
+    ],
+    "message_94": [
+      "part4 should not be equal to zero"
+    ],
+    "message_93": [
+      "part4 should not be equal to zero"
+    ],
+    "message_86.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_96": [
+      "part4 should not be equal to zero"
+    ],
+    "message_95": [
+      "part4 should not be equal to zero"
+    ],
+    "message_98": [
+      "part4 should not be equal to zero"
+    ],
+    "message_97": [
+      "part4 should not be equal to zero"
+    ],
+    "message_90": [
+      "part4 should not be equal to zero"
+    ],
+    "message_102.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_20.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_36.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_98.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_19.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_46.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_100.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_4.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_80.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_74.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_27.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_61.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_83.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_7.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_103.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_71.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_37.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_97.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_49.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_18.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_52.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_79.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_64.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_58.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_88.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_3": [
+      "part4 should not be equal to zero"
+    ],
+    "message_2": [
+      "part4 should not be equal to zero"
+    ],
+    "message_1": [
+      "Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1rxj0k2h6tnfl46tcu0kupvrfl3u7vd90aggx6y 650000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+    ],
+    "message_7": [
+      "part4 should not be equal to zero"
+    ],
+    "message_43.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_6": [
+      "part4 should not be equal to zero"
+    ],
+    "message_5": [
+      "part4 should not be equal to zero"
+    ],
+    "message_4": [
+      "part4 should not be equal to zero"
+    ],
+    "message_92.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_112.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_13.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_108.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_55.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_10.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_34.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_22.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_67.keyword": [
+      "part4 should not be equal to zero"
+    ]
+  },
+  "ignored_field_values": {
+    "message_1.keyword": [
+      "Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1rxj0k2h6tnfl46tcu0kupvrfl3u7vd90aggx6y 650000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+    ]
+  }
+}
+```
+
+Distribute Redeem Tokens Job Index
+
+```
+{
+  "_index": "distributeliquiditydataaggregated",
+  "_type": "_doc",
+  "_id": "iYxWH4oBs_qmCEIOb2ev",
+  "_version": 1,
+  "_score": 1,
+  "_ignored": [
+    "message_1.keyword"
+  ],
+  "_source": {
+    "timestamp": "2023-08-19T04:42:00Z",
+    "message_1": "Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1rxj0k2h6tnfl46tcu0kupvrfl3u7vd90aggx6y 650000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend=test --chain-id localnet --fees 17000uarch -y",
+    "message_2": "part4 should not be equal to zero",
+    "message_3": "part4 should not be equal to zero",
+    "message_4": "part4 should not be equal to zero",
+    "message_5": "part4 should not be equal to zero",
+    "message_6": "part4 should not be equal to zero",
+    "message_7": "part4 should not be equal to zero",
+    "message_8": "part4 should not be equal to zero",
+    "message_9": "part4 should not be equal to zero",
+    "message_10": "part4 should not be equal to zero",
+    "message_11": "part4 should not be equal to zero",
+    "message_12": "part4 should not be equal to zero",
+    "message_13": "part4 should not be equal to zero",
+    "message_14": "part4 should not be equal to zero",
+    "message_15": "part4 should not be equal to zero",
+    "message_16": "part4 should not be equal to zero",
+    "message_17": "part4 should not be equal to zero",
+    "message_18": "part4 should not be equal to zero",
+    "message_19": "part4 should not be equal to zero",
+    "message_20": "part4 should not be equal to zero",
+    "message_21": "part4 should not be equal to zero",
+    "message_22": "part4 should not be equal to zero",
+    "message_23": "part4 should not be equal to zero",
+    "message_24": "part4 should not be equal to zero",
+    "message_25": "part4 should not be equal to zero",
+    "message_26": "part4 should not be equal to zero",
+    "message_27": "part4 should not be equal to zero",
+    "message_28": "part4 should not be equal to zero",
+    "message_29": "part4 should not be equal to zero",
+    "message_30": "part4 should not be equal to zero",
+    "message_31": "part4 should not be equal to zero",
+    "message_32": "part4 should not be equal to zero",
+    "message_33": "part4 should not be equal to zero",
+    "message_34": "part4 should not be equal to zero",
+    "message_35": "part4 should not be equal to zero",
+    "message_36": "part4 should not be equal to zero",
+    "message_37": "part4 should not be equal to zero",
+    "message_38": "part4 should not be equal to zero",
+    "message_39": "part4 should not be equal to zero",
+    "message_40": "part4 should not be equal to zero",
+    "message_41": "part4 should not be equal to zero",
+    "message_42": "part4 should not be equal to zero",
+    "message_43": "part4 should not be equal to zero",
+    "message_44": "part4 should not be equal to zero",
+    "message_45": "part4 should not be equal to zero",
+    "message_46": "part4 should not be equal to zero",
+    "message_47": "part4 should not be equal to zero",
+    "message_48": "part4 should not be equal to zero",
+    "message_49": "part4 should not be equal to zero",
+    "message_50": "part4 should not be equal to zero",
+    "message_51": "part4 should not be equal to zero",
+    "message_52": "part4 should not be equal to zero",
+    "message_53": "part4 should not be equal to zero",
+    "message_54": "part4 should not be equal to zero",
+    "message_55": "part4 should not be equal to zero",
+    "message_56": "part4 should not be equal to zero",
+    "message_57": "part4 should not be equal to zero",
+    "message_58": "part4 should not be equal to zero",
+    "message_59": "part4 should not be equal to zero",
+    "message_60": "part4 should not be equal to zero",
+    "message_61": "part4 should not be equal to zero",
+    "message_62": "part4 should not be equal to zero",
+    "message_63": "part4 should not be equal to zero",
+    "message_64": "part4 should not be equal to zero",
+    "message_65": "part4 should not be equal to zero",
+    "message_66": "part4 should not be equal to zero",
+    "message_67": "part4 should not be equal to zero",
+    "message_68": "part4 should not be equal to zero",
+    "message_69": "part4 should not be equal to zero",
+    "message_70": "part4 should not be equal to zero",
+    "message_71": "part4 should not be equal to zero",
+    "message_72": "part4 should not be equal to zero",
+    "message_73": "part4 should not be equal to zero",
+    "message_74": "part4 should not be equal to zero",
+    "message_75": "part4 should not be equal to zero",
+    "message_76": "part4 should not be equal to zero",
+    "message_77": "part4 should not be equal to zero",
+    "message_78": "part4 should not be equal to zero",
+    "message_79": "part4 should not be equal to zero",
+    "message_80": "part4 should not be equal to zero",
+    "message_81": "part4 should not be equal to zero",
+    "message_82": "part4 should not be equal to zero",
+    "message_83": "part4 should not be equal to zero",
+    "message_84": "part4 should not be equal to zero",
+    "message_85": "part4 should not be equal to zero",
+    "message_86": "part4 should not be equal to zero",
+    "message_87": "part4 should not be equal to zero",
+    "message_88": "part4 should not be equal to zero",
+    "message_89": "part4 should not be equal to zero",
+    "message_90": "part4 should not be equal to zero",
+    "message_91": "part4 should not be equal to zero",
+    "message_92": "part4 should not be equal to zero",
+    "message_93": "part4 should not be equal to zero",
+    "message_94": "part4 should not be equal to zero",
+    "message_95": "part4 should not be equal to zero",
+    "message_96": "part4 should not be equal to zero",
+    "message_97": "part4 should not be equal to zero",
+    "message_98": "part4 should not be equal to zero",
+    "message_99": "part4 should not be equal to zero",
+    "message_100": "part4 should not be equal to zero",
+    "message_101": "part4 should not be equal to zero",
+    "message_102": "part4 should not be equal to zero",
+    "message_103": "part4 should not be equal to zero",
+    "message_104": "part4 should not be equal to zero",
+    "message_105": "part4 should not be equal to zero",
+    "message_106": "part4 should not be equal to zero",
+    "message_107": "part4 should not be equal to zero",
+    "message_108": "part4 should not be equal to zero",
+    "message_109": "part4 should not be equal to zero",
+    "message_110": "part4 should not be equal to zero",
+    "message_111": "part4 should not be equal to zero",
+    "message_112": "part4 should not be equal to zero",
+    "message_113": "part4 should not be equal to zero",
+    "message_114": "part4 should not be equal to zero"
+  },
+  "fields": {
+    "message_2.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_76.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_91.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_12.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_29.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_44.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_111": [
+      "part4 should not be equal to zero"
+    ],
+    "message_110": [
+      "part4 should not be equal to zero"
+    ],
+    "message_109.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_113": [
+      "part4 should not be equal to zero"
+    ],
+    "message_99.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_112": [
+      "part4 should not be equal to zero"
+    ],
+    "message_114": [
+      "part4 should not be equal to zero"
+    ],
+    "message_85.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_9": [
+      "part4 should not be equal to zero"
+    ],
+    "message_8": [
+      "part4 should not be equal to zero"
+    ],
+    "message_50.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_35.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_108": [
+      "part4 should not be equal to zero"
+    ],
+    "message_107": [
+      "part4 should not be equal to zero"
+    ],
+    "message_21.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_109": [
+      "part4 should not be equal to zero"
+    ],
+    "message_5.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_100": [
+      "part4 should not be equal to zero"
+    ],
+    "message_23": [
+      "part4 should not be equal to zero"
+    ],
+    "message_22": [
+      "part4 should not be equal to zero"
+    ],
+    "message_102": [
+      "part4 should not be equal to zero"
+    ],
+    "message_25": [
+      "part4 should not be equal to zero"
+    ],
+    "message_101": [
+      "part4 should not be equal to zero"
+    ],
+    "message_24": [
+      "part4 should not be equal to zero"
+    ],
+    "message_15.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_104": [
+      "part4 should not be equal to zero"
+    ],
+    "message_27": [
+      "part4 should not be equal to zero"
+    ],
+    "message_103": [
+      "part4 should not be equal to zero"
+    ],
+    "message_26": [
+      "part4 should not be equal to zero"
+    ],
+    "message_106": [
+      "part4 should not be equal to zero"
+    ],
+    "message_29": [
+      "part4 should not be equal to zero"
+    ],
+    "message_105": [
+      "part4 should not be equal to zero"
+    ],
+    "message_28": [
+      "part4 should not be equal to zero"
+    ],
+    "message_32.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_73.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_21": [
+      "part4 should not be equal to zero"
+    ],
+    "message_20": [
+      "part4 should not be equal to zero"
+    ],
+    "message_110.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_94.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_19": [
+      "part4 should not be equal to zero"
+    ],
+    "message_62.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "timestamp": [
+      "2023-08-19T04:42:00.000Z"
+    ],
+    "message_12": [
+      "part4 should not be equal to zero"
+    ],
+    "message_53.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_11": [
+      "part4 should not be equal to zero"
+    ],
+    "message_14": [
+      "part4 should not be equal to zero"
+    ],
+    "message_13": [
+      "part4 should not be equal to zero"
+    ],
+    "message_16": [
+      "part4 should not be equal to zero"
+    ],
+    "message_15": [
+      "part4 should not be equal to zero"
+    ],
+    "message_82.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_18": [
+      "part4 should not be equal to zero"
+    ],
+    "message_17": [
+      "part4 should not be equal to zero"
+    ],
+    "message_106.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_8.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_24.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_41.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_10": [
+      "part4 should not be equal to zero"
+    ],
+    "message_65.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_70.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_45": [
+      "part4 should not be equal to zero"
+    ],
+    "message_44": [
+      "part4 should not be equal to zero"
+    ],
+    "message_47": [
+      "part4 should not be equal to zero"
+    ],
+    "message_46": [
+      "part4 should not be equal to zero"
+    ],
+    "message_49": [
+      "part4 should not be equal to zero"
+    ],
+    "message_48": [
+      "part4 should not be equal to zero"
+    ],
+    "message_41": [
+      "part4 should not be equal to zero"
+    ],
+    "message_78.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_40": [
+      "part4 should not be equal to zero"
+    ],
+    "message_33.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_43": [
+      "part4 should not be equal to zero"
+    ],
+    "message_42": [
+      "part4 should not be equal to zero"
+    ],
+    "message_42.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_113.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_14.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_93.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_59.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_23.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_34": [
+      "part4 should not be equal to zero"
+    ],
+    "message_33": [
+      "part4 should not be equal to zero"
+    ],
+    "message_36": [
+      "part4 should not be equal to zero"
+    ],
+    "message_35": [
+      "part4 should not be equal to zero"
+    ],
+    "message_38": [
+      "part4 should not be equal to zero"
+    ],
+    "message_68.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_37": [
+      "part4 should not be equal to zero"
+    ],
+    "message_39": [
+      "part4 should not be equal to zero"
+    ],
+    "message_56.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_87.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_30": [
+      "part4 should not be equal to zero"
+    ],
+    "message_107.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_32": [
+      "part4 should not be equal to zero"
+    ],
+    "message_31": [
+      "part4 should not be equal to zero"
+    ],
+    "message_30.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_67": [
+      "part4 should not be equal to zero"
+    ],
+    "message_60.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_66": [
+      "part4 should not be equal to zero"
+    ],
+    "message_69": [
+      "part4 should not be equal to zero"
+    ],
+    "message_68": [
+      "part4 should not be equal to zero"
+    ],
+    "message_17.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_101.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_61": [
+      "part4 should not be equal to zero"
+    ],
+    "message_60": [
+      "part4 should not be equal to zero"
+    ],
+    "message_3.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_63": [
+      "part4 should not be equal to zero"
+    ],
+    "message_62": [
+      "part4 should not be equal to zero"
+    ],
+    "message_47.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_65": [
+      "part4 should not be equal to zero"
+    ],
+    "message_64": [
+      "part4 should not be equal to zero"
+    ],
+    "message_26.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_75.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_56": [
+      "part4 should not be equal to zero"
+    ],
+    "message_55": [
+      "part4 should not be equal to zero"
+    ],
+    "message_58": [
+      "part4 should not be equal to zero"
+    ],
+    "message_57": [
+      "part4 should not be equal to zero"
+    ],
+    "message_59": [
+      "part4 should not be equal to zero"
+    ],
+    "message_51.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_50": [
+      "part4 should not be equal to zero"
+    ],
+    "message_38.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_52": [
+      "part4 should not be equal to zero"
+    ],
+    "message_51": [
+      "part4 should not be equal to zero"
+    ],
+    "message_54": [
+      "part4 should not be equal to zero"
+    ],
+    "message_53": [
+      "part4 should not be equal to zero"
+    ],
+    "message_104.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_72.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_96.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_84.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_6.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_16.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_89": [
+      "part4 should not be equal to zero"
+    ],
+    "message_88": [
+      "part4 should not be equal to zero"
+    ],
+    "message_31.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_81": [
+      "part4 should not be equal to zero"
+    ],
+    "message_80": [
+      "part4 should not be equal to zero"
+    ],
+    "message_83": [
+      "part4 should not be equal to zero"
+    ],
+    "message_63.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_48.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_82": [
+      "part4 should not be equal to zero"
+    ],
+    "message_85": [
+      "part4 should not be equal to zero"
+    ],
+    "message_84": [
+      "part4 should not be equal to zero"
+    ],
+    "message_87": [
+      "part4 should not be equal to zero"
+    ],
+    "message_86": [
+      "part4 should not be equal to zero"
+    ],
+    "message_95.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_111.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_89.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_57.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_78": [
+      "part4 should not be equal to zero"
+    ],
+    "message_77": [
+      "part4 should not be equal to zero"
+    ],
+    "message_39.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_79": [
+      "part4 should not be equal to zero"
+    ],
+    "message_54.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_70": [
+      "part4 should not be equal to zero"
+    ],
+    "message_9.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_81.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_72": [
+      "part4 should not be equal to zero"
+    ],
+    "message_71": [
+      "part4 should not be equal to zero"
+    ],
+    "message_25.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_74": [
+      "part4 should not be equal to zero"
+    ],
+    "message_73": [
+      "part4 should not be equal to zero"
+    ],
+    "message_76": [
+      "part4 should not be equal to zero"
+    ],
+    "message_75": [
+      "part4 should not be equal to zero"
+    ],
+    "message_66.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_40.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_105.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_90.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_114.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_77.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_11.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_28.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_45.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_99": [
+      "part4 should not be equal to zero"
+    ],
+    "message_69.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_92": [
+      "part4 should not be equal to zero"
+    ],
+    "message_91": [
+      "part4 should not be equal to zero"
+    ],
+    "message_94": [
+      "part4 should not be equal to zero"
+    ],
+    "message_93": [
+      "part4 should not be equal to zero"
+    ],
+    "message_86.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_96": [
+      "part4 should not be equal to zero"
+    ],
+    "message_95": [
+      "part4 should not be equal to zero"
+    ],
+    "message_98": [
+      "part4 should not be equal to zero"
+    ],
+    "message_97": [
+      "part4 should not be equal to zero"
+    ],
+    "message_90": [
+      "part4 should not be equal to zero"
+    ],
+    "message_102.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_20.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_36.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_98.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_19.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_46.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_100.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_4.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_80.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_74.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_27.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_61.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_83.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_7.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_103.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_71.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_37.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_97.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_49.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_18.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_52.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_79.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_64.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_58.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_88.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_3": [
+      "part4 should not be equal to zero"
+    ],
+    "message_2": [
+      "part4 should not be equal to zero"
+    ],
+    "message_1": [
+      "Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1rxj0k2h6tnfl46tcu0kupvrfl3u7vd90aggx6y 650000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+    ],
+    "message_7": [
+      "part4 should not be equal to zero"
+    ],
+    "message_43.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_6": [
+      "part4 should not be equal to zero"
+    ],
+    "message_5": [
+      "part4 should not be equal to zero"
+    ],
+    "message_4": [
+      "part4 should not be equal to zero"
+    ],
+    "message_92.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_112.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_13.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_108.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_55.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_10.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_34.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_22.keyword": [
+      "part4 should not be equal to zero"
+    ],
+    "message_67.keyword": [
+      "part4 should not be equal to zero"
+    ]
+  },
+  "ignored_field_values": {
+    "message_1.keyword": [
+      "Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1rxj0k2h6tnfl46tcu0kupvrfl3u7vd90aggx6y 650000ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+    ]
+  }
+}
+```
+
+
 
 # Liquid Staking Ebook 
 
