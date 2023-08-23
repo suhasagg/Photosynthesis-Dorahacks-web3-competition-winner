@@ -1834,7 +1834,7 @@ txhash.keyword
 
  ![Redeem Stake Transactions Data Table](https://i.imgur.com/CXngIW4.png)
 
- ![Total Redemption Amount (For all Dapps) Time Series Data](https://i.imgur.com/nD7cOlW.png)
+ ![Total Redemption Amount (For all Dapps) Time Series Data](https://i.imgur.com/0xjp0xs.png)
 
  
  
