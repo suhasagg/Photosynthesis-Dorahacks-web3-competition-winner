@@ -155,39 +155,22 @@ def process_and_aggregate_documents_from_index(source_index, target_index, bulk_
     if bulk_ops:
         bulk(es, bulk_ops)
 
-def create_or_update_index_with_mappings(index_name):
+def create_index_with_mappings(index_name):
     """
-    Creates or updates an Elasticsearch index with specified mappings.
-    If the index exists, it deletes and recreates it.
+    Create an Elasticsearch index with the specified mappings only if it doesn't exist.
     """
-    # Define the mapping for the index
+    # Define the index mappings
     mapping = {
         "mappings": {
             "properties": {
-                "ts": {
-                    "type": "date",
-                    "format": "strict_date_optional_time||epoch_millis"
-                },
-                "message": {
-                    "type": "text",
-                    "fields": {
-                        "keyword": {
-                            "type": "keyword",
-                            "ignore_above": 2147483647
-                        }
-                    }
-                },
-                # Add other fields as needed
+                "ts": {"type": "date", "format": "strict_date_optional_time||epoch_millis"},
+                "message": {"type": "text", "fields": {"keyword": {"type": "keyword", "ignore_above": 2147483647}}}
             }
         }
     }
 
-    # Check if index exists
+    # Create the index only if it doesn't exist
     if not es.indices.exists(index=index_name):
-        es.indices.create(index=index_name, body=mapping)
-    else:
-        # If index exists, delete and then recreate with the new mapping
-        es.indices.delete(index=index_name)
         es.indices.create(index=index_name, body=mapping)
 
 def main():
@@ -198,7 +181,7 @@ def main():
     target_index_name = "liquidstakedataaggregated"
 
     # Create or update the target index with mappings
-    create_or_update_index_with_mappings(target_index_name)
+    create_index_with_mappings(target_index_name)
 
     # Get the latest timestamp from the target index
     last_timestamp = get_latest_timestamp(target_index_name)
