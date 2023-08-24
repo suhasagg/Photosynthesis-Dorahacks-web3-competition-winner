@@ -149,9 +149,9 @@ def process_and_aggregate_documents_from_index(source_index, target_index, bulk_
     if bulk_ops:
         bulk(es, bulk_ops)
 
-def create_or_update_index_with_mappings(index_name):
+def create_index_with_mappings(index_name):
     """
-    Create or update an Elasticsearch index with the specified mappings.
+    Create an Elasticsearch index with the specified mappings only if it doesn't exist.
     """
     # Define the index mappings
     mapping = {
@@ -163,12 +163,8 @@ def create_or_update_index_with_mappings(index_name):
         }
     }
 
-    # Check if the index exists
+    # Create the index only if it doesn't exist
     if not es.indices.exists(index=index_name):
-        es.indices.create(index=index_name, body=mapping)
-    else:
-        # If index exists, delete and recreate it with the new mapping
-        es.indices.delete(index=index_name)
         es.indices.create(index=index_name, body=mapping)
 
 def main():
@@ -183,7 +179,7 @@ def main():
 
     target_index_name = "distributeliquiditydataaggregated"
 
-    create_or_update_index_with_mappings(target_index_name)
+    create_index_with_mappings(target_index_name)
 
     last_timestamp = get_latest_timestamp(target_index_name)
     if last_timestamp:
