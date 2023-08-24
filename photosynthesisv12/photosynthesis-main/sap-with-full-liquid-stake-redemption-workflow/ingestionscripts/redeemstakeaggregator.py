@@ -150,38 +150,22 @@ def process_and_aggregate_documents_from_index(source_index, target_index, bulk_
     if bulk_ops:
         bulk(es, bulk_ops)
 
-def create_or_update_index_with_mappings(index_name):
+def create_index_with_mappings(index_name):
     """
-    Create or update an Elasticsearch index with specified mappings.
-    If the index exists, it's deleted and recreated.
+    Create an Elasticsearch index with the specified mappings only if it doesn't exist.
     """
-    # Define index mappings
+    # Define the index mappings
     mapping = {
         "mappings": {
             "properties": {
-                "ts": {
-                    "type": "date",
-                    "format": "strict_date_optional_time||epoch_millis"
-                },
-                "message": {
-                    "type": "text",
-                    "fields": {
-                        "keyword": {
-                            "type": "keyword",
-                            "ignore_above": 2147483647
-                        }
-                    }
-                }
+                "ts": {"type": "date", "format": "strict_date_optional_time||epoch_millis"},
+                "message": {"type": "text", "fields": {"keyword": {"type": "keyword", "ignore_above": 2147483647}}}
             }
         }
     }
 
-    # Check for the existence of the index
+    # Create the index only if it doesn't exist
     if not es.indices.exists(index=index_name):
-        es.indices.create(index=index_name, body=mapping)
-    else:
-        # If exists, delete and recreate the index
-        es.indices.delete(index=index_name)
         es.indices.create(index=index_name, body=mapping)
 
 def main():
@@ -191,7 +175,7 @@ def main():
     source_index_name = "redeemstakedata"
     target_index_name = "redeemstakedataaggregated"
 
-    create_or_update_index_with_mappings(target_index_name)
+    create_index_with_mappings(target_index_name)
 
     last_timestamp = get_latest_timestamp(target_index_name)
     if last_timestamp:
