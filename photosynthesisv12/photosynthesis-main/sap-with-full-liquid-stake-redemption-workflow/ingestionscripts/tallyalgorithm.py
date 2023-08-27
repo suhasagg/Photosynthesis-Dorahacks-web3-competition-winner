@@ -35,8 +35,6 @@ def get_logs(index_name):
     messages = [hit["_source"][key] for hit in response["hits"]["hits"] for key in hit["_source"]]
     return messages
 
-import logging
-
 logging.basicConfig(level=logging.DEBUG)
 
 def pairwise_tally(reward, liquid_stake_value):
@@ -47,7 +45,6 @@ def pairwise_tally(reward, liquid_stake_value):
     logging.debug(f"Pairwise tallying: reward={reward}, liquid_stake_value={liquid_stake_value}, result={paired_data}")
     return paired_data
 
-import logging
 
 class PairwiseTallyHandler:
     """Handles the buffering of reward and stake data for pairing."""
