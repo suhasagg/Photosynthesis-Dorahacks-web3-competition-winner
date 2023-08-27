@@ -184,4 +184,28 @@ if result:
 else:
     logger.warning("No valid pair found.")
     print("No valid pair found.")
+    
+# Debug log messages from provided output Report is indexed in Elasticsearch
+"""
+2023-08-27 06:19:36,853 - DEBUG - Buffering reward and stake data. Buffered reward: 310000, Buffered stake amount: 1730000
+2023-08-27 06:19:36,853 - DEBUG - Buffered reward: 310000, Buffered stake amount: 1730000
+2023-08-27 06:19:36,853 - DEBUG - Using buffered reward amount. Total buffered reward: 2210000
+2023-08-27 06:19:36,853 - DEBUG - Using buffered stake amount. New stake amount: 2210000
+2023-08-27 06:19:36,854 - DEBUG - Successful pairing found: [(2210000, 2210000)]
+2023-08-27 06:19:36,854 - DEBUG - Using buffered reward amount. Total buffered reward: 800000
+2023-08-27 06:19:36,854 - DEBUG - Pulled new stake data from queue: 800000
+2023-08-27 06:19:36,854 - DEBUG - Successful pairing found: [(800000, 800000)]
+2023-08-27 06:19:36,854 - DEBUG - Using buffered reward amount. Total buffered reward: 320000
+2023-08-27 06:19:36,854 - DEBUG - Pulled new stake data from queue: 1430000
+2023-08-27 06:19:36,854 - DEBUG - No pairing found for reward: 320000. Buffering...
+2023-08-27 06:19:36,854 - DEBUG - Buffering reward and stake data. Buffered reward: 320000, Buffered stake amount: 1430000
+2023-08-27 06:19:36,854 - DEBUG - Buffered reward: 320000, Buffered stake amount: 1430000
+2023-08-27 06:19:36,854 - DEBUG - Using buffered reward amount. Total buffered reward: 1750000
+2023-08-27 06:19:36,854 - DEBUG - Using buffered stake amount. New stake amount: 3980000
+2023-08-27 06:19:36,854 - DEBUG - No pairing found for reward: 1750000. Buffering...
+2023-08-27 06:19:36,854 - DEBUG - Buffering reward and stake data. Buffered reward: 2070000, Buffered stake amount: 3980000
+2023-08-27 06:19:36,854 - DEBUG - Buffered reward: 2070000, Buffered stake amount: 3980000
+2023-08-27 06:19:36,854 - DEBUG - Using buffered reward amount. Total buffered reward: 2900000
+2023-08-27 06:19:36,854 - DEBUG - Using buffered stake amount. New stake amount: 7360000
+"""
 
