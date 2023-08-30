@@ -101,25 +101,34 @@ def accumulate_amounts_for_cron(cron_times, log_data):
     logger.debug(f"Cron times: {cron_times}")
     logger.debug(f"Log data: {log_data}")
 
-    accumulated_amounts = []
+    accumulated_data = [] 
     prev_time = None
+    used_indices = []
 
     for idx, time in enumerate(cron_times):
-        # add three minutes to the current time for comparison
-        time_with_delta = time + timedelta(minutes=3)
-    
+        # add two minutes to the current time for comparison
+        time_with_delta = time + timedelta(minutes=2)
+        time_with_delta_str = time_with_delta.strftime('%Y-%m-%d %H:%M:%S')
+        print(f"Time with delta: {time_with_delta_str}")
+
         if prev_time:
-            amount = sum(x[0] for x in log_data if prev_time < x[1] <= time_with_delta)
+            current_amounts = [x[0] for x in log_data if prev_time < x[1] <= time_with_delta]
+            amount = sum(current_amounts)
             logger.debug(f"Calculated amount {amount} for interval {prev_time} to {time_with_delta}")
         else:
-            amount = sum(x[0] for x in log_data if x[1] <= time_with_delta)
+            current_amounts = [x[0] for x in log_data if x[1] <= time_with_delta]
+            amount = sum(current_amounts)
             logger.debug(f"Calculated amount {amount} for time <= {time_with_delta}")
 
-        accumulated_amounts.append(amount)  # appending amount to the accumulated_amounts list
+        # marking indices of aggregated data for removal later
+        used_indices.extend([i for i, x in enumerate(log_data) if x[0] in current_amounts])
+
+        # appending a tuple (amount, time_with_delta) to the accumulated_data list
+        accumulated_data.append((amount, time_with_delta_str))
         prev_time = time  # update prev_time for the next iteration
 
-    logger.info(f"Completed accumulation. Final accumulated amounts: {accumulated_amounts}")
-    return accumulated_amounts
+    logger.info(f"Completed accumulation. Final accumulated data: {accumulated_data}")
+    return accumulated_data
 
 
 def get_logs(index_name):
@@ -194,7 +203,35 @@ def extract_earliest_datetime_from_logs(logs1, logs2):
     # Return the earliest timestamp
     return min(timestamps)
     
-    
+def pair_timestamps(left, right):
+    i, j = 0, 0  # Pointers for left and right lists
+    result = []  # Resultant list to store paired data
+
+    # Continue until one of the lists is exhausted
+    while i < len(left) and j < len(right):
+        
+        # Ensure the timestamp from the 'left' list is earlier than the timestamp from the 'right' list
+        if left[i][1] < right[j][1]:
+            sum_amount = 0  # Initialize aggregated amount
+            
+            # Accumulate amounts from the 'left' list as long as its timestamp is earlier
+            # than the current timestamp from the 'right' list
+            while i < len(left) and left[i][1] < right[j][1]:
+                sum_amount += left[i][0]  # Aggregate the amounts
+                i += 1  # Move to the next item in 'left'
+            
+            # Pair the aggregated amount with the last seen timestamp from 'left' 
+            # and the current item from 'right'
+            result.append(((sum_amount, left[i-1][1]), right[j]))
+            
+            j += 1  # Move to the next item in 'right'
+        
+        # If the current timestamp from 'right' is earlier or the same, skip it
+        else:
+            j += 1
+
+    return result
+
 
 def timestamp_tally(logs1, logs2, reward_frequency, stake_frequency):
     """
@@ -286,13 +323,13 @@ def timestamp_tally(logs1, logs2, reward_frequency, stake_frequency):
     distribute_liquidity_amounts = accumulate_amounts_for_cron(distribute_liquidity_times, liquidity_data)
     logger.debug(f"Processed {len(liquid_stake_data)} central liquid stake amounts")
     logger.debug(f"Processed {len(liquidity_data)} distribute liquidity amounts")
-    
-    logger.debug(f"Accumulated amounts for central liquid stake: {sum(central_liquid_stake_amounts)}")
-    logger.debug(f"Accumulated amounts for distribute liquidity: {sum(distribute_liquidity_amounts)}")
 
-    # Pair up the accumulated amounts from the two sets
-    paired_data = list(zip(central_liquid_stake_amounts, distribute_liquidity_amounts))
-    logger.debug(f"Paired data generated: {paired_data}")
+    # Pair up the accumulated amounts from the two sets using the pair_timestamps function
+    paired_data = pair_timestamps(central_liquid_stake_amounts, distribute_liquidity_amounts)
+
+    # Logging each tuple in paired_data on a separate row
+    for idx, pair in enumerate(paired_data):
+        logger.debug(f"Row {idx + 1}: {pair}")
 
     return paired_data
 
@@ -306,4 +343,3 @@ if __name__ == "__main__":
     if result:
         logger.info(f"Pairs of (liquid tokens distribution rewards, central liquid stake amount): {result}")
     logger.info("Script execution completed.")
-
