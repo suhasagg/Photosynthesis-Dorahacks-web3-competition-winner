@@ -251,10 +251,10 @@ def timestamp_tally(logs1, logs2, distribute_frequency, redeem_frequency):
     Function to process logs and create timestamp-based tally.
 
     Args:
-    - logs1 (list): List of liquid token reward logs.(stuarch distribution)
+    - logs1 (list): List of liquid token reward logs (stuarch distribution).
     - logs2 (list): List of central redeem stuarch (at maximum redemption rate) logs.
-    - reward_frequency (int): Frequency (in minutes) for the liquid token distribution reward cron job.
-    - stake_frequency (int): Frequency (in minutes) for the central redeem stuarch cron job.
+    - distribute_frequency (int): Frequency (in minutes) for the liquid token distribution reward cron job.
+    - redeem_frequency (int): Frequency (in minutes) for the central redeem (at maximum redemption rate) stuarch cron job.
 
     Returns:
     - List[Tuple[int, int]]: Pairs of accumulated amounts for liquid token reward (stuarch distribution) and central redeem stuarch (at maximum redemption rate)
