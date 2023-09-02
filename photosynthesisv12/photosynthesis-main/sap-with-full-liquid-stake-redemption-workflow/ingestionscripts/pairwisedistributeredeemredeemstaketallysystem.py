@@ -360,7 +360,7 @@ def timestamp_tally(logs1, logs2, distribute_redeem_tokens_frequency, claim_freq
     logger.debug(f"Processed {len(distribution_data)} distribute_redeem_token_amount")
 
     # Pair up the accumulated amounts from the two sets using the pair_timestamps function
-    paired_data = pair_timestamps(distribute_redeem_token_amounts, claim_redeemed_token_amounts)
+    paired_data = pair_timestamps(claim_redeemed_token_amounts,distribute_redeem_token_amounts)
 
     # Logging each tuple in paired_data on a separate row
     for idx, pair in enumerate(paired_data):
@@ -376,6 +376,5 @@ if __name__ == "__main__":
 
     result = timestamp_tally(claim_tokens_logs,distribute_redeem_tokens_logs,args.distribute_redeem_tokens_frequency,args.claim_frequency)
     if result:
-        logger.info(f"Pairs of (claimed tokens distribution rewards, claim_tokens): {result}")
+        logger.info(f"Pairs of (claim_tokens,claimed tokens distribution rewards): {result}")
     logger.info("Script execution completed.")
-
