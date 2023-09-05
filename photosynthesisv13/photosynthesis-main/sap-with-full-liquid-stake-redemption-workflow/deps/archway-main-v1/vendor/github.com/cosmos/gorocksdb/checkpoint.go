@@ -1,0 +1,9 @@
+deps/archway-main/vendor/github.com/CosmWasm/wasmvm/types/fraction.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/CosmWasm/wasmvm/types/ibc.go" beforeDir="false" afterPath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/CosmWasm/wasmvm/types/ibc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/CosmWasm/wasmvm/types/msg.go" beforeDir="false" afterPath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/CosmWasm/wasmvm/types/msg.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/CosmWasm/wasmvm/types/queries.go" beforeDir="false" afterPath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/CosmWasm/wasmvm/types/queries.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/CosmWasm/wasmvm/types/submessages.go" beforeDir="false" afterPath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/CosmWasm/wasmvm/types/submessages.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/CosmWasm/wasmvm/types/systemerror.go" beforeDir="false" afterPath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/CosmWasm/wasmvm/types/systemerror.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/CosmWasm/wasmvm/types/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/CosmWasm/wasmvm/types/types.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/Stride-Labs/stride/v4/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/Stride-Labs/stride/v4/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deps/archway-main/vendor/github.com/Stride-Labs/stride/v4/cmd/strided

@@ -1,0 +1,218 @@
+{"message":"2023-09-05 16:54:01"}
+{"message":"2023-09-05 16:54:01"}
+{"message":"2023-09-05 16:54:01"}
+{"message":"2023-09-05 16:54:01"}
+{"message":"2023-09-05 16:54:01"}
+{"message":"2023-09-05 16:54:01"}
+{"message":"Contract archway1hydz55zy59md6x7jy9e00qdyk4rqk00t83z93a has tokens: 320000"}
+{"message":"2023-09-05 16:54:01"}
+{"message":"Total Tokens: 320000"}
+{"message":"2023-09-05 16:54:01"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "10000440000", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 16:54:04"}
+{"message":"2023-09-05 16:54:04"}
+{"message":"2023-09-05 16:54:04"}
+{"message":"2023-09-05 16:54:04"}
+{"message":"2023-09-05 16:54:04"}
+{"message":"2023-09-05 16:54:04"}
+{"message":"total redemption amount: 10000440000"}
+{"message":"2023-09-05 16:54:04"}
+{"message":"2023-09-05 16:54:04"}
+{"message":"2023-09-05 16:54:04"}
+{"message":"2023-09-05 16:54:04"}
+{"message":"2023-09-05 16:54:04"}
+{"message":"2023-09-05 16:54:04"}
+{"message":"2023-09-05 16:54:04"}
+Debug: BEFORE_CLAIM = 
+Debug: AFTER_CLAIM = 
+Debug: DIFFERENCE = 0
+{"message":"Amount before claim: "}
+{"message":"Amount after claim: "}
+{"message":"Difference between before claim and after claim: 0"}
+No change between the amounts before and after the claim.
+{"message":"0"}
+{"message":"Total Redemption Amount: 0"}
+{"message":"2023-09-05 16:54:04"}
+{"message":"0"}
+{"message":"Total Redemption Amount: 0"}
+{"message":"2023-09-05 16:54:04"}
+{"message":"Total redemption amount is not greater than zero. Skipping transactions."}
+{"message":"2023-09-05 16:54:05"}
+{"message":"2023-09-05 17:02:01"}
+{"message":"2023-09-05 17:02:01"}
+{"message":"2023-09-05 17:02:01"}
+{"message":"2023-09-05 17:02:01"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"Contract archway1hydz55zy59md6x7jy9e00qdyk4rqk00t83z93a has tokens: 3566185"}
+{"message":"Contract archway1e99wzc3ktu25dgj9gfej9nll83zk7pn7px94aa has tokens: 3023812"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"Total Tokens: 6589997"}
+{"message":"2023-09-05 17:02:02"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "2890000", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9997063000", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:02:05"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"Liquid Amount: 2890000"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"total redemption amount: 9997063000"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"2023-09-05 17:02:05"}
+{"message":"2023-09-05 17:02:05"}
+Debug: BEFORE_CLAIM = 
+Debug: AFTER_CLAIM = 
+Debug: DIFFERENCE = 0
+{"message":"Amount before claim: "}
+{"message":"Amount after claim: "}
+{"message":"Difference between before claim and after claim: 0"}
+No change between the amounts before and after the claim.
+{"message":"0"}
+{"message":"Total Redemption Amount: 0"}
+{"message":"2023-09-05 17:02:06"}
+{"message":"0"}
+{"message":"Total Redemption Amount: 0"}
+{"message":"2023-09-05 17:02:06"}
+{"message":"Total redemption amount is not greater than zero. Skipping transactions."}
+{"message":"2023-09-05 17:02:06"}
+{"message":"2023-09-05 17:10:01"}
+{"message":"2023-09-05 17:10:01"}
+{"message":"Contract archway1hydz55zy59md6x7jy9e00qdyk4rqk00t83z93a has redemption address: archway1luppw4g4tlnv2g5406xlgzjmnpszy65mmj45jr"}
+{"message":"Contract archway1e99wzc3ktu25dgj9gfej9nll83zk7pn7px94aa has redemption address: archway1u3c8hhevlsvykqfujfnkznravdt2el0dlwx6l4"}
+{"message":"2023-09-05 17:10:01"}
+{"message":"2023-09-05 17:10:01"}
+{"message":"2023-09-05 17:10:01"}
+{"message":"2023-09-05 17:10:01"}
+{"message":"2023-09-05 17:10:02"}
+{"message":"2023-09-05 17:10:02"}
+{"message":"2023-09-05 17:10:02"}
+{"message":"2023-09-05 17:10:02"}
+{"message":"2023-09-05 17:10:02"}
+{"message":"2023-09-05 17:10:02"}
+{"message":"2023-09-05 17:10:02"}
+{"message":"2023-09-05 17:10:02"}
+{"message":"2023-09-05 17:10:02"}
+{"message":"2023-09-05 17:10:02"}
+{"message":"Contract archway1hydz55zy59md6x7jy9e00qdyk4rqk00t83z93a has tokens: 5643927"}
+{"message":"Contract archway1e99wzc3ktu25dgj9gfej9nll83zk7pn7px94aa has tokens: 5206070"}
+{"message":"2023-09-05 17:10:02"}
+{"message":"Total Tokens: 10849997"}
+{"message":"2023-09-05 17:10:02"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "14435634", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9992952860", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:10:05"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"Liquid Amount: 14435634"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"total redemption amount: 9992952860"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"2023-09-05 17:10:05"}
+{"message":"2023-09-05 17:10:05"}
+Debug: BEFORE_CLAIM = 9993772860
+Debug: AFTER_CLAIM = 9993392860
+Debug: DIFFERENCE = -380000
+{"message":"Amount before claim: 9993772860"}
+{"message":"Amount after claim: 9993392860"}
+{"message":"Difference between before claim and after claim: -380000"}
+Difference detected.
+{"message":"-380000"}
+{"message":"Total Redemption Amount: -380000"}
+{"message":"2023-09-05 17:10:06"}
+{"message":"-380000"}
+{"message":"Total Redemption Amount: -380000"}
+{"message":"2023-09-05 17:10:06"}
+{"message":"Total redemption amount is not greater than zero. Skipping transactions."}
+{"message":"2023-09-05 17:10:06"}
+{"message":"2023-09-05 17:18:01"}
+{"message":"2023-09-05 17:18:01"}
+{"message":"Contract archway1hydz55zy59md6x7jy9e00qdyk4rqk00t83z93a has redemption address: archway1luppw4g4tlnv2g5406xlgzjmnpszy65mmj45jr"}
+{"message":"Contract archway1e99wzc3ktu25dgj9gfej9nll83zk7pn7px94aa has redemption address: archway1u3c8hhevlsvykqfujfnkznravdt2el0dlwx6l4"}
+{"message":"2023-09-05 17:18:01"}
+{"message":"2023-09-05 17:18:01"}
+{"message":"2023-09-05 17:18:01"}
+{"message":"2023-09-05 17:18:02"}
+{"message":"2023-09-05 17:18:02"}
+{"message":"2023-09-05 17:18:02"}
+{"message":"2023-09-05 17:18:02"}
+{"message":"2023-09-05 17:18:02"}
+{"message":"2023-09-05 17:18:02"}
+{"message":"2023-09-05 17:18:02"}
+{"message":"2023-09-05 17:18:02"}
+{"message":"2023-09-05 17:18:02"}
+{"message":"2023-09-05 17:18:02"}
+{"message":"2023-09-05 17:18:02"}
+{"message":"Contract archway1hydz55zy59md6x7jy9e00qdyk4rqk00t83z93a has tokens: 19109077"}
+{"message":"Contract archway1e99wzc3ktu25dgj9gfej9nll83zk7pn7px94aa has tokens: 9110920"}
+{"message":"2023-09-05 17:18:02"}
+{"message":"Total Tokens: 28219997"}
+{"message":"2023-09-05 17:18:03"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "23256850", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9991141270", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:18:06"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"Liquid Amount: 23256850"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"total redemption amount: 9991141270"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"2023-09-05 17:18:06"}
+{"message":"2023-09-05 17:18:07"}
+Debug: BEFORE_CLAIM = 9990312860
+Debug: AFTER_CLAIM = 9991301270
+Debug: DIFFERENCE = 988410
+{"message":"Amount before claim: 9990312860"}
+{"message":"Amount after claim: 9991301270"}
+{"message":"Difference between before claim and after claim: 988410"}
+Difference detected.
+{"message":"988410"}
+{"message":"Total Redemption Amount: 988410"}
+{"message":"2023-09-05 17:18:07"}
+{"message":"988410"}
+{"message":"Total Redemption Amount: 988410"}
+{"message":"2023-09-05 17:18:07"}

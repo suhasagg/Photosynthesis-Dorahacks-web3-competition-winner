@@ -1,0 +1,26 @@
+=============== Sep 5, 2023 (UTC) ===============
+11:12:28.504020 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:12:28.509323 db@open opening
+11:12:28.509959 version@stat F·[] S·0B[] Sc·[]
+11:12:28.511466 db@janitor F·2 G·0
+11:12:28.511484 db@open done T·2.150977ms
+11:44:21.178493 memdb@flush N·11346 S·3MiB
+11:44:21.215980 memdb@flush created L0@3 N·11346 S·2MiB "BH:..71e,v6887":"blo..ore,v6"
+11:44:21.216046 version@stat F·[1] S·2MiB[2MiB] Sc·[0.25]
+11:44:21.217706 memdb@flush committed F·1 T·38.990236ms
+11:44:21.218448 journal@remove removed @1
+12:14:45.436318 memdb@flush N·10574 S·3MiB
+12:14:45.594222 memdb@flush created L0@5 N·10574 S·2MiB "BH:..ae2,v17231":"blo..ore,v11348"
+12:14:45.594325 version@stat F·[2] S·5MiB[5MiB] Sc·[0.50]
+12:14:45.597832 memdb@flush committed F·1 T·161.262708ms
+12:14:45.598356 journal@remove removed @2
+12:16:16.888689 table@compaction L0·2 -> L1·0 S·5MiB Q·22448
+12:16:16.942253 table@build created L1@6 N·11271 S·2MiB "BH:..ae2,v17231":"P:1281:0,v7683"
+12:16:16.977377 table@build created L1@7 N·2334 S·2MiB "P:1282:0,v7689":"P:3382:0,v20289"
+12:16:17.003097 table@build created L1@8 N·4663 S·1MiB "P:3383:0,v20295":"blo..ore,v21920"
+12:16:17.003182 version@stat F·[0 3] S·5MiB[0B 5MiB] Sc·[0.00 0.05]
+12:16:17.004754 table@compaction committed F+1 S+19KiB Ke·0 D·3652 T·116.005797ms
+12:16:17.006380 table@remove removed @5
+12:16:17.006711 table@remove removed @3
+12:31:28.525131 db@close closing
+12:31:28.526333 db@close done T·1.201789ms

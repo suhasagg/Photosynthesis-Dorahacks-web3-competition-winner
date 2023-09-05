@@ -1,0 +1,755 @@
+{"message":"2023-09-05 16:52:02"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 16:52:03"}
+{"message":"2023-09-05 16:52:03"}
+{"message":"2023-09-05 16:52:03"}
+{"message":"2023-09-05 16:54:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 16:54:02"}
+{"message":"2023-09-05 16:54:02"}
+{"message":"Total aggregate for contract archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7 exceeded 30 32. Removing lines..."}
+{"message":"2023-09-05 16:54:02"}
+{"message":"Cumulative Reward amount: 320000"}
+{"message":"2023-09-05 16:54:02"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 32"}
+{"message":"Reward Amount: 320000"}
+{"message":"2023-09-05 16:54:03"}
+{"message":"2023-09-05 16:54:03"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "01672C5CBA450BDA98255EF7644FE06F8EED74EA38D4FDD2F5171717BBD94FAA" }
+{"message":"2023-09-05 16:54:08"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7"}
+{ "balances": [ { "amount": "1000100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 16:54:13"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from --records-limit 32 --gas auto --gas-prices 0.082481000000000000uarch --gas-adjustment 1.4 -y"}
+null
+{"message":"2023-09-05 16:54:18"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7"}
+{ "balances": [ { "amount": "1000100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 16:54:24"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7 archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 320000uarch --from  --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-05 16:54:29"}
+{"message":"2023-09-05 16:56:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 16:56:03"}
+{"message":"2023-09-05 16:56:03"}
+{"message":"Total aggregate for contract archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s exceeded 30 36. Removing lines..."}
+{"message":"2023-09-05 16:56:03"}
+{"message":"Cumulative Reward amount: 360000"}
+{"message":"2023-09-05 16:56:03"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 36"}
+{"message":"Reward Amount: 360000"}
+{"message":"2023-09-05 16:56:03"}
+{"message":"2023-09-05 16:56:03"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "678D10EE6A623A68C0A64A9395224DD23C96D063E05FAEDA2F58F726C2AC74F3" }
+{"message":"2023-09-05 16:56:08"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "2000100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 16:56:14"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 36 --gas auto --gas-prices 0.082483000000000000uarch --gas-adjustment 1.4 -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "B2E2E0F2BE9CB7069B41FB51C5C4E4433596377AC9130EC33543C6D6B83A32E2" }
+{"message":"2023-09-05 16:56:19"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "1992940", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 16:56:24"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 360000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "0B45E7CAF9A1B66A93CE4B81F4112F635C5E7C0DCC4C6575603D3876C205872F" }
+{"message":"2023-09-05 16:56:30"}
+{"message":"2023-09-05 16:58:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 16:58:03"}
+{"message":"2023-09-05 16:58:03"}
+{"message":"Total aggregate for contract archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s exceeded 30 83. Removing lines..."}
+{"message":"2023-09-05 16:58:03"}
+{"message":"Cumulative Reward amount: 830000"}
+{"message":"2023-09-05 16:58:03"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 83"}
+{"message":"Reward Amount: 830000"}
+{"message":"2023-09-05 16:58:03"}
+{"message":"2023-09-05 16:58:03"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "5B4C8871DCA10AEFD37315BFB3D041447BB24376A4F76C268D56594B9894D79C" }
+{"message":"2023-09-05 16:58:08"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "2615940", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 16:58:13"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 83 --gas auto --gas-prices 0.082485000000000000uarch --gas-adjustment 1.4 -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "DD45D06E5529C2274933CCAF0B16C5623FDCD6342E7DA015630D778F61FD0CDB" }
+{"message":"2023-09-05 16:58:19"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "2609550", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 16:58:25"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 830000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "39895D8C2804109586F082DC4ABBF03C10CA496F8A8EDCA2BD10337F6878F2AA" }
+{"message":"2023-09-05 16:58:30"}
+{"message":"2023-09-05 17:00:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 17:00:02"}
+{"message":"2023-09-05 17:00:02"}
+{"message":"Total aggregate for contract archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s exceeded 30 144. Removing lines..."}
+{"message":"2023-09-05 17:00:02"}
+{"message":"Cumulative Reward amount: 1440000"}
+{"message":"2023-09-05 17:00:02"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 144"}
+{"message":"Reward Amount: 1440000"}
+{"message":"2023-09-05 17:00:02"}
+{"message":"2023-09-05 17:00:02"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "E7B8C1CA0D4E6643658A141CC4A906F2C03411D0462C0A91E2815200BDC0FABE" }
+{"message":"2023-09-05 17:00:08"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "2762550", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:00:13"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 144 --gas auto --gas-prices 0.082486000000000000uarch --gas-adjustment 1.4 -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "D555C3A65083AD19DFC77A79207FD0C5FF05FE0D41128AF3FB1F2F960D0E1005" }
+{"message":"2023-09-05 17:00:19"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "2756158", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:00:24"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 1440000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "9DC43F7269AE3E98F635FB5D1A1796C4A1BBCD08AF397F2B57B5505769AF94F2" }
+{"message":"2023-09-05 17:00:30"}
+{"message":"2023-09-05 17:02:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 17:02:03"}
+{"message":"2023-09-05 17:02:03"}
+{"message":"Total aggregate for contract archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7 exceeded 30 396. Removing lines..."}
+{"message":"2023-09-05 17:02:03"}
+{"message":"Cumulative Reward amount: 3960000"}
+{"message":"2023-09-05 17:02:03"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 396"}
+{"message":"Reward Amount: 3960000"}
+{"message":"2023-09-05 17:02:03"}
+{"message":"2023-09-05 17:02:03"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "0BB3E78557606D229B95BE2E728FBEEF5D3DABB3C5D9AF08C7A833A807ABA86C" }
+{"message":"2023-09-05 17:02:09"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7"}
+{ "balances": [ { "amount": "2000100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:02:14"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from --records-limit 396 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y"}
+null
+{"message":"2023-09-05 17:02:19"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7"}
+{ "balances": [ { "amount": "2000100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:02:25"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7 archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 3960000uarch --from  --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-05 17:02:30"}
+{"message":"2023-09-05 17:04:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 17:04:03"}
+{"message":"2023-09-05 17:04:03"}
+{"message":"Total aggregate for contract archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s exceeded 30 251. Removing lines..."}
+{"message":"2023-09-05 17:04:03"}
+{"message":"Cumulative Reward amount: 2510000"}
+{"message":"2023-09-05 17:04:03"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 251"}
+{"message":"Reward Amount: 2510000"}
+{"message":"2023-09-05 17:04:03"}
+{"message":"2023-09-05 17:04:03"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "56318DF01A5A8371274EBA8973F5F17104D8EB7E53018A4FC532C21E7D8E7123" }
+{"message":"2023-09-05 17:04:08"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "2299158", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:04:13"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 251 --gas auto --gas-prices 0.082490000000000000uarch --gas-adjustment 1.4 -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "457F5CEB6E1CC3A2453D8446AF83D4B3D593B4565C4CFE3D159AA8EAB67CFFB2" }
+{"message":"2023-09-05 17:04:19"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "2292766", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:04:25"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 2510000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "80662EB4D69C3C8C9D1C733ECE8E70AA03EECDD38D32980CB3BFB2CA9A6FC051" }
+{"message":"2023-09-05 17:04:30"}
+{"message":"2023-09-05 17:06:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 17:06:03"}
+{"message":"2023-09-05 17:06:03"}
+{"message":"Total aggregate for contract archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s exceeded 30 302. Removing lines..."}
+{"message":"2023-09-05 17:06:03"}
+{"message":"Cumulative Reward amount: 3020000"}
+{"message":"2023-09-05 17:06:03"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 302"}
+{"message":"Reward Amount: 3020000"}
+{"message":"2023-09-05 17:06:03"}
+{"message":"2023-09-05 17:06:03"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "CE2D17D01CBEED8A6E60CE1EEEFF97E8BE36245D8FD7DF86E95507DDAEE10FB8" }
+{"message":"2023-09-05 17:06:09"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "3275766", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:06:14"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 302 --gas auto --gas-prices 0.082492000000000000uarch --gas-adjustment 1.4 -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "4BD6457283FFD04DEB903AE0A39759D49276AC2C9475E19B77B42A4604FB50C5" }
+{"message":"2023-09-05 17:06:20"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "3269374", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:06:26"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 3020000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "4685BA330CD947469AFDF1F930D0C7E0AA943195494EC74953C493296DEB53E3" }
+{"message":"2023-09-05 17:06:31"}
+{"message":"2023-09-05 17:08:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 17:08:03"}
+{"message":"2023-09-05 17:08:03"}
+{"message":"Total aggregate for contract archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s exceeded 30 359. Removing lines..."}
+{"message":"2023-09-05 17:08:03"}
+{"message":"Cumulative Reward amount: 3590000"}
+{"message":"2023-09-05 17:08:03"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 359"}
+{"message":"Reward Amount: 3590000"}
+{"message":"2023-09-05 17:08:04"}
+{"message":"2023-09-05 17:08:04"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "A5CCBBD03FD16215FAB269FABC24AF997BA62833A36601F098C4F80F16F1F61F" }
+{"message":"2023-09-05 17:08:09"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "1232374", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:08:14"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 359 --gas auto --gas-prices 0.082493000000000000uarch --gas-adjustment 1.4 -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "710AF1E2C41632228519B2D08B099958BF1296289254033010D7692A8DA392D5" }
+{"message":"2023-09-05 17:08:20"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "1225982", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:08:26"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 3590000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "E262E166C3B0653D08559415B0D6FFFC12B75CC9C85268F06E2751C3AC7264B7" }
+{"message":"2023-09-05 17:08:31"}
+{"message":"2023-09-05 17:10:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 17:10:03"}
+{"message":"2023-09-05 17:10:03"}
+{"message":"Total aggregate for contract archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s exceeded 30 424. Removing lines..."}
+{"message":"2023-09-05 17:10:03"}
+{"message":"Cumulative Reward amount: 4240000"}
+{"message":"2023-09-05 17:10:03"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 424"}
+{"message":"Reward Amount: 4240000"}
+{"message":"2023-09-05 17:10:03"}
+{"message":"2023-09-05 17:10:03"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "8DF45BE99D7C6CBA744594AF7B5621FF2C5758A84C7FD0AC7E59C1E3B910084C" }
+{"message":"2023-09-05 17:10:09"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "2208982", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:10:15"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 424 --gas auto --gas-prices 0.082495000000000000uarch --gas-adjustment 1.4 -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "D4B08F69141437B711322C97465CA9B2C2E1E865B8D76F950D76B452D22290F7" }
+{"message":"2023-09-05 17:10:21"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "2202590", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:10:27"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 4240000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "FCFAEDEF725D2FB83027234B49A76B91ED5CB27C6EB75C18FC390D4668FB84BD" }
+{"message":"2023-09-05 17:10:32"}
+{"message":"2023-09-05 17:12:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 17:12:03"}
+{"message":"2023-09-05 17:12:03"}
+{"message":"Total aggregate for contract archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s exceeded 30 485. Removing lines..."}
+{"message":"2023-09-05 17:12:04"}
+{"message":"Cumulative Reward amount: 4850000"}
+{"message":"2023-09-05 17:12:04"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 485"}
+{"message":"Reward Amount: 4850000"}
+{"message":"2023-09-05 17:12:04"}
+{"message":"2023-09-05 17:12:04"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "BF827331A01F36B9CFAFF42E64E4900C30530188F77DA4B181A4585EF7C95340" }
+{"message":"2023-09-05 17:12:10"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "3185590", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:12:16"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 485 --gas auto --gas-prices 0.082497000000000000uarch --gas-adjustment 1.4 -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "505F88B41166A8640622CE560EC4C792B48707D970BAB805BDE7CD184FC32971" }
+{"message":"2023-09-05 17:12:22"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "3179198", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:12:28"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 4850000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "B229EC020F1E3B19FCE5624CB19EAF38BE178A3C5D56D783B45807FCB799289A" }
+{"message":"2023-09-05 17:12:33"}
+{"message":"2023-09-05 17:14:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 17:14:03"}
+{"message":"2023-09-05 17:14:03"}
+{"message":"Total aggregate for contract archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7 exceeded 30 1068. Removing lines..."}
+{"message":"2023-09-05 17:14:03"}
+{"message":"Cumulative Reward amount: 10680000"}
+{"message":"2023-09-05 17:14:03"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 1068"}
+{"message":"Reward Amount: 10680000"}
+{"message":"2023-09-05 17:14:03"}
+{"message":"2023-09-05 17:14:03"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "2C28280243C66A53CCCC0CFC6A0A0036D5B55C48E39E957BB2B0994AB0C9595F" }
+{"message":"2023-09-05 17:14:09"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7"}
+{ "balances": [ { "amount": "3000100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:14:14"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from --records-limit 1068 --gas auto --gas-prices 0.082499000000000000uarch --gas-adjustment 1.4 -y"}
+null
+{"message":"2023-09-05 17:14:20"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7"}
+{ "balances": [ { "amount": "3000100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:14:26"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7 archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 10680000uarch --from  --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-05 17:14:32"}
+{"message":"2023-09-05 17:16:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 17:16:03"}
+{"message":"2023-09-05 17:16:03"}
+{"message":"Total aggregate for contract archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s exceeded 30 564. Removing lines..."}
+{"message":"2023-09-05 17:16:04"}
+{"message":"Cumulative Reward amount: 5640000"}
+{"message":"2023-09-05 17:16:04"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 564"}
+{"message":"Reward Amount: 5640000"}
+{"message":"2023-09-05 17:16:04"}
+{"message":"2023-09-05 17:16:04"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "9173B50F13809FD330D12919F91397192E0417D0EF208A2F2273EC0E5272F773" }
+{"message":"2023-09-05 17:16:10"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "4162198", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:16:16"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 564 --gas auto --gas-prices 0.082500000000000000uarch --gas-adjustment 1.4 -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "8C89B007B47241494EE7CBDAAE2E4F00F457DC95D24B73091053314662E80D42" }
+{"message":"2023-09-05 17:16:23"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "4155805", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:16:29"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 5640000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "ED8A7E48F4858EB24E99CF5DE17849F12DEA6E577C0BE882B939E23A89EE17B3" }
+{"message":"2023-09-05 17:16:35"}
+{"message":"2023-09-05 17:18:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 17:18:04"}
+{"message":"2023-09-05 17:18:04"}
+{"message":"Total aggregate for contract archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7 exceeded 30 1190. Removing lines..."}
+{"message":"2023-09-05 17:18:04"}
+{"message":"Cumulative Reward amount: 11900000"}
+{"message":"2023-09-05 17:18:04"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 1190"}
+{"message":"Reward Amount: 11900000"}
+{"message":"2023-09-05 17:18:04"}
+{"message":"2023-09-05 17:18:04"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "874F70351DDAFFB3ED2DE0C28054206BB04EA81329DA4835E5DDCC14ABDFC9E9" }
+{"message":"2023-09-05 17:18:10"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7"}
+{ "balances": [ { "amount": "4000100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:18:17"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from --records-limit 1190 --gas auto --gas-prices 0.082502000000000000uarch --gas-adjustment 1.4 -y"}
+null
+{"message":"2023-09-05 17:18:23"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7"}
+{ "balances": [ { "amount": "4000100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:18:29"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1h6r7jwqvjx7hxvpf6y962yrfgkyxgq0dt4k0k7 archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 11900000uarch --from  --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-05 17:18:34"}
+{"message":"2023-09-05 17:20:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 17:20:03"}
+{"message":"2023-09-05 17:20:03"}
+{"message":"Total aggregate for contract archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s exceeded 30 628. Removing lines..."}
+{"message":"2023-09-05 17:20:03"}
+{"message":"Cumulative Reward amount: 6280000"}
+{"message":"2023-09-05 17:20:03"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 628"}
+{"message":"Reward Amount: 6280000"}
+{"message":"2023-09-05 17:20:03"}
+{"message":"2023-09-05 17:20:03"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "0AAA743A493E694CED17376D51F857D5AD1764AB573D8BD6126F81AE79868DF6" }
+{"message":"2023-09-05 17:20:09"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "5138805", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:20:15"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 628 --gas auto --gas-prices 0.082504000000000000uarch --gas-adjustment 1.4 -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "AFFD00373C8038BDAB7361F142A616798930C20FF37B40E8F44DFC5DAC4F0FC5" }
+{"message":"2023-09-05 17:20:22"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "5132412", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:20:28"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 6280000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "BD25266F1070FDCCC545467951D33FC54605B54D9431AD7D0C74AF7AAAA81793" }
+{"message":"2023-09-05 17:20:35"}
+{"message":"2023-09-05 17:22:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 17:22:04"}
+{"message":"2023-09-05 17:22:04"}
+{"message":"Total aggregate for contract archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s exceeded 30 672. Removing lines..."}
+{"message":"2023-09-05 17:22:04"}
+{"message":"Cumulative Reward amount: 6720000"}
+{"message":"2023-09-05 17:22:04"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 672"}
+{"message":"Reward Amount: 6720000"}
+{"message":"2023-09-05 17:22:04"}
+{"message":"2023-09-05 17:22:04"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "1A5E55EF1846E6D270BE1F04074555A5D06C0EE7C1CB90DFEFD1E904D75245C0" }
+{"message":"2023-09-05 17:22:10"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "6115412", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:22:16"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 672 --gas auto --gas-prices 0.082506000000000000uarch --gas-adjustment 1.4 -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "8B5BFB32F99A21F000D5E2E2F2C213FC516B9C860B99E5DEAFAAA64634A7D972" }
+{"message":"2023-09-05 17:22:23"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "6109019", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:22:29"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 6720000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "FF6DC8035F1F48139D8EC2FC738AD482C3FED0B959E3B2A87D18363947090DB4" }
+{"message":"2023-09-05 17:22:36"}
+{"message":"2023-09-05 17:24:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 17:24:04"}
+{"message":"2023-09-05 17:24:04"}
+{"message":"Total aggregate for contract archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s exceeded 30 704. Removing lines..."}
+{"message":"2023-09-05 17:24:04"}
+{"message":"Cumulative Reward amount: 7040000"}
+{"message":"2023-09-05 17:24:04"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 704"}
+{"message":"Reward Amount: 7040000"}
+{"message":"2023-09-05 17:24:05"}
+{"message":"2023-09-05 17:24:05"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "2D98D3FF51EC94BF4FA3B8C3E5C7866D354E2D1A7C69EA18CCDBE6DFD98AC531" }
+{"message":"2023-09-05 17:24:11"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "7092019", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:24:17"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 704 --gas auto --gas-prices 0.082507000000000000uarch --gas-adjustment 1.4 -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "C1387FABABE4BD952028EB8EEE99F0052F14F14DD32E5BBC07508E5BFAC6B052" }
+{"message":"2023-09-05 17:24:24"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+{ "balances": [ { "amount": "7085626", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-05 17:24:30"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 7040000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "C32235D950088DB540D12987157DE8AA64B92CB609685551C967753F5158A8D0" }
+{"message":"2023-09-05 17:24:36"}
+{"message":"2023-09-05 18:02:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 18:02:03"}
+{"message":"2023-09-05 18:02:03"}
+{"message":"Total aggregate for contract archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s exceeded 30 743. Removing lines..."}
+{"message":"2023-09-05 18:02:03"}
+{"message":"Cumulative Reward amount: 7430000"}
+{"message":"2023-09-05 18:02:03"}
+{"message":"Iterations: 0"}
+{"message":"Remaining Record Limit: 743"}
+{"message":"Reward Amount: 7430000"}
+{"message":"2023-09-05 18:02:03"}
+{"message":"2023-09-05 18:02:03"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-05 18:02:08"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+null
+{"message":"2023-09-05 18:02:14"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 743 --gas auto --gas-prices --gas-adjustment 1.4 -y"}
+null
+{"message":"2023-09-05 18:02:19"}
+{"message":"archway account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s"}
+null
+{"message":"2023-09-05 18:02:24"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1tqh2mmg4sxk4h4nrmxgsle6geykn9fkr97946s archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 7430000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-05 18:02:29"}
+{"message":"2023-09-05 18:04:02"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 18:04:03"}
+{"message":"2023-09-05 18:04:03"}
+{"message":"2023-09-05 18:04:03"}
+{"message":"2023-09-05 18:06:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 18:06:02"}
+{"message":"2023-09-05 18:06:02"}
+{"message":"2023-09-05 18:06:02"}
+{"message":"2023-09-05 18:08:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 18:08:03"}
+{"message":"2023-09-05 18:08:03"}
+{"message":"2023-09-05 18:08:03"}
+{"message":"2023-09-05 18:10:01"}
+{"message":"Read key: l111"}
+{"message":"Read key: l211"}
+{"message":"Read key: l311"}
+{"message":"Read key: l411"}
+{"message":"Read key: prev1"}
+{"message":"Read key: pval1"}
+{"message":"Read key: pval2"}
+{"message":"Read key: pval3"}
+{"message":"Read key: pval4"}
+{"message":"Read key: pval5"}
+{"message":"Read key: rly0"}
+{"message":"2023-09-05 18:10:02"}
+{"message":"2023-09-05 18:10:02"}
+{"message":"2023-09-05 18:10:02"}
