@@ -1,272 +1,346 @@
 strided binary
 archwayd binary
-{"message":"2023-09-05 16:52:03"}
+{"message":"2023-09-06 09:50:05"}
 /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/enableredeemstake does not exist.
 strided binary
 archwayd binary
-{"message":"2023-09-05 16:58:02"}
+{"message":"2023-09-06 10:20:02"}
 /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/enableredeemstake does not exist.
 strided binary
 archwayd binary
-{"message":"2023-09-05 17:08:02"}
+{"message":"2023-09-06 10:50:01"}
 /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/enableredeemstake exists.
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1e99wzc3ktu25dgj9gfej9nll83zk7pn7px94aa --chain-id localnet"}
-{ "balances": [ { "amount": "1306647", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "1000100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:08:05"}
-{"message":"2023-09-05 17:08:05"}
-{"message":"2023-09-05 17:08:05"}
-{"message":"total redemption amount: 1306647"}
-{"message":"Amount: 1306647"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send  archway1e99wzc3ktu25dgj9gfej9nll83zk7pn7px94aa archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m 1306647ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from l311 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
-{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "33BFBCE4469BF95083ECF2E74CD0F0E53DB04F11B10EDD44DE59AFA0A84A4D81" }
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1hydz55zy59md6x7jy9e00qdyk4rqk00t83z93a --chain-id localnet"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1mttwtv6pdx2anl9pse3lfmqmswnhgna52hh85d --chain-id localnet"}
+{ "balances": [ { "amount": "182835", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "1000100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 10:50:04"}
+{"message":"2023-09-06 10:50:04"}
+{"message":"2023-09-06 10:50:04"}
+{"message":"total redemption amount: 182835"}
+{"message":"Amount: 182835"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send  archway1mttwtv6pdx2anl9pse3lfmqmswnhgna52hh85d archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m 182835ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from l311 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "CD52ABF963B4B3119D60BD5357C8C59585FE43168D474D5ABF164654A80646A9" }
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1muhrlnxwymvvyag8fac6t4amxnv4ezq66x4cah --chain-id localnet"}
 { "balances": [ { "amount": "100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:08:13"}
-{"message":"2023-09-05 17:08:13"}
-{"message":"2023-09-05 17:08:13"}
-{"message":"2023-09-05 17:08:13"}
-{"message":"2023-09-05 17:08:13"}
-{"message":"2023-09-05 17:08:13"}
-{"message":"2023-09-05 17:08:14"}
-{"message":"2023-09-05 17:08:16"}
+{"message":"2023-09-06 10:50:12"}
+{"message":"2023-09-06 10:50:12"}
+{"message":"2023-09-06 10:50:12"}
+{"message":"2023-09-06 10:50:12"}
+{"message":"2023-09-06 10:50:12"}
+{"message":"2023-09-06 10:50:12"}
+{"message":"2023-09-06 10:50:12"}
+{"message":"2023-09-06 10:50:15"}
 {"message":"archway liquidity account balance"}
 {"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
-{ "balances": [ { "amount": "9270570", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9993886000", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:08:16"}
-{"message":"2023-09-05 17:08:18"}
+{ "balances": [ { "amount": "1310000", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9998306000", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 10:50:15"}
+{"message":"2023-09-06 10:50:17"}
 {"message":"Attempt 1: Executing archwayd command"}
-{"message":"2023-09-05 17:08:18"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 1306647ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend test -y --gas auto --gas-prices 0.082494000000000000uarch --gas-adjustment 1.4"}
-{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "0F9409071F711E5742E28F1584D1D97E7413C651BE82BF9B071F87262ECD1BB5" }
+{"message":"2023-09-06 10:50:17"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 182835ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend test -y --gas auto --gas-prices 0.082547000000000000uarch --gas-adjustment 1.4"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "4F8D4D247D85A3F88E745D808CC0A6AAAF37B80B545C083E8F9CFC7D6BA177E6" }
 {"message":"Archwayd command executed successfully."}
-{"message":"2023-09-05 17:08:23"}
+{"message":"2023-09-06 10:50:22"}
 {"message":"strided redeem stake"}
-{"message":"Attempt 1: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 1306647 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y'"}
-{"message":"2023-09-05 17:08:23"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 1306647 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y"}
-{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "49193593900CD8F997B3B3B1DFCF902A8FBF755DD5C0A168402CDB3CD20CC892" }
+{"message":"Attempt 1: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 182835 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y'"}
+{"message":"2023-09-06 10:50:22"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 182835 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "9323EE1846B530358FD933914987CA9310875C8A1C8449AD70B2A69E8044E2FE" }
 {"message":"Command executed successfully."}
-{"message":"2023-09-05 17:08:28"}
+{"message":"2023-09-06 10:50:26"}
 {"message":"archway balance uarch"}
 {"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
-{ "balances": [ { "amount": "7963923", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9993772860", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:08:32"}
-{"message":"2023-09-05 17:08:32"}
-{"message":"Amount before claim: 9993772860"}
-{"message":"2023-09-05 17:08:32"}
+{ "balances": [ { "amount": "1127165", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9998292863", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 10:58:46"}
+{"message":"2023-09-06 10:58:46"}
+{"message":"Amount before claim: 9998292863"}
+{"message":"2023-09-06 10:58:47"}
 {"message":"list user redemption  record"}
 {"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-user-redemption-record -o=json"}
-{ "user_redemption_record": [ { "id": "localnet.17.stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8", "sender": "stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8", "receiver": "archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m", "amount": "1328410", "denom": "uarch", "host_zone_id": "localnet", "epoch_number": "17", "claim_is_pending": false } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:08:37"}
+{ "user_redemption_record": [ { "id": "localnet.53.stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8", "sender": "stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8", "receiver": "archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m", "amount": "196853", "denom": "uarch", "host_zone_id": "localnet", "epoch_number": "53", "claim_is_pending": false } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 10:59:17"}
 {"message":"list epoch unbonding record"}
 {"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-epoch-unbonding-record -o=json"}
-{ "epoch_unbonding_record": [ { "epoch_number": "17", "host_zone_unbondings": [ { "st_token_amount": "0", "native_token_amount": "0", "denom": "uatom", "host_zone_id": "GAIA", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] }, { "st_token_amount": "1306647", "native_token_amount": "1328410", "denom": "uarch", "host_zone_id": "localnet", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [ "localnet.17.stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8" ] } ] } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:08:41"}
-{"message":"2023-09-05 17:08:41"}
-{"message":"2023-09-05 17:08:41"}
-{"message":"archway redeemed uarch"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
-{ "balances": [ { "amount": "14435634", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9993392860", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:09:16"}
-{"message":"Amount after claim: 9993392860"}
-{"message":"2023-09-05 17:09:16"}
-{"message":"Last line of file is: \u0006"}
-{"message":"Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemepoch"}
-{"message":"2023-09-05 17:09:16"}
-strided binary
-archwayd binary
-{"message":"2023-09-05 17:16:02"}
-/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/enableredeemstake exists.
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1e99wzc3ktu25dgj9gfej9nll83zk7pn7px94aa --chain-id localnet"}
-{ "balances": [ { "amount": "983100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:16:05"}
-{"message":"2023-09-05 17:16:05"}
-{"message":"2023-09-05 17:16:05"}
-{"message":"2023-09-05 17:16:05"}
-{"message":"2023-09-05 17:16:05"}
-{"message":"2023-09-05 17:16:05"}
-{"message":"2023-09-05 17:16:05"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1hydz55zy59md6x7jy9e00qdyk4rqk00t83z93a --chain-id localnet"}
-{ "balances": [ { "amount": "100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:16:08"}
-{"message":"2023-09-05 17:16:08"}
-{"message":"2023-09-05 17:16:08"}
-{"message":"2023-09-05 17:16:08"}
-{"message":"2023-09-05 17:16:08"}
-{"message":"2023-09-05 17:16:08"}
-{"message":"2023-09-05 17:16:08"}
-{"message":"2023-09-05 17:16:10"}
-{"message":"archway liquidity account balance"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
-{ "balances": [ { "amount": "23256850", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9990392860", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:16:11"}
-{"message":"2023-09-05 17:16:13"}
-{"message":"Attempt 1: Executing archwayd command"}
-{"message":"2023-09-05 17:16:13"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 0ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend test -y --gas auto --gas-prices 0.082500000000000000uarch --gas-adjustment 1.4"}
-null
-{"message":"Archwayd command executed successfully."}
-{"message":"2023-09-05 17:16:18"}
-{"message":"strided redeem stake"}
-{"message":"Attempt 1: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 0 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y'"}
-{"message":"2023-09-05 17:16:18"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 0 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y"}
-null
-{"message":"Command executed successfully."}
-{"message":"2023-09-05 17:16:23"}
-{"message":"archway balance uarch"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
-{ "balances": [ { "amount": "23256850", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9990312860", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:16:27"}
-{"message":"2023-09-05 17:16:27"}
-{"message":"Amount before claim: 9990312860"}
-{"message":"2023-09-05 17:16:27"}
-{"message":"list user redemption  record"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-user-redemption-record -o=json"}
-{ "user_redemption_record": [ { "id": "localnet.17.stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8", "sender": "stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8", "receiver": "archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m", "amount": "1328410", "denom": "uarch", "host_zone_id": "localnet", "epoch_number": "17", "claim_is_pending": false } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:16:32"}
-{"message":"list epoch unbonding record"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-epoch-unbonding-record -o=json"}
-{ "epoch_unbonding_record": [ { "epoch_number": "17", "host_zone_unbondings": [ { "st_token_amount": "0", "native_token_amount": "0", "denom": "uatom", "host_zone_id": "GAIA", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] }, { "st_token_amount": "1306647", "native_token_amount": "1328410", "denom": "uarch", "host_zone_id": "localnet", "unbonding_time": "1693914123128551820", "status": "CLAIMABLE", "user_redemption_records": [ "localnet.17.stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8" ] } ] }, { "epoch_number": "21", "host_zone_unbondings": [ { "st_token_amount": "0", "native_token_amount": "0", "denom": "uatom", "host_zone_id": "GAIA", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] }, { "st_token_amount": "0", "native_token_amount": "0", "denom": "uarch", "host_zone_id": "localnet", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] } ] } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:16:36"}
-{"message":"2023-09-05 17:16:36"}
+{ "epoch_unbonding_record": [ { "epoch_number": "53", "host_zone_unbondings": [ { "st_token_amount": "0", "native_token_amount": "0", "denom": "uatom", "host_zone_id": "GAIA", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] }, { "st_token_amount": "182835", "native_token_amount": "196853", "denom": "uarch", "host_zone_id": "localnet", "unbonding_time": "1693977780597185363", "status": "CLAIMABLE", "user_redemption_records": [ "localnet.53.stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8" ] } ] }, { "epoch_number": "58", "host_zone_unbondings": [ { "st_token_amount": "0", "native_token_amount": "0", "denom": "uatom", "host_zone_id": "GAIA", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] }, { "st_token_amount": "0", "native_token_amount": "0", "denom": "uarch", "host_zone_id": "localnet", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] } ] } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 10:59:21"}
+{"message":"2023-09-06 10:59:21"}
 {"message":"Hostzone: localnet"}
-{"message":"Epoch: 17"}
+{"message":"Epoch: 53"}
 {"message":"Stride Address: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"}
 {"message":"claim undelegated tokens"}
 Attempting to claim undelegated tokens...
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc claim-undelegated-tokens localnet 17 stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 --from admin --keyring-backend test --chain-id STRIDE -y"}
-{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "42C6860E1A822C65AE4283E36919419C24178A06966AFD5F91D6EB6EA13329E6" }
-{"message":"Transaction hash for claim undelegated tokens: 42C6860E1A822C65AE4283E36919419C24178A06966AFD5F91D6EB6EA13329E6"}
-{"message":"2023-09-05 17:16:45"}
-{"message":"2023-09-05 17:16:46"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc claim-undelegated-tokens localnet 53 stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 --from admin --keyring-backend test --chain-id STRIDE -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "FB4DD2EEBF72CE279FE6F6B9CF1BFD07C2E3F4F7FB0970B23D28147A7D71C9C1" }
+{"message":"Transaction hash for claim undelegated tokens: FB4DD2EEBF72CE279FE6F6B9CF1BFD07C2E3F4F7FB0970B23D28147A7D71C9C1"}
+{"message":"2023-09-06 10:59:30"}
+{"message":"2023-09-06 10:59:30"}
 {"message":"archway redeemed uarch"}
 {"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
-{ "balances": [ { "amount": "23256850", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9991301270", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:17:21"}
-{"message":"Amount after claim: 9991301270"}
-{"message":"2023-09-05 17:17:21"}
-{"message":"Last line of file is: \b"}
+{ "balances": [ { "amount": "1127165", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9998489716", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 11:04:34"}
+{"message":"Amount after claim: 9998489716"}
+{"message":"2023-09-06 11:04:34"}
+{"message":"Last line of file is: \u0015"}
 {"message":"Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemepoch"}
-{"message":"2023-09-05 17:17:21"}
+{"message":"2023-09-06 11:04:35"}
 strided binary
 archwayd binary
-{"message":"2023-09-05 17:22:02"}
+{"message":"2023-09-06 11:20:02"}
 /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/enableredeemstake exists.
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1e99wzc3ktu25dgj9gfej9nll83zk7pn7px94aa --chain-id localnet"}
-{ "balances": [ { "amount": "983100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:22:06"}
-{"message":"2023-09-05 17:22:06"}
-{"message":"2023-09-05 17:22:06"}
-{"message":"2023-09-05 17:22:06"}
-{"message":"2023-09-05 17:22:06"}
-{"message":"2023-09-05 17:22:06"}
-{"message":"2023-09-05 17:22:06"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1hydz55zy59md6x7jy9e00qdyk4rqk00t83z93a --chain-id localnet"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1mttwtv6pdx2anl9pse3lfmqmswnhgna52hh85d --chain-id localnet"}
+{ "balances": [ { "amount": "804744", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "983100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 11:20:04"}
+{"message":"2023-09-06 11:20:04"}
+{"message":"2023-09-06 11:20:04"}
+{"message":"total redemption amount: 804744"}
+{"message":"Amount: 804744"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send  archway1mttwtv6pdx2anl9pse3lfmqmswnhgna52hh85d archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m 804744ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from l311 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "CE7AD46AC7939BF117893C46A678CE82709C8DE794E7F4A16647C0633F165847" }
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1muhrlnxwymvvyag8fac6t4amxnv4ezq66x4cah --chain-id localnet"}
 { "balances": [ { "amount": "100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:22:09"}
-{"message":"2023-09-05 17:22:09"}
-{"message":"2023-09-05 17:22:09"}
-{"message":"2023-09-05 17:22:09"}
-{"message":"2023-09-05 17:22:09"}
-{"message":"2023-09-05 17:22:09"}
-{"message":"2023-09-05 17:22:09"}
-{"message":"2023-09-05 17:22:11"}
+{"message":"2023-09-06 11:20:12"}
+{"message":"2023-09-06 11:20:12"}
+{"message":"2023-09-06 11:20:12"}
+{"message":"2023-09-06 11:20:12"}
+{"message":"2023-09-06 11:20:12"}
+{"message":"2023-09-06 11:20:12"}
+{"message":"2023-09-06 11:20:12"}
+{"message":"2023-09-06 11:20:14"}
 {"message":"archway liquidity account balance"}
 {"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
-{ "balances": [ { "amount": "56340470", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9986105100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:22:12"}
-{"message":"2023-09-05 17:22:14"}
+{ "balances": [ { "amount": "2018183", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9997772716", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 11:20:15"}
+{"message":"2023-09-06 11:20:17"}
 {"message":"Attempt 1: Executing archwayd command"}
-{"message":"2023-09-05 17:22:14"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 0ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend test -y --gas auto --gas-prices 0.082506000000000000uarch --gas-adjustment 1.4"}
-null
+{"message":"2023-09-06 11:20:17"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 804744ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend test -y --gas auto --gas-prices 0.082573000000000000uarch --gas-adjustment 1.4"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "A4F78550252F154AE3CF1E6631466BBA46520A32B73D0993517D23ABD64854A0" }
 {"message":"Archwayd command executed successfully."}
-{"message":"2023-09-05 17:22:20"}
+{"message":"2023-09-06 11:20:22"}
 {"message":"strided redeem stake"}
-{"message":"Attempt 1: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 0 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y'"}
-{"message":"2023-09-05 17:22:20"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 0 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y"}
-null
+{"message":"Attempt 1: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 804744 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y'"}
+{"message":"2023-09-06 11:20:22"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 804744 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "904228378FD93DE77BFB628C8C344ED6B72DE34A932B4245E92E629AFEBE5386" }
 {"message":"Command executed successfully."}
-{"message":"2023-09-05 17:22:24"}
+{"message":"2023-09-06 11:20:26"}
 {"message":"archway balance uarch"}
 {"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
-{ "balances": [ { "amount": "56340470", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9985985100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:22:29"}
-{"message":"2023-09-05 17:22:29"}
-{"message":"Amount before claim: 9985985100"}
-{"message":"2023-09-05 17:22:29"}
+{ "balances": [ { "amount": "1213439", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9997759568", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 11:28:47"}
+{"message":"2023-09-06 11:28:47"}
+{"message":"Amount before claim: 9997759568"}
+{"message":"2023-09-06 11:28:47"}
 {"message":"list user redemption  record"}
 {"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-user-redemption-record -o=json"}
-{ "user_redemption_record": [], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:22:34"}
+{ "user_redemption_record": [ { "id": "localnet.71.stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8", "sender": "stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8", "receiver": "archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m", "amount": "949138", "denom": "uarch", "host_zone_id": "localnet", "epoch_number": "71", "claim_is_pending": false } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 11:29:17"}
 {"message":"list epoch unbonding record"}
 {"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-epoch-unbonding-record -o=json"}
-{ "epoch_unbonding_record": [ { "epoch_number": "25", "host_zone_unbondings": [ { "st_token_amount": "0", "native_token_amount": "0", "denom": "uatom", "host_zone_id": "GAIA", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] }, { "st_token_amount": "0", "native_token_amount": "0", "denom": "uarch", "host_zone_id": "localnet", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] } ] } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:22:38"}
-{"message":"2023-09-05 17:22:38"}
-{"message":"2023-09-05 17:22:38"}
+{ "epoch_unbonding_record": [ { "epoch_number": "71", "host_zone_unbondings": [ { "st_token_amount": "0", "native_token_amount": "0", "denom": "uatom", "host_zone_id": "GAIA", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] }, { "st_token_amount": "804744", "native_token_amount": "949138", "denom": "uarch", "host_zone_id": "localnet", "unbonding_time": "1693979581053973254", "status": "CLAIMABLE", "user_redemption_records": [ "localnet.71.stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8" ] } ] }, { "epoch_number": "76", "host_zone_unbondings": [ { "st_token_amount": "0", "native_token_amount": "0", "denom": "uatom", "host_zone_id": "GAIA", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] }, { "st_token_amount": "0", "native_token_amount": "0", "denom": "uarch", "host_zone_id": "localnet", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] } ] } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 11:29:21"}
+{"message":"2023-09-06 11:29:21"}
+{"message":"Hostzone: localnet"}
+{"message":"Epoch: 71"}
+{"message":"Stride Address: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"}
+{"message":"claim undelegated tokens"}
+Attempting to claim undelegated tokens...
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc claim-undelegated-tokens localnet 71 stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 --from admin --keyring-backend test --chain-id STRIDE -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "3092108D0CFD81EC4DEEAD346FE6E7EAA87A4D9FBB7B885AECED3AE9CFB7372B" }
+{"message":"Transaction hash for claim undelegated tokens: 3092108D0CFD81EC4DEEAD346FE6E7EAA87A4D9FBB7B885AECED3AE9CFB7372B"}
+{"message":"2023-09-06 11:29:30"}
+{"message":"2023-09-06 11:29:30"}
 {"message":"archway redeemed uarch"}
 {"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
-{ "balances": [ { "amount": "56340470", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9985685100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
-{"message":"2023-09-05 17:23:13"}
-{"message":"Amount after claim: 9985685100"}
-{"message":"2023-09-05 17:23:14"}
-{"message":"Last line of file is: \t"}
+{ "balances": [ { "amount": "1213439", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9998708706", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 11:34:34"}
+{"message":"Amount after claim: 9998708706"}
+{"message":"2023-09-06 11:34:34"}
+{"message":"Last line of file is: \u001b"}
 {"message":"Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemepoch"}
-{"message":"2023-09-05 17:23:14"}
+{"message":"2023-09-06 11:34:35"}
 strided binary
 archwayd binary
-{"message":"2023-09-05 18:08:03"}
+{"message":"2023-09-06 11:50:01"}
 /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/enableredeemstake exists.
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1e99wzc3ktu25dgj9gfej9nll83zk7pn7px94aa --chain-id localnet"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1mttwtv6pdx2anl9pse3lfmqmswnhgna52hh85d --chain-id localnet"}
+{ "balances": [ { "amount": "804744", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "966100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 11:50:04"}
+{"message":"2023-09-06 11:50:04"}
+{"message":"2023-09-06 11:50:04"}
+{"message":"total redemption amount: 804744"}
+{"message":"Amount: 804744"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send  archway1mttwtv6pdx2anl9pse3lfmqmswnhgna52hh85d archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m 804744ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from l311 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "999DFBCED7F961D361105A028F862C3FBC24C7291149705B2DBE0D6BAC0F36E6" }
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1muhrlnxwymvvyag8fac6t4amxnv4ezq66x4cah --chain-id localnet"}
+{ "balances": [ { "amount": "100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 11:50:11"}
+{"message":"2023-09-06 11:50:11"}
+{"message":"2023-09-06 11:50:12"}
+{"message":"2023-09-06 11:50:12"}
+{"message":"2023-09-06 11:50:12"}
+{"message":"2023-09-06 11:50:12"}
+{"message":"2023-09-06 11:50:12"}
+{"message":"2023-09-06 11:50:14"}
+{"message":"archway liquidity account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
+{ "balances": [ { "amount": "2300577", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9997991706", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 11:50:14"}
+{"message":"2023-09-06 11:50:16"}
+{"message":"Attempt 1: Executing archwayd command"}
+{"message":"2023-09-06 11:50:16"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 804744ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend test -y --gas auto --gas-prices 0.082599000000000000uarch --gas-adjustment 1.4"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "6B3AED287B53C741EC2D671CF92C7E6A7D315B9E36ACAEAD2564859D6D1248AE" }
+{"message":"Archwayd command executed successfully."}
+{"message":"2023-09-06 11:50:21"}
+{"message":"strided redeem stake"}
+{"message":"Attempt 1: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 804744 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y'"}
+{"message":"2023-09-06 11:50:21"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 804744 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "D6DC64F0D958E2F213D2282E8C9608F84AE66EF91EDB5ED957BE384831D0F1C8" }
+{"message":"Command executed successfully."}
+{"message":"2023-09-06 11:50:25"}
+{"message":"archway balance uarch"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
+{ "balances": [ { "amount": "1495833", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9997978550", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 11:58:46"}
+{"message":"2023-09-06 11:58:46"}
+{"message":"Amount before claim: 9997978550"}
+{"message":"2023-09-06 11:58:46"}
+{"message":"list user redemption  record"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-user-redemption-record -o=json"}
+{ "user_redemption_record": [ { "id": "localnet.89.stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8", "sender": "stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8", "receiver": "archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m", "amount": "1043172", "denom": "uarch", "host_zone_id": "localnet", "epoch_number": "89", "claim_is_pending": false } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 11:59:16"}
+{"message":"list epoch unbonding record"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-epoch-unbonding-record -o=json"}
+{ "epoch_unbonding_record": [ { "epoch_number": "89", "host_zone_unbondings": [ { "st_token_amount": "0", "native_token_amount": "0", "denom": "uatom", "host_zone_id": "GAIA", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] }, { "st_token_amount": "804744", "native_token_amount": "1043172", "denom": "uarch", "host_zone_id": "localnet", "unbonding_time": "1693981380823575760", "status": "CLAIMABLE", "user_redemption_records": [ "localnet.89.stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8" ] } ] }, { "epoch_number": "94", "host_zone_unbondings": [ { "st_token_amount": "0", "native_token_amount": "0", "denom": "uatom", "host_zone_id": "GAIA", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] }, { "st_token_amount": "0", "native_token_amount": "0", "denom": "uarch", "host_zone_id": "localnet", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] } ] } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 11:59:20"}
+{"message":"2023-09-06 11:59:20"}
+{"message":"Hostzone: localnet"}
+{"message":"Epoch: 89"}
+{"message":"Stride Address: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"}
+{"message":"claim undelegated tokens"}
+Attempting to claim undelegated tokens...
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc claim-undelegated-tokens localnet 89 stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 --from admin --keyring-backend test --chain-id STRIDE -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "E24C6143AEA036508FC1111F928E9F40E40D75C0B77E6E2C48F9F88CF3F4C671" }
+{"message":"Transaction hash for claim undelegated tokens: E24C6143AEA036508FC1111F928E9F40E40D75C0B77E6E2C48F9F88CF3F4C671"}
+{"message":"2023-09-06 11:59:29"}
+{"message":"2023-09-06 11:59:29"}
+{"message":"archway redeemed uarch"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
+{ "balances": [ { "amount": "1495833", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9998264868", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 12:04:34"}
+{"message":"Amount after claim: 9998264868"}
+{"message":"2023-09-06 12:04:34"}
+{"message":"Last line of file is: !"}
+{"message":"Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemepoch"}
+{"message":"2023-09-06 12:04:34"}
+strided binary
+archwayd binary
+{"message":"2023-09-06 12:20:02"}
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/enableredeemstake exists.
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1mttwtv6pdx2anl9pse3lfmqmswnhgna52hh85d --chain-id localnet"}
+{ "balances": [ { "amount": "1479468", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "949100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 12:20:04"}
+{"message":"2023-09-06 12:20:04"}
+{"message":"2023-09-06 12:20:04"}
+{"message":"total redemption amount: 1479468"}
+{"message":"Amount: 1479468"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send  archway1mttwtv6pdx2anl9pse3lfmqmswnhgna52hh85d archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m 1479468ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from l311 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "78772ED1CB709A70BC8F7ED7DE240C78B448D85E83D85EC591291656D8155B86" }
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1muhrlnxwymvvyag8fac6t4amxnv4ezq66x4cah --chain-id localnet"}
+{ "balances": [ { "amount": "100", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 12:20:12"}
+{"message":"2023-09-06 12:20:12"}
+{"message":"2023-09-06 12:20:12"}
+{"message":"2023-09-06 12:20:12"}
+{"message":"2023-09-06 12:20:12"}
+{"message":"2023-09-06 12:20:12"}
+{"message":"2023-09-06 12:20:12"}
+{"message":"2023-09-06 12:20:15"}
+{"message":"archway liquidity account balance"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
+{ "balances": [ { "amount": "2737406", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9997547868", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 12:20:15"}
+{"message":"2023-09-06 12:20:17"}
+{"message":"Attempt 1: Executing archwayd command"}
+{"message":"2023-09-06 12:20:17"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 1479468ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend test -y --gas auto --gas-prices 0.082625000000000000uarch --gas-adjustment 1.4"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "E51C81568C20396F8242A6F06DB661BA47C2A1DB0CF3C6BCD9D39D66B04DE085" }
+{"message":"Archwayd command executed successfully."}
+{"message":"2023-09-06 12:20:22"}
+{"message":"strided redeem stake"}
+{"message":"Attempt 1: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 1479468 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y'"}
+{"message":"2023-09-06 12:20:22"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 1479468 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "520AE730FB06C7FD12D20EA03040F4967B8A1EF71B5C215966E48893FDF79498" }
+{"message":"Command executed successfully."}
+{"message":"2023-09-06 12:20:27"}
+{"message":"archway balance uarch"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
+{ "balances": [ { "amount": "1257938", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9997534703", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 12:28:47"}
+{"message":"2023-09-06 12:28:47"}
+{"message":"Amount before claim: 9997534703"}
+{"message":"2023-09-06 12:28:47"}
+{"message":"list user redemption  record"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-user-redemption-record -o=json"}
+{ "user_redemption_record": [ { "id": "localnet.107.stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8", "sender": "stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8", "receiver": "archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m", "amount": "2106938", "denom": "uarch", "host_zone_id": "localnet", "epoch_number": "107", "claim_is_pending": false } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 12:29:17"}
+{"message":"list epoch unbonding record"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-epoch-unbonding-record -o=json"}
+{ "epoch_unbonding_record": [ { "epoch_number": "107", "host_zone_unbondings": [ { "st_token_amount": "0", "native_token_amount": "0", "denom": "uatom", "host_zone_id": "GAIA", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] }, { "st_token_amount": "1479468", "native_token_amount": "2106938", "denom": "uarch", "host_zone_id": "localnet", "unbonding_time": "1693983180649603807", "status": "CLAIMABLE", "user_redemption_records": [ "localnet.107.stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8" ] } ] }, { "epoch_number": "112", "host_zone_unbondings": [ { "st_token_amount": "0", "native_token_amount": "0", "denom": "uatom", "host_zone_id": "GAIA", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] }, { "st_token_amount": "0", "native_token_amount": "0", "denom": "uarch", "host_zone_id": "localnet", "unbonding_time": "0", "status": "UNBONDING_QUEUE", "user_redemption_records": [] } ] } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 12:29:21"}
+{"message":"2023-09-06 12:29:22"}
+{"message":"Hostzone: localnet"}
+{"message":"Epoch: 107"}
+{"message":"Stride Address: stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8"}
+{"message":"claim undelegated tokens"}
+Attempting to claim undelegated tokens...
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc claim-undelegated-tokens localnet 107 stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 --from admin --keyring-backend test --chain-id STRIDE -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "DB8FD57D577A412E7B1A54FF8B558DE78FCD0D77921841BF94246E53941B0972" }
+{"message":"Transaction hash for claim undelegated tokens: DB8FD57D577A412E7B1A54FF8B558DE78FCD0D77921841BF94246E53941B0972"}
+{"message":"2023-09-06 12:29:30"}
+{"message":"2023-09-06 12:29:30"}
+{"message":"archway redeemed uarch"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
+{ "balances": [ { "amount": "1257938", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9999641641", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-06 12:34:35"}
+{"message":"Amount after claim: 9999641641"}
+{"message":"2023-09-06 12:34:35"}
+{"message":"Last line of file is: '"}
+{"message":"Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemepoch"}
+{"message":"2023-09-06 12:34:35"}
+strided binary
+archwayd binary
+{"message":"2023-09-06 12:50:01"}
+/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/enableredeemstake exists.
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1mttwtv6pdx2anl9pse3lfmqmswnhgna52hh85d --chain-id localnet"}
 null
-{"message":"2023-09-05 18:08:05"}
-{"message":"2023-09-05 18:08:05"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1hydz55zy59md6x7jy9e00qdyk4rqk00t83z93a --chain-id localnet"}
+{"message":"2023-09-06 12:50:04"}
+{"message":"2023-09-06 12:50:04"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1muhrlnxwymvvyag8fac6t4amxnv4ezq66x4cah --chain-id localnet"}
 null
-{"message":"2023-09-05 18:08:07"}
-{"message":"2023-09-05 18:08:07"}
-{"message":"2023-09-05 18:08:09"}
+{"message":"2023-09-06 12:50:06"}
+{"message":"2023-09-06 12:50:06"}
+{"message":"2023-09-06 12:50:08"}
 {"message":"archway liquidity account balance"}
 {"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
 null
-{"message":"2023-09-05 18:08:10"}
-{"message":"2023-09-05 18:08:12"}
+{"message":"2023-09-06 12:50:08"}
+{"message":"2023-09-06 12:50:10"}
 {"message":"Attempt 1: Executing archwayd command"}
-{"message":"2023-09-05 18:08:12"}
+{"message":"2023-09-06 12:50:10"}
 {"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 --chain-id localnet stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 0ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145 --from pval5 --keyring-backend test -y --gas auto --gas-prices  --gas-adjustment 1.4"}
 null
 {"message":"Archwayd command executed successfully."}
-{"message":"2023-09-05 18:08:16"}
+{"message":"2023-09-06 12:50:16"}
 {"message":"strided redeem stake"}
 {"message":"Attempt 1: Executing '/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 0 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y'"}
-{"message":"2023-09-05 18:08:17"}
+{"message":"2023-09-06 12:50:16"}
 {"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 tx stakeibc redeem-stake 0 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y"}
 null
 {"message":"Command executed successfully."}
-{"message":"2023-09-05 18:08:21"}
+{"message":"2023-09-06 12:50:20"}
 {"message":"archway balance uarch"}
 {"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
 null
-{"message":"2023-09-05 18:08:25"}
-{"message":"2023-09-05 18:08:25"}
-{"message":"2023-09-05 18:08:25"}
-{"message":"list user redemption  record"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-user-redemption-record -o=json"}
-null
-{"message":"2023-09-05 18:08:29"}
-{"message":"list epoch unbonding record"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q records list-epoch-unbonding-record -o=json"}
-null
-{"message":"2023-09-05 18:08:34"}
-{"message":"2023-09-05 18:08:34"}
-{"message":"archway redeemed uarch"}
-{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m"}
-null
-{"message":"2023-09-05 18:09:08"}
-{"message":"2023-09-05 18:09:08"}
-{"message":"Last line of file is: \t"}
-{"message":"Last line written to /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemepoch"}
-{"message":"2023-09-05 18:09:08"}
