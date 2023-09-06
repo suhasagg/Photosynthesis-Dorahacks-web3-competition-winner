@@ -139,64 +139,31 @@ total_redemption_amount=$DIFFERENCE
 echo "$total_redemption_amount" | jq -R -c '{"message": .}'
 # Printing the result
 echo "Total Redemption Amount: $total_redemption_amount" | jq -R -c '{"message": .}'
-echo $(date +"%Y-%m-%d %H:%M:%S") | jq -R -c '{"message": .}'
-total_redemption_amount=$DIFFERENCE
-echo "$total_redemption_amount" | jq -R -c '{"message": .}'
-# Printing the result
-echo "Total Redemption Amount: $total_redemption_amount" | jq -R -c '{"message": .}'
-echo $(date +"%Y-%m-%d %H:%M:%S") | jq -R -c '{"message": .}'
-
-if [ $total_redemption_amount -gt 0 ]; then
-    # Calculate the ratio for each contractAddress
-    for contract in "${!tokensForContract[@]}"; do
-        echo $(date +"%Y-%m-%d %H:%M:%S") | jq -R -c '{"message": .}'
-        ratio=$(echo "scale=2; ${tokensForContract[$contract]}/$totalTokens" | bc)
-        echo "Contract $contract has a ratio of $ratio" | jq -R -c '{"message": .}'
-
-        # Calculate amount based on the ratio
-        amount=$(echo "scale=2; $ratio * $total_redemption_amount" | bc | cut -d '.' -f 1)
-
-        CMD="/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m ${redemptionAddressforContract[$contract]} ${amount}uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
-
-        # Initialize a variable to track if the command was successful
-        SUCCESS=0
-
-        # Loop to retry in case of failure
-        for i in {1..10}; do
-            echo "Attempt $i: Executing '$CMD'" | jq -R -c '{"message": .}'
-            echo $(date +"%Y-%m-%d %H:%M:%S") | jq -R -c '{"message": .}'
-            OUTPUT1=$(eval $CMD)
-            json_output=$(echo "$OUTPUT1" | yq eval -j -)
-
-            # Check if the command was successful. 
-            if [[ "$json_output" == *"success"* ]]; then
-                echo "Command executed successfully." | jq -R -c '{"message": .}'
-                SUCCESS=1
-                break
-            else
-                # Error encountered; sleep for 5 seconds before retry
-                echo "Error detected. Retrying in 15 seconds..." | jq -R -c '{"message": .}'
-                sleep 15
-            fi
-        done
-
-        if [ $SUCCESS -eq 0 ]; then
-            echo "Failed to execute command after 10 attempts." | jq -R -c '{"message": .}'
-            exit 1
-        fi
-
-        # Embed the json_output in a new JSON structure using jq
-        #final_json=$(echo '{}' | jq --argjson embedded "$json_output" '.message = $embedded' -c)
-
-        echo $json_output
-        #echo "$OUTPUT1" | jq -R -c '{"message": .}'
-        echo "$contract,$amount" >> "$RedemptionFILE"
-        sleep 5
-    done
-else
-    echo "Total redemption amount is not greater than zero. Skipping transactions." | jq -R -c '{"message": .}'
-fi
 
 echo $(date +"%Y-%m-%d %H:%M:%S") | jq -R -c '{"message": .}'
+# Calculate the ratio for each contractAddress
+for contract in "${!tokensForContract[@]}"; do
+    echo $(date +"%Y-%m-%d %H:%M:%S") | jq -R -c '{"message": .}'
+    ratio=$(echo "scale=2; ${tokensForContract[$contract]}/$totalTokens" | bc)
+    echo "Contract $contract has a ratio of $ratio" | jq -R -c '{"message": .}'
 
+    # Calculate amount based on the ratio
+    amount=$(echo "scale=2; $ratio * $total_redemption_amount" | bc | cut -d '.' -f 1)
+
+    CMD="/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m ${redemptionAddressforContract[$contract]} ${amount}uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+
+    echo "Executing: $CMD" | jq -R -c '{"message": .}'
+    OUTPUT1=$(eval $CMD)
+    #echo "$OUTPUT1" | jq -R -c '{"message": .}'
+    json_output=$(echo "$OUTPUT1" | yq eval -j -)
+
+   # Embed the json_output in a new JSON structure using jq
+    #final_json=$(echo '{}' | jq --argjson embedded "$json_output" '.message = $embedded' -c)
+
+    echo $json_output
+    #echo "$OUTPUT1" | jq -R -c '{"message": .}'
+    echo "$contract,$amount" >> "$RedemptionFILE"
+    sleep 5
+done
+echo $(date +"%Y-%m-%d %H:%M:%S") | jq -R -c '{"message": .}'
 truncate -s 0 "$LiquidityFILE"
