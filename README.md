@@ -26,22 +26,31 @@ https://twitter.com/DoraHacks/status/1651979334398382080
 ![Photosynthesis](https://i.imgur.com/Tn1GUZnb.jpg)
 
 
+A)
 
 ![Photosynthesis](https://i.imgur.com/dCEEQwy.png)
 
 
 
+B)
+
 ![Photosynthesis](https://i.imgur.com/OaRSXfH.png)
 
 
+
+C)
 
 ![Photosynthesis](https://i.imgur.com/FdxrvyA.png)
 
 
 
+D)
+
 ![Photosynthesis](https://i.imgur.com/zwJpFwL.png)
 
 
+
+E)
 
 ![Photosynthesis](https://i.imgur.com/Tn1GUZnb.jpg)
 
