@@ -22,6 +22,23 @@ https://twitter.com/DoraHacks/status/1651979334398382080
 
 # Photosynthesis-Archway  <-> Stride integrations
 
+
+![Photosynthesis](https://i.imgur.com/dCEEQwy.png)
+
+
+
+![Photosynthesis](https://i.imgur.com/OaRSXfH.png)
+
+
+
+![Photosynthesis](https://i.imgur.com/FdxrvyA.png)
+
+
+
+![Photosynthesis](https://i.imgur.com/zwJpFwL.png)
+
+
+
 ![Photosynthesis](https://i.imgur.com/Tn1GUZnb.jpg)
 
 
