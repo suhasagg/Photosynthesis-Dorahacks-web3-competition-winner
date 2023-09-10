@@ -1517,6 +1517,12 @@ curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content
 1,15,30,45 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/gasfiller.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/gasfillerlogs.log
 ```
 
+![Liquid Stake Job](https://i.imgur.com/WaPame3.png)
+ 
+
+![Redeem Tokens Job](https://i.imgur.com/2zDvTdd.png)
+
+
 # Data points for different jobs 
 
   Full Data Lake View 
