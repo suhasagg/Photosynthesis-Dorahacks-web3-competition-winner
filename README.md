@@ -50,7 +50,6 @@ D)
 
 
 
-E)
 
 ![Photosynthesis](https://i.imgur.com/Tn1GUZnb.jpg)
 
