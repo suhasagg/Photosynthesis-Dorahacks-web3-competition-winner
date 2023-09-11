@@ -69,11 +69,14 @@ Redemption Workflow
 
 
 
+C)
+Relationship Diagram
 
 ![Stride](https://i.imgur.com/oAK0xzg.png)
 
 
 
+D)
 Stride Chain Epoch Module Worfklow Diagram
 
 ![Stride](https://i.imgur.com/S8Nc9EM.png)
