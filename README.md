@@ -74,6 +74,7 @@ Redemption Workflow
 
 
 
+Stride Chain Epoch Module Worfklow Diagram
 
 ![Stride](https://i.imgur.com/S8Nc9EM.png)
 
