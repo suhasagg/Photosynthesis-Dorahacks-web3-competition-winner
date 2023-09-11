@@ -13,7 +13,7 @@
 
 ---
 
-### 🖼️ **Diagrams**
+### 🖼️ **Workflows**
 
 1. **Photosynthesis**:
    - A) ![Photosynthesis](https://i.imgur.com/dCEEQwy.png)
