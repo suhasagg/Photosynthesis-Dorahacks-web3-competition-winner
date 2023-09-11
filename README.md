@@ -54,6 +54,25 @@ D)
 ![Photosynthesis](https://i.imgur.com/Tn1GUZnb.jpg)
 
 
+# Stride workflow 
+
+A)
+Liquid Stake Workflow
+
+![Stride](https://i.imgur.com/Wh5sF92.png)
+
+
+B)
+Redemption Workflow
+
+![Stride](https://i.imgur.com/2ar26a9.png)
+
+
+
+![Stride](https://i.imgur.com/x4Q2EtP.png)
+
+
+
 1)START RELAYER
 
 2)CREATING CONNECTIONS WITH THE GO RELAYER 
