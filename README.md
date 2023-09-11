@@ -74,6 +74,10 @@ Redemption Workflow
 
 
 
+
+
+
+
 1)START RELAYER
 
 2)CREATING CONNECTIONS WITH THE GO RELAYER 
