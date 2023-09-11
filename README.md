@@ -1,150 +1,68 @@
 
-
-![Photosynthesis](https://i.imgur.com/Tn1GUZnb.jpg)
-
-![Photosynthesis](https://i.imgur.com/0D8R8FLm.jpg) ![Photosynthesis](https://i.imgur.com/Os2PnLFm.jpg)
-
-Codacy A grade in both Golang and Rust repository.
-
-Photosynthesis Demo video
-
-[![Photosynthesis](https://img.youtube.com/vi/hW6j3UybEcE/maxresdefault.jpg)](https://www.youtube.com/watch?v=hW6j3UybEcE)
-
-
-
-Photosynthesis Code Walkthrough
-[![Photosynthesis](https://img.youtube.com/vi/Sj61xL6Mabg/maxresdefault.jpg)](https://www.youtube.com/watch?v=Sj61xL6Mabg)
-
-
-https://twitter.com/DoraHacks/status/1651979334398382080
-
-# Photosynthesis-Archway  <-> Stride integrations
-
-
-![Photosynthesis](https://i.imgur.com/Tn1GUZnb.jpg)
-
-
-A)
-
-![Photosynthesis](https://i.imgur.com/dCEEQwy.png)
-
-
-
-B)
-
-![Photosynthesis](https://i.imgur.com/OaRSXfH.png)
-
-
-
-C)
-
-![Photosynthesis](https://i.imgur.com/FdxrvyA.png)
-
-
-
-D)
-
-![Photosynthesis](https://i.imgur.com/zwJpFwL.png)
-
-
-
-
-![Photosynthesis](https://i.imgur.com/Tn1GUZnb.jpg)
-
-
-# Stride workflow 
-
-A)
-Liquid Stake Workflow
-
-![Stride](https://i.imgur.com/Wh5sF92.png)
-
-
-B)
-Redemption Workflow
-
-![Stride](https://i.imgur.com/2ar26a9.png)
-
-
-
-C)
-Relationship Diagram
-
-![Stride](https://i.imgur.com/oAK0xzg.png)
-
-
-
-D)
-Stride Chain Epoch Module Worfklow Diagram
-
-![Stride](https://i.imgur.com/S8Nc9EM.png)
-
-
-
-
-1)START RELAYER
-
-2)CREATING CONNECTIONS WITH THE GO RELAYER 
-
-3)Create connections and channels
-
-
-a)Get channel ID created on the photosynthesis-archway
-
-b)Start Go Relayer 
-
-c)IBC Transfer from Photosynthesis-archway to stride (from relayer account)
-
-d)Confirm funds were recieved on stride and get IBC denom
-
-e)Register host zone
-
-f)Add validator
-
-g)Confirm ICA channels were registered
-
-
-FLOW
-
-Go Through Flow
-
-
-a)Liquid stake (then wait and LS again)
-
-b)Confirm stTokens, StakedBal, and Redemption Rate
-
-c)Redeem
-
-d)Confirm stTokens and StakedBal
-
-e)Add another validator
-
-f)Liquid stake and confirm the stake was split 50/50 between the validators
-
-g)Change validator weights
-
-h)LS and confirm delegation aligned with new weights
-
-i)Update delegations (just submit this query and confirm the ICQ callback displays in the stride logs)
-
-
-# Must be submitted in ICQ window
-
-j)Restore closed channel
-
-
-
-# Photosynthesis-Archway IBC integrations. 
-
-1)evmos
-
-2)gaia
-
-3)juno
-
-4)osmosis
-
-5)stargaze
+# 🌱 **Photosynthesis-Archway ↔️ Stride Integrations** 🌟
+
+![Photosynthesis Logo](https://i.imgur.com/Tn1GUZnb.jpg)
+
+---
+
+## 📌 **Quick Links**
+
+- [**Photosynthesis Demo Video**](https://www.youtube.com/watch?v=hW6j3UybEcE) 🎥
+- [**Photosynthesis Code Walkthrough**](https://www.youtube.com/watch?v=Sj61xL6Mabg) 📜
+- [**Official Twitter Update**](https://twitter.com/DoraHacks/status/1651979334398382080) 🐦
+
+---
+
+### 🖼️ **Diagrams**
+
+1. **Photosynthesis**:
+   - A) ![Photosynthesis](https://i.imgur.com/dCEEQwy.png)
+   - B) ![Photosynthesis](https://i.imgur.com/OaRSXfH.png)
+   - C) ![Photosynthesis](https://i.imgur.com/FdxrvyA.png)
+   - D) ![Photosynthesis](https://i.imgur.com/zwJpFwL.png)
+
+2. **Stride Workflow**:
+   - A) Liquid Stake Workflow ![Stride](https://i.imgur.com/Wh5sF92.png)
+   - B) Redemption Workflow ![Stride](https://i.imgur.com/2ar26a9.png)
+   - C) Relationship Diagram ![Stride](https://i.imgur.com/oAK0xzg.png)
+   - D) Stride Chain Epoch Module Workflow Diagram ![Stride](https://i.imgur.com/S8Nc9EM.png)
+
+---
+
+### 📝 **Stride Workflow Steps**
+
+1. **START RELAYER**
+2. **CREATING CONNECTIONS WITH THE GO RELAYER**
+3. **Create connections and channels**:
+   - a) Get channel ID created on the photosynthesis-archway
+   - b) Start Go Relayer
+   - c) IBC Transfer from Photosynthesis-archway to stride (from relayer account)
+   - d) Confirm funds were received on stride and get IBC denom
+   - e) Register host zone
+   - f) Add validator
+   - g) Confirm ICA channels were registered
+   - h) Go Through Flow
+   - i) Liquid stake (then wait and LS again)
+   - j) Confirm stTokens, StakedBal, and Redemption Rate
+   - k) Redeem
+   - l) Confirm stTokens and StakedBal
+   - m) Add another validator
+   - n) Liquid stake and confirm the stake was split 50/50 between the validators
+   - o) Change validator weights
+   - p) LS and confirm delegation aligned with new weights
+   - q) Update delegations (submit this query and confirm the ICQ callback displays in the stride logs)
+
+---
+
+### 🌌 **Photosynthesis-Archway IBC Integrations**
+
+- evmos 🌌
+- gaia 🌍
+- juno 🪐
+- osmosis 💧
+- stargaze 🌟
+
+---
 
 ```
 global:
