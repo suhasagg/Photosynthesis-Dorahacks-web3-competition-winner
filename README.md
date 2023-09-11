@@ -6,8 +6,6 @@
 
 Codacy A grade in both Golang and Rust repository.
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0ded88aa8d4b401d953f42e0fc6af9b5)](https://app.codacy.com/gh/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
-
 Photosynthesis Demo video
 
 [![Photosynthesis](https://img.youtube.com/vi/hW6j3UybEcE/maxresdefault.jpg)](https://www.youtube.com/watch?v=hW6j3UybEcE)
