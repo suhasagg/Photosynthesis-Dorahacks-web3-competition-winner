@@ -4,11 +4,11 @@ order: 6
 
 # Parameters
 
-The `x/claims` module contains the parameters described below. All parameters can be modified via governance.
+The `x/claims` module contains the parameters described below. All parameters
+can be modified via governance.
 
-::: danger
-🚨 **IMPORTANT**: `time.Duration` store value is in nanoseconds but the JSON / `String` value is in seconds!
-:::
+::: danger 🚨 **IMPORTANT**: `time.Duration` store value is in nanoseconds but
+the JSON / `String` value is in seconds! :::
 
 | Key                  | Type            | Default Value                                               |
 | -------------------- | --------------- | ----------------------------------------------------------- |
@@ -22,28 +22,37 @@ The `x/claims` module contains the parameters described below. All parameters ca
 
 ## Enable claim
 
-The `EnableClaim` parameter toggles all state transitions in the module. When the parameter is disabled, it will disable all the allocation of airdropped tokens to users.
+The `EnableClaim` parameter toggles all state transitions in the module. When
+the parameter is disabled, it will disable all the allocation of airdropped
+tokens to users.
 
 ## Claims Denom
 
-The `ClaimsDenom` parameter defines the coin denomination that users will receive as part of their airdrop allocation.
+The `ClaimsDenom` parameter defines the coin denomination that users will
+receive as part of their airdrop allocation.
 
 ## Airdrop Start Time
 
-The `AirdropStartTime` refers to the time when user can start to claim the airdrop tokens.
+The `AirdropStartTime` refers to the time when user can start to claim the
+airdrop tokens.
 
 ## Duration Until Decay
 
-The `DurationUntilDecay` parameter defines the duration from airdrop start time to decay start time.
+The `DurationUntilDecay` parameter defines the duration from airdrop start time
+to decay start time.
 
 ## Duration Of Decay
 
-The `DurationOfDecay` parameter refers to the duration from decay start time to claim end time. Users are not able to claim airdrop after this duration has ended.
+The `DurationOfDecay` parameter refers to the duration from decay start time to
+claim end time. Users are not able to claim airdrop after this duration has
+ended.
 
 ## Authorized Channels
 
-The `AuthorizedChannels` parameter describes the set of channels that users can perform the ibc callback with to claim coins for the ibc action.
+The `AuthorizedChannels` parameter describes the set of channels that users can
+perform the ibc callback with to claim coins for the ibc action.
 
 ## EVM Channels
 
-The `EVMChannels` parameter describes the list of Evmos channels that connected to EVM compatible chains and can be used during the ibc callback action.
+The `EVMChannels` parameter describes the list of Evmos channels that connected
+to EVM compatible chains and can be used during the ibc callback action.

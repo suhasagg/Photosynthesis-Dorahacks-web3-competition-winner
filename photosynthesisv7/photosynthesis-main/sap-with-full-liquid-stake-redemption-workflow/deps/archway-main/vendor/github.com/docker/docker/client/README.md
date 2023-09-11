@@ -1,6 +1,8 @@
 # Go client for the Docker Engine API
 
-The `docker` command uses this package to communicate with the daemon. It can also be used by your own Go applications to do anything the command-line interface does – running containers, pulling images, managing swarms, etc.
+The `docker` command uses this package to communicate with the daemon. It can
+also be used by your own Go applications to do anything the command-line
+interface does – running containers, pulling images, managing swarms, etc.
 
 For example, to list running containers (the equivalent of `docker ps`):
 

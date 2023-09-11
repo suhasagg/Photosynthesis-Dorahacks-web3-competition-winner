@@ -65,16 +65,16 @@ FLAGS:
 This is the preferred way to create a new channel, by leveraging an existing
 connection.
 
-Create a new unordered channel between `ibc-0` and `ibc-1` over an existing connection,
-specifically the one we just created in the example above, with port name
-`transfer` on both sides:
+Create a new unordered channel between `ibc-0` and `ibc-1` over an existing
+connection, specifically the one we just created in the example above, with port
+name `transfer` on both sides:
 
 ```shell
 hermes create channel --a-chain ibc-0 --a-connection connection-0 --a-port transfer --b-port transfer --order unordered
 ```
 
-Notice that one can omit the destination chain parameter, as Hermes will automatically
-figure it out by looking up the given connection on `ibc-0`.
+Notice that one can omit the destination chain parameter, as Hermes will
+automatically figure it out by looking up the given connection on `ibc-0`.
 
 ```json
 🥳  ibc-0 => OpenInitChannel(

@@ -5,13 +5,13 @@
 
 # logfmt
 
-Package logfmt implements utilities to marshal and unmarshal data in the [logfmt
-format](https://brandur.org/logfmt). It provides an API similar to
+Package logfmt implements utilities to marshal and unmarshal data in the
+[logfmt format](https://brandur.org/logfmt). It provides an API similar to
 [encoding/json](http://golang.org/pkg/encoding/json/) and
 [encoding/xml](http://golang.org/pkg/encoding/xml/).
 
-The logfmt format was first documented by Brandur Leach in [this
-article](https://brandur.org/logfmt). The format has not been formally
+The logfmt format was first documented by Brandur Leach in
+[this article](https://brandur.org/logfmt). The format has not been formally
 standardized. The most authoritative public specification to date has been the
 documentation of a Go Language [package](http://godoc.org/github.com/kr/logfmt)
 written by Blake Mizerany and Keith Rarick.
@@ -30,4 +30,5 @@ standard as a goal.
 
 ## Versioning
 
-Package logfmt publishes releases via [semver](http://semver.org/) compatible Git tags prefixed with a single 'v'.
+Package logfmt publishes releases via [semver](http://semver.org/) compatible
+Git tags prefixed with a single 'v'.

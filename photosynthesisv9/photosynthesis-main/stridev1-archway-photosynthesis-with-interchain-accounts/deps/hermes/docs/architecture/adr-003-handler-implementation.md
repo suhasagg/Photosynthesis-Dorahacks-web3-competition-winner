@@ -1,29 +1,31 @@
 # ADR 003: IBC handlers implementation
 
 ## Changelog
-* 2020-08-06: Initial proposal
-* 2020-08-10: Rename Handler to Message Processor
-* 2020-08-14: Revamp definition of chain-specific messages, readers and keepers
-* 2021-12-29: Consolidate ADR with the implementation.
+
+- 2020-08-06: Initial proposal
+- 2020-08-10: Rename Handler to Message Processor
+- 2020-08-14: Revamp definition of chain-specific messages, readers and keepers
+- 2021-12-29: Consolidate ADR with the implementation.
 
 ## Context
 
-In this ADR, we provide recommendations for implementing the IBC
-handlers within the `ibc` (modules) crate.
+In this ADR, we provide recommendations for implementing the IBC handlers within
+the `ibc` (modules) crate.
 
 ## Decision
 
-Concepts are introduced in the order given by a topological sort of their dependencies on each other.
+Concepts are introduced in the order given by a topological sort of their
+dependencies on each other.
 
 ### Events
 
-IBC handlers must be able to emit events which will then be broadcasted via the node's pub/sub mechanism,
-and eventually picked up by the IBC relayer.
+IBC handlers must be able to emit events which will then be broadcasted via the
+node's pub/sub mechanism, and eventually picked up by the IBC relayer.
 
 An event has an arbitrary structure, depending on the handler that produces it.
 Here is the [list of all IBC-related events][events], as seen by the relayer.
-Note that the consumer of these events in production would not be the relayer directly 
-(instead the consumer is the node/SDK where the IBC module executes),
+Note that the consumer of these events in production would not be the relayer
+directly (instead the consumer is the node/SDK where the IBC module executes),
 but nevertheless handlers will reuse these event definitions.
 
 [events]: https://github.com/informalsystems/ibc-rs/blob/bf84a73ef7b3d5e9a434c9af96165997382dcc9d/modules/src/events.rs#L15-L43
@@ -39,14 +41,15 @@ pub enum IBCEvent {
     OpenInitConnection(ConnectionEvents::OpenInit),
     OpenTryConnection(ConnectionEvents::OpenTry),
     //     ...
-} 
+}
 ```
 
 ### Logging
 
-IBC handlers must be able to log information for introspectability and ease of debugging.
-A handler can output multiple log records, which are expressed as a pair of a status and a
-log line. The interface for emitting log records is described in the next section.
+IBC handlers must be able to log information for introspectability and ease of
+debugging. A handler can output multiple log records, which are expressed as a
+pair of a status and a log line. The interface for emitting log records is
+described in the next section.
 
 ```rust
 pub enum LogStatus {
@@ -71,8 +74,9 @@ impl Log {
 
 ### Handler output
 
-IBC handlers must be able to return arbitrary data, together with events and log records, as described above.
-As a handler may fail, it is necessary to keep track of errors.
+IBC handlers must be able to return arbitrary data, together with events and log
+records, as described above. As a handler may fail, it is necessary to keep
+track of errors.
 
 To this end, we introduce a type for the return value of a handler:
 
@@ -86,7 +90,8 @@ pub struct HandlerOutput<T> {
 }
 ```
 
-We introduce a builder interface to be used within the handler implementation to incrementally build a `HandlerOutput` value.
+We introduce a builder interface to be used within the handler implementation to
+incrementally build a `HandlerOutput` value.
 
 ```rust
 impl<T> HandlerOutput<T> {
@@ -129,27 +134,29 @@ fn some_ibc_handler() -> HandlerResult<u64, Error> {
 
 ### IBC Submodule
 
-The various IBC messages and their processing logic, as described in the IBC specification,
-are split into a collection of submodules, each pertaining to a specific aspect of
-the IBC protocol, eg. client lifecycle management, connection lifecycle management,
-packet relay, etc.
+The various IBC messages and their processing logic, as described in the IBC
+specification, are split into a collection of submodules, each pertaining to a
+specific aspect of the IBC protocol, eg. client lifecycle management, connection
+lifecycle management, packet relay, etc.
 
-In this section we propose a general approach to implement the handlers for a submodule.
-As a running example we will use a dummy submodule that deals with connections, which should not
-be mistaken for the actual ICS 003 Connection submodule.
+In this section we propose a general approach to implement the handlers for a
+submodule. As a running example we will use a dummy submodule that deals with
+connections, which should not be mistaken for the actual ICS 003 Connection
+submodule.
 
 #### Reader
 
-A typical handler will need to read data from the chain state at the current height,
-via the private and provable stores.
+A typical handler will need to read data from the chain state at the current
+height, via the private and provable stores.
 
-To avoid coupling between the handler interface and the store API, we introduce an interface
-for accessing this data. This interface, called a `Reader`, is shared between all handlers
-in a submodule, as those typically access the same data.
+To avoid coupling between the handler interface and the store API, we introduce
+an interface for accessing this data. This interface, called a `Reader`, is
+shared between all handlers in a submodule, as those typically access the same
+data.
 
-Having a high-level interface for this purpose helps avoiding coupling which makes
-writing unit tests for the handlers easier, as one does not need to provide a concrete
-store, or to mock one.
+Having a high-level interface for this purpose helps avoiding coupling which
+makes writing unit tests for the handlers easier, as one does not need to
+provide a concrete store, or to mock one.
 
 ```rust
 pub trait ConnectionReader
@@ -158,9 +165,10 @@ pub trait ConnectionReader
 }
 ```
 
-A production implementation of this `Reader` would hold references to both the private and provable
-store at the current height where the handler executes, but we omit the actual implementation as
-the store interfaces are yet to be defined, as is the general IBC top-level module machinery.
+A production implementation of this `Reader` would hold references to both the
+private and provable store at the current height where the handler executes, but
+we omit the actual implementation as the store interfaces are yet to be defined,
+as is the general IBC top-level module machinery.
 
 A mock implementation of the `ConnectionReader` trait could looks as follows:
 
@@ -184,10 +192,11 @@ impl ConnectionReader for MockConnectionReader {
 
 #### Keeper
 
-Once a handler executes successfully, some data will typically need to be persisted in the chain state
-via the private/provable store interfaces. In the same vein as for the reader defined in the previous section,
-a submodule should define a trait which provides operations to persist such data.
-The same considerations w.r.t. to coupling and unit-testing apply here as well.
+Once a handler executes successfully, some data will typically need to be
+persisted in the chain state via the private/provable store interfaces. In the
+same vein as for the reader defined in the previous section, a submodule should
+define a trait which provides operations to persist such data. The same
+considerations w.r.t. to coupling and unit-testing apply here as well.
 
 ```rust
 pub trait ConnectionKeeper {
@@ -209,9 +218,9 @@ pub trait ConnectionKeeper {
 
 We now come to the actual definition of a handler for a submodule.
 
-We recommend each handler to be defined within its own Rust module, named
-after the handler itself. For example, the "Create Client" handler of ICS 002 would
-be defined in `modules::ics02_client::handler::create_client`.
+We recommend each handler to be defined within its own Rust module, named after
+the handler itself. For example, the "Create Client" handler of ICS 002 would be
+defined in `modules::ics02_client::handler::create_client`.
 
 ##### Message type
 
@@ -234,9 +243,10 @@ We divide the handler in two parts: processing and persistence.
 ###### Processing
 
 The actual logic of the handler is expressed as a pure function, typically named
-`process`, which takes as arguments a `Reader` and the corresponding message, and returns
-a `HandlerOutput<T, E>`, where `T` is a concrete datatype and `E` is an error type which defines
-all potential errors yielded by the handlers of the current submodule.
+`process`, which takes as arguments a `Reader` and the corresponding message,
+and returns a `HandlerOutput<T, E>`, where `T` is a concrete datatype and `E` is
+an error type which defines all potential errors yielded by the handlers of the
+current submodule.
 
 ```rust
 pub struct ConnectionMsgProcessingResult {
@@ -245,11 +255,12 @@ pub struct ConnectionMsgProcessingResult {
 }
 ```
 
-The `process` function will typically read data via the `Reader`, perform checks and validation, construct new
-datatypes, emit log records and events, and eventually return some data together with objects to be persisted.
+The `process` function will typically read data via the `Reader`, perform checks
+and validation, construct new datatypes, emit log records and events, and
+eventually return some data together with objects to be persisted.
 
-To this end, this `process` function will create and manipulate a `HandlerOutput` value like described in
-the corresponding section.
+To this end, this `process` function will create and manipulate a
+`HandlerOutput` value like described in the corresponding section.
 
 ```rust
 pub fn process(
@@ -285,12 +296,14 @@ pub fn process(
 
 ###### Persistence
 
-If the `process` function specified above succeeds, the result value it yielded is then
-passed to a function named `keep`, which is responsible for persisting the objects constructed
-by the processing function. This `keep` function takes the submodule's `Keeper` and the result
-type defined above, and performs side-effecting calls to the keeper's methods to persist the result.
+If the `process` function specified above succeeds, the result value it yielded
+is then passed to a function named `keep`, which is responsible for persisting
+the objects constructed by the processing function. This `keep` function takes
+the submodule's `Keeper` and the result type defined above, and performs
+side-effecting calls to the keeper's methods to persist the result.
 
-Below is given an implementation of the `keep` function for the "Create Connection" handlers:
+Below is given an implementation of the `keep` function for the "Create
+Connection" handlers:
 
 ```rust
 pub fn keep(
@@ -307,19 +320,20 @@ pub fn keep(
 
 ##### Submodule dispatcher
 
-> This section is very much a work in progress, as further investigation into what
-> a production-ready implementation of the `ctx` parameter of the top-level dispatcher
-> is required. As such, implementors should feel free to disregard the recommendations
-> below, and are encouraged to come up with amendments to this ADR to better capture
-> the actual requirements.
+> This section is very much a work in progress, as further investigation into
+> what a production-ready implementation of the `ctx` parameter of the top-level
+> dispatcher is required. As such, implementors should feel free to disregard
+> the recommendations below, and are encouraged to come up with amendments to
+> this ADR to better capture the actual requirements.
 
-Each submodule is responsible for dispatching the messages it is given to the appropriate
-message processing function and, if successful, pass the resulting data to the persistance
-function defined in the previous section.
+Each submodule is responsible for dispatching the messages it is given to the
+appropriate message processing function and, if successful, pass the resulting
+data to the persistance function defined in the previous section.
 
-To this end, the submodule should define an enumeration of all messages, in order
-for the top-level submodule dispatcher to forward them to the appropriate processor.
-Such a definition for the ICS 003 Connection submodule is given below.
+To this end, the submodule should define an enumeration of all messages, in
+order for the top-level submodule dispatcher to forward them to the appropriate
+processor. Such a definition for the ICS 003 Connection submodule is given
+below.
 
 ```rust
 pub enum ConnectionMsg {
@@ -328,8 +342,10 @@ pub enum ConnectionMsg {
     ...
 }
 ```
-The actual implementation of a submodule dispatcher is quite straightforward and unlikely to vary
-much in substance between submodules. We give an implementation for the ICS 003 Connection module below.
+
+The actual implementation of a submodule dispatcher is quite straightforward and
+unlikely to vary much in substance between submodules. We give an implementation
+for the ICS 003 Connection module below.
 
 ```rust
 pub fn dispatch<Ctx>(ctx: &mut Ctx, msg: Msg) -> Result<HandlerOutput<()>, Error>
@@ -357,13 +373,14 @@ where
 }
 ```
 
-In essence, a top-level dispatcher is a function of a message wrapped in the enumeration introduced above,
-and a "context" which implements both the `Reader` and `Keeper` interfaces.
+In essence, a top-level dispatcher is a function of a message wrapped in the
+enumeration introduced above, and a "context" which implements both the `Reader`
+and `Keeper` interfaces.
 
 ### Dealing with chain-specific datatypes
 
-The ICS 002 Client submodule stands out from the other submodules as it needs
-to deal with chain-specific datatypes, such as `Header`, `ClientState`, and
+The ICS 002 Client submodule stands out from the other submodules as it needs to
+deal with chain-specific datatypes, such as `Header`, `ClientState`, and
 `ConsensusState`.
 
 To abstract over chain-specific datatypes, we introduce a trait which specifies
@@ -379,14 +396,16 @@ pub trait ClientDef {
 }
 ```
 
-The `ClientDef` trait specifies three datatypes, and their corresponding interface, which is provided
-via a trait defined in the same submodule.
+The `ClientDef` trait specifies three datatypes, and their corresponding
+interface, which is provided via a trait defined in the same submodule.
 
-A production implementation of this interface would instantiate these types with the concrete
-types used by the chain, eg. Tendermint datatypes. Each concrete datatype must be provided
-with a `From` instance to lift it into its corresponding `Any...` enumeration.
+A production implementation of this interface would instantiate these types with
+the concrete types used by the chain, eg. Tendermint datatypes. Each concrete
+datatype must be provided with a `From` instance to lift it into its
+corresponding `Any...` enumeration.
 
-For the purpose of unit-testing, a mock implementation of the `ClientDef` trait could look as follows:
+For the purpose of unit-testing, a mock implementation of the `ClientDef` trait
+could look as follows:
 
 ```rust
 struct MockHeader(u32);
@@ -434,24 +453,25 @@ impl ClientDef for MockClient {
 }
 ```
 
-Since the actual type of client can only be determined at runtime, we cannot encode
-the type of client within the message itself.
+Since the actual type of client can only be determined at runtime, we cannot
+encode the type of client within the message itself.
 
-Because of some limitations of the Rust type system, namely the lack of proper support
-for existential types, it is currently impossible to define `Reader` and `Keeper` traits
-which are agnostic to the actual type of client being used.
+Because of some limitations of the Rust type system, namely the lack of proper
+support for existential types, it is currently impossible to define `Reader` and
+`Keeper` traits which are agnostic to the actual type of client being used.
 
-We could alternatively model all chain-specific datatypes as boxed trait objects (`Box<dyn Trait>`),
-but this approach runs into a lot of limitations of trait objects, such as the inability to easily
-require such trait objects to be Clonable, or Serializable, or to define an equality relation on them.
-Some support for such functionality can be found in third-party libraries, but the overall experience
-for the developer is too subpar.
+We could alternatively model all chain-specific datatypes as boxed trait objects
+(`Box<dyn Trait>`), but this approach runs into a lot of limitations of trait
+objects, such as the inability to easily require such trait objects to be
+Clonable, or Serializable, or to define an equality relation on them. Some
+support for such functionality can be found in third-party libraries, but the
+overall experience for the developer is too subpar.
 
-We thus settle on a different strategy: lifting chain-specific data into an `enum` over all
-possible chain types.
+We thus settle on a different strategy: lifting chain-specific data into an
+`enum` over all possible chain types.
 
-For example, to model a chain-specific `Header` type, we would define an enumeration in the following
-way:
+For example, to model a chain-specific `Header` type, we would define an
+enumeration in the following way:
 
 ```rust
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)] // TODO: Add Eq
@@ -477,17 +497,18 @@ impl Header for AnyHeader {
 }
 ```
 
-This enumeration dispatches method calls to the underlying datatype at runtime, while
-hiding the latter, and is thus akin to a proper existential type without running
-into any limitations of the Rust type system (`impl Header` bounds not being allowed
-everywhere, `Header` not being able to be treated as a trait objects because of `Clone`,
-`PartialEq` and `Serialize`, `Deserialize` bounds, etc.)
+This enumeration dispatches method calls to the underlying datatype at runtime,
+while hiding the latter, and is thus akin to a proper existential type without
+running into any limitations of the Rust type system (`impl Header` bounds not
+being allowed everywhere, `Header` not being able to be treated as a trait
+objects because of `Clone`, `PartialEq` and `Serialize`, `Deserialize` bounds,
+etc.)
 
-Other chain-specific datatypes, such as `ClientState` and `ConsensusState` require their own
-enumeration over all possible implementations.
+Other chain-specific datatypes, such as `ClientState` and `ConsensusState`
+require their own enumeration over all possible implementations.
 
-On top of that, we also need to lift the specific client definitions (`ClientDef` instances),
-into their own enumeration, as follows:
+On top of that, we also need to lift the specific client definitions
+(`ClientDef` instances), into their own enumeration, as follows:
 
 ```rust
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -504,7 +525,6 @@ impl ClientDef for AnyClient {
 ```
 
 Messages can now be defined generically over the `ClientDef` instance:
-
 
 ```rust
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
@@ -550,12 +570,12 @@ pub trait ClientKeeper {
 }
 ```
 
-This way, only one implementation of the `ClientReader` and `ClientKeeper` trait is required,
-as it can delegate eg. the serialization of the underlying datatypes to the `Serialize` bound
-of the `Any...` wrappper.
+This way, only one implementation of the `ClientReader` and `ClientKeeper` trait
+is required, as it can delegate eg. the serialization of the underlying
+datatypes to the `Serialize` bound of the `Any...` wrappper.
 
-Both the `process` and `keep` function are defined to take a message generic over
-the actual client type:
+Both the `process` and `keep` function are defined to take a message generic
+over the actual client type:
 
 ```rust
 pub fn process(
@@ -577,9 +597,10 @@ where
     Ctx: ClientReader + ClientKeeper;
 ```
 
-With this boilerplate out of way, one can write tests using a mock client, and associated mock datatypes
-in a fairly straightforward way, taking advantage of the `From` instance to lift concerete mock datatypes
-into the `Any...` enumeration:
+With this boilerplate out of way, one can write tests using a mock client, and
+associated mock datatypes in a fairly straightforward way, taking advantage of
+the `From` instance to lift concerete mock datatypes into the `Any...`
+enumeration:
 
 ```rust
   #[test]
@@ -623,11 +644,14 @@ Proposed
 ## Consequences
 
 ### Positive
-- clear separation of message handlers logic (processing and persistence logic) from the store
-- provide support to mock the context of a handler and test the handler functionality in isolation
 
+- clear separation of message handlers logic (processing and persistence logic)
+  from the store
+- provide support to mock the context of a handler and test the handler
+  functionality in isolation
 
 ### Negative
+
 - data type system around submodule ICS02 is relatively complex
 
 ### Neutral

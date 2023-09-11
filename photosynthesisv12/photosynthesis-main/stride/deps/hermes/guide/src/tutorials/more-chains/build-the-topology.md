@@ -1,12 +1,14 @@
 # Build the topology
 
-At this point in the tutorial, you should have four chains running and Hermes correctly configured. You can perform a `health-check` with the command :
+At this point in the tutorial, you should have four chains running and Hermes
+correctly configured. You can perform a `health-check` with the command :
 
 ```shell
 {{#template ../../templates/commands/hermes/health_check}}
 ```
 
 If the command runs successfully, it should output something similar to:
+
 ```
     2022-08-23T15:54:58.150005Z  INFO ThreadId(01) using default configuration from '$HOME/.hermes/config.toml'
     2022-08-23T15:54:58.150179Z  INFO ThreadId(01) [ibc-0] performing health check...
@@ -20,15 +22,20 @@ If the command runs successfully, it should output something similar to:
     SUCCESS performed health check for all chains in the config
 ```
 
-In the following tutorial, we will connect all of these chains in a full mesh topology, then use `Packet filters` to simulate the topology given at the beginning of the [previous section](./start-local-chains.md).
+In the following tutorial, we will connect all of these chains in a full mesh
+topology, then use `Packet filters` to simulate the topology given at the
+beginning of the [previous section](./start-local-chains.md).
 
-> __NOTE__: It is also possible to only create the channels that you want. However, in production, anyone can open channels and recreate a fully-connected topology.
+> **NOTE**: It is also possible to only create the channels that you want.
+> However, in production, anyone can open channels and recreate a
+> fully-connected topology.
 
----
+***
 
 ## Connect all the chains
 
 Execute the following command:
+
 ```shell
 {{#template ../../templates/commands/gm/hermes_cc}}
 ```
@@ -45,9 +52,11 @@ If this command runs successfully, it should output the following:
 ```
 
 Executing these commands will:
-* For every pair of chains, create a client on both chain tracking the state of the counterparty chain.
-* Create a connection between these two clients.
-* Create a `transfer` channel over this connection.
+
+- For every pair of chains, create a client on both chain tracking the state of
+  the counterparty chain.
+- Create a connection between these two clients.
+- Create a `transfer` channel over this connection.
 
 Use the flag `--exec` flag to execute these commands:
 
@@ -55,11 +64,15 @@ Use the flag `--exec` flag to execute these commands:
 {{#template ../../templates/commands/gm/hermes_cc_exec}}
 ```
 
-At this point, your network should be fully connected. It is now time to filter channels. The following chart shows the current state of the network. The channels that we want to filter out are filled in red while the channels we want to relay on are filled in green:
+At this point, your network should be fully connected. It is now time to filter
+channels. The following chart shows the current state of the network. The
+channels that we want to filter out are filled in red while the channels we want
+to relay on are filled in green:
 
-__Network topology__
+**Network topology**
+
 ```mermaid
-flowchart TD 
+flowchart TD
     ibc0((ibc-0))
     ibc0ibc1[[channel-0]]
     ibc0ibc2[[channel-1]]
@@ -114,7 +127,7 @@ You can verify that everything is correct with the commands:
 {{#template ../../templates/commands/hermes/query_channels_show_counterparty chain=ibc-3}}
 ```
 
-Which should normally output: 
+Which should normally output:
 
 ```
 ibc-0: transfer/channel-0 --- ibc-1: transfer/channel-0
@@ -136,47 +149,53 @@ ibc-3: transfer/channel-2 --- ibc-2: transfer/channel-2
 
 ## Add packet filters
 
-Let's use packet filters to relay only on the green paths specified in the chart. In order to add filters, open your default configuration file `$HOME/.hermes/config.toml` and add:
-- Under `ibc-0`'s config: 
-    ```
-    [chains.packet_filter]
-    policy = 'allow'
-    list = [
-        ['transfer', 'channel-0'],
-        ['transfer', 'channel-2'],
-    ]
-    ```
-- Under `ibc-1`'s config:
-    ```
-    [chains.packet_filter]
-    policy = 'allow'
-    list = [
-        ['transfer', 'channel-0'],
-        ['transfer', 'channel-1'],
-    ]
-    ```
-- Under `ibc-2`'s config:
-    ```
-    [chains.packet_filter]
-    policy = 'allow'
-    list = [
-        ['transfer', 'channel-0'],
-        ['transfer', 'channel-2'],
-    ]
-    ```
-- Under `ibc-3`'s config:
-    ```
-    [chains.packet_filter]
-    policy = 'allow'
-    list = [
-        ['transfer', 'channel-0'],
-        ['transfer', 'channel-2'],
-    ]
-    ```
+Let's use packet filters to relay only on the green paths specified in the
+chart. In order to add filters, open your default configuration file
+`$HOME/.hermes/config.toml` and add:
 
-> __NOTE__: It is also possible to use a `deny` policy to filter out the channels you do not want to relay on. However, if other channels exist or are created, the relayer will also relay on them.
+- Under `ibc-0`'s config:
+  ```
+  [chains.packet_filter]
+  policy = 'allow'
+  list = [
+      ['transfer', 'channel-0'],
+      ['transfer', 'channel-2'],
+  ]
+  ```
+- Under `ibc-1`'s config:
+  ```
+  [chains.packet_filter]
+  policy = 'allow'
+  list = [
+      ['transfer', 'channel-0'],
+      ['transfer', 'channel-1'],
+  ]
+  ```
+- Under `ibc-2`'s config:
+  ```
+  [chains.packet_filter]
+  policy = 'allow'
+  list = [
+      ['transfer', 'channel-0'],
+      ['transfer', 'channel-2'],
+  ]
+  ```
+- Under `ibc-3`'s config:
+  ```
+  [chains.packet_filter]
+  policy = 'allow'
+  list = [
+      ['transfer', 'channel-0'],
+      ['transfer', 'channel-2'],
+  ]
+  ```
+
+> **NOTE**: It is also possible to use a `deny` policy to filter out the
+> channels you do not want to relay on. However, if other channels exist or are
+> created, the relayer will also relay on them.
 
 At this point, your config file should look like this:
+
 <details><summary style="font-weight:bold">config.toml</summary>
 
 ```
@@ -185,7 +204,8 @@ At this point, your config file should look like this:
 
 </details>
 
-It is also possible to check that the configuration file is valid with the command:
+It is also possible to check that the configuration file is valid with the
+command:
 
 ```shell
 {{#template ../../templates/commands/hermes/config_validate}}
@@ -197,8 +217,9 @@ If the command runs successfully, the output should be:
 SUCCESS "configuration is valid"
 ```
 
----
+***
 
 ## Next Steps
 
-The [following section](./start-relaying.md) describes how to relay packets between any chain with this topology.
+The [following section](./start-relaying.md) describes how to relay packets
+between any chain with this topology.

@@ -1,22 +1,22 @@
 # package metrics
 
-`package metrics` provides a set of uniform interfaces for service instrumentation.
-It has
- [counters](http://prometheus.io/docs/concepts/metric_types/#counter),
- [gauges](http://prometheus.io/docs/concepts/metric_types/#gauge), and
- [histograms](http://prometheus.io/docs/concepts/metric_types/#histogram),
-and provides adapters to popular metrics packages, like
- [expvar](https://golang.org/pkg/expvar),
- [StatsD](https://github.com/etsy/statsd), and
- [Prometheus](https://prometheus.io).
+`package metrics` provides a set of uniform interfaces for service
+instrumentation. It has
+[counters](http://prometheus.io/docs/concepts/metric_types/#counter),
+[gauges](http://prometheus.io/docs/concepts/metric_types/#gauge), and
+[histograms](http://prometheus.io/docs/concepts/metric_types/#histogram), and
+provides adapters to popular metrics packages, like
+[expvar](https://golang.org/pkg/expvar),
+[StatsD](https://github.com/etsy/statsd), and
+[Prometheus](https://prometheus.io).
 
 ## Rationale
 
 Code instrumentation is absolutely essential to achieve
- [observability](https://speakerdeck.com/mattheath/observability-in-micro-service-architectures)
- into a distributed system.
-Metrics and instrumentation tools have coalesced around a few well-defined idioms.
-`package metrics` provides a common, minimal interface those idioms for service authors.
+[observability](https://speakerdeck.com/mattheath/observability-in-micro-service-architectures)
+into a distributed system. Metrics and instrumentation tools have coalesced
+around a few well-defined idioms. `package metrics` provides a common, minimal
+interface those idioms for service authors.
 
 ## Usage
 
@@ -35,8 +35,8 @@ func main() {
 }
 ```
 
-A histogram for request duration,
- exported via a Prometheus summary with dynamically-computed quantiles.
+A histogram for request duration, exported via a Prometheus summary with
+dynamically-computed quantiles.
 
 ```go
 import (
@@ -95,4 +95,5 @@ func exportGoroutines(g metrics.Gauge) {
 }
 ```
 
-For more information, see [the package documentation](https://godoc.org/github.com/go-kit/kit/metrics).
+For more information, see
+[the package documentation](https://godoc.org/github.com/go-kit/kit/metrics).

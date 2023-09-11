@@ -1,19 +1,22 @@
-# Online deadlock detection in go (golang). [![Try it online](https://img.shields.io/badge/try%20it-online-blue.svg)](https://wandbox.org/permlink/hJc6QCZowxbNm9WW) [![Docs](https://godoc.org/github.com/sasha-s/go-deadlock?status.svg)](https://godoc.org/github.com/sasha-s/go-deadlock) [![Build Status](https://travis-ci.org/sasha-s/go-deadlock.svg?branch=master)](https://travis-ci.org/sasha-s/go-deadlock) [![codecov](https://codecov.io/gh/sasha-s/go-deadlock/branch/master/graph/badge.svg)](https://codecov.io/gh/sasha-s/go-deadlock) [![version](https://badge.fury.io/gh/sasha-s%2Fgo-deadlock.svg)](https://github.com/sasha-s/go-deadlock/releases)  [![Go Report Card](https://goreportcard.com/badge/github.com/sasha-s/go-deadlock)](https://goreportcard.com/report/github.com/sasha-s/go-deadlock) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
+# Online deadlock detection in go (golang). [![Try it online](https://img.shields.io/badge/try%20it-online-blue.svg)](https://wandbox.org/permlink/hJc6QCZowxbNm9WW) [![Docs](https://godoc.org/github.com/sasha-s/go-deadlock?status.svg)](https://godoc.org/github.com/sasha-s/go-deadlock) [![Build Status](https://travis-ci.org/sasha-s/go-deadlock.svg?branch=master)](https://travis-ci.org/sasha-s/go-deadlock) [![codecov](https://codecov.io/gh/sasha-s/go-deadlock/branch/master/graph/badge.svg)](https://codecov.io/gh/sasha-s/go-deadlock) [![version](https://badge.fury.io/gh/sasha-s%2Fgo-deadlock.svg)](https://github.com/sasha-s/go-deadlock/releases) [![Go Report Card](https://goreportcard.com/badge/github.com/sasha-s/go-deadlock)](https://goreportcard.com/report/github.com/sasha-s/go-deadlock) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Why
+
 Deadlocks happen and are painful to debug.
 
 ## What
-go-deadlock provides (RW)Mutex drop-in replacements for sync.(RW)Mutex.
-It would not work if you create a spaghetti of channels.
-Mutexes only.
+
+go-deadlock provides (RW)Mutex drop-in replacements for sync.(RW)Mutex. It would
+not work if you create a spaghetti of channels. Mutexes only.
 
 ## Installation
+
 ```sh
 go get github.com/sasha-s/go-deadlock/...
 ```
 
 ## Usage
+
 ```go
 import "github.com/sasha-s/go-deadlock"
 var mu deadlock.Mutex
@@ -28,14 +31,18 @@ defer rw.RUnlock()
 ```
 
 ### Deadlocks
-One of the most common sources of deadlocks is inconsistent lock ordering:
-say, you have two mutexes A and B, and in some goroutines you have
+
+One of the most common sources of deadlocks is inconsistent lock ordering: say,
+you have two mutexes A and B, and in some goroutines you have
+
 ```go
 A.Lock() // defer A.Unlock() or similar.
 ...
 B.Lock() // defer B.Unlock() or similar.
 ```
+
 And in another goroutine the order of locks is reversed:
+
 ```go
 B.Lock() // defer B.Unlock() or similar.
 ...
@@ -43,23 +50,35 @@ A.Lock() // defer A.Unlock() or similar.
 ```
 
 Another common sources of deadlocks is duplicate take a lock in a goroutine:
+
 ```
 A.Rlock() or lock()
 
 A.lock() or A.RLock()
 ```
 
-This does not guarantee a deadlock (maybe the goroutines above can never be running at the same time), but it usually a design flaw at least.
+This does not guarantee a deadlock (maybe the goroutines above can never be
+running at the same time), but it usually a design flaw at least.
 
-go-deadlock can detect such cases (unless you cross goroutine boundary - say lock A, then spawn a goroutine, block until it is singals, and lock B inside of the goroutine), even if the deadlock itself happens very infrequently and is painful to reproduce!
+go-deadlock can detect such cases (unless you cross goroutine boundary - say
+lock A, then spawn a goroutine, block until it is singals, and lock B inside of
+the goroutine), even if the deadlock itself happens very infrequently and is
+painful to reproduce!
 
-Each time go-deadlock sees a lock attempt for lock B, it records the order A before B, for each lock that is currently being held in the same goroutine, and it prints (and exits the program by default) when it sees the locking order being violated.
+Each time go-deadlock sees a lock attempt for lock B, it records the order A
+before B, for each lock that is currently being held in the same goroutine, and
+it prints (and exits the program by default) when it sees the locking order
+being violated.
 
-In addition, if it sees that we are waiting on a lock for a long time (opts.DeadlockTimeout, 30 seconds by default), it reports a potential deadlock, also printing the stacktrace for a goroutine that is currently holding the lock we are desperately trying to grab.
-
+In addition, if it sees that we are waiting on a lock for a long time
+(opts.DeadlockTimeout, 30 seconds by default), it reports a potential deadlock,
+also printing the stacktrace for a goroutine that is currently holding the lock
+we are desperately trying to grab.
 
 ## Sample output
+
 #### Inconsistent lock ordering:
+
 ```
 POTENTIAL DEADLOCK: Inconsistent locking. saw this ordering in one goroutine:
 happened before
@@ -109,22 +128,31 @@ created by google.golang.org/cloud/bigtable/bttest.TestConcurrentMutationsReadMo
 ```
 
 ## Used in
+
 [cockroachdb: Potential deadlock between Gossip.SetStorage and Node.gossipStores](https://github.com/cockroachdb/cockroach/issues/7972)
 
 [bigtable/bttest: A race between GC and row mutations](https://code-review.googlesource.com#/c/5301/)
 
 ## Need a mutex that works with net.context?
+
 I have [one](https://github.com/sasha-s/go-csync).
 
 ## Grabbing an RLock twice from the same goroutine
+
 This is, surprisingly, not a good idea!
 
 From [RWMutex](https://golang.org/pkg/sync/#RWMutex) docs:
 
->If a goroutine holds a RWMutex for reading and another goroutine might call Lock, no goroutine should expect to be able to acquire a read lock until the initial read lock is released. In particular, this prohibits recursive read locking. This is to ensure that the lock eventually becomes available; a blocked Lock call excludes new readers from acquiring the lock.
+> If a goroutine holds a RWMutex for reading and another goroutine might call
+> Lock, no goroutine should expect to be able to acquire a read lock until the
+> initial read lock is released. In particular, this prohibits recursive read
+> locking. This is to ensure that the lock eventually becomes available; a
+> blocked Lock call excludes new readers from acquiring the lock.
 
+The following code will deadlock —
+[run the example on playground](https://play.golang.org/p/AkL-W63nq5f) or
+[try it online with go-deadlock on wandbox](https://wandbox.org/permlink/JwnL0GMySBju4SII):
 
-The following code will deadlock &mdash; [run the example on playground](https://play.golang.org/p/AkL-W63nq5f) or [try it online with go-deadlock on wandbox](https://wandbox.org/permlink/JwnL0GMySBju4SII):
 ```go
 package main
 
@@ -172,16 +200,19 @@ func main() {
 	rlockTwice()
 }
 ```
+
 ## Configuring go-deadlock
 
-Have a look at [Opts](https://pkg.go.dev/github.com/sasha-s/go-deadlock#pkg-variables).
+Have a look at
+[Opts](https://pkg.go.dev/github.com/sasha-s/go-deadlock#pkg-variables).
 
-* `Opts.Disable`: disables deadlock detection altogether
-* `Opts.DisableLockOrderDetection`: disables lock order based deadlock detection.
-* `Opts.DeadlockTimeout`: blocking on mutex for longer than DeadlockTimeout is considered a deadlock. ignored if negative
-* `Opts.OnPotentialDeadlock`: callback for then deadlock is detected
-* `Opts.MaxMapSize`: size of happens before // happens after table
-* `Opts.PrintAllCurrentGoroutines`:  dump stacktraces of all goroutines when inconsistent locking is detected, verbose
-* `Opts.LogBuf`: where to write deadlock info/stacktraces
-
-	
+- `Opts.Disable`: disables deadlock detection altogether
+- `Opts.DisableLockOrderDetection`: disables lock order based deadlock
+  detection.
+- `Opts.DeadlockTimeout`: blocking on mutex for longer than DeadlockTimeout is
+  considered a deadlock. ignored if negative
+- `Opts.OnPotentialDeadlock`: callback for then deadlock is detected
+- `Opts.MaxMapSize`: size of happens before // happens after table
+- `Opts.PrintAllCurrentGoroutines`: dump stacktraces of all goroutines when
+  inconsistent locking is detected, verbose
+- `Opts.LogBuf`: where to write deadlock info/stacktraces

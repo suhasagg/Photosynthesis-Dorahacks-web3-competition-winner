@@ -13,7 +13,8 @@ application will follow the following organizational structure:
       main.go
 ```
 
-In a Cobra app, typically the main.go file is very bare. It serves one purpose: initializing Cobra.
+In a Cobra app, typically the main.go file is very bare. It serves one purpose:
+initializing Cobra.
 
 ```go
 package main
@@ -30,14 +31,16 @@ func main() {
 ## Using the Cobra Generator
 
 Cobra-CLI is its own program that will create your application and add any
-commands you want. It's the easiest way to incorporate Cobra into your application.
+commands you want. It's the easiest way to incorporate Cobra into your
+application.
 
-For complete details on using the Cobra generator, please refer to [The Cobra-CLI Generator README](https://github.com/spf13/cobra-cli/blob/main/README.md)
+For complete details on using the Cobra generator, please refer to
+[The Cobra-CLI Generator README](https://github.com/spf13/cobra-cli/blob/main/README.md)
 
 ## Using the Cobra Library
 
-To manually implement Cobra you need to create a bare main.go file and a rootCmd file.
-You will optionally provide additional commands as you see fit.
+To manually implement Cobra you need to create a bare main.go file and a rootCmd
+file. You will optionally provide additional commands as you see fit.
 
 ### Create rootCmd
 
@@ -65,7 +68,8 @@ func Execute() {
 }
 ```
 
-You will additionally define flags and handle configuration in your init() function.
+You will additionally define flags and handle configuration in your init()
+function.
 
 For example cmd/root.go:
 
@@ -140,10 +144,11 @@ func initConfig() {
 
 ### Create your main.go
 
-With the root command you need to have your main function execute it.
-Execute should be run on the root for clarity, though it can be called on any command.
+With the root command you need to have your main function execute it. Execute
+should be run on the root for clarity, though it can be called on any command.
 
-In a Cobra app, typically the main.go file is very bare. It serves one purpose: to initialize Cobra.
+In a Cobra app, typically the main.go file is very bare. It serves one purpose:
+to initialize Cobra.
 
 ```go
 package main
@@ -225,9 +230,8 @@ Flags provide modifiers to control how the action command operates.
 
 ### Assign flags to a command
 
-Since the flags are defined and used in different locations, we need to
-define a variable outside with the correct scope to assign the flag to
-work with.
+Since the flags are defined and used in different locations, we need to define a
+variable outside with the correct scope to assign the flag to work with.
 
 ```go
 var Verbose bool
@@ -239,8 +243,8 @@ There are two different approaches to assign a flag.
 ### Persistent Flags
 
 A flag can be 'persistent', meaning that this flag will be available to the
-command it's assigned to as well as every command under that command. For
-global flags, assign a flag as a persistent flag on the root.
+command it's assigned to as well as every command under that command. For global
+flags, assign a flag as a persistent flag on the root.
 
 ```go
 rootCmd.PersistentFlags().BoolVarP(&Verbose, "verbose", "v", false, "verbose output")
@@ -248,7 +252,8 @@ rootCmd.PersistentFlags().BoolVarP(&Verbose, "verbose", "v", false, "verbose out
 
 ### Local Flags
 
-A flag can also be assigned locally, which will only apply to that specific command.
+A flag can also be assigned locally, which will only apply to that specific
+command.
 
 ```go
 localCmd.Flags().StringVarP(&Source, "source", "s", "", "Source directory to read from")
@@ -256,9 +261,10 @@ localCmd.Flags().StringVarP(&Source, "source", "s", "", "Source directory to rea
 
 ### Local Flag on Parent Commands
 
-By default, Cobra only parses local flags on the target command, and any local flags on
-parent commands are ignored. By enabling `Command.TraverseChildren`, Cobra will
-parse local flags on each command before executing the target command.
+By default, Cobra only parses local flags on the target command, and any local
+flags on parent commands are ignored. By enabling `Command.TraverseChildren`,
+Cobra will parse local flags on each command before executing the target
+command.
 
 ```go
 command := cobra.Command{
@@ -270,6 +276,7 @@ command := cobra.Command{
 ### Bind Flags with Config
 
 You can also bind your flags with [viper](https://github.com/spf13/viper):
+
 ```go
 var author string
 
@@ -279,22 +286,25 @@ func init() {
 }
 ```
 
-In this example, the persistent flag `author` is bound with `viper`.
-**Note**: the variable `author` will not be set to the value from config,
-when the `--author` flag is provided by user.
+In this example, the persistent flag `author` is bound with `viper`. **Note**:
+the variable `author` will not be set to the value from config, when the
+`--author` flag is provided by user.
 
-More in [viper documentation](https://github.com/spf13/viper#working-with-flags).
+More in
+[viper documentation](https://github.com/spf13/viper#working-with-flags).
 
 ### Required flags
 
-Flags are optional by default. If instead you wish your command to report an error
-when a flag has not been set, mark it as required:
+Flags are optional by default. If instead you wish your command to report an
+error when a flag has not been set, mark it as required:
+
 ```go
 rootCmd.Flags().StringVarP(&Region, "region", "r", "", "AWS region (required)")
 rootCmd.MarkFlagRequired("region")
 ```
 
 Or, for persistent flags:
+
 ```go
 rootCmd.PersistentFlags().StringVarP(&Region, "region", "r", "", "AWS region (required)")
 rootCmd.MarkPersistentFlagRequired("region")
@@ -302,16 +312,20 @@ rootCmd.MarkPersistentFlagRequired("region")
 
 ### Flag Groups
 
-If you have different flags that must be provided together (e.g. if they provide the `--username` flag they MUST provide the `--password` flag as well) then
+If you have different flags that must be provided together (e.g. if they provide
+the `--username` flag they MUST provide the `--password` flag as well) then
 Cobra can enforce that requirement:
+
 ```go
 rootCmd.Flags().StringVarP(&u, "username", "u", "", "Username (required if password is set)")
 rootCmd.Flags().StringVarP(&pw, "password", "p", "", "Password (required if username is set)")
 rootCmd.MarkFlagsRequiredTogether("username", "password")
 ```
 
-You can also prevent different flags from being provided together if they represent mutually
-exclusive options such as specifying an output format as either `--json` or `--yaml` but never both:
+You can also prevent different flags from being provided together if they
+represent mutually exclusive options such as specifying an output format as
+either `--json` or `--yaml` but never both:
+
 ```go
 rootCmd.Flags().BoolVar(&u, "json", false, "Output in JSON")
 rootCmd.Flags().BoolVar(&pw, "yaml", false, "Output in YAML")
@@ -319,32 +333,40 @@ rootCmd.MarkFlagsMutuallyExclusive("json", "yaml")
 ```
 
 In both of these cases:
-  - both local and persistent flags can be used
-    - **NOTE:** the group is only enforced on commands where every flag is defined
-  - a flag may appear in multiple groups
-  - a group may contain any number of flags
+
+- both local and persistent flags can be used
+  - **NOTE:** the group is only enforced on commands where every flag is defined
+- a flag may appear in multiple groups
+- a group may contain any number of flags
 
 ## Positional and Custom Arguments
 
-Validation of positional arguments can be specified using the `Args` field of `Command`.
-The following validators are built in:
+Validation of positional arguments can be specified using the `Args` field of
+`Command`. The following validators are built in:
 
 - Number of arguments:
   - `NoArgs` - report an error if there are any positional args.
   - `ArbitraryArgs` - accept any number of args.
-  - `MinimumNArgs(int)` - report an error if less than N positional args are provided.
-  - `MaximumNArgs(int)` - report an error if more than N positional args are provided.
-  - `ExactArgs(int)` - report an error if there are not exactly N positional args.
-  - `RangeArgs(min, max)` - report an error if the number of args is not between `min` and `max`.
+  - `MinimumNArgs(int)` - report an error if less than N positional args are
+    provided.
+  - `MaximumNArgs(int)` - report an error if more than N positional args are
+    provided.
+  - `ExactArgs(int)` - report an error if there are not exactly N positional
+    args.
+  - `RangeArgs(min, max)` - report an error if the number of args is not between
+    `min` and `max`.
 - Content of the arguments:
-  - `OnlyValidArgs` - report an error if there are any positional args not specified in the `ValidArgs` field of `Command`, which can optionally be set to a list of valid values for positional args.
+  - `OnlyValidArgs` - report an error if there are any positional args not
+    specified in the `ValidArgs` field of `Command`, which can optionally be set
+    to a list of valid values for positional args.
 
 If `Args` is undefined or `nil`, it defaults to `ArbitraryArgs`.
 
-Moreover, `MatchAll(pargs ...PositionalArgs)` enables combining existing checks with arbitrary other checks.
-For instance, if you want to report an error if there are not exactly N positional args OR if there are any positional
-args that are not in the `ValidArgs` field of `Command`, you can call `MatchAll` on `ExactArgs` and `OnlyValidArgs`, as
-shown below:
+Moreover, `MatchAll(pargs ...PositionalArgs)` enables combining existing checks
+with arbitrary other checks. For instance, if you want to report an error if
+there are not exactly N positional args OR if there are any positional args that
+are not in the `ValidArgs` field of `Command`, you can call `MatchAll` on
+`ExactArgs` and `OnlyValidArgs`, as shown below:
 
 ```go
 var cmd = &cobra.Command{
@@ -356,8 +378,8 @@ var cmd = &cobra.Command{
 }
 ```
 
-It is possible to set any custom validator that satisfies `func(cmd *cobra.Command, args []string) error`.
-For example:
+It is possible to set any custom validator that satisfies
+`func(cmd *cobra.Command, args []string) error`. For example:
 
 ```go
 var cmd = &cobra.Command{
@@ -447,61 +469,67 @@ a count and a string.`,
 }
 ```
 
-For a more complete example of a larger application, please checkout [Hugo](https://gohugo.io/).
+For a more complete example of a larger application, please checkout
+[Hugo](https://gohugo.io/).
 
 ## Help Command
 
-Cobra automatically adds a help command to your application when you have subcommands.
-This will be called when a user runs 'app help'. Additionally, help will also
-support all other commands as input. Say, for instance, you have a command called
-'create' without any additional configuration; Cobra will work when 'app help
-create' is called.  Every command will automatically have the '--help' flag added.
+Cobra automatically adds a help command to your application when you have
+subcommands. This will be called when a user runs 'app help'. Additionally, help
+will also support all other commands as input. Say, for instance, you have a
+command called 'create' without any additional configuration; Cobra will work
+when 'app help create' is called. Every command will automatically have the
+'--help' flag added.
 
 ### Example
 
 The following output is automatically generated by Cobra. Nothing beyond the
 command and flag definitions are needed.
 
-    $ cobra-cli help
+```
+$ cobra-cli help
 
-    Cobra is a CLI library for Go that empowers applications.
-    This application is a tool to generate the needed files
-    to quickly create a Cobra application.
+Cobra is a CLI library for Go that empowers applications.
+This application is a tool to generate the needed files
+to quickly create a Cobra application.
 
-    Usage:
-      cobra-cli [command]
+Usage:
+  cobra-cli [command]
 
-    Available Commands:
-      add         Add a command to a Cobra Application
-      completion  Generate the autocompletion script for the specified shell
-      help        Help about any command
-      init        Initialize a Cobra Application
+Available Commands:
+  add         Add a command to a Cobra Application
+  completion  Generate the autocompletion script for the specified shell
+  help        Help about any command
+  init        Initialize a Cobra Application
 
-    Flags:
-      -a, --author string    author name for copyright attribution (default "YOUR NAME")
-          --config string    config file (default is $HOME/.cobra.yaml)
-      -h, --help             help for cobra-cli
-      -l, --license string   name of license for the project
-          --viper            use Viper for configuration
+Flags:
+  -a, --author string    author name for copyright attribution (default "YOUR NAME")
+      --config string    config file (default is $HOME/.cobra.yaml)
+  -h, --help             help for cobra-cli
+  -l, --license string   name of license for the project
+      --viper            use Viper for configuration
 
-    Use "cobra-cli [command] --help" for more information about a command.
-
+Use "cobra-cli [command] --help" for more information about a command.
+```
 
 Help is just a command like any other. There is no special logic or behavior
 around it. In fact, you can provide your own if you want.
 
 ### Grouping commands in help
 
-Cobra supports grouping of available commands in the help output.  To group commands, each group must be explicitly
-defined using `AddGroup()` on the parent command.  Then a subcommand can be added to a group using the `GroupID` element
-of that subcommand. The groups will appear in the help output in the same order as they are defined using different
-calls to `AddGroup()`.  If you use the generated `help` or `completion` commands, you can set their group ids using
-`SetHelpCommandGroupId()` and `SetCompletionCommandGroupId()` on the root command, respectively.
+Cobra supports grouping of available commands in the help output. To group
+commands, each group must be explicitly defined using `AddGroup()` on the parent
+command. Then a subcommand can be added to a group using the `GroupID` element
+of that subcommand. The groups will appear in the help output in the same order
+as they are defined using different calls to `AddGroup()`. If you use the
+generated `help` or `completion` commands, you can set their group ids using
+`SetHelpCommandGroupId()` and `SetCompletionCommandGroupId()` on the root
+command, respectively.
 
 ### Defining your own help
 
-You can provide your own Help command or your own template for the default command to use
-with the following functions:
+You can provide your own Help command or your own template for the default
+command to use with the following functions:
 
 ```go
 cmd.SetHelpCommand(cmd *Command)
@@ -517,32 +545,36 @@ When the user provides an invalid flag or invalid command, Cobra responds by
 showing the user the 'usage'.
 
 ### Example
+
 You may recognize this from the help above. That's because the default help
 embeds the usage as part of its output.
 
-    $ cobra-cli --invalid
-    Error: unknown flag: --invalid
-    Usage:
-      cobra-cli [command]
+```
+$ cobra-cli --invalid
+Error: unknown flag: --invalid
+Usage:
+  cobra-cli [command]
 
-    Available Commands:
-      add         Add a command to a Cobra Application
-      completion  Generate the autocompletion script for the specified shell
-      help        Help about any command
-      init        Initialize a Cobra Application
+Available Commands:
+  add         Add a command to a Cobra Application
+  completion  Generate the autocompletion script for the specified shell
+  help        Help about any command
+  init        Initialize a Cobra Application
 
-    Flags:
-      -a, --author string    author name for copyright attribution (default "YOUR NAME")
-          --config string    config file (default is $HOME/.cobra.yaml)
-      -h, --help             help for cobra-cli
-      -l, --license string   name of license for the project
-          --viper            use Viper for configuration
+Flags:
+  -a, --author string    author name for copyright attribution (default "YOUR NAME")
+      --config string    config file (default is $HOME/.cobra.yaml)
+  -h, --help             help for cobra-cli
+  -l, --license string   name of license for the project
+      --viper            use Viper for configuration
 
-    Use "cobra [command] --help" for more information about a command.
+Use "cobra [command] --help" for more information about a command.
+```
 
 ### Defining your own usage
-You can provide your own usage function or template for Cobra to use.
-Like help, the function and template are overridable through public methods:
+
+You can provide your own usage function or template for Cobra to use. Like help,
+the function and template are overridable through public methods:
 
 ```go
 cmd.SetUsageFunc(f func(*Command) error)
@@ -551,14 +583,18 @@ cmd.SetUsageTemplate(s string)
 
 ## Version Flag
 
-Cobra adds a top-level '--version' flag if the Version field is set on the root command.
-Running an application with the '--version' flag will print the version to stdout using
-the version template. The template can be customized using the
+Cobra adds a top-level '--version' flag if the Version field is set on the root
+command. Running an application with the '--version' flag will print the version
+to stdout using the version template. The template can be customized using the
 `cmd.SetVersionTemplate(s string)` function.
 
 ## PreRun and PostRun Hooks
 
-It is possible to run functions before or after the main `Run` function of your command. The `PersistentPreRun` and `PreRun` functions will be executed before `Run`. `PersistentPostRun` and `PostRun` will be executed after `Run`.  The `Persistent*Run` functions will be inherited by children if they do not declare their own.  These functions are run in the following order:
+It is possible to run functions before or after the main `Run` function of your
+command. The `PersistentPreRun` and `PreRun` functions will be executed before
+`Run`. `PersistentPostRun` and `PostRun` will be executed after `Run`. The
+`Persistent*Run` functions will be inherited by children if they do not declare
+their own. These functions are run in the following order:
 
 - `PersistentPreRun`
 - `PreRun`
@@ -566,7 +602,9 @@ It is possible to run functions before or after the main `Run` function of your 
 - `PostRun`
 - `PersistentPostRun`
 
-An example of two commands which use all of these features is below.  When the subcommand is executed, it will run the root command's `PersistentPreRun` but not the root command's `PersistentPostRun`:
+An example of two commands which use all of these features is below. When the
+subcommand is executed, it will run the root command's `PersistentPreRun` but
+not the root command's `PersistentPostRun`:
 
 ```go
 package main
@@ -627,6 +665,7 @@ func main() {
 ```
 
 Output:
+
 ```
 Inside rootCmd PersistentPreRun with args: []
 Inside rootCmd PreRun with args: []
@@ -643,7 +682,9 @@ Inside subCmd PersistentPostRun with args: [arg1 arg2]
 
 ## Suggestions when "unknown command" happens
 
-Cobra will print automatic suggestions when "unknown command" errors happen. This allows Cobra to behave similarly to the `git` command when a typo happens. For example:
+Cobra will print automatic suggestions when "unknown command" errors happen.
+This allows Cobra to behave similarly to the `git` command when a typo happens.
+For example:
 
 ```
 $ hugo srever
@@ -655,9 +696,14 @@ Did you mean this?
 Run 'hugo --help' for usage.
 ```
 
-Suggestions are automatically generated based on existing subcommands and use an implementation of [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance). Every registered command that matches a minimum distance of 2 (ignoring case) will be displayed as a suggestion.
+Suggestions are automatically generated based on existing subcommands and use an
+implementation of
+[Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance).
+Every registered command that matches a minimum distance of 2 (ignoring case)
+will be displayed as a suggestion.
 
-If you need to disable suggestions or tweak the string distance in your command, use:
+If you need to disable suggestions or tweak the string distance in your command,
+use:
 
 ```go
 command.DisableSuggestions = true
@@ -669,8 +715,10 @@ or
 command.SuggestionsMinimumDistance = 1
 ```
 
-You can also explicitly set names for which a given command will be suggested using the `SuggestFor` attribute. This allows suggestions for strings that are not close in terms of string distance, but make sense in your set of commands but for which
-you don't want aliases. Example:
+You can also explicitly set names for which a given command will be suggested
+using the `SuggestFor` attribute. This allows suggestions for strings that are
+not close in terms of string distance, but make sense in your set of commands
+but for which you don't want aliases. Example:
 
 ```
 $ kubectl remove
@@ -684,12 +732,19 @@ Run 'kubectl help' for usage.
 
 ## Generating documentation for your command
 
-Cobra can generate documentation based on subcommands, flags, etc. Read more about it in the [docs generation documentation](doc/README.md).
+Cobra can generate documentation based on subcommands, flags, etc. Read more
+about it in the [docs generation documentation](doc/README.md).
 
 ## Generating shell completions
 
-Cobra can generate a shell-completion file for the following shells: bash, zsh, fish, PowerShell. If you add more information to your commands, these completions can be amazingly powerful and flexible.  Read more about it in [Shell Completions](shell_completions.md).
+Cobra can generate a shell-completion file for the following shells: bash, zsh,
+fish, PowerShell. If you add more information to your commands, these
+completions can be amazingly powerful and flexible. Read more about it in
+[Shell Completions](shell_completions.md).
 
 ## Providing Active Help
 
-Cobra makes use of the shell-completion system to define a framework allowing you to provide Active Help to your users.  Active Help are messages (hints, warnings, etc) printed as the program is being used.  Read more about it in [Active Help](active_help.md).
+Cobra makes use of the shell-completion system to define a framework allowing
+you to provide Active Help to your users. Active Help are messages (hints,
+warnings, etc) printed as the program is being used. Read more about it in
+[Active Help](active_help.md).

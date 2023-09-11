@@ -2,13 +2,19 @@
 
 Welcome to the documentation of the **Archway Daemon: `archwayd`**.
 
-`archwayd` is the binary to run archway node which can participate in the archway network. In order to install it, follow the [installation procedure](../README.md).
+`archwayd` is the binary to run archway node which can participate in the
+archway network. In order to install it, follow the
+[installation procedure](../README.md).
 
 ## The covered topics
 
->**Note:** Since `archwayd` is an expansion to the [`cosmos-sdk`](https://github.com/cosmos/cosmos-sdk) and [`wasmd`](https://github.com/CosmWasm/wasmd), Please refer to the original docs for the CLI commands and Flags part of those projects.
+> **Note:** Since `archwayd` is an expansion to the
+> [`cosmos-sdk`](https://github.com/cosmos/cosmos-sdk) and
+> [`wasmd`](https://github.com/CosmWasm/wasmd), Please refer to the original
+> docs for the CLI commands and Flags part of those projects.
 
->**Tip:** You need to use `archwayd` instead of `gaiad` and `wasmd` in the docs.
+> **Tip:** You need to use `archwayd` instead of `gaiad` and `wasmd` in the
+> docs.
 
 - [Config](https://github.com/cosmos/gaia/blob/main/docs/resources/gaiad.md#setting-up-gaiad)
 - [Key Management](https://github.com/cosmos/gaia/blob/main/docs/resources/gaiad.md#keys)

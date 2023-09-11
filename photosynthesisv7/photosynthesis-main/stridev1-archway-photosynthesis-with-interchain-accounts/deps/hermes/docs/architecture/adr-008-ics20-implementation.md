@@ -6,33 +6,37 @@ Accepted
 
 ## Changelog
 
-* 21.04.2022: Draft Proposed
+- 21.04.2022: Draft Proposed
 
 ## Context
 
-The goal of this ADR is to provide recommendations and a guide for implementing the ICS20 application.
+The goal of this ADR is to provide recommendations and a guide for implementing
+the ICS20 application.
 
 ## Decision
 
-The proposal is broken down into traits that should be implemented by the ICS20 module. It also defines some primitives
-that would help in building a module compliant with the ICS20 spec.
+The proposal is broken down into traits that should be implemented by the ICS20
+module. It also defines some primitives that would help in building a module
+compliant with the ICS20 spec.
 
 #### Types
 
-The implementation must provide a base denom type that is serializable to string. Additionally, the following denom
-types must also be provided:
+The implementation must provide a base denom type that is serializable to
+string. Additionally, the following denom types must also be provided:
 
-* `HashedDenom`: A denom type that can be serialized to a string of the form `'ibc/{Hash(trace_path/base_denom)}'`.
-* `PrefixedDenom`: A denom type with a base denom which is prefixed with a trace. The trace itself consists
-  of `'{PortId}/{ChannelId}'` pairs and enables coin source tracing[^1].
+- `HashedDenom`: A denom type that can be serialized to a string of the form
+  `'ibc/{Hash(trace_path/base_denom)}'`.
+- `PrefixedDenom`: A denom type with a base denom which is prefixed with a
+  trace. The trace itself consists of `'{PortId}/{ChannelId}'` pairs and enables
+  coin source tracing\[^1].
 
 ```rust
 /// Base denomination type
 pub struct Denom(String);
 ```
 
-A `Coin` defines a token with a denomination and an amount where the denomination may be any one of the denom types
-described above.
+A `Coin` defines a token with a denomination and an amount where the
+denomination may be any one of the denom types described above.
 
 ```rust
 #[derive(Clone, Debug, Eq, PartialEq, PartialOrd, Ord, Serialize, Deserialize)]
@@ -44,8 +48,9 @@ pub struct Coin<Denom> {
 }
 ```
 
-The ICS20 acknowledgement type and packet data type are defined in the spec[^2] and maybe modelled as follows. Note that
-these types must be (de)serializable from/to JSON.
+The ICS20 acknowledgement type and packet data type are defined in the spec\[^2]
+and maybe modelled as follows. Note that these types must be (de)serializable
+from/to JSON.
 
 ```rust
 pub enum ICS20Acknowledgement {
@@ -154,11 +159,13 @@ Ics20Keeper<AccountId=<Self as Ics20Context>::AccountId>
 
 ## Handling ICS20 Packets
 
-ICS20 messages are still a subset of channel packets, so they should be handled as such.
+ICS20 messages are still a subset of channel packets, so they should be handled
+as such.
 
-The following handlers are recommended to be implemented in the `ics20_fungible_token_transfer` application in the `ibc`
-crate. These handlers will be executed in the module callbacks of any third-party IBC module that is implementing an
-ICS20 application on-chain.
+The following handlers are recommended to be implemented in the
+`ics20_fungible_token_transfer` application in the `ibc` crate. These handlers
+will be executed in the module callbacks of any third-party IBC module that is
+implementing an ICS20 application on-chain.
 
 ```rust
 /// Should be used in the transaction that initiates the ICS20 token transfer
@@ -217,13 +224,13 @@ pub fn refund_packet_token<Ctx>(_ctx: &Ctx, _data: &FungibleTokenPacketData) -> 
 }
 ```
 
-
 ## Consequences
 
 ### Positive
 
-- Provides more clarity on the details of implementing the ICS20 application in the `ibc` crate.
-- Helps align closer with the ibc-go implementation[^3].
+- Provides more clarity on the details of implementing the ICS20 application in
+  the `ibc` crate.
+- Helps align closer with the ibc-go implementation\[^3].
 
 ### Negative
 
@@ -231,6 +238,11 @@ pub fn refund_packet_token<Ctx>(_ctx: &Ctx, _data: &FungibleTokenPacketData) -> 
 
 ## References
 
-[^1]: [ibc-go ADR 001: Coin Source Tracing](https://github.com/cosmos/ibc-go/blob/4271027a5ab1e6faaa2edbc2b9840209c315afab/docs/architecture/adr-001-coin-source-tracing.md)
-[^2]: [ICS20 spec](https://github.com/cosmos/ibc/tree/master/spec/app/ics-020-fungible-token-transfer)
-[^3]: [ibc-go's transfer module implementation](https://github.com/cosmos/ibc-go/tree/d31f92d9bf709f5550b75db5c70a3b44314d9781/modules/apps/transfer)
+\[^1]:
+[ibc-go ADR 001: Coin Source Tracing](https://github.com/cosmos/ibc-go/blob/4271027a5ab1e6faaa2edbc2b9840209c315afab/docs/architecture/adr-001-coin-source-tracing.md)
+
+\[^2]:
+[ICS20 spec](https://github.com/cosmos/ibc/tree/master/spec/app/ics-020-fungible-token-transfer)
+
+\[^3]:
+[ibc-go's transfer module implementation](https://github.com/cosmos/ibc-go/tree/d31f92d9bf709f5550b75db5c70a3b44314d9781/modules/apps/transfer)

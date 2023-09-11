@@ -1,15 +1,16 @@
 # taskgroup
 
-[![GoDoc](https://img.shields.io/static/v1?label=godoc&message=reference&color=blue)](https://pkg.go.dev/github.com/creachadair/taskgroup)
+[![GoDoc](https://img.shields.io/static/v1?label=godoc\&message=reference\&color=blue)](https://pkg.go.dev/github.com/creachadair/taskgroup)
 
 A `*taskgroup.Group` represents a group of goroutines working on related tasks.
 New tasks can be added to the group at will, and the caller can wait until all
 tasks are complete. Errors are automatically collected and delivered to a
-user-provided callback in a single goroutine.  This does not replace the full
-generality of Go's built-in features, but it simplifies some of the plumbing
-for common concurrent tasks.
+user-provided callback in a single goroutine. This does not replace the full
+generality of Go's built-in features, but it simplifies some of the plumbing for
+common concurrent tasks.
 
-Here is a [working example in the Go Playground](https://play.golang.org/p/V2slrnMu2Ec).
+Here is a
+[working example in the Go Playground](https://play.golang.org/p/V2slrnMu2Ec).
 
 ## Rationale
 
@@ -23,8 +24,8 @@ built in.
 
 For example, consider the case of copying a large directory tree: Walk throught
 the source directory recursively, creating the parallel target directory
-structure and spinning up a goroutine to copy each of the files
-concurrently. This part is simple:
+structure and spinning up a goroutine to copy each of the files concurrently.
+This part is simple:
 
 ```go
 func copyTree(source, target string) error {
@@ -43,8 +44,8 @@ func copyTree(source, target string) error {
 }
 ```
 
-Unfortunately, this isn't quite sufficient: How will we detect when all the
-file copies are finished? Typically we do this with a `sync.WaitGroup`:
+Unfortunately, this isn't quite sufficient: How will we detect when all the file
+copies are finished? Typically we do this with a `sync.WaitGroup`:
 
 ```go
 var wg sync.WaitGroup
@@ -106,9 +107,9 @@ close(errs) // signal the error collector to stop
 ```
 
 That's tedious, but works. But now, in this example, if something fails we
-really don't want to wait around for all the copies to finish―if one of the
-file copies fails, we want to stop what you're doing and clean up.  So now we
-need another channel or a context to signal cancellation:
+really don't want to wait around for all the copies to finish―if one of the file
+copies fails, we want to stop what you're doing and clean up. So now we need
+another channel or a context to signal cancellation:
 
 ```go
 	ctx, cancel := context.WithCancel(context.Background())
@@ -132,9 +133,9 @@ func copyFile(ctx context.Context, source, target string, errs chan<- error) {
 Finally, the way this is set up right now there is no limit to the number of
 copies that can be concurrently in flight. Even if we have plenty of RAM, it is
 quite likely we may hit the limit of open file descriptors our process is
-allowed. Ideally, we should set some kind of bound on the active concurrency.
-We might use a [semaphore](https://godoc.org/golang.org/x/sync/semaphore) or
-a throttling channel:
+allowed. Ideally, we should set some kind of bound on the active concurrency. We
+might use a [semaphore](https://godoc.org/golang.org/x/sync/semaphore) or a
+throttling channel:
 
 ```go
 throttle := make(chan struct{}, 64)  // allow up to 64 concurrent copies
@@ -152,19 +153,19 @@ powerful enough to express these relationships, it can be tedious to wire them
 all together.
 
 The `taskgroup` package exists to handle the plumbing for the common case of a
-group of tasks that are all working on a related outcome (_e.g.,_ copying a
-directory structure), and where an error on the part of any _single_ task may
-be grounds for terminating the work as a whole.
+group of tasks that are all working on a related outcome (*e.g.,* copying a
+directory structure), and where an error on the part of any *single* task may be
+grounds for terminating the work as a whole.
 
-The package provides a `taskgroup.Group` type that has built-in support for
-some of these concerns:
+The package provides a `taskgroup.Group` type that has built-in support for some
+of these concerns:
 
 - Limiting the number of active goroutines.
 - Collecting and filtering errors.
 - Waiting for completion and delivering status.
 
-A `taskgroup.Group` collects error values from each task and can deliver them
-to a user-provided callback. The callback can filter them or take other actions
+A `taskgroup.Group` collects error values from each task and can deliver them to
+a user-provided callback. The callback can filter them or take other actions
 (such as cancellation). Invocations of the callback are all done from a single
 goroutine so it is safe to manipulate local resources without a lock.
 
@@ -180,23 +181,23 @@ g := taskgroup.New(nil).Go(myTask)
 ```
 
 Any number of tasks may be added, and it is safe to do so from multiple
-goroutines concurrently.  To wait for the tasks to finish, use:
+goroutines concurrently. To wait for the tasks to finish, use:
 
 ```go
 err := g.Wait()
 ```
 
-This blocks until all the tasks in the group have returned (either
-successfully, or with an error). `Wait` returns the first non-nil error
-returned by any of the worker tasks.
+This blocks until all the tasks in the group have returned (either successfully,
+or with an error). `Wait` returns the first non-nil error returned by any of the
+worker tasks.
 
 An example program can be found in `examples/copytree/copytree.go`.
 
 ## Filtering Errors
 
-The `taskgroup.New` function takes an optional callback that is invoked for
-each non-nil error reported by a task in the group. The callback may choose
-to propagate, replace, or discard the error. For example:
+The `taskgroup.New` function takes an optional callback that is invoked for each
+non-nil error reported by a task in the group. The callback may choose to
+propagate, replace, or discard the error. For example:
 
 ```go
 g := taskgroup.New(func(err error) error {
@@ -209,7 +210,7 @@ g := taskgroup.New(func(err error) error {
 
 ## Controlling Concurrency
 
-The `Limit` method supports limiting the number of concurrently _active_
+The `Limit` method supports limiting the number of concurrently *active*
 goroutines in the group. For example:
 
 ```go

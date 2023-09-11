@@ -6,8 +6,8 @@ order: 3
 
 Learn about all the available services for clients {synopsis}
 
-The Evmos supports different clients in order to support Cosmos and Ethereum transactions
-and queries:
+The Evmos supports different clients in order to support Cosmos and Ethereum
+transactions and queries:
 
 |                                                        | Description                                                                          | Default Port |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------ |
@@ -21,32 +21,37 @@ and queries:
 
 ## Cosmos gRPC
 
-Evmos exposes gRPC endpoints for all the integrated Cosmos SDK modules. This makes it easier for
-wallets and block explorers to interact with the Proof-of-Stake logic and native Cosmos transactions and queries.
+Evmos exposes gRPC endpoints for all the integrated Cosmos SDK modules. This
+makes it easier for wallets and block explorers to interact with the
+Proof-of-Stake logic and native Cosmos transactions and queries.
 
 ### Cosmos gRPC-Gateway (HTTP REST)
 
-[gRPC-Gateway](https://grpc-ecosystem.github.io/grpc-gateway/) reads a gRPC service definition and
-generates a reverse-proxy server which translates RESTful JSON API into gRPC. With gRPC-Gateway,
-users can use REST to interact with the Cosmos gRPC service.
+[gRPC-Gateway](https://grpc-ecosystem.github.io/grpc-gateway/) reads a gRPC
+service definition and generates a reverse-proxy server which translates RESTful
+JSON API into gRPC. With gRPC-Gateway, users can use REST to interact with the
+Cosmos gRPC service.
 
-See the list of supported gRPC-Gateway API endpoints for the Evmos testnet [here](https://api.evmos.dev/).
+See the list of supported gRPC-Gateway API endpoints for the Evmos testnet
+[here](https://api.evmos.dev/).
 
 ## Ethereum JSON-RPC
 
 <!-- TODO: Link JSON-RPC docs -->
 
-Evmos supports most of the standard [JSON-RPC APIs](./json-rpc/server.md) to connect with existing Ethereum-compatible web3 tooling.
+Evmos supports most of the standard [JSON-RPC APIs](./json-rpc/server.md) to
+connect with existing Ethereum-compatible web3 tooling.
 
-::: tip
-Check out the list of supported JSON-RPC API [endpoints](./json-rpc/endpoints.md) and [namespaces](./json-rpc/namespaces.md).
+::: tip Check out the list of supported JSON-RPC API
+[endpoints](./json-rpc/endpoints.md) and [namespaces](./json-rpc/namespaces.md).
 :::
 
 ## Ethereum Websocket
 
 <!-- TODO: Link WSS docs -->
 
-Then, start a websocket subscription with [`ws`](https://github.com/hashrocket/ws)
+Then, start a websocket subscription with
+[`ws`](https://github.com/hashrocket/ws)
 
 ```bash
 # connect to tendermint websocket at port 8546 as defined above
@@ -59,10 +64,12 @@ ws ws://localhost:8546/
 
 ## Tendermint Websocket
 
-Tendermint Core provides a Websocket connection to subscribe or unsubscribe to Tendermint ABCI events.
+Tendermint Core provides a Websocket connection to subscribe or unsubscribe to
+Tendermint ABCI events.
 
-::: tip
-For more info about how to subscribe to events, please refer to the official [Tendermint documentation](https://docs.tendermint.com/v0.34/tendermint-core/subscription.html).
+::: tip For more info about how to subscribe to events, please refer to the
+official
+[Tendermint documentation](https://docs.tendermint.com/v0.34/tendermint-core/subscription.html).
 :::
 
 ```json
@@ -81,14 +88,17 @@ For more info about how to subscribe to events, please refer to the official [Te
 The main events you can subscribe to are:
 
 - `NewBlock`: Contains `events` triggered during `BeginBlock` and `EndBlock`.
-- `Tx`: Contains `events` triggered during `DeliverTx` (i.e. transaction processing).
+- `Tx`: Contains `events` triggered during `DeliverTx` (i.e. transaction
+  processing).
 - `ValidatorSetUpdates`: Contains validator set updates for the block.
 
 ::: tip
+
 <!-- markdown-link-check-disable-next-line -->
-👉 The list of events types and values for each Cosmos SDK module can be found in the [Modules Specification](./../modules/README.md) section.
-Check the `Events` page to obtain the event list of each supported module on Evmos.
-:::
+
+👉 The list of events types and values for each Cosmos SDK module can be found
+in the [Modules Specification](./../modules/README.md) section. Check the
+`Events` page to obtain the event list of each supported module on Evmos. :::
 
 List of all Tendermint event keys:
 
@@ -159,86 +169,84 @@ Example response:
 
 ## CLI
 
-Users can use the `{{ $themeConfig.project.binary }}` binary to interact directly with an Evmos node
-though the CLI.
+Users can use the `{{ $themeConfig.project.binary }}` binary to interact
+directly with an Evmos node though the CLI.
 
-::: tip
-👉 To use the CLI, you will need to provide a Tendermint RPC address for the `--node` flag.
-Look for a publicly available addresses for testnet and mainnet in the [Quick Connect](./connect.md) page.
-:::
+::: tip 👉 To use the CLI, you will need to provide a Tendermint RPC address for
+the `--node` flag. Look for a publicly available addresses for testnet and
+mainnet in the [Quick Connect](./connect.md) page. :::
 
 - **Transactions**: `{{ $themeConfig.project.binary }} tx`
 
-    The list of available commands, as of `v3.0.0`, are:
+  The list of available commands, as of `v3.0.0`, are:
 
-    ```bash
-    Available Commands:
-      authz               Authorization transactions subcommands
-      bank                Bank transaction subcommands
-      broadcast           Broadcast transactions generated offline
-      crisis              Crisis transactions subcommands
-      decode              Decode a binary encoded transaction string
-      distribution        Distribution transactions subcommands
-      encode              Encode transactions generated offline
-      erc20               erc20 subcommands
-      evidence            Evidence transaction subcommands
-      evm                 evm transactions subcommands
-      feegrant            Feegrant transactions subcommands
-      gov                 Governance transactions subcommands
-      ibc                 IBC transaction subcommands
-      ibc-transfer        IBC fungible token transfer transaction subcommands
-      multisign           Generate multisig signatures for transactions generated offline
-      multisign-batch     Assemble multisig transactions in batch from batch signatures
-      sign                Sign a transaction generated offline
-      sign-batch          Sign transaction batch files
-      slashing            Slashing transaction subcommands
-      staking             Staking transaction subcommands
-      validate-signatures validate transactions signatures
-      vesting             Vesting transaction subcommands
-    ```
+  ```bash
+  Available Commands:
+    authz               Authorization transactions subcommands
+    bank                Bank transaction subcommands
+    broadcast           Broadcast transactions generated offline
+    crisis              Crisis transactions subcommands
+    decode              Decode a binary encoded transaction string
+    distribution        Distribution transactions subcommands
+    encode              Encode transactions generated offline
+    erc20               erc20 subcommands
+    evidence            Evidence transaction subcommands
+    evm                 evm transactions subcommands
+    feegrant            Feegrant transactions subcommands
+    gov                 Governance transactions subcommands
+    ibc                 IBC transaction subcommands
+    ibc-transfer        IBC fungible token transfer transaction subcommands
+    multisign           Generate multisig signatures for transactions generated offline
+    multisign-batch     Assemble multisig transactions in batch from batch signatures
+    sign                Sign a transaction generated offline
+    sign-batch          Sign transaction batch files
+    slashing            Slashing transaction subcommands
+    staking             Staking transaction subcommands
+    validate-signatures validate transactions signatures
+    vesting             Vesting transaction subcommands
+  ```
 
 - **Queries**: `{{ $themeConfig.project.binary }} query`
 
   The list of available commands, as of `v3.0.0`, are:
 
-    ```bash
-    Available Commands:
-      account                  Query for account by address
-      auth                     Querying commands for the auth module
-      authz                    Querying commands for the authz module
-      bank                     Querying commands for the bank module
-      block                    Get verified data for a the block at given height
-      claims                   Querying commands for the claims module
-      distribution             Querying commands for the distribution module
-      epochs                   Querying commands for the epochs module
-      erc20                    Querying commands for the erc20 module
-      evidence                 Query for evidence by hash or for all (paginated) submitted evidence
-      evm                      Querying commands for the evm module
-      feegrant                 Querying commands for the feegrant module
-      feemarket                Querying commands for the fee market module
-      gov                      Querying commands for the governance module
-      ibc                      Querying commands for the IBC module
-      ibc-transfer             IBC fungible token transfer query subcommands
-      incentives               Querying commands for the incentives module
-      inflation                Querying commands for the inflation module
-      params                   Querying commands for the params module
-      recovery                 Querying commands for the recovery module
-      slashing                 Querying commands for the slashing module
-      staking                  Querying commands for the staking module
-      tendermint-validator-set Get the full tendermint validator set at given height
-      tx                       Query for a transaction by hash, "<addr>/<seq>" combination or comma-separated signatures in a committed block
-      txs                      Query for paginated transactions that match a set of events
-      upgrade                  Querying commands for the upgrade module
-      vesting                  Querying commands for the vesting module
-    ```
+  ```bash
+  Available Commands:
+    account                  Query for account by address
+    auth                     Querying commands for the auth module
+    authz                    Querying commands for the authz module
+    bank                     Querying commands for the bank module
+    block                    Get verified data for a the block at given height
+    claims                   Querying commands for the claims module
+    distribution             Querying commands for the distribution module
+    epochs                   Querying commands for the epochs module
+    erc20                    Querying commands for the erc20 module
+    evidence                 Query for evidence by hash or for all (paginated) submitted evidence
+    evm                      Querying commands for the evm module
+    feegrant                 Querying commands for the feegrant module
+    feemarket                Querying commands for the fee market module
+    gov                      Querying commands for the governance module
+    ibc                      Querying commands for the IBC module
+    ibc-transfer             IBC fungible token transfer query subcommands
+    incentives               Querying commands for the incentives module
+    inflation                Querying commands for the inflation module
+    params                   Querying commands for the params module
+    recovery                 Querying commands for the recovery module
+    slashing                 Querying commands for the slashing module
+    staking                  Querying commands for the staking module
+    tendermint-validator-set Get the full tendermint validator set at given height
+    tx                       Query for a transaction by hash, "<addr>/<seq>" combination or comma-separated signatures in a committed block
+    txs                      Query for paginated transactions that match a set of events
+    upgrade                  Querying commands for the upgrade module
+    vesting                  Querying commands for the vesting module
+  ```
 
-::: tip
-**Note:** When querying Ethereum transactions versus Cosmos transactions, the transaction hashes are different.
-When querying Ethereum transactions, users need to use event query.
-Here's an example with the CLI:
+::: tip **Note:** When querying Ethereum transactions versus Cosmos
+transactions, the transaction hashes are different. When querying Ethereum
+transactions, users need to use event query. Here's an example with the CLI:
 
 ```bash
-curl -X GET "http://localhost:26657/tx_search?query=ethereum_tx.ethereumTxHash%3D0x8d43464891fac6c113e809e14dff1a3e608eae124d629799e42ca0e36562d9d7&prove=false&page=1&per_page=30&order_by=asc" -H "accept: application/json"  
+curl -X GET "http://localhost:26657/tx_search?query=ethereum_tx.ethereumTxHash%3D0x8d43464891fac6c113e809e14dff1a3e608eae124d629799e42ca0e36562d9d7&prove=false&page=1&per_page=30&order_by=asc" -H "accept: application/json"
 ```
 
 :::

@@ -1,12 +1,11 @@
-
 # Table of Contents
 
 <!-- toc -->
 
 # Query Clients
 
-Use the `query clients` command to query the identifiers of all clients on a given chain, called
-the _host_ chain.
+Use the `query clients` command to query the identifiers of all clients on a
+given chain, called the *host* chain.
 
 ```shell
 USAGE:
@@ -26,7 +25,7 @@ REQUIRED:
         --host-chain <HOST_CHAIN_ID>    Identifier of the chain to query
 ```
 
-__Example__
+**Example**
 
 Query all clients on `ibc-1`:
 
@@ -108,7 +107,7 @@ REQUIRED:
         --client <CLIENT_ID>    Identifier of the client to query
 ```
 
-__Example__
+**Example**
 
 Query the state of client `07-tendermint-2` on `ibc-1`:
 
@@ -148,7 +147,8 @@ Success: ClientState {
 
 ## Query the client consensus state
 
-Use the `query client consensus` command to query the consensus states of a given client, or the state at a specified height:
+Use the `query client consensus` command to query the consensus states of a
+given client, or the state at a specified height:
 
 ```shell
 USAGE:
@@ -172,7 +172,7 @@ REQUIRED:
         --client <CLIENT_ID>    Identifier of the client to query
 ```
 
-__Example__
+**Example**
 
 Query the states of client `07-tendermint-0` on `ibc-0`:
 
@@ -231,7 +231,8 @@ Success: ConsensusState {
 
 ## Query the identifiers of all connections associated with a given client
 
-Use the `query client connections` command to query the connections associated with a given client:
+Use the `query client connections` command to query the connections associated
+with a given client:
 
 ```shell
 USAGE:
@@ -248,7 +249,7 @@ REQUIRED:
         --client <CLIENT_ID>    Identifier of the client to query
 ```
 
-__Example__
+**Example**
 
 Query the connections of client `07-tendermint-0` on `ibc-0`:
 
@@ -282,9 +283,10 @@ REQUIRED:
         --consensus-height <CONSENSUS_HEIGHT>    Height of header to query
 ```
 
-__Example__
+**Example**
 
-Query for the header used in the `07-tendermint-0` client update at height 2724 on `ibc-0`:
+Query for the header used in the `07-tendermint-0` client update at height 2724
+on `ibc-0`:
 
 ```shell
 hermes query client header --chain ibc-0 --client 07-tendermint-0 --consensus-height 2724

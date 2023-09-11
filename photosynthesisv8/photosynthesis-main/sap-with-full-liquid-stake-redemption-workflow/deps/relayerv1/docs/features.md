@@ -9,10 +9,12 @@ The relayer supports the following:
 - relaying from state
 - relaying from streaming events
 - sending an UpgradePlan proposal for an IBC breaking upgrade
-- upgrading clients after a counter-party chain has performed an upgrade for IBC breaking changes
-- fetching canonical chain and path metadata from the GitHub repo to quickly bootstrap a relayer instance
+- upgrading clients after a counter-party chain has performed an upgrade for IBC
+  breaking changes
+- fetching canonical chain and path metadata from the GitHub repo to quickly
+  bootstrap a relayer instance
 - automatically keep clients alive on low traffic paths
-- scrape metrics via a Prometheus endpoint 
+- scrape metrics via a Prometheus endpoint
 
 The relayer currently cannot:
 
@@ -21,5 +23,5 @@ The relayer currently cannot:
 - monitor and submit misbehavior for clients
 - connect to chains which don't implement/enable IBC
 
-
-[<-- Troubleshooting](./troubleshooting.md) - [Relayer Terminology -->](./terminology.md)
+[<-- Troubleshooting](./troubleshooting.md) -
+[Relayer Terminology -->](./terminology.md)

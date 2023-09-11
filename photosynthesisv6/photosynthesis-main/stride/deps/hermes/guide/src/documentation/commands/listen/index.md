@@ -1,6 +1,7 @@
 # Relayer Listen Mode
 
-The relayer can be started in `listen` mode to display the events emitted by a given chain. `NewBlock` and `Tx` IBC events are shown.
+The relayer can be started in `listen` mode to display the events emitted by a
+given chain. `NewBlock` and `Tx` IBC events are shown.
 
 ```shell
 USAGE:
@@ -17,7 +18,7 @@ REQUIRED:
         --chain <CHAIN_ID>    Identifier of the chain to listen for events from
 ```
 
-__Example__
+**Example**
 
 Start the relayer in listen mode for all `ibc-0` events and observe the output:
 
@@ -148,16 +149,21 @@ EventBatch {
 
 ## Filter events
 
-The `listen` command accepts a `--event` flag to specify which event types to listen for.
+The `listen` command accepts a `--event` flag to specify which event types to
+listen for.
 
 At the moment, two event types are available:
-- `NewBlock` 
+
+- `NewBlock`
 - `Tx`
 
 The `--event` flag can be repeated to specify more than one event type.
 
-- To listen for only `NewBlock` events on `ibc-0`, invoke `hermes listen --chain ibc-0 --events NewBlock`
-- To listen for only `Tx` events on `ibc-0`, invoke `hermes listen --chain ibc-0 --events Tx`
-- To listen for both `NewBlock` and `Tx` events on `ibc-0`, invoke `hermes listen --chain ibc-0 --events NewBlock Tx`
+- To listen for only `NewBlock` events on `ibc-0`, invoke
+  `hermes listen --chain ibc-0 --events NewBlock`
+- To listen for only `Tx` events on `ibc-0`, invoke
+  `hermes listen --chain ibc-0 --events Tx`
+- To listen for both `NewBlock` and `Tx` events on `ibc-0`, invoke
+  `hermes listen --chain ibc-0 --events NewBlock Tx`
 
 If the `--event` flag is omitted, the relayer will subscribe to all event types.

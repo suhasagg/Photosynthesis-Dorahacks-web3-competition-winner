@@ -22,6 +22,7 @@ REQUIRED:
             The height at which the reference chain halts for the client upgrade
 ```
 
-__Example__
+**Example**
 
-Here is [an example](./test.md) of a chain upgrade proposal submission and client upgrade.
+Here is [an example](./test.md) of a chain upgrade proposal submission and
+client upgrade.

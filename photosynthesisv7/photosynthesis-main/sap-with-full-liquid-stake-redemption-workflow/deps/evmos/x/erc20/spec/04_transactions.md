@@ -4,11 +4,14 @@ order: 4
 
 # Transactions
 
-This section defines the `sdk.Msg` concrete types that result in the state transitions defined on the previous section.
+This section defines the `sdk.Msg` concrete types that result in the state
+transitions defined on the previous section.
 
 ## `RegisterCoinProposal`
 
-A gov `Content` type to register a token pair from a Cosmos Coin. Governance users vote on this proposal and it automatically executes the custom handler for `RegisterCoinProposal` when the vote passes.
+A gov `Content` type to register a token pair from a Cosmos Coin. Governance
+users vote on this proposal and it automatically executes the custom handler
+for `RegisterCoinProposal` when the vote passes.
 
 ```go
 type RegisterCoinProposal struct {
@@ -26,16 +29,18 @@ The proposal content stateless validation fails if:
 - Title is invalid (length or char)
 - Description is invalid (length or char)
 - Metadata is invalid
-    - Name and Symbol are not blank
-    - Base and Display denominations are valid coin denominations
-    - Base and Display denominations are present in the DenomUnit slice
-    - Base denomination has exponent 0
-    - Denomination units are sorted in ascending order
-    - Denomination units not duplicated
+  - Name and Symbol are not blank
+  - Base and Display denominations are valid coin denominations
+  - Base and Display denominations are present in the DenomUnit slice
+  - Base denomination has exponent 0
+  - Denomination units are sorted in ascending order
+  - Denomination units not duplicated
 
 ## `RegisterERC20Proposal`
 
-A gov `Content` type to register a token pair from an ERC20 Token. Governance users vote on this proposal and it automatically executes the custom handler for `RegisterERC20Proposal` when the vote passes.
+A gov `Content` type to register a token pair from an ERC20 Token. Governance
+users vote on this proposal and it automatically executes the custom handler
+for `RegisterERC20Proposal` when the vote passes.
 
 ```go
 type RegisterERC20Proposal struct {
@@ -56,7 +61,8 @@ The proposal Content stateless validation fails if:
 
 ## `MsgConvertCoin`
 
-A user broadcasts a `MsgConvertCoin` message to convert a Cosmos Coin to a ERC20 token.
+A user broadcasts a `MsgConvertCoin` message to convert a Cosmos Coin to a ERC20
+token.
 
 ```go
 type MsgConvertCoin struct {
@@ -78,7 +84,8 @@ Message stateless validation fails if:
 
 ## `MsgConvertERC20`
 
-A user broadcasts a `MsgConvertERC20` message to convert a ERC20 token to a native Cosmos coin.
+A user broadcasts a `MsgConvertERC20` message to convert a ERC20 token to a
+native Cosmos coin.
 
 ```go
 type MsgConvertERC20 struct {

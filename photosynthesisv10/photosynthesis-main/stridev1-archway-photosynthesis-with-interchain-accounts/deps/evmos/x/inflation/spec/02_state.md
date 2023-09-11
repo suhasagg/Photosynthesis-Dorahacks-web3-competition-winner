@@ -8,12 +8,12 @@ order: 2
 
 The `x/inflation` module keeps the following objects in state:
 
-| State Object       | Description                    | Key         | Value                        | Store |
-| ------------------ | ------------------------------ | ----------- | ---------------------------- | ----- |
-| Period             | Period Counter                 | `[]byte{1}` | `[]byte{period}`             | KV    |
-| EpochIdentifier    | Epoch identifier bytes         | `[]byte{3}` | `[]byte{epochIdentifier}`    | KV    |
-| EpochsPerPeriod    | Epochs per period bytes        | `[]byte{4}` | `[]byte{epochsPerPeriod}`    | KV    |
-| SkippedEpochs      | Number of skipped epochs bytes | `[]byte{5}` | `[]byte{skippedEpochs}`      | KV    |
+| State Object    | Description                    | Key         | Value                     | Store |
+| --------------- | ------------------------------ | ----------- | ------------------------- | ----- |
+| Period          | Period Counter                 | `[]byte{1}` | `[]byte{period}`          | KV    |
+| EpochIdentifier | Epoch identifier bytes         | `[]byte{3}` | `[]byte{epochIdentifier}` | KV    |
+| EpochsPerPeriod | Epochs per period bytes        | `[]byte{4}` | `[]byte{epochsPerPeriod}` | KV    |
+| SkippedEpochs   | Number of skipped epochs bytes | `[]byte{5}` | `[]byte{skippedEpochs}`   | KV    |
 
 ### Period
 

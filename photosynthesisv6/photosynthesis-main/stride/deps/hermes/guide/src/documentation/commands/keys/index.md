@@ -1,15 +1,15 @@
 # Adding Keys to the Relayer
 
-> __WARNING__: Currently the relayer does NOT support a `keyring` store to securely
-> store the private key file. The key file will be stored on the local file system
-> in the user __$HOME__ folder under `$HOME/.hermes/keys/`
+> **WARNING**: Currently the relayer does NOT support a `keyring` store to
+> securely store the private key file. The key file will be stored on the local
+> file system in the user **$HOME** folder under `$HOME/.hermes/keys/`
 
-> __BREAKING__: As of Hermes v1.0.0, the sub-command `keys restore` has been removed.
-> Please use the sub-command `keys add` in order to restore a key.
+> **BREAKING**: As of Hermes v1.0.0, the sub-command `keys restore` has been
+> removed. Please use the sub-command `keys add` in order to restore a key.
 
----
+***
 
-Using the `keys` command you can add and list keys. 
+Using the `keys` command you can add and list keys.
 
 #### Show usage
 
@@ -40,9 +40,12 @@ SUBCOMMANDS:
 
 ### Key Seed file (Private Key)
 
-In order to execute the command below you need a private key file (JSON). The relayer uses the private key file to sign the transactions submitted to the chain.
+In order to execute the command below you need a private key file (JSON). The
+relayer uses the private key file to sign the transactions submitted to the
+chain.
 
-The private key file can be obtained by using the `keys add` on a Cosmos chain. For example, the command for `gaiad` is:
+The private key file can be obtained by using the `keys add` on a Cosmos chain.
+For example, the command for `gaiad` is:
 
 ```shell
 # The `key_name` parameter is the name of the key that will be found in the json output
@@ -50,7 +53,7 @@ The private key file can be obtained by using the `keys add` on a Cosmos chain. 
 gaiad keys add <key_name> --output json
 ```
 
-The command outputs a JSON similar to the one below. 
+The command outputs a JSON similar to the one below.
 
 ```json
 {
@@ -62,12 +65,16 @@ The command outputs a JSON similar to the one below.
 }
 ```
 
-You can save this to a file (e.g. `key_seed.json`) and use it to add to the relayer with `hermes keys add --chain <chain_id> --key-file key_seed.json`. See the `Adding Keys` section for more details.
+You can save this to a file (e.g. `key_seed.json`) and use it to add to the
+relayer with `hermes keys add --chain <chain_id> --key-file key_seed.json`. See
+the `Adding Keys` section for more details.
 
 ### Adding and restoring Keys
 
-The command `keys add` has two exclusive flags, `--key-file` and `--mnemonic-file` which are respectively used to add and restore a key.  
-If a key with the same `key_name` already exists, the flag `--overwrite` must be passed in order to overwrite the existing key or else the command will abort.
+The command `keys add` has two exclusive flags, `--key-file` and
+`--mnemonic-file` which are respectively used to add and restore a key.\
+If a key with the same `key_name` already exists, the flag `--overwrite` must be
+passed in order to overwrite the existing key or else the command will abort.
 
 ```shell
     hermes keys add [OPTIONS] --chain <CHAIN_ID> --key-file <KEY_FILE>
@@ -112,7 +119,8 @@ To add a private key file to a chain:
 hermes --config config.toml keys add --chain [CHAIN_ID] --key-file [PRIVATE_KEY_FILE]
 ```
 
-The content of the file key should have the same format as the output of the `gaiad keys add` command:
+The content of the file key should have the same format as the output of the
+`gaiad keys add` command:
 
 ```json
 {
@@ -124,15 +132,16 @@ The content of the file key should have the same format as the output of the `ga
 }
 ```
 
-If the command is successful a message similar to the one below will be displayed:
+If the command is successful a message similar to the one below will be
+displayed:
 
 ```json
 Success: Added key testkey ([ADDRESS]) on [CHAIN ID] chain
 ```
 
-> **Key name:**
-> By default, the key will be named after the `key_name` property specified in the configuration file.
-> To use a different key name, specify the `--key-name` option when invoking `keys add`.
+> **Key name:** By default, the key will be named after the `key_name` property
+> specified in the configuration file. To use a different key name, specify the
+> `--key-name` option when invoking `keys add`.
 >
 > ```
 > hermes --config config.toml keys add --chain [CHAINID] --key-file [PRIVATE_KEY_FILE] --key-name [KEY_NAME]
@@ -162,28 +171,32 @@ To restore a key from its mnemonic:
 hermes --config config.toml keys add --chain [CHAIN_ID] --mnemonic-file "[MNEMONIC_FILE]"
 ```
 
-or using an explicit [derivation path](https://github.com/satoshilabs/slips/blob/master/slip-0044.md), for example
-an Ethereum coin type (used for Evmos, Injective, Umee, Cronos, and
+or using an explicit
+[derivation path](https://github.com/satoshilabs/slips/blob/master/slip-0044.md),
+for example an Ethereum coin type (used for Evmos, Injective, Umee, Cronos, and
 possibly other networks):
 
 ```shell
 hermes --config config.toml keys add --chain <CHAIN_ID> --mnemonic-file <MNEMONIC_FILE> --hd-path "m/44'/60'/0'/0/0"
 ```
 
-The mnemonic file needs to have the 24 mnemonic words on the same line, separated by a white space. So the content should have the following format:
+The mnemonic file needs to have the 24 mnemonic words on the same line,
+separated by a white space. So the content should have the following format:
+
 ```
 word1 word2 word3 ... word24
 ```
 
-If the command is successful a message similar to the one below will be displayed:
+If the command is successful a message similar to the one below will be
+displayed:
 
 ```json
 Success: Restore key testkey ([ADDRESS]) on [CHAIN ID] chain
 ```
 
-> **Key name:**
-> By default, the key will be named after the `key_name` property specified in the configuration file.
-> To use a different key name, specify the `--key-name` option when invoking `keys add`.
+> **Key name:** By default, the key will be named after the `key_name` property
+> specified in the configuration file. To use a different key name, specify the
+> `--key-name` option when invoking `keys add`.
 >
 > ```
 > hermes --config config.toml keys add --chain [CHAINID] --mnemonic-file "[MNEMONIC_FILE]" --key-name [KEY_NAME]
@@ -191,7 +204,8 @@ Success: Restore key testkey ([ADDRESS]) on [CHAIN ID] chain
 
 ### Delete keys
 
-In order to delete the private keys added to chains use the `keys delete` command
+In order to delete the private keys added to chains use the `keys delete`
+command
 
 ```shell
 USAGE:
@@ -245,7 +259,8 @@ To list the private key file that was added to a chain:
 hermes --config config.toml keys list --chain [CHAIN_ID]
 ```
 
-If the command is successful a message similar to the one below will be displayed:
+If the command is successful a message similar to the one below will be
+displayed:
 
 ```
 Success:
@@ -259,7 +274,8 @@ Success:
 hermes --json --config config.toml keys list --chain [CHAIN_ID] | jq
 ```
 
-If the command is successful a message similar to the one below will be displayed:
+If the command is successful a message similar to the one below will be
+displayed:
 
 ```json
 {
@@ -282,9 +298,11 @@ If the command is successful a message similar to the one below will be displaye
   "status": "success"
 }
 ```
+
 ### Query balance
 
-In order to retrieve the balance of an account associated with a key use the `keys balance` command
+In order to retrieve the balance of an account associated with a key use the
+`keys balance` command
 
 ```shell
 USAGE:
@@ -301,7 +319,8 @@ REQUIRED:
         --chain <CHAIN_ID>    Identifier of the chain
 ```
 
-If the command is successful a message with the following format will be displayed:
+If the command is successful a message with the following format will be
+displayed:
 
 ```
 Success: balance for key `KEY_NAME`: 100000000000 stake
@@ -313,7 +332,8 @@ Success: balance for key `KEY_NAME`: 100000000000 stake
 hermes --json keys balance [OPTIONS] --chain <CHAIN_ID>
 ```
 
-If the command is successful a message with the following format will be displayed:
+If the command is successful a message with the following format will be
+displayed:
 
 ```json
 {

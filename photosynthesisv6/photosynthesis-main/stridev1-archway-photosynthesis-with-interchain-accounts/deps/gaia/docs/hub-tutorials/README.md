@@ -1,8 +1,6 @@
----
-order: false
-parent:
-  order: 3
----
+***
+
+## order: false&#xA;parent:&#xA;order: 3
 
 # Gaia Tutorials
 

@@ -10,6 +10,7 @@ It handles APDU encapsulation, Zemu and USB (HID) communication.
 Linux, OSX and Windows are supported.
 
 ## Building
+
 ```bash
 go build
 ```

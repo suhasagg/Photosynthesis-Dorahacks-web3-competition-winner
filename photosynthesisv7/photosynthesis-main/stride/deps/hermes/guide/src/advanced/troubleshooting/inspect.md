@@ -1,20 +1,21 @@
 # Inspecting the relayer state
 
-To get some insight into the state of the relayer,
-Hermes will react to a `SIGUSR1` signal by dumping its state to
-the console, either in plain text form or as a JSON object if Hermes
-was started with the `--json` option.
+To get some insight into the state of the relayer, Hermes will react to a
+`SIGUSR1` signal by dumping its state to the console, either in plain text form
+or as a JSON object if Hermes was started with the `--json` option.
 
-To send a `SIGUSR1` signal to Hermes, look up its process ID (below PID)
-and use the following command:
+To send a `SIGUSR1` signal to Hermes, look up its process ID (below PID) and use
+the following command:
 
 ```shell
 kill -SIGUSR1 PID
 ```
 
-Hermes will print some information about the workers which are currently running.
+Hermes will print some information about the workers which are currently
+running.
 
-For example, with three chains configured and one channel between each pair of chains:
+For example, with three chains configured and one channel between each pair of
+chains:
 
 ```text
 INFO Dumping state (triggered by SIGUSR1)

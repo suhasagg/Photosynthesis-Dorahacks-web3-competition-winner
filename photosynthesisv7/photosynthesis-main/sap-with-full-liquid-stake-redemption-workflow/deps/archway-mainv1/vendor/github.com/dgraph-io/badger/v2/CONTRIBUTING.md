@@ -1,37 +1,39 @@
 # Contribution Guide
 
-* [Before you get started](#before-you-get-started)
-    * [Code of Conduct](#code-of-conduct)
-* [Your First Contribution](#your-first-contribution)
-    * [Find a good first topic](#find-a-good-first-topic)
-* [Setting up your development environment](#setting-up-your-development-environment)
-    * [Fork the project](#fork-the-project)
-    * [Clone the project](#clone-the-project)
-    * [New branch for a new code](#new-branch-for-a-new-code)
-    * [Test](#test)
-    * [Commit and push](#commit-and-push)
-    * [Create a Pull Request](#create-a-pull-request)
-    * [Sign the CLA](#sign-the-cla)
-    * [Get a code review](#get-a-code-review)
+- [Before you get started](#before-you-get-started)
+  - [Code of Conduct](#code-of-conduct)
+- [Your First Contribution](#your-first-contribution)
+  - [Find a good first topic](#find-a-good-first-topic)
+- [Setting up your development environment](#setting-up-your-development-environment)
+  - [Fork the project](#fork-the-project)
+  - [Clone the project](#clone-the-project)
+  - [New branch for a new code](#new-branch-for-a-new-code)
+  - [Test](#test)
+  - [Commit and push](#commit-and-push)
+  - [Create a Pull Request](#create-a-pull-request)
+  - [Sign the CLA](#sign-the-cla)
+  - [Get a code review](#get-a-code-review)
 
 ## Before you get started
 
 ### Code of Conduct
 
-Please make sure to read and observe our [Code of Conduct](./CODE_OF_CONDUCT.md).
+Please make sure to read and observe our
+[Code of Conduct](./CODE_OF_CONDUCT.md).
 
 ## Your First Contribution
 
 ### Find a good first topic
 
 You can start by finding an existing issue with the
-[good first issue](https://github.com/dgraph-io/badger/labels/good%20first%20issue) or [help wanted](https://github.com/dgraph-io/badger/labels/help%20wanted) labels. These issues are well suited for new contributors.
-
+[good first issue](https://github.com/dgraph-io/badger/labels/good%20first%20issue)
+or [help wanted](https://github.com/dgraph-io/badger/labels/help%20wanted)
+labels. These issues are well suited for new contributors.
 
 ## Setting up your development environment
 
-Badger uses [`Go Modules`](https://github.com/golang/go/wiki/Modules)
-to manage dependencies. The version of Go should be **1.12** or above.
+Badger uses [`Go Modules`](https://github.com/golang/go/wiki/Modules) to manage
+dependencies. The version of Go should be **1.12** or above.
 
 ### Fork the project
 
@@ -96,7 +98,8 @@ fill the PR description.
 
 ### Sign the CLA
 
-Click the **Sign in with Github to agree** button to sign the CLA. [An example](https://cla-assistant.io/dgraph-io/badger?pullRequest=1377).
+Click the **Sign in with Github to agree** button to sign the CLA.
+[An example](https://cla-assistant.io/dgraph-io/badger?pullRequest=1377).
 
 ### Get a code review
 

@@ -1,13 +1,14 @@
 # Changelog
 
-## [Unreleased]
+## \[Unreleased]
 
 ## 0.16.0 (September 11, 2020)
 
 IMPROVEMENTS:
- - Add support for `Un/MarshalAminoJSON` override: if a type implements
- `Un/MarshalAminoJSON`, then amino will use these methods for JSON un/marshalling
- ([#323]).
+
+- Add support for `Un/MarshalAminoJSON` override: if a type implements
+  `Un/MarshalAminoJSON`, then amino will use these methods for JSON
+  un/marshalling ([#323]).
 
 [#323]: https://github.com/tendermint/go-amino/pull/323
 
@@ -15,8 +16,10 @@ IMPROVEMENTS:
 
 ### IMPROVEMENTS:
 
-- [#289](https://github.com/tendermint/go-amino/issues/289) Return Boolean pointers as non-nil (@nicolasbrugneaux)
-- [#282](https://github.com/tendermint/go-amino/pull/282) Improve efficiency of `VarintSize()`(@rickyyangz)
+- [#289](https://github.com/tendermint/go-amino/issues/289) Return Boolean
+  pointers as non-nil (@nicolasbrugneaux)
+- [#282](https://github.com/tendermint/go-amino/pull/282) Improve efficiency of
+  `VarintSize()`(@rickyyangz)
 
 ## 0.15.0 (May 2, 2018)
 
@@ -27,9 +30,11 @@ BREAKING CHANGE:
 
 IMPROVEMENTS:
 
-- Amino becomes a go-module (requires go 1.11) but keeps dep support for backwards compatibility ([#255]).
+- Amino becomes a go-module (requires go 1.11) but keeps dep support for
+  backwards compatibility ([#255]).
 
 [#255]: https://github.com/tendermint/go-amino/pull/255
+
 [#261]: https://github.com/tendermint/go-amino/issues/261
 
 ## 0.14.1 (November 6, 2018)
@@ -44,43 +49,58 @@ IMPROVEMENTS:
 
 BREAKING CHANGE:
 
-- Switch default encoding of unsigned ints (`int`, `int32`, `int64`) to be on par with [proto3's] variable length
-  encoding (of `int32`, `int64`) ([#237])
+- Switch default encoding of unsigned ints (`int`, `int32`, `int64`) to be on
+  par with [proto3's] variable length encoding (of `int32`, `int64`) ([#237])
 
 [proto3's]: https://developers.google.com/protocol-buffers/docs/proto#scalar
+
 [#237]: https://github.com/tendermint/go-amino/issues/237
 
 ## 0.13.0 (October 15, 2018)
 
 BREAKING CHANGE:
 
-- `time.Time`: validate seconds since 1970 are in valid range during encoding; i.e. in the interval [-62135596800, 253402300800)
-- `time.Time`: match encoding of time.Time to protobuf's well known type [Timestamp]([#224])
+- `time.Time`: validate seconds since 1970 are in valid range during encoding;
+  i.e. in the interval \[-62135596800, 253402300800)
+- `time.Time`: match encoding of time.Time to protobuf's well known type
+  [Timestamp](\[#224])
 - Rename `MarshalBinary` to `MarshalBinaryLengthPrefixed` ([#222])
 
 [timestamp]: https://github.com/protocolbuffers/protobuf/blob/d2980062c859649523d5fd51d6b55ab310e47482/src/google/protobuf/timestamp.proto#L123-L135
 
 IMPROVEMENTS:
 
-- Add `MustUnmarshalJSON` and `MustMarshalJSON` that panic if an error occurs ([#228])
-- Optimize performance by removing `defer`s in `getTypeInfo` ([#227] by @ValarDragon)
-- Optimize performance by removing unnecessary allocation in `UvarintSize` ([#225] by [@ValarDragon])
-- Add test that shows compatibility with stdlib (JSON time encoding) ([#131] by [@odeke-em])
+- Add `MustUnmarshalJSON` and `MustMarshalJSON` that panic if an error occurs
+  ([#228])
+- Optimize performance by removing `defer`s in `getTypeInfo` ([#227] by
+  @ValarDragon)
+- Optimize performance by removing unnecessary allocation in `UvarintSize`
+  ([#225] by [@ValarDragon])
+- Add test that shows compatibility with stdlib (JSON time encoding) ([#131] by
+  [@odeke-em])
 
 [#224]: https://github.com/tendermint/go-amino/pull/224
+
 [#222]: https://github.com/tendermint/go-amino/pull/222
+
 [#228]: https://github.com/tendermint/go-amino/pull/228
+
 [#227]: https://github.com/tendermint/go-amino/pull/227
+
 [#225]: https://github.com/tendermint/go-amino/pull/225
+
 [#131]: https://github.com/tendermint/go-amino/pull/131
+
 [@valardragon]: https://github.com/ValarDragon
+
 [@odeke-em]: https://github.com/odeke-em
 
 ## 0.12.0 (August 4, 2018)
 
 BREAKING CHANGE:
 
-- Write empty (non-nil) struct pointers, unless (is list element and empty_elements isn't set) #206
+- Write empty (non-nil) struct pointers, unless (is list element and
+  empty_elements isn't set) #206
 
 ## 0.11.1 (July 17, 2018)
 
@@ -92,10 +112,10 @@ IMPROVEMENTS:
 
 BREAKING CHANGE:
 
-- Do not encode zero values in `EncodeTime`
-  (to match proto3's behaviour) (#178, #190)
-- Do not encode empty structs, unless explicitly enforced
-  via `amino:"write_empty"` (to match proto3's behaviour) (#179)
+- Do not encode zero values in `EncodeTime` (to match proto3's behaviour) (#178,
+  \#190)
+- Do not encode empty structs, unless explicitly enforced via
+  `amino:"write_empty"` (to match proto3's behaviour) (#179)
 
 IMPROVEMENTS:
 
@@ -105,7 +125,7 @@ IMPROVEMENTS:
 
 FEATURE:
 
-- [aminoscan] aminoscan --color will print ASCII bytes in different colors
+- \[aminoscan] aminoscan --color will print ASCII bytes in different colors
 
 BUG FIXES:
 
@@ -115,10 +135,12 @@ BUG FIXES:
 
 BREAKING CHANGE:
 
-- 100% Proto3 compatibility for primitive types, repeated fields, and embedded structs/messages.
+- 100% Proto3 compatibility for primitive types, repeated fields, and embedded
+  structs/messages.
 - BigEndian -> LittleEndian
-- [u]int[64/32] is (signed) Varint by default, "fixed32" and "fixed64" to use 4 and 8 byte types.
-- Amino:JSON [u]int64 and ints are strings.
+- \[u]int\[64/32] is (signed) Varint by default, "fixed32" and "fixed64" to use 4
+  and 8 byte types.
+- Amino:JSON \[u]int64 and ints are strings.
 - Enforce UTC timezone for JSON encoding of time.
 
 ## 0.9.11 (May 27, 2018)
@@ -132,7 +154,8 @@ NEW FEATURES:
 
 BREAKING CHANGE:
 
-- Amino:JSON encoding of interfaces use the registered concrete type name, not the disfix bytes.
+- Amino:JSON encoding of interfaces use the registered concrete type name, not
+  the disfix bytes.
 
 ## 0.9.9 (May 1, 2018)
 
@@ -160,13 +183,14 @@ FEATURES:
 
 IMPROVEMENTS:
 
-- map[string]<any> support for Amino:JSON
+- map\[string]<any> support for Amino:JSON
 
 ## 0.9.5 (April 5, 2018)
 
 BREAKING CHANGE:
 
-- Skip encoding of "void" (nil/empty) struct fields and list elements, esp empty strings
+- Skip encoding of "void" (nil/empty) struct fields and list elements, esp empty
+  strings
 
 IMPROVEMENTS:
 
@@ -220,7 +244,8 @@ BREAKING CHANGE:
 IMPROVEMENTS:
 
 - data: expose Marshal and Unmarshal methods on `Bytes` to support protobuf
-- nowriter: start adding new interfaces for improved technical language and organization
+- nowriter: start adding new interfaces for improved technical language and
+  organization
 
 BUG FIXES:
 
@@ -230,7 +255,8 @@ BUG FIXES:
 
 BUG FIXES:
 
-- dont use nil for empty byte array (undoes fix from 0.7.0 pending further analysis)
+- dont use nil for empty byte array (undoes fix from 0.7.0 pending further
+  analysis)
 
 ## 0.7.0 (Oct 26, 2017)
 

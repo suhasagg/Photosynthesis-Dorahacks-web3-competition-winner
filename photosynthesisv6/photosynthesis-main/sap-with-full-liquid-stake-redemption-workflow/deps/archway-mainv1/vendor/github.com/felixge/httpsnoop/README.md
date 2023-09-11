@@ -40,14 +40,15 @@ undertaking. Unfortunately everything I've seen so far has a high chance of
 breaking your application.
 
 The main problem is that a `http.ResponseWriter` often implements additional
-interfaces such as `http.Flusher`, `http.CloseNotifier`, `http.Hijacker`, `http.Pusher`, and
-`io.ReaderFrom`. So the naive approach of just wrapping `http.ResponseWriter`
-in your own struct that also implements the `http.ResponseWriter` interface
-will hide the additional interfaces mentioned above. This has a high change of
-introducing subtle bugs into any non-trivial application.
+interfaces such as `http.Flusher`, `http.CloseNotifier`, `http.Hijacker`,
+`http.Pusher`, and `io.ReaderFrom`. So the naive approach of just wrapping
+`http.ResponseWriter` in your own struct that also implements the
+`http.ResponseWriter` interface will hide the additional interfaces mentioned
+above. This has a high change of introducing subtle bugs into any non-trivial
+application.
 
-Another approach I've seen people take is to return a struct that implements
-all of the interfaces above. However, that's also problematic, because it's
+Another approach I've seen people take is to return a struct that implements all
+of the interfaces above. However, that's also problematic, because it's
 difficult to fake some of these interfaces behaviors when the underlying
 `http.ResponseWriter` doesn't have an implementation. It's also dangerous,
 because an application may choose to operate differently, merely because it
@@ -62,10 +63,9 @@ being called, or called more than once, as well as concurrent calls to
 `http.ResponseWriter` methods, and even calls happening after the wrapped
 `ServeHTTP` has already returned.
 
-Unfortunately this package is not perfect either. It's possible that it is
-still missing some interfaces provided by the go core (let me know if you find
-one), and it won't work for applications adding their own interfaces into the
-mix.
+Unfortunately this package is not perfect either. It's possible that it is still
+missing some interfaces provided by the go core (let me know if you find one),
+and it won't work for applications adding their own interfaces into the mix.
 
 However, hopefully the explanation above has sufficiently scared you of rolling
 your own solution to this problem. httpsnoop may still break your application,
@@ -73,8 +73,8 @@ but at least it tries to avoid it as much as possible.
 
 Anyway, the real problem here is that smuggling additional interfaces inside
 `http.ResponseWriter` is a problematic design choice, but it probably goes as
-deep as the Go language specification itself. But that's okay, I still prefer
-Go over the alternatives ;).
+deep as the Go language specification itself. But that's okay, I still prefer Go
+over the alternatives ;).
 
 ## Performance
 
@@ -84,10 +84,9 @@ BenchmarkCaptureMetrics-8	   20000	     95461 ns/op
 ```
 
 As you can see, using `CaptureMetrics` on a vanilla http.Handler introduces an
-overhead of ~500 ns per http request on my machine. However, the margin of
-error appears to be larger than that, therefor it should be reasonable to
-assume that the overhead introduced by `CaptureMetrics` is absolutely
-negligible.
+overhead of ~500 ns per http request on my machine. However, the margin of error
+appears to be larger than that, therefor it should be reasonable to assume that
+the overhead introduced by `CaptureMetrics` is absolutely negligible.
 
 ## License
 

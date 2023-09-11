@@ -1,27 +1,28 @@
-go-immutable-radix [![CircleCI](https://circleci.com/gh/hashicorp/go-immutable-radix/tree/master.svg?style=svg)](https://circleci.com/gh/hashicorp/go-immutable-radix/tree/master)
-=========
+# go-immutable-radix [![CircleCI](https://circleci.com/gh/hashicorp/go-immutable-radix/tree/master.svg?style=svg)](https://circleci.com/gh/hashicorp/go-immutable-radix/tree/master)
 
-Provides the `iradix` package that implements an immutable [radix tree](http://en.wikipedia.org/wiki/Radix_tree).
-The package only provides a single `Tree` implementation, optimized for sparse nodes.
+Provides the `iradix` package that implements an immutable
+[radix tree](http://en.wikipedia.org/wiki/Radix_tree). The package only provides
+a single `Tree` implementation, optimized for sparse nodes.
 
 As a radix tree, it provides the following:
- * O(k) operations. In many cases, this can be faster than a hash table since
-   the hash function is an O(k) operation, and hash tables have very poor cache locality.
- * Minimum / Maximum value lookups
- * Ordered iteration
+
+- O(k) operations. In many cases, this can be faster than a hash table since the
+  hash function is an O(k) operation, and hash tables have very poor cache
+  locality.
+- Minimum / Maximum value lookups
+- Ordered iteration
 
 A tree supports using a transaction to batch multiple updates (insert, delete)
 in a more efficient manner than performing each operation one at a time.
 
 For a mutable variant, see [go-radix](https://github.com/armon/go-radix).
 
-Documentation
-=============
+# Documentation
 
-The full documentation is available on [Godoc](http://godoc.org/github.com/hashicorp/go-immutable-radix).
+The full documentation is available on
+[Godoc](http://godoc.org/github.com/hashicorp/go-immutable-radix).
 
-Example
-=======
+# Example
 
 Below is a simple example of usage
 
@@ -63,4 +64,3 @@ for key, _, ok := it.Next(); ok; key, _, ok = it.Next() {
 //  005
 //  010
 ```
-

@@ -1,8 +1,10 @@
 # ROADMAP
 
-This document contains the roadmap for the Juno project. It is a living document and will be updated as the project progresses. For the most update to date information, please follow the Notion and tracking issue links in each section.
+This document contains the roadmap for the Juno project. It is a living document
+and will be updated as the project progresses. For the most update to date
+information, please follow the Notion and tracking issue links in each section.
 
----
+***
 
 ## Long Term - Q4 2023+
 
@@ -15,11 +17,13 @@ This document contains the roadmap for the Juno project. It is a living document
 - Wasm based oracle
 
 ## V14 - Q2/3 2023
+
 <!-- - [Medium Blog](https://medium.com/@reecepbcups/juno-v12-update-4bab64640a62) -->
 
 - [V14 Tracking Issue](https://github.com/CosmosContracts/juno/issues/548)
 
-This update will focus more on upgrading the base layer of the Juno stack, bringing new features and pushing us to the latest versions of the software.
+This update will focus more on upgrading the base layer of the Juno stack,
+bringing new features and pushing us to the latest versions of the software.
 
 ## Features
 
@@ -29,9 +33,10 @@ This update will focus more on upgrading the base layer of the Juno stack, bring
 - Global Minimum Fees (governance set)
 - TokenFactory: burnFrom, burnTo, ForceTransfer
 - [Interchain test](https://github.com/strangelove-ventures/interchaintest)
-- Using [Skip's MEV Tendermint fork](https://github.com/skip-mev/mev-tendermint) by default
+- Using [Skip's MEV Tendermint fork](https://github.com/skip-mev/mev-tendermint)
+  by default
 
----
+***
 
 ## V13 - Q1 2023
 
@@ -41,7 +46,8 @@ Links:
 
 - [v13 Tracking Issue](https://github.com/CosmosContracts/juno/issues/475)
 
-The V13 update is Juno's largest update, bringing many new features for developers, users, and relayers.
+The V13 update is Juno's largest update, bringing many new features for
+developers, users, and relayers.
 
 ### V13 PRs
 
@@ -55,10 +61,25 @@ The V13 update is Juno's largest update, bringing many new features for develope
 - [x/ibc V4](https://github.com/CosmosContracts/juno/pull/387)
 - [x/ibc-fees](https://github.com/CosmosContracts/juno/pull/432)
 
-V13 is targeted at developers with relayer and user experience improvements as well.
+V13 is targeted at developers with relayer and user experience improvements as
+well.
 
-**FeeShare** will allow contract developers to receive 50% of gas fees executed on their contract. Providing an alternative income source for new business use cases. This also enhances current business models to support developers & grow the ecosystem further.
+**FeeShare** will allow contract developers to receive 50% of gas fees executed
+on their contract. Providing an alternative income source for new business use
+cases. This also enhances current business models to support developers & grow
+the ecosystem further.
 
-The **TokenFactory** will make developers' lives easier, and also make querying users' [DAO](https://daodao.zone/) tokens via MintScan and Keplr possible. By default, CosmWasm smart contracts accept native tokens. However, the only initial native tokens are the staking demons for most chains. This gives the ability for a user to create their token, and manage the tokenomics behind it. Then accept it just as they would any other denomination via the standard [x/bank](https://github.com/cosmos/cosmos-sdk/tree/main/x/bank) module.
+The **TokenFactory** will make developers' lives easier, and also make querying
+users' [DAO](https://daodao.zone/) tokens via MintScan and Keplr possible. By
+default, CosmWasm smart contracts accept native tokens. However, the only
+initial native tokens are the staking demons for most chains. This gives the
+ability for a user to create their token, and manage the tokenomics behind it.
+Then accept it just as they would any other denomination via the standard
+[x/bank](https://github.com/cosmos/cosmos-sdk/tree/main/x/bank) module.
 
-Speaking of relayers, **IBCFees** now helps to fund those who relayer your packets! In the above paragraph, we mention how IBC transfers are feeless for relayers. Fees can still be sent with these packets and bring some income for relayers, thus maintaining public goods infrastructure. The relayers still have to pay the fee on the other chain's token, but this is a positive step in the right direction for variables we can control.
+Speaking of relayers, **IBCFees** now helps to fund those who relayer your
+packets! In the above paragraph, we mention how IBC transfers are feeless for
+relayers. Fees can still be sent with these packets and bring some income for
+relayers, thus maintaining public goods infrastructure. The relayers still have
+to pay the fee on the other chain's token, but this is a positive step in the
+right direction for variables we can control.

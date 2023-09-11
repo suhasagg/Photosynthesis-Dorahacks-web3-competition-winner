@@ -66,8 +66,8 @@ evmosd query inflation params [flags]
 
 ### Proposals
 
-The `tx gov submit-legacy-proposal` commands allow users to query create a proposal
-using the governance module CLI:
+The `tx gov submit-legacy-proposal` commands allow users to query create a
+proposal using the governance module CLI:
 
 **`param-change`**
 
@@ -92,6 +92,6 @@ evmosd tx gov submit-legacy-proposal param-change [proposal-file] [flags]
 | `GET`  | `/evmos/inflation/v1/period`                  | Gets current inflation period                 |
 | `GET`  | `/evmos/inflation/v1/epoch_mint_provision`    | Gets current inflation epoch provisions value |
 | `GET`  | `/evmos/inflation/v1/skipped_epochs`          | Gets current number of skipped epochs         |
-| `GET`  | `/evmos/inflation/v1/total_supply`          | Gets current total supply                     |
+| `GET`  | `/evmos/inflation/v1/total_supply`            | Gets current total supply                     |
 | `GET`  | `/evmos/inflation/v1/inflation_rate`          | Gets current inflation rate                   |
 | `GET`  | `/evmos/inflation/v1/params`                  | Gets current inflation parameters             |

@@ -4,7 +4,8 @@
 
 # Query Channels
 
-Use the `query channels` command to query the identifiers of all channels on a given chain.
+Use the `query channels` command to query the identifiers of all channels on a
+given chain.
 
 ```shell
 USAGE:
@@ -31,7 +32,7 @@ REQUIRED:
         --chain <CHAIN_ID>    Identifier of the chain to query
 ```
 
-__Example__
+**Example**
 
 Query all channels on `ibc-1`:
 
@@ -62,7 +63,8 @@ Success: [
 
 # Query Channel Data
 
-Use the `query channel` commands to query the information about a specific channel.
+Use the `query channel` commands to query the information about a specific
+channel.
 
 ```shell
 USAGE:
@@ -97,7 +99,7 @@ REQUIRED:
         --port <PORT_ID>          Identifier of the port to query
 ```
 
-__Example__
+**Example**
 
 Query the channel end of channel `channel-1` on port `transfer` on `ibc-1`:
 
@@ -130,7 +132,6 @@ Success: ChannelEnd {
 
 ## Query the channel data for both ends of a channel
 
-
 Use the `query channel ends` command to obtain both ends of a channel:
 
 ```shell
@@ -151,7 +152,7 @@ REQUIRED:
         --port <PORT_ID>          Identifier of the port to query
 ```
 
-__Example__
+**Example**
 
 Query the channel end of channel `channel-1` on port `transfer` on `ibc-0`:
 
@@ -216,7 +217,9 @@ REQUIRED:
         --port <PORT_ID>          Identifier of the port to query
 ```
 
-If the command is successful a message with the following format will be displayed:
+If the command is successful a message with the following format will be
+displayed:
+
 ```
 Success: Some(
     IdentifiedAnyClientState {
@@ -325,7 +328,8 @@ Success: Some(
     hermes --json query channel client --chain <CHAIN_ID> --port <PORT_ID> --channel <CHANNEL_ID>
 ```
 
-If the command is successful a message with the following format will be displayed:
+If the command is successful a message with the following format will be
+displayed:
 
 ```json
 {

@@ -14,5 +14,5 @@ subscriptions, an error will be returned. The subscription timeout is 5 sec.
 Each subscription has a buffer to accommodate short bursts of events or some
 slowness in clients. If the buffer gets full, the subscription will be canceled
 ("client is not pulling messages fast enough"). If Tendermint exits, all
-subscriptions are canceled ("Tendermint exited"). The user can unsubscribe
-using either `/unsubscribe` or `/unsubscribe_all`.
+subscriptions are canceled ("Tendermint exited"). The user can unsubscribe using
+either `/unsubscribe` or `/unsubscribe_all`.

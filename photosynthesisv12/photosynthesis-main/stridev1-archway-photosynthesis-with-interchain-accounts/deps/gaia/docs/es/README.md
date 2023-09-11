@@ -1,4 +1,5 @@
 <!-- markdown-link-check-disable -->
+
 # Documentación para el Hub de Cosmos
 
 Bienvenido a la documentación de la **aplicación para el Hub de Cosmos: `gaia`**
@@ -25,17 +26,22 @@ Bienvenido a la documentación de la **aplicación para el Hub de Cosmos: `gaia`
 
 ## Recursos adicionales
 
-- [Recursos para validadores](./validators/README.md): Contiene documentación de `gaia` para los validadores.
+- [Recursos para validadores](./validators/README.md): Contiene documentación de
+  `gaia` para los validadores.
 
-- [Recursos para delegadores](./delegators/README.md): Contiene documentación para los delegadores.
+- [Recursos para delegadores](./delegators/README.md): Contiene documentación
+  para los delegadores.
 
-- [Otros recursos](./resources/README.md): Contiene documentación de `gaiad`, archivo para el génesis, proveedores de servicios, wallet ledger ...
+- [Otros recursos](./resources/README.md): Contiene documentación de `gaiad`,
+  archivo para el génesis, proveedores de servicios, wallet ledger ...
 
-- [Artículos sobre el Hub de Cosmos](./resources/archives.md): Archivos históricos de la pasada edición del Hub de Cosmos.
+- [Artículos sobre el Hub de Cosmos](./resources/archives.md): Archivos
+  históricos de la pasada edición del Hub de Cosmos.
 
 # Contribución
 
-Consulte [este archivo](./DOCS_README.md) para conocer los detalles del proceso de elaboración y las consideraciones a la hora de hacer cambios.
+Consulte [este archivo](./DOCS_README.md) para conocer los detalles del proceso
+de elaboración y las consideraciones a la hora de hacer cambios.
 
 # Versión
 

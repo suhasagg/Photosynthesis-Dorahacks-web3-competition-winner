@@ -1,27 +1,34 @@
 # Profiling
 
-The `relayer` crate provides a `time!` macro which can be used to measure how much time is spent between the invocation of the macro and the end of the enclosing scope.
+The `relayer` crate provides a `time!` macro which can be used to measure how
+much time is spent between the invocation of the macro and the end of the
+enclosing scope.
 
 ### Setup
 
-The `time!` macro has no effect unless the `profiling` feature of the `relayer` crate is enabled.
+The `time!` macro has no effect unless the `profiling` feature of the `relayer`
+crate is enabled.
 
-To enable it, one must compile the `relayer-cli` crate with the `--features=profiling` flag.
+To enable it, one must compile the `relayer-cli` crate with the
+`--features=profiling` flag.
 
-a) One way is to build the `relayer` binary and update the `hermes` alias to point to the executable:
+a) One way is to build the `relayer` binary and update the `hermes` alias to
+point to the executable:
 
 ```shell
 cd relayer-cli/
 cargo build --features=profiling
 ```
 
-b) Alternatively, one can use the `cargo run` command and update the alias accordingly:
+b) Alternatively, one can use the `cargo run` command and update the alias
+accordingly:
 
 ```shell
 alias hermes='cargo run --features=profiling --manifest-path=relayer-cli/Cargo.toml --'
 ```
 
-The `--manifest-path=relayer-cli/Cargo.toml` flag is needed for `cargo run` to accept the `--features` flag.
+The `--manifest-path=relayer-cli/Cargo.toml` flag is needed for `cargo run` to
+accept the `--features` flag.
 
 ### Example
 
@@ -54,14 +61,15 @@ Jan 20 11:28:49.846  INFO relayer::macros::profiling:    ⏳ inner operation - e
 Jan 20 11:28:49.847  INFO relayer::macros::profiling: ⏳ myfunction: x=42 - elapsed: 3005ms
 ```
 
-Profiling is useful for tracking down unusually slow methods.
-Each transaction or query usually consists of multiple lower-level methods,
-and it's often not clear which of these are the culprit for low performance.
-With profiling enabled, `hermes` will output timing information for individual
-methods involved in a command.
+Profiling is useful for tracking down unusually slow methods. Each transaction
+or query usually consists of multiple lower-level methods, and it's often not
+clear which of these are the culprit for low performance. With profiling
+enabled, `hermes` will output timing information for individual methods involved
+in a command.
 
-__NOTE__: To be able to see the profiling output, the realyer needs to be compiled with
-the `profiling` feature and the [log level][log-level] should be `info` level or lower.
+**NOTE**: To be able to see the profiling output, the realyer needs to be
+compiled with the `profiling` feature and the \[log level]\[log-level] should be
+`info` level or lower.
 
 #### Example output for `tx conn-init` command
 

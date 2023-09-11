@@ -1,44 +1,57 @@
----
-title: "Claim"
-excerpt: ""
-category: 6392913957c533007128548e
----
+***
+
+## title: "Claim"&#xA;excerpt: ""&#xA;category: 6392913957c533007128548e
 
 # The Claim Module
 
-Users are required participate in core network activities to claim their airdrop. An Airdrop recipient is given 20% of the airdrop amount which is not in vesting, and then they have to perform the following activities to get the rest:
-* 20% vesting over 3 months by staking
-* 60% vesting over 3 months by liquid staking
+Users are required participate in core network activities to claim their
+airdrop. An Airdrop recipient is given 20% of the airdrop amount which is not in
+vesting, and then they have to perform the following activities to get the rest:
 
-These claimable assets 'expire' if not claimed. Users have three months (`AirdropDuration`) to claim their full airdrop amount. After three months from launch, all unclaimed tokens get sent to the community pool. At initialization, module stores all airdrop users with amounts from genesis inside KVStore. Airdrop users are eligible to claim their vesting or free amount only once in the initial period of 3 months. After the initial period, users can claim tokens monthly.
+- 20% vesting over 3 months by staking
+- 60% vesting over 3 months by liquid staking
+
+These claimable assets 'expire' if not claimed. Users have three months
+(`AirdropDuration`) to claim their full airdrop amount. After three months from
+launch, all unclaimed tokens get sent to the community pool. At initialization,
+module stores all airdrop users with amounts from genesis inside KVStore.
+Airdrop users are eligible to claim their vesting or free amount only once in
+the initial period of 3 months. After the initial period, users can claim tokens
+monthly.
 
 ## Actions
 
-There are 2 types of actions, each of which release another 50% of the airdrop allocation.
-The 2 actions are as follows:
+There are 2 types of actions, each of which release another 50% of the airdrop
+allocation. The 2 actions are as follows:
 
 ```golang
 ActionLiquidStake  Action = 0
 ActionDelegateStake Action = 1
 ```
 
-These actions are monitored by registring claim **hooks** to the stakeibc, and staking modules.
-This means that when you perform an action, the claims module will immediately unlock those coins if they are applicable.
-These actions can be performed in any order.
+These actions are monitored by registring claim **hooks** to the stakeibc, and
+staking modules. This means that when you perform an action, the claims module
+will immediately unlock those coins if they are applicable. These actions can be
+performed in any order.
 
-The code is structured by separating out a segment of the tokens as "claimable", indexed by each action type.
-So if Alice delegates tokens, the claims module will move the 50% of the claimables associated with staking to her liquid balance.
-If she delegates again, there will not be additional tokens given, as the relevant action has already been performed.
-Every action must be performed to claim the full amount.
+The code is structured by separating out a segment of the tokens as "claimable",
+indexed by each action type. So if Alice delegates tokens, the claims module
+will move the 50% of the claimables associated with staking to her liquid
+balance. If she delegates again, there will not be additional tokens given, as
+the relevant action has already been performed. Every action must be performed
+to claim the full amount.
 
 ## ClaimRecords
 
-A claim record is a struct that contains data about the claims process of each airdrop recipient.
+A claim record is a struct that contains data about the claims process of each
+airdrop recipient.
 
-It contains an address, the initial claimable airdrop amount, and an array of bools representing 
-whether each action has been completed. The position in the array refers to enum number of the action.
+It contains an address, the initial claimable airdrop amount, and an array of
+bools representing whether each action has been completed. The position in the
+array refers to enum number of the action.
 
-So for example, `[true, true]` means that `ActionLiquidStake` and `ActionDelegateStake` are completed.
+So for example, `[true, true]` means that `ActionLiquidStake` and
+`ActionDelegateStake` are completed.
 
 ```golang
 type ClaimRecord struct {
@@ -93,8 +106,9 @@ Claim keeper module provides utility functions to manage epochs.
 
 The claim module reacts on the following hooks, executed in external modules.
 
-20% of airdrop is sent to a vesting account when `staking.AfterDelegationModified` hook is triggered.
-20% of airdrop is sent to a vesting account when `stakeibc.AfterLiquidStake` hook is triggered.
+20% of airdrop is sent to a vesting account when
+`staking.AfterDelegationModified` hook is triggered. 20% of airdrop is sent to a
+vesting account when `stakeibc.AfterLiquidStake` hook is triggered.
 
 Once the airdrop is claimed for a specific hook type, it can't be claimed again.
 
@@ -116,7 +130,9 @@ message ClaimRecord {
   ];
 }
 ```
-When a user get airdrop for his/her action, claim record is created to prevent duplicated actions on future actions.
+
+When a user get airdrop for his/her action, claim record is created to prevent
+duplicated actions on future actions.
 
 ### State
 
@@ -137,7 +153,6 @@ message GenesisState {
 ```
 
 Claim module's state consists of `params`, and `claim_records`.
-
 
 Claim module provides below params
 
@@ -164,7 +179,8 @@ message Params {
 
 1. `airdrop_start_time` refers to the time when user can start to claim airdrop.
 2. `airdrop_duration` refers to the duration from start time to end time.
-3. `claim_denom` refers to the denomination of claiming tokens. As a default, it's `ustrd`.
+3. `claim_denom` refers to the denomination of claiming tokens. As a default,
+   it's `ustrd`.
 4. `distributor_address` refers to the address of distribution account.
 
 ## Queries
@@ -185,7 +201,8 @@ service Query {
 
 ### CLI commands
 
-For the following commands, you can change `$(strided keys show -a {your key name})` with the address directly.
+For the following commands, you can change
+`$(strided keys show -a {your key name})` with the address directly.
 
 Query the claim record for a given address
 
@@ -193,14 +210,16 @@ Query the claim record for a given address
 strided query claim claim-record $(strided keys show -a {your key name})
 ```
 
-Query the claimable amount that would be earned if a specific action is completed right now.
+Query the claimable amount that would be earned if a specific action is
+completed right now.
 
 ```sh
 
 strided query claim claimable-for-action $(strided keys show -a {your key name}) ActionAddLiquidity
 ```
 
-Query the total claimable amount that would be earned if all remaining actions were completed right now.
+Query the total claimable amount that would be earned if all remaining actions
+were completed right now.
 
 ```sh
 strided query claim total-claimable $(strided keys show -a {your key name}) ActionAddLiquidity
@@ -214,4 +233,3 @@ strided query claim total-claimable $(strided keys show -a {your key name}) Acti
 | ----- | ------------- | --------------- |
 | claim | sender        | {receiver}      |
 | claim | amount        | {claim_amount}  |
-

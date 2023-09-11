@@ -31,7 +31,7 @@ archwayd q tracking block-gas-tracking [flags]
 Example output:
 
 ```yaml
-txs: 
+txs:
   - info:
       id: 1
       height: 2

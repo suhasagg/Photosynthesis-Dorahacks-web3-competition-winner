@@ -4,7 +4,8 @@
 
 # Query Connections
 
-Use the `query connections` command to query the identifiers of all connections on a given chain.
+Use the `query connections` command to query the identifiers of all connections
+on a given chain.
 
 ```shell
 USAGE:
@@ -24,7 +25,7 @@ REQUIRED:
         --chain <CHAIN_ID>    Identifier of the chain to query
 ```
 
-__Example__
+**Example**
 
 Query all connections on `ibc-1`:
 
@@ -78,7 +79,7 @@ REQUIRED:
         --connection <CONNECTION_ID>    Identifier of the connection to query [aliases: conn]
 ```
 
-__Example__
+**Example**
 
 Query the connection end of connection `connection-1` on `ibc-1`:
 
@@ -118,7 +119,8 @@ Success: ConnectionEnd {
 
 ## Query the identifiers of all channels associated with a given connection
 
-Use the `query connection channels` command to query the identifiers of the channels associated with a given connection:
+Use the `query connection channels` command to query the identifiers of the
+channels associated with a given connection:
 
 ```shell
 USAGE:
@@ -132,7 +134,7 @@ REQUIRED:
         --connection <CONNECTION_ID>    Identifier of the connection to query [aliases: conn]
 ```
 
-__Example__
+**Example**
 
 Query the channels associated with connection `connection-1` on `ibc-1`:
 

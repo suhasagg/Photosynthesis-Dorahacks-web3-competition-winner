@@ -4,11 +4,14 @@ order: 4
 
 # Keepers
 
-The `x/epochs` module only exposes one keeper, the epochs keeper, which can be used to manage epochs.
+The `x/epochs` module only exposes one keeper, the epochs keeper, which can be
+used to manage epochs.
 
 ## Epochs Keeper
 
-Presently only one fully-permissioned epochs keeper is exposed, which has the ability to both read and write the `EpochInfo` for all epochs, and to iterate over all stored epochs.
+Presently only one fully-permissioned epochs keeper is exposed, which has the
+ability to both read and write the `EpochInfo` for all epochs, and to iterate
+over all stored epochs.
 
 ```go
 // Keeper of epoch nodule maintains collections of epochs and hooks.

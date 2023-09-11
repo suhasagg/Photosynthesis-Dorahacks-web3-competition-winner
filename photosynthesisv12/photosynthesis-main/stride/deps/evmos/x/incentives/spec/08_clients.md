@@ -4,11 +4,13 @@ order: 8
 
 # Clients
 
-A user can query the `x/incentives` module using the CLI, JSON-RPC, gRPC or REST.
+A user can query the `x/incentives` module using the CLI, JSON-RPC, gRPC or
+REST.
 
 ## CLI
 
-Find below a list of `evmosd` commands added with the `x/incentives` module. You can obtain the full list by using the `evmosd -h` command.
+Find below a list of `evmosd` commands added with the `x/incentives` module. You
+can obtain the full list by using the `evmosd -h` command.
 
 ### Queries
 
@@ -56,7 +58,8 @@ evmosd query incentives params [flags]
 
 ### Proposals
 
-The `tx gov submit-legacy-proposal` commands allow users to query create a proposal using the governance module CLI:
+The `tx gov submit-legacy-proposal` commands allow users to query create a
+proposal using the governance module CLI:
 
 **`register-incentive`**
 
@@ -76,7 +79,7 @@ evmosd tx gov submit-legacy-proposal cancel-incentive CONTRACT_ADDRESS [flags]
 
 **`param-change`**
 
-Allows users to submit a `ParameterChangeProposal``.
+Allows users to submit a \`ParameterChangeProposal\`\`.
 
 ```bash
 evmosd tx gov submit-legacy-proposal param-change PROPOSAL_FILE [flags]

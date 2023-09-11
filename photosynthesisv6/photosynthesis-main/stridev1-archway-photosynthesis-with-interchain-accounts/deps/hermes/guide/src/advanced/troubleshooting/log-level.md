@@ -2,10 +2,10 @@
 
 This section explains how to parametrize the log output level of `hermes`.
 
-
-The relayer configuration file permits parametrization of output verbosity via the knob called `log_level`.
-This file is loaded by default from `$HOME/.hermes/config.toml`, but can be overridden in all commands
-with the `--config` flag, e.g. `hermes --config ./path/to/my/config.toml some command`.
+The relayer configuration file permits parametrization of output verbosity via
+the knob called `log_level`. This file is loaded by default from
+`$HOME/.hermes/config.toml`, but can be overridden in all commands with the
+`--config` flag, e.g. `hermes --config ./path/to/my/config.toml some command`.
 
 Relevant snippet:
 
@@ -18,17 +18,16 @@ Valid options for `log_level` are: 'error', 'warn', 'info', 'debug', 'trace'.
 These levels correspond to the tracing subcomponent of the relayer-cli,
 [see here](https://docs.rs/tracing-core/0.1.17/tracing_core/struct.Level.html).
 
-The relayer will _always_ print a last line summarizing the result of its
-operation for queries or transactions. In addition to this last line,
-arbitrary debug, info, or other outputs may be produced.
-
+The relayer will *always* print a last line summarizing the result of its
+operation for queries or transactions. In addition to this last line, arbitrary
+debug, info, or other outputs may be produced.
 
 ## Overriding the tracing filter using `RUST_LOG`
 
-For debugging purposes, we may want to inspect which RPC queries the relayer is making.
-The relayer makes use of the `tendermint-rpc` library to issue RPC queries, but
-the output of this library is by default turned off in order to keep the logs more
-readable.
+For debugging purposes, we may want to inspect which RPC queries the relayer is
+making. The relayer makes use of the `tendermint-rpc` library to issue RPC
+queries, but the output of this library is by default turned off in order to
+keep the logs more readable.
 
 Using the `RUST_LOG` environment variable, we can turn logging on for the
 `tendermint-rpc` library, as follows:
@@ -37,13 +36,13 @@ Using the `RUST_LOG` environment variable, we can turn logging on for the
 RUST_LOG=tendermint-rpc=debug,info hermes start
 ```
 
-Setting the `RUST_LOG` environment variable to `tendermint_rpc=debug,info` instructs
-the relayer to set the log level of the `tendermint_rpc` crate to `debug` and otherwise
-use the `info` log level.
+Setting the `RUST_LOG` environment variable to `tendermint_rpc=debug,info`
+instructs the relayer to set the log level of the `tendermint_rpc` crate to
+`debug` and otherwise use the `info` log level.
 
-> **Note:** While the `tendermint-rpc` contains a dash in its name, the logging filter
-> expects a module name, which can only contain alphanumeric characters and underscores,
-> hence why the filter above is written `tendermint_rpc=debug`.
+> **Note:** While the `tendermint-rpc` contains a dash in its name, the logging
+> filter expects a module name, which can only contain alphanumeric characters
+> and underscores, hence why the filter above is written `tendermint_rpc=debug`.
 
 **Example:**
 
@@ -104,4 +103,3 @@ use the `info` log level.
 ```
 
 The two DEBUG log lines above were emitted by the `tendermint-rpc` crate.
-

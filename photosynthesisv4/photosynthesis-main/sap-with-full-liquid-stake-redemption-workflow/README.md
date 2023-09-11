@@ -1,18 +1,16 @@
-# Photosynthesis-Archway  <-> Stride integrations
+# Photosynthesis-Archway <-> Stride integrations
 
 ![Photosynthesis](https://i.imgur.com/Tn1GUZnb.jpg)
 
+1\)START RELAYER
 
-1)START RELAYER
+2\)CREATING CONNECTIONS WITH THE GO RELAYER
 
-2)CREATING CONNECTIONS WITH THE GO RELAYER 
-
-3)Create connections and channels
-
+3\)Create connections and channels
 
 a)Get channel ID created on the photosynthesis-archway
 
-b)Start Go Relayer 
+b)Start Go Relayer
 
 c)IBC Transfer from Photosynthesis-archway to stride (from relayer account)
 
@@ -24,11 +22,9 @@ f)Add validator
 
 g)Confirm ICA channels were registered
 
-
 FLOW
 
 Go Through Flow
-
 
 a)Liquid stake (then wait and LS again)
 
@@ -46,26 +42,24 @@ g)Change validator weights
 
 h)LS and confirm delegation aligned with new weights
 
-i)Update delegations (just submit this query and confirm the ICQ callback displays in the stride logs)
-
+i)Update delegations (just submit this query and confirm the ICQ callback
+displays in the stride logs)
 
 # Must be submitted in ICQ window
 
 j)Restore closed channel
 
+# Photosynthesis-Archway IBC integrations.
 
+1\)evmos
 
-# Photosynthesis-Archway IBC integrations. 
+2\)gaia
 
-1)evmos
+3\)juno
 
-2)gaia
+4\)osmosis
 
-3)juno
-
-4)osmosis
-
-5)stargaze
+5\)stargaze
 
 ```
 global:
@@ -88,7 +82,7 @@ chains:
       debug: false
       timeout: 20s
       output-format: json
-      sign-mode: direct  
+      sign-mode: direct
   stride:
     type: cosmos
     value:
@@ -198,16 +192,14 @@ chains:
         - ethermint
 ```
 
-# Relayer registry 
+# Relayer registry
 
-Cosmos relayer
-1)https://github.com/cosmos/relayer.git
+Cosmos relayer 1)https://github.com/cosmos/relayer.git
 
-Hermes relayer 
-2)https://github.com/informalsystems/ibc-rs 
-
+Hermes relayer 2)https://github.com/informalsystems/ibc-rs
 
 # Record Keeping/Queue Creation for Liquid Staking Workflow in Photosynthesis-Archway
+
 # Interchain Accounts fully Integrated in Photosynthesis-Archway
 
 ```
@@ -339,7 +331,12 @@ user_redemption_record: []
 
 ### Full Liquid staking - uarch and Full Redemption Workflow
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/archwayd --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 4000000uarch --from pval1 -y
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/archwayd --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/photo1
+tx ibc-transfer transfer transfer channel-0
+stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 4000000uarch --from pval1 -y
+
 ```
 code: 0
 codespace: ""
@@ -356,7 +353,10 @@ tx: null
 txhash: 54BBCC0D3B6F1EDA3ECB396654AD10C2E8269D937AAED90061F245D3DE0E0640
 ```
 
-#build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q bank balances stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+\#build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q bank balances stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+
 ```
 balances:
 - amount: "4000000"
@@ -368,7 +368,11 @@ pagination:
   total: "0"
 ```
 
-#build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc liquid-stake 1000000 uarch --keyring-backend test --from admin --chain-id STRIDE -y
+\#build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+tx stakeibc liquid-stake 1000000 uarch --keyring-backend test --from admin
+\--chain-id STRIDE -y
+
 ```
 code: 0
 codespace: ""
@@ -385,7 +389,11 @@ tx: null
 txhash: 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
 ```
 
-#root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q tx 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
+\#root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q tx 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
+
 ```
 code: 0
 codespace: ""
@@ -644,7 +652,11 @@ tx:
 txhash: 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q stakeibc list-host-zone
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q stakeibc list-host-zone
+
 ```
 host_zone:
 - address: stride1755g4dkhpw73gz9h9nwhlcefc6sdf8kcmvcwrk4rxfrz8xpxxjms7savm8
@@ -718,7 +730,13 @@ pagination:
   total: "0"
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc redeem-stake 1000 PHOTO archway15js809uedxqs2wl0lyt58httasr5rlplj3atd8 --from admin --keyring-backend test --chain-id STRIDE -y
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+tx stakeibc redeem-stake 1000 PHOTO
+archway15js809uedxqs2wl0lyt58httasr5rlplj3atd8 --from admin --keyring-backend
+test --chain-id STRIDE -y
+
 ```
 code: 0
 codespace: ""
@@ -735,7 +753,13 @@ tx: null
 txhash: 4ECC6062BE5B794005A1FAF5D9CC4F32CBEA18F6586EEA9B15D7DB342204608B
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc redeem-stake 1000 localnet archway15js809uedxqs2wl0lyt58httasr5rlplj3atd8 --from admin --keyring-backend test --chain-id STRIDE -y
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+tx stakeibc redeem-stake 1000 localnet
+archway15js809uedxqs2wl0lyt58httasr5rlplj3atd8 --from admin --keyring-backend
+test --chain-id STRIDE -y
+
 ```
 code: 0
 codespace: ""
@@ -752,7 +776,11 @@ tx: null
 txhash: 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q tx 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q tx 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
+
 ```
 code: 0
 codespace: ""
@@ -905,7 +933,8 @@ pagination:
   total: "0"
 ```
 
-Epoch based Central liquid stake of Archway Rewards and Redemption at maximum redemption rate of host zone, here Photosynthesis-Archway chain. 
+Epoch based Central liquid stake of Archway Rewards and Redemption at maximum
+redemption rate of host zone, here Photosynthesis-Archway chain.
 
 ```
 /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/cronenable exists.
@@ -1014,15 +1043,7 @@ pagination:
   total: "0"
 ```
 
-
-
-
-
 Photosynthesis-Archway chain run Log snapshot
-
-
-
-
 
 ```
 dockernet-photo1-1  | 10:58PM INF Iterating over contract metadata: airdrop_recipient_address: archway1wmuuy0eqvhq5s3j9e80p8judf55c8v8mgwfytr
@@ -1169,7 +1190,6 @@ dockernet-photo1-1  | 10:24PM INF Retrieved state from rewardKeeper: {0xc000eda3
 dockernet-photo1-1  | 10:24PM INF Retrieved contract metadata state: {{0xc0064af620 [0]} 0xc000f18d00 {0xc00013a020 {0xc003a9ba40 map[0xc000eda2c0:0xc003a9bd80 0xc000eda2d0:0xc003a9be40 0xc000eda2e0:0xc003bb8040 0xc000eda2f0:0xc003a9bd00 0xc000eda300:0xc003a9bb40 0xc000eda310:0xc003a9bc00 0xc000eda320:0xc003a9bc40 0xc000eda330:0xc003a9bdc0 0xc000eda340:0xc003a9be80 0xc000eda350:0xc003a9bac0 0xc000eda360:0xc003a9bf00 0xc000eda370:0xc003a9bd40 0xc000eda380:0xc003a9bf40 0xc000eda390:0xc003a9bfc0 0xc000eda3a0:0xc003a9bbc0 0xc000eda3b0:0xc003a9bc80 0xc000eda3c0:0xc003a9bb00 0xc000eda3d0:0xc003a9bf80 0xc000eda3f0:0xc003a9ba80 0xc000eda400:0xc003a9bec0 0xc000eda410:0xc003a9bcc0 0xc000eda610:0xc003a9be00 0xc000eda4b0:0xc003a9bb80] map[acc:0xc000eda2c0 authz:0xc000eda3a0 bank:0xc000eda2d0 capability:0xc000eda380 distribution:0xc000eda300 epochs:0xc000eda3f0 evidence:0xc000eda360 feegrant:0xc000eda390 gov:0xc000eda320 ibc:0xc000eda340 icahost:0xc000eda410 mem_capability:0xc000eda610 mint:0xc000eda2f0 params:0xc000eda330 photosynthesis:0xc000eda400 rewards:0xc000eda3d0 slashing:0xc000eda310 staking:0xc000eda2e0 tracking:0xc000eda3c0 transfer:0xc000eda370 transient_params:0xc000eda4b0 upgrade:0xc000eda350 wasm:0xc000eda3b0] <nil> map[] map[]} {{11 0} localnet 2223 {916820865 63824279070 <nil>} {[242 221 196 24 91 4 172 171 242 253 84 189 109 165 163 150 46 182 98 250 102 234 139 221 197 226 136 44 209 104 131 124] {1 [132 36 87 169 60 73 152 115 68 168 154 35 205 114 161 95 43 133 148 212 58 110 147 140 151 98 123 185 186 255 120 119]}} [251 176 191 44 84 161 8 137 39 202 204 129 116 158 97 194 66 77 150 95 34 4 148 175 53 251 204 143 116 233 162 168] [227 176 196 66 152 252 28 20 154 251 244 200 153 111 185 36 39 174 65 228 100 155 147 76 164 149 153 27 120 82 184 85] [226 234 202 167 156 127 33 65 74 231 182 19 111 37 123 205 40 169 19 224 170 137 108 192 8 72 252 58 38 13 33 48] [226 234 202 167 156 127 33 65 74 231 182 19 111 37 123 205 40 169 19 224 170 137 108 192 8 72 252 58 38 13 33 48] [4 128 145 188 125 220 40 63 119 191 191 145 215 60 68 218 88 195 223 138 156 188 134 116 5 216 183 243 218 173 162 47] [56 199 242 189 39 146 88 68 122 150 154 72 77 120 244 158 159 198 40 27 130 134 167 120 246 239 172 130 124 18 59 102] [227 176 196 66 152 252 28 20 154 251 244 200 153 111 185 36 39 174 65 228 100 155 147 76 164 149 153 27 120 82 184 85] [227 176 196 66 152 252 28 20 154 251 244 200 153 111 185 36 39 174 65 228 100 155 147 76 164 149 153 27 120 82 184 85] [112 19 17 47 145 122 178 15 33 75 187 183 218 233 254 162 143 79 208 50]} [38 245 108 74 67 247 146 242 79 80 199 113 240 70 61 226 113 14 108 241 204 152 170 55 193 76 167 57 219 80 21 217] localnet [] {{{{0xc000138010 false  [] [] [] <nil> <nil> <nil> <nil> <nil> <nil> <nil> <nil>}} 1 <nil> [123] [{}] false}} [] 0xc00ac11718 0xc00ac11858 false false [] 0xc00aaf7660 0xc006172420}} module=x/photosynthesis
 ```
 
-
 Relayer Logs Snapshot
 
 ```
@@ -1274,9 +1294,7 @@ dockernet-relayer-photo-1  | ts=2023-07-06T22:08:25.427595Z lvl=info msg="Succes
 
 ```
 
-
 Hostzone Parameters
-
 
 ```
 
@@ -1353,7 +1371,7 @@ pagination:
 
 ```
 
-Record Keeping Logs 
+Record Keeping Logs
 
 ```
 
@@ -1762,13 +1780,16 @@ pagination:
   total: "0"
 ```
 
-Automatic Reward Withdrawal - epochstypes.REWARDS_WITHDRAWAL_EPOCH (Transfer reward funds from rewardstypes.ContractRewardCollector to Dapp reward address)
+Automatic Reward Withdrawal - epochstypes.REWARDS_WITHDRAWAL_EPOCH (Transfer
+reward funds from rewardstypes.ContractRewardCollector to Dapp reward address)
 
+epochstypes.LIQUID_STAKING_DApp_Rewards_EPOCH (Liquid Stake - Generate
+LiquidStakeDepositRecords, Enqueue LiquidStakeRecord)
 
-epochstypes.LIQUID_STAKING_DApp_Rewards_EPOCH (Liquid Stake - Generate LiquidStakeDepositRecords, Enqueue LiquidStakeRecord)  
-
-
-epochstypes.ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH (Process Liquid stake Deposit records, compute total amount to liquid stake for Dapp at the time of Central Liquid Stake, do Central Liquid stake at stride for all Dapps), Ensure there is no rewards fund loss 
+epochstypes.ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH (Process Liquid stake
+Deposit records, compute total amount to liquid stake for Dapp at the time of
+Central Liquid Stake, do Central Liquid stake at stride for all Dapps), Ensure
+there is no rewards fund loss
 
 ```
 dockernet-photo1-1  | 1:27PM INF Iterating over contract metadata: airdrop_recipient_address: archway1wmuuy0eqvhq5s3j9e80p8judf55c8v8mgwfytr
@@ -1795,9 +1816,9 @@ dockernet-photo1-1  | 1:27PM INF Retrieved EpochInfo for epochstypes.LIQUID_STAK
 dockernet-photo1-1  | 1:27PM INF MinimumRewardAmount is greater than 0: 100 module=x/photosynthesis
 dockernet-photo1-1  | 1:27PM INF CurrentEpoch 54 is not 0 and is a multiple of 1 module=x/photosynthesis
 dockernet-photo1-1  | 1:27PM INF Retrieved TotalLiquidStake: 3360000 module=x/photosynthesis
-dockernet-photo1-1  | 1:27PM INF Liquid stake amount: 3360000 
+dockernet-photo1-1  | 1:27PM INF Liquid stake amount: 3360000
 dockernet-photo1-1  |  module=x/photosynthesis
-dockernet-photo1-1  | 1:27PM INF Liquid stake amount: 3360000 
+dockernet-photo1-1  | 1:27PM INF Liquid stake amount: 3360000
 dockernet-photo1-1  |  module=x/photosynthesis
 dockernet-photo1-1  | 1:27PM INF Retrieved TotalLiquidStake: 3360000 module=x/photosynthesis
 dockernet-photo1-1  | 1:27PM INF Computed LiquidStake: 3360000 module=x/photosynthesis
@@ -1850,6 +1871,3 @@ dockernet-photo1-1  | 1:27PM INF Minimum consensus fee update fee={"amount":"0.0
 dockernet-photo1-1  | 1:27PM INF Retrieved state from rewardKeeper: {0xc001149820 0xc000f7ab50} module=x/photosynthesis
 dockernet-photo1-1  | 1:27PM INF Retrieved contract metadata state: {{0xc008f48600 [0]} 0xc000f7ab50 {0xc000136020 {0xc008f2ef80 map[0xc001149710:0xc008f2f440 0xc001149720:0xc008f2f3c0 0xc001149730:0xc008f2f200 0xc001149740:0xc008f2f2c0 0xc001149750:0xc008f2f0c0 0xc001149760:0xc008f2f1c0 0xc001149770:0xc008f2f240 0xc001149780:0xc008f2f040 0xc001149790:0xc008f2f400 0xc0011497a0:0xc008f2f4c0 0xc0011497b0:0xc008f2f380 0xc0011497c0:0xc008f2f340 0xc0011497d0:0xc008f2f280 0xc0011497e0:0xc008f2f080 0xc0011497f0:0xc008f2f180 0xc001149800:0xc008f2f000 0xc001149810:0xc008f2f480 0xc001149820:0xc008f2f500 0xc001149830:0xc008f2f540 0xc001149840:0xc008f2efc0 0xc001149850:0xc008f2f300 0xc001149890:0xc008f2f140 0xc001149870:0xc008f2f100] map[acc:0xc001149710 authz:0xc0011497f0 bank:0xc001149720 capability:0xc0011497d0 distribution:0xc001149750 epochs:0xc001149830 evidence:0xc0011497b0 feegrant:0xc0011497e0 gov:0xc001149770 ibc:0xc001149790 icahost:0xc001149850 mem_capability:0xc001149890 mint:0xc001149740 params:0xc001149780 photosynthesis:0xc001149840 rewards:0xc001149820 slashing:0xc001149760 staking:0xc001149730 tracking:0xc001149810 transfer:0xc0011497c0 transient_params:0xc001149870 upgrade:0xc0011497a0 wasm:0xc001149800] <nil> map[] map[]} {{11 0} localnet 10474 {155772337 63824506023 <nil>} {[184 144 201 66 230 187 151 0 130 157 199 1 7 54 125 218 198 237 88 84 145 46 211 83 151 89 195 221 251 98 148 55] {1 [171 63 110 168 157 229 104 225 187 158 21 214 231 46 81 135 98 222 151 152 94 33 16 7 102 70 173 251 220 154 221 10]}} [195 178 33 98 205 218 33 96 133 3 11 237 7 41 76 205 111 126 168 17 67 36 199 1 229 137 93 112 140 10 2 22] [227 176 196 66 152 252 28 20 154 251 244 200 153 111 185 36 39 174 65 228 100 155 147 76 164 149 153 27 120 82 184 85] [193 147 100 78 31 238 179 85 34 178 209 120 93 62 183 165 231 91 1 133 92 140 53 159 217 68 13 13 70 125 93 156] [193 147 100 78 31 238 179 85 34 178 209 120 93 62 183 165 231 91 1 133 92 140 53 159 217 68 13 13 70 125 93 156] [4 128 145 188 125 220 40 63 119 191 191 145 215 60 68 218 88 195 223 138 156 188 134 116 5 216 183 243 218 173 162 47] [217 165 2 160 34 242 73 202 206 27 27 198 204 167 61 132 48 137 205 75 87 130 92 35 79 73 167 85 24 26 200 195] [227 176 196 66 152 252 28 20 154 251 244 200 153 111 185 36 39 174 65 228 100 155 147 76 164 149 153 27 120 82 184 85] [227 176 196 66 152 252 28 20 154 251 244 200 153 111 185 36 39 174 65 228 100 155 147 76 164 149 153 27 120 82 184 85] [239 107 40 43 20 228 205 59 243 56 158 128 251 207 52 87 56 143 2 40]} [71 167 169 185 192 219 56 96 202 166 127 250 101 199 9 235 131 69 232 129 97 71 104 29 239 179 132 167 52 150 134 201] localnet [] {{{{0xc000130010 false  [] [] [] <nil> <nil> <nil> <nil> <nil> <nil> <nil> <nil>}} 1 <nil> [123] [{}] false}} [] 0xc00e191b88 0xc00e191cc8 false false [] 0xc009409700 0xc011601a88}} module=x/photosynthesis
 ```
-
-
-

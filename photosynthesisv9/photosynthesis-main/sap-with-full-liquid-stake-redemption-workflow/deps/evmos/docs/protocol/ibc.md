@@ -4,16 +4,16 @@ order: 5
 
 # IBC Channels
 
-Check the IBC channels between Evmos and other Cosmos ecosystem chains {synopsis}
+Check the IBC channels between Evmos and other Cosmos ecosystem chains
+{synopsis}
 
 IBC channels are added based on community consensus.
 
-::: tip
-You can also view a full list of IBC Relayers and Channels on [Mintscan](https://www.mintscan.io/evmos/relayers)
-:::
+::: tip You can also view a full list of IBC Relayers and Channels on
+[Mintscan](https://www.mintscan.io/evmos/relayers) :::
 
 | Chain Name       | Chain ID                     | Token          | Channel ID (Evmos) | Channel ID (Counterparty) |
-| --------------   | ---------------------------- | -------------- | ------------------ | ------------------------- |
+| ---------------- | ---------------------------- | -------------- | ------------------ | ------------------------- |
 | Cosmos Hub       | `cosmoshub-4`                | `ATOM`         | `channel-3`        | `channel-292`             |
 | Osmosis          | `osmosis-1`                  | `OSMO`, `ION`  | `channel-0`        | `channel-204`             |
 | Juno             | `juno-1`                     | `JUNO`         | `channel-5`        | `channel-70`              |
@@ -26,4 +26,4 @@ You can also view a full list of IBC Relayers and Channels on [Mintscan](https:/
 | Crescent         | `crescent-1`                 | `CRE`          | `channel-11`       | `channel-7`               |
 | Terra Classic    | `columbus-5`                 | `LUNC`, `USTC` | `channel-6`        | `channel-51`              |
 | Terra 2          | `phoenix-1`                  | `LUNA`         | `channel-12`       | `channel-5`               |
-| Crypto.org Chain | `crypto-org-chain-mainnet-1` | `CRO`          | `channel-31`       | `channel-57`               |
+| Crypto.org Chain | `crypto-org-chain-mainnet-1` | `CRO`          | `channel-31`       | `channel-57`              |

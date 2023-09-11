@@ -1,18 +1,16 @@
-# Photosynthesis-Archway  <-> Stride integrations
+# Photosynthesis-Archway <-> Stride integrations
 
 ![Photosynthesis](https://i.imgur.com/Tn1GUZnb.jpg)
 
+1\)START RELAYER
 
-1)START RELAYER
+2\)CREATING CONNECTIONS WITH THE GO RELAYER
 
-2)CREATING CONNECTIONS WITH THE GO RELAYER 
-
-3)Create connections and channels
-
+3\)Create connections and channels
 
 a)Get channel ID created on the photosynthesis-archway
 
-b)Start Go Relayer 
+b)Start Go Relayer
 
 c)IBC Transfer from Photosynthesis-archway to stride (from relayer account)
 
@@ -24,11 +22,9 @@ f)Add validator
 
 g)Confirm ICA channels were registered
 
-
 FLOW
 
 Go Through Flow
-
 
 a)Liquid stake (then wait and LS again)
 
@@ -46,26 +42,24 @@ g)Change validator weights
 
 h)LS and confirm delegation aligned with new weights
 
-i)Update delegations (just submit this query and confirm the ICQ callback displays in the stride logs)
-
+i)Update delegations (just submit this query and confirm the ICQ callback
+displays in the stride logs)
 
 # Must be submitted in ICQ window
 
 j)Restore closed channel
 
+# Photosynthesis-Archway IBC integrations.
 
+1\)evmos
 
-# Photosynthesis-Archway IBC integrations. 
+2\)gaia
 
-1)evmos
+3\)juno
 
-2)gaia
+4\)osmosis
 
-3)juno
-
-4)osmosis
-
-5)stargaze
+5\)stargaze
 
 ```
 global:
@@ -88,7 +82,7 @@ chains:
       debug: false
       timeout: 20s
       output-format: json
-      sign-mode: direct  
+      sign-mode: direct
   stride:
     type: cosmos
     value:
@@ -198,16 +192,14 @@ chains:
         - ethermint
 ```
 
-# Relayer registry 
+# Relayer registry
 
-Cosmos relayer
-1)https://github.com/cosmos/relayer.git
+Cosmos relayer 1)https://github.com/cosmos/relayer.git
 
-Hermes relayer 
-2)https://github.com/informalsystems/ibc-rs 
-
+Hermes relayer 2)https://github.com/informalsystems/ibc-rs
 
 # Record Keeping/Queue Creation for Liquid Staking Workflow in Photosynthesis-Archway
+
 # Interchain Accounts fully Integrated in Photosynthesis-Archway
 
 ```
@@ -339,7 +331,12 @@ user_redemption_record: []
 
 ### Full Liquid staking - uarch and Full Redemption Workflow
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/archwayd --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 4000000uarch --from pval1 -y
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/archwayd --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/photo1
+tx ibc-transfer transfer transfer channel-0
+stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 4000000uarch --from pval1 -y
+
 ```
 code: 0
 codespace: ""
@@ -356,7 +353,10 @@ tx: null
 txhash: 54BBCC0D3B6F1EDA3ECB396654AD10C2E8269D937AAED90061F245D3DE0E0640
 ```
 
-#build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q bank balances stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+\#build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q bank balances stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+
 ```
 balances:
 - amount: "4000000"
@@ -368,7 +368,11 @@ pagination:
   total: "0"
 ```
 
-#build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc liquid-stake 1000000 uarch --keyring-backend test --from admin --chain-id STRIDE -y
+\#build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+tx stakeibc liquid-stake 1000000 uarch --keyring-backend test --from admin
+\--chain-id STRIDE -y
+
 ```
 code: 0
 codespace: ""
@@ -385,7 +389,11 @@ tx: null
 txhash: 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
 ```
 
-#root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q tx 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
+\#root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q tx 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
+
 ```
 code: 0
 codespace: ""
@@ -644,7 +652,11 @@ tx:
 txhash: 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q stakeibc list-host-zone
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q stakeibc list-host-zone
+
 ```
 host_zone:
 - address: stride1755g4dkhpw73gz9h9nwhlcefc6sdf8kcmvcwrk4rxfrz8xpxxjms7savm8
@@ -718,7 +730,13 @@ pagination:
   total: "0"
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc redeem-stake 1000 PHOTO archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+tx stakeibc redeem-stake 1000 PHOTO
+archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend
+test --chain-id STRIDE -y
+
 ```
 code: 0
 codespace: ""
@@ -735,7 +753,13 @@ tx: null
 txhash: 4ECC6062BE5B794005A1FAF5D9CC4F32CBEA18F6586EEA9B15D7DB342204608B
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc redeem-stake 1000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+tx stakeibc redeem-stake 1000 localnet
+archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend
+test --chain-id STRIDE -y
+
 ```
 code: 0
 codespace: ""
@@ -752,7 +776,11 @@ tx: null
 txhash: 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q tx 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv4/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q tx 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
+
 ```
 code: 0
 codespace: ""
@@ -904,5 +932,3 @@ pagination:
   next_key: null
   total: "0"
 ```
-
-

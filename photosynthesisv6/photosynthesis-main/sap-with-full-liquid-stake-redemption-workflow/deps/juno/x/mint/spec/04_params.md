@@ -6,7 +6,7 @@ order: 4
 
 The minting module contains the following parameters:
 
-| Key                 | Type            | Example                |
-|---------------------|-----------------|------------------------|
-| MintDenom           | string          | "ujuno"                |
-| BlocksPerYear       | string (uint64) | "6311520"              |
+| Key           | Type            | Example   |
+| ------------- | --------------- | --------- |
+| MintDenom     | string          | "ujuno"   |
+| BlocksPerYear | string (uint64) | "6311520" |

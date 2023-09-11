@@ -1,18 +1,20 @@
----
-order: 2
----
+***
+
+## order: 2
 
 # Index of Governable Parameters
 
 ## Querying on-chain parameters
 
-Given a subspace and an associated key, you can query on chain parameters using the CLI.
+Given a subspace and an associated key, you can query on chain parameters using
+the CLI.
 
-``` bash
+```bash
 gaiad query params subspace <subspace_name> <key> --node <node_address> --chain-id <chain_id>
 ```
 
-For more information on specific modules, refer to the [Cosmos SDK documentation on modules](https://docs.cosmos.network/main/modules).
+For more information on specific modules, refer to the
+[Cosmos SDK documentation on modules](https://docs.cosmos.network/main/modules).
 
 ## Current subspaces, keys, and values
 

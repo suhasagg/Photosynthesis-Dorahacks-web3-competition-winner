@@ -1,47 +1,72 @@
 # Add a new relay path
 
-In order to connect two IBC-enabled chains, both chains need an on-chain client that keeps track of the other chain. These two clients can be connected by one or multiple connections. Then, channels need to be created, over a connection, to specify the destination module.
+In order to connect two IBC-enabled chains, both chains need an on-chain client
+that keeps track of the other chain. These two clients can be connected by one
+or multiple connections. Then, channels need to be created, over a connection,
+to specify the destination module.
 
-> __WARNING__: In production, do not create clients, connections or channels between two chains before checking that a client/connection/channel does not already fulfill the same function.
+> **WARNING**: In production, do not create clients, connections or channels
+> between two chains before checking that a client/connection/channel does not
+> already fulfill the same function.
 
----
+***
 
 ## Identifiers
 
-A chain allocates identifiers when it creates clients, connections and channels. These identifiers can subsequently be used to refer to existing clients, connections, and channels.
+A chain allocates identifiers when it creates clients, connections and channels.
+These identifiers can subsequently be used to refer to existing clients,
+connections, and channels.
 
-> NOTE: If you want to ensure you get the same identifiers while following the tutorials, run each of the commands in this page only __once__ or reset the chains as instructed in section [Start local chains](./start-local-chains.md#reset-your-configuration-and-start-the-chains). 
+> NOTE: If you want to ensure you get the same identifiers while following the
+> tutorials, run each of the commands in this page only **once** or reset the
+> chains as instructed in section
+> [Start local chains](./start-local-chains.md#reset-your-configuration-and-start-the-chains).
 
-Chains allocate identifiers using a chain-specific allocation scheme. Currently, the *cosmos-sdk* implementation uses the following identifiers:
+Chains allocate identifiers using a chain-specific allocation scheme. Currently,
+the *cosmos-sdk* implementation uses the following identifiers:
 
 - `07-tendermint-<n>` for tendermint clients.
 - `connection-<n>` for connections.
 - `channel-<n>` for channels.
 
-It is possible for two chains to use the same identifier to designate two different objects. For example, two different channels, one on the Hub and one on Osmosis, can both be designated with the `channel-0` identifier. 
-
+It is possible for two chains to use the same identifier to designate two
+different objects. For example, two different channels, one on the Hub and one
+on Osmosis, can both be designated with the `channel-0` identifier.
 
 ## Create the relay path
 
-A relay path refers to a specific channel used to interconnect two chains and over which packets are being sent.
+A relay path refers to a specific channel used to interconnect two chains and
+over which packets are being sent.
 
-Hermes can be started to listen for packet events on the two ends of multiple paths and relay packets over these paths.
-This can be done over a new path or over existing paths.
+Hermes can be started to listen for packet events on the two ends of multiple
+paths and relay packets over these paths. This can be done over a new path or
+over existing paths.
 
->__NOTE__: The following steps decompose every step from the creation of the clients to the channel handshake for educational purposes. 
-> More realistically, you'd use the command `{{#template ../../templates/commands/hermes/create_channel_new_client a-chain=ibc-0 b-chain=ibc-1 a-port=transfer b-port=transfer}}` in order to create a new client on each chain, establish a connection, and open a channel, all with a single command.
+> **NOTE**: The following steps decompose every step from the creation of the
+> clients to the channel handshake for educational purposes. More realistically,
+> you'd use the command
+> `{{#template ../../templates/commands/hermes/create_channel_new_client a-chain=ibc-0 b-chain=ibc-1 a-port=transfer b-port=transfer}}`
+> in order to create a new client on each chain, establish a connection, and
+> open a channel, all with a single command.
 
-You will need to first create a client on both chains and then establish a connection between them. It is possible to have multiple connections between clients, which can be useful in order to support multiple versions of IBC. Finally, you need to create channels over a connection to identify the source and destination modules. You can learn more in the [cosmos academy tutorial](https://tutorials.cosmos.network/academy/4-ibc/what-is-ibc.html).  
+You will need to first create a client on both chains and then establish a
+connection between them. It is possible to have multiple connections between
+clients, which can be useful in order to support multiple versions of IBC.
+Finally, you need to create channels over a connection to identify the source
+and destination modules. You can learn more in the
+[cosmos academy tutorial](https://tutorials.cosmos.network/academy/4-ibc/what-is-ibc.html).
 
 ### Create clients
 
-First, create a client on `ibc-1` tracking the state of `ibc-0`. It will be assigned `07-tendermint-0` as its identifier:
+First, create a client on `ibc-1` tracking the state of `ibc-0`. It will be
+assigned `07-tendermint-0` as its identifier:
 
 ```shell
 {{#template ../../templates/commands/hermes/create_client host-chain=ibc-1 reference-chain=ibc-0}}
 ```
 
 If the command is successful, the output should be similar to:
+
 ```json
 SUCCESS CreateClient(
     CreateClient(
@@ -64,7 +89,9 @@ Now, create a client on `ibc-0` tracking `ibc-1`:
 ```shell
 {{#template ../../templates/commands/hermes/create_client host-chain=ibc-0 reference-chain=ibc-1}}
 ```
+
 If the command is successful, the output should be similar to:
+
 ```json
 SUCCESS CreateClient(
     CreateClient(
@@ -81,18 +108,22 @@ SUCCESS CreateClient(
     ),
 )
 ```
-As you can see, the identifier is also `07-tendermint-0` because the client-id is **local to a chain**. 
 
+As you can see, the identifier is also `07-tendermint-0` because the client-id
+is **local to a chain**.
 
 ### 2. Create connections
 
-
-After creating clients on both chains, you have to establish a connection between them. Both chains will assign `connection-0` as the identifier of their first connection:
+After creating clients on both chains, you have to establish a connection
+between them. Both chains will assign `connection-0` as the identifier of their
+first connection:
 
 ```shell
 {{#template ../../templates/commands/hermes/create_connection a-chain=ibc-0 a-client=07-tendermint-0 b-client=07-tendermint-0}}
 ```
->__NOTE__: The command does not take `--b-chain` as argument as `--a-client` can only track one chain (`ibc-1`). 
+
+> **NOTE**: The command does not take `--b-chain` as argument as `--a-client`
+> can only track one chain (`ibc-1`).
 
 If the command runs successfully, it should output something similar to:
 
@@ -296,17 +327,22 @@ SUCCESS Connection {
     },
 }
 ```
+
 </details>
 
 ### 3. Channel identifiers
 
-
-Finally, after the connection has been established, you can now open a new channel on top of it. Both chains will assign `channel-0` as the identifier of their first channel:
+Finally, after the connection has been established, you can now open a new
+channel on top of it. Both chains will assign `channel-0` as the identifier of
+their first channel:
 
 ```shell
 {{#template ../../templates/commands/hermes/create_channel a-chain=ibc-0 a-connection=connection-0 a-port=transfer b-port=transfer}}
 ```
->__NOTE__: Again, you do not need to specify the counterparty chain as a connection can only be established with a single counterparty. The `port` specifies the protocol which will be used on this channel. 
+
+> **NOTE**: Again, you do not need to specify the counterparty chain as a
+> connection can only be established with a single counterparty. The `port`
+> specifies the protocol which will be used on this channel.
 
 If the command runs succesfully, it should output something similar to:
 
@@ -540,35 +576,38 @@ SUCCESS Channel {
     connection_delay: 0ns,
 }
 ```
+
 </details>
 
 ## Visualize the current network
 
-You can visualize the topology of the current network with: 
+You can visualize the topology of the current network with:
 
 ```shell
 {{#template ../../templates/commands/hermes/query_channels_show_counterparty chain=ibc-0}}
 ```
 
-If all the commands were successful, this command should output : 
+If all the commands were successful, this command should output :
 
 ```
 ibc-0: transfer/channel-0 --- ibc-1: transfer/channel-0
 ```
 
-The chains __ibc-0__ and __ibc-1__ are now set up and configured as so:
+The chains **ibc-0** and **ibc-1** are now set up and configured as so:
 
-__Relay path__: 
+**Relay path**:
+
 ```mermaid
 flowchart LR
     A((ibc-0))---B(transfer<br>channel-0)---C(transfer<br>channel-0)---D((ibc-1))
 ```
 
-Before going over the next sections, please ensure the commands above are executed.
+Before going over the next sections, please ensure the commands above are
+executed.
 
----
+***
 
 ## Next Steps
 
-The [following section](./start-relaying.md) describes how to relay packets over the relay path you just created.
-
+The [following section](./start-relaying.md) describes how to relay packets over
+the relay path you just created.

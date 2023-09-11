@@ -1,8 +1,6 @@
----
-title: "Interchainquery"
-excerpt: ""
-category: 6392913957c533007128548e
----
+***
+
+## title: "Interchainquery"&#xA;excerpt: ""&#xA;category: 6392913957c533007128548e
 
 <!--
 order: 0
@@ -15,7 +13,13 @@ parent:
 
 ## Abstract
 
-Stride uses interchain queries and interchain accounts to perform multichain liquid staking. The `interchainquery` module creates a framework that allows other modules to query other appchains using IBC. The `interchainquery` module is used to make bank balance ICQ queries to withdrawal account every N. The callback triggers ICA bank sends for 90% of the rewards to the delegation account and 10% to the stride hostzone revenue account. The ICA bank send logic is in x/stakeibc/keeper/callbacks.go.
+Stride uses interchain queries and interchain accounts to perform multichain
+liquid staking. The `interchainquery` module creates a framework that allows
+other modules to query other appchains using IBC. The `interchainquery` module
+is used to make bank balance ICQ queries to withdrawal account every N. The
+callback triggers ICA bank sends for 90% of the rewards to the delegation
+account and 10% to the stride hostzone revenue account. The ICA bank send logic
+is in x/stakeibc/keeper/callbacks.go.
 
 ## Contents
 
@@ -23,27 +27,32 @@ Stride uses interchain queries and interchain accounts to perform multichain liq
 2. **[State](#state)**
 3. **[Events](#events)**
 4. **[Keeper](#keeper)**
-5. **[Msgs](#msgs)**  
+5. **[Msgs](#msgs)**
 6. **[Queries](#queries)**
 
 ## State
 
-The `interchainquery` module keeps `Query` objects and modifies the information from query to query, as defined in `proto/interchainquery/v1/genesis.proto`
+The `interchainquery` module keeps `Query` objects and modifies the information
+from query to query, as defined in `proto/interchainquery/v1/genesis.proto`
 
 ### InterchainQuery information type
 
-`Query` has information types that pertain to the query itself. `Query` keeps the following:
+`Query` has information types that pertain to the query itself. `Query` keeps
+the following:
 
 1. `id` keeps the query identification string.
-2. `connection_id` keeps the id of the connection between the controller and host chain.
+2. `connection_id` keeps the id of the connection between the controller and
+   host chain.
 3. `chain_id` keeps the id of the queried chain.
 4. `query_type` keeps the type of interchain query (e.g. bank store query)
 5. `request` keeps an bytecode encoded version of the interchain query
 6. `callback_id` keeps the function that will be called by the interchain query
 7. `ttl` time at which the query expires (in unix nano)
-8. `request_sent` keeps a boolean indicating whether the query event has been emitted (and can be identified by a relayer)
+8. `request_sent` keeps a boolean indicating whether the query event has been
+   emitted (and can be identified by a relayer)
 
-`DataPoint` has information types that pertain to the data that is queried. `DataPoint` keeps the following:
+`DataPoint` has information types that pertain to the data that is queried.
+`DataPoint` keeps the following:
 
 1. `id` keeps the identification string of the datapoint
 2. `remote_height` keeps the block height of the queried chain
@@ -52,9 +61,12 @@ The `interchainquery` module keeps `Query` objects and modifies the information 
 
 ## Events
 
-The `interchainquery` module emits an event at the end of every `stride_epoch`s (e.g. 15 minutes on local testnet).
+The `interchainquery` module emits an event at the end of every `stride_epoch`s
+(e.g. 15 minutes on local testnet).
 
-The purpose of this event is to send interchainqueries that query data about staking rewards, which Stride uses to reinvest (aka autocompound) staking rewards.
+The purpose of this event is to send interchainqueries that query data about
+staking rewards, which Stride uses to reinvest (aka autocompound) staking
+rewards.
 
 ```go
    event := sdk.NewEvent(

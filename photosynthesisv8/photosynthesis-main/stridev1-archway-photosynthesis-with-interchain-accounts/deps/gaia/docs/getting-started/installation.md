@@ -1,15 +1,21 @@
----
-order: 2
-title: Installing Gaia
----
+***
+
+## order: 2&#xA;title: Installing Gaia
 
 # Installation
 
-This guide will explain how to install the `gaiad` binary and run the cli. With this binary installed on a server, you can participate on the mainnet as either a [Full Node](../hub-tutorials/join-mainnet.md) or a [Validator](../validators/validator-setup.md).
+This guide will explain how to install the `gaiad` binary and run the cli. With
+this binary installed on a server, you can participate on the mainnet as either
+a [Full Node](../hub-tutorials/join-mainnet.md) or a
+[Validator](../validators/validator-setup.md).
 
 ## Build Requirements
 
-At present, the SDK fully supports installation on linux distributions. For the purpose of this instruction set, we'll be using `Ubuntu 20.04.3 LTS`. It is also possible to install `gaiad` on Unix, while Windows may require additional unsupported third party installation. All steps are listed below for a clean install.
+At present, the SDK fully supports installation on linux distributions. For the
+purpose of this instruction set, we'll be using `Ubuntu 20.04.3 LTS`. It is also
+possible to install `gaiad` on Unix, while Windows may require additional
+unsupported third party installation. All steps are listed below for a clean
+install.
 
 1. [Update & install build tools](#build-tools)
 2. [Install Go](#install-go)
@@ -29,17 +35,21 @@ sudo apt-get install -y make gcc
 
 ## Install Go
 
-::: tip
-**Go 1.18+** is required.
-:::
+::: tip **Go 1.18+** is required. :::
 
-We suggest the following two ways to install Go. Check out the [official docs](https://golang.org/doc/install) and Go installer for the correct download for your operating system. Alternatively, you can install Go yourself from the command line. Detailed below are standard default installation locations, but feel free to customize.
+We suggest the following two ways to install Go. Check out the
+[official docs](https://golang.org/doc/install) and Go installer for the correct
+download for your operating system. Alternatively, you can install Go yourself
+from the command line. Detailed below are standard default installation
+locations, but feel free to customize.
 
 **[Go Binary Downloads](https://go.dev/dl/)**
 
 **Ubuntu:**
 
-At the time of this writing, the latest release is `1.18.10`. We're going to download the tarball, extract it to `/usr/local`, and export `GOROOT` to our `$PATH`
+At the time of this writing, the latest release is `1.18.10`. We're going to
+download the tarball, extract it to `/usr/local`, and export `GOROOT` to our
+`$PATH`
 
 ```bash
 curl -OL https://golang.org/dl/go1.18.10.linux-amd64.tar.gz
@@ -50,7 +60,11 @@ export PATH=$PATH:/usr/local/go/bin
 
 ```
 
-Remember to add `GOPATH` to your `$PATH` environment variable. If you're not sure where that is, run `go env GOPATH`. This will allow us to run the `gaiad` binary in the next step. If you're not sure how to set your `$PATH` take a look at [these instructions](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them).
+Remember to add `GOPATH` to your `$PATH` environment variable. If you're not
+sure where that is, run `go env GOPATH`. This will allow us to run the `gaiad`
+binary in the next step. If you're not sure how to set your `$PATH` take a look
+at
+[these instructions](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them).
 
 ```bash
 export PATH=$PATH:$(go env GOPATH)/bin
@@ -66,7 +80,8 @@ git clone -b <latest-release-tag> https://github.com/cosmos/gaia.git
 cd gaia && make install
 ```
 
-If this command fails due to the following error message, you might have already set `LDFLAGS` prior to running this step.
+If this command fails due to the following error message, you might have already
+set `LDFLAGS` prior to running this step.
 
 ```
 # github.com/cosmos/gaia/cmd/gaiad
@@ -82,9 +97,11 @@ Unset this environment variable and try again.
 LDFLAGS="" make install
 ```
 
-> _NOTE_: If you still have issues at this step, please check that you have the latest stable version of GO installed.
+> *NOTE*: If you still have issues at this step, please check that you have the
+> latest stable version of GO installed.
 
-That will install the `gaiad` binary. Verify that everything installed successfully by running:
+That will install the `gaiad` binary. Verify that everything installed
+successfully by running:
 
 ```bash
 gaiad version --long
@@ -112,14 +129,17 @@ Build tags indicate special features that have been enabled in the binary.
 
 ## Work with a Cosmos SDK Clone
 
-To work with your own modifications of the Cosmos SDK, make a fork of this repo, and add a `replace` clause to the `go.mod` file.
-The `replace` clause you add to `go.mod` must provide the correct import path:
+To work with your own modifications of the Cosmos SDK, make a fork of this repo,
+and add a `replace` clause to the `go.mod` file. The `replace` clause you add to
+`go.mod` must provide the correct import path:
 
 - Make appropriate changes
-- Add `replace github.com/cosmos/cosmos-sdk => /path/to/clone/cosmos-sdk` to `go.mod`
+- Add `replace github.com/cosmos/cosmos-sdk => /path/to/clone/cosmos-sdk` to
+  `go.mod`
 - Run `make clean install` or `make clean build`
 - Test changes
 
 ## Next
 
-Now you can [join the mainnet](../hub-tutorials/join-mainnet.md), [the public testnet](../hub-tutorials/join-testnet.md).
+Now you can [join the mainnet](../hub-tutorials/join-mainnet.md),
+[the public testnet](../hub-tutorials/join-testnet.md).

@@ -7,7 +7,8 @@
 ## Fungible token transfer
 
 Use the `tx ft-transfer` command to send ICS-20 fungible token transfer packets.
-__NOTE:__ This command is mainly used for testing the packet features of the relayer.
+**NOTE:** This command is mainly used for testing the packet features of the
+relayer.
 
 ```shell
 USAGE:
@@ -53,9 +54,12 @@ REQUIRED:
             Identifier of the source port
 ```
 
-__Example__
+**Example**
 
-Send two transfer packets from the `transfer` module and `channel-0` of `ibc-0` to `ibc-1`. Each transfer if for `9999` samoleans (default denomination) and a timeout offset of `10` blocks. The transfer fee is paid by the relayer account on `ibc-1`.
+Send two transfer packets from the `transfer` module and `channel-0` of `ibc-0`
+to `ibc-1`. Each transfer if for `9999` samoleans (default denomination) and a
+timeout offset of `10` blocks. The transfer fee is paid by the relayer account
+on `ibc-1`.
 
 ```shell
 hermes tx ft-transfer --dst-chain ibc-1 --src-chain ibc-0 --src-port transfer --src-channel channel-0 --amount 9999 --timeout-height-offset 1000 --number-msgs 2
@@ -86,7 +90,8 @@ Success: [
 
 The transfer packets are stored on `ibc-0` and can be relayed.
 
-> To send transfer packets with a custom receiver address use the `--receiver` flag.
+> To send transfer packets with a custom receiver address use the `--receiver`
+> flag.
 
 ```shell
 hermes tx ft-transfer --dst-chain ibc-1 --src-chain ibc-0 --src-port transfer --src-channel channel-0 --amount 9999 --timeout-height-offset 1000 --number-msgs 1 --receiver board:1938586739
@@ -108,7 +113,9 @@ Success: [
 
 ## Relay receive and timeout packets
 
-Use the `tx packet-recv` command to relay the packets sent but not yet received. If the packets sent have timed out then a timeout packet is sent to the source chain.
+Use the `tx packet-recv` command to relay the packets sent but not yet received.
+If the packets sent have timed out then a timeout packet is sent to the source
+chain.
 
 ```shell
 USAGE:
@@ -131,11 +138,13 @@ REQUIRED:
             Identifier of the source port
 ```
 
-__Example__
+**Example**
 
-Send the two transfer packets to the `ibc-1` module bound to the `transfer` port and the `channel-0`'s counterparty.
+Send the two transfer packets to the `ibc-1` module bound to the `transfer` port
+and the `channel-0`'s counterparty.
 
-__NOTE__: The relayer prepends a client update message before the Receive messages.
+**NOTE**: The relayer prepends a client update message before the Receive
+messages.
 
 ```shell
 hermes tx packet-recv --reference-chain ibc-1 --host-chain ibc-0 --host-port transfer --host-channel channel-0
@@ -227,7 +236,8 @@ Both packets have been relayed to `ibc-1` and acknowledged.
 
 ## Relay acknowledgment packets
 
-Use the `tx packet-ack` command to relay acknowledgments to the original source of the packets.
+Use the `tx packet-ack` command to relay acknowledgments to the original source
+of the packets.
 
 ```shell
 USAGE:
@@ -250,11 +260,13 @@ REQUIRED:
             Identifier of the source port
 ```
 
-__Example__
+**Example**
 
-Send the acknowledgments to the `ibc-0` module bound to the `transfer` port and the `channel-1`'s counterparty.
+Send the acknowledgments to the `ibc-0` module bound to the `transfer` port and
+the `channel-1`'s counterparty.
 
-__NOTE__: The relayer prepends a client update message before the acknowledgments.
+**NOTE**: The relayer prepends a client update message before the
+acknowledgments.
 
 ```shell
 hermes tx packet-ack --reference-chain ibc-0 --host-chain ibc-1 --host-port transfer --host-channel channel-1

@@ -1,13 +1,17 @@
 # Integration with Prometheus
 
-With the `enabled = true` setting for `telemetry` in your config.toml, the telemetry service will be enabled and will serve the metrics using
-the Prometheus encoder over HTTP at [`http://localhost:3001/metrics`](http://localhost:3001/metrics).
+With the `enabled = true` setting for `telemetry` in your config.toml, the
+telemetry service will be enabled and will serve the metrics using the
+Prometheus encoder over HTTP at
+[`http://localhost:3001/metrics`](http://localhost:3001/metrics).
 
-After starting Hermes with `hermes start`, and letting it run for a while to relay packets,
-open [`http://localhost:3001/metrics`](http://localhost:3001/metrics) in a browser, you should
-see Prometheus-encoded metrics.
+After starting Hermes with `hermes start`, and letting it run for a while to
+relay packets, open
+[`http://localhost:3001/metrics`](http://localhost:3001/metrics) in a browser,
+you should see Prometheus-encoded metrics.
 
-For example, with two channels and after transferring some tokens between the chains:
+For example, with two channels and after transferring some tokens between the
+chains:
 
 ```text
 # HELP acknowledgement_events Number of WriteAcknowledgement events received

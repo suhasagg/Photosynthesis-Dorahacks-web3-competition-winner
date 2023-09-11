@@ -69,8 +69,11 @@ making them convenient yet unambiguous structures for their respective TOML
 representation.
 
 [ldt]: https://toml.io/en/v1.0.0#local-date-time
+
 [tld]: https://pkg.go.dev/github.com/pelletier/go-toml/v2#LocalDate
+
 [tlt]: https://pkg.go.dev/github.com/pelletier/go-toml/v2#LocalTime
+
 [tldt]: https://pkg.go.dev/github.com/pelletier/go-toml/v2#LocalDateTime
 
 ## Getting started
@@ -201,26 +204,26 @@ In case of trouble: [Go Modules FAQ][mod-faq].
 
 Go-toml provides three handy command line tools:
 
- * `tomljson`: Reads a TOML file and outputs its JSON representation.
+- `tomljson`: Reads a TOML file and outputs its JSON representation.
 
-    ```
-    $ go install github.com/pelletier/go-toml/v2/cmd/tomljson@latest
-    $ tomljson --help
-    ```
+  ```
+  $ go install github.com/pelletier/go-toml/v2/cmd/tomljson@latest
+  $ tomljson --help
+  ```
 
- * `jsontoml`: Reads a JSON file and outputs a TOML representation.
+- `jsontoml`: Reads a JSON file and outputs a TOML representation.
 
-    ```
-    $ go install github.com/pelletier/go-toml/v2/cmd/jsontoml@latest
-    $ jsontoml --help
-    ```
+  ```
+  $ go install github.com/pelletier/go-toml/v2/cmd/jsontoml@latest
+  $ jsontoml --help
+  ```
 
- * `tomll`: Lints and reformats a TOML file.
+- `tomll`: Lints and reformats a TOML file.
 
-    ```
-    $ go install github.com/pelletier/go-toml/v2/cmd/tomll@latest
-    $ tomll --help
-    ```
+  ```
+  $ go install github.com/pelletier/go-toml/v2/cmd/tomll@latest
+  $ tomll --help
+  ```
 
 ### Docker image
 
@@ -361,10 +364,9 @@ decoding from their TOML representation. While a more robust feature was
 initially planned in go-toml v2, this has been ultimately [removed from
 scope][nodoc] of this library, with no plan to add it back at the moment. The
 closest equivalent at the moment would be to unmarshal into an `interface{}` and
-use type assertions and/or reflection to manipulate the arbitrary
-structure. However this would fall short of providing all of the TOML features
-such as adding comments and be specific about whitespace.
-
+use type assertions and/or reflection to manipulate the arbitrary structure.
+However this would fall short of providing all of the TOML features such as
+adding comments and be specific about whitespace.
 
 #### `toml.Position` are not retrievable anymore
 
@@ -372,9 +374,9 @@ The API for retrieving the position (line, column) of a specific TOML element do
 not exist anymore. This was done to minimize the amount of concepts introduced
 by the library (query path), and avoid the performance hit related to storing
 positions in the absence of a document model, for a feature that seemed to have
-little use. Errors however have gained more detailed position
-information. Position retrieval seems better fitted for a document model, which
-has been [removed from the scope][nodoc] of go-toml v2 at the moment.
+little use. Errors however have gained more detailed position information.
+Position retrieval seems better fitted for a document model, which has been
+[removed from the scope][nodoc] of go-toml v2 at the moment.
 
 ### Encoding / Marshal
 
@@ -417,7 +419,8 @@ struct types using `reflect.StructOf`.
 #### No indentation by default
 
 V1 automatically indents content of tables by default. V2 does not. However the
-same behavior can be obtained using [`Encoder.SetIndentTables`][sit]. For example:
+same behavior can be obtained using [`Encoder.SetIndentTables`][sit]. For
+example:
 
 ```go
 data := map[string]interface{}{
@@ -479,8 +482,8 @@ There is no way to make v2 encoder behave like v1.
 
 #### `Encoder.CompactComments` has been removed
 
-Emitting compact comments is now the default behavior of go-toml. This option
-is not necessary anymore.
+Emitting compact comments is now the default behavior of go-toml. This option is
+not necessary anymore.
 
 #### Struct tags have been merged
 
@@ -500,7 +503,6 @@ type doc struct {
 Has a result, the `Encoder.SetTag*` methods have been removed, as there is just
 one tag now.
 
-
 #### `commented` tag has been removed
 
 There is no replacement for the `commented` tag. This feature would be better
@@ -514,7 +516,6 @@ The new name is `Encoder.SetArraysMultiline`. The behavior should be the same.
 #### `Encoder.Indentation` has been renamed
 
 The new name is `Encoder.SetIndentSymbol`. The behavior should be the same.
-
 
 #### Embedded structs behave like stdlib
 
@@ -538,14 +539,15 @@ This package has been removed because it was essentially not supported anymore
 complete solutions exist out there.
 
 [query]: https://github.com/pelletier/go-toml/tree/f99d6bbca119636aeafcf351ee52b3d202782627/query
+
 [dasel]: https://github.com/TomWright/dasel
 
 ## Versioning
 
 Go-toml follows [Semantic Versioning](http://semver.org/). The supported version
 of [TOML](https://github.com/toml-lang/toml) is indicated at the beginning of
-this document. The last two major versions of Go are supported
-(see [Go Release Policy](https://golang.org/doc/devel/release.html#policy)).
+this document. The last two major versions of Go are supported (see
+[Go Release Policy](https://golang.org/doc/devel/release.html#policy)).
 
 ## License
 

@@ -4,11 +4,14 @@ order: 4
 
 # Transactions
 
-This section defines the `sdk.Msg` concrete types that result in the state transitions defined on the previous section.
+This section defines the `sdk.Msg` concrete types that result in the state
+transitions defined on the previous section.
 
 ### `MsgRegisterRevenue`
 
-Defines a transaction signed by a developer to register a contract for transaction fee distribution. The sender must be an EOA that corresponds to the contract deployer address.
+Defines a transaction signed by a developer to register a contract for
+transaction fee distribution. The sender must be an EOA that corresponds to the
+contract deployer address.
 
 ```go
 type MsgRegisterRevenue struct {
@@ -36,7 +39,9 @@ The message content stateless validation fails if:
 
 ### `MsgUpdateRevenue`
 
-Defines a transaction signed by a developer to update the withdraw address of a contract registered for transaction fee distribution. The sender must be an EOA that corresponds to the contract deployer address.
+Defines a transaction signed by a developer to update the withdraw address of a
+contract registered for transaction fee distribution. The sender must be an EOA
+that corresponds to the contract deployer address.
 
 ```go
 type MsgUpdateRevenue struct {
@@ -59,7 +64,10 @@ The message content stateless validation fails if:
 
 ### `MsgCancelRevenue`
 
-Defines a transaction signed by a developer to remove the information for a registered contract. Transaction fees will no longer be distributed to the developer, for this smart contract. The sender must be an EOA that corresponds to the contract deployer address.
+Defines a transaction signed by a developer to remove the information for a
+registered contract. Transaction fees will no longer be distributed to the
+developer, for this smart contract. The sender must be an EOA that corresponds
+to the contract deployer address.
 
 ```go
 type MsgCancelRevenue struct {

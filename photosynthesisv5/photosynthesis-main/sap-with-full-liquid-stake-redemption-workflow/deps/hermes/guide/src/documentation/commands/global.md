@@ -1,6 +1,6 @@
 # Global options
 
-Hermes accepts _global_ options which affect all commands.
+Hermes accepts *global* options which affect all commands.
 
 ```shell
 hermes {{#template ../../templates/version}}
@@ -14,16 +14,18 @@ FLAGS:
 
 ## Ordering of command-line options
 
-The global options must be specified right after the `hermes` command and _before_ any sub-command.
-The non-global options have to be specified _after_ the sub-command.
+The global options must be specified right after the `hermes` command and
+*before* any sub-command. The non-global options have to be specified *after*
+the sub-command.
 
 ```shell
 hermes <GLOBAL_OPTIONS> subcommand <OPTIONS>
 ```
 
-__Example__
+**Example**
 
-To `start` the relayer using the configuration file at `/home/my_chain.toml` and enable JSON output:
+To `start` the relayer using the configuration file at `/home/my_chain.toml` and
+enable JSON output:
 
 ```shell
 hermes --config /home/my_chain.toml --json start
@@ -37,14 +39,16 @@ hermes --json query clients --host-chain ibc-1
 
 ## JSON output
 
-If the `--json` option is supplied, all relayer commands will output single-line JSON values instead of plain text.
+If the `--json` option is supplied, all relayer commands will output single-line
+JSON values instead of plain text.
 
-Log messages will be written to `stderr`, while the final result will be written to `stdout`, and everything
-will be formatted as JSON.
-This allows processing only the final output using [`jq`](https://stedolan.github.io/jq/).
-To process all the output using `jq`, one can redirect `stderr` to `stdout` with `hermes --json COMMAND 2>&1 | jq`.
+Log messages will be written to `stderr`, while the final result will be written
+to `stdout`, and everything will be formatted as JSON. This allows processing
+only the final output using [`jq`](https://stedolan.github.io/jq/). To process
+all the output using `jq`, one can redirect `stderr` to `stdout` with
+`hermes --json COMMAND 2>&1 | jq`.
 
-__Example__
+**Example**
 
 ```shell
 hermes --config /home/my_chain.toml --json create client --host-chain ibc-0 --reference-chain ibc-1
@@ -57,9 +61,10 @@ hermes --config /home/my_chain.toml --json create client --host-chain ibc-0 --re
 {"result":{"CreateClient":{"client_id":"07-tendermint-1","client_type":"Tendermint","consensus_height":{"revision_height":10060,"revision_number":1},"height":{"revision_height":10072,"revision_number":0}}},"status":"success"}
 ```
 
-The first three lines are printed to `stderr`, while the last line with a `"result"` key is printed to `stdout`.
+The first three lines are printed to `stderr`, while the last line with a
+`"result"` key is printed to `stdout`.
 
-__Example__
+**Example**
 
 To improve the readability, pipe all the output to `jq`:
 
@@ -113,7 +118,7 @@ hermes --config /home/my_chain.toml --json create client --host-chain ibc-0 --re
 }
 ```
 
-__Example__
+**Example**
 
 To extract the identifier of the newly created client above:
 

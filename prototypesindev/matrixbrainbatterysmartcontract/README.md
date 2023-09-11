@@ -2,39 +2,36 @@
 
 # MatrixBrainBattery - P2E game and NFT Minting – Ultimate choice for Archway Rewards and Photosynthesis Algorithm
 
-Codacy grade A - https://app.codacy.com/gh/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/file/93328442120/issues/source?bid=34568294&fileBranchId=34568294
+Codacy grade A -
+https://app.codacy.com/gh/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/file/93328442120/issues/source?bid=34568294\&fileBranchId=34568294
 
-https://docs.google.com/document/d/1PqFbmda3N09y3TfOuCQZUSSKpxzclvku/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+https://docs.google.com/document/d/1PqFbmda3N09y3TfOuCQZUSSKpxzclvku/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 Some P2E Games of similar genre
 
-
 Matrix Movie based P2E Game - Matrix infinity
 
-https://docs.google.com/document/d/1VYHsaFEsLstoP8ht56IZXzqwWGfC9pSD/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+https://docs.google.com/document/d/1VYHsaFEsLstoP8ht56IZXzqwWGfC9pSD/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 Mission Impossible based P2E game - Mission impossible
 
-https://docs.google.com/document/d/15BiFBWG_WbizrmiBwXIgdayjypqwUcDK/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+https://docs.google.com/document/d/15BiFBWG_WbizrmiBwXIgdayjypqwUcDK/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 WWE based P2E game - WWE universe
 
-https://docs.google.com/document/d/1CSBXgFoX03_WUhLrChHUWwrE9jncgZDi/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
-
+https://docs.google.com/document/d/1CSBXgFoX03\_WUhLrChHUWwrE9jncgZDi/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 Matrix movie based NFTs
 
-https://docs.google.com/document/d/1dBiXoF6Z460nJxziE06b9JFu15co36Cm/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+https://docs.google.com/document/d/1dBiXoF6Z460nJxziE06b9JFu15co36Cm/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 Mission Impossible based NFTs
 
-https://docs.google.com/document/d/1BVwVHjStAMk0f0IYKlBXW9OoAZ6N0JBo/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+https://docs.google.com/document/d/1BVwVHjStAMk0f0IYKlBXW9OoAZ6N0JBo/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 Justin Bieber music studios based NFTs
 
-https://docs.google.com/document/d/1JWbt_HTbAacJCPfN_55iTAHrSz7uaXBd/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
-
-
+https://docs.google.com/document/d/1JWbt_HTbAacJCPfN\_55iTAHrSz7uaXBd/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 In the News :
 

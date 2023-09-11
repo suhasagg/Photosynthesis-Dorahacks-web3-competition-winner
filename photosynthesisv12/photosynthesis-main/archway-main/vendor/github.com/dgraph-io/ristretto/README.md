@@ -1,57 +1,69 @@
 # Ristretto
+
 [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/dgraph-io/ristretto)
 [![Go Report Card](https://img.shields.io/badge/go%20report-A%2B-brightgreen)](https://goreportcard.com/report/github.com/dgraph-io/ristretto)
-[![Coverage](https://gocover.io/_badge/github.com/dgraph-io/ristretto)](https://gocover.io/github.com/dgraph-io/ristretto)
+[![Coverage](https://gocover.io/\_badge/github.com/dgraph-io/ristretto)](https://gocover.io/github.com/dgraph-io/ristretto)
 ![Tests](https://github.com/dgraph-io/ristretto/workflows/tests/badge.svg)
 
-Ristretto is a fast, concurrent cache library built with a focus on performance and correctness.
+Ristretto is a fast, concurrent cache library built with a focus on performance
+and correctness.
 
 The motivation to build Ristretto comes from the need for a contention-free
 cache in [Dgraph][].
 
-**Use [Discuss Issues](https://discuss.dgraph.io/tags/c/issues/35/ristretto/40) for reporting issues about this repository.**
+**Use [Discuss Issues](https://discuss.dgraph.io/tags/c/issues/35/ristretto/40)
+for reporting issues about this repository.**
 
-[Dgraph]: https://github.com/dgraph-io/dgraph
+[dgraph]: https://github.com/dgraph-io/dgraph
 
 ## Features
 
-* **High Hit Ratios** - with our unique admission/eviction policy pairing, Ristretto's performance is best in class.
-	* **Eviction: SampledLFU** - on par with exact LRU and better performance on Search and Database traces.
-	* **Admission: TinyLFU** - extra performance with little memory overhead (12 bits per counter).
-* **Fast Throughput** - we use a variety of techniques for managing contention and the result is excellent throughput.
-* **Cost-Based Eviction** - any large new item deemed valuable can evict multiple smaller items (cost could be anything).
-* **Fully Concurrent** - you can use as many goroutines as you want with little throughput degradation. 
-* **Metrics** - optional performance metrics for throughput, hit ratios, and other stats.
-* **Simple API** - just figure out your ideal `Config` values and you're off and running.
+- **High Hit Ratios** - with our unique admission/eviction policy pairing,
+  Ristretto's performance is best in class.
+  - **Eviction: SampledLFU** - on par with exact LRU and better performance on
+    Search and Database traces.
+  - **Admission: TinyLFU** - extra performance with little memory overhead (12
+    bits per counter).
+- **Fast Throughput** - we use a variety of techniques for managing contention
+  and the result is excellent throughput.
+- **Cost-Based Eviction** - any large new item deemed valuable can evict
+  multiple smaller items (cost could be anything).
+- **Fully Concurrent** - you can use as many goroutines as you want with little
+  throughput degradation.
+- **Metrics** - optional performance metrics for throughput, hit ratios, and
+  other stats.
+- **Simple API** - just figure out your ideal `Config` values and you're off and
+  running.
 
 ## Status
 
-Ristretto is production-ready. See [Projects using Ristretto](#projects-using-ristretto).
+Ristretto is production-ready. See
+[Projects using Ristretto](#projects-using-ristretto).
 
 ## Table of Contents
 
-* [Usage](#Usage)
-	* [Example](#Example)
-	* [Config](#Config)
-		* [NumCounters](#Config)
-		* [MaxCost](#Config)
-		* [BufferItems](#Config)
-		* [Metrics](#Config)
-		* [OnEvict](#Config)
-		* [KeyToHash](#Config)
-        * [Cost](#Config)
-* [Benchmarks](#Benchmarks)
-	* [Hit Ratios](#Hit-Ratios)
-		* [Search](#Search)
-		* [Database](#Database)
-		* [Looping](#Looping)
-		* [CODASYL](#CODASYL)
-	* [Throughput](#Throughput)
-		* [Mixed](#Mixed)
-		* [Read](#Read)
-		* [Write](#Write)
-* [Projects using Ristretto](#projects-using-ristretto)
-* [FAQ](#FAQ)
+- [Usage](#Usage)
+  - [Example](#Example)
+  - [Config](#Config)
+    - [NumCounters](#Config)
+    - [MaxCost](#Config)
+    - [BufferItems](#Config)
+    - [Metrics](#Config)
+    - [OnEvict](#Config)
+    - [KeyToHash](#Config)
+      - [Cost](#Config)
+- [Benchmarks](#Benchmarks)
+  - [Hit Ratios](#Hit-Ratios)
+    - [Search](#Search)
+    - [Database](#Database)
+    - [Looping](#Looping)
+    - [CODASYL](#CODASYL)
+  - [Throughput](#Throughput)
+    - [Mixed](#Mixed)
+    - [Read](#Read)
+    - [Write](#Write)
+- [Projects using Ristretto](#projects-using-ristretto)
+- [FAQ](#FAQ)
 
 ## Usage
 
@@ -70,7 +82,7 @@ func main() {
 
 	// set a value with a cost of 1
 	cache.Set("key", "value", 1)
-	
+
 	// wait for value to pass through buffers
 	time.Sleep(10 * time.Millisecond)
 
@@ -85,31 +97,48 @@ func main() {
 
 ### Config
 
-The `Config` struct is passed to `NewCache` when creating Ristretto instances (see the example above). 
+The `Config` struct is passed to `NewCache` when creating Ristretto instances
+(see the example above).
 
 **NumCounters** `int64`
 
-NumCounters is the number of 4-bit access counters to keep for admission and eviction. We've seen good performance in setting this to 10x the number of items you expect to keep in the cache when full. 
+NumCounters is the number of 4-bit access counters to keep for admission and
+eviction. We've seen good performance in setting this to 10x the number of items
+you expect to keep in the cache when full.
 
-For example, if you expect each item to have a cost of 1 and MaxCost is 100, set NumCounters to 1,000. Or, if you use variable cost values but expect the cache to hold around 10,000 items when full, set NumCounters to 100,000. The important thing is the *number of unique items* in the full cache, not necessarily the MaxCost value. 
+For example, if you expect each item to have a cost of 1 and MaxCost is 100, set
+NumCounters to 1,000. Or, if you use variable cost values but expect the cache
+to hold around 10,000 items when full, set NumCounters to 100,000. The important
+thing is the *number of unique items* in the full cache, not necessarily the
+MaxCost value.
 
 **MaxCost** `int64`
 
-MaxCost is how eviction decisions are made. For example, if MaxCost is 100 and a new item with a cost of 1 increases total cache cost to 101, 1 item will be evicted. 
+MaxCost is how eviction decisions are made. For example, if MaxCost is 100 and a
+new item with a cost of 1 increases total cache cost to 101, 1 item will be
+evicted.
 
-MaxCost can also be used to denote the max size in bytes. For example, if MaxCost is 1,000,000 (1MB) and the cache is full with 1,000 1KB items, a new item (that's accepted) would cause 5 1KB items to be evicted. 
+MaxCost can also be used to denote the max size in bytes. For example, if
+MaxCost is 1,000,000 (1MB) and the cache is full with 1,000 1KB items, a new
+item (that's accepted) would cause 5 1KB items to be evicted.
 
-MaxCost could be anything as long as it matches how you're using the cost values when calling Set. 
+MaxCost could be anything as long as it matches how you're using the cost values
+when calling Set.
 
 **BufferItems** `int64`
 
-BufferItems is the size of the Get buffers. The best value we've found for this is 64. 
+BufferItems is the size of the Get buffers. The best value we've found for this
+is 64.
 
-If for some reason you see Get performance decreasing with lots of contention (you shouldn't), try increasing this value in increments of 64. This is a fine-tuning mechanism and you probably won't have to touch this.
+If for some reason you see Get performance decreasing with lots of contention
+(you shouldn't), try increasing this value in increments of 64. This is a
+fine-tuning mechanism and you probably won't have to touch this.
 
 **Metrics** `bool`
 
-Metrics is true when you want real-time logging of a variety of stats. The reason this is a Config flag is because there's a 10% throughput performance overhead. 
+Metrics is true when you want real-time logging of a variety of stats. The
+reason this is a Config flag is because there's a 10% throughput performance
+overhead.
 
 **OnEvict** `func(hashes [2]uint64, value interface{}, cost int64)`
 
@@ -117,11 +146,13 @@ OnEvict is called for every eviction.
 
 **KeyToHash** `func(key interface{}) [2]uint64`
 
-KeyToHash is the hashing algorithm used for every key. If this is nil, Ristretto has a variety of [defaults depending on the underlying interface type](https://github.com/dgraph-io/ristretto/blob/master/z/z.go#L19-L41).
+KeyToHash is the hashing algorithm used for every key. If this is nil, Ristretto
+has a variety of
+[defaults depending on the underlying interface type](https://github.com/dgraph-io/ristretto/blob/master/z/z.go#L19-L41).
 
 Note that if you want 128bit hashes you should use the full `[2]uint64`,
-otherwise just fill the `uint64` at the `0` position and it will behave like
-any 64bit hash.
+otherwise just fill the `uint64` at the `0` position and it will behave like any
+64bit hash.
 
 **Cost** `func(value interface{}) int64`
 
@@ -137,7 +168,8 @@ To signal to Ristretto that you'd like to use this Cost function:
 
 ## Benchmarks
 
-The benchmarks can be found in https://github.com/dgraph-io/benchmarks/tree/master/cachebench/ristretto.
+The benchmarks can be found in
+https://github.com/dgraph-io/benchmarks/tree/master/cachebench/ristretto.
 
 ### Hit Ratios
 
@@ -204,17 +236,31 @@ of RAM.
 Below is a list of known projects that use Ristretto:
 
 - [Badger](https://github.com/dgraph-io/badger) - Embeddable key-value DB in Go
-- [Dgraph](https://github.com/dgraph-io/dgraph) - Horizontally scalable and distributed GraphQL database with a graph backend
-- [Vitess](https://github.com/vitessio/vitess) - database clustering system for horizontal scaling of MySQL
+- [Dgraph](https://github.com/dgraph-io/dgraph) - Horizontally scalable and
+  distributed GraphQL database with a graph backend
+- [Vitess](https://github.com/vitessio/vitess) - database clustering system for
+  horizontal scaling of MySQL
 
 ## FAQ
 
 ### How are you achieving this performance? What shortcuts are you taking?
 
-We go into detail in the [Ristretto blog post](https://blog.dgraph.io/post/introducing-ristretto-high-perf-go-cache/), but in short: our throughput performance can be attributed to a mix of batching and eventual consistency. Our hit ratio performance is mostly due to an excellent [admission policy](https://arxiv.org/abs/1512.00727) and SampledLFU eviction policy.
+We go into detail in the
+[Ristretto blog post](https://blog.dgraph.io/post/introducing-ristretto-high-perf-go-cache/),
+but in short: our throughput performance can be attributed to a mix of batching
+and eventual consistency. Our hit ratio performance is mostly due to an
+excellent [admission policy](https://arxiv.org/abs/1512.00727) and SampledLFU
+eviction policy.
 
-As for "shortcuts," the only thing Ristretto does that could be construed as one is dropping some Set calls. That means a Set call for a new item (updates are guaranteed) isn't guaranteed to make it into the cache. The new item could be dropped at two points: when passing through the Set buffer or when passing through the admission policy. However, this doesn't affect hit ratios much at all as we expect the most popular items to be Set multiple times and eventually make it in the cache. 
+As for "shortcuts," the only thing Ristretto does that could be construed as one
+is dropping some Set calls. That means a Set call for a new item (updates are
+guaranteed) isn't guaranteed to make it into the cache. The new item could be
+dropped at two points: when passing through the Set buffer or when passing
+through the admission policy. However, this doesn't affect hit ratios much at
+all as we expect the most popular items to be Set multiple times and eventually
+make it in the cache.
 
 ### Is Ristretto distributed?
 
-No, it's just like any other Go library that you can import into your project and use in a single process. 
+No, it's just like any other Go library that you can import into your project
+and use in a single process.

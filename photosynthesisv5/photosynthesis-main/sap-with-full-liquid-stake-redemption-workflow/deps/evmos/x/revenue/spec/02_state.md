@@ -8,16 +8,16 @@ order: 2
 
 The `x/revenue` module keeps the following objects in state:
 
-| State Object          | Description                           | Key                                                               | Value              | Store |
-| :-------------------- | :------------------------------------ | :---------------------------------------------------------------- | :----------------- | :---- |
-| `Revenue`            | Fee split bytecode                     | `[]byte{1} + []byte(contract_address)`                            | `[]byte{revenue}` | KV    |
-| `DeployerRevenues`   | Contract by deployer address bytecode | `[]byte{2} + []byte(deployer_address) + []byte(contract_address)` | `[]byte{1}`        | KV    |
-| `WithdrawerRevenues` | Contract by withdraw address bytecode | `[]byte{3} + []byte(withdraw_address) + []byte(contract_address)` | `[]byte{1}`        | KV    |
+| State Object         | Description                           | Key                                                               | Value             | Store |
+| :------------------- | :------------------------------------ | :---------------------------------------------------------------- | :---------------- | :---- |
+| `Revenue`            | Fee split bytecode                    | `[]byte{1} + []byte(contract_address)`                            | `[]byte{revenue}` | KV    |
+| `DeployerRevenues`   | Contract by deployer address bytecode | `[]byte{2} + []byte(deployer_address) + []byte(contract_address)` | `[]byte{1}`       | KV    |
+| `WithdrawerRevenues` | Contract by withdraw address bytecode | `[]byte{3} + []byte(withdraw_address) + []byte(contract_address)` | `[]byte{1}`       | KV    |
 
 ### Revenue
 
-A Revenue defines an instance that organizes fee distribution conditions for
-the owner of a given smart contract
+A Revenue defines an instance that organizes fee distribution conditions for the
+owner of a given smart contract
 
 ```go
 type Revenue struct {
@@ -33,7 +33,8 @@ type Revenue struct {
 
 ### ContractAddress
 
-`ContractAddress` defines the contract address that has been registered for fee distribution.
+`ContractAddress` defines the contract address that has been registered for fee
+distribution.
 
 ### DeployerAddress
 
@@ -41,11 +42,14 @@ A `DeployerAddress` is the EOA address for a registered contract.
 
 ### WithdrawerAddress
 
-The `WithdrawerAddress` is the address that receives transaction fees for a registered contract.
+The `WithdrawerAddress` is the address that receives transaction fees for a
+registered contract.
 
 ## Genesis State
 
-The `x/revenue` module's `GenesisState` defines the state necessary for initializing the chain from a previous exported height. It contains the module parameters and the revenues for registered contracts:
+The `x/revenue` module's `GenesisState` defines the state necessary for
+initializing the chain from a previous exported height. It contains the module
+parameters and the revenues for registered contracts:
 
 ```go
 // GenesisState defines the module's genesis state.

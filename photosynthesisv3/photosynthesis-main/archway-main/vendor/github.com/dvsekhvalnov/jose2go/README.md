@@ -2,23 +2,32 @@
 
 [![GoDoc](https://godoc.org/github.com/dvsekhvalnov/jose2go?status.svg)](http://godoc.org/github.com/dvsekhvalnov/jose2go)
 
-Pure Golang (GO) library for generating, decoding and encrypting [JSON Web Tokens](https://tools.ietf.org/html/rfc7519). Zero dependency, relies only
-on standard library.
+Pure Golang (GO) library for generating, decoding and encrypting
+[JSON Web Tokens](https://tools.ietf.org/html/rfc7519). Zero dependency, relies
+only on standard library.
 
-Supports full suite of signing, encryption and compression algorithms defined by [JSON Web Algorithms](https://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms-31) as of July 4, 2014 version.
+Supports full suite of signing, encryption and compression algorithms defined by
+[JSON Web Algorithms](https://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms-31)
+as of July 4, 2014 version.
 
-Extensively unit tested and cross tested (100+ tests) for compatibility with [jose.4.j](https://bitbucket.org/b_c/jose4j/wiki/Home), [Nimbus-JOSE-JWT](https://bitbucket.org/nimbusds/nimbus-jose-jwt/wiki/Home), [json-jwt](https://github.com/nov/json-jwt) and
+Extensively unit tested and cross tested (100+ tests) for compatibility with
+[jose.4.j](https://bitbucket.org/b_c/jose4j/wiki/Home),
+[Nimbus-JOSE-JWT](https://bitbucket.org/nimbusds/nimbus-jose-jwt/wiki/Home),
+[json-jwt](https://github.com/nov/json-jwt) and
 [jose-jwt](https://github.com/dvsekhvalnov/jose-jwt) libraries.
 
-
 ## Status
+
 Used in production. GA ready. Current version is 1.5.
 
 ## Important
+
 v1.5 bug fix release
 
-v1.4 changes default behavior of inserting `typ=JWT` header if not overriden. As of 1.4 no
-extra headers added by library automatically. To mimic pre 1.4 behaviour use:
+v1.4 changes default behavior of inserting `typ=JWT` header if not overriden. As
+of 1.4 no extra headers added by library automatically. To mimic pre 1.4
+behaviour use:
+
 ```Go
 token, err := jose.Sign(..., jose.Header("typ", "JWT"))
 
@@ -27,15 +36,16 @@ token, err := jose.Sign(..., jose.Header("typ", "JWT"))
 token, err := jose.Encrypt(..., jose.Header("typ", "JWT"))
 ```
 
-v1.3 fixed potential Invalid Curve Attack on NIST curves within ECDH key management.
-Upgrade strongly recommended.
+v1.3 fixed potential Invalid Curve Attack on NIST curves within ECDH key
+management. Upgrade strongly recommended.
 
 v1.2 breaks `jose.Decode` interface by returning 3 values instead of 2.
 
-v1.2 deprecates `jose.Compress` method in favor of using configuration options to `jose.Encrypt`,
-the method will be removed in next release.
+v1.2 deprecates `jose.Compress` method in favor of using configuration options
+to `jose.Encrypt`, the method will be removed in next release.
 
 ### Migration to v1.2
+
 Pre v1.2 decoding:
 
 ```Go
@@ -63,31 +73,48 @@ token, err := jose.Encrypt(payload, jose.DIR, jose.A128GCM, key, jose.Zip(jose.D
 ## Supported JWA algorithms
 
 **Signing**
+
 - HMAC signatures with HS256, HS384 and HS512.
-- RSASSA-PKCS1-V1_5 signatures with RS256, RS384 and RS512.
-- RSASSA-PSS signatures (probabilistic signature scheme with appendix) with PS256, PS384 and PS512.
+- RSASSA-PKCS1-V1\_5 signatures with RS256, RS384 and RS512.
+- RSASSA-PSS signatures (probabilistic signature scheme with appendix) with
+  PS256, PS384 and PS512.
 - ECDSA signatures with ES256, ES384 and ES512.
 - NONE (unprotected) plain text algorithm without integrity protection
 
 **Encryption**
-- RSAES OAEP (using SHA-1 and MGF1 with SHA-1) encryption with A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
-- RSAES OAEP 256 (using SHA-256 and MGF1 with SHA-256) encryption with A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
-- RSAES-PKCS1-V1_5 encryption with A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
-- A128KW, A192KW, A256KW encryption with A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
-- A128GCMKW, A192GCMKW, A256GCMKW encryption with A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
-- ECDH-ES with A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
-- ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW with A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
-- PBES2-HS256+A128KW, PBES2-HS384+A192KW, PBES2-HS512+A256KW with A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
-- Direct symmetric key encryption with pre-shared key A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM and A256GCM
+
+- RSAES OAEP (using SHA-1 and MGF1 with SHA-1) encryption with A128CBC-HS256,
+  A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
+- RSAES OAEP 256 (using SHA-256 and MGF1 with SHA-256) encryption with
+  A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
+- RSAES-PKCS1-V1\_5 encryption with A128CBC-HS256, A192CBC-HS384, A256CBC-HS512,
+  A128GCM, A192GCM, A256GCM
+- A128KW, A192KW, A256KW encryption with A128CBC-HS256, A192CBC-HS384,
+  A256CBC-HS512, A128GCM, A192GCM, A256GCM
+- A128GCMKW, A192GCMKW, A256GCMKW encryption with A128CBC-HS256, A192CBC-HS384,
+  A256CBC-HS512, A128GCM, A192GCM, A256GCM
+- ECDH-ES with A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM,
+  A256GCM
+- ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW with A128CBC-HS256,
+  A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
+- PBES2-HS256+A128KW, PBES2-HS384+A192KW, PBES2-HS512+A256KW with A128CBC-HS256,
+  A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
+- Direct symmetric key encryption with pre-shared key A128CBC-HS256,
+  A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM and A256GCM
 
 **Compression**
+
 - DEFLATE compression
 
 ## Installation
+
 ### Grab package from github
-`go get github.com/dvsekhvalnov/jose2go` or `go get -u github.com/dvsekhvalnov/jose2go` to update to latest version
+
+`go get github.com/dvsekhvalnov/jose2go` or
+`go get -u github.com/dvsekhvalnov/jose2go` to update to latest version
 
 ### Import package
+
 ```Go
 import (
 	"github.com/dvsekhvalnov/jose2go"
@@ -95,6 +122,7 @@ import (
 ```
 
 ## Usage
+
 #### Creating Plaintext (unprotected) Tokens
 
 ```Go
@@ -119,8 +147,11 @@ func main() {
 ```
 
 ### Creating signed tokens
+
 #### HS-256, HS-384 and HS-512
-Signing with HS256, HS384, HS512 expecting `[]byte` array key of corresponding length:
+
+Signing with HS256, HS384, HS512 expecting `[]byte` array key of corresponding
+length:
 
 ```Go
 package main
@@ -146,7 +177,12 @@ func main() {
 ```
 
 #### RS-256, RS-384 and RS-512, PS-256, PS-384 and PS-512
-Signing with RS256, RS384, RS512, PS256, PS384, PS512 expecting `*rsa.PrivateKey` private key of corresponding length. **jose2go** [provides convenient utils](#dealing-with-keys) to construct `*rsa.PrivateKey` instance from PEM encoded PKCS1 or PKCS8 data: `Rsa.ReadPrivate([]byte)` under `jose2go/keys/rsa` package.
+
+Signing with RS256, RS384, RS512, PS256, PS384, PS512 expecting
+`*rsa.PrivateKey` private key of corresponding length. **jose2go**
+[provides convenient utils](#dealing-with-keys) to construct `*rsa.PrivateKey`
+instance from PEM encoded PKCS1 or PKCS8 data: `Rsa.ReadPrivate([]byte)` under
+`jose2go/keys/rsa` package.
 
 ```Go
 package main
@@ -184,7 +220,13 @@ func main() {
 ```
 
 #### ES-256, ES-384 and ES-512
-ES256, ES384, ES512 ECDSA signatures expecting `*ecdsa.PrivateKey` private elliptic curve key of corresponding length.  **jose2go** [provides convenient utils](#dealing-with-keys) to construct `*ecdsa.PrivateKey` instance from PEM encoded PKCS1 or PKCS8 data: `ecc.ReadPrivate([]byte)` or directly from `X,Y,D` parameters: `ecc.NewPrivate(x,y,d []byte)` under `jose2go/keys/ecc` package.
+
+ES256, ES384, ES512 ECDSA signatures expecting `*ecdsa.PrivateKey` private
+elliptic curve key of corresponding length. **jose2go**
+[provides convenient utils](#dealing-with-keys) to construct `*ecdsa.PrivateKey`
+instance from PEM encoded PKCS1 or PKCS8 data: `ecc.ReadPrivate([]byte)` or
+directly from `X,Y,D` parameters: `ecc.NewPrivate(x,y,d []byte)` under
+`jose2go/keys/ecc` package.
 
 ```Go
 package main
@@ -213,8 +255,11 @@ func main() {
 ```
 
 ### Creating encrypted tokens
+
 #### RSA-OAEP-256, RSA-OAEP and RSA1\_5 key management algorithm
-RSA-OAEP-256, RSA-OAEP and RSA1_5 key management expecting `*rsa.PublicKey` public key of corresponding length.
+
+RSA-OAEP-256, RSA-OAEP and RSA1\_5 key management expecting `*rsa.PublicKey`
+public key of corresponding length.
 
 ```Go
 package main
@@ -250,11 +295,13 @@ func main() {
         //go use token
         fmt.Printf("\ntoken = %v\n",token)
     }
-}  
+}
 ```
 
 #### AES Key Wrap key management family of algorithms
-AES128KW, AES192KW and AES256KW key management requires `[]byte` array key of corresponding length
+
+AES128KW, AES192KW and AES256KW key management requires `[]byte` array key of
+corresponding length
 
 ```Go
 package main
@@ -280,7 +327,9 @@ func main() {
 ```
 
 #### AES GCM Key Wrap key management family of algorithms
-AES128GCMKW, AES192GCMKW and AES256GCMKW key management requires `[]byte` array key of corresponding length
+
+AES128GCMKW, AES192GCMKW and AES256GCMKW key management requires `[]byte` array
+key of corresponding length
 
 ```Go
 package main
@@ -306,7 +355,13 @@ func main() {
 ```
 
 #### ECDH-ES and ECDH-ES with AES Key Wrap key management family of algorithms
-ECDH-ES and ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW key management requires `*ecdsa.PublicKey` elliptic curve key of corresponding length. **jose2go** [provides convenient utils](#dealing-with-keys) to construct `*ecdsa.PublicKey` instance from PEM encoded PKCS1 X509 certificate or PKIX data: `ecc.ReadPublic([]byte)` or directly from `X,Y` parameters: `ecc.NewPublic(x,y []byte)`under `jose2go/keys/ecc` package:
+
+ECDH-ES and ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW key management
+requires `*ecdsa.PublicKey` elliptic curve key of corresponding length.
+**jose2go** [provides convenient utils](#dealing-with-keys) to construct
+`*ecdsa.PublicKey` instance from PEM encoded PKCS1 X509 certificate or PKIX
+data: `ecc.ReadPublic([]byte)` or directly from `X,Y` parameters:
+`ecc.NewPublic(x,y []byte)`under `jose2go/keys/ecc` package:
 
 ```Go
 package main
@@ -330,11 +385,13 @@ func main() {
         //go use token
         fmt.Printf("\ntoken = %v\n",token)
     }
-}  
+}
 ```
 
 #### PBES2 using HMAC SHA with AES Key Wrap key management family of algorithms
-PBES2-HS256+A128KW, PBES2-HS384+A192KW, PBES2-HS512+A256KW key management requires `string` passphrase from which actual key will be derived
+
+PBES2-HS256+A128KW, PBES2-HS384+A192KW, PBES2-HS512+A256KW key management
+requires `string` passphrase from which actual key will be derived
 
 ```Go
 package main
@@ -360,7 +417,9 @@ func main() {
 ```
 
 #### DIR direct pre-shared symmetric key management
-Direct key management with pre-shared symmetric keys expecting `[]byte` array key of corresponding length:
+
+Direct key management with pre-shared symmetric keys expecting `[]byte` array
+key of corresponding length:
 
 ```Go
 package main
@@ -386,8 +445,11 @@ func main() {
 ```
 
 ### Creating compressed & encrypted tokens
+
 #### DEFLATE compression
-**jose2go** supports optional DEFLATE compression of payload before encrypting, can be used with all supported encryption and key management algorithms:
+
+**jose2go** supports optional DEFLATE compression of payload before encrypting,
+can be used with all supported encryption and key management algorithms:
 
 ```Go
 package main
@@ -413,11 +475,18 @@ func main() {
 ```
 
 ### Verifying, Decoding and Decompressing tokens
-Decoding json web tokens is fully symmetric to creating signed or encrypted tokens (with respect to public/private cryptography), decompressing deflated payloads is handled automatically:
 
-As of v1.2 decode method defined as `jose.Decode() payload string, headers map[string]interface{}, err error` and returns both payload as unprocessed string and headers as map.
+Decoding json web tokens is fully symmetric to creating signed or encrypted
+tokens (with respect to public/private cryptography), decompressing deflated
+payloads is handled automatically:
 
-**HS256, HS384, HS512** signatures, **A128KW, A192KW, A256KW**,**A128GCMKW, A192GCMKW, A256GCMKW** and **DIR** key management algorithm expecting `[]byte` array key:
+As of v1.2 decode method defined as
+`jose.Decode() payload string, headers map[string]interface{}, err error` and
+returns both payload as unprocessed string and headers as map.
+
+**HS256, HS384, HS512** signatures, **A128KW, A192KW, A256KW**,**A128GCMKW,
+A192GCMKW, A256GCMKW** and **DIR** key management algorithm expecting `[]byte`
+array key:
 
 ```Go
 package main
@@ -445,7 +514,11 @@ func main() {
 }
 ```
 
-**RS256, RS384, RS512**,**PS256, PS384, PS512** signatures expecting `*rsa.PublicKey` public key of corresponding length. **jose2go** [provides convenient utils](#dealing-with-keys) to construct `*rsa.PublicKey` instance from PEM encoded PKCS1 X509 certificate or PKIX data: `Rsa.ReadPublic([]byte)` under `jose2go/keys/rsa` package:
+**RS256, RS384, RS512**,**PS256, PS384, PS512** signatures expecting
+`*rsa.PublicKey` public key of corresponding length. **jose2go**
+[provides convenient utils](#dealing-with-keys) to construct `*rsa.PublicKey`
+instance from PEM encoded PKCS1 X509 certificate or PKIX data:
+`Rsa.ReadPublic([]byte)` under `jose2go/keys/rsa` package:
 
 ```Go
 package main
@@ -482,10 +555,11 @@ func main() {
         //and/or use headers
         fmt.Printf("\nheaders = %v\n",headers)
     }
-}  
+}
 ```
 
-**RSA-OAEP-256**, **RSA-OAEP** and **RSA1_5** key management algorithms expecting `*rsa.PrivateKey` private key of corresponding length:
+**RSA-OAEP-256**, **RSA-OAEP** and **RSA1\_5** key management algorithms
+expecting `*rsa.PrivateKey` private key of corresponding length:
 
 ```Go
 package main
@@ -522,10 +596,11 @@ func main() {
         //and/or use headers
         fmt.Printf("\nheaders = %v\n",headers)
     }
-}  
+}
 ```
 
-**PBES2-HS256+A128KW, PBES2-HS384+A192KW, PBES2-HS512+A256KW** key management algorithms expects `string` passpharase as a key
+**PBES2-HS256+A128KW, PBES2-HS384+A192KW, PBES2-HS512+A256KW** key management
+algorithms expects `string` passpharase as a key
 
 ```Go
 package main
@@ -553,7 +628,12 @@ func main() {
 }
 ```
 
-**ES256, ES284, ES512** signatures expecting `*ecdsa.PublicKey` public elliptic curve key of corresponding length. **jose2go** [provides convenient utils](#dealing-with-keys) to construct `*ecdsa.PublicKey` instance from PEM encoded PKCS1 X509 certificate or PKIX data: `ecc.ReadPublic([]byte)` or directly from `X,Y` parameters: `ecc.NewPublic(x,y []byte)`under `jose2go/keys/ecc` package:
+**ES256, ES284, ES512** signatures expecting `*ecdsa.PublicKey` public elliptic
+curve key of corresponding length. **jose2go**
+[provides convenient utils](#dealing-with-keys) to construct `*ecdsa.PublicKey`
+instance from PEM encoded PKCS1 X509 certificate or PKIX data:
+`ecc.ReadPublic([]byte)` or directly from `X,Y` parameters:
+`ecc.NewPublic(x,y []byte)`under `jose2go/keys/ecc` package:
 
 ```Go
 package main
@@ -583,7 +663,13 @@ func main() {
 }
 ```
 
-**ECDH-ES** and **ECDH-ES+A128KW**, **ECDH-ES+A192KW**, **ECDH-ES+A256KW** key management expecting `*ecdsa.PrivateKey` private elliptic curve key of corresponding length.  **jose2go** [provides convenient utils](#dealing-with-keys) to construct `*ecdsa.PrivateKey` instance from PEM encoded PKCS1 or PKCS8 data: `ecc.ReadPrivate([]byte)` or directly from `X,Y,D` parameters: `ecc.NewPrivate(x,y,d []byte)` under `jose2go/keys/ecc` package:
+**ECDH-ES** and **ECDH-ES+A128KW**, **ECDH-ES+A192KW**, **ECDH-ES+A256KW** key
+management expecting `*ecdsa.PrivateKey` private elliptic curve key of
+corresponding length. **jose2go**
+[provides convenient utils](#dealing-with-keys) to construct `*ecdsa.PrivateKey`
+instance from PEM encoded PKCS1 or PKCS8 data: `ecc.ReadPrivate([]byte)` or
+directly from `X,Y,D` parameters: `ecc.NewPrivate(x,y,d []byte)` under
+`jose2go/keys/ecc` package:
 
 ```Go
 package main
@@ -615,11 +701,17 @@ func main() {
 ```
 
 ### Adding extra headers
-It's possible to pass additional headers while encoding token. **jose2go** provides convenience configuration helpers: `Header(name string, value interface{})` and `Headers(headers map[string]interface{})` that can be passed to `Sign(..)` and `Encrypt(..)` calls.
+
+It's possible to pass additional headers while encoding token. **jose2go**
+provides convenience configuration helpers:
+`Header(name string, value interface{})` and
+`Headers(headers map[string]interface{})` that can be passed to `Sign(..)` and
+`Encrypt(..)` calls.
 
 Note: **jose2go** do not allow to override `alg`, `enc` and `zip` headers.
 
 Example of signing with extra headers:
+
 ```Go
 	token, err := jose.Sign(payload, jose.ES256, key,
                     		jose.Header("keyid", "111-222-333"),
@@ -627,15 +719,25 @@ Example of signing with extra headers:
 ```
 
 Encryption with extra headers:
+
 ```Go
 token, err := jose.Encrypt(payload, jose.DIR, jose.A128GCM, sharedKey,
                     jose.Headers(map[string]interface{}{"keyid": "111-22-33", "cty": "text/plain"}))
 ```
 
 ### Two phase validation
-In some cases validation (decoding) key can be unknown prior to examining token content. For instance one can use different keys per token issuer or rely on headers information to determine which key to use, do logging or other things.
 
-**jose2go** allows to pass `func(headers map[string]interface{}, payload string) key interface{}` callback instead of key to `jose.Decode(..)`. Callback will be executed prior to decoding and integrity validation and will recieve parsed headers and payload as is (for encrypted tokens it will be cipher text). Callback should return key to be used for actual decoding process or `error` if decoding should be stopped, given error object will be returned from `jose.Decode(..)` call.
+In some cases validation (decoding) key can be unknown prior to examining token
+content. For instance one can use different keys per token issuer or rely on
+headers information to determine which key to use, do logging or other things.
+
+**jose2go** allows to pass
+`func(headers map[string]interface{}, payload string) key interface{}` callback
+instead of key to `jose.Decode(..)`. Callback will be executed prior to decoding
+and integrity validation and will recieve parsed headers and payload as is (for
+encrypted tokens it will be cipher text). Callback should return key to be used
+for actual decoding process or `error` if decoding should be stopped, given
+error object will be returned from `jose.Decode(..)` call.
 
 Example of decoding token with callback:
 
@@ -680,6 +782,7 @@ func main() {
 ```
 
 ### Working with binary payload
+
 In addition to work with string payloads (typical use-case) `jose2go` supports
 encoding and decoding of raw binary data. `jose.DecodeBytes`, `jose.SignBytes`
 and `jose.EncryptBytes` functions provides similar interface but accepting
@@ -776,13 +879,20 @@ func main() {
         //go use token
         fmt.Printf("\ntoken = %v\n",token)
     }
-}  
+}
 ```
+
 ### Dealing with keys
-**jose2go** provides several helper methods to simplify loading & importing of elliptic and rsa keys. Import `jose2go/keys/rsa` or `jose2go/keys/ecc` respectively:
+
+**jose2go** provides several helper methods to simplify loading & importing of
+elliptic and rsa keys. Import `jose2go/keys/rsa` or `jose2go/keys/ecc`
+respectively:
 
 #### RSA keys
-1. `Rsa.ReadPrivate(raw []byte) (key *rsa.PrivateKey,err error)` attempts to parse RSA private key from PKCS1 or PKCS8 format (`BEGIN RSA PRIVATE KEY` and `BEGIN PRIVATE KEY` headers)
+
+1. `Rsa.ReadPrivate(raw []byte) (key *rsa.PrivateKey,err error)` attempts to
+   parse RSA private key from PKCS1 or PKCS8 format (`BEGIN RSA PRIVATE KEY` and
+   `BEGIN PRIVATE KEY` headers)
 
 ```Go
 package main
@@ -807,7 +917,9 @@ func main() {
 }
 ```
 
-2. `Rsa.ReadPublic(raw []byte) (key *rsa.PublicKey,err error)` attempts to parse RSA public key from PKIX key format or PKCS1 X509 certificate (`BEGIN PUBLIC KEY` and `BEGIN CERTIFICATE` headers)
+2. `Rsa.ReadPublic(raw []byte) (key *rsa.PublicKey,err error)` attempts to parse
+   RSA public key from PKIX key format or PKCS1 X509 certificate
+   (`BEGIN PUBLIC KEY` and `BEGIN CERTIFICATE` headers)
 
 ```Go
 package main
@@ -833,7 +945,10 @@ func main() {
 ```
 
 #### ECC keys
-1. `ecc.ReadPrivate(raw []byte) (key *ecdsa.PrivateKey,err error)` attemps to parse elliptic curve private key from PKCS1 or PKCS8 format (`BEGIN EC PRIVATE KEY` and `BEGIN PRIVATE KEY` headers)
+
+1. `ecc.ReadPrivate(raw []byte) (key *ecdsa.PrivateKey,err error)` attemps to
+   parse elliptic curve private key from PKCS1 or PKCS8 format
+   (`BEGIN EC PRIVATE KEY` and `BEGIN PRIVATE KEY` headers)
 
 ```Go
 package main
@@ -858,7 +973,9 @@ func main() {
 }
 ```
 
-2. `ecc.ReadPublic(raw []byte) (key *ecdsa.PublicKey,err error)` attemps to parse elliptic curve public key from PKCS1 X509 or PKIX format (`BEGIN PUBLIC KEY` and `BEGIN CERTIFICATE` headers)
+2. `ecc.ReadPublic(raw []byte) (key *ecdsa.PublicKey,err error)` attemps to
+   parse elliptic curve public key from PKCS1 X509 or PKIX format
+   (`BEGIN PUBLIC KEY` and `BEGIN CERTIFICATE` headers)
 
 ```Go
 package main
@@ -883,7 +1000,9 @@ func main() {
 }
 ```
 
-3. `ecc.NewPublic(x,y []byte) (*ecdsa.PublicKey)` constructs elliptic public key from (X,Y) represented as bytes. Supported are NIST curves P-256,P-384 and P-521. Curve detected automatically by input length.
+3. `ecc.NewPublic(x,y []byte) (*ecdsa.PublicKey)` constructs elliptic public key
+   from (X,Y) represented as bytes. Supported are NIST curves P-256,P-384 and
+   P-521. Curve detected automatically by input length.
 
 ```Go
 package main
@@ -902,7 +1021,9 @@ func main() {
 }
 ```
 
-4. `ecc.NewPrivate(x,y,d []byte) (*ecdsa.PrivateKey)` constructs elliptic private key from (X,Y) and D represented as bytes. Supported are NIST curves P-256,P-384 and P-521. Curve detected automatically by input length.
+4. `ecc.NewPrivate(x,y,d []byte) (*ecdsa.PrivateKey)` constructs elliptic
+   private key from (X,Y) and D represented as bytes. Supported are NIST curves
+   P-256,P-384 and P-521. Curve detected automatically by input length.
 
 ```Go
 package main
@@ -923,16 +1044,21 @@ func main() {
 ```
 
 ### More examples
+
 Checkout `jose_test.go` for more examples.
 
 ## Changelog
+
 ### 1.2
+
 - interface to access token headers after decoding
 - interface to provide extra headers for token encoding
 - two-phase validation support
 
 ### 1.1
+
 - security and bug fixes
 
 ### 1.0
+
 - initial stable version with full suite JOSE spec support

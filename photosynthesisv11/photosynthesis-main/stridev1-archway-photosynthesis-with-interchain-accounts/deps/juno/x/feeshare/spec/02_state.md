@@ -34,7 +34,8 @@ type FeeShare struct {
 
 ### ContractAddress
 
-`ContractAddress` defines the contract address that has been registered for fee distribution.
+`ContractAddress` defines the contract address that has been registered for fee
+distribution.
 
 ### DeployerAddress
 
@@ -42,11 +43,14 @@ A `DeployerAddress` is the admin address for a registered contract.
 
 ### WithdrawerAddress
 
-The `WithdrawerAddress` is the address that receives transaction fees for a registered contract.
+The `WithdrawerAddress` is the address that receives transaction fees for a
+registered contract.
 
 ## Genesis State
 
-The `x/feeshare` module's `GenesisState` defines the state necessary for initializing the chain from a previously exported height. It contains the module parameters and the fee share for registered contracts:
+The `x/feeshare` module's `GenesisState` defines the state necessary for
+initializing the chain from a previously exported height. It contains the module
+parameters and the fee share for registered contracts:
 
 ```go
 // GenesisState defines the module's genesis state.

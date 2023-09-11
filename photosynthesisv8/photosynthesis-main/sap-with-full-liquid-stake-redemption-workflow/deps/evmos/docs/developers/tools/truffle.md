@@ -4,9 +4,12 @@ order: 3
 
 # Truffle: Deploying a Smart Contract
 
-Learn how to deploy a simple Solidity-based smart contract to Evmos using the Truffle environment {synopsis}
+Learn how to deploy a simple Solidity-based smart contract to Evmos using the
+Truffle environment {synopsis}
 
-[Truffle](https://www.trufflesuite.com/truffle) is a development framework for deploying and managing [Solidity](https://github.com/ethereum/solidity) smart contracts.
+[Truffle](https://www.trufflesuite.com/truffle) is a development framework for
+deploying and managing [Solidity](https://github.com/ethereum/solidity) smart
+contracts.
 
 ## Install Dependencies
 
@@ -18,7 +21,8 @@ yarn install truffle -g
 
 ## Create Truffle Project
 
-In this step we will create a simple counter contract. Feel free to skip this step if you already have your own compiled contract.
+In this step we will create a simple counter contract. Feel free to skip this
+step if you already have your own compiled contract.
 
 Create a new directory to host the contracts and initialize it:
 
@@ -61,7 +65,8 @@ Compile the contract using the `compile` command:
 truffle compile
 ```
 
-Create `test/counter_test.js` containing the following tests in Javascript using [Mocha](https://mochajs.org/):
+Create `test/counter_test.js` containing the following tests in Javascript using
+[Mocha](https://mochajs.org/):
 
 ```javascript
 const Counter = artifacts.require("Counter")
@@ -104,7 +109,9 @@ In the Truffle terminal, migrate the contract using:
 truffle migrate --network development
 ```
 
-You should see incoming deployment logs in the Evmos daemon Terminal tab for each transaction (one to deploy `Migrations.sol` and the other to deploy `Counter.sol`).
+You should see incoming deployment logs in the Evmos daemon Terminal tab for
+each transaction (one to deploy `Migrations.sol` and the other to deploy
+`Counter.sol`).
 
 ```bash
 $ I[2020-07-15|17:35:59.934] Added good transaction                       module=mempool tx=22245B935689918D332F58E82690F02073F0453D54D5944B6D64AAF1F21974E2 res="&{CheckTx:log:\"[]\" gas_wanted:6721975 }" height=3 total=1
@@ -115,7 +122,8 @@ I[2020-07-15|17:36:02.981] Added good transaction                       module=m
 
 ## Run Truffle tests
 
-Now, you can run the Truffle tests using the Evmos node using the `test` command:
+Now, you can run the Truffle tests using the Evmos node using the `test`
+command:
 
 ```bash
 $ truffle test --network development

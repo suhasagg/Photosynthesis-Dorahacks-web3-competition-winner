@@ -29,10 +29,14 @@ Welcome to the documentation of the **Cosmos Hub application: `gaia`**.
 
 ## Additional Resources
 
-- [Validator Resources](./validators/README.md): Contains documentation for `gaia` validators.
-- [Delegator Resources](./delegators/README.md): Contains documentation for delegators.
-- [Other Resources](./resources/README.md): Contains documentation on `gaiad`, genesis file, service providers, ledger wallets, ...
-- [Cosmos Hub Archives](./resources/archives.md): State archives of past iteration of the Cosmos Hub.
+- [Validator Resources](./validators/README.md): Contains documentation for
+  `gaia` validators.
+- [Delegator Resources](./delegators/README.md): Contains documentation for
+  delegators.
+- [Other Resources](./resources/README.md): Contains documentation on `gaiad`,
+  genesis file, service providers, ledger wallets, ...
+- [Cosmos Hub Archives](./resources/archives.md): State archives of past
+  iteration of the Cosmos Hub.
 
 # Contribute
 

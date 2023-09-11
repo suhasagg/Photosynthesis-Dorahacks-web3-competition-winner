@@ -9,12 +9,13 @@ order: 2
 The `x/claims` module keeps the following objects in state:
 
 | State Object   | Description            | Key                           | Value                  | Store |
-|----------------|------------------------|-------------------------------|------------------------|-------|
+| -------------- | ---------------------- | ----------------------------- | ---------------------- | ----- |
 | `ClaimsRecord` | Claims record bytecode | `[]byte{1} + []byte(address)` | `[]byte{claimsRecord}` | KV    |
 
 ### Claim Record
 
-A `ClaimRecord` defines the initial claimable airdrop amount and the list of completed actions to claim the tokens.
+A `ClaimRecord` defines the initial claimable airdrop amount and the list of
+completed actions to claim the tokens.
 
 ```protobuf
 message ClaimsRecord {
@@ -30,7 +31,9 @@ message ClaimsRecord {
 
 ## Genesis State
 
-The `x/claims` module's `GenesisState` defines the state necessary for initializing the chain from a previously exported height. It contains the module parameters and a slice containing all the claim records by user address:
+The `x/claims` module's `GenesisState` defines the state necessary for
+initializing the chain from a previously exported height. It contains the module
+parameters and a slice containing all the claim records by user address:
 
 ```go
 // GenesisState defines the claims module's genesis state.
@@ -44,13 +47,18 @@ type GenesisState struct {
 
 ## Invariants
 
-The `x/claims` module registers an [`Invariant`](https://docs.cosmos.network/main/building-modules/invariants) to ensure that a property is true at any given time. These functions are useful to detect bugs early on and act upon them to limit their potential consequences (e.g. by halting the chain).
+The `x/claims` module registers an
+[`Invariant`](https://docs.cosmos.network/main/building-modules/invariants) to
+ensure that a property is true at any given time. These functions are useful to
+detect bugs early on and act upon them to limit their potential consequences
+(e.g. by halting the chain).
 
 ### ClaimsInvariant
 
 The `ClaimsInvariant` checks that the total amount of all unclaimed coins held
 in claims records is equal to the escrowed balance held in the claims module
-account. This is important to ensure that there are sufficient coins to claim for all claims records.
+account. This is important to ensure that there are sufficient coins to claim
+for all claims records.
 
 ```go
 balance := k.bankKeeper.GetBalance(ctx, moduleAccAddr, params.ClaimsDenom)

@@ -1,15 +1,16 @@
 <!-- markdown-link-check-disable -->
-# gaia文档
 
-欢迎阅读`Gaia`文档。 `Gaia`是Cosmos Hub目前的应用程序名。
+# gaia 文档
 
-## 加入Cosmos Hub主网
+欢迎阅读`Gaia`文档。 `Gaia`是 Cosmos Hub 目前的应用程序名。
+
+## 加入 Cosmos Hub 主网
 
 - [安装`gaia`程序](./gaia-tutorials/installation.md)
 - [启动一个全节点并加入主网](./gaia-tutorials/join-mainnet.md)
 - [升级成一个验证人节点](./validators/validator-setup.md)
 
-## 加入Cosmos Hub公共测试网
+## 加入 Cosmos Hub 公共测试网
 
 - [加入测试网](./gaia-tutorials/join-testnet.md)
 

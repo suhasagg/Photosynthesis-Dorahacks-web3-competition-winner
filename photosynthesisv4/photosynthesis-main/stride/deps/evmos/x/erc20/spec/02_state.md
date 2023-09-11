@@ -8,15 +8,16 @@ order: 2
 
 The `x/erc20` module keeps the following objects in state:
 
-| State Object       | Description                                    | Key                         | Value               | Store    |
-| ------------------ | ---------------------------------------------- | --------------------------- | ------------------- | --- |
+| State Object       | Description                                    | Key                         | Value               | Store |
+| ------------------ | ---------------------------------------------- | --------------------------- | ------------------- | ----- |
 | `TokenPair`        | Token Pair bytecode                            | `[]byte{1} + []byte(id)`    | `[]byte{tokenPair}` | KV    |
 | `TokenPairByERC20` | Token Pair id bytecode by erc20 contract bytes | `[]byte{2} + []byte(erc20)` | `[]byte(id)`        | KV    |
 | `TokenPairByDenom` | Token Pair id bytecode by denom string         | `[]byte{3} + []byte(denom)` | `[]byte(id)`        | KV    |
 
 ### Token Pair
 
-One-to-one mapping of native Cosmos coin denomination to ERC20 token contract addresses (i.e `sdk.Coin` ←→ ERC20).
+One-to-one mapping of native Cosmos coin denomination to ERC20 token contract
+addresses (i.e `sdk.Coin` ←→ ERC20).
 
 ```go
 type TokenPair struct {
@@ -33,7 +34,9 @@ type TokenPair struct {
 
 ### Token pair ID
 
-The unique identifier of a `TokenPair` is obtained by obtaining the SHA256 hash of the ERC20 hex contract address and the Coin denomination using the following function:
+The unique identifier of a `TokenPair` is obtained by obtaining the SHA256 hash
+of the ERC20 hex contract address and the Coin denomination using the following
+function:
 
 ```tsx
 tokenPairId = sha256(erc20 + "|" + denom)
@@ -41,7 +44,10 @@ tokenPairId = sha256(erc20 + "|" + denom)
 
 ### Token Origin
 
-The `ConvertCoin` and `ConvertERC20` functionalities use the owner field to check whether the token being used is a native Coin or a native ERC20. The field is based on the token registration proposal type (`RegisterCoinProposal` = 1, `RegisterERC20Proposal` = 2).
+The `ConvertCoin` and `ConvertERC20` functionalities use the owner field to
+check whether the token being used is a native Coin or a native ERC20. The field
+is based on the token registration proposal type (`RegisterCoinProposal` = 1,
+`RegisterERC20Proposal` = 2).
 
 The `Owner` enumerates the ownership of a ERC20 contract.
 
@@ -76,11 +82,14 @@ func (tp TokenPair) IsNativeERC20() bool {
 
 ### Token Pair by ERC20 and by Denom
 
-`TokenPairByERC20` and `TokenPairByDenom` are additional state objects for querying a token pair id.
+`TokenPairByERC20` and `TokenPairByDenom` are additional state objects for
+querying a token pair id.
 
 ## Genesis State
 
-The `x/erc20` module's `GenesisState` defines the state necessary for initializing the chain from a previous exported height. It contains the module parameters and the registered token pairs :
+The `x/erc20` module's `GenesisState` defines the state necessary for
+initializing the chain from a previous exported height. It contains the module
+parameters and the registered token pairs :
 
 ```go
 // GenesisState defines the module's genesis state.

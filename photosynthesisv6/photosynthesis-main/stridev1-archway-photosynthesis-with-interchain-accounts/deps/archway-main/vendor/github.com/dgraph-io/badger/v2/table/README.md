@@ -1,6 +1,7 @@
 Size of table is 123,217,667 bytes for all benchmarks.
 
 # BenchmarkRead
+
 ```
 $ go test -bench ^BenchmarkRead$ -run ^$ -count 3
 goos: linux
@@ -20,6 +21,7 @@ The rate is ~762MB/s using LoadToRAM (when table is in RAM).
 To read a 64MB table, this would take ~0.084s, which is negligible.
 
 # BenchmarkReadAndBuild
+
 ```go
 $ go test -bench BenchmarkReadAndBuild -run ^$ -count 3
 goos: linux
@@ -32,13 +34,14 @@ PASS
 ok  	github.com/dgraph-io/badger/table	12.081s
 ```
 
-The rate is ~123MB/s. To build a 64MB table, this would take ~0.56s. Note that this
-does NOT include the flushing of the table to disk. All we are doing above is
-reading one table (which is in RAM) and write one table in memory.
+The rate is ~123MB/s. To build a 64MB table, this would take ~0.56s. Note that
+this does NOT include the flushing of the table to disk. All we are doing above
+is reading one table (which is in RAM) and write one table in memory.
 
 The table building takes 0.56-0.084s ~ 0.4823s.
 
 # BenchmarkReadMerged
+
 Below, we merge 5 tables. The total size remains unchanged at ~122M.
 
 ```go
@@ -53,7 +56,8 @@ PASS
 ok  	github.com/dgraph-io/badger/table	27.433s
 ```
 
-The rate is ~120MB/s. To read a 64MB table using merge iterator, this would take ~0.53s.
+The rate is ~120MB/s. To read a 64MB table using merge iterator, this would take
+\~0.53s.
 
 # BenchmarkRandomRead
 
@@ -68,22 +72,32 @@ BenchmarkRandomRead-16    	  500000	      2614 ns/op
 PASS
 ok  	github.com/dgraph-io/badger/table	50.850s
 ```
-For random read benchmarking, we are randomly reading a key and verifying its value.
+
+For random read benchmarking, we are randomly reading a key and verifying its
+value.
 
 # DB Open benchmark
+
 1. Create badger DB with 2 billion key-value pairs (about 380GB of data)
+
 ```
 badger fill -m 2000 --dir="/tmp/data" --sorted
 ```
+
 2. Clear buffers and swap memory
+
 ```
 free -mh && sync && echo 3 | sudo tee /proc/sys/vm/drop_caches && sudo swapoff -a && sudo swapon -a && free -mh
 ```
+
 Also flush disk buffers
+
 ```
 blockdev --flushbufs /dev/nvme0n1p4
 ```
+
 3. Run the benchmark
+
 ```
 go test -run=^$ github.com/dgraph-io/badger -bench ^BenchmarkDBOpen$ -benchdir="/tmp/data" -v
 
@@ -105,4 +119,5 @@ PASS
 ok  	github.com/dgraph-io/badger	24.076s
 
 ```
+
 It takes about 23.851s to open a DB with 2 billion sorted key-value entries.

@@ -2,8 +2,8 @@
 
 *Since version 0.7.0.*
 
-Hermes features a built-in HTTP server which exposes information
-about the relayer configuration and state via a REST API.
+Hermes features a built-in HTTP server which exposes information about the
+relayer configuration and state via a REST API.
 
 ## Table of Contents
 
@@ -11,7 +11,8 @@ about the relayer configuration and state via a REST API.
 
 ## Configuration
 
-The REST API is not active by default, and must be enabled in the relayer configuration:
+The REST API is not active by default, and must be enabled in the relayer
+configuration:
 
 ```toml
 [rest]
@@ -24,8 +25,9 @@ port    = 3000
 
 ### GET `/version`
 
-This endpoint returns the version of the Hermes (under the `ibc-relayer` key) as well
-as the version of the REST server itself (under the `ibc-relayer-rest` key).
+This endpoint returns the version of the Hermes (under the `ibc-relayer` key) as
+well as the version of the REST server itself (under the `ibc-relayer-rest`
+key).
 
 **Example**
 
@@ -50,7 +52,8 @@ as the version of the REST server itself (under the `ibc-relayer-rest` key).
 
 This endpoint return the identifiers of the chains that Hermes is connected to.
 Those identifiers can be used with the `/chain/:id` endpoint to gather more
-information about each chain's configuration. See the next section for more details.
+information about each chain's configuration. See the next section for more
+details.
 
 **Example**
 
@@ -114,9 +117,9 @@ where `:id` stands for the identifier.
 
 ### GET `/state`
 
-This endpoint returns the current state of the relayer,
-namely which chains it is connected to, as well as a description
-of all the workers which are currently active.
+This endpoint returns the current state of the relayer, namely which chains it
+is connected to, as well as a description of all the workers which are currently
+active.
 
 ```
 ❯ curl -s -X GET 'http://127.0.0.1:3000/state' | jq

@@ -1,6 +1,7 @@
 # Start the local chains
 
-In this chapter, you will learn how to spawn four Gaia chains, connect them in an arbitrary topology and use Hermes to transfer tokens between them.
+In this chapter, you will learn how to spawn four Gaia chains, connect them in
+an arbitrary topology and use Hermes to transfer tokens between them.
 
 ```mermaid
 flowchart LR
@@ -13,37 +14,46 @@ flowchart LR
     ibc1---ibc2
     ibc2---ibc3
     ibc0---ibc3
-    
+
 ```
 
-As for the [Local chains tutorial](../local-chains/index.md), we will make use of Gaiad Manager `gm` that we installed in [Install Gaiad Manager](../pre-requisites/gaiad-manager.md).
+As for the [Local chains tutorial](../local-chains/index.md), we will make use
+of Gaiad Manager `gm` that we installed in
+[Install Gaiad Manager](../pre-requisites/gaiad-manager.md).
 
----
+***
 
 ### Reset your configuration
 
-First, make sure that no chain is currently running by killing all `gaiad` processes.
+First, make sure that no chain is currently running by killing all `gaiad`
+processes.
 
 ```shell
 {{#template ../../templates/commands/gm/stop}}
 ```
 
-Then, make sure that your folder `$HOME/.gm` does not contain any `ibc-*` or `node-*` file. You can remove them with
+Then, make sure that your folder `$HOME/.gm` does not contain any `ibc-*` or
+`node-*` file. You can remove them with
 
 ```shell
 rm -r $HOME/.gm/node-*
 rm -r $HOME/.gm/ibc-*
 ```
 
-Copy and paste the configuration below to `{{#template ../../templates/path/gm/default_path}}` and set Hermes' binary path according to your setup. The following contains the configuration of 4 IBC-enabled chains.
+Copy and paste the configuration below to
+`{{#template ../../templates/path/gm/default_path}}` and set Hermes' binary path
+according to your setup. The following contains the configuration of 4
+IBC-enabled chains.
 
-__gm.toml__
+**gm.toml**
 
 ```toml
 {{#template ../../templates/files/gm/more-chains/gm.toml}}
 ```
 
-> __NOTE__: If you have any `Docker` containers running that might be using the same ports as `gaiad` (e.g. port 27010-27012), please ensure you stop them first before proceeding to the next step.
+> **NOTE**: If you have any `Docker` containers running that might be using the
+> same ports as `gaiad` (e.g. port 27010-27012), please ensure you stop them
+> first before proceeding to the next step.
 
 Finally, start the chains with the `start` command.
 
@@ -51,7 +61,7 @@ Finally, start the chains with the `start` command.
 {{#template ../../templates/commands/gm/start}}
 ```
 
-This configures and starts four __`gaiad`__ instances.
+This configures and starts four **`gaiad`** instances.
 
 ```mermaid
 graph TD
@@ -60,7 +70,7 @@ graph TD
     C -->|gaiad| E[ibc-1]
     C -->|gaiad| F[ibc-2]
     C -->|gaiad| G[ibc-3]
-    
+
 ```
 
 If the command runs successfully, it should output something similar to:
@@ -91,6 +101,7 @@ Run the following command to check the status of the chains:
 ```
 
 If the command is successful, you should see a message similar to:
+
 ```
 NODE               PID    RPC   APP  GRPC  HOME_DIR
 ibc-0            21330  27010 27011 27012  $HOME/.gm/ibc-0
@@ -103,20 +114,23 @@ ibc-3            22999  27040 27041 27042  $HOME/.gm/ibc-3
  node-3          25194  27080 27081 27082  $HOME/.gm/node-3
 ```
 
-
-
 ### Hermes' configuration file
 
-Gaiad Manager `gm` takes care of creating the configuration file. Run the command below to create the `$HOME/.hermes/config.toml` file:
+Gaiad Manager `gm` takes care of creating the configuration file. Run the
+command below to create the `$HOME/.hermes/config.toml` file:
 
 ```bash
 {{#template ../../templates/commands/gm/hermes_config}}
 ```
->__NOTE__: You can visit the [`Configuration`](../../documentation/configuration/index.md) section for more information about the configuration file.
 
-Based on the `gm.toml` above, your `$HOME/.hermes/config.toml` file should look like:
+> **NOTE**: You can visit the
+> [`Configuration`](../../documentation/configuration/index.md) section for more
+> information about the configuration file.
 
-__config.toml__
+Based on the `gm.toml` above, your `$HOME/.hermes/config.toml` file should look
+like:
+
+**config.toml**
 
 ```toml
 {{#template ../../templates/files/hermes/more-chains/config_without_filters.toml}}
@@ -124,7 +138,9 @@ __config.toml__
 
 ### Adding private keys to the chains
 
-Next, we will need to associate a private key to every chain which `hermes` will use to sign transactions. `gm` will automatically generate and associate them with:
+Next, we will need to associate a private key to every chain which `hermes` will
+use to sign transactions. `gm` will automatically generate and associate them
+with:
 
 ```bash
 {{#template ../../templates/commands/gm/hermes_keys}}
@@ -147,12 +163,16 @@ SUCCESS Added key 'wallet2' (cosmos1lz6df9uggl9459z2vusw9tknpy3xn2v7yq60k9) on c
 SUCCESS Added key 'wallet1' (cosmos15jxyjskrx7s8yqpfn3xddlrx7qcq0f8r69mp4g) on chain ibc-3
 ```
 
-> __TROUBLESHOOTING__: 
-> - If the command does not out output anything, make sure the path to Hermes' binary is set in `{{#template ../../templates/path/gm/default_path}}`.
+> **TROUBLESHOOTING**:
+>
+> - If the command does not out output anything, make sure the path to Hermes'
+>   binary is set in `{{#template ../../templates/path/gm/default_path}}`.
 
 ### The `$HOME/.gm` directory
 
-This directory is created when you install `gm` and the binaries are stored here but when we start the chains, all the related files and folders are stored here as well.
+This directory is created when you install `gm` and the binaries are stored here
+but when we start the chains, all the related files and folders are stored here
+as well.
 
 The `$HOME/.gm` directory has a tree structure similar to:
 
@@ -234,15 +254,19 @@ The `$HOME/.gm` directory has a tree structure similar to:
 
 ```
 
-> __Tip__: You can use the command `tree ./data/ -L 2` to view the folder structure above
+> **Tip**: You can use the command `tree ./data/ -L 2` to view the folder
+> structure above
 
 ### The `$HOME/.hermes` directory
 
-By default, `hermes` expects the configuration file to be in the __`$HOME/.hermes`__ folder.
+By default, `hermes` expects the configuration file to be in the
+**`$HOME/.hermes`** folder.
 
-It also stores the private keys for each chain in this folder as outlined in the [Keys](../../commands/keys/index.md) section.
+It also stores the private keys for each chain in this folder as outlined in the
+[Keys](../../commands/keys/index.md) section.
 
-After executing `{{#template ../../templates/commands/gm/start}}`, this is how the folder should look like:
+After executing `{{#template ../../templates/commands/gm/start}}`, this is how
+the folder should look like:
 
 ```shell
 $HOME/.hermes/
@@ -270,8 +294,9 @@ $HOME/.hermes/
             └── wallet2.json
 ```
 
----
+***
 
 ## Next Steps
 
-[The next section](./build-the-topology.md) describes how to create an arbitrary topology between these chains before relaying packets.
+[The next section](./build-the-topology.md) describes how to create an arbitrary
+topology between these chains before relaying packets.

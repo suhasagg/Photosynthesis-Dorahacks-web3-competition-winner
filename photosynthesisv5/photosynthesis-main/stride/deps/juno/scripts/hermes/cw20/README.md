@@ -1,11 +1,12 @@
 # CW20 ICS20 IBC Transfer
 
-Transfer a CW20 token from 1 chain to another over the ICS20 standard transfer port.
+Transfer a CW20 token from 1 chain to another over the ICS20 standard transfer
+port.
 
 ## Steps
 
-Install cw20-ics20 and cw20 contracts
-or download from the release page pre-compiled
+Install cw20-ics20 and cw20 contracts or download from the release page
+pre-compiled
 
 <https://github.com/CosmWasm/cw-plus/releases>
 

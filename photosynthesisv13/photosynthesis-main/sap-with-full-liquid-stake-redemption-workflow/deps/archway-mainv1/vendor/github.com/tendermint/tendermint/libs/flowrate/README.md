@@ -1,5 +1,4 @@
-Data Flow Rate Control
-======================
+# Data Flow Rate Control
 
 To download and install this package run:
 

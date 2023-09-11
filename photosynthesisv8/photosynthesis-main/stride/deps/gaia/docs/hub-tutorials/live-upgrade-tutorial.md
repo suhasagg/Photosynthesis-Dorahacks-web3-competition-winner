@@ -1,12 +1,11 @@
----
-order: 6
-title: Upgrading the Chain
----
+***
+
+## order: 6&#xA;title: Upgrading the Chain
 
 # Live Upgrade Tutorial
 
-This document demonstrates how a live upgrade can be performed on-chain through a
-governance process.
+This document demonstrates how a live upgrade can be performed on-chain through
+a governance process.
 
 1. Start the network and trigger upgrade
 
@@ -31,8 +30,8 @@ governance process.
 
    Assuming the proposal passes the chain will stop at given upgrade height.
 
-   You can stop and start the original binary all you want, but **it will refuse to
-   run after the upgrade height**.
+   You can stop and start the original binary all you want, but **it will refuse
+   to run after the upgrade height**.
 
    We need a new binary with the upgrade handler installed. The logs should look
    something like:
@@ -43,11 +42,13 @@ governance process.
    ...
    ```
 
-   Note that the process will hang indefinitely (doesn't exit to avoid restart loops). So, you must
-   manually kill the process and replace it with a new binary. Do so now with `Ctrl+C` or `killall gaiad`.
+   Note that the process will hang indefinitely (doesn't exit to avoid restart
+   loops). So, you must manually kill the process and replace it with a new
+   binary. Do so now with `Ctrl+C` or `killall gaiad`.
 
-   In `gaia/app/app.go`, after `upgrade.Keeper` is initialized and set in the app, set the the
-   corresponding upgrade `Handler` with the correct `<plan-name>`:
+   In `gaia/app/app.go`, after `upgrade.Keeper` is initialized and set in the
+   app, set the the corresponding upgrade `Handler` with the correct
+   `<plan-name>`:
 
    ```go
        app.upgradeKeeper.SetUpgradeHandler("<plan-name>", func(ctx sdk.Context, plan upgrade.Plan) {
@@ -56,11 +57,12 @@ governance process.
    ```
 
    Note that we panic on any error - this would cause the upgrade to fail if the
-   migration could not be run, and no node would advance - allowing a manual recovery.
-   If we ignored the errors, then we would proceed with an incomplete upgrade and
-   have a very difficult time every recovering the proper state.
+   migration could not be run, and no node would advance - allowing a manual
+   recovery. If we ignored the errors, then we would proceed with an incomplete
+   upgrade and have a very difficult time every recovering the proper state.
 
-   Now, compile the new binary and run the upgraded code to complete the upgrade:
+   Now, compile the new binary and run the upgraded code to complete the
+   upgrade:
 
    ```bash
    # create a new binary of gaia with the added upgrade handler

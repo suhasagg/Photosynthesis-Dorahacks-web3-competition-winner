@@ -78,8 +78,8 @@ The fairly standard code contribution process looks like that:
 4. Review, potential ask for changes.
 5. Merge.
 
-Feel free to ask for help! You can create draft pull requests to gather
-some early feedback!
+Feel free to ask for help! You can create draft pull requests to gather some
+early feedback!
 
 ### Run the tests
 
@@ -88,7 +88,7 @@ You can run tests for go-toml using Go's test tool: `go test -race ./...`.
 During the pull request process, all tests will be ran on Linux, Windows, and
 MacOS on the last two versions of Go.
 
-However, given GitHub's new policy to _not_ run Actions on pull requests until a
+However, given GitHub's new policy to *not* run Actions on pull requests until a
 maintainer clicks on button, it is highly recommended that you run them locally
 as you make changes.
 
@@ -143,7 +143,7 @@ description. Pull requests that lower performance will receive more scrutiny.
 Try to look around and follow the same format and structure as the rest of the
 code. We enforce using `go fmt` on the whole code base.
 
----
+***
 
 ## Maintainers-only
 
@@ -159,14 +159,15 @@ Checklist:
 - Title will be understandable in the changelog.
 
 1. Merge using "squash and merge".
-2. Make sure to edit the commit message to keep all the useful information
-   nice and clean.
+2. Make sure to edit the commit message to keep all the useful information nice
+   and clean.
 3. Make sure the commit title is clear and contains the PR number (#123).
 
 ### New release
 
 1. Decide on the next version number. Use semver.
 2. Generate release notes using [`gh`][gh]. Example:
+
 ```
 $ gh api -X POST \
   -F tag_name='v2.0.0-beta.5' \
@@ -175,6 +176,7 @@ $ gh api -X POST \
   --jq '.body' \
   repos/pelletier/go-toml/releases/generate-notes
 ```
+
 3. Look for "Other changes". That would indicate a pull request not labeled
    properly. Tweak labels and pull request titles until changelog looks good for
    users.
@@ -186,11 +188,19 @@ $ gh api -X POST \
 9. Check pre-release if new version is an alpha or beta.
 
 [issues-tracker]: https://github.com/pelletier/go-toml/issues
+
 [bug-report]: https://github.com/pelletier/go-toml/issues/new?template=bug_report.md
+
 [pkg.go.dev]: https://pkg.go.dev/github.com/pelletier/go-toml
+
 [readme]: ./README.md
+
 [fork]: https://help.github.com/articles/fork-a-repo
+
 [pull-request]: https://help.github.com/en/articles/creating-a-pull-request
+
 [new-release]: https://github.com/pelletier/go-toml/releases/new
+
 [gh]: https://github.com/cli/cli
+
 [pr-labels]: https://github.com/pelletier/go-toml/blob/v2/.github/release.yml

@@ -6,17 +6,23 @@ Registers the withdrawal address for the given contract.
 
 ## Parameters
 
-`contract_bech32 (string, required)`: The bech32 address of the contract whose interaction fees will be shared.
+`contract_bech32 (string, required)`: The bech32 address of the contract whose
+interaction fees will be shared.
 
-`withdraw_bech32 (string, required)`: The bech32 address where the interaction fees will be sent every block.
+`withdraw_bech32 (string, required)`: The bech32 address where the interaction
+fees will be sent every block.
 
 ## Description
 
-This command registers the withdrawal address for the given contract. Any time a user interacts with your contract, the funds will be sent to the withdrawal address. It can be any valid address, such as a DAO, normal account, another contract, or a multi-sig.
+This command registers the withdrawal address for the given contract. Any time a
+user interacts with your contract, the funds will be sent to the withdrawal
+address. It can be any valid address, such as a DAO, normal account, another
+contract, or a multi-sig.
 
 ## Permissions
 
-This command can only be run by the admin of the contract. If there is no admin, then it can only be run by the contract creator.
+This command can only be run by the admin of the contract. If there is no admin,
+then it can only be run by the contract creator.
 
 ## Exceptions
 

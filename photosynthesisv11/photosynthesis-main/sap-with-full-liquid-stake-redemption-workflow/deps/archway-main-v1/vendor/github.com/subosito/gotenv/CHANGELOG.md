@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.4.0] - 2022-06-02
+## \[1.4.0] - 2022-06-02
 
 ### Added
 
@@ -10,7 +10,7 @@
 
 - The CI will now run a linter and the tests on PRs.
 
-## [1.3.0] - 2022-05-23
+## \[1.3.0] - 2022-05-23
 
 ### Added
 
@@ -21,18 +21,20 @@
 
 - `OverLoad` prefer environment variables over local variables
 
-## [1.2.0] - 2019-08-03
+## \[1.2.0] - 2019-08-03
 
 ### Added
 
-- Add `Must` helper to raise an error as panic. It can be used with `Load` and `OverLoad`.
+- Add `Must` helper to raise an error as panic. It can be used with `Load` and
+  `OverLoad`.
 - Add more tests to be 100% coverage.
 - Add CHANGELOG
 - Add more OS for the test: OSX and Windows
 
 ### Changed
 
-- Reduce complexity and improve source code for having `A+` score in [goreportcard](https://goreportcard.com/report/github.com/subosito/gotenv).
+- Reduce complexity and improve source code for having `A+` score in
+  [goreportcard](https://goreportcard.com/report/github.com/subosito/gotenv).
 - Updated README with mentions to all available functions
 
 ### Removed
@@ -40,13 +42,14 @@
 - Remove `ErrFormat`
 - Remove `MustLoad` and `MustOverload`, replaced with `Must` helper.
 
-## [1.1.1] - 2018-06-05
+## \[1.1.1] - 2018-06-05
 
 ### Changed
 
-- Replace `os.Getenv` with `os.LookupEnv` to ensure that the environment variable is not set, by [radding](https://github.com/radding)
+- Replace `os.Getenv` with `os.LookupEnv` to ensure that the environment
+  variable is not set, by [radding](https://github.com/radding)
 
-## [1.1.0] - 2017-03-20
+## \[1.1.0] - 2017-03-20
 
 ### Added
 
@@ -62,7 +65,6 @@
 - Incorrect variable expansion
 - Handling escaped '$' characters
 
-## [1.0.0] - 2014-10-05
+## \[1.0.0] - 2014-10-05
 
 First stable release.
-

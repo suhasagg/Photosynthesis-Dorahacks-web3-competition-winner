@@ -50,19 +50,20 @@ $ git push --follow-tags
 
 Then visit https://github.com/bats-core/bats-core/releases, and:
 
-* Click **Draft a new release**.
-* Select the new version tag.
-* Name the release: `Bats <VERSION>`.
-* Paste the same notes from the version tag annotation as the description,
+- Click **Draft a new release**.
+- Select the new version tag.
+- Name the release: `Bats <VERSION>`.
+- Paste the same notes from the version tag annotation as the description,
   except change the first line to read: `Released: YYYY-MM-DD`.
-* Click **Publish release**.
+- Click **Publish release**.
 
 For more on `git push --follow-tags`, see:
 
-* [git push --follow-tags in the online manual][ft-man]
-* [Stack Overflow: How to push a tag to a remote repository using Git?][ft-so]
+- [git push --follow-tags in the online manual][ft-man]
+- [Stack Overflow: How to push a tag to a remote repository using Git?][ft-so]
 
 [ft-man]: https://git-scm.com/docs/git-push#git-push---follow-tags
+
 [ft-so]: https://stackoverflow.com/a/26438076
 
 ## NPM
@@ -91,6 +92,7 @@ $ brew bump-formula-pr \
   --url=https://github.com/bats-core/bats-core/archive/v1.1.0.tar.gz \
   --sha256=855d8b8bed466bc505e61123d12885500ef6fcdb317ace1b668087364717ea82
 ```
+
 This resulted in https://github.com/Homebrew/homebrew-core/pull/29864, which was
 automatically merged once the build passed.
 

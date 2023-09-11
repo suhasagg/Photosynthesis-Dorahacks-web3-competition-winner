@@ -4,7 +4,8 @@ order: 4
 
 # Transactions
 
-This section defines the concrete `sdk.Msg`  types that result in the state transitions defined on the previous section.
+This section defines the concrete `sdk.Msg` types that result in the state
+transitions defined on the previous section.
 
 ## `CreateClawbackVestingAccount`
 
@@ -34,8 +35,8 @@ The msg content stateless validation fails if:
 
 - `FromAddress` or `ToAddress` are invalid
 - `LockupPeriods` and `VestingPeriods`
-    - include period with a non-positive length
-    - describe the same total amount
+  - include period with a non-positive length
+  - describe the same total amount
 
 ## `Clawback`
 

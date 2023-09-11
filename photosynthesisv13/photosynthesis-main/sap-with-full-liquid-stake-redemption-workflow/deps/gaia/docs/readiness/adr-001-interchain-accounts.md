@@ -2,19 +2,13 @@
 order: 2
 -->
 
----
+***
 
-ADR: 001
-Title: Interchain Accounts
-Status: Draft Implements
-Category: Feature
-Author: Sean King & Damian Nolan
-Created: 2022-01-19
-Mdified: 2022-01-19
-Requires: Cosmos-SDK, go-ibc
-Required-By: mauth
-Implements: Interchain Accounts
----
+ADR: 001 Title: Interchain Accounts Status: Draft Implements Category: Feature
+Author: Sean King & Damian Nolan Created: 2022-01-19 Mdified: 2022-01-19
+Requires: Cosmos-SDK, go-ibc Required-By: mauth Implements: Interchain Accounts
+
+***
 
 # ADR 001: Interchain Accounts
 
@@ -25,19 +19,33 @@ Implements: Interchain Accounts
 
 ## Abstract
 
-This is the Core Interchain Accounts Module. It allows the Cosmos Hub to act as a host chain with interchain accounts that are controlled by external IBC connected "Controller" blockchains. Candidate chains include Umee, Quicksilver, Sommelier. It is also a necessary component for a Authentication Module that allows the Cosmos Hub to act as a Controller chain as well. This will be recorded in a separate ADR.
+This is the Core Interchain Accounts Module. It allows the Cosmos Hub to act as
+a host chain with interchain accounts that are controlled by external IBC
+connected "Controller" blockchains. Candidate chains include Umee, Quicksilver,
+Sommelier. It is also a necessary component for a Authentication Module that
+allows the Cosmos Hub to act as a Controller chain as well. This will be
+recorded in a separate ADR.
 
 ## Rationale
 
-This allows the Hub to participate in advanced cross-chain defi operations, like Liquid Staking and various protocol controlled value applications.
+This allows the Hub to participate in advanced cross-chain defi operations, like
+Liquid Staking and various protocol controlled value applications.
 
 ## Desired Outcome
 
-The hub can be used trustlessly as a host chain in the configuration of Interchain Accounts.
+The hub can be used trustlessly as a host chain in the configuration of
+Interchain Accounts.
 
 ## Consequences
 
-There has been preliminary work done to understand if this increases any security feature of the Cosmos Hub. One thought was that this capability is similar to contract to contract interactions which are possible on virtual machine blockchains like EVM chains. Those interactions introduced a new attack vector, called a re-entrancy bug, which was the culprit of "The DAO hack on Ethereum". We believe there is no risk of these kinds of attacks with Interchain Accounts because they require the interactions to be atomic and Interchain Accounts are asynchronous.
+There has been preliminary work done to understand if this increases any
+security feature of the Cosmos Hub. One thought was that this capability is
+similar to contract to contract interactions which are possible on virtual
+machine blockchains like EVM chains. Those interactions introduced a new attack
+vector, called a re-entrancy bug, which was the culprit of "The DAO hack on
+Ethereum". We believe there is no risk of these kinds of attacks with Interchain
+Accounts because they require the interactions to be atomic and Interchain
+Accounts are asynchronous.
 
 #### Backwards Compatibility
 
@@ -45,7 +53,8 @@ This is the first of its kind.
 
 #### Forward Compatibility
 
-There are future releases of Interchain Accounts which are expected to be backwards compatible.
+There are future releases of Interchain Accounts which are expected to be
+backwards compatible.
 
 ## Technical Specification
 
@@ -54,15 +63,17 @@ There are future releases of Interchain Accounts which are expected to be backwa
 ## Development
 
 - Integration requirements
-  - Development has occured in [IBC-go](https://github.com/cosmos/ibc-go) and progress tracked on the project board there.
+  - Development has occured in [IBC-go](https://github.com/cosmos/ibc-go) and
+    progress tracked on the project board there.
 - Testing (Simulations, Core Team Testing, Partner Testing)
   - Simulations and Core Team tested this module
 - Audits (Internal Dev review, Third-party review, Bug Bounty)
-  - An internal audit, an audit from Informal Systems, and an audit from Trail of Bits all took place with fixes made to all findings.
+  - An internal audit, an audit from Informal Systems, and an audit from Trail
+    of Bits all took place with fixes made to all findings.
 - Networks (Testnets, Productionnets, Mainnets)
   - Testnets
 
-## Governance [optional]
+## Governance \[optional]
 
 - **Needs Signaling Proposal**
 - Core Community Governance
@@ -70,9 +81,10 @@ There are future releases of Interchain Accounts which are expected to be backwa
 - Steering Community
   - N/A. Possibly Aditya Srinpal, Sean King, Bez?
 - Timelines & Roadmap
-  - Expected to be released as part of IBC 3.0 in Feb 2022 (currently in [beta release](https://github.com/cosmos/ibc-go/releases/tag/v3.0.0-beta1))
+  - Expected to be released as part of IBC 3.0 in Feb 2022 (currently in
+    [beta release](https://github.com/cosmos/ibc-go/releases/tag/v3.0.0-beta1))
 
-## Project Integrations [optional]
+## Project Integrations \[optional]
 
 - Gaia Integrations
   - [PR](https://github.com/cosmos/gaia/pull/1150)

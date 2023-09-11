@@ -1,21 +1,24 @@
-
 # 🌱 **Photosynthesis-Archway ↔️ Stride Integrations** 🌟
 
 ![Photosynthesis Logo](https://i.imgur.com/Tn1GUZnb.jpg)
 
----
+***
 
 ## 📌 **Quick Links**
 
-- [**Photosynthesis Demo Video**](https://www.youtube.com/watch?v=hW6j3UybEcE) 🎥
-- [**Photosynthesis Code Walkthrough**](https://www.youtube.com/watch?v=Sj61xL6Mabg) 📜
-- [**Official Twitter Update**](https://twitter.com/DoraHacks/status/1651979334398382080) 🐦
+- [**Photosynthesis Demo Video**](https://www.youtube.com/watch?v=hW6j3UybEcE)
+  🎥
+- [**Photosynthesis Code Walkthrough**](https://www.youtube.com/watch?v=Sj61xL6Mabg)
+  📜
+- [**Official Twitter Update**](https://twitter.com/DoraHacks/status/1651979334398382080)
+  🐦
 
----
+***
 
 ### 🖼️ **Workflows**
 
 1. **Photosynthesis**:
+
    - A) ![Photosynthesis](https://i.imgur.com/dCEEQwy.png)
    - B) ![Photosynthesis](https://i.imgur.com/OaRSXfH.png)
    - C) ![Photosynthesis](https://i.imgur.com/FdxrvyA.png)
@@ -25,9 +28,12 @@
    - A) Liquid Stake Workflow ![Stride](https://i.imgur.com/Wh5sF92.png)
    - B) Redemption Workflow ![Stride](https://i.imgur.com/2ar26a9.png)
    - C) Relationship Diagram ![Stride](https://i.imgur.com/oAK0xzg.png)
-   - D) Stride Chain Epoch Module Workflow Diagram ![Stride](https://i.imgur.com/S8Nc9EM.png)
-   - E) Stride Airdrop Claim Module Workflow Diagram ![Stride](https://i.imgur.com/E3aX28m.png) 
----
+   - D) Stride Chain Epoch Module Workflow Diagram
+     ![Stride](https://i.imgur.com/S8Nc9EM.png)
+   - E) Stride Airdrop Claim Module Workflow Diagram
+     ![Stride](https://i.imgur.com/E3aX28m.png)
+
+***
 
 ### 📝 **Stride Workflow Steps**
 
@@ -36,7 +42,8 @@
 3. **Create connections and channels**:
    - a) Get channel ID created on the photosynthesis-archway
    - b) Start Go Relayer
-   - c) IBC Transfer from Photosynthesis-archway to stride (from relayer account)
+   - c) IBC Transfer from Photosynthesis-archway to stride (from relayer
+     account)
    - d) Confirm funds were received on stride and get IBC denom
    - e) Register host zone
    - f) Add validator
@@ -47,12 +54,14 @@
    - k) Redeem
    - l) Confirm stTokens and StakedBal
    - m) Add another validator
-   - n) Liquid stake and confirm the stake was split 50/50 between the validators
+   - n) Liquid stake and confirm the stake was split 50/50 between the
+     validators
    - o) Change validator weights
    - p) LS and confirm delegation aligned with new weights
-   - q) Update delegations (submit this query and confirm the ICQ callback displays in the stride logs)
+   - q) Update delegations (submit this query and confirm the ICQ callback
+     displays in the stride logs)
 
----
+***
 
 ### 🌌 **Photosynthesis-Archway IBC Integrations**
 
@@ -62,7 +71,7 @@
 - osmosis 💧
 - stargaze 🌟
 
----
+***
 
 ```
 global:
@@ -85,7 +94,7 @@ chains:
       debug: false
       timeout: 20s
       output-format: json
-      sign-mode: direct  
+      sign-mode: direct
   stride:
     type: cosmos
     value:
@@ -195,16 +204,14 @@ chains:
         - ethermint
 ```
 
-# Relayer registry 
+# Relayer registry
 
-Cosmos relayer
-1)https://github.com/cosmos/relayer.git
+Cosmos relayer 1)https://github.com/cosmos/relayer.git
 
-Hermes relayer 
-2)https://github.com/informalsystems/ibc-rs 
-
+Hermes relayer 2)https://github.com/informalsystems/ibc-rs
 
 # Record Keeping/Queue Creation for Liquid Staking Workflow in Photosynthesis-Archway
+
 # Interchain Accounts fully Integrated in Photosynthesis-Archway
 
 ```
@@ -336,7 +343,12 @@ user_redemption_record: []
 
 ### Full Liquid staking - uarch and Full Redemption Workflow
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/archwayd --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 4000000uarch --from pval1 -y
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/archwayd --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/photo1
+tx ibc-transfer transfer transfer channel-0
+stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 4000000uarch --from pval1 -y
+
 ```
 code: 0
 codespace: ""
@@ -353,7 +365,10 @@ tx: null
 txhash: 54BBCC0D3B6F1EDA3ECB396654AD10C2E8269D937AAED90061F245D3DE0E0640
 ```
 
-#build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q bank balances stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+\#build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q bank balances stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+
 ```
 balances:
 - amount: "4000000"
@@ -365,7 +380,11 @@ pagination:
   total: "0"
 ```
 
-#build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc liquid-stake 1000000 uarch --keyring-backend test --from admin --chain-id STRIDE -y
+\#build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+tx stakeibc liquid-stake 1000000 uarch --keyring-backend test --from admin
+\--chain-id STRIDE -y
+
 ```
 code: 0
 codespace: ""
@@ -382,7 +401,11 @@ tx: null
 txhash: 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
 ```
 
-#root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q tx 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
+\#root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q tx 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
+
 ```
 code: 0
 codespace: ""
@@ -641,7 +664,11 @@ tx:
 txhash: 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q stakeibc list-host-zone
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q stakeibc list-host-zone
+
 ```
 host_zone:
 - address: stride1755g4dkhpw73gz9h9nwhlcefc6sdf8kcmvcwrk4rxfrz8xpxxjms7savm8
@@ -715,7 +742,13 @@ pagination:
   total: "0"
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc redeem-stake 1000 PHOTO archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+tx stakeibc redeem-stake 1000 PHOTO
+archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend
+test --chain-id STRIDE -y
+
 ```
 code: 0
 codespace: ""
@@ -732,7 +765,13 @@ tx: null
 txhash: 4ECC6062BE5B794005A1FAF5D9CC4F32CBEA18F6586EEA9B15D7DB342204608B
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc redeem-stake 1000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+tx stakeibc redeem-stake 1000 localnet
+archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend
+test --chain-id STRIDE -y
+
 ```
 code: 0
 codespace: ""
@@ -749,7 +788,11 @@ tx: null
 txhash: 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q tx 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q tx 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
+
 ```
 code: 0
 codespace: ""
@@ -913,213 +956,143 @@ pagination:
 3,6,9,12,15,18,21,24,27 * * * * /bin/sh /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/gasfiller.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/gasfillerlogs.log
 ```
 
-
 # Photosynthesis Archway Blockchain Data Lake
 
-
-  ![Photosynthesis Archway Data Lake](https://lh3.googleusercontent.com/pw/AIL4fc_eowtm-JGZedQemuL-wxtXHX8S48luVheutD2Z-qvh0uxtOQSKAdcCydk5m5e0ImWW6HuuxvDUoOMDbq2LJla8tsPktA3_Rkg6gkMtmNV7clg10ANRh7_hU_zo6B4TV4ZPOdCiMGcHXJAdHMtFZFtqTA=w3484-h1960-s-no?authuser=0)
-   
+![Photosynthesis Archway Data Lake](https://lh3.googleusercontent.com/pw/AIL4fc_eowtm-JGZedQemuL-wxtXHX8S48luVheutD2Z-qvh0uxtOQSKAdcCydk5m5e0ImWW6HuuxvDUoOMDbq2LJla8tsPktA3\_Rkg6gkMtmNV7clg10ANRh7\_hU_zo6B4TV4ZPOdCiMGcHXJAdHMtFZFtqTA=w3484-h1960-s-no?authuser=0)
 
 # Photosynthesis Archway Data Points List (Small Subset View)
 
-
 Accumulated rewards
-
 
 central archway epoch
 
-
 Checking epoch info
-
 
 coins to address
 
-
 contractAddress
-
 
 Created ContractLiquidStakeDepositRecordsForEpoch
 
-
 CurrentEpoch
-
 
 Deleted reward records
 
-
 Deposit Record Stake ratio determination for liquidity distribution
-
 
 Distributed Liquidity for epoch
 
-
 EmitLiquidStakeDepositRecordCreatedEvent for record
-
 
 Emitting rewards withdrawal event for address
 
-
 epoch
-
 
 Finish Get Cumulative Reward Amount epoch
 
-
 Finish Query Redemption rate
-
 
 Get Cumulative Reward Amount
 
-
 Get Cumulative Reward Amount Enqueued
-
 
 is a multiple of RedemptionIntervalThreshold
 
-
 is not 0 and is a multiple of LiquidStakeInterval
-
 
 is not 0 and is a multiple of RedemptionRateThreshold
 
-
 is not 0 and is a multiple of RewardsWithdrawalInterval
-
 
 Last redemption rate
 
-
 log level
-
 
 liquid stake amount
 
-
 liquid stake dapp rewards epoch
-
 
 Liquid stake deposit record amount
 
-
 Liquid stake deposit record created amount
-
 
 Liquid stake deposit record enqueued amount
 
-
 Liquid stake enqueue operation - Epoch
-
 
 Liquid Token Amount
 
-
 Liquid Token Distribution Amount
-
 
 liquidityAmount
 
-
 liquidstakeamount
-
 
 LiquidStakeDepositsTillEpoch Epoch
 
-
 LiquidStakeScheduled
-
 
 message
 
-
 method
-
 
 MinimumRewardAmount is greater than 0
 
-
 module
-
 
 Processing ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH
 
-
 Processing LiquidStakeDappRewards epoch
-
 
 Processing REDEMPTION_RATE_QUERY_EPOCH
 
-
 Processing REWARDS_WITHDRAWAL_EPOCH
-
 
 Record
 
-
 record status
-
 
 records
 
-
 Retrieved contract metadata state
-
 
 Retrieved CumulativeRewardAmount
 
-
 Retrieved EpochInfo
-
 
 Retrieved EpochInfo for epochstypes.​ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH
 
-
 Retrieved EpochInfo for epochstypes.​LIQUID_STAKING_DApp_Rewards_EPOCH
-
 
 Retrieved EpochInfo for epochstypes.​REDEMPTION_RATE_QUERY_EPOCH
 
-
 Retrieved EpochInfo for epochstypes.​REWARDS_WITHDRAWAL_EPOCH
-
 
 Retrieved reward records
 
-
 Retrieved state from rewardKeeper
-
 
 Retrieved TotalLiquidStake
 
-
 Reward Address
-
 
 rewardaddr
 
-
 RewardsAddress is not empty
-
 
 Stake proportion
 
-
 Start Get Cumulative Reward Amount epoch
-
 
 Successfully queried RedemptionRate
 
-
 Till Epoch considered for distribution
-
 
 Total liquid stake
 
-
 total rewards
 
-
 Total Stake
-
 
 ts
 
@@ -1414,44 +1387,37 @@ curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content
 
 # Reporting Dashboard Preview (Subset of reports preview)
 
+![Reports A](https://i.imgur.com/KSMui7R.png)
 
-  ![Reports A](https://i.imgur.com/KSMui7R.png)
+![Reports B](https://i.imgur.com/30CRoOm.png)
 
+![Reports C](https://i.imgur.com/gTiL0jT.png)
 
+Rewards Earned vs Corresponding Liquid stake Tally Algorithm Report
 
-   
-  ![Reports B](https://i.imgur.com/30CRoOm.png)
+![Rewards Earned - Corresponding Liquid stake Tally Algorithm report](https://i.imgur.com/YxbqbUD.png)
 
+ML based reports
 
+![Reports D](https://i.imgur.com/wMUlEYT.png)
 
+Application of ML forecasting reports -
 
-  ![Reports C](https://i.imgur.com/gTiL0jT.png)
+1\)Identifying redemption rate trends. Quarter of the day, which hour of the day
+is most optimum for redemption.
 
+2\)Identifying liquid tokens obtained trends. Quarter of the day, which hour of
+the day is most optimum for liquid staking tokens,to get maximum stuarch.
 
+Contract metadata parameters can be tuned based on ML reports above to optimise
+epoch based schedulars.
 
+Anomaly Detection Reports
 
-  Rewards Earned vs Corresponding Liquid stake Tally Algorithm Report
+![Reports E](https://i.imgur.com/quTxJGs.png)
 
+Updated A/B Testing Cron schedule
 
-  ![Rewards Earned - Corresponding Liquid stake Tally Algorithm report](https://i.imgur.com/YxbqbUD.png) 
-  
-   ML based reports
-
-   ![Reports D](https://i.imgur.com/wMUlEYT.png)
-
-   Application of ML forecasting reports -
-   
-   1)Identifying redemption rate trends. Quarter of the day, which hour of the day is most optimum for redemption.
-   
-   2)Identifying liquid tokens obtained trends. Quarter of the day, which hour of the day is most optimum for liquid staking tokens,to get maximum stuarch. 
-   
-   Contract metadata parameters can be tuned based on ML reports above to optimise epoch based schedulars. 
-
-   Anomaly Detection Reports
-
-  ![Reports E](https://i.imgur.com/quTxJGs.png)
-
-  Updated A/B Testing Cron schedule 
 ```
   */2 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/rewardswithdrawal.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/rewardslogs.log
 */4 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/liquidstake.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakelogs
@@ -1466,16 +1432,14 @@ curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content
 Liquid Stake (uarch) Job workflow
 
 ![Liquid Stake Job](https://i.imgur.com/WaPame3.png)
- 
 
 Redeem Tokens (stuarch) Job workflow
 
 ![Redeem Tokens Job](https://i.imgur.com/2zDvTdd.png)
 
+# Data points for different jobs
 
-# Data points for different jobs 
-
-  Full Data Lake View 
+Full Data Lake View
 
 # Rewards Module job
 
@@ -1531,34 +1495,19 @@ txhash
 
 txhash.keyword
 
-
 # Liquid stake job
 
-balances.amount
-	
-balances.amount.keyword
+balances.amount balances.amount.keyword
 
-balances.denom
-	
-balances.denom.keyword
+balances.denom balances.denom.keyword
 
-code
-	
-codespace
-	
-codespace.keyword
+code codespace codespace.keyword
 
-data
-	
-data.keyword
-	
-gas_used
+data data.keyword gas_used
 
 gas_used.keyword
 
-gas_wanted
-	
-gas_wanted.keyword
+gas_wanted gas_wanted.keyword
 
 height
 
@@ -1585,7 +1534,6 @@ timestamp
 txhash
 
 txhash.keyword
-
 
 # Redeem stake job
 
@@ -1685,7 +1633,6 @@ user_redemption_records
 
 user_redemption_records.keyword
 
-
 # Distribute liquidity Tokens data
 
 code
@@ -1727,7 +1674,6 @@ timestamp
 txhash
 
 txhash.keyword
-
 
 # Distribute Redeem Tokens data
 
@@ -1783,268 +1729,259 @@ txhash
 
 txhash.keyword
 
+# Data points for Above Jobs ingested in ES
 
-# Data points for Above Jobs ingested in ES 
+![Reports A](https://i.imgur.com/ioT1Dq3.png)
 
+![Reports B](https://i.imgur.com/m6HDDcv.png)
 
-  ![Reports A](https://i.imgur.com/ioT1Dq3.png)
- 
-  ![Reports B](https://i.imgur.com/m6HDDcv.png)
+![Reports C](https://i.imgur.com/I8Gqz8A.png)
 
-  ![Reports C](https://i.imgur.com/I8Gqz8A.png)
+![Reports D](https://i.imgur.com/aKY1Vvg.png)
 
-  ![Reports D](https://i.imgur.com/aKY1Vvg.png)
-
-  ![Reports E](https://i.imgur.com/fdYNln5.png)
-
+![Reports E](https://i.imgur.com/fdYNln5.png)
 
 # Few snapshots of reports (All comprehensive reports will be available very shortly)
 
-
 # Rewards Module Job Dashboard
 
- Rewards Transactions Data Time Series Data Table
+Rewards Transactions Data Time Series Data Table
 
- Bulk rewards claim transactions for Different Dapps (for optimum gas consumption)
+Bulk rewards claim transactions for Different Dapps (for optimum gas
+consumption)
 
- ![Rewards Transactions Data Time Series Data Table](https://i.imgur.com/hWob2Zt.png)
+![Rewards Transactions Data Time Series Data Table](https://i.imgur.com/hWob2Zt.png)
 
- ![Bulk Rewards Claim Time Series Plot](https://i.imgur.com/1Igkg7R.png)
+![Bulk Rewards Claim Time Series Plot](https://i.imgur.com/1Igkg7R.png)
 
+# Liquid Stake Module Job Dashboard
 
+Liquid Stake job events Time series Data Table
 
-# Liquid Stake Module Job Dashboard 
+![Liquid Stake job events Time series Data Table](https://i.imgur.com/14G44Ek.png)
 
- Liquid Stake job events Time series Data Table
+Liquid Stake (Central Liquid stake of uarch for optimum gas consmuption)
+Transactions Data table
 
- ![Liquid Stake job events Time series Data Table](https://i.imgur.com/14G44Ek.png)
+![Liquid Stake Transactions Data table](https://i.imgur.com/nNwBa4X.png)
 
- Liquid Stake (Central Liquid stake of uarch for optimum gas consmuption) Transactions Data table
+![Cumulative Liquid Stake Amount (For all Dapps) Time Series Data](https://i.imgur.com/uu9phQs.png)
 
- ![Liquid Stake Transactions Data table](https://i.imgur.com/nNwBa4X.png)
- 
- ![Cumulative Liquid Stake Amount (For all Dapps) Time Series Data](https://i.imgur.com/uu9phQs.png)
+# Distribute Liquidity Module Job Dashboard
 
+Distribute Liquidity (stuarch) Transactions Data table
 
+![Distribute Liquidity Transactions Data table](https://i.imgur.com/uXNw6pz.png)
 
-# Distribute Liquidity Module Job Dashboard  
+# Redeem Stake Module Job Dashboard
 
- Distribute Liquidity (stuarch) Transactions Data table
+Redeem Stake (Central Redemption at maximum Redemption Rate) Transactions Data
+table
 
- ![Distribute Liquidity Transactions Data table](https://i.imgur.com/uXNw6pz.png)
- 
+![Redeem Stake Transactions Data Table](https://i.imgur.com/CXngIW4.png)
 
+![Total Redemption Amount (For all Dapps) Time Series Data](https://i.imgur.com/0xjp0xs.png)
 
-# Redeem Stake Module Job Dashboard 
+# Distribute Redeem Tokens Module Job Dashboard
 
-  Redeem Stake (Central Redemption at maximum Redemption Rate) Transactions Data table
+Distribute Redeemed Tokens to Dapps Transactions Data table
 
- ![Redeem Stake Transactions Data Table](https://i.imgur.com/CXngIW4.png)
+![Distribute Redeem Tokens Transactions Data table](https://i.imgur.com/619MM2G.png)
 
- ![Total Redemption Amount (For all Dapps) Time Series Data](https://i.imgur.com/0xjp0xs.png)
-
- 
- 
-# Distribute Redeem Tokens Module Job Dashboard 
- 
-  Distribute Redeemed Tokens to Dapps Transactions Data table
-
- ![Distribute Redeem Tokens Transactions Data table](https://i.imgur.com/619MM2G.png)
-
-  Filters (Dapps specific and more) and other aggregation parameters applicable based on reports corresponding to different job types.
-
-
+Filters (Dapps specific and more) and other aggregation parameters applicable
+based on reports corresponding to different job types.
 
 # Rewards Module Job Index
-  ```
-  {
-  "_index": "rewardsmoduleaggregated",
-  "_type": "_doc",
-  "_id": "mT7ZHooBxzWNeDEhT24S",
-  "_version": 1,
-  "_score": 1,
-  "_ignored": [
-    "message_23.keyword",
-    "message_17.keyword",
-    "message_20.keyword",
-    "message_22.keyword",
-    "message_19.keyword"
+
+```
+{
+"_index": "rewardsmoduleaggregated",
+"_type": "_doc",
+"_id": "mT7ZHooBxzWNeDEhT24S",
+"_version": 1,
+"_score": 1,
+"_ignored": [
+  "message_23.keyword",
+  "message_17.keyword",
+  "message_20.keyword",
+  "message_22.keyword",
+  "message_19.keyword"
+],
+"_source": {
+  "timestamp": "2023-08-19T04:06:00Z",
+  "message_1": "Read key: l111",
+  "message_2": "Read key: l211",
+  "message_3": "Read key: l311",
+  "message_4": "Read key: l411",
+  "message_5": "Read key: prev1",
+  "message_6": "Read key: pval1",
+  "message_7": "Read key: pval2",
+  "message_8": "Read key: pval3",
+  "message_9": "Read key: pval4",
+  "message_10": "Read key: pval5",
+  "message_11": "Read key: rly0",
+  "message_12": "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines...",
+  "message_13": "Cumulative Reward amount: 610000",
+  "message_14": "Iterations: 0",
+  "message_15": "Remaining Record Limit: 61",
+  "message_16": "Reward Amount: 610000",
+  "message_17": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y",
+  "message_18": "archway account balance",
+  "message_19": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd",
+  "message_20": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y",
+  "message_21": "archway account balance",
+  "message_22": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd",
+  "message_23": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+},
+"fields": {
+  "message_16.keyword": [
+    "Reward Amount: 610000"
   ],
-  "_source": {
-    "timestamp": "2023-08-19T04:06:00Z",
-    "message_1": "Read key: l111",
-    "message_2": "Read key: l211",
-    "message_3": "Read key: l311",
-    "message_4": "Read key: l411",
-    "message_5": "Read key: prev1",
-    "message_6": "Read key: pval1",
-    "message_7": "Read key: pval2",
-    "message_8": "Read key: pval3",
-    "message_9": "Read key: pval4",
-    "message_10": "Read key: pval5",
-    "message_11": "Read key: rly0",
-    "message_12": "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines...",
-    "message_13": "Cumulative Reward amount: 610000",
-    "message_14": "Iterations: 0",
-    "message_15": "Remaining Record Limit: 61",
-    "message_16": "Reward Amount: 610000",
-    "message_17": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y",
-    "message_18": "archway account balance",
-    "message_19": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd",
-    "message_20": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y",
-    "message_21": "archway account balance",
-    "message_22": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd",
-    "message_23": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
-  },
-  "fields": {
-    "message_16.keyword": [
-      "Reward Amount: 610000"
-    ],
-    "message_2.keyword": [
-      "Read key: l211"
-    ],
-    "message_23": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
-    ],
-    "message_22": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
-    ],
-    "message_15.keyword": [
-      "Remaining Record Limit: 61"
-    ],
-    "message_1.keyword": [
-      "Read key: l111"
-    ],
-    "message_4.keyword": [
-      "Read key: l411"
-    ],
-    "message_3.keyword": [
-      "Read key: l311"
-    ],
-    "message_21": [
-      "archway account balance"
-    ],
-    "message_20": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y"
-    ],
-    "message_3": [
-      "Read key: l311"
-    ],
-    "message_2": [
-      "Read key: l211"
-    ],
-    "message_12.keyword": [
-      "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines..."
-    ],
-    "message_11.keyword": [
-      "Read key: rly0"
-    ],
-    "message_1": [
-      "Read key: l111"
-    ],
-    "message_7": [
-      "Read key: pval2"
-    ],
-    "message_6": [
-      "Read key: pval1"
-    ],
-    "message_5": [
-      "Read key: prev1"
-    ],
-    "message_4": [
-      "Read key: l411"
-    ],
-    "message_14.keyword": [
-      "Iterations: 0"
-    ],
-    "message_19": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
-    ],
-    "timestamp": [
-      "2023-08-19T04:06:00.000Z"
-    ],
-    "message_13.keyword": [
-      "Cumulative Reward amount: 610000"
-    ],
-    "message_12": [
-      "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines..."
-    ],
-    "message_11": [
-      "Read key: rly0"
-    ],
-    "message_14": [
-      "Iterations: 0"
-    ],
-    "message_13": [
-      "Cumulative Reward amount: 610000"
-    ],
-    "message_16": [
-      "Reward Amount: 610000"
-    ],
-    "message_15": [
-      "Remaining Record Limit: 61"
-    ],
-    "message_18": [
-      "archway account balance"
-    ],
-    "message_17": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"
-    ],
-    "message_9.keyword": [
-      "Read key: pval4"
-    ],
-    "message_9": [
-      "Read key: pval4"
-    ],
-    "message_8": [
-      "Read key: pval3"
-    ],
-    "message_8.keyword": [
-      "Read key: pval3"
-    ],
-    "message_10": [
-      "Read key: pval5"
-    ],
-    "message_10.keyword": [
-      "Read key: pval5"
-    ],
-    "message_7.keyword": [
-      "Read key: pval2"
-    ],
-    "message_21.keyword": [
-      "archway account balance"
-    ],
-    "message_18.keyword": [
-      "archway account balance"
-    ],
-    "message_5.keyword": [
-      "Read key: prev1"
-    ],
-    "message_6.keyword": [
-      "Read key: pval1"
-    ]
-  },
-  "ignored_field_values": {
-    "message_17.keyword": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"
-    ],
-    "message_23.keyword": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
-    ],
-    "message_20.keyword": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y"
-    ],
-    "message_22.keyword": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
-    ],
-    "message_19.keyword": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
-    ]
-  }
+  "message_2.keyword": [
+    "Read key: l211"
+  ],
+  "message_23": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+  ],
+  "message_22": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
+  ],
+  "message_15.keyword": [
+    "Remaining Record Limit: 61"
+  ],
+  "message_1.keyword": [
+    "Read key: l111"
+  ],
+  "message_4.keyword": [
+    "Read key: l411"
+  ],
+  "message_3.keyword": [
+    "Read key: l311"
+  ],
+  "message_21": [
+    "archway account balance"
+  ],
+  "message_20": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y"
+  ],
+  "message_3": [
+    "Read key: l311"
+  ],
+  "message_2": [
+    "Read key: l211"
+  ],
+  "message_12.keyword": [
+    "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines..."
+  ],
+  "message_11.keyword": [
+    "Read key: rly0"
+  ],
+  "message_1": [
+    "Read key: l111"
+  ],
+  "message_7": [
+    "Read key: pval2"
+  ],
+  "message_6": [
+    "Read key: pval1"
+  ],
+  "message_5": [
+    "Read key: prev1"
+  ],
+  "message_4": [
+    "Read key: l411"
+  ],
+  "message_14.keyword": [
+    "Iterations: 0"
+  ],
+  "message_19": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
+  ],
+  "timestamp": [
+    "2023-08-19T04:06:00.000Z"
+  ],
+  "message_13.keyword": [
+    "Cumulative Reward amount: 610000"
+  ],
+  "message_12": [
+    "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines..."
+  ],
+  "message_11": [
+    "Read key: rly0"
+  ],
+  "message_14": [
+    "Iterations: 0"
+  ],
+  "message_13": [
+    "Cumulative Reward amount: 610000"
+  ],
+  "message_16": [
+    "Reward Amount: 610000"
+  ],
+  "message_15": [
+    "Remaining Record Limit: 61"
+  ],
+  "message_18": [
+    "archway account balance"
+  ],
+  "message_17": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+  ],
+  "message_9.keyword": [
+    "Read key: pval4"
+  ],
+  "message_9": [
+    "Read key: pval4"
+  ],
+  "message_8": [
+    "Read key: pval3"
+  ],
+  "message_8.keyword": [
+    "Read key: pval3"
+  ],
+  "message_10": [
+    "Read key: pval5"
+  ],
+  "message_10.keyword": [
+    "Read key: pval5"
+  ],
+  "message_7.keyword": [
+    "Read key: pval2"
+  ],
+  "message_21.keyword": [
+    "archway account balance"
+  ],
+  "message_18.keyword": [
+    "archway account balance"
+  ],
+  "message_5.keyword": [
+    "Read key: prev1"
+  ],
+  "message_6.keyword": [
+    "Read key: pval1"
+  ]
+},
+"ignored_field_values": {
+  "message_17.keyword": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+  ],
+  "message_23.keyword": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+  ],
+  "message_20.keyword": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y"
+  ],
+  "message_22.keyword": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
+  ],
+  "message_19.keyword": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
+  ]
+}
 }
 ```
 
-# Liquid Stake Module Job Index 
+# Liquid Stake Module Job Index
 
 ```
 {
@@ -2726,7 +2663,8 @@ txhash.keyword
   }
 }
 ```
-Distribute Liquidity Job Index 
+
+Distribute Liquidity Job Index
 
 ```
 {
@@ -4372,148 +4310,252 @@ Distribute Redeem Tokens Job Index
 }
 ```
 
+# Liquid Staking Ebook
 
-
-# Liquid Staking Ebook 
-
-https://docs.google.com/document/d/19AIiO3EF6lUvVFPg2UgY3W5fs4Hb6G7Y/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+https://docs.google.com/document/d/19AIiO3EF6lUvVFPg2UgY3W5fs4Hb6G7Y/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 # Photosynthesis-Dorahacks-web3-competition-winner
 
 Detailed presentation -
 
-https://docs.google.com/presentation/d/1Q67YKZkqZuK9tCAeGU6eWeCkjPSlA1HS/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+https://docs.google.com/presentation/d/1Q67YKZkqZuK9tCAeGU6eWeCkjPSlA1HS/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 https://dorahacks.io/home
 
-# Application in NFT minting 
+# Application in NFT minting
 
-By liquid staking Archway rewards, Dapps can earn liquidity tokens, which can then be used for various purposes, including NFT minting. NFTs are a popular form of digital asset that are unique and non-fungible, and are often used for gaming, collectibles, and other applications. By using liquidity tokens to mint NFTs, Dapps can generate additional revenue streams.
+By liquid staking Archway rewards, Dapps can earn liquidity tokens, which can
+then be used for various purposes, including NFT minting. NFTs are a popular
+form of digital asset that are unique and non-fungible, and are often used for
+gaming, collectibles, and other applications. By using liquidity tokens to mint
+NFTs, Dapps can generate additional revenue streams.
 
-The advantages of the photosynthesis algorithm in this context include enabling Dapps to earn staking rewards without having to lock up their assets, providing liquidity to the ecosystem through the liquidity tokens, and allowing for efficient and automated management of rewards and liquid staking through the epoch architecture.
+The advantages of the photosynthesis algorithm in this context include enabling
+Dapps to earn staking rewards without having to lock up their assets, providing
+liquidity to the ecosystem through the liquidity tokens, and allowing for
+efficient and automated management of rewards and liquid staking through the
+epoch architecture.
 
-Furthermore, by using liquidity tokens for NFT minting, Dapps can tap into the growing demand for NFTs and potentially generate significant revenue streams. Additionally, since liquidity tokens are tradeable on various exchanges, Dapps can benefit from price appreciation of these tokens over time.
+Furthermore, by using liquidity tokens for NFT minting, Dapps can tap into the
+growing demand for NFTs and potentially generate significant revenue streams.
+Additionally, since liquidity tokens are tradeable on various exchanges, Dapps
+can benefit from price appreciation of these tokens over time.
 
-Overall, the photosynthesis algorithm in the context of Archway rewards, liquid staking, and NFT minting provides a powerful mechanism for generating and harnessing energy in the form of rewards, liquidity, and unique digital assets.
+Overall, the photosynthesis algorithm in the context of Archway rewards, liquid
+staking, and NFT minting provides a powerful mechanism for generating and
+harnessing energy in the form of rewards, liquidity, and unique digital assets.
 
+The photosynthesis algorithm can provide several benefits in the context of NFT
+minting. Here are a few potential benefits:
 
-The photosynthesis algorithm can provide several benefits in the context of NFT minting. Here are a few potential benefits:
+# Efficient use of resources:
 
-# Efficient use of resources: 
-By leveraging the photosynthesis algorithm, Dapps can earn staking rewards without having to lock up their assets. This means that they can continue to use their assets for other purposes, such as NFT minting, while still earning rewards through liquid staking. This efficient use of resources can help maximize the benefits of both staking rewards and NFT minting.
+By leveraging the photosynthesis algorithm, Dapps can earn staking rewards
+without having to lock up their assets. This means that they can continue to use
+their assets for other purposes, such as NFT minting, while still earning
+rewards through liquid staking. This efficient use of resources can help
+maximize the benefits of both staking rewards and NFT minting.
 
-# Liquidity: 
-The liquidity tokens earned through liquid staking can be used for various purposes, including NFT minting. This provides additional liquidity to the ecosystem, which can be helpful for Dapps looking to mint NFTs or for users looking to purchase NFTs.
+# Liquidity:
 
-# Automated management: 
-The photosynthesis algorithm uses epoch architecture to manage rewards and liquid staking automatically. This can help simplify the process of earning rewards and managing liquidity tokens, which can be helpful for Dapps looking to focus on other aspects of their business, such as NFT minting.
+The liquidity tokens earned through liquid staking can be used for various
+purposes, including NFT minting. This provides additional liquidity to the
+ecosystem, which can be helpful for Dapps looking to mint NFTs or for users
+looking to purchase NFTs.
+
+# Automated management:
+
+The photosynthesis algorithm uses epoch architecture to manage rewards and
+liquid staking automatically. This can help simplify the process of earning
+rewards and managing liquidity tokens, which can be helpful for Dapps looking to
+focus on other aspects of their business, such as NFT minting.
 
 # Revenue generation:
-By using liquidity tokens for NFT minting, Dapps can potentially generate significant revenue streams. NFTs are a popular form of digital asset, and there is growing demand for unique and high-quality NFTs. By tapping into this demand, Dapps can generate additional revenue streams and potentially increase their overall profitability.
 
-Overall, the photosynthesis algorithm can provide several benefits in the context of NFT minting. By leveraging liquid staking and liquidity tokens, Dapps can efficiently earn rewards, manage liquidity, and generate revenue through NFT minting.
+By using liquidity tokens for NFT minting, Dapps can potentially generate
+significant revenue streams. NFTs are a popular form of digital asset, and there
+is growing demand for unique and high-quality NFTs. By tapping into this demand,
+Dapps can generate additional revenue streams and potentially increase their
+overall profitability.
+
+Overall, the photosynthesis algorithm can provide several benefits in the
+context of NFT minting. By leveraging liquid staking and liquidity tokens, Dapps
+can efficiently earn rewards, manage liquidity, and generate revenue through NFT
+minting.
 
 # Application in synthetic assets
 
 The photosynthesis algorithm can benefit synthetic assets in several ways:
 
-Collateralization: Synthetic assets are often created through a system of collateralization, where real-world assets or cryptocurrencies are used as collateral to mint a synthetic asset. By using liquid staking and liquidity tokens, Dapps can generate rewards that can be used as collateral to mint synthetic assets more efficiently and cost-effectively. The photosynthesis algorithm can automate and optimize this process, making it easier for Dapps to create and manage synthetic assets.
+Collateralization: Synthetic assets are often created through a system of
+collateralization, where real-world assets or cryptocurrencies are used as
+collateral to mint a synthetic asset. By using liquid staking and liquidity
+tokens, Dapps can generate rewards that can be used as collateral to mint
+synthetic assets more efficiently and cost-effectively. The photosynthesis
+algorithm can automate and optimize this process, making it easier for Dapps to
+create and manage synthetic assets.
 
-Liquidity: The liquidity tokens earned through liquid staking can be used to provide liquidity to synthetic asset trading. This can make synthetic asset trading more efficient and attractive to investors, as they can quickly buy and sell synthetic assets on various exchanges.
+Liquidity: The liquidity tokens earned through liquid staking can be used to
+provide liquidity to synthetic asset trading. This can make synthetic asset
+trading more efficient and attractive to investors, as they can quickly buy and
+sell synthetic assets on various exchanges.
 
-Automated management: The epoch architecture used in the photosynthesis algorithm can help automate the management of synthetic assets, including the collateralization process, the allocation of liquidity tokens, and the distribution of rewards to Dapps. This can help simplify the process of creating and managing synthetic assets, making it more accessible to a wider range of investors.
+Automated management: The epoch architecture used in the photosynthesis
+algorithm can help automate the management of synthetic assets, including the
+collateralization process, the allocation of liquidity tokens, and the
+distribution of rewards to Dapps. This can help simplify the process of creating
+and managing synthetic assets, making it more accessible to a wider range of
+investors.
 
-Risk management: Synthetic assets can be used as a hedging tool to manage risk in investment portfolios. By using liquid staking and liquidity tokens to create synthetic assets, Dapps can provide investors with a wider range of risk management options, potentially making synthetic assets more attractive to investors.
+Risk management: Synthetic assets can be used as a hedging tool to manage risk
+in investment portfolios. By using liquid staking and liquidity tokens to create
+synthetic assets, Dapps can provide investors with a wider range of risk
+management options, potentially making synthetic assets more attractive to
+investors.
 
-Overall, the photosynthesis algorithm can benefit synthetic assets by providing a more efficient, automated, and cost-effective way to create and manage them. By leveraging liquid staking and liquidity tokens, Dapps can provide investors with more liquidity and risk management options, potentially making synthetic assets a more attractive investment option.
-
+Overall, the photosynthesis algorithm can benefit synthetic assets by providing
+a more efficient, automated, and cost-effective way to create and manage them.
+By leveraging liquid staking and liquidity tokens, Dapps can provide investors
+with more liquidity and risk management options, potentially making synthetic
+assets a more attractive investment option.
 
 # DeFi:
-Liquidity provision: The photosynthesis algorithm can be used to provide liquidity to DeFi protocols. Dapps can stake their assets and earn liquidity tokens, which can be used to provide liquidity to various DeFi protocols such as lending, borrowing, and trading platforms.
 
-Yield farming: Dapps can use the liquidity tokens they earn from liquid staking to participate in yield farming, where they can earn additional rewards by providing liquidity to various DeFi protocols.
+Liquidity provision: The photosynthesis algorithm can be used to provide
+liquidity to DeFi protocols. Dapps can stake their assets and earn liquidity
+tokens, which can be used to provide liquidity to various DeFi protocols such as
+lending, borrowing, and trading platforms.
 
-Decentralized exchanges (DEXs): Liquidity tokens earned through liquid staking can be used to provide liquidity to DEXs, enabling decentralized trading without the need for centralized exchanges.
+Yield farming: Dapps can use the liquidity tokens they earn from liquid staking
+to participate in yield farming, where they can earn additional rewards by
+providing liquidity to various DeFi protocols.
+
+Decentralized exchanges (DEXs): Liquidity tokens earned through liquid staking
+can be used to provide liquidity to DEXs, enabling decentralized trading without
+the need for centralized exchanges.
 
 # Gaming:
-In-game rewards: Dapps can use liquid staking to generate rewards for in-game activities, such as completing quests or winning battles. These rewards can then be used to incentivize user engagement and retention.
 
-Non-fungible tokens (NFTs): The photosynthesis algorithm can be used to mint and manage NFTs, which can be used for various purposes in gaming, such as in-game items, collectibles, and even digital real estate.
+In-game rewards: Dapps can use liquid staking to generate rewards for in-game
+activities, such as completing quests or winning battles. These rewards can then
+be used to incentivize user engagement and retention.
+
+Non-fungible tokens (NFTs): The photosynthesis algorithm can be used to mint and
+manage NFTs, which can be used for various purposes in gaming, such as in-game
+items, collectibles, and even digital real estate.
 
 # Social media:
-Social tokens: The photosynthesis algorithm can be used to create and manage social tokens, which can be used as rewards for user engagement and participation. Social tokens can also be used to reward content creators and influencers on social media platforms.
-Supply chain management:
-Tracking of goods: The photosynthesis algorithm can be used to create a system for tracking goods through the supply chain, using liquid staking to generate rewards for participants who provide data or perform other tasks.
 
-# Management of inventory: 
-The photosynthesis algorithm can be used to manage inventory and supply chain data, using liquid staking to incentivize participants to perform tasks related to inventory management.
+Social tokens: The photosynthesis algorithm can be used to create and manage
+social tokens, which can be used as rewards for user engagement and
+participation. Social tokens can also be used to reward content creators and
+influencers on social media platforms. Supply chain management: Tracking of
+goods: The photosynthesis algorithm can be used to create a system for tracking
+goods through the supply chain, using liquid staking to generate rewards for
+participants who provide data or perform other tasks.
+
+# Management of inventory:
+
+The photosynthesis algorithm can be used to manage inventory and supply chain
+data, using liquid staking to incentivize participants to perform tasks related
+to inventory management.
 
 # Real estate:
-Tokenized real estate assets: The photosynthesis algorithm can be used to create tokenized real estate assets, which can be bought and sold like other digital assets. Liquid staking can be used to generate rewards for investors who hold these assets.
 
-Real estate investments: The photosynthesis algorithm can be used to manage real estate investments, using liquid staking to generate rewards for investors who participate in real estate projects.
+Tokenized real estate assets: The photosynthesis algorithm can be used to create
+tokenized real estate assets, which can be bought and sold like other digital
+assets. Liquid staking can be used to generate rewards for investors who hold
+these assets.
 
-Overall, the photosynthesis algorithm can be used in a wide range of applications, providing more efficient and effective ways to generate rewards and manage digital assets.
+Real estate investments: The photosynthesis algorithm can be used to manage real
+estate investments, using liquid staking to generate rewards for investors who
+participate in real estate projects.
 
+Overall, the photosynthesis algorithm can be used in a wide range of
+applications, providing more efficient and effective ways to generate rewards
+and manage digital assets.
 
 # Governance
 
-Photosynthesis can be used in governance systems to optimize the distribution of voting power. With photosynthesis, tokens can be automatically staked to earn rewards, which can then be used to increase voting power in governance systems. This can incentivize token holders to participate in governance and make more informed decisions.
+Photosynthesis can be used in governance systems to optimize the distribution of
+voting power. With photosynthesis, tokens can be automatically staked to earn
+rewards, which can then be used to increase voting power in governance systems.
+This can incentivize token holders to participate in governance and make more
+informed decisions.
 
 # Token Distribution
 
-Photosynthesis can be used to distribute tokens in a fair and efficient manner. With photosynthesis, tokens can be distributed based on staking activity or other metrics, which can help incentivize users to participate in the ecosystem and help distribute tokens in a more equitable way.
+Photosynthesis can be used to distribute tokens in a fair and efficient manner.
+With photosynthesis, tokens can be distributed based on staking activity or
+other metrics, which can help incentivize users to participate in the ecosystem
+and help distribute tokens in a more equitable way.
 
 # Network Security
 
-Photosynthesis can be used to incentivize users to participate in network security. With photosynthesis, users can earn rewards for staking tokens, which can help secure the network and protect against attacks.
+Photosynthesis can be used to incentivize users to participate in network
+security. With photosynthesis, users can earn rewards for staking tokens, which
+can help secure the network and protect against attacks.
 
+# Movie based NFTs use case
 
-# Movie based NFTs use case 
+When it comes to movie-based NFTs, there are several ways that the
+photosynthesis algorithm could be applied to generate additional revenue streams
+for Dapps.
 
-When it comes to movie-based NFTs, there are several ways that the photosynthesis algorithm could be applied to generate additional revenue streams for Dapps.
+One potential application is to use liquidity tokens earned through liquid
+staking of Archway rewards to mint NFTs based on popular movies. For example, a
+Dapp could partner with a movie studio or production company to create a series
+of NFTs featuring scenes or characters from a blockbuster movie. These NFTs
+could then be sold to collectors and fans, with a portion of the proceeds going
+to the Dapp and the movie studio.
 
-One potential application is to use liquidity tokens earned through liquid staking of Archway rewards to mint NFTs based on popular movies. For example, a Dapp could partner with a movie studio or production company to create a series of NFTs featuring scenes or characters from a blockbuster movie. These NFTs could then be sold to collectors and fans, with a portion of the proceeds going to the Dapp and the movie studio.
+Another potential application is to use liquidity tokens to fund the production
+of a movie, or to invest in a movie project that is already in development. In
+this scenario, the Dapp could use its liquidity tokens to provide financing for
+the movie in exchange for a share of the profits or a percentage of the movie's
+revenue. This could potentially be a lucrative investment opportunity for Dapps,
+especially if the movie becomes a hit and generates significant revenue.
 
-Another potential application is to use liquidity tokens to fund the production of a movie, or to invest in a movie project that is already in development. In this scenario, the Dapp could use its liquidity tokens to provide financing for the movie in exchange for a share of the profits or a percentage of the movie's revenue. This could potentially be a lucrative investment opportunity for Dapps, especially if the movie becomes a hit and generates significant revenue.
+Additionally, Dapps could use liquidity tokens to purchase movie rights or
+licensing agreements, which would allow them to create and sell NFTs based on
+popular movies. This could be a particularly attractive option for Dapps that
+specialize in creating and selling collectible items, as movie-based NFTs could
+be highly sought after by collectors and fans.
 
-Additionally, Dapps could use liquidity tokens to purchase movie rights or licensing agreements, which would allow them to create and sell NFTs based on popular movies. This could be a particularly attractive option for Dapps that specialize in creating and selling collectible items, as movie-based NFTs could be highly sought after by collectors and fans.
-
-Overall, the photosynthesis algorithm provides a powerful mechanism for Dapps to generate and harness energy in the form of rewards, liquidity, and unique digital assets, including movie-based NFTs. By using liquidity tokens to mint NFTs or invest in movie projects, Dapps can potentially generate significant revenue streams and expand their offerings to include new and exciting digital assets.
-
+Overall, the photosynthesis algorithm provides a powerful mechanism for Dapps to
+generate and harness energy in the form of rewards, liquidity, and unique
+digital assets, including movie-based NFTs. By using liquidity tokens to mint
+NFTs or invest in movie projects, Dapps can potentially generate significant
+revenue streams and expand their offerings to include new and exciting digital
+assets.
 
 # Some Movie / Music Studios based NFTs
 
-
 # Matrix movie based NFTs
 
-https://docs.google.com/document/d/1dBiXoF6Z460nJxziE06b9JFu15co36Cm/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+https://docs.google.com/document/d/1dBiXoF6Z460nJxziE06b9JFu15co36Cm/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 # Mission Impossible based NFTs
 
-https://docs.google.com/document/d/1BVwVHjStAMk0f0IYKlBXW9OoAZ6N0JBo/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+https://docs.google.com/document/d/1BVwVHjStAMk0f0IYKlBXW9OoAZ6N0JBo/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 # Justin Bieber music studios based NFTs
-https://docs.google.com/document/d/1JWbt_HTbAacJCPfN_55iTAHrSz7uaXBd/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
+https://docs.google.com/document/d/1JWbt_HTbAacJCPfN\_55iTAHrSz7uaXBd/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
+# Some P2E Games
 
-# Some P2E Games 
+Matrix Movie based P2E Game - Matrix infinity
 
-Matrix Movie based P2E Game  - Matrix infinity
-
-https://docs.google.com/document/d/1VYHsaFEsLstoP8ht56IZXzqwWGfC9pSD/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
-
+https://docs.google.com/document/d/1VYHsaFEsLstoP8ht56IZXzqwWGfC9pSD/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 Mission Impossible based P2E game - Mission impossible
 
-https://docs.google.com/document/d/15BiFBWG_WbizrmiBwXIgdayjypqwUcDK/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
-
+https://docs.google.com/document/d/15BiFBWG_WbizrmiBwXIgdayjypqwUcDK/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 WWE based P2E game - WWE universe
 
-https://docs.google.com/document/d/1CSBXgFoX03_WUhLrChHUWwrE9jncgZDi/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
-
+https://docs.google.com/document/d/1CSBXgFoX03\_WUhLrChHUWwrE9jncgZDi/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 # In the News :
 
@@ -4525,65 +4567,120 @@ https://www.facebook.com/groups/682232515824097/permalink/990246285022717/
 
 https://www.facebook.com/groups/682232515824097/permalink/993054448075234/
 
-# Application in Adserving 
+# Application in Adserving
 
-The smart contract can be used by advertisers to create ads and by publishers to display those ads on their platforms. The smart contract can be configured to incentivize publishers to display ads by offering them rewards based on the number of views the ads receive.
+The smart contract can be used by advertisers to create ads and by publishers to
+display those ads on their platforms. The smart contract can be configured to
+incentivize publishers to display ads by offering them rewards based on the
+number of views the ads receive.
 
 Here are some possible applications for this smart contract:
 
-Ad Networks: An ad network can use this smart contract to manage their ad inventory and track the number of views each ad receives. Advertisers can create new ads and set the reward amount they are willing to pay per view. Publishers can then select the ads they want to display on their platforms and earn rewards based on the number of views their ads receive.
+Ad Networks: An ad network can use this smart contract to manage their ad
+inventory and track the number of views each ad receives. Advertisers can create
+new ads and set the reward amount they are willing to pay per view. Publishers
+can then select the ads they want to display on their platforms and earn rewards
+based on the number of views their ads receive.
 
-Content Creators: Bloggers, vloggers, and other content creators can use this smart contract to monetize their content. They can create ads for their websites or videos and earn rewards based on the number of views their ads receive. This provides an additional revenue stream for content creators who want to monetize their content without relying on traditional advertising platforms.
+Content Creators: Bloggers, vloggers, and other content creators can use this
+smart contract to monetize their content. They can create ads for their websites
+or videos and earn rewards based on the number of views their ads receive. This
+provides an additional revenue stream for content creators who want to monetize
+their content without relying on traditional advertising platforms.
 
-E-commerce Platforms: E-commerce platforms can use this smart contract to display ads for their products and services. They can offer rewards to publishers who display their ads and track the number of views each ad receives. This can help them increase their visibility and attract more customers to their platform.
+E-commerce Platforms: E-commerce platforms can use this smart contract to
+display ads for their products and services. They can offer rewards to
+publishers who display their ads and track the number of views each ad receives.
+This can help them increase their visibility and attract more customers to their
+platform.
 
-Game Developers: Game developers can use this smart contract to display ads in their games and earn rewards based on the number of views those ads receive. They can also offer rewards to players who watch ads in their games, incentivizing them to engage with the ads and providing an additional revenue stream for the game developer.
+Game Developers: Game developers can use this smart contract to display ads in
+their games and earn rewards based on the number of views those ads receive.
+They can also offer rewards to players who watch ads in their games,
+incentivizing them to engage with the ads and providing an additional revenue
+stream for the game developer.
 
-Overall, this smart contract can be used in a variety of applications to manage and monetize ad inventory, track ad views, and incentivize publishers and viewers to engage with ads.
+Overall, this smart contract can be used in a variety of applications to manage
+and monetize ad inventory, track ad views, and incentivize publishers and
+viewers to engage with ads.
 
 # Application in Cookie Sync
 
-The smart contract could implement a reward system that grants users a certain amount of Archway tokens for each cookie that is successfully synced between two domains. The amount of tokens awarded could be determined by various factors, such as the number of cookies synced or the level of difficulty involved in syncing the cookies.
+The smart contract could implement a reward system that grants users a certain
+amount of Archway tokens for each cookie that is successfully synced between two
+domains. The amount of tokens awarded could be determined by various factors,
+such as the number of cookies synced or the level of difficulty involved in
+syncing the cookies.
 
-To implement this feature, the smart contract could be updated to include a new handle message that allows users to claim their Archway rewards. The message could take in the user's address and the number of tokens they wish to claim, and then validate the claim by checking if the user has successfully synced the required number of cookies.
+To implement this feature, the smart contract could be updated to include a new
+handle message that allows users to claim their Archway rewards. The message
+could take in the user's address and the number of tokens they wish to claim,
+and then validate the claim by checking if the user has successfully synced the
+required number of cookies.
 
-The smart contract could also include a query message that allows users to view their current reward balance and the number of cookies they need to sync in order to claim their rewards.
+The smart contract could also include a query message that allows users to view
+their current reward balance and the number of cookies they need to sync in
+order to claim their rewards.
 
-Overall, the Archway Rewards program in the Cookie Sync smart contract could help incentivize user engagement and encourage more users to participate in the Archway protocol.
+Overall, the Archway Rewards program in the Cookie Sync smart contract could
+help incentivize user engagement and encourage more users to participate in the
+Archway protocol.
 
-Liquid tokens can be beneficial in the context of the Cookie Sync application as they can provide liquidity to the platform and incentivize users to participate in the ecosystem. In this case, the PLT token can be used as a liquid token that is used to incentivize users to sync their cookies across different chains.
+Liquid tokens can be beneficial in the context of the Cookie Sync application as
+they can provide liquidity to the platform and incentivize users to participate
+in the ecosystem. In this case, the PLT token can be used as a liquid token that
+is used to incentivize users to sync their cookies across different chains.
 
-Users who sync their cookies can be rewarded with PLT tokens, which can then be used to participate in governance and decision-making processes on the platform. Additionally, PLT tokens can be traded on decentralized exchanges, which provides liquidity to the platform and allows users to realize the value of their contributions.
+Users who sync their cookies can be rewarded with PLT tokens, which can then be
+used to participate in governance and decision-making processes on the platform.
+Additionally, PLT tokens can be traded on decentralized exchanges, which
+provides liquidity to the platform and allows users to realize the value of
+their contributions.
 
-By using liquid tokens, the platform can incentivize user participation and engagement, which can lead to increased adoption and usage of the platform. This can also help to build a strong and supportive community around the platform, which can be beneficial in the long term.
+By using liquid tokens, the platform can incentivize user participation and
+engagement, which can lead to increased adoption and usage of the platform. This
+can also help to build a strong and supportive community around the platform,
+which can be beneficial in the long term.
 
 # Application of Matrix brain battery
 
-MatrixBrainBattery, which are essentially digital pets with genetic makeup represented by a unique DNA sequence. The contract provides several functionalities to manage these MatrixBrainBattery including creating a new one, feeding and multiplying two MatrixBrainBattery to create a new one, attacking other MatrixBrainBattery, changing name and DNA, and transferring ownership.
+MatrixBrainBattery, which are essentially digital pets with genetic makeup
+represented by a unique DNA sequence. The contract provides several
+functionalities to manage these MatrixBrainBattery including creating a new one,
+feeding and multiplying two MatrixBrainBattery to create a new one, attacking
+other MatrixBrainBattery, changing name and DNA, and transferring ownership.
 
-The contract is designed to be used in the context of a game or application where users can own and interact with these MatrixBrainBattery. The following are some potential use cases:
+The contract is designed to be used in the context of a game or application
+where users can own and interact with these MatrixBrainBattery. The following
+are some potential use cases:
 
-Virtual Pet Game: The contract can be used to create a virtual pet game where users can create, own, and manage their MatrixBrainBattery. Users can feed their pets, level them up, and battle them against other MatrixBrainBattery.
+Virtual Pet Game: The contract can be used to create a virtual pet game where
+users can create, own, and manage their MatrixBrainBattery. Users can feed their
+pets, level them up, and battle them against other MatrixBrainBattery.
 
-Collectible Game: The MatrixBrainBattery can also be used as collectibles in a game where users can collect rare MatrixBrainBattery with unique DNA sequences. The game can use the contract to ensure the uniqueness of each MatrixBrainBattery and track their ownership.
+Collectible Game: The MatrixBrainBattery can also be used as collectibles in a
+game where users can collect rare MatrixBrainBattery with unique DNA sequences.
+The game can use the contract to ensure the uniqueness of each
+MatrixBrainBattery and track their ownership.
 
-Decentralized Pet Marketplace: The contract can be used to create a decentralized marketplace for MatrixBrainBattery where users can buy, sell, and trade their pets with other users. The contract can ensure that ownership is properly transferred and track the transaction history of each pet.
+Decentralized Pet Marketplace: The contract can be used to create a
+decentralized marketplace for MatrixBrainBattery where users can buy, sell, and
+trade their pets with other users. The contract can ensure that ownership is
+properly transferred and track the transaction history of each pet.
 
-Overall, the contract provides a flexible and scalable solution for managing and interacting with MatrixBrainBattery in a variety of different contexts.
-
+Overall, the contract provides a flexible and scalable solution for managing and
+interacting with MatrixBrainBattery in a variety of different contexts.
 
 # Documentation
 
+1\)Photosynthesis Cosmwasm port documentation
+https://docs.google.com/document/d/14A_hQHDp35WWcs5QaGqJ26TWRGKgK0qX/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
-1)Photosynthesis Cosmwasm port documentation
-https://docs.google.com/document/d/14A_hQHDp35WWcs5QaGqJ26TWRGKgK0qX/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+2\)MatrixBrainBattery - P2E game and NFT Minting – Ultimate choice for Archway
+Rewards and Photosynthesis Algorithm
 
+https://docs.google.com/document/d/1PqFbmda3N09y3TfOuCQZUSSKpxzclvku/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
-2)MatrixBrainBattery - P2E game and NFT Minting –  Ultimate choice for Archway Rewards and Photosynthesis Algorithm
-
-https://docs.google.com/document/d/1PqFbmda3N09y3TfOuCQZUSSKpxzclvku/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
-
-
-3)Heavy Transaction Guaranteed Dapps on Daily Basis – A strong candidate for Archway Rewards and Photosynthesis liquid token  
-https://docs.google.com/document/d/1-pGzhqz7UHgB2O9qD4fcLAhwhTUgUI4A/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
-
+3\)Heavy Transaction Guaranteed Dapps on Daily Basis – A strong candidate for
+Archway Rewards and Photosynthesis liquid token\
+https://docs.google.com/document/d/1-pGzhqz7UHgB2O9qD4fcLAhwhTUgUI4A/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true

@@ -1,6 +1,7 @@
 # Channel Open Handshake
 
-The `tx` commands can be used to establish a channel for a given connection. Only `unordered` channels are currently supported.
+The `tx` commands can be used to establish a channel for a given connection.
+Only `unordered` channels are currently supported.
 
 <center>
 
@@ -61,9 +62,10 @@ REQUIRED:
             Identifier of the destination port
 ```
 
-__Example__
+**Example**
 
-First, let's initialize the channel on `ibc-0` using an existing connection identified by `connection-0`:
+First, let's initialize the channel on `ibc-0` using an existing connection
+identified by `connection-0`:
 
 ```shell
 hermes tx chan-open-init --dst-chain ibc-0 --src-chain ibc-1 --dst-connection connection-0 --dst-port transfer --src-port transfer
@@ -101,10 +103,10 @@ A new channel has been initialized on `ibc-1` with identifier `channel-0`.
 
 > Note that the `counterparty_channel_id` field is currently empty.
 
-
 ## Channel Open Try
 
-Use the `chan-open-try` command to establish a counterparty to the channel on the other chain.
+Use the `chan-open-try` command to establish a counterparty to the channel on
+the other chain.
 
 ```shell
 USAGE:
@@ -137,7 +139,7 @@ REQUIRED:
             Identifier of the destination port
 ```
 
-__Example__
+**Example**
 
 Let's now create the counterparty to `channel-0` on chain `ibc-1`:
 
@@ -179,8 +181,8 @@ Success: OpenTryChannel(
 
 A new channel has been created on `ibc-1` with identifier `channel-1`.
 
-> Note that the field `counterparty_channel_id` points to the channel on `ibc-0`.
-
+> Note that the field `counterparty_channel_id` points to the channel on
+> `ibc-0`.
 
 ## Channel Open Ack
 
@@ -216,9 +218,10 @@ REQUIRED:
             Identifier of the destination port
 ```
 
-__Example__
+**Example**
 
-We can now acknowledge on `ibc-0` that `ibc-1` has accepted the opening of the channel:
+We can now acknowledge on `ibc-0` that `ibc-1` has accepted the opening of the
+channel:
 
 ```shell
 hermes tx chan-open-ack --dst-chain ibc-0 --src-chain ibc-1 --dst-connection connection-0 --dst-port transfer --src-port transfer --dst-channel channel-0 --src-channel channel-1
@@ -256,13 +259,14 @@ Success: OpenAckChannel(
 )
 ```
 
-> Note that the field `counterparty_channel_id` now points to the channel on `ibc-1`.
-
+> Note that the field `counterparty_channel_id` now points to the channel on
+> `ibc-1`.
 
 ## Channel Open Confirm
 
-Use the `chan-open-confirm` command to confirm that the channel has been acknowledged,
-and finish the handshake, after which the channel is open on both chains.
+Use the `chan-open-confirm` command to confirm that the channel has been
+acknowledged, and finish the handshake, after which the channel is open on both
+chains.
 
 ```shell
 USAGE:
@@ -294,10 +298,10 @@ REQUIRED:
             Identifier of the destination port
 ```
 
-__Example__
+**Example**
 
-Confirm on `ibc-1` that `ibc-0` has accepted the opening of the channel,
-after which the channel is open on both chains.
+Confirm on `ibc-1` that `ibc-0` has accepted the opening of the channel, after
+which the channel is open on both chains.
 
 ```shell
 hermes tx chan-open-confirm --dst-chain ibc-1 --src-chain ibc-0 --dst-connection connection-1 --dst-port transfer --src-port transfer --dst-channel channel-1 --src-channel channel-0
@@ -334,5 +338,5 @@ hermes tx chan-open-confirm --dst-chain ibc-1 --src-chain ibc-0 --dst-connection
 )
 ```
 
-We have now successfully opened a channel over an existing connection between the two chains.
-
+We have now successfully opened a channel over an existing connection between
+the two chains.

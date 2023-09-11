@@ -13,16 +13,16 @@ Build and install the Evmos binaries from source or using Docker. {synopsis}
 
 ## Install Go
 
-::: warning
-Evmos is built using [Go](https://golang.org/dl/) version `1.19+`
+::: warning Evmos is built using [Go](https://golang.org/dl/) version `1.19+`
 :::
 
 ```bash
 go version
 ```
 
-:::tip
-If the `evmosd: command not found` error message is returned, confirm that your [`GOPATH`](https://golang.org/doc/gopath_code#GOPATH) is correctly configured by running the following command:
+:::tip If the `evmosd: command not found` error message is returned, confirm
+that your [`GOPATH`](https://golang.org/doc/gopath_code#GOPATH) is correctly
+configured by running the following command:
 
 ```bash
 export PATH=$PATH:$(go env GOPATH)/bin
@@ -32,8 +32,9 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 ## Install Binaries
 
-::: tip
-The latest {{ $themeConfig.project.name }} [version](https://github.com/evmos/evmos/releases) is `{{ $themeConfig.project.binary }} {{ $themeConfig.project.latest_version }}`
+::: tip The latest {{ $themeConfig.project.name }}
+[version](https://github.com/evmos/evmos/releases) is
+`{{ $themeConfig.project.binary }} {{ $themeConfig.project.latest_version }}`
 :::
 
 ### GitHub
@@ -48,9 +49,11 @@ git checkout <tag>
 make install
 ```
 
-`<tag>` refers to a released tag from the tags [page](https://github.com/evmos/evmos/tags).
+`<tag>` refers to a released tag from the tags
+[page](https://github.com/evmos/evmos/tags).
 
-After installation is done, check that the `{{ $themeConfig.project.binary }}` binaries have been successfully installed:
+After installation is done, check that the `{{ $themeConfig.project.binary }}`
+binaries have been successfully installed:
 
 ```bash
 evmosd version
@@ -64,7 +67,8 @@ You can build {{ $themeConfig.project.name }} using Docker by running:
 make build-docker
 ```
 
-The command above will create a docker container: `tharsishq/evmos:latest`. Now you can run `evmosd` in the container.
+The command above will create a docker container: `tharsishq/evmos:latest`. Now
+you can run `evmosd` in the container.
 
 ```bash
 docker run -it -p 26657:26657 -p 26656:26656 -v ~/.evmosd/:/root/.evmosd tharsishq/evmos:latest evmosd version

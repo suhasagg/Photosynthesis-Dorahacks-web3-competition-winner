@@ -4,10 +4,10 @@ Extensions to [gogoprotobuf](github.com/gogo/protobuf) for Cosmos.
 
 ## `accepts_interface`
 
-An informational extension to be added to `google.protobuf.Any` fields to indicate
-which interface that field accepts. The interface name should be independent of
-any programming language and either be unqualified to indicate the current package
-of fully-qualified to indicate another protobuf package.
+An informational extension to be added to `google.protobuf.Any` fields to
+indicate which interface that field accepts. The interface name should be
+independent of any programming language and either be unqualified to indicate
+the current package of fully-qualified to indicate another protobuf package.
 
 Example:
 
@@ -24,8 +24,8 @@ message AnotherContainer {
 ## `implements_interface`
 
 An informational extension to be added to messages to indicate which interface
-that message implements. The interface name should be independent of
-any programming language and either be unqualified to indicate the current package
+that message implements. The interface name should be independent of any
+programming language and either be unqualified to indicate the current package
 of fully-qualified to indicate another protobuf package.
 
 ```proto
@@ -44,9 +44,9 @@ message B {
 
 *See [test](test/) for a full example.*
 
-The `cosmos_proto.interface_type` message option generates a getter and
-setter from the provided go interface. Messages which use this option must
-consist of a single `oneof` and no other fields.
+The `cosmos_proto.interface_type` message option generates a getter and setter
+from the provided go interface. Messages which use this option must consist of a
+single `oneof` and no other fields.
 
 Given this example `.proto` file:
 
@@ -68,6 +68,7 @@ message C { bool z = 1; }
 ```
 
 The `ABC` struct will satisfy the following interface:
+
 ```go
 type MsgCodec interface {
     GetMsg() Msg
@@ -79,9 +80,9 @@ The types `A`, `B`, and `C` must of course have implementations of `Msg`.
 
 ### Handling Non-Pointer Interfaces
 
-By default `interface_type` generates `Set` handlers for both pointer and non-pointer
-implementations of an interface (i.e. both `*A` and `A`). This means all interfaces
-must be implemented for the non-pointer version of a struct. To disable the non-pointer
-cases (so that just `*A` and not `A` needs to implement the interface), the interface
-type name can be prepended with a `*`, ex: `option (cosmos_proto.interface_type) = "*my_package.Msg";`.
-
+By default `interface_type` generates `Set` handlers for both pointer and
+non-pointer implementations of an interface (i.e. both `*A` and `A`). This means
+all interfaces must be implemented for the non-pointer version of a struct. To
+disable the non-pointer cases (so that just `*A` and not `A` needs to implement
+the interface), the interface type name can be prepended with a `*`, ex:
+`option (cosmos_proto.interface_type) = "*my_package.Msg";`.

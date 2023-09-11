@@ -24,9 +24,12 @@ SUBCOMMANDS:
 ```
 
 ### Automatically generate configuration
-Use `config auto` to automatically generate a configuration file from the [chain-registry](https://github.com/cosmos/chain-registry).
 
-> __WARNING__: Currently, gas parameters are set to default value and require to be set manually.
+Use `config auto` to automatically generate a configuration file from the
+[chain-registry](https://github.com/cosmos/chain-registry).
+
+> **WARNING**: Currently, gas parameters are set to default value and require to
+> be set manually.
 
 ```
 USAGE:
@@ -48,9 +51,12 @@ DESCRIPTION:
     Automatically generate a configuration file by fetching data from the chain-registry. If a pair of chains exists in the _IBC folder of the chain-registry then a corresponding packet filter is added to the configuration
 ```
 
-__Example__
+**Example**
 
-Use `config auto` to generate a configuration file able to relay between `cosmoshub` and `osmosis`. This command assumes the existence of a key file for `cosmoshub-4` and `osmosis-1` in `$HOME/.hermes/keys`.
+Use `config auto` to generate a configuration file able to relay between
+`cosmoshub` and `osmosis`. This command assumes the existence of a key file for
+`cosmoshub-4` and `osmosis-1` in `$HOME/.hermes/keys`.
+
 ```
     hermes config auto --output ~/example_config.toml --chains cosmoshub osmosis
 
@@ -62,8 +68,9 @@ SUCCESS "Config file written successfully : ~/example_config.toml."
 ```
 
 It is also possible to manually specify a key name for any chain.
+
 ```
-    hermes config auto --output $HOME/example_config.toml --chains cosmoshub:random_key osmosis 
+    hermes config auto --output $HOME/example_config.toml --chains cosmoshub:random_key osmosis
 
 2022-08-16T17:29:56.902499Z  INFO ThreadId(01) using default configuration from '~/.hermes/config.toml'
 2022-08-16T17:29:57.288874Z  INFO ThreadId(01) cosmoshub-4: uses key "random_key"
@@ -72,12 +79,12 @@ It is also possible to manually specify a key name for any chain.
 SUCCESS "Config file written successfully : ~/example_config.toml."
 ```
 
-__WARNING__ : Do not forget to modify the gas settings before relaying !
+**WARNING** : Do not forget to modify the gas settings before relaying !
 
 ### Validate configuration
 
-Use `config validate` to perform a quick syntactic validation of
-your configuration file.
+Use `config validate` to perform a quick syntactic validation of your
+configuration file.
 
 ```shell
 USAGE:
@@ -87,7 +94,7 @@ DESCRIPTION:
     validate the relayer configuration
 ```
 
-__Example__
+**Example**
 
 Validate the default config file, the path inferred automatically to be
 `$HOME/.hermes/config.toml`.

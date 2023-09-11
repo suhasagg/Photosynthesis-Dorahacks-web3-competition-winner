@@ -1,5 +1,4 @@
-Memory usage
-============
+# Memory usage
 
 (Highly unscientific.)
 
@@ -21,8 +20,7 @@ func main() {
 }
 ```
 
-Baseline
---------
+## Baseline
 
 ```
 VmPeak:    42604 kB
@@ -56,8 +54,7 @@ func main() {
 }
 ```
 
-1000 counters registered
-------------------------
+## 1000 counters registered
 
 ```
 VmPeak:    44016 kB
@@ -75,8 +72,7 @@ VmSwap:        0 kB
 
 **1.412 kB virtual, TODO 0.808 kB resident per counter.**
 
-100000 counters registered
---------------------------
+## 100000 counters registered
 
 ```
 VmPeak:    55024 kB
@@ -94,8 +90,7 @@ VmSwap:        0 kB
 
 **0.1242 kB virtual, 0.1132 kB resident per counter.**
 
-1000 gauges registered
-----------------------
+## 1000 gauges registered
 
 ```
 VmPeak:    44012 kB
@@ -113,8 +108,7 @@ VmSwap:        0 kB
 
 **1.408 kB virtual, 0.808 kB resident per counter.**
 
-100000 gauges registered
-------------------------
+## 100000 gauges registered
 
 ```
 VmPeak:    55020 kB
@@ -132,8 +126,7 @@ VmSwap:        0 kB
 
 **0.12416 kB virtual, 0.11312 resident per gauge.**
 
-1000 histograms with a uniform sample size of 1028
---------------------------------------------------
+## 1000 histograms with a uniform sample size of 1028
 
 ```
 VmPeak:    72272 kB
@@ -151,8 +144,7 @@ VmSwap:        0 kB
 
 **29.668 kB virtual, TODO 15.084 resident per histogram.**
 
-10000 histograms with a uniform sample size of 1028
----------------------------------------------------
+## 10000 histograms with a uniform sample size of 1028
 
 ```
 VmPeak:   256912 kB
@@ -170,8 +162,7 @@ VmSwap:        0 kB
 
 **21.4308 kB virtual, 14.5084 kB resident per histogram.**
 
-50000 histograms with a uniform sample size of 1028
----------------------------------------------------
+## 50000 histograms with a uniform sample size of 1028
 
 ```
 VmPeak:   908112 kB
@@ -189,8 +180,7 @@ VmSwap:     1544 kB
 
 **17.31016 kB virtual, 12.88936 kB resident per histogram.**
 
-1000 histograms with an exponentially-decaying sample size of 1028 and alpha of 0.015
--------------------------------------------------------------------------------------
+## 1000 histograms with an exponentially-decaying sample size of 1028 and alpha of 0.015
 
 ```
 VmPeak:    62480 kB
@@ -208,8 +198,7 @@ VmSwap:        0 kB
 
 **19.876 kB virtual, 10.452 kB resident per histogram.**
 
-10000 histograms with an exponentially-decaying sample size of 1028 and alpha of 0.015
---------------------------------------------------------------------------------------
+## 10000 histograms with an exponentially-decaying sample size of 1028 and alpha of 0.015
 
 ```
 VmPeak:   153296 kB
@@ -227,8 +216,7 @@ VmSwap:        0 kB
 
 **11.0692 kB virtual, 10.0056 kB resident per histogram.**
 
-50000 histograms with an exponentially-decaying sample size of 1028 and alpha of 0.015
---------------------------------------------------------------------------------------
+## 50000 histograms with an exponentially-decaying sample size of 1028 and alpha of 0.015
 
 ```
 VmPeak:   557264 kB
@@ -246,8 +234,7 @@ VmSwap:        0 kB
 
 **10.2932 kB virtual, 9.99872 kB resident per histogram.**
 
-1000 meters
------------
+## 1000 meters
 
 ```
 VmPeak:    74504 kB
@@ -265,8 +252,7 @@ VmSwap:        0 kB
 
 **31.9 kB virtual, 23.004 kB resident per meter.**
 
-10000 meters
-------------
+## 10000 meters
 
 ```
 VmPeak:   278920 kB

@@ -1,37 +1,39 @@
 # Testing
 
-The relayer contains a testing framework designed to be used to test compatibility
-between different cosmos-sdk based chains for IBC relaying. This will be especially
-useful during the period where IBC is under active development as it will provide
-a central integration test to ensure that the many different implementations all
-work together. It will also be required if you are looking to participate with a
-custom zone in Game of Zones.
+The relayer contains a testing framework designed to be used to test
+compatibility between different cosmos-sdk based chains for IBC relaying. This
+will be especially useful during the period where IBC is under active
+development as it will provide a central integration test to ensure that the
+many different implementations all work together. It will also be required if
+you are looking to participate with a custom zone in Game of Zones.
 
 ## Using the test framework
 
-Because of the nature of the relayer (i.e. it is meant to run against different chains),
-mocking out the interfaces for unit tests would be prohibitively expensive from
-a resources point of view. Because of this, we've decided to go with a full
-integration testing framework that tests the user-critical paths of the relayer
-code for each chain to ensure compatibility between the chains and a functional
-Game of Zones. To add your chain to the framework, follow the guide below:
+Because of the nature of the relayer (i.e. it is meant to run against different
+chains), mocking out the interfaces for unit tests would be prohibitively
+expensive from a resources point of view. Because of this, we've decided to go
+with a full integration testing framework that tests the user-critical paths of
+the relayer code for each chain to ensure compatibility between the chains and a
+functional Game of Zones. To add your chain to the framework, follow the guide
+below:
 
 ## Overview
 
 The test framework is built using `go test` and `docker`. What is happening for
 each test is that a number of independent chains of a specified type are spun up
-and the relayer runs a series of transactions and tests for the expected results.
-We are using the [`ory/dockertest`](https://github.com/ory/dockertest) to provide
-a nice interface for using docker programmatically within the tests.
+and the relayer runs a series of transactions and tests for the expected
+results. We are using the [`ory/dockertest`](https://github.com/ory/dockertest)
+to provide a nice interface for using docker programmatically within the tests.
 
 ### Step 1: Write a Dockerfile and publish an image for your chain
 
 The testing framework expects your chain to have a `Dockerfile` with an
 `ENTRYPOINT` script that accepts two arguments: `chain-id`, which should be
 unique to the individual test, and `relayer-address`, an address to include in
-the genesis file so that the testing relayer has access to funds. This is normally
-best accomplished with an `./entrypoint.sh` script that performs the necessary
-chain bootstrapping. The `cosmos/gaia` repositories provide an example of both:
+the genesis file so that the testing relayer has access to funds. This is
+normally best accomplished with an `./entrypoint.sh` script that performs the
+necessary chain bootstrapping. The `cosmos/gaia` repositories provide an example
+of both:
 
 - [`./entrypoint.sh`](https://github.com/cosmos/gaia/tree/master/contrib/single-node.sh)
 - [`Dockerfile.test`](https://github.com/cosmos/gaia/tree/master/contrib/Dockerfile.test)
@@ -63,7 +65,8 @@ Next you will need to define a new instance of `testChainConfig` in the
 
 > NOTE: We've increased the default block timeouts for gaia to the values noted
 > below. This makes the tests faster. If you would like to do the same for your
-> chain see the `sed` commands in the [entrypoint](https://github.com/cosmos/gaia/tree/master/contrib/single-node.sh).
+> chain see the `sed` commands in the
+> [entrypoint](https://github.com/cosmos/gaia/tree/master/contrib/single-node.sh).
 
 ```go
 // GAIA BLOCK TIMEOUTS on jackzampolin/gaiatest:jack_relayer-testing
@@ -97,10 +100,10 @@ myChainTestConfig = testChainConfig {
 
 ### Step 3: Write your tests
 
-Now you can write tests! Create a new file named `test/relayer_{chain-type}_test.go`
-and write your tests! Emulate (or copy) the `gaia` examples to start. The
-framework is designed to be flexible enough to eventually allow testing of
-custom functionality.
+Now you can write tests! Create a new file named
+`test/relayer_{chain-type}_test.go` and write your tests! Emulate (or copy) the
+`gaia` examples to start. The framework is designed to be flexible enough to
+eventually allow testing of custom functionality.
 
 ```go
 var (
@@ -142,14 +145,14 @@ func TestGaiaToGaiaBasicTransfer(t *testing.T) {
 
 ### Step 4: Get your badge on the README
 
-The [README](../README.md) contains a compatibility matrix that is populated with
-status badges from Github Actions that shows the current status of different
-implementations. If you would like to add yours to this list
-(and if you have gotten this far, YOU SHOULD!!) do the following:
+The [README](../README.md) contains a compatibility matrix that is populated
+with status badges from Github Actions that shows the current status of
+different implementations. If you would like to add yours to this list (and if
+you have gotten this far, YOU SHOULD!!) do the following:
 
 1. Add a `Makefile` command that just calls your chain's tests. This is made
-   easy by the `-tags` flag that reads parts of the filenames of go tests.
-   See the `gaia` command for an example:
+   easy by the `-tags` flag that reads parts of the filenames of go tests. See
+   the `gaia` command for an example:
 
    ```Makefile
    test-gaia:
@@ -159,8 +162,8 @@ implementations. If you would like to add yours to this list
        @go test -mod=readonly -v -coverprofile coverage.out ./test/... -tags mychain
    ```
 
-2. Add a `.github/{mychain}-tests.yml` file that is a copy of `.github/gaia-tests.yml`
-   but modified for your chain.
+2. Add a `.github/{mychain}-tests.yml` file that is a copy of
+   `.github/gaia-tests.yml` but modified for your chain.
 
    ```yml
    name: TESTING - gaia to mychain integration
@@ -183,7 +186,7 @@ implementations. If you would like to add yours to this list
 
        # setup docker
        - name: Set up Docker 19.03
-         uses: docker-practice/actions-setup-docker@0.0.1    
+         uses: docker-practice/actions-setup-docker@0.0.1
          with:
            docker-version: 19.03
            docker-channel: stable
@@ -199,7 +202,7 @@ implementations. If you would like to add yours to this list
            key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
            restore-keys: |
              ${{ runner.os }}-go-
-       
+
        # run tests
        - name: run mychain tests
          run: make test-mychain

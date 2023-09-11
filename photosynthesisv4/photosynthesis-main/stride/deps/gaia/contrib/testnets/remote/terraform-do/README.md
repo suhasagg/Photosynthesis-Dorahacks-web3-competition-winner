@@ -1,15 +1,22 @@
 # Terraform & Ansible
 
-WARNING: The Digital Ocean scripts are obsolete. They are here because they might still be useful for developers.
+WARNING: The Digital Ocean scripts are obsolete. They are here because they
+might still be useful for developers.
 
-Automated deployments are done using [Terraform](https://www.terraform.io/) to create servers on Digital Ocean then
-[Ansible](http://www.ansible.com/) to create and manage testnets on those servers.
+Automated deployments are done using [Terraform](https://www.terraform.io/) to
+create servers on Digital Ocean then [Ansible](http://www.ansible.com/) to
+create and manage testnets on those servers.
 
 ## Prerequisites
 
-- Install [Terraform](https://www.terraform.io/downloads.html) and [Ansible](http://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) on a Linux machine.
-- Create a [DigitalOcean API token](https://cloud.digitalocean.com/settings/api/tokens) with read and write capability.
-- Install the python dopy package (`pip install dopy`) (This is necessary for the digitalocean.py script for ansible.)
+- Install [Terraform](https://www.terraform.io/downloads.html) and
+  [Ansible](http://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+  on a Linux machine.
+- Create a
+  [DigitalOcean API token](https://cloud.digitalocean.com/settings/api/tokens)
+  with read and write capability.
+- Install the python dopy package (`pip install dopy`) (This is necessary for
+  the digitalocean.py script for ansible.)
 - Create SSH keys
 
 ```
@@ -27,7 +34,8 @@ These will be used by both `terraform` and `ansible`.
 make remotenet-start
 ```
 
-Optionally, you can set the number of servers you want to launch and the name of the testnet (which defaults to remotenet):
+Optionally, you can set the number of servers you want to launch and the name of
+the testnet (which defaults to remotenet):
 
 ```
 TESTNET_NAME="mytestnet" SERVERS=7 make remotenet-start
@@ -47,7 +55,10 @@ make remotenet-stop
 
 ## Logging
 
-You can ship logs to Logz.io, an Elastic stack (Elastic search, Logstash and Kibana) service provider. You can set up your nodes to log there automatically. Create an account and get your API key from the notes on [this page](https://app.logz.io/#/dashboard/data-sources/Filebeat), then:
+You can ship logs to Logz.io, an Elastic stack (Elastic search, Logstash and
+Kibana) service provider. You can set up your nodes to log there automatically.
+Create an account and get your API key from the notes on
+[this page](https://app.logz.io/#/dashboard/data-sources/Filebeat), then:
 
 ```
 yum install systemd-devel || echo "This will only work on RHEL-based systems."

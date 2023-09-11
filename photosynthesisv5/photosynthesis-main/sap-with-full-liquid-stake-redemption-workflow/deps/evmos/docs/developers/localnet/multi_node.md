@@ -6,19 +6,20 @@ order: 2
 
 ## Pre-requisite Readings
 
-- [Install Ignite CLI](https://docs.ignite.com/guide/install.html)  {prereq}
-- [Install Docker](https://docs.docker.com/engine/installation/)  {prereq}
-- [Install docker-compose](https://docs.docker.com/compose/install/)  {prereq}
+- [Install Ignite CLI](https://docs.ignite.com/guide/install.html) {prereq}
+- [Install Docker](https://docs.docker.com/engine/installation/) {prereq}
+- [Install docker-compose](https://docs.docker.com/compose/install/) {prereq}
 
 ## Automated Localnet with Ignite CLI
 
 Once you have installed `ignite`, just run the localnet by using
 
 ```bash
-ignite chain serve 
+ignite chain serve
 ```
 
-Detailed instructions can be found in the [Ignite CLI documentation](https://docs.ignite.com/kb/serve.html)
+Detailed instructions can be found in the
+[Ignite CLI documentation](https://docs.ignite.com/kb/serve.html)
 
 ## Automated Localnet with Docker
 
@@ -30,11 +31,11 @@ To build start a 4 node testnet run:
 make localnet-start
 ```
 
-This command creates a 4-node network using the `evmosdnode` Docker image.
-The ports for each node are found in this table:
+This command creates a 4-node network using the `evmosdnode` Docker image. The
+ports for each node are found in this table:
 
-| Node ID          | P2P Port | Tendermint RPC Port | REST/ Ethereum JSON-RPC Port | WebSocket Port |
-|------------------|----------|---------------------|------------------------------|----------------|
+| Node ID      | P2P Port | Tendermint RPC Port | REST/ Ethereum JSON-RPC Port | WebSocket Port |
+| ------------ | -------- | ------------------- | ---------------------------- | -------------- |
 | `evmosnode0` | `26656`  | `26657`             | `8545`                       | `8546`         |
 | `evmosnode1` | `26659`  | `26660`             | `8547`                       | `8548`         |
 | `evmosnode2` | `26661`  | `26662`             | `8549`                       | `8550`         |
@@ -46,7 +47,8 @@ To update the binary, just rebuild it and restart the nodes
 make localnet-start
 ```
 
-The command above  command will run containers in the background using Docker compose. You will see the network being created:
+The command above command will run containers in the background using Docker
+compose. You will see the network being created:
 
 ```bash
 ...
@@ -116,7 +118,8 @@ build/
         └── evmosd.log
 ```
 
-Each `./build/nodeN` directory is mounted to the `/evmosd` directory in each container.
+Each `./build/nodeN` directory is mounted to the `/evmosd` directory in each
+container.
 
 ### Logging
 
@@ -146,10 +149,9 @@ I[2020-07-29|17:34:09.383] Committed state                              module=s
 I[2020-07-29|17:34:14.700] Executed block                               module=state height=91 validTxs=0 invalidTxs=0
 ```
 
-::: tip
-You can disregard the `Can't add peer's address to addrbook` warning. As long as the blocks are
-being produced and the app hashes are the same for each node, there should not be any issues.
-:::
+::: tip You can disregard the `Can't add peer's address to addrbook` warning. As
+long as the blocks are being produced and the app hashes are the same for each
+node, there should not be any issues. :::
 
 Whereas the logs for the REST & RPC server would look like:
 
@@ -161,8 +163,8 @@ I[2020-07-30|09:39:17.488] Starting RPC HTTP server on 127.0.0.1:8545   module=r
 
 #### Follow Logs
 
-You can also watch logs as they are produced via Docker with the `--follow` (`-f`) flag, for
-example:
+You can also watch logs as they are produced via Docker with the `--follow`
+(`-f`) flag, for example:
 
 ```bash
 docker logs -f evmosdnode0
@@ -172,10 +174,11 @@ docker logs -f evmosdnode0
 
 #### Ethereum JSON-RPC & Websocket Ports
 
-To interact with the testnet via WebSockets or RPC/API, you will send your request to the corresponding ports:
+To interact with the testnet via WebSockets or RPC/API, you will send your
+request to the corresponding ports:
 
 | EVM JSON-RPC | Eth Websocket |
-|--------------|---------------|
+| ------------ | ------------- |
 | `8545`       | `8546`        |
 
 You can send a curl command such as:
@@ -184,11 +187,10 @@ You can send a curl command such as:
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}' -H "Content-Type: application/json" 192.162.10.1:8545
 ```
 
-::: tip
-The IP address will be the public IP of the docker container.
-:::
+::: tip The IP address will be the public IP of the docker container. :::
 
-Additional instructions on how to interact with the WebSocket can be found on the [events documentation](./../json-rpc/events.md#ethereum-websocket).
+Additional instructions on how to interact with the WebSocket can be found on
+the [events documentation](./../json-rpc/events.md#ethereum-websocket).
 
 ### Keys & Accounts
 
@@ -202,13 +204,15 @@ evmosd keys list --home ./build/node0/evmosd
 Now that accounts exists, you may create new accounts and send those accounts
 funds!
 
-::: tip
-**Note**: Each node's seed is located at `./build/nodeN/evmosd/key_seed.json` and can be restored to the CLI using the `evmosd keys add --restore` command
-:::
+::: tip **Note**: Each node's seed is located at
+`./build/nodeN/evmosd/key_seed.json` and can be restored to the CLI using the
+`evmosd keys add --restore` command :::
 
 ### Special Binaries
 
-If you have multiple binaries with different names, you can specify which one to run with the BINARY environment variable. The path of the binary is relative to the attached volume. For example:
+If you have multiple binaries with different names, you can specify which one to
+run with the BINARY environment variable. The path of the binary is relative to
+the attached volume. For example:
 
 ```bash
 # Run with custom binary

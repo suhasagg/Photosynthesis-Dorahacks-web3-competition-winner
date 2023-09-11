@@ -2,19 +2,15 @@
 order: false
 -->
 
----
+***
 
-ADR: (number)
-Title: (short title)
-Status: (current ADR status)
-Category: (Module or Feature)
-Author: (primary & additional authors)
-Created: (creation date)
-Mdified: (modification date)
-Requires: (optional list of downstream ADRs)
-Required-By: (optional list of upstream ADRs)
-Implements: (optional list of component ADRs)
----
+ADR: (number) Title: (short title) Status: (current ADR status) Category:
+(Module or Feature) Author: (primary & additional authors) Created: (creation
+date) Mdified: (modification date) Requires: (optional list of downstream ADRs)
+Required-By: (optional list of upstream ADRs) Implements: (optional list of
+component ADRs)
+
+***
 
 # ADR {ADR-NUMBER}: {TITLE}
 
@@ -24,19 +20,26 @@ Implements: (optional list of component ADRs)
 
 ## Abstract
 
-> "If you can't explain it simply, you don't understand it well enough." Provide  a short (~200 word) high level description of the issue being addressed and rationale for such.
+> "If you can't explain it simply, you don't understand it well enough." Provide
+> a short (~200 word) high level description of the issue being addressed and
+> rationale for such.
 
 ## Rationale
 
-> Describe the context and rationale for proposing a new feature or module. The language in this section is value-neutral and should clearly explain the problem and motivation that the proposal aims to resolve.
+> Describe the context and rationale for proposing a new feature or module. The
+> language in this section is value-neutral and should clearly explain the
+> problem and motivation that the proposal aims to resolve.
 
 ## Desired Outcome
 
-> Provides succinct answers to the issues documented above. Response should include desired characteristics / properties of feature/protocol, and effects if properties are violated.
+> Provides succinct answers to the issues documented above. Response should
+> include desired characteristics / properties of feature/protocol, and effects
+> if properties are violated.
 
 ## Consequences
 
-> This section describes the resulting context, after applying the decision (positive, neutral, and negative).
+> This section describes the resulting context, after applying the decision
+> (positive, neutral, and negative).
 
 #### Backwards Compatibility
 
@@ -48,7 +51,8 @@ Implements: (optional list of component ADRs)
 
 ## Technical Specification
 
-> Details main technical standard, may include some of the following: syntax, semantics, sub-protocols, algorithms, data structures, etc.
+> Details main technical standard, may include some of the following: syntax,
+> semantics, sub-protocols, algorithms, data structures, etc.
 
 ## Development
 
@@ -63,7 +67,7 @@ Implements: (optional list of component ADRs)
 
 > Discussion of compatibility or lack thereof with expected future standards.
 
-## Governance [optional]
+## Governance \[optional]
 
 > If relevant, will include:
 
@@ -72,7 +76,7 @@ Implements: (optional list of component ADRs)
 - Steering Community
 - Timelines & Roadmap
 
-## Project Integrations [optional]
+## Project Integrations \[optional]
 
 > Document internal and/or external integration partners
 

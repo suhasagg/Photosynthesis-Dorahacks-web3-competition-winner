@@ -1,7 +1,7 @@
 # xxhash
 
-VENDORED: Go to [github.com/cespare/xxhash](https://github.com/cespare/xxhash) for original package.
-
+VENDORED: Go to [github.com/cespare/xxhash](https://github.com/cespare/xxhash)
+for original package.
 
 [![GoDoc](https://godoc.org/github.com/cespare/xxhash?status.svg)](https://godoc.org/github.com/cespare/xxhash)
 [![Build Status](https://travis-ci.org/cespare/xxhash.svg?branch=master)](https://travis-ci.org/cespare/xxhash)
@@ -36,12 +36,12 @@ assembly implementation for amd64.
 Here are some quick benchmarks comparing the pure-Go and assembly
 implementations of Sum64.
 
-| input size | purego | asm |
-| --- | --- | --- |
-| 5 B   |  979.66 MB/s |  1291.17 MB/s  |
-| 100 B | 7475.26 MB/s | 7973.40 MB/s  |
-| 4 KB  | 17573.46 MB/s | 17602.65 MB/s |
-| 10 MB | 17131.46 MB/s | 17142.16 MB/s |
+| input size | purego        | asm           |
+| ---------- | ------------- | ------------- |
+| 5 B        | 979.66 MB/s   | 1291.17 MB/s  |
+| 100 B      | 7475.26 MB/s  | 7973.40 MB/s  |
+| 4 KB       | 17573.46 MB/s | 17602.65 MB/s |
+| 10 MB      | 17131.46 MB/s | 17142.16 MB/s |
 
 These numbers were generated on Ubuntu 18.04 with an Intel i7-8700K CPU using
 the following commands under Go 1.11.2:

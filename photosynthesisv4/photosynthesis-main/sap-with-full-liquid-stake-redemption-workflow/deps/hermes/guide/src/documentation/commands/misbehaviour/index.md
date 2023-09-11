@@ -1,11 +1,14 @@
 # Misbehaviour
 
 ## Table of Contents
+
 <!-- toc -->
 
 ## Monitoring Misbehaviour and Evidence Submission
-Use the `mishbehaviour` command to monitor the updates for a given client, detect certain types of misbehaviour and
-submit evidence to the chain. If the evidence passes the on-chain validation, the client is frozen. Further packets
+
+Use the `mishbehaviour` command to monitor the updates for a given client,
+detect certain types of misbehaviour and submit evidence to the chain. If the
+evidence passes the on-chain validation, the client is frozen. Further packets
 cannot be relayed using the frozen client.
 
 ```shell
@@ -21,37 +24,41 @@ REQUIRED:
         --client <CLIENT_ID>    Identifier of the client to be monitored for misbehaviour
 ```
 
-The misbehaviour monitor starts by analyzing all headers used in prior client updates.
-Once finished it registers for update client events and checks any new headers for misbehaviour.
-If it detects evidence of misbehaviour, it submits a transaction with the evidence to the chain.
-If the chain validates the transaction then the monitor exits.
+The misbehaviour monitor starts by analyzing all headers used in prior client
+updates. Once finished it registers for update client events and checks any new
+headers for misbehaviour. If it detects evidence of misbehaviour, it submits a
+transaction with the evidence to the chain. If the chain validates the
+transaction then the monitor exits.
 
 > This is an experimental feature.
 
 The following types of misbehaviour are handled:
+
 1. **Fork**
 
-    Assumes at least one consensus state before the fork point exists.
-    Let existing consensus states on chain B be: `[Sn,.., Sf, Sf-1, S0]` with `Sf-1` being
-    the most recent state before the fork.
-    Chain A is queried for a header `Hf'` at `Sf.height` and if it is different than the `Hf`
-    in the event for the client update (the one that has generated `Sf` on chain), then the two
-    headers are included in the evidence and submitted.
-    Note that in this case the headers are different but have the same height.
+   Assumes at least one consensus state before the fork point exists. Let
+   existing consensus states on chain B be: `[Sn,.., Sf, Sf-1, S0]` with `Sf-1`
+   being the most recent state before the fork. Chain A is queried for a header
+   `Hf'` at `Sf.height` and if it is different than the `Hf` in the event for
+   the client update (the one that has generated `Sf` on chain), then the two
+   headers are included in the evidence and submitted. Note that in this case
+   the headers are different but have the same height.
 
 2. **BFT time violation for an unavailable header**
 
-    Some header with a height that is higher than the latest
-    height on chain `A` has been accepted and a consensus state was created on `B`. Note that this implies
-    that the timestamp of this header must be within the `clock_drift` of the client.
-    Assume the client on `B` has been updated with `h2`(not present on/ produced by chain `A`)
-    and it has a timestamp of `t2` that is at most `clock_drift` in the future.
-    Then the latest header from `A` is fetched, let it be `h1`, with a timestamp of `t1`.
-    If `t1 >= t2` then evidence of misbehavior is submitted to A.
+   Some header with a height that is higher than the latest height on chain `A`
+   has been accepted and a consensus state was created on `B`. Note that this
+   implies that the timestamp of this header must be within the `clock_drift` of
+   the client. Assume the client on `B` has been updated with `h2`(not present
+   on/ produced by chain `A`) and it has a timestamp of `t2` that is at most
+   `clock_drift` in the future. Then the latest header from `A` is fetched, let
+   it be `h1`, with a timestamp of `t1`. If `t1 >= t2` then evidence of
+   misbehavior is submitted to A.
 
-__Example__
+**Example**
 
-The `hermes misbehaviour` outputs an error message displaying `MISBEHAVIOUR DETECTED`:
+The `hermes misbehaviour` outputs an error message displaying
+`MISBEHAVIOUR DETECTED`:
 
 ```shell
 hermes misbehaviour --chain ibc-0 --client 07-tendermint-0
@@ -84,10 +91,13 @@ Success: Some(
 )
 ```
 
-Querying client state from this point will show the client is in frozen state, with `frozen_height` indicating the height at which the client was frozen:
+Querying client state from this point will show the client is in frozen state,
+with `frozen_height` indicating the height at which the client was frozen:
+
 ```shell
 hermes query client state --chain ibc-0 --client 07-tendermint-0 | jq
 ```
+
 ```json
 {
   "result": {

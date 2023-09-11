@@ -1,18 +1,16 @@
-# Photosynthesis-Archway  <-> Stride integrations
+# Photosynthesis-Archway <-> Stride integrations
 
 ![Photosynthesis](https://i.imgur.com/Tn1GUZnb.jpg)
 
+1\)START RELAYER
 
-1)START RELAYER
+2\)CREATING CONNECTIONS WITH THE GO RELAYER
 
-2)CREATING CONNECTIONS WITH THE GO RELAYER 
-
-3)Create connections and channels
-
+3\)Create connections and channels
 
 a)Get channel ID created on the photosynthesis-archway
 
-b)Start Go Relayer 
+b)Start Go Relayer
 
 c)IBC Transfer from Photosynthesis-archway to stride (from relayer account)
 
@@ -24,11 +22,9 @@ f)Add validator
 
 g)Confirm ICA channels were registered
 
-
 FLOW
 
 Go Through Flow
-
 
 a)Liquid stake (then wait and LS again)
 
@@ -46,26 +42,24 @@ g)Change validator weights
 
 h)LS and confirm delegation aligned with new weights
 
-i)Update delegations (just submit this query and confirm the ICQ callback displays in the stride logs)
-
+i)Update delegations (just submit this query and confirm the ICQ callback
+displays in the stride logs)
 
 # Must be submitted in ICQ window
 
 j)Restore closed channel
 
+# Photosynthesis-Archway IBC integrations.
 
+1\)evmos
 
-# Photosynthesis-Archway IBC integrations. 
+2\)gaia
 
-1)evmos
+3\)juno
 
-2)gaia
+4\)osmosis
 
-3)juno
-
-4)osmosis
-
-5)stargaze
+5\)stargaze
 
 ```
 global:
@@ -88,7 +82,7 @@ chains:
       debug: false
       timeout: 20s
       output-format: json
-      sign-mode: direct  
+      sign-mode: direct
   stride:
     type: cosmos
     value:
@@ -198,16 +192,14 @@ chains:
         - ethermint
 ```
 
-# Relayer registry 
+# Relayer registry
 
-Cosmos relayer
-1)https://github.com/cosmos/relayer.git
+Cosmos relayer 1)https://github.com/cosmos/relayer.git
 
-Hermes relayer 
-2)https://github.com/informalsystems/ibc-rs 
-
+Hermes relayer 2)https://github.com/informalsystems/ibc-rs
 
 # Record Keeping/Queue Creation for Liquid Staking Workflow in Photosynthesis-Archway
+
 # Interchain Accounts fully Integrated in Photosynthesis-Archway
 
 ```
@@ -339,7 +331,12 @@ user_redemption_record: []
 
 ### Full Liquid staking - uarch and Full Redemption Workflow
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/archwayd --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/photo1 tx ibc-transfer transfer transfer channel-0 stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 4000000uarch --from pval1 -y
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/archwayd --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/photo1
+tx ibc-transfer transfer transfer channel-0
+stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8 4000000uarch --from pval1 -y
+
 ```
 code: 0
 codespace: ""
@@ -356,7 +353,10 @@ tx: null
 txhash: 54BBCC0D3B6F1EDA3ECB396654AD10C2E8269D937AAED90061F245D3DE0E0640
 ```
 
-#build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q bank balances stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+\#build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q bank balances stride1u20df3trc2c2zdhm8qvh2hdjx9ewh00sv6eyy8
+
 ```
 balances:
 - amount: "4000000"
@@ -368,7 +368,11 @@ pagination:
   total: "0"
 ```
 
-#build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc liquid-stake 1000000 uarch --keyring-backend test --from admin --chain-id STRIDE -y
+\#build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+tx stakeibc liquid-stake 1000000 uarch --keyring-backend test --from admin
+\--chain-id STRIDE -y
+
 ```
 code: 0
 codespace: ""
@@ -385,7 +389,11 @@ tx: null
 txhash: 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
 ```
 
-#root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q tx 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
+\#root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q tx 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
+
 ```
 code: 0
 codespace: ""
@@ -644,7 +652,11 @@ tx:
 txhash: 62E3A222D273428D576FF3E4D201217B34C6D77552F228DA1AE51BC754294361
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q stakeibc list-host-zone
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q stakeibc list-host-zone
+
 ```
 host_zone:
 - address: stride1755g4dkhpw73gz9h9nwhlcefc6sdf8kcmvcwrk4rxfrz8xpxxjms7savm8
@@ -718,7 +730,13 @@ pagination:
   total: "0"
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc redeem-stake 1000 PHOTO archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+tx stakeibc redeem-stake 1000 PHOTO
+archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend
+test --chain-id STRIDE -y
+
 ```
 code: 0
 codespace: ""
@@ -735,7 +753,13 @@ tx: null
 txhash: 4ECC6062BE5B794005A1FAF5D9CC4F32CBEA18F6586EEA9B15D7DB342204608B
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 tx stakeibc redeem-stake 1000 localnet archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend test --chain-id STRIDE -y
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+tx stakeibc redeem-stake 1000 localnet
+archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --from admin --keyring-backend
+test --chain-id STRIDE -y
+
 ```
 code: 0
 codespace: ""
@@ -752,7 +776,11 @@ tx: null
 txhash: 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
 ```
 
-root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts# build/strided --home /media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1 q tx 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
+root@swordfish-Lenovo-Y720-15IKB:/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts#
+build/strided --home
+/media/swordfish/Hydra3/photo/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/stridev1-archway-photosynthesis-with-interchain-accounts/dockernet/state/stride1
+q tx 1A6F1DBA73E3A4A469782B18C2637E5A118E06906A028A5A0A25734DFEDEC462
+
 ```
 code: 0
 codespace: ""
@@ -916,213 +944,143 @@ pagination:
 3,6,9,12,15,18,21,24,27 * * * * /bin/sh /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/gasfiller.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/gasfillerlogs.log
 ```
 
-
 # Photosynthesis Archway Blockchain Data Lake
 
-
-  ![Photosynthesis Archway Data Lake](https://lh3.googleusercontent.com/pw/AIL4fc_eowtm-JGZedQemuL-wxtXHX8S48luVheutD2Z-qvh0uxtOQSKAdcCydk5m5e0ImWW6HuuxvDUoOMDbq2LJla8tsPktA3_Rkg6gkMtmNV7clg10ANRh7_hU_zo6B4TV4ZPOdCiMGcHXJAdHMtFZFtqTA=w3484-h1960-s-no?authuser=0)
-   
+![Photosynthesis Archway Data Lake](https://lh3.googleusercontent.com/pw/AIL4fc_eowtm-JGZedQemuL-wxtXHX8S48luVheutD2Z-qvh0uxtOQSKAdcCydk5m5e0ImWW6HuuxvDUoOMDbq2LJla8tsPktA3\_Rkg6gkMtmNV7clg10ANRh7\_hU_zo6B4TV4ZPOdCiMGcHXJAdHMtFZFtqTA=w3484-h1960-s-no?authuser=0)
 
 # Photosynthesis Archway Data Points List (Small Subset View)
 
-
 Accumulated rewards
-
 
 central archway epoch
 
-
 Checking epoch info
-
 
 coins to address
 
-
 contractAddress
-
 
 Created ContractLiquidStakeDepositRecordsForEpoch
 
-
 CurrentEpoch
-
 
 Deleted reward records
 
-
 Deposit Record Stake ratio determination for liquidity distribution
-
 
 Distributed Liquidity for epoch
 
-
 EmitLiquidStakeDepositRecordCreatedEvent for record
-
 
 Emitting rewards withdrawal event for address
 
-
 epoch
-
 
 Finish Get Cumulative Reward Amount epoch
 
-
 Finish Query Redemption rate
-
 
 Get Cumulative Reward Amount
 
-
 Get Cumulative Reward Amount Enqueued
-
 
 is a multiple of RedemptionIntervalThreshold
 
-
 is not 0 and is a multiple of LiquidStakeInterval
-
 
 is not 0 and is a multiple of RedemptionRateThreshold
 
-
 is not 0 and is a multiple of RewardsWithdrawalInterval
-
 
 Last redemption rate
 
-
 log level
-
 
 liquid stake amount
 
-
 liquid stake dapp rewards epoch
-
 
 Liquid stake deposit record amount
 
-
 Liquid stake deposit record created amount
-
 
 Liquid stake deposit record enqueued amount
 
-
 Liquid stake enqueue operation - Epoch
-
 
 Liquid Token Amount
 
-
 Liquid Token Distribution Amount
-
 
 liquidityAmount
 
-
 liquidstakeamount
-
 
 LiquidStakeDepositsTillEpoch Epoch
 
-
 LiquidStakeScheduled
-
 
 message
 
-
 method
-
 
 MinimumRewardAmount is greater than 0
 
-
 module
-
 
 Processing ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH
 
-
 Processing LiquidStakeDappRewards epoch
-
 
 Processing REDEMPTION_RATE_QUERY_EPOCH
 
-
 Processing REWARDS_WITHDRAWAL_EPOCH
-
 
 Record
 
-
 record status
-
 
 records
 
-
 Retrieved contract metadata state
-
 
 Retrieved CumulativeRewardAmount
 
-
 Retrieved EpochInfo
-
 
 Retrieved EpochInfo for epochstypes.​ARCH_CENTRAL_LIQUID_STAKE_INTERVAL_EPOCH
 
-
 Retrieved EpochInfo for epochstypes.​LIQUID_STAKING_DApp_Rewards_EPOCH
-
 
 Retrieved EpochInfo for epochstypes.​REDEMPTION_RATE_QUERY_EPOCH
 
-
 Retrieved EpochInfo for epochstypes.​REWARDS_WITHDRAWAL_EPOCH
-
 
 Retrieved reward records
 
-
 Retrieved state from rewardKeeper
-
 
 Retrieved TotalLiquidStake
 
-
 Reward Address
-
 
 rewardaddr
 
-
 RewardsAddress is not empty
-
 
 Stake proportion
 
-
 Start Get Cumulative Reward Amount epoch
-
 
 Successfully queried RedemptionRate
 
-
 Till Epoch considered for distribution
-
 
 Total liquid stake
 
-
 total rewards
 
-
 Total Stake
-
 
 ts
 
@@ -1417,44 +1375,37 @@ curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content
 
 # Reporting Dashboard Preview (Subset of reports preview)
 
+![Reports A](https://i.imgur.com/KSMui7R.png)
 
-  ![Reports A](https://i.imgur.com/KSMui7R.png)
+![Reports B](https://i.imgur.com/30CRoOm.png)
 
+![Reports C](https://i.imgur.com/gTiL0jT.png)
 
+Rewards Earned vs Corresponding Liquid stake Tally Algorithm Report
 
-   
-  ![Reports B](https://i.imgur.com/30CRoOm.png)
+![Rewards Earned - Corresponding Liquid stake Tally Algorithm report](https://i.imgur.com/YxbqbUD.png)
 
+ML based reports
 
+![Reports D](https://i.imgur.com/wMUlEYT.png)
 
+Application of ML forecasting reports -
 
-  ![Reports C](https://i.imgur.com/gTiL0jT.png)
+1\)Identifying redemption rate trends. Quarter of the day, which hour of the day
+is most optimum for redemption.
 
+2\)Identifying liquid tokens obtained trends. Quarter of the day, which hour of
+the day is most optimum for liquid staking tokens,to get maximum stuarch.
 
+Contract metadata parameters can be tuned based on ML reports above to optimise
+epoch based schedulars.
 
+Anomaly Detection Reports
 
-  Rewards Earned vs Corresponding Liquid stake Tally Algorithm Report
+![Reports E](https://i.imgur.com/quTxJGs.png)
 
+Updated A/B Testing Cron schedule
 
-  ![Rewards Earned - Corresponding Liquid stake Tally Algorithm report](https://i.imgur.com/YxbqbUD.png) 
-  
-   ML based reports
-
-   ![Reports D](https://i.imgur.com/wMUlEYT.png)
-
-   Application of ML forecasting reports -
-   
-   1)Identifying redemption rate trends. Quarter of the day, which hour of the day is most optimum for redemption.
-   
-   2)Identifying liquid tokens obtained trends. Quarter of the day, which hour of the day is most optimum for liquid staking tokens,to get maximum stuarch. 
-   
-   Contract metadata parameters can be tuned based on ML reports above to optimise epoch based schedulars. 
-
-   Anomaly Detection Reports
-
-  ![Reports E](https://i.imgur.com/quTxJGs.png)
-
-  Updated A/B Testing Cron schedule 
 ```
   */2 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/rewardswithdrawal.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/rewardslogs.log
 */4 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/liquidstake.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakelogs
@@ -1466,9 +1417,9 @@ curl -X GET "localhost:9200/photosynthesis_logs_data/_search?pretty" -H 'Content
 1,15,30,45 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/gasfiller.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/gasfillerlogs.log
 ```
 
-# Data points for different jobs 
+# Data points for different jobs
 
-  Full Data Lake View 
+Full Data Lake View
 
 # Rewards Module job
 
@@ -1524,34 +1475,19 @@ txhash
 
 txhash.keyword
 
-
 # Liquid stake job
 
-balances.amount
-	
-balances.amount.keyword
+balances.amount balances.amount.keyword
 
-balances.denom
-	
-balances.denom.keyword
+balances.denom balances.denom.keyword
 
-code
-	
-codespace
-	
-codespace.keyword
+code codespace codespace.keyword
 
-data
-	
-data.keyword
-	
-gas_used
+data data.keyword gas_used
 
 gas_used.keyword
 
-gas_wanted
-	
-gas_wanted.keyword
+gas_wanted gas_wanted.keyword
 
 height
 
@@ -1578,7 +1514,6 @@ timestamp
 txhash
 
 txhash.keyword
-
 
 # Redeem stake job
 
@@ -1678,7 +1613,6 @@ user_redemption_records
 
 user_redemption_records.keyword
 
-
 # Distribute liquidity Tokens data
 
 code
@@ -1720,7 +1654,6 @@ timestamp
 txhash
 
 txhash.keyword
-
 
 # Distribute Redeem Tokens data
 
@@ -1776,268 +1709,259 @@ txhash
 
 txhash.keyword
 
+# Data points for Above Jobs ingested in ES
 
-# Data points for Above Jobs ingested in ES 
+![Reports A](https://i.imgur.com/ioT1Dq3.png)
 
+![Reports B](https://i.imgur.com/m6HDDcv.png)
 
-  ![Reports A](https://i.imgur.com/ioT1Dq3.png)
- 
-  ![Reports B](https://i.imgur.com/m6HDDcv.png)
+![Reports C](https://i.imgur.com/I8Gqz8A.png)
 
-  ![Reports C](https://i.imgur.com/I8Gqz8A.png)
+![Reports D](https://i.imgur.com/aKY1Vvg.png)
 
-  ![Reports D](https://i.imgur.com/aKY1Vvg.png)
-
-  ![Reports E](https://i.imgur.com/fdYNln5.png)
-
+![Reports E](https://i.imgur.com/fdYNln5.png)
 
 # Few snapshots of reports (All comprehensive reports will be available very shortly)
 
-
 # Rewards Module Job Dashboard
 
- Rewards Transactions Data Time Series Data Table
+Rewards Transactions Data Time Series Data Table
 
- Bulk rewards claim transactions for Different Dapps (for optimum gas consumption)
+Bulk rewards claim transactions for Different Dapps (for optimum gas
+consumption)
 
- ![Rewards Transactions Data Time Series Data Table](https://i.imgur.com/hWob2Zt.png)
+![Rewards Transactions Data Time Series Data Table](https://i.imgur.com/hWob2Zt.png)
 
- ![Bulk Rewards Claim Time Series Plot](https://i.imgur.com/1Igkg7R.png)
+![Bulk Rewards Claim Time Series Plot](https://i.imgur.com/1Igkg7R.png)
 
+# Liquid Stake Module Job Dashboard
 
+Liquid Stake job events Time series Data Table
 
-# Liquid Stake Module Job Dashboard 
+![Liquid Stake job events Time series Data Table](https://i.imgur.com/14G44Ek.png)
 
- Liquid Stake job events Time series Data Table
+Liquid Stake (Central Liquid stake of uarch for optimum gas consmuption)
+Transactions Data table
 
- ![Liquid Stake job events Time series Data Table](https://i.imgur.com/14G44Ek.png)
+![Liquid Stake Transactions Data table](https://i.imgur.com/nNwBa4X.png)
 
- Liquid Stake (Central Liquid stake of uarch for optimum gas consmuption) Transactions Data table
+![Cumulative Liquid Stake Amount (For all Dapps) Time Series Data](https://i.imgur.com/uu9phQs.png)
 
- ![Liquid Stake Transactions Data table](https://i.imgur.com/nNwBa4X.png)
- 
- ![Cumulative Liquid Stake Amount (For all Dapps) Time Series Data](https://i.imgur.com/uu9phQs.png)
+# Distribute Liquidity Module Job Dashboard
 
+Distribute Liquidity (stuarch) Transactions Data table
 
+![Distribute Liquidity Transactions Data table](https://i.imgur.com/uXNw6pz.png)
 
-# Distribute Liquidity Module Job Dashboard  
+# Redeem Stake Module Job Dashboard
 
- Distribute Liquidity (stuarch) Transactions Data table
+Redeem Stake (Central Redemption at maximum Redemption Rate) Transactions Data
+table
 
- ![Distribute Liquidity Transactions Data table](https://i.imgur.com/uXNw6pz.png)
- 
+![Redeem Stake Transactions Data Table](https://i.imgur.com/CXngIW4.png)
 
+![Total Redemption Amount (For all Dapps) Time Series Data](https://i.imgur.com/0xjp0xs.png)
 
-# Redeem Stake Module Job Dashboard 
+# Distribute Redeem Tokens Module Job Dashboard
 
-  Redeem Stake (Central Redemption at maximum Redemption Rate) Transactions Data table
+Distribute Redeemed Tokens to Dapps Transactions Data table
 
- ![Redeem Stake Transactions Data Table](https://i.imgur.com/CXngIW4.png)
+![Distribute Redeem Tokens Transactions Data table](https://i.imgur.com/619MM2G.png)
 
- ![Total Redemption Amount (For all Dapps) Time Series Data](https://i.imgur.com/0xjp0xs.png)
-
- 
- 
-# Distribute Redeem Tokens Module Job Dashboard 
- 
-  Distribute Redeemed Tokens to Dapps Transactions Data table
-
- ![Distribute Redeem Tokens Transactions Data table](https://i.imgur.com/619MM2G.png)
-
-  Filters (Dapps specific and more) and other aggregation parameters applicable based on reports corresponding to different job types.
-
-
+Filters (Dapps specific and more) and other aggregation parameters applicable
+based on reports corresponding to different job types.
 
 # Rewards Module Job Index
-  ```
-  {
-  "_index": "rewardsmoduleaggregated",
-  "_type": "_doc",
-  "_id": "mT7ZHooBxzWNeDEhT24S",
-  "_version": 1,
-  "_score": 1,
-  "_ignored": [
-    "message_23.keyword",
-    "message_17.keyword",
-    "message_20.keyword",
-    "message_22.keyword",
-    "message_19.keyword"
+
+```
+{
+"_index": "rewardsmoduleaggregated",
+"_type": "_doc",
+"_id": "mT7ZHooBxzWNeDEhT24S",
+"_version": 1,
+"_score": 1,
+"_ignored": [
+  "message_23.keyword",
+  "message_17.keyword",
+  "message_20.keyword",
+  "message_22.keyword",
+  "message_19.keyword"
+],
+"_source": {
+  "timestamp": "2023-08-19T04:06:00Z",
+  "message_1": "Read key: l111",
+  "message_2": "Read key: l211",
+  "message_3": "Read key: l311",
+  "message_4": "Read key: l411",
+  "message_5": "Read key: prev1",
+  "message_6": "Read key: pval1",
+  "message_7": "Read key: pval2",
+  "message_8": "Read key: pval3",
+  "message_9": "Read key: pval4",
+  "message_10": "Read key: pval5",
+  "message_11": "Read key: rly0",
+  "message_12": "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines...",
+  "message_13": "Cumulative Reward amount: 610000",
+  "message_14": "Iterations: 0",
+  "message_15": "Remaining Record Limit: 61",
+  "message_16": "Reward Amount: 610000",
+  "message_17": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y",
+  "message_18": "archway account balance",
+  "message_19": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd",
+  "message_20": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y",
+  "message_21": "archway account balance",
+  "message_22": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd",
+  "message_23": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+},
+"fields": {
+  "message_16.keyword": [
+    "Reward Amount: 610000"
   ],
-  "_source": {
-    "timestamp": "2023-08-19T04:06:00Z",
-    "message_1": "Read key: l111",
-    "message_2": "Read key: l211",
-    "message_3": "Read key: l311",
-    "message_4": "Read key: l411",
-    "message_5": "Read key: prev1",
-    "message_6": "Read key: pval1",
-    "message_7": "Read key: pval2",
-    "message_8": "Read key: pval3",
-    "message_9": "Read key: pval4",
-    "message_10": "Read key: pval5",
-    "message_11": "Read key: rly0",
-    "message_12": "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines...",
-    "message_13": "Cumulative Reward amount: 610000",
-    "message_14": "Iterations: 0",
-    "message_15": "Remaining Record Limit: 61",
-    "message_16": "Reward Amount: 610000",
-    "message_17": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y",
-    "message_18": "archway account balance",
-    "message_19": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd",
-    "message_20": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y",
-    "message_21": "archway account balance",
-    "message_22": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd",
-    "message_23": "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
-  },
-  "fields": {
-    "message_16.keyword": [
-      "Reward Amount: 610000"
-    ],
-    "message_2.keyword": [
-      "Read key: l211"
-    ],
-    "message_23": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
-    ],
-    "message_22": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
-    ],
-    "message_15.keyword": [
-      "Remaining Record Limit: 61"
-    ],
-    "message_1.keyword": [
-      "Read key: l111"
-    ],
-    "message_4.keyword": [
-      "Read key: l411"
-    ],
-    "message_3.keyword": [
-      "Read key: l311"
-    ],
-    "message_21": [
-      "archway account balance"
-    ],
-    "message_20": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y"
-    ],
-    "message_3": [
-      "Read key: l311"
-    ],
-    "message_2": [
-      "Read key: l211"
-    ],
-    "message_12.keyword": [
-      "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines..."
-    ],
-    "message_11.keyword": [
-      "Read key: rly0"
-    ],
-    "message_1": [
-      "Read key: l111"
-    ],
-    "message_7": [
-      "Read key: pval2"
-    ],
-    "message_6": [
-      "Read key: pval1"
-    ],
-    "message_5": [
-      "Read key: prev1"
-    ],
-    "message_4": [
-      "Read key: l411"
-    ],
-    "message_14.keyword": [
-      "Iterations: 0"
-    ],
-    "message_19": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
-    ],
-    "timestamp": [
-      "2023-08-19T04:06:00.000Z"
-    ],
-    "message_13.keyword": [
-      "Cumulative Reward amount: 610000"
-    ],
-    "message_12": [
-      "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines..."
-    ],
-    "message_11": [
-      "Read key: rly0"
-    ],
-    "message_14": [
-      "Iterations: 0"
-    ],
-    "message_13": [
-      "Cumulative Reward amount: 610000"
-    ],
-    "message_16": [
-      "Reward Amount: 610000"
-    ],
-    "message_15": [
-      "Remaining Record Limit: 61"
-    ],
-    "message_18": [
-      "archway account balance"
-    ],
-    "message_17": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"
-    ],
-    "message_9.keyword": [
-      "Read key: pval4"
-    ],
-    "message_9": [
-      "Read key: pval4"
-    ],
-    "message_8": [
-      "Read key: pval3"
-    ],
-    "message_8.keyword": [
-      "Read key: pval3"
-    ],
-    "message_10": [
-      "Read key: pval5"
-    ],
-    "message_10.keyword": [
-      "Read key: pval5"
-    ],
-    "message_7.keyword": [
-      "Read key: pval2"
-    ],
-    "message_21.keyword": [
-      "archway account balance"
-    ],
-    "message_18.keyword": [
-      "archway account balance"
-    ],
-    "message_5.keyword": [
-      "Read key: prev1"
-    ],
-    "message_6.keyword": [
-      "Read key: pval1"
-    ]
-  },
-  "ignored_field_values": {
-    "message_17.keyword": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"
-    ],
-    "message_23.keyword": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
-    ],
-    "message_20.keyword": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y"
-    ],
-    "message_22.keyword": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
-    ],
-    "message_19.keyword": [
-      "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
-    ]
-  }
+  "message_2.keyword": [
+    "Read key: l211"
+  ],
+  "message_23": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+  ],
+  "message_22": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
+  ],
+  "message_15.keyword": [
+    "Remaining Record Limit: 61"
+  ],
+  "message_1.keyword": [
+    "Read key: l111"
+  ],
+  "message_4.keyword": [
+    "Read key: l411"
+  ],
+  "message_3.keyword": [
+    "Read key: l311"
+  ],
+  "message_21": [
+    "archway account balance"
+  ],
+  "message_20": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y"
+  ],
+  "message_3": [
+    "Read key: l311"
+  ],
+  "message_2": [
+    "Read key: l211"
+  ],
+  "message_12.keyword": [
+    "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines..."
+  ],
+  "message_11.keyword": [
+    "Read key: rly0"
+  ],
+  "message_1": [
+    "Read key: l111"
+  ],
+  "message_7": [
+    "Read key: pval2"
+  ],
+  "message_6": [
+    "Read key: pval1"
+  ],
+  "message_5": [
+    "Read key: prev1"
+  ],
+  "message_4": [
+    "Read key: l411"
+  ],
+  "message_14.keyword": [
+    "Iterations: 0"
+  ],
+  "message_19": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
+  ],
+  "timestamp": [
+    "2023-08-19T04:06:00.000Z"
+  ],
+  "message_13.keyword": [
+    "Cumulative Reward amount: 610000"
+  ],
+  "message_12": [
+    "Total aggregate for contract archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd exceeded 30 61. Removing lines..."
+  ],
+  "message_11": [
+    "Read key: rly0"
+  ],
+  "message_14": [
+    "Iterations: 0"
+  ],
+  "message_13": [
+    "Cumulative Reward amount: 610000"
+  ],
+  "message_16": [
+    "Reward Amount: 610000"
+  ],
+  "message_15": [
+    "Remaining Record Limit: 61"
+  ],
+  "message_18": [
+    "archway account balance"
+  ],
+  "message_17": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+  ],
+  "message_9.keyword": [
+    "Read key: pval4"
+  ],
+  "message_9": [
+    "Read key: pval4"
+  ],
+  "message_8": [
+    "Read key: pval3"
+  ],
+  "message_8.keyword": [
+    "Read key: pval3"
+  ],
+  "message_10": [
+    "Read key: pval5"
+  ],
+  "message_10.keyword": [
+    "Read key: pval5"
+  ],
+  "message_7.keyword": [
+    "Read key: pval2"
+  ],
+  "message_21.keyword": [
+    "archway account balance"
+  ],
+  "message_18.keyword": [
+    "archway account balance"
+  ],
+  "message_5.keyword": [
+    "Read key: prev1"
+  ],
+  "message_6.keyword": [
+    "Read key: pval1"
+  ]
+},
+"ignored_field_values": {
+  "message_17.keyword": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 tx bank send archway14zd6utea6u2zy5pd2yecphz8j9ydsq7x7qc8fu archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd 1000000uarch --from pval4--keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+  ],
+  "message_23.keyword": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1  tx bank send archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd archway1p4t985vch49tm632c9kd8qfag9gc2yfpcw845a 610000uarch --from l111 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"
+  ],
+  "message_20.keyword": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 rewards withdraw-rewards --from l111 --records-limit 61 --gas auto --gas-prices 0.082488000000000000uarch --gas-adjustment 1.4 -y"
+  ],
+  "message_22.keyword": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
+  ],
+  "message_19.keyword": [
+    "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances --chain-id localnet archway1ylse27p8a8xpxlafugm8yfeghwhuzxpq3sfmgd"
+  ]
+}
 }
 ```
 
-# Liquid Stake Module Job Index 
+# Liquid Stake Module Job Index
 
 ```
 {
@@ -2719,7 +2643,8 @@ txhash.keyword
   }
 }
 ```
-Distribute Liquidity Job Index 
+
+Distribute Liquidity Job Index
 
 ```
 {

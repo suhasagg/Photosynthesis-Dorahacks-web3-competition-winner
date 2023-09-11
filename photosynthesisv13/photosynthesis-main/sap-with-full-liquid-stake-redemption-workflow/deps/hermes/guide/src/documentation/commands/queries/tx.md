@@ -2,7 +2,6 @@
 
 Use the `query tx` command to query information about transaction(s).
 
-
 ```shell
 USAGE:
     hermes query tx <SUBCOMMAND>
@@ -18,11 +17,10 @@ SUBCOMMANDS:
 
 <!-- toc -->
 
-
 ## Transaction Events
 
-Use the `query tx events` command to obtain a list of events that a chain generated as a consequence of
-delivering a transaction.
+Use the `query tx events` command to obtain a list of events that a chain
+generated as a consequence of delivering a transaction.
 
 ```shell
 USAGE:
@@ -36,7 +34,7 @@ REQUIRED:
         --hash <HASH>         Transaction hash to query
 ```
 
-__Example__
+**Example**
 
 Query chain `ibc-0` for the events emitted due to transaction with hash
 `6EDBBCBCB779F9FC9D6884ACDC4350E69720C4B362E4ACE6C576DE792F837490`:

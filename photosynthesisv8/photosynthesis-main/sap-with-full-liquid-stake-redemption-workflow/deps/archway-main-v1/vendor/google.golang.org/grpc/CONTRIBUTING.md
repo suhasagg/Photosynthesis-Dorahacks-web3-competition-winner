@@ -1,10 +1,14 @@
 # How to contribute
 
-We definitely welcome your patches and contributions to gRPC! Please read the gRPC
-organization's [governance rules](https://github.com/grpc/grpc-community/blob/master/governance.md)
-and [contribution guidelines](https://github.com/grpc/grpc-community/blob/master/CONTRIBUTING.md) before proceeding.
+We definitely welcome your patches and contributions to gRPC! Please read the
+gRPC organization's
+[governance rules](https://github.com/grpc/grpc-community/blob/master/governance.md)
+and
+[contribution guidelines](https://github.com/grpc/grpc-community/blob/master/CONTRIBUTING.md)
+before proceeding.
 
-If you are new to github, please start by reading [Pull Request howto](https://help.github.com/articles/about-pull-requests/)
+If you are new to github, please start by reading
+[Pull Request howto](https://help.github.com/articles/about-pull-requests/)
 
 ## Legal requirements
 
@@ -12,6 +16,7 @@ In order to protect both you and ourselves, you will need to sign the
 [Contributor License Agreement](https://identity.linuxfoundation.org/projects/cncf).
 
 ## Guidelines for Pull Requests
+
 How to get your contributions merged smoothly and quickly.
 
 - Create **small PRs** that are narrowly focused on **addressing a single
@@ -26,8 +31,8 @@ How to get your contributions merged smoothly and quickly.
   discussion with gRPC-Go authors and consultants.
 
 - For speculative changes, consider opening an issue and discussing it first. If
-  you are suggesting a behavioral or API change, consider starting with a [gRFC
-  proposal](https://github.com/grpc/proposal).
+  you are suggesting a behavioral or API change, consider starting with a
+  [gRFC proposal](https://github.com/grpc/proposal).
 
 - Provide a good **PR description** as a record of **what** change is being made
   and **why** it was made. Link to a github issue if it exists.
@@ -53,9 +58,11 @@ How to get your contributions merged smoothly and quickly.
 - **All tests need to be passing** before your change can be merged. We
   recommend you **run tests locally** before creating your PR to catch breakages
   early on.
+
   - `make all` to test everything, OR
   - `make vet` to catch vet errors
   - `make test` to run the tests
   - `make testrace` to run tests in race mode
 
-- Exceptions to the rules can be made if there's a compelling reason for doing so.
+- Exceptions to the rules can be made if there's a compelling reason for doing
+  so.

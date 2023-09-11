@@ -47,10 +47,11 @@ REQUIRED:
         --dst-client <DST_CLIENT_ID>    Identifier of the destination client
 ```
 
-__Example__
+**Example**
 
-Given that two clients were previously created with identifier `07-tendermint-0` on chain `ibc-0` and
-identifier `07-tendermint-1` on chain `ibc-1`, we can initialize a connection between the two clients.
+Given that two clients were previously created with identifier `07-tendermint-0`
+on chain `ibc-0` and identifier `07-tendermint-1` on chain `ibc-1`, we can
+initialize a connection between the two clients.
 
 First, let's initialize the connection on `ibc-0`:
 
@@ -87,10 +88,10 @@ A new connection has been initialized on `ibc-0` with identifier `connection-0`.
 
 > Note that the `counterparty_connection_id` field is currently empty.
 
-
 ## Connection Try
 
-Use the `conn-try` command to establish a counterparty to the connection on the other chain.
+Use the `conn-try` command to establish a counterparty to the connection on the
+other chain.
 
 ```shell
 USAGE:
@@ -120,7 +121,7 @@ REQUIRED:
             Identifier of the destination client
 ```
 
-__Example__
+**Example**
 
 Let's now create the counterparty to `connection-0` on chain `ibc-1`:
 
@@ -159,8 +160,8 @@ Success: OpenTryConnection(
 
 A new connection has been created on `ibc-1` with identifier `connection-1`.
 
-> Note that the field `counterparty_connection_id` points to the connection on `ibc-0`.
-
+> Note that the field `counterparty_connection_id` points to the connection on
+> `ibc-0`.
 
 ## Connection Ack
 
@@ -193,9 +194,10 @@ REQUIRED:
             Identifier of the destination connection (required) [aliases: dst-conn]
 ```
 
-__Example__
+**Example**
 
-We can now acknowledge on `ibc-0` that `ibc-1` has accepted the connection attempt:
+We can now acknowledge on `ibc-0` that `ibc-1` has accepted the connection
+attempt:
 
 ```shell
 hermes tx conn-ack --dst-chain ibc-0 --src-chain ibc-1 --dst-client 07-tendermint-0 --src-client 07-tendermint-1 --dst-connection connection-0 --src-connection connection-1
@@ -230,13 +232,14 @@ Success: OpenAckConnection(
 )
 ```
 
-> Note that the field `counterparty_connection_id` now points to the connection on `ibc-1`.
-
+> Note that the field `counterparty_connection_id` now points to the connection
+> on `ibc-1`.
 
 ## Connection Confirm
 
-Use the `conn-confirm` command to confirm that the connection has been acknowledged,
-and finish the handshake, after which the connection is open on both chains.
+Use the `conn-confirm` command to confirm that the connection has been
+acknowledged, and finish the handshake, after which the connection is open on
+both chains.
 
 ```shell
 USAGE:
@@ -265,7 +268,7 @@ REQUIRED:
             Identifier of the destination connection (required) [aliases: dst-conn]
 ```
 
-__Example__
+**Example**
 
 Confirm on `ibc-1` that `ibc-0` has accepted the connection attempt.
 
@@ -303,4 +306,3 @@ Success: OpenConfirmConnection(
 ```
 
 We have now successfully established a connection between the two chains.
-

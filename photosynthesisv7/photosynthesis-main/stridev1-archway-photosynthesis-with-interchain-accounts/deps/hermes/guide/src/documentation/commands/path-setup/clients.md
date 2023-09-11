@@ -47,7 +47,7 @@ REQUIRED:
             Identifier of the chain targeted by the client
 ```
 
-__Example__
+**Example**
 
 Create a new client on `ibc-0` which tracks `ibc-1`:
 
@@ -79,8 +79,8 @@ A new client is created with identifier `07-tendermint-1`
 
 ## Update Client
 
-Use the `update client` command to update an existing client with a new consensus state.
-Specific update and trusted heights can be specified.
+Use the `update client` command to update an existing client with a new
+consensus state. Specific update and trusted heights can be specified.
 
 ```shell
 USAGE:
@@ -101,7 +101,7 @@ REQUIRED:
         --host-chain <HOST_CHAIN_ID>    Identifier of the chain that hosts the client
 ```
 
-__Update client with latest header__
+**Update client with latest header**
 
 the client on `ibc-0` with latest header of `ibc-1`:
 
@@ -129,9 +129,10 @@ Success: UpdateClient(
 )
 ```
 
-The client with identifier `07-tendermint-1` has been updated with the consensus state at height `1-293`.
+The client with identifier `07-tendermint-1` has been updated with the consensus
+state at height `1-293`.
 
-__Update a client to a specific target height__
+**Update a client to a specific target height**
 
 ```shell
 hermes update client --host-chain ibc-0 --client 07-tendermint-1 --height 320 --trusted-height 293
@@ -157,4 +158,5 @@ Success: UpdateClient(
 )
 ```
 
-The client with identifier `07-tendermint-1` has been updated with the consensus state at height `1-320`, as specified.
+The client with identifier `07-tendermint-1` has been updated with the consensus
+state at height `1-320`, as specified.

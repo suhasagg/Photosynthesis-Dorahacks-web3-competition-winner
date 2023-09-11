@@ -16,17 +16,17 @@ components of the build system change.
 
 ### Old Build System (currently for `GOOS != "linux"`)
 
-The old build system generates the Go files based on the C header files
-present on your system. This means that files
-for a given GOOS/GOARCH pair must be generated on a system with that OS and
-architecture. This also means that the generated code can differ from system
-to system, based on differences in the header files.
+The old build system generates the Go files based on the C header files present
+on your system. This means that files for a given GOOS/GOARCH pair must be
+generated on a system with that OS and architecture. This also means that the
+generated code can differ from system to system, based on differences in the
+header files.
 
-To avoid this, if you are using the old build system, only generate the Go
-files on an installation with unmodified header files. It is also important to
-keep track of which version of the OS the files were generated from (ex.
-Darwin 14 vs Darwin 15). This makes it easier to track the progress of changes
-and have each OS upgrade correspond to a single change.
+To avoid this, if you are using the old build system, only generate the Go files
+on an installation with unmodified header files. It is also important to keep
+track of which version of the OS the files were generated from (ex. Darwin 14 vs
+Darwin 15). This makes it easier to track the progress of changes and have each
+OS upgrade correspond to a single change.
 
 To build the files for your current OS and architecture, make sure GOOS and
 GOARCH are set correctly and run `mkall.sh`. This will generate the files for
@@ -56,41 +56,43 @@ Requirements: bash, go, docker
 
 ## Component files
 
-This section describes the various files used in the code generation process.
-It also contains instructions on how to modify these files to add a new
-architecture/OS or to add additional syscalls, types, or constants. Note that
-if you are using the new build system, the scripts/programs cannot be called normally.
-They must be called from within the docker container.
+This section describes the various files used in the code generation process. It
+also contains instructions on how to modify these files to add a new
+architecture/OS or to add additional syscalls, types, or constants. Note that if
+you are using the new build system, the scripts/programs cannot be called
+normally. They must be called from within the docker container.
 
 ### asm files
 
 The hand-written assembly file at `asm_${GOOS}_${GOARCH}.s` implements system
 call dispatch. There are three entry points:
+
 ```
   func Syscall(trap, a1, a2, a3 uintptr) (r1, r2, err uintptr)
   func Syscall6(trap, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2, err uintptr)
   func RawSyscall(trap, a1, a2, a3 uintptr) (r1, r2, err uintptr)
 ```
+
 The first and second are the standard ones; they differ only in how many
 arguments can be passed to the kernel. The third is for low-level use by the
 ForkExec wrapper. Unlike the first two, it does not call into the scheduler to
 let it know that a system call is running.
 
-When porting Go to a new architecture/OS, this file must be implemented for
-each GOOS/GOARCH pair.
+When porting Go to a new architecture/OS, this file must be implemented for each
+GOOS/GOARCH pair.
 
 ### mksysnum
 
-Mksysnum is a Go program located at `${GOOS}/mksysnum.go` (or `mksysnum_${GOOS}.go`
-for the old system). This program takes in a list of header files containing the
-syscall number declarations and parses them to produce the corresponding list of
-Go numeric constants. See `zsysnum_${GOOS}_${GOARCH}.go` for the generated
-constants.
+Mksysnum is a Go program located at `${GOOS}/mksysnum.go` (or
+`mksysnum_${GOOS}.go` for the old system). This program takes in a list of
+header files containing the syscall number declarations and parses them to
+produce the corresponding list of Go numeric constants. See
+`zsysnum_${GOOS}_${GOARCH}.go` for the generated constants.
 
 Adding new syscall numbers is mostly done by running the build on a sufficiently
-new installation of the target OS (or updating the source checkouts for the
-new build system). However, depending on the OS, you may need to update the
-parsing in mksysnum.
+new installation of the target OS (or updating the source checkouts for the new
+build system). However, depending on the OS, you may need to update the parsing
+in mksysnum.
 
 ### mksyscall.go
 
@@ -122,25 +124,24 @@ private identifiers. This cleaned-up code is written to
 
 The hardest part about preparing this file is figuring out which headers to
 include and which symbols need to be `#define`d to get the actual data
-structures that pass through to the kernel system calls. Some C libraries
-preset alternate versions for binary compatibility and translate them on the
-way in and out of system calls, but there is almost always a `#define` that can
-get the real ones.
-See `types_darwin.go` and `linux/types.go` for examples.
+structures that pass through to the kernel system calls. Some C libraries preset
+alternate versions for binary compatibility and translate them on the way in and
+out of system calls, but there is almost always a `#define` that can get the
+real ones. See `types_darwin.go` and `linux/types.go` for examples.
 
-To add a new type, add in the necessary include statement at the top of the
-file (if it is not already there) and add in a type alias line. Note that if
-your type is significantly different on different architectures, you may need
-some `#if/#elif` macros in your include statements.
+To add a new type, add in the necessary include statement at the top of the file
+(if it is not already there) and add in a type alias line. Note that if your
+type is significantly different on different architectures, you may need some
+`#if/#elif` macros in your include statements.
 
 ### mkerrors.sh
 
 This script is used to generate the system's various constants. This doesn't
 just include the error numbers and error strings, but also the signal numbers
 and a wide variety of miscellaneous constants. The constants come from the list
-of include files in the `includes_${uname}` variable. A regex then picks out
-the desired `#define` statements, and generates the corresponding Go constants.
-The error numbers and strings are generated from `#include <errno.h>`, and the
+of include files in the `includes_${uname}` variable. A regex then picks out the
+desired `#define` statements, and generates the corresponding Go constants. The
+error numbers and strings are generated from `#include <errno.h>`, and the
 signal numbers and strings are generated from `#include <signal.h>`. All of
 these constants are written to `zerrors_${GOOS}_${GOARCH}.go` via a C program,
 `_errors.c`, which prints out all the constants.
@@ -156,10 +157,11 @@ from the generated architecture-specific files listed below, and merge these
 into a common file for each OS.
 
 The merge is performed in the following steps:
-1. Construct the set of common code that is idential in all architecture-specific files.
+
+1. Construct the set of common code that is idential in all
+   architecture-specific files.
 2. Write this common code to the merged file.
 3. Remove the common code from all architecture-specific files.
-
 
 ## Generated files
 
@@ -175,8 +177,8 @@ Generated by `mksyscall.go` (see above).
 
 ### `zsysnum_${GOOS}_${GOARCH}.go`
 
-A list of numeric constants for all the syscall number of the specific GOOS
-and GOARCH. Generated by mksysnum (see above).
+A list of numeric constants for all the syscall number of the specific GOOS and
+GOARCH. Generated by mksysnum (see above).
 
 ### `ztypes_${GOOS}_${GOARCH}.go`
 

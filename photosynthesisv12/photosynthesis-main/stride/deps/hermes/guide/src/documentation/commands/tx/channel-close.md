@@ -40,7 +40,7 @@ REQUIRED:
             Identifier of the destination port
 ```
 
-__Example__
+**Example**
 
 ```shell
 hermes tx chan-close-init --dst-chain ibc-0 --src-chain ibc-1 --dst-connection connection-0 --dst-port transfer --src-port transfer --dst-channel channel-0 --src-channel channel-1
@@ -113,7 +113,7 @@ REQUIRED:
 
 ```
 
-__Example__
+**Example**
 
 ```shell
 hermes tx chan-close-confirm --dst-chain ibc-1 --src-chain ibc-0 --dst-connection connection-1 --src-port transfer --dst-port transfer --dst-channel channel-1 --src-channel channel-0
@@ -151,7 +151,9 @@ Success: CloseConfirmChannel(
 )
 ```
 
-__NOTE__: The `cosmos-sdk` transfer module implementation does not allow the user (`hermes` in this case) to initiate the closing of channels.
-Therefore, when using the Gaia release image, the `chan-close-init` command
-fails as the `MsgChannelCloseInit` message included in the transaction is rejected.
-To be able to test channel closure, you need to [patch](../../../advanced/troubleshooting/patch-gaia.md) your gaia deployments.
+**NOTE**: The `cosmos-sdk` transfer module implementation does not allow the
+user (`hermes` in this case) to initiate the closing of channels. Therefore,
+when using the Gaia release image, the `chan-close-init` command fails as the
+`MsgChannelCloseInit` message included in the transaction is rejected. To be
+able to test channel closure, you need to
+[patch](../../../advanced/troubleshooting/patch-gaia.md) your gaia deployments.

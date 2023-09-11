@@ -6,8 +6,8 @@ This repository provides Go terminal and console support packages.
 
 ## Download/Install
 
-The easiest way to install is to run `go get -u golang.org/x/term`. You can
-also manually git clone the repository to `$GOPATH/src/golang.org/x/term`.
+The easiest way to install is to run `go get -u golang.org/x/term`. You can also
+manually git clone the repository to `$GOPATH/src/golang.org/x/term`.
 
 ## Report Issues / Send Patches
 

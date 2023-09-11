@@ -1,12 +1,13 @@
 <!-- markdown-link-check-disable -->
+
 # Cosmos Hub Inflation variable modification: Blocks Per Year
 
 **Quick Summary of issue**
 
 There are 6 main variables that control the maximum, minimum, & change of the
 atom inflation rate for the cosmos hub. Description of these variables can be
-found under the [mint module in the parameters
-wiki](https://github.com/cosmos/governance/blob/master/params-change/Mint.md).
+found under the
+[mint module in the parameters wiki](https://github.com/cosmos/governance/blob/master/params-change/Mint.md).
 
 In this proposal we will be looking at adjusting the blocks per year parameter.
 
@@ -58,7 +59,7 @@ reality is beneficial to all participants when doing any sort of economic
 calculus. Currently the true inflation rate is actually lower than the stated
 rate by a factor of 10ish % (4.36 Mil blocks per year / 4.85 Mil blocks per
 year). So while the target rate is 7%, the actual current rate is more like
-~6.29%.
+\~6.29%.
 
 **Conclusion**
 

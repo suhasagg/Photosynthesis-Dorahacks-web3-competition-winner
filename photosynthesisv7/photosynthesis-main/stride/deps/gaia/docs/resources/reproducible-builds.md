@@ -1,17 +1,23 @@
----
-order: 5
-title: Building Gaia Deterministically
----
+***
+
+## order: 5&#xA;title: Building Gaia Deterministically
 
 # Build Gaia Deterministically
 
-The [Tendermint rbuilder Docker image](https://github.com/tendermint/images/tree/master/rbuilder) provides a deterministic build environment that is used to build Cosmos SDK applications. It provides a way to be reasonably sure that the executables are really built from the git source. It also makes sure that the same, tested dependencies are used and statically built into the executable.
+The
+[Tendermint rbuilder Docker image](https://github.com/tendermint/images/tree/master/rbuilder)
+provides a deterministic build environment that is used to build Cosmos SDK
+applications. It provides a way to be reasonably sure that the executables are
+really built from the git source. It also makes sure that the same, tested
+dependencies are used and statically built into the executable.
 
 ## Prerequisites
 
-Make sure you have [Docker installed on your system](https://docs.docker.com/get-docker/).
+Make sure you have
+[Docker installed on your system](https://docs.docker.com/get-docker/).
 
-All the following instructions have been tested on *Ubuntu 18.04.2 LTS* with *docker 20.10.2*.
+All the following instructions have been tested on *Ubuntu 18.04.2 LTS* with
+*docker 20.10.2*.
 
 ## Build
 
@@ -30,10 +36,10 @@ git checkout v4.2.1
 
 The buildsystem supports and produces binaries for the following architectures:
 
-* **darwin/amd64**
-* **linux/amd64**
-* **linux/arm64**
-* **windows/amd64**
+- **darwin/amd64**
+- **linux/amd64**
+- **linux/arm64**
+- **windows/amd64**
 
 Run the following command to launch a build for all supported architectures:
 
@@ -41,8 +47,9 @@ Run the following command to launch a build for all supported architectures:
 make distclean build-reproducible
 ```
 
-The build system generates both the binaries and deterministic build report in the `artifacts` directory.
-The `artifacts/build_report` file contains the list of the build artifacts and their respective checksums, and can be used to verify
+The build system generates both the binaries and deterministic build report in
+the `artifacts` directory. The `artifacts/build_report` file contains the list
+of the build artifacts and their respective checksums, and can be used to verify
 build sanity. An example of its contents follows:
 
 ```

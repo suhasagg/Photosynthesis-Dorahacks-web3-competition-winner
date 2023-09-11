@@ -1,18 +1,16 @@
-# Photosynthesis-Archway  <-> Stride integrations
+# Photosynthesis-Archway <-> Stride integrations
 
 ![Photosynthesis](https://i.imgur.com/Tn1GUZnb.jpg)
 
+1\)START RELAYER
 
-1)START RELAYER
+2\)CREATING CONNECTIONS WITH THE GO RELAYER
 
-2)CREATING CONNECTIONS WITH THE GO RELAYER 
-
-3)Create connections and channels
-
+3\)Create connections and channels
 
 a)Get channel ID created on the photosynthesis-archway
 
-b)Start Go Relayer 
+b)Start Go Relayer
 
 c)IBC Transfer from Photosynthesis-archway to stride (from relayer account)
 
@@ -24,11 +22,9 @@ f)Add validator
 
 g)Confirm ICA channels were registered
 
-
 FLOW
 
 Go Through Flow
-
 
 a)Liquid stake (then wait and LS again)
 
@@ -46,26 +42,24 @@ g)Change validator weights
 
 h)LS and confirm delegation aligned with new weights
 
-i)Update delegations (just submit this query and confirm the ICQ callback displays in the stride logs)
-
+i)Update delegations (just submit this query and confirm the ICQ callback
+displays in the stride logs)
 
 # Must be submitted in ICQ window
 
 j)Restore closed channel
 
+# Photosynthesis-Archway IBC integrations.
 
+1\)evmos
 
-# Photosynthesis-Archway IBC integrations. 
+2\)gaia
 
-1)evmos
+3\)juno
 
-2)gaia
+4\)osmosis
 
-3)juno
-
-4)osmosis
-
-5)stargaze
+5\)stargaze
 
 ```
 global:
@@ -88,7 +82,7 @@ chains:
       debug: false
       timeout: 20s
       output-format: json
-      sign-mode: direct  
+      sign-mode: direct
   stride:
     type: cosmos
     value:
@@ -198,10 +192,8 @@ chains:
         - ethermint
 ```
 
-# Relayer registry 
+# Relayer registry
 
-Cosmos relayer
-1)https://github.com/cosmos/relayer.git
+Cosmos relayer 1)https://github.com/cosmos/relayer.git
 
-Hermes relayer 
-2)https://github.com/informalsystems/ibc-rs 
+Hermes relayer 2)https://github.com/informalsystems/ibc-rs

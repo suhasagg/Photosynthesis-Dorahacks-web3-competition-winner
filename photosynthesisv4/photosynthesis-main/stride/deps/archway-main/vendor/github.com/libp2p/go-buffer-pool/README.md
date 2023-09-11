@@ -1,5 +1,4 @@
-go-buffer-pool
-==================
+# go-buffer-pool
 
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](https://protocol.ai)
 [![](https://img.shields.io/badge/project-libp2p-yellow.svg?style=flat-square)](https://libp2p.io/)
@@ -13,41 +12,48 @@ go-buffer-pool
 ## Table of Contents
 
 - [Use Case](#use-case)
-    - [Advantages over GC](#advantages-over-gc)
-    - [Disadvantages over GC:](#disadvantages-over-gc)
+  - [Advantages over GC](#advantages-over-gc)
+  - [Disadvantages over GC:](#disadvantages-over-gc)
 - [Contribute](#contribute)
 - [License](#license)
 
 ## Use Case
 
-Use this when you need to repeatedly allocate and free a bunch of temporary buffers of approximately the same size.
+Use this when you need to repeatedly allocate and free a bunch of temporary
+buffers of approximately the same size.
 
 ### Advantages over GC
 
-* Reduces Memory Usage:
-  * We don't have to wait for a GC to run before we can reuse memory. This is essential if you're repeatedly allocating large short-lived buffers.
+- Reduces Memory Usage:
 
-* Reduces CPU usage:
-  * It takes some load off of the GC (due to buffer reuse).
-  * We don't have to zero buffers (fewer wasteful memory writes).
+  - We don't have to wait for a GC to run before we can reuse memory. This is
+    essential if you're repeatedly allocating large short-lived buffers.
+
+- Reduces CPU usage:
+  - It takes some load off of the GC (due to buffer reuse).
+  - We don't have to zero buffers (fewer wasteful memory writes).
 
 ### Disadvantages over GC:
 
-* Can leak memory contents. Unlike the go GC, we *don't* zero memory.
-* All buffers have a capacity of a power of 2. This is fine if you either (a) actually need buffers with this size or (b) expect these buffers to be temporary.
-* Requires that buffers be returned explicitly. This can lead to race conditions and memory corruption if the buffer is released while it's still in use.
+- Can leak memory contents. Unlike the go GC, we *don't* zero memory.
+- All buffers have a capacity of a power of 2. This is fine if you either (a)
+  actually need buffers with this size or (b) expect these buffers to be
+  temporary.
+- Requires that buffers be returned explicitly. This can lead to race conditions
+  and memory corruption if the buffer is released while it's still in use.
 
 ## Contribute
 
 PRs are welcome!
 
-Small note: If editing the Readme, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+Small note: If editing the Readme, please conform to the
+[standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## License
 
-MIT © Protocol Labs
-BSD © The Go Authors
+MIT © Protocol Labs BSD © The Go Authors
 
----
+***
 
-The last gx published version of this module was: 0.1.3: QmQDvJoB6aJWN3sjr3xsgXqKCXf4jU5zdMXpDMsBkYVNqa
+The last gx published version of this module was: 0.1.3:
+QmQDvJoB6aJWN3sjr3xsgXqKCXf4jU5zdMXpDMsBkYVNqa

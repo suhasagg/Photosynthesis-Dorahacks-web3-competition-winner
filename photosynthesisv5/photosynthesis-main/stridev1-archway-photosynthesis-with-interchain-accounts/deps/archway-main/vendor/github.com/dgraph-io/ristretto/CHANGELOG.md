@@ -1,23 +1,28 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project will adhere to [Semantic Versioning](http://semver.org/spec/v2.0.0.html) starting v1.0.0.
+and this project will adhere to
+[Semantic Versioning](http://semver.org/spec/v2.0.0.html) starting v1.0.0.
 
 ## Unreleased
 
 ## [0.1.0] - 2021-06-03
 
 [0.1.0]: https://github.com/dgraph-io/ristretto/compare/v0.1.0..v0.0.3
+
 This release contains bug fixes and improvements to Ristretto. It also contains
 major updates to the z package. The z package contains types such as Tree (B+
 tree), Buffer, Mmap file, etc. All these types are used in Badger and Dgraph to
 improve performance and reduce memory requirements.
 
 ### Changed
+
 - Make item public. Add a new onReject call for rejected items. (#180)
 
 ### Added
+
 - Use z.Buffer backing for B+ tree (#268)
 - expose GetTTL function (#270)
 - docs(README): Ristretto is production-ready. (#267)
@@ -35,6 +40,7 @@ improve performance and reduce memory requirements.
 - Add mechanism to wait for items to be processed. (#184)
 
 ### Fixed
+
 - change expiration type from int64 to time.Time (#277)
 - fix(buffer): make buffer capacity atleast defaultCapacity (#273)
 - Fixes for z.PersistentTree (#272)
@@ -46,7 +52,8 @@ improve performance and reduce memory requirements.
 - Use Fibonacci for latency numbers
 - cache: fix race when clearning a cache (#261)
 - Check for keys without values in superflags (#259)
-- chore(perf): using tags instead of runtime callers to improve the performance of leak detection (#255)
+- chore(perf): using tags instead of runtime callers to improve the performance
+  of leak detection (#255)
 - fix(Flags): panic on user errors (#256)
 - fix SuperFlagHelp newline (#252)
 - fix(arm): Fix crashing under ARMv6 due to memory mis-alignment (#239)
@@ -69,7 +76,7 @@ improve performance and reduce memory requirements.
 - Add a BufferFrom
 - Bring z.Allocator and z.AllocatorPool back
 - Fix(z.Allocator): Make Allocator use Go memory
-- Updated ZeroOut to use a simple for loop.  (#231)
+- Updated ZeroOut to use a simple for loop. (#231)
 - Add concurrency back
 - Add a test to check concurrency of Allocator.
 - Fix(buffer): Expose padding by z.Buffer's APIs and fix test (#222)
@@ -80,7 +87,8 @@ improve performance and reduce memory requirements.
 - Create an AllocatorPool class.
 - chore(btree): clean NewTree API (#225)
 - fix(MmapFile): Don't error out if fileSize > sz (#224)
-- feat(btree): allow option to reset btree and mmaping it to specified file. (#223)
+- feat(btree): allow option to reset btree and mmaping it to specified file.
+  (#223)
 - Use mremap on Linux instead of munmap+mmap (#221)
 - Reuse pages in B+ tree (#220)
 - fix(allocator): make nil allocator return go byte slice (#217)
@@ -140,11 +148,11 @@ improve performance and reduce memory requirements.
 
 ### Fixed
 
-- z: use MemHashString and xxhash.Sum64String ([#153][])
-- Check conflict key before updating expiration map. ([#154][])
-- Fix race condition in Cache.Clear ([#133][])
-- Improve handling of updated items ([#168][])
-- Fix droppedSets count while updating the item ([#171][])
+- z: use MemHashString and xxhash.Sum64String (\[#153]\[])
+- Check conflict key before updating expiration map. (\[#154]\[])
+- Fix race condition in Cache.Clear (\[#133]\[])
+- Improve handling of updated items (\[#168]\[])
+- Fix droppedSets count while updating the item (\[#171]\[])
 
 ## [0.0.2] - 2020-02-24
 
@@ -157,14 +165,18 @@ improve performance and reduce memory requirements.
 ### Fixed
 
 - Fix the way metrics are handled for deletions. ([#111][])
-- Support nil `*Cache` values in `Clear` and `Close`. ([#119][]) 
+- Support nil `*Cache` values in `Clear` and `Close`. ([#119][])
 - Delete item immediately. ([#113][])
 - Remove key from policy after TTL eviction. ([#130][])
 
 [#111]: https://github.com/dgraph-io/ristretto/issues/111
+
 [#113]: https://github.com/dgraph-io/ristretto/issues/113
+
 [#119]: https://github.com/dgraph-io/ristretto/issues/119
+
 [#122]: https://github.com/dgraph-io/ristretto/issues/122
+
 [#130]: https://github.com/dgraph-io/ristretto/issues/130
 
 ## 0.0.1

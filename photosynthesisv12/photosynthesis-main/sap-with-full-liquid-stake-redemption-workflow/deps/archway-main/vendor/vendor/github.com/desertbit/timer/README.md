@@ -4,8 +4,9 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/desertbit/timer)](https://goreportcard.com/report/github.com/desertbit/timer)
 
 This is a lightweight timer implementation which is a drop-in replacement for
-Go's Timer. Reset behaves as one would expect and drains the timer.C channel automatically.
-The core design of this package is similar to the original runtime timer implementation.
+Go's Timer. Reset behaves as one would expect and drains the timer.C channel
+automatically. The core design of this package is similar to the original
+runtime timer implementation.
 
 These two lines are equivalent except for saving some garbage:
 
@@ -16,6 +17,7 @@ t := timer.NewTimer(x)
 ```
 
 See issues:
+
 - https://github.com/golang/go/issues/11513
 - https://github.com/golang/go/issues/14383
 - https://github.com/golang/go/issues/12721
@@ -25,18 +27,17 @@ See issues:
 
 Quote from the [Timer Go doc reference](https://golang.org/pkg/time/#Timer):
 
->Reset changes the timer to expire after duration d.
-It returns true if the timer had been active, false if the timer had
-expired or been stopped.
+> Reset changes the timer to expire after duration d. It returns true if the
+> timer had been active, false if the timer had expired or been stopped.
 
 > To reuse an active timer, always call its Stop method first and—if it had
-expired—drain the value from its channel. For example: [...]
-This should not be done concurrent to other receives from the Timer's channel.
+> expired—drain the value from its channel. For example: \[...] This should not
+> be done concurrent to other receives from the Timer's channel.
 
 > Note that it is not possible to use Reset's return value correctly, as there
-is a race condition between draining the channel and the new timer expiring.
-Reset should always be used in concert with Stop, as described above.
-The return value exists to preserve compatibility with existing programs.
+> is a race condition between draining the channel and the new timer expiring.
+> Reset should always be used in concert with Stop, as described above. The
+> return value exists to preserve compatibility with existing programs.
 
 ## Broken behavior sample
 

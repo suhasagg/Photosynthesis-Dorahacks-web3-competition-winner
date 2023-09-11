@@ -4,24 +4,27 @@ order: 5
 
 # Events
 
-`Event`s are objects that contain information about the execution of the application. They are
-mainly used by service providers like block explorers and wallet to track the execution of various
-messages and index transactions. {synopsis}
+`Event`s are objects that contain information about the execution of the
+application. They are mainly used by service providers like block explorers and
+wallet to track the execution of various messages and index transactions.
+{synopsis}
 
 ## Pre-requisite Readings
 
-- [Cosmos SDK Events](https://docs.cosmos.network/main/core/events.html) {prereq}
-- [Ethereum's PubSub JSON-RPC API](https://geth.ethereum.org/docs/rpc/pubsub) {prereq}
+- [Cosmos SDK Events](https://docs.cosmos.network/main/core/events.html)
+  {prereq}
+- [Ethereum's PubSub JSON-RPC API](https://geth.ethereum.org/docs/rpc/pubsub)
+  {prereq}
 
 ## Subscribing to Events
 
 ### Cosmos and Tendermint Events
 
-::: tip
-Check the [Tendermint Websocket](./../clients.md#tendermint-websocket) in the Clients documentation for reference.
-:::
+::: tip Check the [Tendermint Websocket](./../clients.md#tendermint-websocket)
+in the Clients documentation for reference. :::
 
-It is possible to subscribe to `Events` via Tendermint's [Websocket](https://docs.tendermint.com/v0.34/tendermint-core/subscription.html).
+It is possible to subscribe to `Events` via Tendermint's
+[Websocket](https://docs.tendermint.com/v0.34/tendermint-core/subscription.html).
 This is done by calling the `subscribe` RPC method via Websocket:
 
 ```json
@@ -35,11 +38,14 @@ This is done by calling the `subscribe` RPC method via Websocket:
 }
 ```
 
-These events are triggered after a block is committed. You can get the full list of `event` categories and values [here](./../clients.md#list-of-tendermint-events).
+These events are triggered after a block is committed. You can get the full list
+of `event` categories and values
+[here](./../clients.md#list-of-tendermint-events).
 
-The `type` and `attribute` value of the `query` allow you to filter the specific `event` you are
-looking for. For example, a an Ethereum transaction on Evmos (`MsgEthereumTx`) triggers an `event` of type `ethermint` and
-has `sender` and `recipient` as `attributes`. Subscribing to this `event` would be done like so:
+The `type` and `attribute` value of the `query` allow you to filter the specific
+`event` you are looking for. For example, a an Ethereum transaction on Evmos
+(`MsgEthereumTx`) triggers an `event` of type `ethermint` and has `sender` and
+`recipient` as `attributes`. Subscribing to this `event` would be done like so:
 
 ```json
 {
@@ -52,16 +58,19 @@ has `sender` and `recipient` as `attributes`. Subscribing to this `event` would 
 }
 ```
 
-where `hexAddress` is an Ethereum hex address (eg: `0x1122334455667788990011223344556677889900`).
+where `hexAddress` is an Ethereum hex address (eg:
+`0x1122334455667788990011223344556677889900`).
 
 ### Ethereum Events
 
 Evmos also supports the Ethereum [JSON-RPC](./server.md) filters calls to
 subscribe to [state logs](https://eth.wiki/json-rpc/API#eth_newfilter),
-[blocks](https://eth.wiki/json-rpc/API#eth_newblockfilter) or [pending transactions](https://eth.wiki/json-rpc/API#eth_newpendingtransactionfilter) changes.
+[blocks](https://eth.wiki/json-rpc/API#eth_newblockfilter) or
+[pending transactions](https://eth.wiki/json-rpc/API#eth_newpendingtransactionfilter)
+changes.
 
-Under the hood, it uses the Tendermint RPC client's event system to process subscriptions that are
-then formatted to Ethereum-compatible events.
+Under the hood, it uses the Tendermint RPC client's event system to process
+subscriptions that are then formatted to Ethereum-compatible events.
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
@@ -69,7 +78,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],
 {"jsonrpc":"2.0","id":1,"result":"0x3503de5f0c766c68f78a03a3b05036a5"}
 ```
 
-Then you can check if the state changes with the [`eth_getFilterChanges`](https://eth.wiki/json-rpc/API#eth_getfilterchanges) call:
+Then you can check if the state changes with the
+[`eth_getFilterChanges`](https://eth.wiki/json-rpc/API#eth_getfilterchanges)
+call:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":["0x3503de5f0c766c68f78a03a3b05036a5"],"id":1}' -H "Content-Type: application/json" http://localhost:8545
@@ -81,8 +92,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 
 ### Tendermint Websocket
 
-To start a connection with the Tendermint websocket you need to define the address with the `--rpc.laddr`
-flag when starting the node (default `tcp://127.0.0.1:26657`):
+To start a connection with the Tendermint websocket you need to define the
+address with the `--rpc.laddr` flag when starting the node (default
+`tcp://127.0.0.1:26657`):
 
 ```bash
 evmosd start --rpc.laddr="tcp://127.0.0.1:26657"
@@ -100,19 +112,21 @@ ws ws://localhost:8080/websocket
 
 ### Ethereum Websocket
 
-Since Evmos runs uses Tendermint Core as it's consensus Engine and it's built with the Cosmos
-SDK framework, it inherits the event format from them. However, in order to support the native Web3
-compatibility for websockets of the [Ethereum's PubSubAPI](https://geth.ethereum.org/docs/rpc/pubsub), Evmos needs to cast the Tendermint
-responses retrieved into the Ethereum types.
+Since Evmos runs uses Tendermint Core as it's consensus Engine and it's built
+with the Cosmos SDK framework, it inherits the event format from them. However,
+in order to support the native Web3 compatibility for websockets of the
+[Ethereum's PubSubAPI](https://geth.ethereum.org/docs/rpc/pubsub), Evmos needs
+to cast the Tendermint responses retrieved into the Ethereum types.
 
-You can start a connection with the Ethereum websocket using the `--json-rpc.ws-address` flag when starting
-the node (default `"0.0.0.0:8546"`):
+You can start a connection with the Ethereum websocket using the
+`--json-rpc.ws-address` flag when starting the node (default `"0.0.0.0:8546"`):
 
 ```bash
 evmosd start  --json-rpc.address"0.0.0.0:8545" --json-rpc.ws-address="0.0.0.0:8546" --evm.rpc.api="eth,web3,net,txpool,debug" --json-rpc.enable
 ```
 
-Then, start a websocket subscription with [`ws`](https://github.com/hashrocket/ws)
+Then, start a websocket subscription with
+[`ws`](https://github.com/hashrocket/ws)
 
 ```bash
 # connect to tendermint websocet at port 8546 as defined above

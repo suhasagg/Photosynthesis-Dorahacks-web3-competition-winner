@@ -1,8 +1,6 @@
-
 # Packet Queries
 
 Use the `query packet` commands to query information about packets.
-
 
 ```shell
 USAGE:
@@ -26,10 +24,11 @@ SUBCOMMANDS:
 
 <!-- toc -->
 
-
 ## Pending Packets
 
-Use the `query packet pending` command to query the sequence numbers of all packets that have not yet been received or acknowledged, at both ends of a channel.
+Use the `query packet pending` command to query the sequence numbers of all
+packets that have not yet been received or acknowledged, at both ends of a
+channel.
 
 ```shell
 USAGE:
@@ -45,9 +44,10 @@ REQUIRED:
         --port <PORT_ID>          Port identifier on the chain given by <CHAIN_ID>
 ```
 
-__Example__
+**Example**
 
-Query the sequence numbers of all packets that either not yet been received or not yet been acknowledged, at both ends of the channel `channel-1`.
+Query the sequence numbers of all packets that either not yet been received or
+not yet been acknowledged, at both ends of the channel `channel-1`.
 
 ```shell
 $ hermes query packet pending --chain ibc-0 --port transfer --channel channel-1
@@ -82,10 +82,11 @@ Success: Summary {
 }
 ```
 
-
 ## Packet Commitments
 
-Use the `query packet commitments` command to query the sequence numbers of all packets that have been sent but not yet acknowledged (these are the packets that still have their commitments stored).
+Use the `query packet commitments` command to query the sequence numbers of all
+packets that have been sent but not yet acknowledged (these are the packets that
+still have their commitments stored).
 
 ```shell
 USAGE:
@@ -100,9 +101,10 @@ REQUIRED:
         --port <PORT_ID>          Identifier of the port to query
 ```
 
-__Example__
+**Example**
 
-Query `ibc-0` for the sequence numbers of packets that still have commitments on `ibc-0` and that were sent on `transfer` port and `channel-0`:
+Query `ibc-0` for the sequence numbers of packets that still have commitments on
+`ibc-0` and that were sent on `transfer` port and `channel-0`:
 
 ```shell
 hermes query packet commitments --chain ibc-0 --port transfer --channel channel-0
@@ -124,7 +126,8 @@ Success: PacketSeqs {
 
 ## Packet Commitment with Sequence
 
-Use the `query packet commitment` command to query the commitment value of a packet with a given sequence number.
+Use the `query packet commitment` command to query the commitment value of a
+packet with a given sequence number.
 
 ```shell
 USAGE:
@@ -143,9 +146,10 @@ REQUIRED:
         --sequence <SEQUENCE>     Sequence of packet to query [aliases: seq]
 ```
 
-__Example__
+**Example**
 
-Query `ibc-0` for the commitment of packet with sequence `3` sent on `transfer` port and `channel-0`:
+Query `ibc-0` for the commitment of packet with sequence `3` sent on `transfer`
+port and `channel-0`:
 
 ```shell
 hermes query packet commitment --chain ibc-0 --port transfer --channel channel-0 --sequence 3
@@ -157,7 +161,8 @@ Success: "F9458DC7EBEBCD6D18E983FCAB5BD752CC2A74532BBD50B812DB229997739EFC"
 
 ## Packet Acknowledgments
 
-Use the `query packet acknowledgments` command to query the sequence numbers of all packets that have been acknowledged.
+Use the `query packet acknowledgments` command to query the sequence numbers of
+all packets that have been acknowledged.
 
 ```shell
 USAGE:
@@ -172,9 +177,10 @@ REQUIRED:
         --port <PORT_ID>          Identifier of the port to query
 ```
 
-__Example__
+**Example**
 
-Query `ibc-1` for the sequence numbers of packets acknowledged that were received on `transfer` port and `channel-1`:
+Query `ibc-1` for the sequence numbers of packets acknowledged that were
+received on `transfer` port and `channel-1`:
 
 ```shell
 hermes query packet acks --chain ibc-1 --port transfer --channel channel-1
@@ -196,7 +202,8 @@ Success: PacketSeqs {
 
 ## Packet Acknowledgment with Sequence
 
-Use the `query packet acknowledgment` command to query the acknowledgment value of a packet with a given sequence number.
+Use the `query packet acknowledgment` command to query the acknowledgment value
+of a packet with a given sequence number.
 
 ```shell
 USAGE:
@@ -215,9 +222,10 @@ REQUIRED:
         --sequence <SEQUENCE>     Sequence of packet to query [aliases: seq]
 ```
 
-__Example__
+**Example**
 
-Query `ibc-1` for the acknowledgment of packet with sequence `2` received on `transfer` port and `channel-1`:
+Query `ibc-1` for the acknowledgment of packet with sequence `2` received on
+`transfer` port and `channel-1`:
 
 ```shell
 hermes query packet ack --chain ibc-1 --port transfer --channel channel-1 --sequence 2
@@ -229,7 +237,9 @@ Success: "08F7557ED51826FE18D84512BF24EC75001EDBAF2123A477DF72A0A9F3640A7C"
 
 ## Unreceived Packets
 
-Use the `query packet pending-sends` command to query the sequence numbers of all packets that have been sent on the source chain but not yet received on the destination chain.
+Use the `query packet pending-sends` command to query the sequence numbers of
+all packets that have been sent on the source chain but not yet received on the
+destination chain.
 
 ```shell
 USAGE:
@@ -244,9 +254,10 @@ REQUIRED:
         --port <PORT_ID>          Port identifier
 ```
 
-__Example__
+**Example**
 
-Query `transfer` port and `channel-1` on `ibc-1` for the sequence numbers of packets sent on `ibc-0` but not yet received:
+Query `transfer` port and `channel-1` on `ibc-1` for the sequence numbers of
+packets sent on `ibc-0` but not yet received:
 
 ```shell
 hermes query packet pending-sends --chain ibc-1 --port transfer --channel channel-1
@@ -262,7 +273,8 @@ Success: [
 
 ## Unreceived Acknowledgments
 
-Use the `query packet pending-acks` command to query the sequence numbers of all packets that have not yet been acknowledged.
+Use the `query packet pending-acks` command to query the sequence numbers of all
+packets that have not yet been acknowledged.
 
 ```shell
 USAGE:
@@ -277,9 +289,10 @@ REQUIRED:
         --port <PORT_ID>          Port identifier
 ```
 
-__Example__
+**Example**
 
-Query `transfer` port and `channel-0` on `ibc-0` for the sequence numbers of packets received by `ibc-1` but not yet acknowledged on `ibc-0`:
+Query `transfer` port and `channel-0` on `ibc-0` for the sequence numbers of
+packets received by `ibc-1` but not yet acknowledged on `ibc-0`:
 
 ```shell
 hermes query packet pending-acks --chain ibc-0 --port transfer --channel channel-0

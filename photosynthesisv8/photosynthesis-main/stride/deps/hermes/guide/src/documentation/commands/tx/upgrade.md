@@ -14,7 +14,7 @@ USAGE:
 
 DESCRIPTION:
     Send an IBC upgrade plan
- 
+
 OPTIONS:
         --denom <DENOM>
             Denomination for the deposit (default: 'stake')
@@ -45,9 +45,11 @@ REQUIRED:
             Identifier of the client on source chain from which the plan is created
 ```
 
-__Example__
+**Example**
 
-An upgrade proposal is made for `ibc-0`, for height `300` blocks from the latest height, with `10000000stake` deposited. The proposal will include the upgraded client state constructed from the state of `07-tendermint-0` client on `ibc-1`.
+An upgrade proposal is made for `ibc-0`, for height `300` blocks from the latest
+height, with `10000000stake` deposited. The proposal will include the upgraded
+client state constructed from the state of `07-tendermint-0` client on `ibc-1`.
 
 ```shell
 hermes tx upgrade-chain --reference-chain ibc-0 --host-chain ibc-1 --host-client 07-tendermint-0 --amount 10000000 --height-offset 300

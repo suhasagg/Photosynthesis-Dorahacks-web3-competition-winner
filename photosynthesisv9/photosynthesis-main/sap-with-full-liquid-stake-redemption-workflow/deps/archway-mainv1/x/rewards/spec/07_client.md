@@ -66,7 +66,8 @@ gas_unit_price:
 
 #### contract-metadata
 
-Get an existing contract metadata. Query fails if a contract is not *Instantiated* or its metadata is not set.
+Get an existing contract metadata. Query fails if a contract is not
+*Instantiated* or its metadata is not set.
 
 Usage:
 
@@ -84,8 +85,9 @@ rewards_address: archway12reqvcenxgv5s7z96pkytzajtl4lf2epyfman2
 
 #### outstanding-rewards
 
-Get the current credited dApp rewards and the current total amount of `RewardsRecord` object created for an account.
-Those rewards are "ready" for the *withdrawal* operation.
+Get the current credited dApp rewards and the current total amount of
+`RewardsRecord` object created for an account. Those rewards are "ready" for the
+*withdrawal* operation.
 
 Usage:
 
@@ -104,8 +106,8 @@ total_rewards:
 
 #### rewards-records
 
-Get the paginated list of `RewardsRecord` object created for an account.
-Those rewards are "ready" for the *withdrawal* operation.
+Get the paginated list of `RewardsRecord` object created for an account. Those
+rewards are "ready" for the *withdrawal* operation.
 
 Usage:
 
@@ -142,7 +144,8 @@ records:
 
 #### block-rewards-tracking
 
-Get the current rewards tracking state (tracked inflation and tx fee rebate rewards).
+Get the current rewards tracking state (tracked inflation and tx fee rebate
+rewards).
 
 > Use the `--height` flag to specify the block height.
 
@@ -179,8 +182,9 @@ block:
 #### pool
 
 Get the current rewards pool balance:
-* undistributed yet tokens;
-* treasury tokens;
+
+- undistributed yet tokens;
+- treasury tokens;
 
 Usage:
 
@@ -201,20 +205,21 @@ treasury_funds:
 
 #### contract-flat-fee
 
-Get an existing contract flat fee. Query fails if a contract flat fee is not set.
+Get an existing contract flat fee. Query fails if a contract flat fee is not
+set.
 
 Usage:
 
 ```bash
 archwayd q rewards flat-fee [contract-address] [flags]
 ```
+
 Example output:
 
 ```yaml
 amount: "200"
 denom: uarch
 ```
-
 
 ### Transactions
 
@@ -230,8 +235,8 @@ archwayd tx rewards -h
 
 Create / update a contract metadata state. Operation is authorized to:
 
-* Creating metadata: contract admin (set via CosmWasm *Instantiate* operation);
-* Updating metadata: metadata's `owner_address`;
+- Creating metadata: contract admin (set via CosmWasm *Instantiate* operation);
+- Updating metadata: metadata's `owner_address`;
 
 Usage:
 
@@ -241,8 +246,8 @@ archwayd tx rewards set-contract-metadata [contract-address] [flags]
 
 Command specific flags:
 
-* `--owner-address` - update the contract owner address;
-* `--rewards-address` - update the contract rewards receiver address;
+- `--owner-address` - update the contract owner address;
+- `--rewards-address` - update the contract rewards receiver address;
 
 Example (delegate rewards ownership to the contract):
 
@@ -256,13 +261,15 @@ archwayd tx rewards set-contract-metadata archway14hj2tavq8fpesdwxxcu44rty3hh90v
 
 #### withdraw-rewards
 
-Withdraw the current credited dApp rewards to a sender account.
-This transaction uses `RewardsRecord` objects that are created for a specific `rewards_address` during the dApp rewards distribution.
-A `RewardsRecord` entry contains a portion of credited rewards by a specific contract at a block height.
-The `withdraw-rewards` command has two operation modes, which defines which `RewardsRecord` objects to process:
+Withdraw the current credited dApp rewards to a sender account. This transaction
+uses `RewardsRecord` objects that are created for a specific `rewards_address`
+during the dApp rewards distribution. A `RewardsRecord` entry contains a portion
+of credited rewards by a specific contract at a block height. The
+`withdraw-rewards` command has two operation modes, which defines which
+`RewardsRecord` objects to process:
 
-* *Records by limit* - select the first N `RewardsRecord` objects available;
-* *Records by IDs* - select specific `RewardsRecord` objects by their IDs;
+- *Records by limit* - select the first N `RewardsRecord` objects available;
+- *Records by IDs* - select specific `RewardsRecord` objects by their IDs;
 
 Usage:
 
@@ -272,11 +279,12 @@ archwayd tx rewards withdraw-rewards [flags]
 
 Command specific flags:
 
-* `--records-limit` - the maximum number of `RewardsRecord` objects to process;
-* `--record-ids` - the list of `RewardsRecord` object IDs to process;
+- `--records-limit` - the maximum number of `RewardsRecord` objects to process;
+- `--record-ids` - the list of `RewardsRecord` object IDs to process;
 
-> `records-limit` value / `record-ids` length must be equal or less than the `MaxWithdrawRecords` parameter value.
-> 
+> `records-limit` value / `record-ids` length must be equal or less than the
+> `MaxWithdrawRecords` parameter value.
+>
 > One of (`records-limit`, `record-ids`) modes must be provided.
 
 Example:

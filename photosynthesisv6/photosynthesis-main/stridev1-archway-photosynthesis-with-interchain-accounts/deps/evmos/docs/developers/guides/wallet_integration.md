@@ -4,11 +4,13 @@ order: 1
 
 # Wallet Integration
 
-Learn how to properly integrate [Metamask](https://metamask.io/) or [Keplr](https://www.keplr.app/) with a dApp on Evmos. {synopsis}
+Learn how to properly integrate [Metamask](https://metamask.io/) or
+[Keplr](https://www.keplr.app/) with a dApp on Evmos. {synopsis}
 
-:::tip
-**Note**: want to learn more about wallet integration beyond what's covered here? Check out both the [MetaMask Wallet documentation](https://docs.metamask.io/guide/) and [Keplr Wallet documentation](https://docs.keplr.app/).
-:::
+:::tip **Note**: want to learn more about wallet integration beyond what's
+covered here? Check out both the
+[MetaMask Wallet documentation](https://docs.metamask.io/guide/) and
+[Keplr Wallet documentation](https://docs.keplr.app/). :::
 
 ## Pre-requisite Readings
 
@@ -17,7 +19,8 @@ Learn how to properly integrate [Metamask](https://metamask.io/) or [Keplr](http
 
 ## Implementation Checklist
 
-The integration implementation checklist for dApp developers consists of three categories:
+The integration implementation checklist for dApp developers consists of three
+categories:
 
 1. [Frontend features](#frontend)
 2. [Transactions and wallet interactions](#transactions)
@@ -25,30 +28,46 @@ The integration implementation checklist for dApp developers consists of three c
 
 ### Frontend
 
-Make sure to create a wallet-connection button for Metamask and/or Keplr on the frontend of the application. For instance, consider the "Connect to a wallet" button on the interface of [Diffusion Finance](https://app.diffusion.fi/) or the analagous button on the interface of [EvmoSwap](https://app.evmoswap.org/).
+Make sure to create a wallet-connection button for Metamask and/or Keplr on the
+frontend of the application. For instance, consider the "Connect to a wallet"
+button on the interface of [Diffusion Finance](https://app.diffusion.fi/) or the
+analagous button on the interface of [EvmoSwap](https://app.evmoswap.org/).
 
 ### Transactions
 
-Developers enabling transactions on their dApp have to [determine wallet type](#determining-wallet-type) of the user, [create the transaction](#create-the-transaction), [request signatures](#sign-and-broadcast-the-transaction) from the corresponding wallet, and finally [broadcast the transaction](#sign-and-broadcast-the-transaction) to the network.
+Developers enabling transactions on their dApp have to
+[determine wallet type](#determining-wallet-type) of the user,
+[create the transaction](#create-the-transaction),
+[request signatures](#sign-and-broadcast-the-transaction) from the corresponding
+wallet, and finally
+[broadcast the transaction](#sign-and-broadcast-the-transaction) to the network.
 
 #### Determining Wallet Type
 
-Developers should determine whether users are using Keplr or MetaMask. Whether MetaMask or Keplr is installed on the user device can be determined by checking the corresponding `window.ethereum` or `window.keplr` value.
+Developers should determine whether users are using Keplr or MetaMask. Whether
+MetaMask or Keplr is installed on the user device can be determined by checking
+the corresponding `window.ethereum` or `window.keplr` value.
 
 - **For MetaMask**: `await window.ethereum.enable(chainId);`
 - **For Keplr**: `await window.keplr.enable(chainId);`
 
-If either `window.ethereum` or `window.keplr` returns `undefined` after `document.load`, then MetaMask (or, correspondingly, Keplr) is not installed. There are several ways to wait for the load event to check the status: for instance, developers can register functions to `window.onload`, or they can track the document's ready state through the document event listener.
+If either `window.ethereum` or `window.keplr` returns `undefined` after
+`document.load`, then MetaMask (or, correspondingly, Keplr) is not installed.
+There are several ways to wait for the load event to check the status: for
+instance, developers can register functions to `window.onload`, or they can
+track the document's ready state through the document event listener.
 
-After the user's wallet type has been determined, developers can proceed with creating, signing, and sending transactions.
+After the user's wallet type has been determined, developers can proceed with
+creating, signing, and sending transactions.
 
 #### Create the Transaction
 
-:::tip
-**Note**: The example below uses the Evmos Testnet `chainID`. For more info, check the Evmos Chain IDs reference document [here](../../users/technical_concepts/chain_id.md).
-:::
+:::tip **Note**: The example below uses the Evmos Testnet `chainID`. For more
+info, check the Evmos Chain IDs reference document
+[here](../../users/technical_concepts/chain_id.md). :::
 
-Developers can create `MsgSend` transactions using the [evmosjs](../libraries/evmosjs.md) library.
+Developers can create `MsgSend` transactions using the
+[evmosjs](../libraries/evmosjs.md) library.
 
 ```js
 import { createMessageSend } from @tharsis/transactions
@@ -89,11 +108,18 @@ const msg = createMessageSend(chain, sender, fee, memo, params)
 #### Sign and Broadcast the Transaction
 
 <!-- textlint-disable -->
-After creating the transaction, developers need to send the payload to the appropriate wallet to be signed ([`msg.signDirect`](https://docs.keplr.app/api/#sign-direct-protobuf) is the transaction in Keplr format, and `msg.eipToSign` is the [`EIP712`](https://eips.ethereum.org/EIPS/eip-712) data to sign with MetaMask).
 
-With the signature, we add a Web3Extension to the transaction and broadcast it to the Evmos node.
+After creating the transaction, developers need to send the payload to the
+appropriate wallet to be signed
+([`msg.signDirect`](https://docs.keplr.app/api/#sign-direct-protobuf) is the
+transaction in Keplr format, and `msg.eipToSign` is the
+[`EIP712`](https://eips.ethereum.org/EIPS/eip-712) data to sign with MetaMask).
+
+With the signature, we add a Web3Extension to the transaction and broadcast it
+to the Evmos node.
 
 <!-- textlint-enable -->
+
 ```js
 // Note that this example is for MetaMask, using evmosjs
 
@@ -133,7 +159,9 @@ let response = await broadcastPost.json();
 
 #### Sign and Broadcast EVM Transactions
 
-Developers can use Metamask or Keplr to help users sign off on EVM transactions with either Ledger or software keys, to manage NFTs, exchange ERC-20 tokens, and more.
+Developers can use Metamask or Keplr to help users sign off on EVM transactions
+with either Ledger or software keys, to manage NFTs, exchange ERC-20 tokens, and
+more.
 
 ```js
 import { JsonRpcProvider } from '@ethersproject/providers';
@@ -146,7 +174,7 @@ async function signAndBroadcastEthereumTx() {
 
   // Enable access to Evmos on Keplr
   await window.keplr.enable(chainId);
-  
+
   // Get Keplr signer address
   const offlineSigner = window.getOfflineSigner(chainId);
   let wallets = await offlineSigner.getAccounts();
@@ -174,7 +202,7 @@ async function signAndBroadcastEthereumTx() {
   const gasFee = await provider.getFeeData();
 
   ethSendTx['gasLimit'] = gasLimit.toHexString();
-  if (!gasFee.maxPriorityFeePerGas || !gasFee.maxFeePerGas) { 
+  if (!gasFee.maxPriorityFeePerGas || !gasFee.maxFeePerGas) {
     // Handle error
     return;
   }
@@ -192,10 +220,10 @@ async function signAndBroadcastEthereumTx() {
     JSON.stringify(ethSendTx),
     'transaction'
   );
-  
+
   const res = await provider.sendTransaction(rlpEncodedTx);
   console.log(res);
-  
+
   // Result:
   // {
   //   chainId: 1337,
@@ -219,4 +247,6 @@ async function signAndBroadcastEthereumTx() {
 
 ### Connections
 
-For Ethereum RPC, Evmos gRPC, and/or REST queries, dApp developers should implement providers client-side, and store RPC details in the environment variable as secrets.
+For Ethereum RPC, Evmos gRPC, and/or REST queries, dApp developers should
+implement providers client-side, and store RPC details in the environment
+variable as secrets.

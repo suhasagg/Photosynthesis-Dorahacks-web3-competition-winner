@@ -8,7 +8,8 @@ Learn how to backup your wallet's mnemonic and private key. {synopsis}
 
 ## Mnemonics
 
-When you create a new key, you'll recieve a mnemonic phrase that can be used to restore that key. Backup the mnemonic phrase:
+When you create a new key, you'll recieve a mnemonic phrase that can be used to
+restore that key. Backup the mnemonic phrase:
 
 ```bash
 evmosd keys add dev0
@@ -70,9 +71,7 @@ type: secp256k1
 
 ### Ethereum-Formatted Private Keys
 
-:::tip
-**Note**: These types of keys are MetaMask-compatible.
-:::
+:::tip **Note**: These types of keys are MetaMask-compatible. :::
 
 To backup this type of key without the mnemonic phrase, do the following:
 
