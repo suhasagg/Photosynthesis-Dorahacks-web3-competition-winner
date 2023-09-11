@@ -69,7 +69,7 @@ Redemption Workflow
 
 
 
-![Stride](https://i.imgur.com/x4Q2EtP.png)
+![Stride](https://i.imgur.com/x4Q2EtPb.png)
 
 
 
