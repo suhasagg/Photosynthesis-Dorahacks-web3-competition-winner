@@ -12,7 +12,7 @@ objects fields description.
 
 ## Params
 
-- Params: `Paramsspace("rewards") -> legacy_amino(params)`
+*   Params: `Paramsspace("rewards") -> legacy_amino(params)`
 
 [Params](../../../proto/archway/rewards/v1beta1/rewards.proto#L11) is a
 module-wide configuration structure.
@@ -40,14 +40,14 @@ Example:
 
 where:
 
-- `contract_address` - contract bech32-encoded CosmWasm address.
-- `owner_address` - bech32-encoded contract's owner address.
-  - Only the owner is authorized to change the metadata.
-  - This field could be an account or a contract address.
-  - If it is a contract address, the contract itself could modify the metadata
-    on its own via the WASM bindings functionality.
-- `rewards_address` - bech32-encoded account address to receive the contract's
-  rewards via the *withdrawal* operation.
+*   `contract_address` - contract bech32-encoded CosmWasm address.
+*   `owner_address` - bech32-encoded contract's owner address.
+    *   Only the owner is authorized to change the metadata.
+    *   This field could be an account or a contract address.
+    *   If it is a contract address, the contract itself could modify the metadata
+        on its own via the WASM bindings functionality.
+*   `rewards_address` - bech32-encoded account address to receive the contract's
+    rewards via the *withdrawal* operation.
 
 > Contract metadata is not created automatically; it is created by the
 > `MsgSetContractMetadata` transaction which must be signed by a contract admin.
@@ -58,8 +58,8 @@ where:
 
 Storage keys:
 
-- ContractMetadata:
-  `0x00 | 0x00 | ContractAddr -> ProtocolBuffer(ContractMetadata)`
+*   ContractMetadata:
+    `0x00 | 0x00 | ContractAddr -> ProtocolBuffer(ContractMetadata)`
 
 ## BlockRewards
 
@@ -92,7 +92,7 @@ last 10 entries (last 10 blocks) and a user can query that history.
 
 Storage keys:
 
-- BlockRewards: `0x01 | 0x00 | BlockHeight -> ProtocolBuffer(BlockRewards)`
+*   BlockRewards: `0x01 | 0x00 | BlockHeight -> ProtocolBuffer(BlockRewards)`
 
 ## TxRewards
 
@@ -116,7 +116,7 @@ Example:
 ```
 
 Entry is created by the
-[DeductFeeDecorator](03\_ante_handlers.md#DeductFeeDecorator) Ante handler.
+[DeductFeeDecorator](03_ante_handlers.md#DeductFeeDecorator) Ante handler.
 
 The unique entry ID (`tx_id`) is taken from the `x/tracking` module which is the
 current transaction being processed by the chain.
@@ -125,8 +125,8 @@ Object pruning mechanism is the same as the **BlockRewards** one.
 
 Storage keys:
 
-- TxRewards: `0x02 | 0x00 | TxID -> ProtocolBuffer(TxRewards)`
-- TxRewardsByBlockHeight: `0x02 | 0x01 | BlockHeight | TxID -> Nil`
+*   TxRewards: `0x02 | 0x00 | TxID -> ProtocolBuffer(TxRewards)`
+*   TxRewardsByBlockHeight: `0x02 | 0x01 | BlockHeight | TxID -> Nil`
 
 ## MinConsensusFee
 
@@ -141,7 +141,7 @@ rewards, breaking the protocol economic model.
 
 Storage keys:
 
-- MinConsensusFee: `0x03 | 0x00 -> ProtocolBuffer(sdk.Coin)`
+*   MinConsensusFee: `0x03 | 0x00 -> ProtocolBuffer(sdk.Coin)`
 
 ## RewardsRecord
 
@@ -172,15 +172,15 @@ Example:
 
 This mechanism was introduced to the Archway protocol to reduce the CPU load on
 the module's **BeginBlocker** and to give a contract control over its rewards
-([WASM bindings section](08\_wasm_bindings.md)).
+([WASM bindings section](08_wasm_bindings.md)).
 
 Entries are pruned on a successful *withdrawal* operation.
 
 Storage keys:
 
-- RewardsRecordID: `0x04 | 0x00 -> uint64`
-- RewardsRecord: `0x04 | 0x01 | ID -> ProtocolBuffer(RewardsRecord)`
-- RewardsRecordByAddress: `0x04 | 0x02 | RewardsAddress | ID -> nil`
+*   RewardsRecordID: `0x04 | 0x00 -> uint64`
+*   RewardsRecord: `0x04 | 0x01 | ID -> ProtocolBuffer(RewardsRecord)`
+*   RewardsRecordByAddress: `0x04 | 0x02 | RewardsAddress | ID -> nil`
 
 ## Contract Flat Fees
 
@@ -193,5 +193,5 @@ Value for a contract can be updated by the contract owner as set in the
 
 Storage keys:
 
-- RewardsRecordByAddress:
-  `0x05 | 0x00 | ContractAddress -> ProtocolBuffer(sdk.Coin)`
+*   RewardsRecordByAddress:
+    `0x05 | 0x00 | ContractAddress -> ProtocolBuffer(sdk.Coin)`

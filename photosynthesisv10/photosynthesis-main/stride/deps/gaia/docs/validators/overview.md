@@ -1,6 +1,8 @@
 ***
 
-## order: 1&#xA;title: Overview
+order: 1
+title: Overview
+---------------
 
 # Validators Overview
 
@@ -69,5 +71,5 @@ validator node.
 Discuss the finer details of being a validator on our community Discord and sign
 up for the Cosmos newsletter to get regular updates:
 
-- [Cosmos Developers Discord](https://discord.gg/cosmosnetwork)
-- [Newsletter](https://cosmos.network/updates/signup/)
+*   [Cosmos Developers Discord](https://discord.gg/cosmosnetwork)
+*   [Newsletter](https://cosmos.network/updates/signup/)

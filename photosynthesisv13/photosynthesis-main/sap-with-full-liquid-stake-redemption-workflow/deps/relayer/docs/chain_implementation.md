@@ -2,8 +2,8 @@
 
 Adding a Chain for IBC relaying is composed of two main components:
 
-- `ChainProvider` implementation
-- `ChainProcessor` implementation
+*   `ChainProvider` implementation
+*   `ChainProcessor` implementation
 
 ## ChainProvider
 
@@ -111,47 +111,47 @@ For reference, view the `CosmosIBCHeader` implementation in the
 
 #### High Level Sequence Flow
 
-1. Query latest committed chain height
-2. Initialize `IBCHeaderCache` and `IBCMessagesCache`
-3. Iterate for height `i` from last successfully processed height to latest
-   height:
+1.  Query latest committed chain height
+2.  Initialize `IBCHeaderCache` and `IBCMessagesCache`
+3.  Iterate for height `i` from last successfully processed height to latest
+    height:
 
-- a. Query transactions within block at height `i`
-- b. Query `IBCHeader` for height `i` (done in parallel with block transactions)
-- c. Save latest block height and time on `ChainProcessor` (type
-  `provider.LatestBlock`)
-- d. Cache `IBCHeader` in `IBCHeaderCache` from step `2`.
-- e. Iterate through transactions in block, and IBC messages within those
-  transactions. Construct IBC message types that can be shared with the
-  `PathProcessor` (`provider.PacketInfo`, `provider.ChannelInfo`,
-  `provider.ConnectionInfo`), and cache those messages on the `IBCMessagesCache`
-  from step `2`. When observing these messages, the `ChainProcessor` caches
-  should be updated, such as setting the value in `connectionStateCache` to
-  `false` if a connection open init or try event is observed, and `true` if a
-  connection open ack or confirm event is observed. For more information about
-  these steps, see Event Parsers and Message Handlers below.
-- f. Save the latest successfully processed height
+*   a. Query transactions within block at height `i`
+*   b. Query `IBCHeader` for height `i` (done in parallel with block transactions)
+*   c. Save latest block height and time on `ChainProcessor` (type
+    `provider.LatestBlock`)
+*   d. Cache `IBCHeader` in `IBCHeaderCache` from step `2`.
+*   e. Iterate through transactions in block, and IBC messages within those
+    transactions. Construct IBC message types that can be shared with the
+    `PathProcessor` (`provider.PacketInfo`, `provider.ChannelInfo`,
+    `provider.ConnectionInfo`), and cache those messages on the `IBCMessagesCache`
+    from step `2`. When observing these messages, the `ChainProcessor` caches
+    should be updated, such as setting the value in `connectionStateCache` to
+    `false` if a connection open init or try event is observed, and `true` if a
+    connection open ack or confirm event is observed. For more information about
+    these steps, see Event Parsers and Message Handlers below.
+*   f. Save the latest successfully processed height
 
-4. If no new blocks were processed, but the `ChainProcessor` is now in sync with
-   the latest height of the chain, trigger the `PathProcessor`s with
-   `pp.ProcessBacklogIfReady()`
-5. If new blocks were processed, iterate through the `PathProcessor`s and pass
-   the relevant data to them:
+4.  If no new blocks were processed, but the `ChainProcessor` is now in sync with
+    the latest height of the chain, trigger the `PathProcessor`s with
+    `pp.ProcessBacklogIfReady()`
+5.  If new blocks were processed, iterate through the `PathProcessor`s and pass
+    the relevant data to them:
 
-- a. Latest block from `3c`
-- b. Latest `IBCHeader` from `3b` for most recent successfully queried block
-- c. All new `IBCHeader`s in the `IBCHeaderCache` (built by steps `2` and `3d`)
-- d. All new IBC messages in the `IBCMessagesCache` (built by steps `2` and
-  `3e`)
-- e. `InSync` for whether the latest successfully processed block is the latest
-  block of the chain
-- f. `ClientState` for the latest `ConsensusHeight` of the relevant client.
-  `CosmosChainProcessor` will query for this if it's not yet cached on the
-  `latestClientState`, otherwise it will return the most recent cached value.
-- g. `ConnectionStateCache` with the connection states filtered for only the
-  connections on the relevant client
-- h. `ChannelStateCache` with the channel states filtered for only the channels
-  on the relevant client
+*   a. Latest block from `3c`
+*   b. Latest `IBCHeader` from `3b` for most recent successfully queried block
+*   c. All new `IBCHeader`s in the `IBCHeaderCache` (built by steps `2` and `3d`)
+*   d. All new IBC messages in the `IBCMessagesCache` (built by steps `2` and
+    `3e`)
+*   e. `InSync` for whether the latest successfully processed block is the latest
+    block of the chain
+*   f. `ClientState` for the latest `ConsensusHeight` of the relevant client.
+    `CosmosChainProcessor` will query for this if it's not yet cached on the
+    `latestClientState`, otherwise it will return the most recent cached value.
+*   g. `ConnectionStateCache` with the connection states filtered for only the
+    connections on the relevant client
+*   h. `ChannelStateCache` with the channel states filtered for only the channels
+    on the relevant client
 
 #### Event Parsers
 
@@ -159,18 +159,18 @@ For Comet BFT chains, the IBC messages are parsed in the `CosmosChainProcessor`
 by parsing the comet events from every new block. This will be different for
 non-comet chains, but these items will need to be accounted for:
 
-- For client IBC messages (e.g. MsgCreateClient, MsgUpdateClient,
-  MsgUpgradeClient, MsgSubmitMisbehaviour), message should be parsed into
-  `provider.ClientState`.
-- For connection handshake IBC messages (e.g. MsgConnectionOpenInit,
-  MsgConnectionOpenTry, MsgConnectionOpenAck, MsgConnectionOpenConfirm), message
-  should be parsed into `provider.ConnectionInfo`
-- For channel handshake IBC messages (e.g. MsgChannelOpenInit,
-  MsgChannelOpenTry, MsgChannelOpenAck, MsgChannelOpenConfirm,
-  MsgChannelCloseInit, MsgChannelCloseConfim), message should be parsed into
-  `provider.ChannelInfo`
-- For packet-flow IBC messages (e.g. MsgTransfer, MsgRecvPacket,
-  MsgAcknowledgement), message should be parsed into `provider.PacketInfo`
+*   For client IBC messages (e.g. MsgCreateClient, MsgUpdateClient,
+    MsgUpgradeClient, MsgSubmitMisbehaviour), message should be parsed into
+    `provider.ClientState`.
+*   For connection handshake IBC messages (e.g. MsgConnectionOpenInit,
+    MsgConnectionOpenTry, MsgConnectionOpenAck, MsgConnectionOpenConfirm), message
+    should be parsed into `provider.ConnectionInfo`
+*   For channel handshake IBC messages (e.g. MsgChannelOpenInit,
+    MsgChannelOpenTry, MsgChannelOpenAck, MsgChannelOpenConfirm,
+    MsgChannelCloseInit, MsgChannelCloseConfim), message should be parsed into
+    `provider.ChannelInfo`
+*   For packet-flow IBC messages (e.g. MsgTransfer, MsgRecvPacket,
+    MsgAcknowledgement), message should be parsed into `provider.PacketInfo`
 
 #### Message Handlers
 
@@ -178,27 +178,27 @@ After IBC messages have been parsed from the blocks, some actions are necessary
 to keep the `ChainProcessor` local caches up to date and also construct the data
 that will be shared with the `PathProcessor`(s):
 
-- For new packet messages that have been parsed into `provider.PacketInfo` by
-  the event parsers or similar, check if the packet is relevant to any of the
-  connected `PathProcessor`(s) by calling
-  `IBCMessagesCache.PacketFlow.ShouldRetainSequence`. If true, retain the
-  message with `IBCMessagesCache.PacketFlow.Retain`. This allows the relayer to
-  avoid unnecessary processing by dropping packets that will not be ignored by
-  all connected `PathProcessor`s.
-- For client messages, update the `ChainProcessor` local `latestClientState`
-  cache by storing the parsed `provider.ClientState` in the map for the client
-  ID key.
-- For connection handshake messages that have been parsed into
-  `provider.ConnectionInfo`, update the `ChainProcessor` `connectionStateCache`.
-  MsgConnectionOpenAck and MsgConnectionOpenConfirm mean the connection is open.
-  MsgConnectionOpenInit and MsgConnectionOpenTry mean the connection is not
-  open. Finally, retain the message unconditionally with
-  `IBCMessagesCache.ConnectionHandshake.Retain`
-- For channel handshake messages that have been parsed into
-  `provider.ChannelInfo`, update the `ChainProcessor` `channelConnections` cache
-  to save the connection ID for the channel. Additionally, update the
-  `ChainProcessor` `channelStateCache` with the open state of the channel.
-  MsgChannelOpenAck and MsgChannelOpenConfirm mean the channel is open.
-  MsgChannelOpenInit, MsgChannelOpenTry, and MsgChannelCloseConfirm mean the
-  channel is not open. Finally, retain the message unconditionally with
-  `IBCMessagesCache.ChannelHandshake.Retain`
+*   For new packet messages that have been parsed into `provider.PacketInfo` by
+    the event parsers or similar, check if the packet is relevant to any of the
+    connected `PathProcessor`(s) by calling
+    `IBCMessagesCache.PacketFlow.ShouldRetainSequence`. If true, retain the
+    message with `IBCMessagesCache.PacketFlow.Retain`. This allows the relayer to
+    avoid unnecessary processing by dropping packets that will not be ignored by
+    all connected `PathProcessor`s.
+*   For client messages, update the `ChainProcessor` local `latestClientState`
+    cache by storing the parsed `provider.ClientState` in the map for the client
+    ID key.
+*   For connection handshake messages that have been parsed into
+    `provider.ConnectionInfo`, update the `ChainProcessor` `connectionStateCache`.
+    MsgConnectionOpenAck and MsgConnectionOpenConfirm mean the connection is open.
+    MsgConnectionOpenInit and MsgConnectionOpenTry mean the connection is not
+    open. Finally, retain the message unconditionally with
+    `IBCMessagesCache.ConnectionHandshake.Retain`
+*   For channel handshake messages that have been parsed into
+    `provider.ChannelInfo`, update the `ChainProcessor` `channelConnections` cache
+    to save the connection ID for the channel. Additionally, update the
+    `ChainProcessor` `channelStateCache` with the open state of the channel.
+    MsgChannelOpenAck and MsgChannelOpenConfirm mean the channel is open.
+    MsgChannelOpenInit, MsgChannelOpenTry, and MsgChannelCloseConfirm mean the
+    channel is not open. Finally, retain the message unconditionally with
+    `IBCMessagesCache.ChannelHandshake.Retain`

@@ -25,10 +25,10 @@ source. You can query the label `filename=hermes.log`.
 
 Follow the steps to get started :
 
-- Open your dashboard. Make sure it gets refreshed every 5s.
+*   Open your dashboard. Make sure it gets refreshed every 5s.
 
-- In a new terminal, run
-  `{{#template ../../templates/commands/hermes/start}} &> hermes.log`.
+*   In a new terminal, run
+    `{{#template ../../templates/commands/hermes/start}} &> hermes.log`.
 
 If the command runs successfully, you should be able to see the metrics panels
 displaying data on the Grafana Dashboard and you should also be able to see the

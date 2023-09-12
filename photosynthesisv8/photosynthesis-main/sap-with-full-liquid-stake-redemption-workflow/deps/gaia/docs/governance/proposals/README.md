@@ -1,6 +1,9 @@
 ***
 
-## order: 1&#xA;parent:&#xA;order: 8
+order: 1
+parent:
+order: 8
+--------
 
 # Proposals
 

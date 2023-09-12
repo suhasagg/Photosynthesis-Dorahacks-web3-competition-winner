@@ -29,8 +29,8 @@ Tendermint Validator App.
 You can find other configuration examples
 [here](https://github.com/iqlusioninc/tmkms/blob/master/tmkms.toml.example)
 
-- Create a `~/.tmkms/tmkms.toml` file with the following content (use an
-  adequate `chain_id`)
+*   Create a `~/.tmkms/tmkms.toml` file with the following content (use an
+    adequate `chain_id`)
 
 ```toml
 # Example KMS configuration file
@@ -44,16 +44,16 @@ secret_key = "~/.tmkms/secret_connection.key"
 chain_ids = ["gaia-11001"]
 ```
 
-- Edit `addr` to point to your `gaiad` instance.
-- Adjust `chain-id` to match your `.gaia/config/config.toml` settings.
-- `provider.ledgertm` has not additional parameters at the moment, however, it
-  is important that you keep that header to enable the feature.
+*   Edit `addr` to point to your `gaiad` instance.
+*   Adjust `chain-id` to match your `.gaia/config/config.toml` settings.
+*   `provider.ledgertm` has not additional parameters at the moment, however, it
+    is important that you keep that header to enable the feature.
 
 *Plug your Ledger device and open the Tendermint validator app.*
 
 ### Generate secret key
 
-Now you need to generate secret_key:
+Now you need to generate secret\_key:
 
 ```bash
 tmkms keygen ~/.tmkms/secret_connection.key
@@ -115,14 +115,14 @@ request.
 Once the ledger receives the first message, it will ask for confirmation that
 the values are adequate.
 
-![](ledger\_1.jpg)
+![](ledger_1.jpg)
 
 Click the right button, if the height and round are correct.
 
 After that, you will see that the KMS will start forwarding all signature
 requests to the ledger:
 
-![](ledger\_2.jpg)
+![](ledger_2.jpg)
 
 ::: danger Warning The word TEST in the second picture, second line appears
 because they were taken on a pre-release version.

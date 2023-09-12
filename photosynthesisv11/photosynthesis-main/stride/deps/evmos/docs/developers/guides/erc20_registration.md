@@ -15,7 +15,7 @@ functionality to convert a native Cosmos Coin to an ERC-20 token representation,
 then check out [Cosmos Coin Registration](./cosmos_coin_registration.md).
 
 Still confused? Learn more about the differences
-[here](../../../x/erc20/spec/01\_concepts.md). :::
+[here](../../../x/erc20/spec/01_concepts.md). :::
 
 The ERC-20 Module (also known as `x/erc20`) allows users to instantly convert
 [ERC-20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20) tokens
@@ -27,8 +27,8 @@ integrate with Evmos and the Cosmos ecosystem. Using the module, developers can
 build smart contracts on Evmos and use the generated ERC-20 tokens for other
 [applications on the Cosmos ecosystem](https://mapofzones.com), such as:
 
-- earning $OSMO staking rewards
-- taking part in governance proposals by voting with $ATOM
+*   earning $OSMO staking rewards
+*   taking part in governance proposals by voting with $ATOM
 
 Registering an interoperable ERC-20 means registering a new mapping between an
 existing ERC-20 token contract and a Cosmos Coin denomination, also known as a
@@ -46,46 +46,46 @@ To register an ERC-20, consider the following stages:
 
 The following topics must be addressed when drafting an ERC-20 Proposal:
 
-1. Provide the profile of the person(s)/entity making the proposal.
+1.  Provide the profile of the person(s)/entity making the proposal.
 
-   Who are you? What is your involvement in Cosmos and/or other blockchain
-   networks? If you are working with a team, who are the team members involved
-   and what is their relevant experience? What is the mission statement of your
-   organization or business? Do you have a website? Showcase some work you've
-   done and some proof of who you are.
+    Who are you? What is your involvement in Cosmos and/or other blockchain
+    networks? If you are working with a team, who are the team members involved
+    and what is their relevant experience? What is the mission statement of your
+    organization or business? Do you have a website? Showcase some work you've
+    done and some proof of who you are.
 
-2. Promote understanding of the ERC-20 Module.
+2.  Promote understanding of the ERC-20 Module.
 
-   Make sure to mention the original
-   [blog post](https://medium.com/evmos/introducing-evmos-erc20-module-f40a61e05273)
-   that introduced the ERC-20 Module, along with a brief explanation of what the
-   ERC-20 Module does. It's also a good idea to link the
-   [ERC-20 Module documentation](https://docs.evmos.org/modules/erc20/)!
+    Make sure to mention the original
+    [blog post](https://medium.com/evmos/introducing-evmos-erc20-module-f40a61e05273)
+    that introduced the ERC-20 Module, along with a brief explanation of what the
+    ERC-20 Module does. It's also a good idea to link the
+    [ERC-20 Module documentation](https://docs.evmos.org/modules/erc20/)!
 
-3. Describe how ERC-20 Module changes will be made.
+3.  Describe how ERC-20 Module changes will be made.
 
-   Give a breakdown of the proposal's payload, and explain in layman terms what
-   the proposal will do if it passes. Detail precautions taken during contract
-   and proposal formulation, if applicable (including consultations made prior
-   to proposal creation, how contracts were tested, and any third-party
-   reviews). Finally, mention the risks involved in the proposal, depending on
-   the direction of IBC Coin and ERC-20.
+    Give a breakdown of the proposal's payload, and explain in layman terms what
+    the proposal will do if it passes. Detail precautions taken during contract
+    and proposal formulation, if applicable (including consultations made prior
+    to proposal creation, how contracts were tested, and any third-party
+    reviews). Finally, mention the risks involved in the proposal, depending on
+    the direction of IBC Coin and ERC-20.
 
-4. Document adherence to ERC-20 Contract expectations.
+4.  Document adherence to ERC-20 Contract expectations.
 
-   Ensure that the ERC-20 contracts are verified (either through the
-   [EVM explorer](https://evm.evmos.org) or via
-   [Sourcify](https://sourcify.dev)), and that the contracts are deployed
-   open-source. Security-wise, the following are required: that the contracts
-   use the main libraries for ERC-20s (eg.
-   [OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/erc20),
-   [dapp.tools](https://dapp.tools/)), that the contracts do not extend the
-   `IERC20.sol` interface through a malicious implementation, that the transfer
-   logic is not modified (i.e. transfer logic is not directly manipulated), and
-   that no malicious `Approve` events can directly manipulate users' balance
-   through a delayed granted allowance.
+    Ensure that the ERC-20 contracts are verified (either through the
+    [EVM explorer](https://evm.evmos.org) or via
+    [Sourcify](https://sourcify.dev)), and that the contracts are deployed
+    open-source. Security-wise, the following are required: that the contracts
+    use the main libraries for ERC-20s (eg.
+    [OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/erc20),
+    [dapp.tools](https://dapp.tools/)), that the contracts do not extend the
+    `IERC20.sol` interface through a malicious implementation, that the transfer
+    logic is not modified (i.e. transfer logic is not directly manipulated), and
+    that no malicious `Approve` events can directly manipulate users' balance
+    through a delayed granted allowance.
 
-   Take note of the above in your proposal description!
+    Take note of the above in your proposal description!
 
 Remember to provide links to the relevant
 [Commonwealth Evmos community](https://commonwealth.im/evmos) discussions
@@ -203,9 +203,9 @@ At this point you'll want to track which validator has voted and which has not.
 You'll want to re-engage directly with top stake-holders, ie. the
 highest-ranking validator operators, to ensure that:
 
-1. they are aware of your proposal;
-2. they can ask you any questions about your proposal; and
-3. they are prepared to vote.
+1.  they are aware of your proposal;
+2.  they can ask you any questions about your proposal; and
+3.  they are prepared to vote.
 
 Remember that any voter may change their vote at any time before the voting
 period ends. That historically doesn't happen often, but there may be an

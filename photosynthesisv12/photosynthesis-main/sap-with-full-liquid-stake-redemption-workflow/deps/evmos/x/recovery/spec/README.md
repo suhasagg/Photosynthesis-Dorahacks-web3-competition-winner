@@ -33,8 +33,8 @@ authorized IBC channels (i.e Osmosis for OSMO, Cosmos Hub for ATOM).
 
 ## Contents
 
-1. **[Concepts](01\_concepts.md)**
-2. **[Hooks](02\_hooks.md)**
-3. **[Events](03\_events.md)**
-4. **[Parameters](04\_parameters.md)**
-5. **[Clients](05\_clients.md)**
+1.  **[Concepts](01_concepts.md)**
+2.  **[Hooks](02_hooks.md)**
+3.  **[Events](03_events.md)**
+4.  **[Parameters](04_parameters.md)**
+5.  **[Clients](05_clients.md)**

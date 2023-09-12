@@ -32,18 +32,16 @@ moniker = "<your_custom_moniker>"
 최소 가스 가격보다 낮은 트랜잭션을 거절하는 스팸 방지 메커니즘을 활성화 하시려면
 `~/.gaia/config/gaiad.toml` 파일을 변경하시면 됩니다:
 
-```
-# This is a TOML config file.
-# For more information, see https://github.com/toml-lang/toml
+    # This is a TOML config file.
+    # For more information, see https://github.com/toml-lang/toml
 
-##### main base config options #####
+    ##### main base config options #####
 
-# The minimum gas prices a validator is willing to accept for processing a
-# transaction. A transaction's fees must meet the minimum of any denomination
-# specified in this config (e.g. 10uatom).
+    # The minimum gas prices a validator is willing to accept for processing a
+    # transaction. A transaction's fees must meet the minimum of any denomination
+    # specified in this config (e.g. 10uatom).
 
-minimum-gas-prices = ""
-```
+    minimum-gas-prices = ""
 
 이제 풀노드가 활성화 되었습니다!
 
@@ -98,9 +96,7 @@ gaiad start
 코스모스 허브 네트워크는 트랜잭션 처리를 위해 트랜잭션 수수료를 부과합니다. 해당
 수수료는 트랜잭션을 실행하기 위한 가스로 사용됩니다. 공식은 다음과 같습니다:
 
-```
-수수료(Fee) = 가스(Gas) * 가스 값(GasPrices)
-```
+    수수료(Fee) = 가스(Gas) * 가스 값(GasPrices)
 
 위 공식에서 `gas`는 전송하는 트랜잭션에 따라 다릅니다. 다른 형태의 트랜잭션은 각
 자 다른 `gas`량을 필요로 합니다. `gas` 수량은 트랜잭션이 실행될때 계산됨으로 사

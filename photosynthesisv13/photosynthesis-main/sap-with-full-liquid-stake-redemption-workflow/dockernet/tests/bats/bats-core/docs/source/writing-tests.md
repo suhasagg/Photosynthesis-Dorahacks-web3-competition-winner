@@ -273,8 +273,8 @@ will *not* be made available to callers of `load`.
 
 `load` supports the following arguments:
 
-- absolute paths
-- relative paths (to the current test file)
+*   absolute paths
+*   relative paths (to the current test file)
 
 > For backwards compatibility `load` first searches for a file ending in `.bash`
 > (e.g. `load test_helper` searches for `test_helper.bash` before it looks for
@@ -296,17 +296,17 @@ Instead, one should use `bats_load_library` together with setting
 
 `bats_load_library` has two modes of resolving requests:
 
-1. by relative path from the `BATS_LIB_PATH` to a file in the library
-2. by library name, expecting libraries to have a `load.bash` entrypoint
+1.  by relative path from the `BATS_LIB_PATH` to a file in the library
+2.  by library name, expecting libraries to have a `load.bash` entrypoint
 
 For example if your `BATS_LIB_PATH` is set to `~/.bats/libs:/usr/lib/bats`, then
 `bats_load_library test_helper` would look for existing files with the following
 paths:
 
-- `~/.bats/libs/test_helper`
-- `~/.bats/libs/test_helper/load.bash`
-- `/usr/lib/bats/test_helper`
-- `/usr/lib/bats/test_helper/load.bash`
+*   `~/.bats/libs/test_helper`
+*   `~/.bats/libs/test_helper/load.bash`
+*   `/usr/lib/bats/test_helper`
+*   `/usr/lib/bats/test_helper/load.bash`
 
 The first existing file in this list will be sourced.
 
@@ -314,10 +314,10 @@ If you want to load only part of a library or the entry point is not named
 `load.bash`, you have to include it in the argument:
 `bats_load_library library_name/file_to_load` will try
 
-- `~/.bats/libs/library_name/file_to_load`
-- `~/.bats/libs/library_name/file_to_load/load.bash`
-- `/usr/lib/bats/library_name/file_to_load`
-- `/usr/lib/bats/library_name/file_to_load/load.bash`
+*   `~/.bats/libs/library_name/file_to_load`
+*   `~/.bats/libs/library_name/file_to_load/load.bash`
+*   `/usr/lib/bats/library_name/file_to_load`
+*   `/usr/lib/bats/library_name/file_to_load/load.bash`
 
 Apart from the changed lookup rules, `bats_load_library` behaves like `load`.
 
@@ -523,41 +523,41 @@ mentioned in [File descriptor 3](#file-descriptor-3-read-this-if-bats-hangs),
 bats provides a special file descriptor, `&3`, that you should use to print your
 custom text. Here are some detailed guidelines to refer to:
 
-- Printing **from within a test function**:
+*   Printing **from within a test function**:
 
-  - First you should consider if you want the text to be always visible or only
-    when the test fails. Text that is output directly to stdout or stderr (file
-    descriptor 1 or 2), ie `echo 'text'` is considered part of the test function
-    output and is printed only on test failures for diagnostic purposes,
-    regardless of the formatter used (TAP or pretty).
-  - To have text printed unconditionally from within a test function you need to
-    redirect the output to file descriptor 3, eg `echo 'text' >&3`. This output
-    will become part of the TAP stream. You are encouraged to prepend text
-    printed this way with a hash (eg `echo '# text' >&3`) in order to produce
-    100% TAP compliant output. Otherwise, depending on the 3rd-party tools you
-    use to analyze the TAP stream, you can encounter unexpected behavior or
-    errors.
+    *   First you should consider if you want the text to be always visible or only
+        when the test fails. Text that is output directly to stdout or stderr (file
+        descriptor 1 or 2), ie `echo 'text'` is considered part of the test function
+        output and is printed only on test failures for diagnostic purposes,
+        regardless of the formatter used (TAP or pretty).
+    *   To have text printed unconditionally from within a test function you need to
+        redirect the output to file descriptor 3, eg `echo 'text' >&3`. This output
+        will become part of the TAP stream. You are encouraged to prepend text
+        printed this way with a hash (eg `echo '# text' >&3`) in order to produce
+        100% TAP compliant output. Otherwise, depending on the 3rd-party tools you
+        use to analyze the TAP stream, you can encounter unexpected behavior or
+        errors.
 
-- Printing **from within the `setup*` or `teardown*` functions**: The same hold
-  true as for printing with test functions.
+*   Printing **from within the `setup*` or `teardown*` functions**: The same hold
+    true as for printing with test functions.
 
-- Printing **outside test or `setup*`/`teardown*` functions**:
+*   Printing **outside test or `setup*`/`teardown*` functions**:
 
-  - You should avoid printing in free code: Due to the multiple executions
-    contexts (`setup_file`, multiple `@test`s) of test files, output will be
-    printed more than once.
+    *   You should avoid printing in free code: Due to the multiple executions
+        contexts (`setup_file`, multiple `@test`s) of test files, output will be
+        printed more than once.
 
-  - Regardless of where text is redirected to (stdout, stderr or file
-    descriptor 3) text is immediately visible in the terminal, as it is not
-    piped into the formatter.
+    *   Regardless of where text is redirected to (stdout, stderr or file
+        descriptor 3) text is immediately visible in the terminal, as it is not
+        piped into the formatter.
 
-  - Text printed to stdout may interfere with formatters as it can make output
-    non-compliant with the TAP spec. The reason for this is that such output
-    will be produced before the [*plan line*][tap-plan] is printed, contrary to
-    the spec that requires the *plan line* to be either the first or the last
-    line of the output.
+    *   Text printed to stdout may interfere with formatters as it can make output
+        non-compliant with the TAP spec. The reason for this is that such output
+        will be produced before the [*plan line*][tap-plan] is printed, contrary to
+        the spec that requires the *plan line* to be either the first or the last
+        line of the output.
 
-  - Due to internal pipes/redirects, output to stderr is always printed first.
+    *   Due to internal pipes/redirects, output to stderr is always printed first.
 
 [tap-plan]: https://testanything.org/tap-specification.html#the-plan
 
@@ -565,59 +565,59 @@ custom text. Here are some detailed guidelines to refer to:
 
 There are several global variables you can use to introspect on Bats tests:
 
-- `$BATS_RUN_COMMAND` is the run command used in your test case.
-- `$BATS_TEST_FILENAME` is the fully expanded path to the Bats test file.
-- `$BATS_TEST_DIRNAME` is the directory in which the Bats test file is located.
-- `$BATS_TEST_NAMES` is an array of function names for each test case.
-- `$BATS_TEST_NAME` is the name of the function containing the current test
-  case.
-- `BATS_TEST_NAME_PREFIX` will be prepended to the description of each test on
-  stdout and in reports.
-- `$BATS_TEST_DESCRIPTION` is the description of the current test case.
-- `BATS_TEST_RETRIES` is the maximum number of additional attempts that will be
-  made on a failed test before it is finally considered failed. The default of 0
-  means the test must pass on the first attempt.
-- `BATS_TEST_TIMEOUT` is the number of seconds after which a test (including
-  setup) will be aborted and marked as failed. Updates to this value in
-  `setup()` or `@test` cannot change the running timeout countdown, so the
-  latest useful update location is `setup_file()`.
-- `$BATS_TEST_NUMBER` is the (1-based) index of the current test case in the
-  test file.
-- `$BATS_SUITE_TEST_NUMBER` is the (1-based) index of the current test case in
-  the test suite (over all files).
-- `$BATS_TMPDIR` is the base temporary directory used by bats to create its
-  temporary files / directories. (default: `$TMPDIR`. If `$TMPDIR` is not set,
-  `/tmp` is used.)
-- `$BATS_RUN_TMPDIR` is the location to the temporary directory used by bats to
-  store all its internal temporary files during the tests. (default:
-  `$BATS_TMPDIR/bats-run-$BATS_ROOT_PID-XXXXXX`)
-- `$BATS_FILE_EXTENSION` (default: `bats`) specifies the extension of test files
-  that should be found when running a suite (via `bats [-r] suite_folder/`)
-- `$BATS_SUITE_TMPDIR` is a temporary directory common to all tests of a suite.
-  Could be used to create files required by multiple tests.
-- `$BATS_FILE_TMPDIR` is a temporary directory common to all tests of a test
-  file. Could be used to create files required by multiple tests in the same
-  test file.
-- `$BATS_TEST_TMPDIR` is a temporary directory unique for each test. Could be
-  used to create files required only for specific tests.
-- `$BATS_VERSION` is the version of Bats running the test.
+*   `$BATS_RUN_COMMAND` is the run command used in your test case.
+*   `$BATS_TEST_FILENAME` is the fully expanded path to the Bats test file.
+*   `$BATS_TEST_DIRNAME` is the directory in which the Bats test file is located.
+*   `$BATS_TEST_NAMES` is an array of function names for each test case.
+*   `$BATS_TEST_NAME` is the name of the function containing the current test
+    case.
+*   `BATS_TEST_NAME_PREFIX` will be prepended to the description of each test on
+    stdout and in reports.
+*   `$BATS_TEST_DESCRIPTION` is the description of the current test case.
+*   `BATS_TEST_RETRIES` is the maximum number of additional attempts that will be
+    made on a failed test before it is finally considered failed. The default of 0
+    means the test must pass on the first attempt.
+*   `BATS_TEST_TIMEOUT` is the number of seconds after which a test (including
+    setup) will be aborted and marked as failed. Updates to this value in
+    `setup()` or `@test` cannot change the running timeout countdown, so the
+    latest useful update location is `setup_file()`.
+*   `$BATS_TEST_NUMBER` is the (1-based) index of the current test case in the
+    test file.
+*   `$BATS_SUITE_TEST_NUMBER` is the (1-based) index of the current test case in
+    the test suite (over all files).
+*   `$BATS_TMPDIR` is the base temporary directory used by bats to create its
+    temporary files / directories. (default: `$TMPDIR`. If `$TMPDIR` is not set,
+    `/tmp` is used.)
+*   `$BATS_RUN_TMPDIR` is the location to the temporary directory used by bats to
+    store all its internal temporary files during the tests. (default:
+    `$BATS_TMPDIR/bats-run-$BATS_ROOT_PID-XXXXXX`)
+*   `$BATS_FILE_EXTENSION` (default: `bats`) specifies the extension of test files
+    that should be found when running a suite (via `bats [-r] suite_folder/`)
+*   `$BATS_SUITE_TMPDIR` is a temporary directory common to all tests of a suite.
+    Could be used to create files required by multiple tests.
+*   `$BATS_FILE_TMPDIR` is a temporary directory common to all tests of a test
+    file. Could be used to create files required by multiple tests in the same
+    test file.
+*   `$BATS_TEST_TMPDIR` is a temporary directory unique for each test. Could be
+    used to create files required only for specific tests.
+*   `$BATS_VERSION` is the version of Bats running the test.
 
 ## Libraries and Add-ons
 
 Bats supports loading external assertion libraries and helpers. Those under
 `bats-core` are officially supported libraries (integration tests welcome!):
 
-- <https://github.com/bats-core/bats-assert> - common assertions for Bats
-- <https://github.com/bats-core/bats-support> - supporting library for Bats test
-  helpers
-- <https://github.com/bats-core/bats-file> - common filesystem assertions for
-  Bats
-- <https://github.com/bats-core/bats-detik> - e2e tests of applications in K8s
-  environments
+*   <https://github.com/bats-core/bats-assert> - common assertions for Bats
+*   <https://github.com/bats-core/bats-support> - supporting library for Bats test
+    helpers
+*   <https://github.com/bats-core/bats-file> - common filesystem assertions for
+    Bats
+*   <https://github.com/bats-core/bats-detik> - e2e tests of applications in K8s
+    environments
 
 and some external libraries, supported on a "best-effort" basis:
 
-- <https://github.com/ztombol/bats-docs> (still relevant? Requires review)
-- <https://github.com/grayhemp/bats-mock> (as per #147)
-- <https://github.com/jasonkarns/bats-mock> (how is this different from
-  grayhemp/bats-mock?)
+*   <https://github.com/ztombol/bats-docs> (still relevant? Requires review)
+*   <https://github.com/grayhemp/bats-mock> (as per #147)
+*   <https://github.com/jasonkarns/bats-mock> (how is this different from
+    grayhemp/bats-mock?)

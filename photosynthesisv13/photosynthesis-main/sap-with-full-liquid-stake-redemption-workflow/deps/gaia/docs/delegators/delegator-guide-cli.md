@@ -1,6 +1,8 @@
 ***
 
-## order: 1&#xA;title: Delegator Guide (CLI)
+order: 1
+title: Delegator Guide (CLI)
+----------------------------
 
 # Delegator Guide (CLI)
 
@@ -35,20 +37,20 @@ Please exercise extreme caution!
 
 ## Table of Contents
 
-- [Installing `gaiad`](#installing-gaiad)
-- [Cosmos Accounts](#cosmos-accounts)
-  - [Restoring an Account from the Fundraiser](#restoring-an-account-from-the-fundraiser)
-  - [Creating an Account](#creating-an-account)
-- [Accessing the Cosmos Hub Network](#accessing-the-cosmos-hub-network)
-  - [Running Your Own Full-Node](#running-your-own-full-node)
-  - [Connecting to a Remote Full-Node](#connecting-to-a-remote-full-node)
-- [Setting Up `gaiad`](#setting-up-gaiad)
-- [Querying the State](#querying-the-state)
-- [Sending Transactions](#sending-transactions)
-  - [A Note on Gas and Fees](#a-note-on-gas-and-fees)
-  - [Bonding Atoms and Withdrawing Rewards](#bonding-atoms-and-withdrawing-rewards)
-  - [Participating in Governance](#participating-in-governance)
-  - [Signing Transactions from an Offline Computer](#signing-transactions-from-an-offline-computer)
+*   [Installing `gaiad`](#installing-gaiad)
+*   [Cosmos Accounts](#cosmos-accounts)
+    *   [Restoring an Account from the Fundraiser](#restoring-an-account-from-the-fundraiser)
+    *   [Creating an Account](#creating-an-account)
+*   [Accessing the Cosmos Hub Network](#accessing-the-cosmos-hub-network)
+    *   [Running Your Own Full-Node](#running-your-own-full-node)
+    *   [Connecting to a Remote Full-Node](#connecting-to-a-remote-full-node)
+*   [Setting Up `gaiad`](#setting-up-gaiad)
+*   [Querying the State](#querying-the-state)
+*   [Sending Transactions](#sending-transactions)
+    *   [A Note on Gas and Fees](#a-note-on-gas-and-fees)
+    *   [Bonding Atoms and Withdrawing Rewards](#bonding-atoms-and-withdrawing-rewards)
+    *   [Participating in Governance](#participating-in-governance)
+    *   [Signing Transactions from an Offline Computer](#signing-transactions-from-an-offline-computer)
 
 ## Installing `gaiad`
 
@@ -65,9 +67,9 @@ full-node.
 ::: tip `gaiad` is used from a terminal. To open the terminal, follow these
 steps:
 
-- **Windows**: `Start` > `All Programs` > `Accessories` > `Command Prompt`
-- **MacOS**: `Finder` > `Applications` > `Utilities` > `Terminal`
-- **Linux**: `Ctrl` + `Alt` + `T` :::
+*   **Windows**: `Start` > `All Programs` > `Accessories` > `Command Prompt`
+*   **MacOS**: `Finder` > `Applications` > `Utilities` > `Terminal`
+*   **Linux**: `Ctrl` + `Alt` + `T` :::
 
 ## Cosmos Accounts
 
@@ -78,38 +80,36 @@ wallet (see
 [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) for more
 information on the HD wallet specification).
 
-```
-     Account 0                         Account 1                         Account 2
+         Account 0                         Account 1                         Account 2
 
-+------------------+              +------------------+               +------------------+
-|                  |              |                  |               |                  |
-|    Address 0     |              |    Address 1     |               |    Address 2     |
-|        ^         |              |        ^         |               |        ^         |
-|        |         |              |        |         |               |        |         |
-|        |         |              |        |         |               |        |         |
-|        |         |              |        |         |               |        |         |
-|        +         |              |        +         |               |        +         |
-|  Public key 0    |              |  Public key 1    |               |  Public key 2    |
-|        ^         |              |        ^         |               |        ^         |
-|        |         |              |        |         |               |        |         |
-|        |         |              |        |         |               |        |         |
-|        |         |              |        |         |               |        |         |
-|        +         |              |        +         |               |        +         |
-|  Private key 0   |              |  Private key 1   |               |  Private key 2   |
-|        ^         |              |        ^         |               |        ^         |
-+------------------+              +------------------+               +------------------+
-         |                                 |                                  |
-         |                                 |                                  |
-         |                                 |                                  |
-         +--------------------------------------------------------------------+
-                                           |
-                                           |
-                                 +---------+---------+
-                                 |                   |
-                                 |  Mnemonic (Seed)  |
-                                 |                   |
-                                 +-------------------+
-```
+    +------------------+              +------------------+               +------------------+
+    |                  |              |                  |               |                  |
+    |    Address 0     |              |    Address 1     |               |    Address 2     |
+    |        ^         |              |        ^         |               |        ^         |
+    |        |         |              |        |         |               |        |         |
+    |        |         |              |        |         |               |        |         |
+    |        |         |              |        |         |               |        |         |
+    |        +         |              |        +         |               |        +         |
+    |  Public key 0    |              |  Public key 1    |               |  Public key 2    |
+    |        ^         |              |        ^         |               |        ^         |
+    |        |         |              |        |         |               |        |         |
+    |        |         |              |        |         |               |        |         |
+    |        |         |              |        |         |               |        |         |
+    |        +         |              |        +         |               |        +         |
+    |  Private key 0   |              |  Private key 1   |               |  Private key 2   |
+    |        ^         |              |        ^         |               |        ^         |
+    +------------------+              +------------------+               +------------------+
+             |                                 |                                  |
+             |                                 |                                  |
+             |                                 |                                  |
+             +--------------------------------------------------------------------+
+                                               |
+                                               |
+                                     +---------+---------+
+                                     |                   |
+                                     |  Mnemonic (Seed)  |
+                                     |                   |
+                                     +-------------------+
 
 The funds stored in an account are controlled by the private key. This private
 key is generated using a one-way function from the mnemonic. If you lose the
@@ -157,13 +157,13 @@ properly secured the associated mnemonic, you could lose your funds!!!\*** :::
 
 The following steps need to be performed on an un-initialized ledger device:
 
-1. Connect your ledger device to the computer via USB
-2. Press both buttons
-3. Do **NOT** choose the "Config as a new device" option. Instead, choose
-   "Restore Configuration"
-4. Choose a PIN
-5. Choose the 12 words option
-6. Input each of the words you got during the fundraiser, in the correct order.
+1.  Connect your ledger device to the computer via USB
+2.  Press both buttons
+3.  Do **NOT** choose the "Config as a new device" option. Instead, choose
+    "Restore Configuration"
+4.  Choose a PIN
+5.  Choose the 12 words option
+6.  Input each of the words you got during the fundraiser, in the correct order.
 
 Your ledger is now correctly set up with your fundraiser mnemonic! Do not lose
 this mnemonic! If your ledger is compromised, you can always restore a new
@@ -183,12 +183,12 @@ encrypted private key on a computer, use the following command:
 gaiad keys add <yourKeyName> --recover
 ```
 
-- `<yourKeyName>` is the name of the account. It is a reference to the account
-  number used to derive the key pair from the mnemonic. You will use this name
-  to identify your account when you want to send a transaction.
-- You can add the optional `--account` flag to specify the path (`0`, `1`, `2`,
-  ...) you want to use to generate your account. By default, account `0` is
-  generated.
+*   `<yourKeyName>` is the name of the account. It is a reference to the account
+    number used to derive the key pair from the mnemonic. You will use this name
+    to identify your account when you want to send a transaction.
+*   You can add the optional `--account` flag to specify the path (`0`, `1`, `2`,
+    ...) you want to use to generate your account. By default, account `0` is
+    generated.
 
 The private key of account `0` will be saved in your operating system's
 credentials storage. Each time you want to send a transaction, you will need to
@@ -219,13 +219,13 @@ the device. This mnemonic is compatible with Cosmos and Cosmos accounts can be
 derived from it. Therefore, all you have to do is make your ledger compatible
 with `gaiad`. To do so, you need to go through the following steps:
 
-1. Download the Ledger Live app
-   [here](https://www.ledger.com/pages/ledger-live).
-2. Connect your ledger via USB and update to the latest firmware
-3. Go to the ledger live app store, and download the "Cosmos" application (this
-   can take a while). **Note: You may have to enable `Dev Mode` in the
-   `Settings` of Ledger Live to be able to download the "Cosmos" application**.
-4. Navigate to the Cosmos app on your ledger device
+1.  Download the Ledger Live app
+    [here](https://www.ledger.com/pages/ledger-live).
+2.  Connect your ledger via USB and update to the latest firmware
+3.  Go to the ledger live app store, and download the "Cosmos" application (this
+    can take a while). **Note: You may have to enable `Dev Mode` in the
+    `Settings` of Ledger Live to be able to download the "Cosmos" application**.
+4.  Navigate to the Cosmos app on your ledger device
 
 Then, to create an account, use the following command:
 
@@ -236,12 +236,12 @@ gaiad keys add <yourAccountName> --ledger
 ::: warning **This command will only work while the Ledger is plugged in and
 unlocked** :::
 
-- `<yourKeyName>` is the name of the account. It is a reference to the account
-  number used to derive the key pair from the mnemonic. You will use this name
-  to identify your account when you want to send a transaction.
-- You can add the optional `--account` flag to specify the path (`0`, `1`, `2`,
-  ...) you want to use to generate your account. By default, account `0` is
-  generated.
+*   `<yourKeyName>` is the name of the account. It is a reference to the account
+    number used to derive the key pair from the mnemonic. You will use this name
+    to identify your account when you want to send a transaction.
+*   You can add the optional `--account` flag to specify the path (`0`, `1`, `2`,
+    ...) you want to use to generate your account. By default, account `0` is
+    generated.
 
 #### Using a Computer
 
@@ -282,12 +282,12 @@ rm ~/.bash_history
 
 :::
 
-- `<yourKeyName>` is the name of the account. It is a reference to the account
-  number used to derive the key pair from the mnemonic. You will use this name
-  to identify your account when you want to send a transaction.
-- You can add the optional `--account` flag to specify the path (`0`, `1`, `2`,
-  ...) you want to use to generate your account. By default, account `0` is
-  generated.
+*   `<yourKeyName>` is the name of the account. It is a reference to the account
+    number used to derive the key pair from the mnemonic. You will use this name
+    to identify your account when you want to send a transaction.
+*   You can add the optional `--account` flag to specify the path (`0`, `1`, `2`,
+    ...) you want to use to generate your account. By default, account `0` is
+    generated.
 
 You can generate more accounts from the same mnemonic using the following
 command:
@@ -430,9 +430,7 @@ Transactions on the Cosmos Hub network need to include a transaction fee in
 order to be processed. This fee pays for the gas required to run the
 transaction. The formula is the following:
 
-```
-fees = ceil(gas * gasPrices)
-```
+    fees = ceil(gas * gasPrices)
 
 The `gas` is dependent on the transaction. Different transaction require
 different amount of `gas`. The `gas` amount for a transaction is calculated as
@@ -544,12 +542,12 @@ trusted full-node.
 The Cosmos Hub has a built-in governance system that lets bonded Atom holders
 vote on proposals. There are three types of proposal:
 
-- `Text Proposals`: These are the most basic type of proposals. They can be used
-  to get the opinion of the network on a given topic.
-- `Parameter Proposals`: These are used to update the value of an existing
-  parameter.
-- `Software Upgrade Proposal`: These are used to propose an upgrade of the Hub's
-  software.
+*   `Text Proposals`: These are the most basic type of proposals. They can be used
+    to get the opinion of the network on a given topic.
+*   `Parameter Proposals`: These are used to update the value of an existing
+    parameter.
+*   `Software Upgrade Proposal`: These are used to propose an upgrade of the Hub's
+    software.
 
 Any Atom holder can submit a proposal. In order for the proposal to be open for
 voting, it needs to come with a `deposit` that is greater than a parameter

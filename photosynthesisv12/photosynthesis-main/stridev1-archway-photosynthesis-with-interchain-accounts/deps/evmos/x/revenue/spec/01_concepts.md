@@ -35,12 +35,12 @@ As described above, developers will earn a portion of the transaction fee after
 registering their contracts. To understand how transaction fees are distributed,
 we look at the following two things in detail:
 
-- The transactions eligible are only
-  [EVM transactions](https://docs.evmos.org/modules/evm/) (`MsgEthereumTx`).
-  Cosmos SDK transactions are not eligible at this time.
-- The registration of factory contracts (smart contracts that have been deployed
-  by other contracts) requires the identification original contract's deployer.
-  This is done through address derivation.
+*   The transactions eligible are only
+    [EVM transactions](https://docs.evmos.org/modules/evm/) (`MsgEthereumTx`).
+    Cosmos SDK transactions are not eligible at this time.
+*   The registration of factory contracts (smart contracts that have been deployed
+    by other contracts) requires the identification original contract's deployer.
+    This is done through address derivation.
 
 ### EVM Transaction Fees
 
@@ -55,7 +55,7 @@ of `txFee = gasUsed * gasPrice` for the execution.
 This transaction fee is distributed between developers and validators, in
 accordance with the `x/revenue` module parameters: `DeveloperShares`,
 `ValidatorShares`. This distribution is handled through the EVM's
-[`PostTxProcessing` Hook](./05\_hooks.md).
+[`PostTxProcessing` Hook](./05_hooks.md).
 
 ### Address Derivation
 
@@ -78,19 +78,19 @@ When registering a smart contract, the deployer provides an array of nonces,
 used to
 [derive the contract’s address](https://github.com/ethereum/go-ethereum/blob/d8ff53dfb8a516f47db37dbc7fd7ad18a1e8a125/crypto/crypto.go#L107-L111):
 
-- If `MyContract` is deployed directly by `DeployerEOA`, in a transaction sent
-  with nonce `5`, then the array of nonces is `[5]`.
-- If the contract was created by a smart contract, through the `CREATE` opcode,
-  we need to provide all the nonces from the creation path. E.g. if
-  `DeployerEOA` deploys a `FactoryA` smart contract with nonce `5`. Then,
-  `DeployerEOA` sends a transaction to `FactoryA` through which a `FactoryB`
-  smart contract is created. If we assume `FactoryB` is the second contract
-  created by `FactoryA`, then `FactoryA`'s nonce is `2`. Then, `DeployerEOA`
-  sends a transaction to the `FactoryB` contract, through which `MyContract` is
-  created. If this is the first contract created by `FactoryB` - the nonce is
-  `1`. We now have an address derivation path of `DeployerEOA` -> `FactoryA` ->
-  `FactoryB` -> `MyContract`. To be able to verify that `DeployerEOA` can
-  register `MyContract`, we need to provide the following nonces: `[5, 2, 1]`.
+*   If `MyContract` is deployed directly by `DeployerEOA`, in a transaction sent
+    with nonce `5`, then the array of nonces is `[5]`.
+*   If the contract was created by a smart contract, through the `CREATE` opcode,
+    we need to provide all the nonces from the creation path. E.g. if
+    `DeployerEOA` deploys a `FactoryA` smart contract with nonce `5`. Then,
+    `DeployerEOA` sends a transaction to `FactoryA` through which a `FactoryB`
+    smart contract is created. If we assume `FactoryB` is the second contract
+    created by `FactoryA`, then `FactoryA`'s nonce is `2`. Then, `DeployerEOA`
+    sends a transaction to the `FactoryB` contract, through which `MyContract` is
+    created. If this is the first contract created by `FactoryB` - the nonce is
+    `1`. We now have an address derivation path of `DeployerEOA` -> `FactoryA` ->
+    `FactoryB` -> `MyContract`. To be able to verify that `DeployerEOA` can
+    register `MyContract`, we need to provide the following nonces: `[5, 2, 1]`.
 
 ::: tip **Note**: Even if `MyContract` is created from `FactoryB` through a
 transaction sent by an account different from `DeployerEOA`, only `DeployerEOA`

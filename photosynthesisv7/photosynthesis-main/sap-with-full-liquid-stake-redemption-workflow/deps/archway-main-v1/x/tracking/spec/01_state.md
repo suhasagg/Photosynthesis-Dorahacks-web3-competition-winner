@@ -27,16 +27,16 @@ Example:
 
 where:
 
-- `id` - unique sequentially incremented identificator;
-- `height`- reference to the block height for the transaction;
-- `total_gas` - sum of gas consumed by all contract operations (VM + SDK gas);
+*   `id` - unique sequentially incremented identificator;
+*   `height`- reference to the block height for the transaction;
+*   `total_gas` - sum of gas consumed by all contract operations (VM + SDK gas);
 
 > TxInfo is created automatically during module EndBlocker.
 
 Storage keys:
 
-- TxInfo: `0x00 | 0x01 | ID -> ProtocolBuffer(TxInfo)`
-- TxInfoByBlock: `0x00 | 0x02 | BlockHeight | ID -> Nil`
+*   TxInfo: `0x00 | 0x01 | ID -> ProtocolBuffer(TxInfo)`
+*   TxInfoByBlock: `0x00 | 0x02 | BlockHeight | ID -> Nil`
 
 ## ContractOperationInfo
 
@@ -56,18 +56,18 @@ keeps a single contract operation gas consumption data.
 
 where:
 
-- `id` - unique sequentially incremented identificator;
-- `tx_id`- reference to the [TxInfo](./01\_state.md#TxInfo) object;
-- `contract_address`- contract bech32-encoded CosmWasm address;
-- `operation_type`-
-  [enum](../../../proto/archway/tracking/v1beta1/tracking.proto#L9) denoting
-  which operation is consumed gas;
-- `vm_gas` - gas consumption reported by the SDK gas meter and the WASM
-  GasRegister (cost of *Execute* / *Query* / etc);
-- `sdk_gas` - gas consumption reported by the WASM VM;
+*   `id` - unique sequentially incremented identificator;
+*   `tx_id`- reference to the [TxInfo](./01_state.md#TxInfo) object;
+*   `contract_address`- contract bech32-encoded CosmWasm address;
+*   `operation_type`-
+    [enum](../../../proto/archway/tracking/v1beta1/tracking.proto#L9) denoting
+    which operation is consumed gas;
+*   `vm_gas` - gas consumption reported by the SDK gas meter and the WASM
+    GasRegister (cost of *Execute* / *Query* / etc);
+*   `sdk_gas` - gas consumption reported by the WASM VM;
 
 Storage keys:
 
-- ContractOperationInfo
-  `0x01 | 0x01 | ID -> ProtocolBuffer(ContractOperationInfo)`
-- ContractOperationInfoByTx: `0x01 | 0x02 | TxInfoID | ID -> Nil`
+*   ContractOperationInfo
+    `0x01 | 0x01 | ID -> ProtocolBuffer(ContractOperationInfo)`
+*   ContractOperationInfoByTx: `0x01 | 0x02 | TxInfoID | ID -> Nil`

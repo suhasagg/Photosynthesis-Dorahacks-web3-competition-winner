@@ -2,8 +2,8 @@
 
 ## Changelog
 
-- 2021-06-14: updates after implementation
-- 2021-05-15: first draft
+*   2021-06-14: updates after implementation
+*   2021-05-15: first draft
 
 ## Status
 
@@ -77,13 +77,13 @@ In the case of the `x/evm` module, it currently uses a modified version of
 Geth's `TransitionDB`, that wraps these two `vm.EVM` methods. The reason for
 using this modified function, is due to several reasons:
 
-1. The use of `sdk.Msg` (`MsgEthereumTx`) instead of the ethereum `core.Message`
-   type for the `vm.EVM` functions, preventing the direct use of the
-   `core.ApplyMessage`.
-2. The use of custom gas accounting through the transaction `GasMeter` available
-   on the `sdk.Context` to consume the same amount of gas as on Ethereum.
-3. Simulate logic via ABCI `CheckTx`, that prevents the state from being
-   finalized.
+1.  The use of `sdk.Msg` (`MsgEthereumTx`) instead of the ethereum `core.Message`
+    type for the `vm.EVM` functions, preventing the direct use of the
+    `core.ApplyMessage`.
+2.  The use of custom gas accounting through the transaction `GasMeter` available
+    on the `sdk.Context` to consume the same amount of gas as on Ethereum.
+3.  Simulate logic via ABCI `CheckTx`, that prevents the state from being
+    finalized.
 
 ## Decision
 
@@ -154,11 +154,11 @@ that discards the existing values of the store when the block is commited.
 
 The fields that have been modified to use the `TransientStore` are:
 
-- Block bloom filter (cleared at the end of every block)
-- Tx index (updated on every transaction)
-- Gas amount refunded (updated on every transaction)
-- Suicided account (cleared at the end of every block)
-- `AccessList` address and slot (cleared at the end of every block)
+*   Block bloom filter (cleared at the end of every block)
+*   Tx index (updated on every transaction)
+*   Gas amount refunded (updated on every transaction)
+*   Suicided account (cleared at the end of every block)
+*   `AccessList` address and slot (cleared at the end of every block)
 
 ### State Objects
 
@@ -307,25 +307,25 @@ ready-state (at the moment of writing).
 
 ### Positive
 
-- Improve maintenance by simplifying the state transition logic
-- Defines a single option for accessing the store through the `Keeper`, thus
-  removing the `CommitStateDB` type.
-- State operations and tests are now all located in the `evm/keeper/` package
-- Removes the concept of `stateObject` by committing to the store directly
-- Delete operations on `EndBlock` for updating and committing dirty state
-  objects.
-- Split the state transition functionality to modularize components that can be
-  beneficial for further customization (eg: using an alternative EVM)
+*   Improve maintenance by simplifying the state transition logic
+*   Defines a single option for accessing the store through the `Keeper`, thus
+    removing the `CommitStateDB` type.
+*   State operations and tests are now all located in the `evm/keeper/` package
+*   Removes the concept of `stateObject` by committing to the store directly
+*   Delete operations on `EndBlock` for updating and committing dirty state
+    objects.
+*   Split the state transition functionality to modularize components that can be
+    beneficial for further customization (eg: using an alternative EVM)
 
 ### Negative
 
-- Increases the dependency of external packages (eg: `go-ethereum`)
+*   Increases the dependency of external packages (eg: `go-ethereum`)
 
 ### Neutral
 
-- Some of the fields from the `CommitStateDB` will have to be added to the
-  `Keeper`
-- Some state changes will have to be kept in store (eg: suicide state)
+*   Some of the fields from the `CommitStateDB` will have to be added to the
+    `Keeper`
+*   Some state changes will have to be kept in store (eg: suicide state)
 
 ## Further Discussions
 

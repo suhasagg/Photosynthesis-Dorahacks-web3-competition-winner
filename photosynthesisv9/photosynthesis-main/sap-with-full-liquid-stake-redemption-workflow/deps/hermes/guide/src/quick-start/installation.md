@@ -2,44 +2,44 @@
 
 There are two main approaches for obtaining Hermes:
 
-1. Installation:
+1.  Installation:
 
-   1. If you are running on a Unix machine (Linux/macOS), then the simplest
-      option is to [download the latest binary](#install-by-downloading).
-   2. You can also install via [Cargo](#install-via-cargo).
+    1.  If you are running on a Unix machine (Linux/macOS), then the simplest
+        option is to [download the latest binary](#install-by-downloading).
+    2.  You can also install via [Cargo](#install-via-cargo).
 
-2. Alternatively, [build Hermes directly from source](#build-from-source).
+2.  Alternatively, [build Hermes directly from source](#build-from-source).
 
 ## Install by downloading
 
 Simply head to the GitHub [Releases][releases] page and download the latest
 version of Hermes binary matching your platform:
 
-- macOS: `hermes-{{#template ../templates/version}}-x86_64-apple-darwin.tar.gz`
-  (or .zip),
-- Linux:
-  `hermes-{{#template ../templates/version}}-x86_64-unknown-linux-gnu.tar.gz`
-  (or .zip).
+*   macOS: `hermes-{{#template ../templates/version}}-x86_64-apple-darwin.tar.gz`
+    (or .zip),
+*   Linux:
+    `hermes-{{#template ../templates/version}}-x86_64-unknown-linux-gnu.tar.gz`
+    (or .zip).
 
 The step-by-step instruction below should carry you through the whole process:
 
-1. Make the directory where we'll place the binary:
+1.  Make the directory where we'll place the binary:
 
-   ```shell
-   mkdir -p $HOME/.hermes/bin
-   ```
+    ```shell
+    mkdir -p $HOME/.hermes/bin
+    ```
 
-2. Extract the binary archive:
+2.  Extract the binary archive:
 
-   ```shell
-   tar -C $HOME/.hermes/bin/ -vxzf $ARCHIVE_NAME
-   ```
+    ```shell
+    tar -C $HOME/.hermes/bin/ -vxzf $ARCHIVE_NAME
+    ```
 
-3. Update your path, by adding this line in your `.bashrc` or `.zshrc` shell
-   configuration file:
-   ```shell
-   export PATH="$HOME/.hermes/bin:$PATH"
-   ```
+3.  Update your path, by adding this line in your `.bashrc` or `.zshrc` shell
+    configuration file:
+    ```shell
+    export PATH="$HOME/.hermes/bin:$PATH"
+    ```
 
 > NOTE: The binary may be initially prevented from running if you're on macOS.
 > See the ["Open Anyway" instructions from this support forum][developer-app] if
@@ -53,9 +53,7 @@ You should now be able to run Hermes by invoking the `hermes` executable.
 
 Which should be:
 
-```
-hermes {{#template ../templates/version}}
-```
+    hermes {{#template ../templates/version}}
 
 ## Install via Cargo
 
@@ -89,9 +87,7 @@ You should now be able to run Hermes by invoking the `hermes` executable.
 
 Which should be:
 
-```
-hermes {{#template ../templates/version}}
-```
+    hermes {{#template ../templates/version}}
 
 ## Build from source
 
@@ -173,35 +169,33 @@ usage and help information:
 ./target/release/hermes
 ```
 
-```
-hermes {{#template ../templates/version}}
-Informal Systems <hello@informal.systems>
+    hermes {{#template ../templates/version}}
+    Informal Systems <hello@informal.systems>
 
-USAGE:
-    hermes [OPTIONS] <SUBCOMMAND>
+    USAGE:
+        hermes [OPTIONS] <SUBCOMMAND>
 
-OPTIONS:
-        --config <CONFIG>    Path to configuration file
-    -h, --help               Print help information
-        --json               Enable JSON output
-    -V, --version            Print version information
+    OPTIONS:
+            --config <CONFIG>    Path to configuration file
+        -h, --help               Print help information
+            --json               Enable JSON output
+        -V, --version            Print version information
 
-SUBCOMMANDS:
-    clear           Clear objects, such as outstanding packets on a channel
-    config          Validate Hermes configuration file
-    create          Create objects (client, connection, or channel) on chains
-    health-check    Performs a health check of all chains in the the config
-    help            Print this message or the help of the given subcommand(s)
-    keys            Manage keys in the relayer for each chain
-    listen          Listen to and display IBC events emitted by a chain
-    misbehaviour    Listen to client update IBC events and handles misbehaviour
-    query           Query objects from the chain
-    start           Start the relayer in multi-chain mode
-    tx              Create and send IBC transactions
-    update          Update objects (clients) on chains
-    upgrade         Upgrade objects (clients) after chain upgrade
-    completions     Generate auto-complete scripts for different shells
-```
+    SUBCOMMANDS:
+        clear           Clear objects, such as outstanding packets on a channel
+        config          Validate Hermes configuration file
+        create          Create objects (client, connection, or channel) on chains
+        health-check    Performs a health check of all chains in the the config
+        help            Print this message or the help of the given subcommand(s)
+        keys            Manage keys in the relayer for each chain
+        listen          Listen to and display IBC events emitted by a chain
+        misbehaviour    Listen to client update IBC events and handles misbehaviour
+        query           Query objects from the chain
+        start           Start the relayer in multi-chain mode
+        tx              Create and send IBC transactions
+        update          Update objects (clients) on chains
+        upgrade         Upgrade objects (clients) after chain upgrade
+        completions     Generate auto-complete scripts for different shells
 
 ### Creating an alias for the executable
 
@@ -243,9 +237,7 @@ On a macOS installation with Homebrew `bash-completion` formula installed, use
 To make the shell load the script on initialization, add the directory to
 `fpath` in your `~/.zshrc` before `compinit`:
 
-```
-fpath+=~/.zfunc
-```
+    fpath+=~/.zfunc
 
 ## Next Steps
 

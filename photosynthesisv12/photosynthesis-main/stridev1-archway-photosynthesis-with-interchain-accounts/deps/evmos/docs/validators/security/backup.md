@@ -22,9 +22,9 @@ Tendermint key is located at:
 
 Then do the following:
 
-1. Backup the `json` file mentioned above (or backup the whole `config` folder).
-2. Backup the self-delegator wallet. See
-   [backing up wallets with the Evmos Daemon](../../users/wallets/backup.md).
+1.  Backup the `json` file mentioned above (or backup the whole `config` folder).
+2.  Backup the self-delegator wallet. See
+    [backing up wallets with the Evmos Daemon](../../users/wallets/backup.md).
 
 To see your validator's associated public key:
 

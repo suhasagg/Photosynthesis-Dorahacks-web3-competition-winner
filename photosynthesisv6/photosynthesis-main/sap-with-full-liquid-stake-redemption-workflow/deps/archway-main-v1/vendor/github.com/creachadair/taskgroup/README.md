@@ -160,9 +160,9 @@ grounds for terminating the work as a whole.
 The package provides a `taskgroup.Group` type that has built-in support for some
 of these concerns:
 
-- Limiting the number of active goroutines.
-- Collecting and filtering errors.
-- Waiting for completion and delivering status.
+*   Limiting the number of active goroutines.
+*   Collecting and filtering errors.
+*   Waiting for completion and delivering status.
 
 A `taskgroup.Group` collects error values from each task and can deliver them to
 a user-provided callback. The callback can filter them or take other actions

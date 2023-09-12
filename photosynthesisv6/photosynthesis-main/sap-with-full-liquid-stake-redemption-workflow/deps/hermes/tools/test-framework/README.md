@@ -30,6 +30,6 @@ Example tests written using `ibc-test-framework` can be found in the
 Some diagrams have been prepared to ease the understanding of the test
 framework:
 
-- [Tagged Identifiers and Data Structures](https://app.excalidraw.com/l/4XqkU6POmGI/7za2eSTChuT)
-- [Test Data Structures](https://app.excalidraw.com/l/4XqkU6POmGI/5y6i0NKqiEv)
-- [Test Framework Traits](https://app.excalidraw.com/l/4XqkU6POmGI/80KAnVZ6cu4)
+*   [Tagged Identifiers and Data Structures](https://app.excalidraw.com/l/4XqkU6POmGI/7za2eSTChuT)
+*   [Test Data Structures](https://app.excalidraw.com/l/4XqkU6POmGI/5y6i0NKqiEv)
+*   [Test Framework Traits](https://app.excalidraw.com/l/4XqkU6POmGI/80KAnVZ6cu4)

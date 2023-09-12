@@ -6,15 +6,15 @@ Interchain Security has been referred to in many different ways: Shared
 Security, Cross Chain Validation, Cross Chain Collateralization, Shared Staking.
 This document will restrict use to the following three terms:
 
-- **Shared Security**
-  - Shared security is a family of technologies that include optimistic rollups,
-    zk-rollups, sharding and interchain security.
-- **Interchain Security**
-  - Interchain Security is the Cosmos specific category of Shared Security that
-    uses IBC (Inter-Blockchain Communication).
-- **Cross Chain Validation**
-  - Cross Chain Validation is the specific IBC level protocol that enables
-    Interchain Security.
+*   **Shared Security**
+    *   Shared security is a family of technologies that include optimistic rollups,
+        zk-rollups, sharding and interchain security.
+*   **Interchain Security**
+    *   Interchain Security is the Cosmos specific category of Shared Security that
+        uses IBC (Inter-Blockchain Communication).
+*   **Cross Chain Validation**
+    *   Cross Chain Validation is the specific IBC level protocol that enables
+        Interchain Security.
 
 While there are many ways that Interchain Security could take place, this
 document will focus on one instance of Interchain Security that has particularly
@@ -308,8 +308,8 @@ mechanisms.
 There are three types of operations within Cross Chain Validation which must be
 present for Interchain Security to take place:
 
-- Validator Set Updates
-- Evidence
+*   Validator Set Updates
+*   Evidence
 
 ### Validator Set Updates
 
@@ -508,10 +508,10 @@ the exact implementation details for each of the modules included in the
 Interchain Security stack. These further give rise to expected user flows for
 each step as well as edge cases like:
 
-- Child or Provider Chain halting
-- Child of Provider Chain upgrading
-- Contentious forks of either Provider Chain or Consumer Chain
-- Versions of IBC on each side fall out of sync
+*   Child or Provider Chain halting
+*   Child of Provider Chain upgrading
+*   Contentious forks of either Provider Chain or Consumer Chain
+*   Versions of IBC on each side fall out of sync
 
 Other open questions include addressing the degree of risk this configuration
 adds to the Provider Chain. Should it be possible for a Provider Chain validator
@@ -546,7 +546,7 @@ parallel in order to satisfy as many needs as possible.
 
 # Further Reading
 
-- [Interchain Security is Coming to the Cosmos Hub](https://blog.cosmos.network/interchain-security-is-coming-to-the-cosmos-hub-f144c45fb035) -
-  Billy Rennekamp
-- [Interchain Security Slidedeck from Cosmoverse Community Conference](https://docs.google.com/presentation/d/1XaPrbcNksnVdhZO1eyshyDDDQkA6buvKt90yxRF7sLs/edit?usp=sharing) -
-  Billy Rennekamp
+*   [Interchain Security is Coming to the Cosmos Hub](https://blog.cosmos.network/interchain-security-is-coming-to-the-cosmos-hub-f144c45fb035) -
+    Billy Rennekamp
+*   [Interchain Security Slidedeck from Cosmoverse Community Conference](https://docs.google.com/presentation/d/1XaPrbcNksnVdhZO1eyshyDDDQkA6buvKt90yxRF7sLs/edit?usp=sharing) -
+    Billy Rennekamp

@@ -16,19 +16,17 @@ hermes help create
 will provide details about all the valid invocations of the `create` CLI
 command.
 
-```
-USAGE:
-    hermes create <SUBCOMMAND>
+    USAGE:
+        hermes create <SUBCOMMAND>
 
-DESCRIPTION:
-    Create objects (client, connection, or channel) on chains
+    DESCRIPTION:
+        Create objects (client, connection, or channel) on chains
 
-SUBCOMMANDS:
-    channel       Create a new channel between two chains
-    client        Create a new IBC client
-    connection    Create a new connection between two chains
-    help          Print this message or the help of the given subcommand(s)
-```
+    SUBCOMMANDS:
+        channel       Create a new channel between two chains
+        client        Create a new IBC client
+        connection    Create a new connection between two chains
+        help          Print this message or the help of the given subcommand(s)
 
 This can provide further specific guidance if we add additional parameters,
 e.g.,

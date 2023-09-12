@@ -6,25 +6,25 @@ daemon.
 
 It consists of various components in this repository:
 
-- `api/swagger.yaml` A Swagger definition of the API.
-- `api/types/` Types shared by both the client and server, representing various
-  objects, options, responses, etc. Most are written manually, but some are
-  automatically generated from the Swagger definition. See
-  [#27919](https://github.com/docker/docker/issues/27919) for progress on this.
-- `cli/` The command-line client.
-- `client/` The Go client used by the command-line client. It can also be used
-  by third-party Go programs.
-- `daemon/` The daemon, which serves the API.
+*   `api/swagger.yaml` A Swagger definition of the API.
+*   `api/types/` Types shared by both the client and server, representing various
+    objects, options, responses, etc. Most are written manually, but some are
+    automatically generated from the Swagger definition. See
+    [#27919](https://github.com/docker/docker/issues/27919) for progress on this.
+*   `cli/` The command-line client.
+*   `client/` The Go client used by the command-line client. It can also be used
+    by third-party Go programs.
+*   `daemon/` The daemon, which serves the API.
 
 ## Swagger definition
 
 The API is defined by the [Swagger](http://swagger.io/specification/) definition
 in `api/swagger.yaml`. This definition can be used to:
 
-1. Automatically generate documentation.
-2. Automatically generate the Go server and client. (A work-in-progress.)
-3. Provide a machine readable version of the API for introspecting what it can
-   do, automatically generating clients for other languages, etc.
+1.  Automatically generate documentation.
+2.  Automatically generate the Go server and client. (A work-in-progress.)
+3.  Provide a machine readable version of the API for introspecting what it can
+    do, automatically generating clients for other languages, etc.
 
 ## Updating the API documentation
 
@@ -33,9 +33,9 @@ updates to the API, edit this file to represent the change in the documentation.
 
 The file is split into two main sections:
 
-- `definitions`, which defines re-usable objects used in requests and responses
-- `paths`, which defines the API endpoints (and some inline objects which don't
-  need to be reusable)
+*   `definitions`, which defines re-usable objects used in requests and responses
+*   `paths`, which defines the API endpoints (and some inline objects which don't
+    need to be reusable)
 
 To make an edit, first look for the endpoint you want to edit under `paths`,
 then make the required edits. Endpoints may reference reusable objects with

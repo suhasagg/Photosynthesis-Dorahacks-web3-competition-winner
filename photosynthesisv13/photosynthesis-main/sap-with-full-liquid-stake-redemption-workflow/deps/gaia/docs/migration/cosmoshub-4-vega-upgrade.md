@@ -1,6 +1,8 @@
 ***
 
-## title: Cosmos Hub 4, Vega Upgrade&#xA;order: 3
+title: Cosmos Hub 4, Vega Upgrade
+order: 3
+--------
 
 <!-- markdown-link-check-disable -->
 
@@ -11,31 +13,31 @@ successful execution of the
 [Vega Upgrade](https://github.com/cosmos/gaia/blob/main/docs/roadmap/cosmos-hub-roadmap-2.0.md#vega-upgrade-expected-q4-2021),
 which contains the following main new features:
 
-- [authz](https://github.com/cosmos/cosmos-sdk/tree/v0.44.3/x/authz/spec) and
-  [feegrant modules](https://github.com/cosmos/cosmos-sdk/tree/v0.44.3/x/feegrant/spec)
-- [packet-forward-middleware](https://github.com/strangelove-ventures/packet-forward-middleware)
-- [IBC](https://github.com/cosmos/ibc-go) as a standalone module
+*   [authz](https://github.com/cosmos/cosmos-sdk/tree/v0.44.3/x/authz/spec) and
+    [feegrant modules](https://github.com/cosmos/cosmos-sdk/tree/v0.44.3/x/feegrant/spec)
+*   [packet-forward-middleware](https://github.com/strangelove-ventures/packet-forward-middleware)
+*   [IBC](https://github.com/cosmos/ibc-go) as a standalone module
 
 TOC:
 
-- [On-chain governance proposal attains consensus](#on-chain-governance-proposal-attains-consensus)
-- [Upgrade will take place December 14, 2021](#upgrade-will-take-place-december-14-2021)
-- [Chain-id will remain the same](#chain-id-will-remain-the-same)
-- [Preparing for the upgrade](#preparing-for-the-upgrade)
-  - [System requirement](#system-requirement)
-  - [Backups](#backups)
-  - [Testing](#testing)
-  - [Current runtime, cosmoshub-4 (pre-Vega upgrade) is running Gaia v5.0.0](#current-runtime-cosmoshub-4-pre-vega-upgrade-is-running-gaia-v500)
-  - [Target runtime, cosmoshub-4 (post-Vega upgrade) will run Gaia v6.0.4](#target-runtime-cosmoshub-4-post-vega-upgrade-will-run-gaia-v604)
-- [Vega upgrade steps](#vega-upgrade-steps)
-  - [Method I: manual upgrade](#method-i-manual-upgrade)
-  - - [Method II: upgrade using Cosmovisor by manually preparing the Gaia v6.0.4 binary](#method-ii-upgrade-using-cosmovisor-by-manually-preparing-the-gaia-v604-binary)
-  - [Method III: upgrade using Cosmovisor by auto-downloading the Gaia v6.0.4 binary (not recommended!)](#method-iii-upgrade-using-cosmovisor-by-auto-downloading-the-gaia-v604-binary-not-recommended)
-- [Upgrade duration](#upgrade-duration)
-- [Rollback plan](#rollback-plan)
-- [Communications](#communications)
-- [Risks](#risks)
-- [Reference](#reference)
+*   [On-chain governance proposal attains consensus](#on-chain-governance-proposal-attains-consensus)
+*   [Upgrade will take place December 14, 2021](#upgrade-will-take-place-december-14-2021)
+*   [Chain-id will remain the same](#chain-id-will-remain-the-same)
+*   [Preparing for the upgrade](#preparing-for-the-upgrade)
+    *   [System requirement](#system-requirement)
+    *   [Backups](#backups)
+    *   [Testing](#testing)
+    *   [Current runtime, cosmoshub-4 (pre-Vega upgrade) is running Gaia v5.0.0](#current-runtime-cosmoshub-4-pre-vega-upgrade-is-running-gaia-v500)
+    *   [Target runtime, cosmoshub-4 (post-Vega upgrade) will run Gaia v6.0.4](#target-runtime-cosmoshub-4-post-vega-upgrade-will-run-gaia-v604)
+*   [Vega upgrade steps](#vega-upgrade-steps)
+    *   [Method I: manual upgrade](#method-i-manual-upgrade)
+    *   *   [Method II: upgrade using Cosmovisor by manually preparing the Gaia v6.0.4 binary](#method-ii-upgrade-using-cosmovisor-by-manually-preparing-the-gaia-v604-binary)
+    *   [Method III: upgrade using Cosmovisor by auto-downloading the Gaia v6.0.4 binary (not recommended!)](#method-iii-upgrade-using-cosmovisor-by-auto-downloading-the-gaia-v604-binary-not-recommended)
+*   [Upgrade duration](#upgrade-duration)
+*   [Rollback plan](#rollback-plan)
+*   [Communications](#communications)
+*   [Risks](#risks)
+*   [Reference](#reference)
 
 ## On-chain governance proposal attains consensus
 
@@ -119,11 +121,11 @@ The Comsos Hub mainnet network, `cosmoshub-4`, will run
 
 There are 2 major ways to upgrade a node:
 
-- Manual upgrade
-- Upgrade using
-  [Cosmovisor](https://github.com/cosmos/cosmos-sdk/tree/master/cosmovisor)
-  - Either by manually preparing the new binary
-  - Or by using the auto-download functionality (this is not yet recommended)
+*   Manual upgrade
+*   Upgrade using
+    [Cosmovisor](https://github.com/cosmos/cosmos-sdk/tree/master/cosmovisor)
+    *   Either by manually preparing the new binary
+    *   Or by using the auto-download functionality (this is not yet recommended)
 
 If you prefer to use Cosmovisor to upgrade, some preparation work is needed
 before upgrade.
@@ -285,21 +287,21 @@ total sum voting power > 2/3 complete their nodes upgrades.
 
 Auto-download the new binary is not recommended for the following reasons:
 
-- In general, auto-download comes with the risk that the verification of correct
-  download is done automatically. If you want to have the highest guarantee you
-  should confirm the check-sum manually. We hope more node operators will use
-  the auto-download for this release but please be aware this is a risk you
-  should take at your own discretion.
-- For the Vega upgrade, Gaia will upgrade its dependency on Cosmos SDK v0.42 to
-  Cosmos SDK v0.44, this will require
-  [Cosmovisor v0.1](https://github.com/cosmos/cosmos-sdk/releases/tag/cosmovisor%2Fv0.1.0).
-  Later versions of Cosmovisor do not support Cosmos SDK v0.42 or earlier if the
-  auto-download option is enabled.
-- By using Cosmovisor v0.1 you might experience a
-  [node hanging issue](https://github.com/cosmos/cosmos-sdk/issues/9875) when
-  querying a result with a large output size. For example,
-  `gaiad q gov proposals` will hang the node being queried, this issue will not
-  appear for Cosmovisor versions newer than v0.1.
+*   In general, auto-download comes with the risk that the verification of correct
+    download is done automatically. If you want to have the highest guarantee you
+    should confirm the check-sum manually. We hope more node operators will use
+    the auto-download for this release but please be aware this is a risk you
+    should take at your own discretion.
+*   For the Vega upgrade, Gaia will upgrade its dependency on Cosmos SDK v0.42 to
+    Cosmos SDK v0.44, this will require
+    [Cosmovisor v0.1](https://github.com/cosmos/cosmos-sdk/releases/tag/cosmovisor%2Fv0.1.0).
+    Later versions of Cosmovisor do not support Cosmos SDK v0.42 or earlier if the
+    auto-download option is enabled.
+*   By using Cosmovisor v0.1 you might experience a
+    [node hanging issue](https://github.com/cosmos/cosmos-sdk/issues/9875) when
+    querying a result with a large output size. For example,
+    `gaiad q gov proposals` will hang the node being queried, this issue will not
+    appear for Cosmovisor versions newer than v0.1.
 
 ## Upgrade duration
 

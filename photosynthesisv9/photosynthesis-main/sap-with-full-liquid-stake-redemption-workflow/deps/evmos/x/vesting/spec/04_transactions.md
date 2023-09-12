@@ -33,10 +33,10 @@ type MsgCreateClawbackVestingAccount struct {
 
 The msg content stateless validation fails if:
 
-- `FromAddress` or `ToAddress` are invalid
-- `LockupPeriods` and `VestingPeriods`
-  - include period with a non-positive length
-  - describe the same total amount
+*   `FromAddress` or `ToAddress` are invalid
+*   `LockupPeriods` and `VestingPeriods`
+    *   include period with a non-positive length
+    *   describe the same total amount
 
 ## `Clawback`
 
@@ -55,8 +55,8 @@ type MsgClawback struct {
 
 The msg content stateless validation fails if:
 
-- `FunderAddress` or `AccountAddress` are invalid
-- `DestAddress` is not empty and invalid
+*   `FunderAddress` or `AccountAddress` are invalid
+*   `DestAddress` is not empty and invalid
 
 ## `UpdateVestingFunder`
 
@@ -73,4 +73,4 @@ type MsgUpdateVestingFunder struct {
 
 The msg content stateless validation fails if:
 
-- `FunderAddress`, `NewFunderAddress` or `VestingAddress` are invalid
+*   `FunderAddress`, `NewFunderAddress` or `VestingAddress` are invalid

@@ -1,6 +1,9 @@
 ***
 
-## order: false&#xA;parent:&#xA;order: 1
+order: false
+parent:
+order: 1
+--------
 
 # Cosmos Hub
 

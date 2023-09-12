@@ -23,7 +23,7 @@ contract uses (by its own or by other contracts calling it), the more rewards it
 gets.
 
 To configure rewards specific parameters for a contract, the
-[ContractMetadata](01\_state.md#ContractMetadata) object is used.
+[ContractMetadata](01_state.md#ContractMetadata) object is used.
 
 There are two types of dApp rewards a contract can receive.
 
@@ -38,12 +38,12 @@ $$
 
 where:
 
-- *TxFees* - transaction fees paid by a user;
-- *TxFeeRebateRatio* - `x/rewards` module parameter that defines the ratio to
-  split fees between the **FeeCollector** and the **Rewards** module accounts
-  (`[0..1)`);
-- *ContractTxGasUsed* - total gas used by a contract within this transaction;
-- *TxGasUsed* - total gas used by all contracts within this transaction;
+*   *TxFees* - transaction fees paid by a user;
+*   *TxFeeRebateRatio* - `x/rewards` module parameter that defines the ratio to
+    split fees between the **FeeCollector** and the **Rewards** module accounts
+    (`[0..1)`);
+*   *ContractTxGasUsed* - total gas used by a contract within this transaction;
+*   *TxGasUsed* - total gas used by all contracts within this transaction;
 
 > **FeeCollector**'s part of fees is used to reward validators and delegators as
 > it is done in a "standard" Cosmos SDK-based chain. The same applies to
@@ -60,12 +60,12 @@ $$
 
 where:
 
-- *MintedTokens* - amount of tokens minted per block by the `x/mint` module;
-- *InflationRewardsRatio* - `x/rewards` module parameter that defines the ratio
-  to split inflation between the **FeeCollector** and the **Rewards** module
-  accounts (`[0..1)`);
-- *ContractTotalGasUsed* - total gas used by a contract within this block;
-- *BlockGasLimit* - maximum gas limit per block (consensus parameter);
+*   *MintedTokens* - amount of tokens minted per block by the `x/mint` module;
+*   *InflationRewardsRatio* - `x/rewards` module parameter that defines the ratio
+    to split inflation between the **FeeCollector** and the **Rewards** module
+    accounts (`[0..1)`);
+*   *ContractTotalGasUsed* - total gas used by a contract within this block;
+*   *BlockGasLimit* - maximum gas limit per block (consensus parameter);
 
 #### Transaction fees
 
@@ -75,12 +75,12 @@ $$
 
 where:
 
-- $MinimumTxFee$ - minimum fees expected to be paid for the given transaction;
-- $MinConsensusFee$ - price for one gas unit;
-- $TxGasLimit$ - transaction gas limit provided by a user;
-- $ContractAddress\_{msg}$ - contract address of the msg which needs to be
-  executed;
-- $flatfee(x)$ - function which fetches the flat fee for the given input;
+*   $MinimumTxFee$ - minimum fees expected to be paid for the given transaction;
+*   $MinConsensusFee$ - price for one gas unit;
+*   $TxGasLimit$ - transaction gas limit provided by a user;
+*   $ContractAddress\_{msg}$ - contract address of the msg which needs to be
+    executed;
+*   $flatfee(x)$ - function which fetches the flat fee for the given input;
 
 ##### Minimum consensus fee
 
@@ -111,11 +111,11 @@ token of the chain.
 
 ## Contents
 
-1. **[State](01\_state.md)**
-2. **[Messages](02\_messages.md)**
-3. **[Ante Handlers](03\_ante_handlers.md)**
-4. **[End-Block](04\_end_block.md)**
-5. **[Events](05\_events.md)**
-6. **[Parameters](06\_params.md)**
-7. **[Client](07\_client.md)**
-8. **[WASM bindings](08\_wasm_bindings.md)**
+1.  **[State](01_state.md)**
+2.  **[Messages](02_messages.md)**
+3.  **[Ante Handlers](03_ante_handlers.md)**
+4.  **[End-Block](04_end_block.md)**
+5.  **[Events](05_events.md)**
+6.  **[Parameters](06_params.md)**
+7.  **[Client](07_client.md)**
+8.  **[WASM bindings](08_wasm_bindings.md)**

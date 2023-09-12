@@ -35,14 +35,14 @@ normally best accomplished with an `./entrypoint.sh` script that performs the
 necessary chain bootstrapping. The `cosmos/gaia` repositories provide an example
 of both:
 
-- [`./entrypoint.sh`](https://github.com/cosmos/gaia/tree/master/contrib/single-node.sh)
-- [`Dockerfile.test`](https://github.com/cosmos/gaia/tree/master/contrib/Dockerfile.test)
+*   [`./entrypoint.sh`](https://github.com/cosmos/gaia/tree/master/contrib/single-node.sh)
+*   [`Dockerfile.test`](https://github.com/cosmos/gaia/tree/master/contrib/Dockerfile.test)
 
 Then you need to build and push your image to a public image repository. Having
 it tagged with the git sha and branch is best practice. See the build procedure
 for the gaia image:
 
-- [`Makefile`](https://github.com/cosmos/gaia/blob/master/Makefile#L164)
+*   [`Makefile`](https://github.com/cosmos/gaia/blob/master/Makefile#L164)
 
 At the end, you should have an image you can run which starts up an instance of
 your chain:
@@ -150,60 +150,60 @@ with status badges from Github Actions that shows the current status of
 different implementations. If you would like to add yours to this list (and if
 you have gotten this far, YOU SHOULD!!) do the following:
 
-1. Add a `Makefile` command that just calls your chain's tests. This is made
-   easy by the `-tags` flag that reads parts of the filenames of go tests. See
-   the `gaia` command for an example:
+1.  Add a `Makefile` command that just calls your chain's tests. This is made
+    easy by the `-tags` flag that reads parts of the filenames of go tests. See
+    the `gaia` command for an example:
 
-   ```Makefile
-   test-gaia:
-   	@go test -mod=readonly -v -coverprofile coverage.out ./test/... -tags gaia
+    ```Makefile
+    test-gaia:
+    	@go test -mod=readonly -v -coverprofile coverage.out ./test/... -tags gaia
 
-   test-mychain:
-       @go test -mod=readonly -v -coverprofile coverage.out ./test/... -tags mychain
-   ```
+    test-mychain:
+        @go test -mod=readonly -v -coverprofile coverage.out ./test/... -tags mychain
+    ```
 
-2. Add a `.github/{mychain}-tests.yml` file that is a copy of
-   `.github/gaia-tests.yml` but modified for your chain.
+2.  Add a `.github/{mychain}-tests.yml` file that is a copy of
+    `.github/gaia-tests.yml` but modified for your chain.
 
-   ```yml
-   name: TESTING - gaia to mychain integration
+    ```yml
+    name: TESTING - gaia to mychain integration
 
-   on: [push]
+    on: [push]
 
-   jobs:
+    jobs:
 
-     build:
-       name: build
-       runs-on: ubuntu-latest
-       steps:
+      build:
+        name: build
+        runs-on: ubuntu-latest
+        steps:
 
-       # Install and setup go
-       - name: Set up Go 1.14
-         uses: actions/setup-go@v1
-         with:
-           go-version: 1.14
-         id: go
+        # Install and setup go
+        - name: Set up Go 1.14
+          uses: actions/setup-go@v1
+          with:
+            go-version: 1.14
+          id: go
 
-       # setup docker
-       - name: Set up Docker 19.03
-         uses: docker-practice/actions-setup-docker@0.0.1
-         with:
-           docker-version: 19.03
-           docker-channel: stable
+        # setup docker
+        - name: Set up Docker 19.03
+          uses: docker-practice/actions-setup-docker@0.0.1
+          with:
+            docker-version: 19.03
+            docker-channel: stable
 
-       # checkout relayer
-       - name: checkout relayer
-         uses: actions/checkout@v2
+        # checkout relayer
+        - name: checkout relayer
+          uses: actions/checkout@v2
 
-       # build cache
-       - uses: actions/cache@v1
-         with:
-           path: ~/go/pkg/mod
-           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-           restore-keys: |
-             ${{ runner.os }}-go-
+        # build cache
+        - uses: actions/cache@v1
+          with:
+            path: ~/go/pkg/mod
+            key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+            restore-keys: |
+              ${{ runner.os }}-go-
 
-       # run tests
-       - name: run mychain tests
-         run: make test-mychain
-   ```
+        # run tests
+        - name: run mychain tests
+          run: make test-mychain
+    ```

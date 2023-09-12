@@ -27,15 +27,15 @@ data. That could be a long-term goal, and would scale to the cosmos and beyond.
 
 For any goal, we need some clear steps.
 
-1. Cleanup code, and write some more benchmark cases to capture "realistic"
-   usage
-2. Run tests on various hardware to see the best performing backing stores
-3. Do profiling on the best performance to see if there are any easy performance
-   gains
-4. (Possibly) Write another implementation of merkle.Tree to improve all the
-   memory overhead, consider CPU cache, etc....
-5. (Possibly) Write another backend datastore to persist the tree in a more
-   efficient way
+1.  Cleanup code, and write some more benchmark cases to capture "realistic"
+    usage
+2.  Run tests on various hardware to see the best performing backing stores
+3.  Do profiling on the best performance to see if there are any easy performance
+    gains
+4.  (Possibly) Write another implementation of merkle.Tree to improve all the
+    memory overhead, consider CPU cache, etc....
+5.  (Possibly) Write another backend datastore to persist the tree in a more
+    efficient way
 
 The rest of this document is the planned or completed actions for the
 above-listed steps.
@@ -44,44 +44,44 @@ above-listed steps.
 
 Done in branch `cleanup_deps`:
 
-- Fixed up dependeny management (tmlibs/db etc in glide/vendor)
-- Updated Makefile (test, bench, get_deps)
-- Fixed broken code - `looper.go` and one benchmark didn't run
+*   Fixed up dependeny management (tmlibs/db etc in glide/vendor)
+*   Updated Makefile (test, bench, get\_deps)
+*   Fixed broken code - `looper.go` and one benchmark didn't run
 
 Benchmarks should be parameterized on:
 
-1. storage implementation
-2. initial data size
-3. length of keys
-4. length of data
-5. block size (frequency of copy/hash...) Thus, we would see the same benchmark
-   run against memdb with 100K items, goleveldb with 100K, leveldb with 100K,
-   memdb with 10K, goleveldb with 10K...
+1.  storage implementation
+2.  initial data size
+3.  length of keys
+4.  length of data
+5.  block size (frequency of copy/hash...) Thus, we would see the same benchmark
+    run against memdb with 100K items, goleveldb with 100K, leveldb with 100K,
+    memdb with 10K, goleveldb with 10K...
 
 Scenarios to run after db is set up.
 
-- Pure query time (known/hits, vs. random/misses)
-- Write timing (known/updates, vs. random/inserts)
-- Delete timing (existing keys only)
-- TMSP Usage:
-  - For each block size:
-    - 2x copy "last commit" -> check and real
-    - repeat for each tx:
-      - (50% update + 50% insert?)
-      - query + insert/update in check
-      - query + insert/update in real
-    - get hash
-    - save real
-    - real -> "last commit"
+*   Pure query time (known/hits, vs. random/misses)
+*   Write timing (known/updates, vs. random/inserts)
+*   Delete timing (existing keys only)
+*   TMSP Usage:
+    *   For each block size:
+        *   2x copy "last commit" -> check and real
+        *   repeat for each tx:
+            *   (50% update + 50% insert?)
+            *   query + insert/update in check
+            *   query + insert/update in real
+        *   get hash
+        *   save real
+        *   real -> "last commit"
 
 ## Benchmarks
 
 After writing the benchmarks, we can run them under various environments and
 store the results under benchmarks directory. Some useful environments to test:
 
-- Dev machines
-- Digital ocean small/large machine
-- Various AWS setups
+*   Dev machines
+*   Digital ocean small/large machine
+*   Various AWS setups
 
 Please run the benchmark on more machines and add the result. Just type:
 `make record` in the directory and wait a (long) while (with little other load
@@ -104,18 +104,18 @@ point.
 
 Some guides:
 
-- [Profiling benchmarks locally](https://medium.com/@hackintoshrao/daily-code-optimization-using-benchmarks-and-profiling-in-golang-gophercon-india-2016-talk-874c8b4dc3c5#.jmnd8w2qr)
-- [On optimizing memory](https://signalfx.com/blog/a-pattern-for-optimizing-go-2/)
-- [Profiling running programs](http://blog.ralch.com/tutorial/golang-performance-and-memory-analysis/)
-- [Dave Chenny's profiler pkg](https://github.com/pkg/profile)
+*   [Profiling benchmarks locally](https://medium.com/@hackintoshrao/daily-code-optimization-using-benchmarks-and-profiling-in-golang-gophercon-india-2016-talk-874c8b4dc3c5#.jmnd8w2qr)
+*   [On optimizing memory](https://signalfx.com/blog/a-pattern-for-optimizing-go-2/)
+*   [Profiling running programs](http://blog.ralch.com/tutorial/golang-performance-and-memory-analysis/)
+*   [Dave Chenny's profiler pkg](https://github.com/pkg/profile)
 
 Some ideas for speedups:
 
-- [Speedup SHA256 100x on ARM](https://blog.minio.io/accelerating-sha256-by-100x-in-golang-on-arm-1517225f5ff4#.pybt7bb3w)
-- [Faster SHA256 golang implementation](https://github.com/minio/sha256-simd)
-- [Data structure alignment](http://stackoverflow.com/questions/39063530/optimising-datastructure-word-alignment-padding-in-golang)
-- [Slice alignment](http://blog.chewxy.com/2016/07/25/on-the-memory-alignment-of-go-slice-values/)
-- [Tool to analyze your structs](https://github.com/dominikh/go-structlayout)
+*   [Speedup SHA256 100x on ARM](https://blog.minio.io/accelerating-sha256-by-100x-in-golang-on-arm-1517225f5ff4#.pybt7bb3w)
+*   [Faster SHA256 golang implementation](https://github.com/minio/sha256-simd)
+*   [Data structure alignment](http://stackoverflow.com/questions/39063530/optimising-datastructure-word-alignment-padding-in-golang)
+*   [Slice alignment](http://blog.chewxy.com/2016/07/25/on-the-memory-alignment-of-go-slice-values/)
+*   [Tool to analyze your structs](https://github.com/dominikh/go-structlayout)
 
 ## Tree Re-implementation
 
@@ -126,12 +126,12 @@ and gc overhead. That means going down to some C-level coding...
 
 Some links for thought:
 
-- [Array representation of a binary tree](http://www.cse.hut.fi/en/research/SVG/TRAKLA2/tutorials/heap_tutorial/taulukkona.html)
-- [Memcpy buffer size timing](http://stackoverflow.com/questions/21038965/why-does-the-speed-of-memcpy-drop-dramatically-every-4kb)
-- [Calling memcpy from go](https://github.com/jsgilmore/shm/blob/master/memcpy.go)
-- [Unsafe docs](https://godoc.org/unsafe)
-- [...and how to use it](https://copyninja.info/blog/workaround-gotypesystems.html)
-- [Or maybe just plain copy...](https://godoc.org/builtin#copy)
+*   [Array representation of a binary tree](http://www.cse.hut.fi/en/research/SVG/TRAKLA2/tutorials/heap_tutorial/taulukkona.html)
+*   [Memcpy buffer size timing](http://stackoverflow.com/questions/21038965/why-does-the-speed-of-memcpy-drop-dramatically-every-4kb)
+*   [Calling memcpy from go](https://github.com/jsgilmore/shm/blob/master/memcpy.go)
+*   [Unsafe docs](https://godoc.org/unsafe)
+*   [...and how to use it](https://copyninja.info/blog/workaround-gotypesystems.html)
+*   [Or maybe just plain copy...](https://godoc.org/builtin#copy)
 
 ## Backend implementation
 
@@ -157,4 +157,4 @@ memory/disk page size.
 
 Some links for thought:
 
-- [Memory mapped files](https://github.com/edsrzf/mmap-go)
+*   [Memory mapped files](https://github.com/edsrzf/mmap-go)

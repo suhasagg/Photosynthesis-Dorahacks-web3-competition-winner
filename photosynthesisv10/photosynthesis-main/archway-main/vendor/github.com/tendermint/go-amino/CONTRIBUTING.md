@@ -29,9 +29,7 @@ tendermint project directory).
 Amino is fuzzed using several fuzzers. At least run [gofuzz] by running the
 command:
 
-```
-make test
-```
+    make test
 
 This is what circle-ci will also run for you.
 
@@ -39,21 +37,15 @@ Ideally, run the more in-depth [go-fuzzer], too. They are currently not run by
 circel-ci and we need to run it manually for any substantial change. If
 go-fuzzer isn't installed on your system, make sure to run:
 
-```
-go get -u github.com/dvyukov/go-fuzz/go-fuzz-build github.com/dvyukov/go-fuzz/go-fuzz
-```
+    go get -u github.com/dvyukov/go-fuzz/go-fuzz-build github.com/dvyukov/go-fuzz/go-fuzz
 
 The fuzzers are run by:
 
-```
-make gofuzz_json
-```
+    make gofuzz_json
 
 and
 
-```
-make gofuzz_binary
-```
+    make gofuzz_binary
 
 respectively. Both fuzzers will run in an endless loop and you have to quit them
 manually. They will output any problems (crashers) on the commandline. You'll

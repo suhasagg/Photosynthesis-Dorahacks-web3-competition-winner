@@ -2,7 +2,7 @@
 
 ## Changelog
 
-- 2020-07-22: First draft.
+*   2020-07-22: First draft.
 
 ## Context
 
@@ -22,13 +22,13 @@ hope to cover the full IBC suite.
 
 The `ibc-rs` repository comprises three broad parts:
 
-1. The codebase for the IBC relayer implementation in Rust is in `relayer/`,
-   which consists of crate **`relayer-cli`** (the frontend application of the
-   relayer) as well as crate **`relayer`** (the core relayer functionality).
-2. The codebase for IBC modules is in `modules/`, making up the crate called
-   **`relayer-modules`**.
-3. English and TLA+ specs reside under `docs/spec`, classified by the component
-   they target, e.g., relayer or connection handshake.
+1.  The codebase for the IBC relayer implementation in Rust is in `relayer/`,
+    which consists of crate **`relayer-cli`** (the frontend application of the
+    relayer) as well as crate **`relayer`** (the core relayer functionality).
+2.  The codebase for IBC modules is in `modules/`, making up the crate called
+    **`relayer-modules`**.
+3.  English and TLA+ specs reside under `docs/spec`, classified by the component
+    they target, e.g., relayer or connection handshake.
 
 Following the work in
 [#142](https://github.com/informalsystems/ibc-rs/issues/142), the crate
@@ -62,11 +62,11 @@ This crate implements the core responsibilities of an IBC relayer. Briefly
 speaking, there are 3 high-level requirements on a IBC relayer, in no particular
 order:
 
-- **R1.** ability to interface with IBC-enabled chains, with the purpose of
-  reading their state and submitting transactions to these chains;
-- **R2.** ability to run a light client for IBC-enabled chains, with the purpose
-  of verifying headers and state of these chains;
-- **R3.** implement the IBC relayer algorithms (ICS 018).
+*   **R1.** ability to interface with IBC-enabled chains, with the purpose of
+    reading their state and submitting transactions to these chains;
+*   **R2.** ability to run a light client for IBC-enabled chains, with the purpose
+    of verifying headers and state of these chains;
+*   **R3.** implement the IBC relayer algorithms (ICS 018).
 
 Some functionality described above overlaps with functionality of IBC Modules.
 For instance, some logic that the relayer implements for handling connection
@@ -184,18 +184,18 @@ that we use to guide the development of the present crates:
 
 For the IBC relayer:
 
-- A first implementation of the IBC relayer in Golang is under active
-  development at [iqlusioninc/relayer](https://github.com/iqlusioninc/relayer).
-- The English specification of the relayer algorithm is captured in the
-  [ICS018](https://github.com/cosmos/ibc/tree/master/spec/relayer/ics-018-relayer-algorithms)
-  spec.
+*   A first implementation of the IBC relayer in Golang is under active
+    development at [iqlusioninc/relayer](https://github.com/iqlusioninc/relayer).
+*   The English specification of the relayer algorithm is captured in the
+    [ICS018](https://github.com/cosmos/ibc/tree/master/spec/relayer/ics-018-relayer-algorithms)
+    spec.
 
 For IBC modules:
 
-- A Golang implementation of IBC modules is under active development at
-  [cosmos/ibc-go](https://github.com/cosmos/ibc-go/tree/main/modules).
-- The English specifications for IBC modules reside in
-  [cosmos/ibc](https://github.com/cosmos/ibc/tree/master/spec).
+*   A Golang implementation of IBC modules is under active development at
+    [cosmos/ibc-go](https://github.com/cosmos/ibc-go/tree/main/modules).
+*   The English specifications for IBC modules reside in
+    [cosmos/ibc](https://github.com/cosmos/ibc/tree/master/spec).
 
 ## Status
 

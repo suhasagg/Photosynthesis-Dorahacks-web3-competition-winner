@@ -90,8 +90,8 @@ Allows users to update the funder of an existent `ClawbackVestingAccount`. Must
 be requested by the original funder address (`--from`). To perform this action,
 the user needs to provide two arguments:
 
-1. the new funder address
-2. the vesting account address
+1.  the new funder address
+2.  the vesting account address
 
 ```go
 evmosd tx vesting update-vesting-funder VESTING_ACCOUNT_ADDRESS NEW_FUNDER_ADDRESS --from=FUNDER_ADDRESS [flags]

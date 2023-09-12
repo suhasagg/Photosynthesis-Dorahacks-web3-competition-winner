@@ -7,7 +7,7 @@ order: 1
 Check how to obtain testnet tokens from the Evmos faucet website {synopsis}
 
 The Evmos Testnet Faucet distributes small amounts of
-{{ $themeConfig.project.testnet_denom }} to anyone who can provide a valid
+{{ $themeConfig.project.testnet\_denom }} to anyone who can provide a valid
 testnet address for free. Request funds from the faucet either by using the
 [Keplr Wallet](../../users/wallets/keplr.md) or follow the instructions on this
 page.
@@ -31,7 +31,7 @@ to Keplr and approve the connection.
 ![chain add request](../../img/keplr_approve_chain.png)
 
 After approval, you can see a transaction confirmation informing you that
-{{ $themeConfig.project.testnet_denom }} have been successfully transferred to
+{{ $themeConfig.project.testnet\_denom }} have been successfully transferred to
 your
 [evmos address](../../users/technical_concepts/accounts.md#address-formats-for-clients)
 on the testnet.
@@ -55,7 +55,7 @@ View your account balance either by clicking on the Keplr extension or by using
 the [Testnet Explorer](https://testnet.mintscan.io/evmos-testnet).
 
 ::: tip **Note**: Keplr might not display the amount of
-{{ $themeConfig.project.testnet_denom }} transferred by the faucet, as it might
+{{ $themeConfig.project.testnet\_denom }} transferred by the faucet, as it might
 be smaller than the number of decimals displayed in the Keplr extension. :::
 
 ## Rate limits
@@ -66,20 +66,20 @@ requesting tokens. :::
 To prevent the faucet account from draining the available funds, the Evmos
 testnet faucet imposes a maximum number of requests for a period of time. By
 default, the faucet service accepts 1 request per day per address. You can
-request {{ $themeConfig.project.testnet_denom }} from the faucet for each
+request {{ $themeConfig.project.testnet\_denom }} from the faucet for each
 address only once every 24h. If you try to request multiple times within the 24h
 cooldown phase, no transaction will be initiated. Please try again in 24 hours.
 
 ## Amount
 
 For each request, the faucet transfers 1
-{{ $themeConfig.project.testnet_denom }} to the given address.
+{{ $themeConfig.project.testnet\_denom }} to the given address.
 
 ## Faucet Addresses
 
 The public faucet addresses for the testnet are:
 
-- **Bech32**:
-  [`evmos1ht560g3pp729z86s2q6gy5ws6ugnut8r4uhyth`](https://testnet.mintscan.io/evmos-testnet/account/evmos1ht560g3pp729z86s2q6gy5ws6ugnut8r4uhyth)
-- **Hex**:
-  [`0xBaE9A7A2210F94511F5050348251d0d7113E2cE3`](https://evm.evmos.dev/address/0xBaE9A7A2210F94511F5050348251d0d7113E2cE3/transactions)
+*   **Bech32**:
+    [`evmos1ht560g3pp729z86s2q6gy5ws6ugnut8r4uhyth`](https://testnet.mintscan.io/evmos-testnet/account/evmos1ht560g3pp729z86s2q6gy5ws6ugnut8r4uhyth)
+*   **Hex**:
+    [`0xBaE9A7A2210F94511F5050348251d0d7113E2cE3`](https://evm.evmos.dev/address/0xBaE9A7A2210F94511F5050348251d0d7113E2cE3/transactions)

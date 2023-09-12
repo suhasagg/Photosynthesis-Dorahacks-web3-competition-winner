@@ -10,45 +10,45 @@ and this project adheres to
 
 ### Changed
 
-- Remove the dependency on github.com/kr/logfmt by [@ChrisHines]
-- Move fuzz code to github.com/go-logfmt/fuzzlogfmt by [@ChrisHines]
+*   Remove the dependency on github.com/kr/logfmt by [@ChrisHines]
+*   Move fuzz code to github.com/go-logfmt/fuzzlogfmt by [@ChrisHines]
 
 ## [0.4.0] - 2018-11-21
 
 ### Added
 
-- Go module support by [@ChrisHines]
-- CHANGELOG by [@ChrisHines]
+*   Go module support by [@ChrisHines]
+*   CHANGELOG by [@ChrisHines]
 
 ### Changed
 
-- Drop invalid runes from keys instead of returning ErrInvalidKey by
-  [@ChrisHines]
-- On panic while printing, attempt to print panic value by [@bboreham]
+*   Drop invalid runes from keys instead of returning ErrInvalidKey by
+    [@ChrisHines]
+*   On panic while printing, attempt to print panic value by [@bboreham]
 
 ## [0.3.0] - 2016-11-15
 
 ### Added
 
-- Pool buffers for quoted strings and byte slices by [@nussjustin]
+*   Pool buffers for quoted strings and byte slices by [@nussjustin]
 
 ### Fixed
 
-- Fuzz fix, quote invalid UTF-8 values by [@judwhite]
+*   Fuzz fix, quote invalid UTF-8 values by [@judwhite]
 
 ## [0.2.0] - 2016-05-08
 
 ### Added
 
-- Encoder.EncodeKeyvals by [@ChrisHines]
+*   Encoder.EncodeKeyvals by [@ChrisHines]
 
 ## [0.1.0] - 2016-03-28
 
 ### Added
 
-- Encoder by [@ChrisHines]
-- Decoder by [@ChrisHines]
-- MarshalKeyvals by [@ChrisHines]
+*   Encoder by [@ChrisHines]
+*   Decoder by [@ChrisHines]
+*   MarshalKeyvals by [@ChrisHines]
 
 [0.5.0]: https://github.com/go-logfmt/logfmt/compare/v0.4.0...v0.5.0
 

@@ -59,44 +59,44 @@ myServer := grpc.NewServer(
 
 #### Auth
 
-- [`grpc_auth`](auth) - a customizable (via `AuthFunc`) piece of auth middleware
+*   [`grpc_auth`](auth) - a customizable (via `AuthFunc`) piece of auth middleware
 
 #### Logging
 
-- [`grpc_ctxtags`](tags/) - a library that adds a `Tag` map to context, with
-  data populated from request body
-- [`grpc_zap`](logging/zap/) - integration of
-  [zap](https://github.com/uber-go/zap) logging library into gRPC handlers.
-- [`grpc_logrus`](logging/logrus/) - integration of
-  [logrus](https://github.com/sirupsen/logrus) logging library into gRPC
-  handlers.
-- [`grpc_kit`](logging/kit/) - integration of
-  [go-kit](https://github.com/go-kit/kit/tree/master/log) logging library into
-  gRPC handlers.
-- [`grpc_grpc_logsettable`](logging/settable/) - a wrapper around
-  `grpclog.LoggerV2` that allows to replace loggers in runtime (thread-safe).
+*   [`grpc_ctxtags`](tags/) - a library that adds a `Tag` map to context, with
+    data populated from request body
+*   [`grpc_zap`](logging/zap/) - integration of
+    [zap](https://github.com/uber-go/zap) logging library into gRPC handlers.
+*   [`grpc_logrus`](logging/logrus/) - integration of
+    [logrus](https://github.com/sirupsen/logrus) logging library into gRPC
+    handlers.
+*   [`grpc_kit`](logging/kit/) - integration of
+    [go-kit](https://github.com/go-kit/kit/tree/master/log) logging library into
+    gRPC handlers.
+*   [`grpc_grpc_logsettable`](logging/settable/) - a wrapper around
+    `grpclog.LoggerV2` that allows to replace loggers in runtime (thread-safe).
 
 #### Monitoring
 
-- [`grpc_prometheus`⚡](https://github.com/grpc-ecosystem/go-grpc-prometheus) -
-  Prometheus client-side and server-side monitoring middleware
-- [`otgrpc`⚡](https://github.com/grpc-ecosystem/grpc-opentracing/tree/master/go/otgrpc) -
-  [OpenTracing](http://opentracing.io/) client-side and server-side interceptors
-- [`grpc_opentracing`](tracing/opentracing) -
-  [OpenTracing](http://opentracing.io/) client-side and server-side interceptors
-  with support for streaming and handler-returned tags
+*   [`grpc_prometheus`⚡](https://github.com/grpc-ecosystem/go-grpc-prometheus) -
+    Prometheus client-side and server-side monitoring middleware
+*   [`otgrpc`⚡](https://github.com/grpc-ecosystem/grpc-opentracing/tree/master/go/otgrpc) -
+    [OpenTracing](http://opentracing.io/) client-side and server-side interceptors
+*   [`grpc_opentracing`](tracing/opentracing) -
+    [OpenTracing](http://opentracing.io/) client-side and server-side interceptors
+    with support for streaming and handler-returned tags
 
 #### Client
 
-- [`grpc_retry`](retry/) - a generic gRPC response code retry mechanism,
-  client-side middleware
+*   [`grpc_retry`](retry/) - a generic gRPC response code retry mechanism,
+    client-side middleware
 
 #### Server
 
-- [`grpc_validator`](validator/) - codegen inbound message validation from
-  `.proto` options
-- [`grpc_recovery`](recovery/) - turn panics into gRPC errors
-- [`ratelimit`](ratelimit/) - grpc rate limiting by your own limiter
+*   [`grpc_validator`](validator/) - codegen inbound message validation from
+    `.proto` options
+*   [`grpc_recovery`](recovery/) - turn panics into gRPC errors
+*   [`ratelimit`](ratelimit/) - grpc rate limiting by your own limiter
 
 ## Status
 

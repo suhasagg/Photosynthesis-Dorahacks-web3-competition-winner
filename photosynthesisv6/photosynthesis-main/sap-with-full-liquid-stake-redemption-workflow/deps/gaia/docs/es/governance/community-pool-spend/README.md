@@ -48,12 +48,12 @@ capaces de tomar una decisión e informarla votando en la propuesta.
 
 Si estás considerando realizar una propuesta, deberías conocer:
 
-1. [Sobre la Community Pool](#sobre-la-community-pool)
-2. [Cómo funciona el mecanismo de voto y gobernanza](../overview.md#\_2-voting-period)
-3. [Dónde y cómo involucrar a la comunidad de Cosmos acerca de tu idea](../best_practices.md)
-4. [Lo que la comunidad querrá saber sobre tu propuesta](./best_practices.md#elements-of-a-community-spend-proposal)
-5. [Cómo preparar tu borrador de propuesta final para ser enviada](../submitting.md)
-6. [Cómo enviar tu propuesta al Cosmos Hub testnet & mainnet](../submitting.md)
+1.  [Sobre la Community Pool](#sobre-la-community-pool)
+2.  [Cómo funciona el mecanismo de voto y gobernanza](../overview.md#_2-voting-period)
+3.  [Dónde y cómo involucrar a la comunidad de Cosmos acerca de tu idea](../best_practices.md)
+4.  [Lo que la comunidad querrá saber sobre tu propuesta](./best_practices.md#elements-of-a-community-spend-proposal)
+5.  [Cómo preparar tu borrador de propuesta final para ser enviada](../submitting.md)
+6.  [Cómo enviar tu propuesta al Cosmos Hub testnet & mainnet](../submitting.md)
 
 ## Sobre la Community Pool
 
@@ -78,10 +78,10 @@ esto cambie con la siguiente actualización. Lee más sobre esta nueva
 funcionalidad [aqui](https://github.com/cosmos/cosmos-sdk/pull/5249). ¿Qué hace
 que esta funcionalidad sea importante?
 
-1. Los proyectos financiados que finalmente no se ejecuten deben devolver los
-   fondos a la Community Pool;
-2. Las entidades podrían ayudar a aportar fondos a la Community Pool mediante
-   aportación directa a la cuenta.
+1.  Los proyectos financiados que finalmente no se ejecuten deben devolver los
+    fondos a la Community Pool;
+2.  Las entidades podrían ayudar a aportar fondos a la Community Pool mediante
+    aportación directa a la cuenta.
 
 ### ¿Cuál es el saldo de la Community Pool?
 
@@ -110,11 +110,11 @@ financiación. Por ejemplo, parte de la comunidad cree que los fondos solamente
 deberían ser utilizados por aquellas personas que más los necesiten. Otros temas
 de discusión son:
 
-- concesiones retroactivas
-- negociación de precio
-- desembolso de fondos (por ejemplo, pagos por fases; pagos fijos para reducir
-  volatilidad)
-- revisión drástica de cómo los mecanimos de gastos de comunidad funcionan
+*   concesiones retroactivas
+*   negociación de precio
+*   desembolso de fondos (por ejemplo, pagos por fases; pagos fijos para reducir
+    volatilidad)
+*   revisión drástica de cómo los mecanimos de gastos de comunidad funcionan
 
 Esperamos que todo esto tome forma a medida que las propuestas sean debatidas,
 aceptadas, y rechazadas por parte de la comunidad Cosmos Hub.

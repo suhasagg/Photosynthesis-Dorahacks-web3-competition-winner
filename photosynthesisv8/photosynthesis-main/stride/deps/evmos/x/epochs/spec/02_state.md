@@ -16,16 +16,16 @@ The `x/epochs` module keeps the following `objects in state`:
 
 An `EpochInfo` defines several variables:
 
-1. `identifier` keeps an epoch identification string
-2. `start_time` keeps the start time for epoch counting: if block height passes
-   `start_time`, then `epoch_counting_started` is set
-3. `duration` keeps the target epoch duration
-4. `current_epoch` keeps the current active epoch number
-5. `current_epoch_start_time` keeps the start time of the current epoch
-6. `epoch_counting_started` is a flag set with `start_time`, at which point
-   `epoch_number` will be counted
-7. `current_epoch_start_height` keeps the start block height of the current
-   epoch
+1.  `identifier` keeps an epoch identification string
+2.  `start_time` keeps the start time for epoch counting: if block height passes
+    `start_time`, then `epoch_counting_started` is set
+3.  `duration` keeps the target epoch duration
+4.  `current_epoch` keeps the current active epoch number
+5.  `current_epoch_start_time` keeps the start time of the current epoch
+6.  `epoch_counting_started` is a flag set with `start_time`, at which point
+    `epoch_number` will be counted
+7.  `current_epoch_start_height` keeps the start block height of the current
+    epoch
 
 ```protobuf
 message EpochInfo {

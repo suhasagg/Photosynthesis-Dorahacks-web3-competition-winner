@@ -13,7 +13,7 @@ smallest number of bytes. This does not perform any multi-byte
 coders, but it can be used as a secondary step to compressors (like Snappy) that
 does not do entropy encoding.
 
-- [Godoc documentation](https://godoc.org/github.com/klauspost/compress/huff0)
+*   [Godoc documentation](https://godoc.org/github.com/klauspost/compress/huff0)
 
 ## News
 

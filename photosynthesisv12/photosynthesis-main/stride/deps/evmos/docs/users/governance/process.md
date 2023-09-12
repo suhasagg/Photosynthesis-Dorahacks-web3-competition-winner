@@ -29,12 +29,12 @@ of being burned.
 
 Deposits are burned when proposals:
 
-1. **Expire** - deposits will be burned if the deposit period ends before
-   reaching the minimum deposit (192 EVMOS)
-2. **Fail to reach quorum** - deposits will be burned for proposals that do not
-   reach quorum ie. 33.4% of all staked EVMOS must vote
-3. **Are vetoed** - deposits for proposals with 33.4% of voting power backing
-   the `NoWithVeto` option are also burned
+1.  **Expire** - deposits will be burned if the deposit period ends before
+    reaching the minimum deposit (192 EVMOS)
+2.  **Fail to reach quorum** - deposits will be burned for proposals that do not
+    reach quorum ie. 33.4% of all staked EVMOS must vote
+3.  **Are vetoed** - deposits for proposals with 33.4% of voting power backing
+    the `NoWithVeto` option are also burned
 
 ## Voting Period
 
@@ -45,14 +45,14 @@ ends.
 
 ## What do the voting options mean?
 
-1. **`Abstain`**: indicates that the voter is impartial to the outcome of the
-   proposal.
-2. **`Yes`**: indicates approval of the proposal in its current form.
-3. **`No`**: indicates disapproval of the proposal in its current form.
-4. **`NoWithVeto`**: indicates stronger opposition to the proposal than simply
-   voting `No`. If the number of `NoWithVeto` votes is greater than a third of
-   total votes excluding `Abstain` votes, the proposal is rejected and the
-   deposits are [burned](#burned-deposits).
+1.  **`Abstain`**: indicates that the voter is impartial to the outcome of the
+    proposal.
+2.  **`Yes`**: indicates approval of the proposal in its current form.
+3.  **`No`**: indicates disapproval of the proposal in its current form.
+4.  **`NoWithVeto`**: indicates stronger opposition to the proposal than simply
+    voting `No`. If the number of `NoWithVeto` votes is greater than a third of
+    total votes excluding `Abstain` votes, the proposal is rejected and the
+    deposits are [burned](#burned-deposits).
 
 As accepted by the community in
 [Proposal 6](https://www.mintscan.io/cosmos/proposals/6), voters are expected to
@@ -76,15 +76,15 @@ influence voting outcomes.
 
 There are four criteria:
 
-1. A minimum deposit of 192 EVMOS is required for the proposal to enter the
-   voting period
-   - anyone may contribute to this deposit
-   - the deposit must be reached within 3 days (this is the deposit period)
-2. A minimum of 33.4% of the network's voting power (quorum) is required to
-   participate to make the proposal valid
-3. A simple majority (greater than 50%) of the participating voting power must
-   back the `Yes` vote during the 5-day voting period
-4. Less than 33.4% of participating voting power votes `NoWithVeto`
+1.  A minimum deposit of 192 EVMOS is required for the proposal to enter the
+    voting period
+    *   anyone may contribute to this deposit
+    *   the deposit must be reached within 3 days (this is the deposit period)
+2.  A minimum of 33.4% of the network's voting power (quorum) is required to
+    participate to make the proposal valid
+3.  A simple majority (greater than 50%) of the participating voting power must
+    back the `Yes` vote during the 5-day voting period
+4.  Less than 33.4% of participating voting power votes `NoWithVeto`
 
 Currently, the criteria for submitting and passing/failing all proposal types is
 the same.

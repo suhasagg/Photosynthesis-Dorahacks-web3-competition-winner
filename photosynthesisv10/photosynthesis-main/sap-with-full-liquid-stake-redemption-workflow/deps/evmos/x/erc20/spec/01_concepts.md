@@ -53,9 +53,9 @@ representation of IBC fungible token (ICS20) vouchers.
 During the registration of a Cosmos Coin the following bank `Metadata` is used
 to deploy a ERC20 contract:
 
-- **Name**
-- **Symbol**
-- **Decimals**
+*   **Name**
+*   **Symbol**
+*   **Decimals**
 
 The native Cosmos Coin contains a more extensive metadata than the ERC20 and
 includes all necessary details for the conversion into a ERC20 Token, which
@@ -65,23 +65,23 @@ requires no additional population of data.
 
 IBC vouchers should comply to the following standard:
 
-- **Name**: `{NAME} channel-{channel}`
-- **Symbol**: `ibc{NAME}-{channel}`
-- **Decimals**: derived from bank `Metadata`
+*   **Name**: `{NAME} channel-{channel}`
+*   **Symbol**: `ibc{NAME}-{channel}`
+*   **Decimals**: derived from bank `Metadata`
 
 #### ERC20 details to Coin Metadata
 
 During the Registration of an ERC20 Token the Coin metadata is derived from the
 ERC20 metadata and the bank metadata:
 
-- **Description**: `Cosmos coin token representation of {contractAddress}`
-- **DenomUnits**:
-  - Coin: `0`
-  - ERC20: `{uint32(erc20Data.Decimals)}`
-- **Base**: `{"erc20/%s", address}`
-- **Display**: `{erc20Data.Name}`
-- **Name**: `{types.CreateDenom(strContract)}`
-- **Symbol:** `{erc20Data.Symbol}`
+*   **Description**: `Cosmos coin token representation of {contractAddress}`
+*   **DenomUnits**:
+    *   Coin: `0`
+    *   ERC20: `{uint32(erc20Data.Decimals)}`
+*   **Base**: `{"erc20/%s", address}`
+*   **Display**: `{erc20Data.Name}`
+*   **Name**: `{types.CreateDenom(strContract)}`
+*   **Symbol:** `{erc20Data.Symbol}`
 
 ## Token Pair Modifiers
 
@@ -125,7 +125,7 @@ implementation.
 
 Here are our recommendations for the reviewing process:
 
-- contract solidity code should be verified and accessable (e.g. using an
-  explorer)
-- contract should be audited by a reputabele auditor
-- inherited contracts need to be verified for correctness
+*   contract solidity code should be verified and accessable (e.g. using an
+    explorer)
+*   contract should be audited by a reputabele auditor
+*   inherited contracts need to be verified for correctness

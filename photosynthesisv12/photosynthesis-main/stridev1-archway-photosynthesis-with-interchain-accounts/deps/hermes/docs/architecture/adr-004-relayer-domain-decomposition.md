@@ -2,10 +2,10 @@
 
 ## Changelog
 
-- 21.7.2020: Initial sketch
-- 27.7.2020: Dependencies outline
-- 5.10.2020: Update based on sketch
-- 2.11.2020: Reviewed & accepted
+*   21.7.2020: Initial sketch
+*   27.7.2020: Dependencies outline
+*   5.10.2020: Update based on sketch
+*   2.11.2020: Reviewed & accepted
 
 ## Context
 
@@ -24,26 +24,26 @@ to mock out to exercise the core logic.
 
 We want to be able to test the following high-level functions:
 
-- Client create and update
-  - With different chain states
-- Connection handshake
-  - With different chain states
-- Channel Setup
-  - With different chain states
-- Datagram Construction
-  - With different chain states
-- Datagram to Transaction
-  - Batching
-  - Signing
-- Datagram Submission
-  - With different chain states
-  - Missing Client Updates
-  - With Missing Proofs
-- Handlers (datagrams, chain state) -> events
-  - Handling the batch of datagrams
-    - With different chain states
-    - Specifically, the key value store
-  - Produce events
+*   Client create and update
+    *   With different chain states
+*   Connection handshake
+    *   With different chain states
+*   Channel Setup
+    *   With different chain states
+*   Datagram Construction
+    *   With different chain states
+*   Datagram to Transaction
+    *   Batching
+    *   Signing
+*   Datagram Submission
+    *   With different chain states
+    *   Missing Client Updates
+    *   With Missing Proofs
+*   Handlers (datagrams, chain state) -> events
+    *   Handling the batch of datagrams
+        *   With different chain states
+        *   Specifically, the key value store
+    *   Produce events
 
 ## Dependencies
 
@@ -58,41 +58,41 @@ below cover all the possible dependencies at each stage.
 
 ### Initializing a connection from the relayer
 
-- Need a relayer configuration (relayer.toml)
-- Query chain B for its commitment prefix (ABCI query)
-- Send `MsgConnectionOpenInit` message to chain A (transaction)
+*   Need a relayer configuration (relayer.toml)
+*   Query chain B for its commitment prefix (ABCI query)
+*   Send `MsgConnectionOpenInit` message to chain A (transaction)
 
 ### `ConnOpenInit` (Handler)
 
-- Provable store
-- Private store
+*   Provable store
+*   Private store
 
 ### `updateIBCClient` (Relayer)
 
-- get the latest height from chain A (Query)
-- get client consensus state from chain B (Query)
-- get latest header + minimal set from chain A (Light Client)
-- verify client state proof (Prover)
-- create and submit datagrams to update B's view of A (Message Builder,
-  Transaction)
-- replace full node for B with other full node (PeerList)
-- create and submit proof of fork (Fork Evidence Reporter)
-- wait for UpdateClient event (Event Subscription)
+*   get the latest height from chain A (Query)
+*   get client consensus state from chain B (Query)
+*   get latest header + minimal set from chain A (Light Client)
+*   verify client state proof (Prover)
+*   create and submit datagrams to update B's view of A (Message Builder,
+    Transaction)
+*   replace full node for B with other full node (PeerList)
+*   create and submit proof of fork (Fork Evidence Reporter)
+*   wait for UpdateClient event (Event Subscription)
 
 ### `pendingDatagrams` (Relayer)
 
 Builds the datagrams required by the given on-chain states. For connection
 datagrams:
 
-- get connection objects from chain A (Query)
-- get connection objects from chain B (Query)
-- get proof\* of connection state (e.g. `Init`) from chain A (Query, Prover,
-  Light Client)
-- get proof\* of client state and consensus state from chain A (Query, Prover,
-  Light Client)
-  - \* involves querying the chain + get header/minimal set + verify proof
-- build the next message in the connection handshake, e.g. `ConnOpenTry`
-  (Message Builder)
+*   get connection objects from chain A (Query)
+*   get connection objects from chain B (Query)
+*   get proof\* of connection state (e.g. `Init`) from chain A (Query, Prover,
+    Light Client)
+*   get proof\* of client state and consensus state from chain A (Query, Prover,
+    Light Client)
+    *   \* involves querying the chain + get header/minimal set + verify proof
+*   build the next message in the connection handshake, e.g. `ConnOpenTry`
+    (Message Builder)
 
 Channel datagrams are built similarly. Packet datagrams are triggered by events,
 and they are detailed in the Link section below.
@@ -101,10 +101,10 @@ and they are detailed in the Link section below.
 
 For every a transaction in a block of height H:
 
-- call appropriate handler (this is realized by ICS26 routing sub-module),
-- If handler succeeds (transaction does not abort), then apply the updates to
-  the key-value store (provable & private), and also get the current height H
-  and emit appropriate events.
+*   call appropriate handler (this is realized by ICS26 routing sub-module),
+*   If handler succeeds (transaction does not abort), then apply the updates to
+    the key-value store (provable & private), and also get the current height H
+    and emit appropriate events.
 
 ## Objects
 
@@ -292,16 +292,16 @@ fn main() -> Result<(), Box<dyn Error>> {
 
 ## Status
 
-- Accepted (first implementation in
-  [#335](https://github.com/informalsystems/ibc-rs/pull/335)).
+*   Accepted (first implementation in
+    [#335](https://github.com/informalsystems/ibc-rs/pull/335)).
 
 ## Consequences
 
 ### Positive
 
-- Clean abstractions an isolation from IO
-- Handshakes are correct by construction
-- Sane error handling
+*   Clean abstractions an isolation from IO
+*   Handshakes are correct by construction
+*   Sane error handling
 
 ### Negative
 

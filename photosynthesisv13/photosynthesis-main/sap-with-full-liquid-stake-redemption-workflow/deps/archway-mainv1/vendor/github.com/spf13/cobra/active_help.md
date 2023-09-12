@@ -8,16 +8,14 @@ completion.
 
 For example,
 
-```
-bash-5.1$ helm repo add [tab]
-You must choose a name for the repo you are adding.
+    bash-5.1$ helm repo add [tab]
+    You must choose a name for the repo you are adding.
 
-bash-5.1$ bin/helm package [tab]
-Please specify the path to the chart to package
+    bash-5.1$ bin/helm package [tab]
+    Please specify the path to the chart to package
 
-bash-5.1$ bin/helm package [tab][tab]
-bin/    internal/    scripts/    pkg/     testdata/
-```
+    bash-5.1$ bin/helm package [tab][tab]
+    bin/    internal/    scripts/    pkg/     testdata/
 
 **Hint**: A good place to use Active Help messages is when the normal completion
 system does not provide any suggestions. In such cases, Active Help nicely
@@ -28,10 +26,10 @@ expected by the program.
 
 Active Help is currently only supported for the following shells:
 
-- Bash (using [bash completion V2](shell_completions.md#bash-completion-v2)
-  only). Note that bash 4.4 or higher is required for the prompt to appear when
-  an Active Help message is printed.
-- Zsh
+*   Bash (using [bash completion V2](shell_completions.md#bash-completion-v2)
+    only). Note that bash 4.4 or higher is required for the prompt to appear when
+    an Active Help message is printed.
+*   Zsh
 
 ## Adding Active Help messages
 
@@ -76,16 +74,14 @@ The example above defines the completions (none, in this specific example) as
 well as the Active Help messages for the `helm repo add` command. It yields the
 following behavior:
 
-```
-bash-5.1$ helm repo add [tab]
-You must choose a name for the repo you are adding
+    bash-5.1$ helm repo add [tab]
+    You must choose a name for the repo you are adding
 
-bash-5.1$ helm repo add grafana [tab]
-You must specify the URL for the repo you are adding
+    bash-5.1$ helm repo add grafana [tab]
+    You must specify the URL for the repo you are adding
 
-bash-5.1$ helm repo add grafana https://grafana.github.io/helm-charts [tab]
-This command does not take any more arguments
-```
+    bash-5.1$ helm repo add grafana https://grafana.github.io/helm-charts [tab]
+    This command does not take any more arguments
 
 **Hint**: As can be seen in the above example, a good place to use Active Help
 messages is when the normal completion system does not provide any suggestions.
@@ -108,13 +104,11 @@ _ = cmd.RegisterFlagCompletionFunc("version", func(cmd *cobra.Command, args []st
 The example above prints an Active Help message when not enough information was
 given by the user to complete the `--version` flag.
 
-```
-bash-5.1$ bin/helm install myrelease --version 2.0.[tab]
-You must first specify the chart to install before the --version flag can be completed
+    bash-5.1$ bin/helm install myrelease --version 2.0.[tab]
+    You must first specify the chart to install before the --version flag can be completed
 
-bash-5.1$ bin/helm install myrelease bitnami/solr --version 2.0.[tab][tab]
-2.0.1  2.0.2  2.0.3
-```
+    bash-5.1$ bin/helm install myrelease bitnami/solr --version 2.0.[tab][tab]
+    2.0.1  2.0.2  2.0.3
 
 ## User control of Active Help
 
@@ -200,17 +194,15 @@ Active Help configurations, you should use the active help environment variable.
 That variable is named `<PROGRAM>_ACTIVE_HELP` where any `-` is replaced by an
 `_`. For example, we can test deactivating some Active Help as shown below:
 
-```
-$ HELM_ACTIVE_HELP=1 bin/helm __complete install wordpress bitnami/h<ENTER>
-bitnami/haproxy
-bitnami/harbor
-_activeHelp_ WARNING: cannot re-use a name that is still in use
-:0
-Completion ended with directive: ShellCompDirectiveDefault
+    $ HELM_ACTIVE_HELP=1 bin/helm __complete install wordpress bitnami/h<ENTER>
+    bitnami/haproxy
+    bitnami/harbor
+    _activeHelp_ WARNING: cannot re-use a name that is still in use
+    :0
+    Completion ended with directive: ShellCompDirectiveDefault
 
-$ HELM_ACTIVE_HELP=0 bin/helm __complete install wordpress bitnami/h<ENTER>
-bitnami/haproxy
-bitnami/harbor
-:0
-Completion ended with directive: ShellCompDirectiveDefault
-```
+    $ HELM_ACTIVE_HELP=0 bin/helm __complete install wordpress bitnami/h<ENTER>
+    bitnami/haproxy
+    bitnami/harbor
+    :0
+    Completion ended with directive: ShellCompDirectiveDefault

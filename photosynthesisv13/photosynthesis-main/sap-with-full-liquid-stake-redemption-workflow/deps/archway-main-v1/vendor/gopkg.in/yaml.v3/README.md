@@ -15,14 +15,14 @@ for backwards compatibility.
 
 Specifically, as of v3 of the yaml package:
 
-- YAML 1.1 bools (*yes/no, on/off*) are supported as long as they are being
-  decoded into a typed bool value. Otherwise they behave as a string. Booleans
-  in YAML 1.2 are *true/false* only.
-- Octals encode and decode as *0777* per YAML 1.1, rather than *0o777* as
-  specified in YAML 1.2, because most parsers still use the old format. Octals
-  in the *0o777* format are supported though, so new files work.
-- Does not support base-60 floats. These are gone from YAML 1.2, and were
-  actually never supported by this package as it's clearly a poor choice.
+*   YAML 1.1 bools (*yes/no, on/off*) are supported as long as they are being
+    decoded into a typed bool value. Otherwise they behave as a string. Booleans
+    in YAML 1.2 are *true/false* only.
+*   Octals encode and decode as *0777* per YAML 1.1, rather than *0o777* as
+    specified in YAML 1.2, because most parsers still use the old format. Octals
+    in the *0o777* format are supported though, so new files work.
+*   Does not support base-60 floats. These are gone from YAML 1.2, and were
+    actually never supported by this package as it's clearly a poor choice.
 
 and offers backwards compatibility with YAML 1.1 in some cases. 1.2, including
 support for anchors, tags, map merging, etc. Multi-document unmarshalling is not
@@ -35,15 +35,13 @@ The import path for the package is *gopkg.in/yaml.v3*.
 
 To install it, run:
 
-```
-go get gopkg.in/yaml.v3
-```
+    go get gopkg.in/yaml.v3
 
 ## API documentation
 
 If opened in a browser, the import path itself leads to the API documentation:
 
-- <https://gopkg.in/yaml.v3>
+*   <https://gopkg.in/yaml.v3>
 
 ## API stability
 
@@ -117,25 +115,23 @@ func main() {
 
 This example will generate the following output:
 
-```
---- t:
-{Easy! {2 [3 4]}}
+    --- t:
+    {Easy! {2 [3 4]}}
 
---- t dump:
-a: Easy!
-b:
-  c: 2
-  d: [3, 4]
+    --- t dump:
+    a: Easy!
+    b:
+      c: 2
+      d: [3, 4]
 
 
---- m:
-map[a:Easy! b:map[c:2 d:[3 4]]]
+    --- m:
+    map[a:Easy! b:map[c:2 d:[3 4]]]
 
---- m dump:
-a: Easy!
-b:
-  c: 2
-  d:
-  - 3
-  - 4
-```
+    --- m dump:
+    a: Easy!
+    b:
+      c: 2
+      d:
+      - 3
+      - 4

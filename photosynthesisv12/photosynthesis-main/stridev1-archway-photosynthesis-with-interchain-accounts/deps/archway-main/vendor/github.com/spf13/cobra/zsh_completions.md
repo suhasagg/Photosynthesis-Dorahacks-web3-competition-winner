@@ -12,14 +12,14 @@ changes in behavior were introduced.
 
 See further below for more details on these deprecations.
 
-- `cmd.MarkZshCompPositionalArgumentFile(pos, []string{})` is no longer needed.
-  It is therefore **deprecated** and silently ignored.
-- `cmd.MarkZshCompPositionalArgumentFile(pos, glob[])` is **deprecated** and
-  silently ignored.
-  - Instead use `ValidArgsFunction` with `ShellCompDirectiveFilterFileExt`.
-- `cmd.MarkZshCompPositionalArgumentWords()` is **deprecated** and silently
-  ignored.
-  - Instead use `ValidArgsFunction`.
+*   `cmd.MarkZshCompPositionalArgumentFile(pos, []string{})` is no longer needed.
+    It is therefore **deprecated** and silently ignored.
+*   `cmd.MarkZshCompPositionalArgumentFile(pos, glob[])` is **deprecated** and
+    silently ignored.
+    *   Instead use `ValidArgsFunction` with `ShellCompDirectiveFilterFileExt`.
+*   `cmd.MarkZshCompPositionalArgumentWords()` is **deprecated** and silently
+    ignored.
+    *   Instead use `ValidArgsFunction`.
 
 ### Behavioral changes
 
@@ -54,10 +54,10 @@ silently ignored; use `ValidArgsFunction` to achieve the same behavior|
 
 **Improvements**
 
-- Custom completion support (`ValidArgsFunction` and
-  `RegisterFlagCompletionFunc()`)
-- File completion by default if no other completions found
-- Handling of required flags
-- File extension filtering no longer mutually exclusive with bash usage
-- Completion of directory names *within* another directory
-- Support for `=` form of flags
+*   Custom completion support (`ValidArgsFunction` and
+    `RegisterFlagCompletionFunc()`)
+*   File completion by default if no other completions found
+*   Handling of required flags
+*   File extension filtering no longer mutually exclusive with bash usage
+*   Completion of directory names *within* another directory
+*   Support for `=` form of flags

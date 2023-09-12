@@ -36,11 +36,11 @@ We assume that a correct relayer operates in the following model:
 Relayer transfers data between two chains: chainA and chainB. For simplicity, we
 assume Tendermint chains. Each chain operates under Tendermint security model:
 
-- given a block b at height h committed at time `t = b.Header.Time`, `+2/3` of
-  voting power behaves correctly at least before `t + UNBONDING_PERIOD`, where
-  `UNBONDING_PERIOD` is a system parameter (typically order of weeks).
-  Validators sets can be changed in every block, and we don't assume any
-  constraint on the way validators are changed (application specific logic).
+*   given a block b at height h committed at time `t = b.Header.Time`, `+2/3` of
+    voting power behaves correctly at least before `t + UNBONDING_PERIOD`, where
+    `UNBONDING_PERIOD` is a system parameter (typically order of weeks).
+    Validators sets can be changed in every block, and we don't assume any
+    constraint on the way validators are changed (application specific logic).
 
 Furthermore, we assume that blockchain applications that operate on top of
 chainA and chainB writes relevant data into Merkleised data store (for example
@@ -64,10 +64,10 @@ that data present in the store are re-validated by each new block: data
 added/modified at block *h* are still valid even if not altered after, as they
 are still "covered" by the root hash of the store.
 
-Therefore UNBONDING_PERIOD gives absolute time bound during which relayer needs
+Therefore UNBONDING\_PERIOD gives absolute time bound during which relayer needs
 to transfer data read at source chain to the destination chain. As we will
 explain below, due to fork detection and accountability protocols, the effective
-data availability period will be shorter than UNBONDING_PERIOD.
+data availability period will be shorter than UNBONDING\_PERIOD.
 
 ### Data verification
 
@@ -95,11 +95,11 @@ is provided by the corresponding light client.
 The main relayer event loop is a pipeline of four stages. Assuming some IBC
 event at height `h` on `chainA`, the relayer:
 
-1. Determines destination chain (`chainB`)
-2. Updates (on `chainB`) the IBC client for `chainA` to a certain height `H`
-   where `H >= h+1`.
-3. Creates IBC datagram at height `H-1`.
-4. Submits the datagram from stage (2) to `chainB`.
+1.  Determines destination chain (`chainB`)
+2.  Updates (on `chainB`) the IBC client for `chainA` to a certain height `H`
+    where `H >= h+1`.
+3.  Creates IBC datagram at height `H-1`.
+4.  Submits the datagram from stage (2) to `chainB`.
 
 Note that an IBC event at height `h` corresponds to the modifications to the
 data store made as part of executing block at height `h`. The corresponding

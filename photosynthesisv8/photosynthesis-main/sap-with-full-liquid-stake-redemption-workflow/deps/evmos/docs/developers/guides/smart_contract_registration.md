@@ -14,19 +14,19 @@ Developers generate revenue every time a user interacts with their dApp in the
 dApp store, providing them a steady income. Users can discover new applications
 in the dApp store and pay for the transaction fees that finance the dApp's
 revenue. This value-reward exchange of dApp services for transaction fees is
-implemented by the [x/revenue module](../../../x/revenue/spec/01\_concepts.md).
+implemented by the [x/revenue module](../../../x/revenue/spec/01_concepts.md).
 
 ## Requirements
 
-- Address of a deployed smart contract.
-- Capability to sign transactions with the address that deployed the contract.
-  If your smart contract was deployed by a contract using a
-  [factory pattern](https://en.wikipedia.org/wiki/Factory_method_pattern), then
-  the signing capaility is required for the address that deployed the factory.
-- The nonce of the contract deployment transaction. You can query the nonce,
-  e.g. using the `eth_getTransactionByHash` JSON-RPC endpoint.
-- Withdrawer address, in case you wish to receive your earnings at a specified
-  address.
+*   Address of a deployed smart contract.
+*   Capability to sign transactions with the address that deployed the contract.
+    If your smart contract was deployed by a contract using a
+    [factory pattern](https://en.wikipedia.org/wiki/Factory_method_pattern), then
+    the signing capaility is required for the address that deployed the factory.
+*   The nonce of the contract deployment transaction. You can query the nonce,
+    e.g. using the `eth_getTransactionByHash` JSON-RPC endpoint.
+*   Withdrawer address, in case you wish to receive your earnings at a specified
+    address.
 
 ::: warning **IMPORTANT**: If your contract is part of a development project,
 please ensure that the deployer of the contract (or the factory that deploys the
@@ -48,11 +48,11 @@ transaction fees are sent to the contract deployer.
 You can register a contract by signing a transaction with the address that
 originally deployed the contract. You can use the following CLI command, where
 
-- `$NONCE` is the nonce of transaction that deployed the contract (e.g. `0`),
-- `$CONTRACT` is the hex address of the deployed contract (e.g
-  `0x5f6659B6F712c729c46786bA9562eC50907c67CF`) and
-- (optional) `$WITHDRAWER` is the bech32 address of the address to receive the
-  transaction fees (e.g. `evmos1keyy3teyq7t7kuxgeek3v65n0j27k20v2ugysf`):
+*   `$NONCE` is the nonce of transaction that deployed the contract (e.g. `0`),
+*   `$CONTRACT` is the hex address of the deployed contract (e.g
+    `0x5f6659B6F712c729c46786bA9562eC50907c67CF`) and
+*   (optional) `$WITHDRAWER` is the bech32 address of the address to receive the
+    transaction fees (e.g. `evmos1keyy3teyq7t7kuxgeek3v65n0j27k20v2ugysf`):
 
 ```bash
 # Register a revenue for your contract
@@ -73,7 +73,7 @@ Congrats ☄️☄️☄️ Now that you've registered a revenue for your contra
 part of the Evmos dApp store and you will receive a cut of the transaction fees
 every time a user interacts with your contract. If you wondering how large your
 cut is, have a look at the
-[revenue parameter `DeveloperShares`](../../../x/revenue/spec/07\_parameters.md#developer-shares-amount),
+[revenue parameter `DeveloperShares`](../../../x/revenue/spec/07_parameters.md#developer-shares-amount),
 which is controlled through governance. You can query the parameters using our
 [OpenAPI documentation](https://api.evmos.org).
 
@@ -81,7 +81,7 @@ which is controlled through governance. You can query the parameters using our
 
 You can also register a contract which has been deployed by a smart contract
 instead of an
-[EOA](https://docs.evmos.org/modules/evm/01\_concepts.html#accounts). In this
+[EOA](https://docs.evmos.org/modules/evm/01_concepts.html#accounts). In this
 case, you need to provide a sequence of nonces that proves the trace from an
 original deployer who deployed the factory to the contract that is being
 registered.

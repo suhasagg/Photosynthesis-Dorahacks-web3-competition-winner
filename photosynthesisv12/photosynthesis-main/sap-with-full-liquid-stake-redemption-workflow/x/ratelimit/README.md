@@ -1,6 +1,9 @@
 ***
 
-## title: "RateLimit"&#xA;excerpt: ""&#xA;category: 6392913957c533007128548e
+title: "RateLimit"
+excerpt: ""
+category: 6392913957c533007128548e
+----------------------------------
 
 # RateLimit Module
 
@@ -49,19 +52,19 @@ the same window duration will start and end at the same time.
 
 Each rate limit is defined by the following three components:
 
-1. **Path**: Defines the `ChannelId` and `Denom`
-2. **Quota**: Defines the rate limit time window (`DurationHours`) and the max
-   threshold for inflows/outflows (`MaxPercentRecv` and `MaxPercentSend`
-   respectively)
-3. **Flow**: Stores the current `Inflow`, `Outflow` and `ChannelValue`. Each
-   time a quota expires, the inflow and outflow get reset to 0 and the channel
-   value gets recalculated. Throughout the window, the inflow and outflow each
-   increase monotonically. The net flow is used when determining if a transfer
-   would exceed the quota.
-   - For `Send` packets:
-     $$\text{Exceeds Quota if:} \left(\frac{\text{Outflow} - \text{Inflow} + \text{Packet Amount}}{\text{ChannelValue}}\right) > \text{MaxPercentSend}$$
-   - For `Receive` packets:
-     $$\text{Exceeds Quota if:} \left(\frac{\text{Inflow} - \text{Outflow} + \text{Packet Amount}}{\text{ChannelValue}}\right) > \text{MaxPercentRecv}$$
+1.  **Path**: Defines the `ChannelId` and `Denom`
+2.  **Quota**: Defines the rate limit time window (`DurationHours`) and the max
+    threshold for inflows/outflows (`MaxPercentRecv` and `MaxPercentSend`
+    respectively)
+3.  **Flow**: Stores the current `Inflow`, `Outflow` and `ChannelValue`. Each
+    time a quota expires, the inflow and outflow get reset to 0 and the channel
+    value gets recalculated. Throughout the window, the inflow and outflow each
+    increase monotonically. The net flow is used when determining if a transfer
+    would exceed the quota.
+    *   For `Send` packets:
+        $$\text{Exceeds Quota if:} \left(\frac{\text{Outflow} - \text{Inflow} + \text{Packet Amount}}{\text{ChannelValue}}\right) > \text{MaxPercentSend}$$
+    *   For `Receive` packets:
+        $$\text{Exceeds Quota if:} \left(\frac{\text{Inflow} - \text{Outflow} + \text{Packet Amount}}{\text{ChannelValue}}\right) > \text{MaxPercentRecv}$$
 
 ## Example Walk-Through
 
@@ -69,25 +72,25 @@ Using the example above, let's say we created a 24 hour rate limit on
 `ibc/D24B4564BCD51D3D02D9987D92571EAC5915676A9BD6D9B0C1D0254CB8A5EA34`
 ("`ibc/uosmo`"), `channel-5`, with a 10% send and receive threshold.
 
-1. At the start of the window, the supply will be queried, to determine the
-   channel value. Let's say the total supply was 100
-2. If someone transferred `8uosmo` from `Osmosis -> Stride`, the `Inflow` would
-   increment by 8
-3. If someone tried to transfer another `8uosmo` from `Osmosis -> Stride`, it
-   would exceed the quota since `(8+8)/100 = 16%` (which is greater than 10%)
-   and thus, the transfer would be rejected.
-4. If someone tried to transfer `12ibc/uosmo` from Stride -> Osmosis, the
-   `Outflow` would increment by 12. Notice, even though 12 is greater than 10%
-   the total channel value, the *net* outflow is only `4uatom` (since it's
-   offset by the `8uatom` `Inflow`). As a result, this transaction would
-   succeed.
-5. Now if the person in (3) attempted to retry their transfer of`8uosmo` from
-   `Osmosis -> Stride`, the `Inflow` would increment by 8 and the transaction
-   would succeed (leaving a net inflow of 4).
-6. Finally, at the end of the 24 hours, the `Inflow` and `Outflow` would get
-   reset to 0 and the `ChannelValue` would be re-calculated. In this example,
-   the new channel value would be 104 (since more `uosmo` was sent to Stride,
-   and thus more `ibc/uosmo` was minted)
+1.  At the start of the window, the supply will be queried, to determine the
+    channel value. Let's say the total supply was 100
+2.  If someone transferred `8uosmo` from `Osmosis -> Stride`, the `Inflow` would
+    increment by 8
+3.  If someone tried to transfer another `8uosmo` from `Osmosis -> Stride`, it
+    would exceed the quota since `(8+8)/100 = 16%` (which is greater than 10%)
+    and thus, the transfer would be rejected.
+4.  If someone tried to transfer `12ibc/uosmo` from Stride -> Osmosis, the
+    `Outflow` would increment by 12. Notice, even though 12 is greater than 10%
+    the total channel value, the *net* outflow is only `4uatom` (since it's
+    offset by the `8uatom` `Inflow`). As a result, this transaction would
+    succeed.
+5.  Now if the person in (3) attempted to retry their transfer of`8uosmo` from
+    `Osmosis -> Stride`, the `Inflow` would increment by 8 and the transaction
+    would succeed (leaving a net inflow of 4).
+6.  Finally, at the end of the 24 hours, the `Inflow` and `Outflow` would get
+    reset to 0 and the `ChannelValue` would be re-calculated. In this example,
+    the new channel value would be 104 (since more `uosmo` was sent to Stride,
+    and thus more `ibc/uosmo` was minted)
 
 | Step |           Description            | Transfer Status | Inflow | Outflow | Net Inflow | Net Outflow | Channel Value |
 | :--: | :------------------------------: | :-------------: | :----: | :-----: | :--------: | :---------: | :-----------: |
@@ -126,17 +129,17 @@ ibc/...)...
 
 #### Native vs Non-Native
 
-- We can identify if the token is native or not by parsing the denom trace from
-  the packet
-  - If the token is **native**, it **will not** have a prefix (e.g. `ustrd`)
-  - If the token is **non-native**, it **will** have a prefix (e.g.
-    `transfer/channel-X/uosmo`)
+*   We can identify if the token is native or not by parsing the denom trace from
+    the packet
+    *   If the token is **native**, it **will not** have a prefix (e.g. `ustrd`)
+    *   If the token is **non-native**, it **will** have a prefix (e.g.
+        `transfer/channel-X/uosmo`)
 
 #### Determining the denom in the rate limit
 
-- For **native** tokens, return as is (e.g. `ustrd`)
-- For **non-native** tokens, take the ibc hash (e.g. hash
-  `transfer/channel-X/uosmo` into `ibc/...`)
+*   For **native** tokens, return as is (e.g. `ustrd`)
+*   For **non-native** tokens, take the ibc hash (e.g. hash
+    `transfer/channel-X/uosmo` into `ibc/...`)
 
 ### Receive Packets
 
@@ -147,33 +150,33 @@ it was a source or sink.
 
 As a token travels across IBC chains, its path is recorded in the denom trace.
 
-- **Sink**: If the token moves **forward**, to a chain different than its
-  previous hop, the destination chain acts as a **sink zone**, and the new port
-  and channel are **appended** to the denom trace.
-  - Ex1: `uatom` is sent from Cosmoshub to Stride
-    - Stride is the first destination for `uatom`, and acts as a sink zone
-    - The IBC denom becomes the hash of: `/{stride-port)/{stride-channel}/uatom`
-  - Ex2: `uatom` is sent from Cosmoshub to Osmosis then to Stride
-    - Here the receiving chain (Stride) is not the same as the previous hop
-      (Cosmoshub), so Stride, once again, is acting as a sink zone
-    - The IBC denom becomes the hash of:
-      `/{stride-port)/{stride-channel}/{osmosis-port}/{osmosis-channel}/uatom`
-- **Source**: If the token moves **backwards** (i.e. revisits the last chain it
-  was sent from), the destination chain is acting as a **source zone**, and the
-  port and channel are **removed** from the denom trace - undoing the last hop.
-  Should a token reverse its course completely and head back along the same path
-  to its native chain, the denom trace will unwind and reduce back down to the
-  original base denom.
-  - Ex1: `ustrd` is sent from Stride to Osmosis, and then back to Stride
-    - Here the trace reduces from `/{osmosis-port}/{osmosis-channel}/ustrd` to
-      simply `ustrd`
-  - Ex2: `ujuno` is sent to Stride, then to Osmosis, then back to Stride
-    - Here the trace reduces from
-      `/{osmosis-port}/{osmosis-channel}/{stride-port}/{stride-channel}/ujuno`
-      to just `/{stride-port}/{stride-channel}/ujuno` (the Osmosis hop is
-      removed)
-  - Stride is the source in the examples above because the token went back and
-    forth from Stride -> Osmosis -> Stride
+*   **Sink**: If the token moves **forward**, to a chain different than its
+    previous hop, the destination chain acts as a **sink zone**, and the new port
+    and channel are **appended** to the denom trace.
+    *   Ex1: `uatom` is sent from Cosmoshub to Stride
+        *   Stride is the first destination for `uatom`, and acts as a sink zone
+        *   The IBC denom becomes the hash of: `/{stride-port)/{stride-channel}/uatom`
+    *   Ex2: `uatom` is sent from Cosmoshub to Osmosis then to Stride
+        *   Here the receiving chain (Stride) is not the same as the previous hop
+            (Cosmoshub), so Stride, once again, is acting as a sink zone
+        *   The IBC denom becomes the hash of:
+            `/{stride-port)/{stride-channel}/{osmosis-port}/{osmosis-channel}/uatom`
+*   **Source**: If the token moves **backwards** (i.e. revisits the last chain it
+    was sent from), the destination chain is acting as a **source zone**, and the
+    port and channel are **removed** from the denom trace - undoing the last hop.
+    Should a token reverse its course completely and head back along the same path
+    to its native chain, the denom trace will unwind and reduce back down to the
+    original base denom.
+    *   Ex1: `ustrd` is sent from Stride to Osmosis, and then back to Stride
+        *   Here the trace reduces from `/{osmosis-port}/{osmosis-channel}/ustrd` to
+            simply `ustrd`
+    *   Ex2: `ujuno` is sent to Stride, then to Osmosis, then back to Stride
+        *   Here the trace reduces from
+            `/{osmosis-port}/{osmosis-channel}/{stride-port}/{stride-channel}/ujuno`
+            to just `/{stride-port}/{stride-channel}/ujuno` (the Osmosis hop is
+            removed)
+    *   Stride is the source in the examples above because the token went back and
+        forth from Stride -> Osmosis -> Stride
 
 For a more detailed explanation, see
 the[ ICS-20 ADR](https://github.com/cosmos/ibc-go/blob/main/docs/architecture/adr-001-coin-source-tracing.md#example)
@@ -182,32 +185,32 @@ and
 
 #### Determining the denom in the rate limit
 
-- If the chain is acting as a **Sink**: Add on the Stride port and channel and
-  hash it
+*   If the chain is acting as a **Sink**: Add on the Stride port and channel and
+    hash it
 
-  - Ex1: `uosmo` sent from Osmosis to Stride
+    *   Ex1: `uosmo` sent from Osmosis to Stride
 
-    - Packet Denom Trace: `uosmo`
-    - (1) Add Stride Channel as Prefix: `transfer/channel-X/uosmo`
-    - (2) Hash: `ibc/...`
+        *   Packet Denom Trace: `uosmo`
+        *   (1) Add Stride Channel as Prefix: `transfer/channel-X/uosmo`
+        *   (2) Hash: `ibc/...`
 
-  - Ex2: `ujuno` sent from Osmosis to Stride
-    - Packet Denom Trace: `transfer/channel-Y/ujuno` (where channel-Y is the
-      Juno <> Osmosis channel)
-    - (1) Add Stride Channel as Prefix:
-      `transfer/channel-X/transfer/channel-Y/ujuno`
-    - (2) Hash: `ibc/...`
+    *   Ex2: `ujuno` sent from Osmosis to Stride
+        *   Packet Denom Trace: `transfer/channel-Y/ujuno` (where channel-Y is the
+            Juno <> Osmosis channel)
+        *   (1) Add Stride Channel as Prefix:
+            `transfer/channel-X/transfer/channel-Y/ujuno`
+        *   (2) Hash: `ibc/...`
 
-- If the chain is acting as a **Source**: First, remove the prefix. Then if
-  there is still a trace prefix, hash it
-  - Ex1: `ustrd` sent back to Stride from Osmosis
-    - Packet Denom: `transfer/channel-X/ustrd`
-    - (1) Remove Prefix: `ustrd`
-    - (2) No trace remaining, leave as is: `ustrd`
-  - Ex2: juno was sent to Stride, then to Osmosis, then back to Stride
-    - Packet Denom: `transfer/channel-X/transfer/channel-Z/ujuno`
-    - (1) Remove Prefix: `transfer/channel-Z/ujuno`
-    - (2) Hash: `ibc/...`
+*   If the chain is acting as a **Source**: First, remove the prefix. Then if
+    there is still a trace prefix, hash it
+    *   Ex1: `ustrd` sent back to Stride from Osmosis
+        *   Packet Denom: `transfer/channel-X/ustrd`
+        *   (1) Remove Prefix: `ustrd`
+        *   (2) No trace remaining, leave as is: `ustrd`
+    *   Ex2: juno was sent to Stride, then to Osmosis, then back to Stride
+        *   Packet Denom: `transfer/channel-X/transfer/channel-Z/ujuno`
+        *   (1) Remove Prefix: `transfer/channel-Z/ujuno`
+        *   (2) Hash: `ibc/...`
 
 ## State
 

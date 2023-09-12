@@ -54,21 +54,21 @@ recommended for storing years of blockchain history.
 We officially support macOS, Windows and Linux only in the following
 architectures:
 
-- `darwin/arm64`
-- `darwin/x86_64`
-- `linux/arm64`
-- `linux/amd64`
-- `windows/x86_64`
+*   `darwin/arm64`
+*   `darwin/x86_64`
+*   `linux/arm64`
+*   `linux/amd64`
+*   `windows/x86_64`
 
 ### Minimum Requirements
 
 To run mainnet or testnet validator nodes, you will need a machine with the
 following minimum hardware requirements:
 
-- 4 or more physical CPU cores
-- At least 500GB of SSD disk storage
-- At least 32GB of memory (RAM)
-- At least 100mbps network bandwidth
+*   4 or more physical CPU cores
+*   At least 500GB of SSD disk storage
+*   At least 32GB of memory (RAM)
+*   At least 100mbps network bandwidth
 
 As the usage of the blockchain grows, the server requirements may increase as
 well, so you should have a plan for updating your server as well.

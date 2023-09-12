@@ -1,9 +1,9 @@
 # Docker Usage Guide
 
-- [Docker Usage Guide](#docker-usage-guide)
-  - [Basic Usage](#basic-usage)
-  - [Docker Gotchas](#docker-gotchas)
-  - [Extending from the base image](#extending-from-the-base-image)
+*   [Docker Usage Guide](#docker-usage-guide)
+    *   [Basic Usage](#basic-usage)
+    *   [Docker Gotchas](#docker-gotchas)
+    *   [Extending from the base image](#extending-from-the-base-image)
 
 ## Basic Usage
 

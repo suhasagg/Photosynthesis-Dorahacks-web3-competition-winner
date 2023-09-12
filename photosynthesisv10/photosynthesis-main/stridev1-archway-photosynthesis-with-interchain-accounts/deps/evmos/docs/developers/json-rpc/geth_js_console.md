@@ -20,10 +20,10 @@ Geth node. You can use this powerful tool to interact with an Evmos node too!
 
 ## Pre-requisite Readings
 
-- [Go-ethereum CLI](https://geth.ethereum.org/docs/interface/javascript-console)
-  {prereq}
-- [Evmos (local) node](https://docs.evmos.org/developers/localnet/single_node.html)
-  {prereq}
+*   [Go-ethereum CLI](https://geth.ethereum.org/docs/interface/javascript-console)
+    {prereq}
+*   [Evmos (local) node](https://docs.evmos.org/developers/localnet/single_node.html)
+    {prereq}
 
 ### Installing Go-Ethereum
 
@@ -60,9 +60,9 @@ Make sure you have installed all the dependencies mentioned in the
 
 ## Run Evmos local node
 
-- Clone the [evmos repository](https://github.com/evmos/evmos) (if you haven’t
-  already)
-- Run the `local_node.sh` script to start a local node
+*   Clone the [evmos repository](https://github.com/evmos/evmos) (if you haven’t
+    already)
+*   Run the `local_node.sh` script to start a local node
 
 ```bash
 git clone https://github.com/evmos/evmos.git

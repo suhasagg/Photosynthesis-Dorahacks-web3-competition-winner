@@ -10,7 +10,7 @@ RPC framework that puts mobile and HTTP/2 first. For more information see the
 
 ## Prerequisites
 
-- **[Go][]**: any one of the **three latest major** [releases][go-releases].
+*   **[Go][]**: any one of the **three latest major** [releases][go-releases].
 
 ## Installation
 
@@ -34,11 +34,11 @@ $ go get -u google.golang.org/grpc
 
 ## Learn more
 
-- [Go gRPC docs][], which include a [quick start][] and [API reference][api]
-  among other resources
-- [Low-level technical docs](Documentation) from this repository
-- [Performance benchmark][]
-- [Examples](examples)
+*   [Go gRPC docs][], which include a [quick start][] and [API reference][api]
+    among other resources
+*   [Low-level technical docs](Documentation) from this repository
+*   [Performance benchmark][]
+*   [Examples](examples)
 
 ## FAQ
 
@@ -54,31 +54,31 @@ package google.golang.org/grpc: unrecognized import path "google.golang.org/grpc
 
 To build Go code, there are several options:
 
-- Set up a VPN and access google.golang.org through that.
+*   Set up a VPN and access google.golang.org through that.
 
-- Without Go module support: `git clone` the repo manually:
+*   Without Go module support: `git clone` the repo manually:
 
-  ```sh
-  git clone https://github.com/grpc/grpc-go.git $GOPATH/src/google.golang.org/grpc
-  ```
+    ```sh
+    git clone https://github.com/grpc/grpc-go.git $GOPATH/src/google.golang.org/grpc
+    ```
 
-  You will need to do the same for all of grpc's dependencies in `golang.org`,
-  e.g. `golang.org/x/net`.
+    You will need to do the same for all of grpc's dependencies in `golang.org`,
+    e.g. `golang.org/x/net`.
 
-- With Go module support: it is possible to use the `replace` feature of
-  `go mod` to create aliases for golang.org packages. In your project's
-  directory:
+*   With Go module support: it is possible to use the `replace` feature of
+    `go mod` to create aliases for golang.org packages. In your project's
+    directory:
 
-  ```sh
-  go mod edit -replace=google.golang.org/grpc=github.com/grpc/grpc-go@latest
-  go mod tidy
-  go mod vendor
-  go build -mod=vendor
-  ```
+    ```sh
+    go mod edit -replace=google.golang.org/grpc=github.com/grpc/grpc-go@latest
+    go mod tidy
+    go mod vendor
+    go build -mod=vendor
+    ```
 
-  Again, this will need to be done for all transitive dependencies hosted on
-  golang.org as well. For details, refer to
-  [golang/go issue #28652](https://github.com/golang/go/issues/28652).
+    Again, this will need to be done for all transitive dependencies hosted on
+    golang.org as well. For details, refer to
+    [golang/go issue #28652](https://github.com/golang/go/issues/28652).
 
 ### Compiling error, undefined: grpc.SupportPackageIsVersion
 
@@ -121,15 +121,15 @@ $ export GRPC_GO_LOG_SEVERITY_LEVEL=info
 This error means the connection the RPC is using was closed, and there are many
 possible reasons, including:
 
-1. mis-configured transport credentials, connection failed on handshaking
-2. bytes disrupted, possibly by a proxy in between
-3. server shutdown
-4. Keepalive parameters caused connection shutdown, for example if you have
-   configured your server to terminate connections regularly to
-   [trigger DNS lookups](https://github.com/grpc/grpc-go/issues/3170#issuecomment-552517779).
-   If this is the case, you may want to increase your
-   [MaxConnectionAgeGrace](https://pkg.go.dev/google.golang.org/grpc/keepalive?tab=doc#ServerParameters),
-   to allow longer RPC calls to finish.
+1.  mis-configured transport credentials, connection failed on handshaking
+2.  bytes disrupted, possibly by a proxy in between
+3.  server shutdown
+4.  Keepalive parameters caused connection shutdown, for example if you have
+    configured your server to terminate connections regularly to
+    [trigger DNS lookups](https://github.com/grpc/grpc-go/issues/3170#issuecomment-552517779).
+    If this is the case, you may want to increase your
+    [MaxConnectionAgeGrace](https://pkg.go.dev/google.golang.org/grpc/keepalive?tab=doc#ServerParameters),
+    to allow longer RPC calls to finish.
 
 It can be tricky to debug this because the error happens on the client side but
 the root cause of the connection being closed is on the server side. Turn on

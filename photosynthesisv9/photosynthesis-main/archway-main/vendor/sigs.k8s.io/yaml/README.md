@@ -34,14 +34,12 @@ in the custom JSON methods `MarshalJSON` and `UnmarshalJSON`). This also has the
 benefit that your YAML and your JSON binary data will be decoded exactly the
 same way. As an example:
 
-```
-BAD:
-	exampleKey: !!binary gIGC
+    BAD:
+    	exampleKey: !!binary gIGC
 
-GOOD:
-	exampleKey: gIGC
-... and decode the base64 data in your code.
-```
+    GOOD:
+    	exampleKey: gIGC
+    ... and decode the base64 data in your code.
 
 **Caveat #2:** When using `YAMLToJSON` directly, maps with keys that are maps
 will result in an error since this is not supported by JSON. This error will
@@ -52,15 +50,11 @@ struct fields can't be keys.
 
 To install, run:
 
-```
-$ go get sigs.k8s.io/yaml
-```
+    $ go get sigs.k8s.io/yaml
 
 And import using:
 
-```
-import "sigs.k8s.io/yaml"
-```
+    import "sigs.k8s.io/yaml"
 
 Usage is very similar to the JSON library:
 

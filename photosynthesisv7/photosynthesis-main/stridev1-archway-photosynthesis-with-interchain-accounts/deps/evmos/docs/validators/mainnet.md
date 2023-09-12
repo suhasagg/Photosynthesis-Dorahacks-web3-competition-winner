@@ -8,7 +8,7 @@ This document outlines the steps to join an existing testnet {synopsis}
 
 ## Pre-requisite Readings
 
-- [Validator Security](./security/security.md) {prereq}
+*   [Validator Security](./security/security.md) {prereq}
 
 ## Mainnet
 
@@ -20,8 +20,8 @@ on chain.
 
 | Chain ID       | Description     | Site                                                             | Version                                                                                 | Status  |
 | -------------- | --------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------- |
-| `evmos_9001-2` | Evmos Mainnet 2 | [Evmos](https://github.com/evmos/mainnet/tree/main/evmos\_9001-2) | [`{{ $themeConfig.project.mainnet_version }}`](https://github.com/evmos/evmos/releases) | `Live`  |
-| `evmos_9001-1` | Evmos Mainnet 1 | [Evmos](https://github.com/evmos/mainnet/tree/main/evmos\_9001-1) | [`v2.0.1`](https://github.com/evmos/evmos/releases/v2.0.1)                              | `Stale` |
+| `evmos_9001-2` | Evmos Mainnet 2 | [Evmos](https://github.com/evmos/mainnet/tree/main/evmos_9001-2) | [`{{ $themeConfig.project.mainnet_version }}`](https://github.com/evmos/evmos/releases) | `Live`  |
+| `evmos_9001-1` | Evmos Mainnet 1 | [Evmos](https://github.com/evmos/mainnet/tree/main/evmos_9001-1) | [`v2.0.1`](https://github.com/evmos/evmos/releases/v2.0.1)                              | `Stale` |
 
 ::: warning **IMPORTANT:** If you join mainnet as a validator make sure you
 follow all the [security](./security/security.md) recommendations! :::

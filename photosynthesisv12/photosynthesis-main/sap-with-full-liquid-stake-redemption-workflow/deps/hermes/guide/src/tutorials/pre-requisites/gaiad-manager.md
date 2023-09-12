@@ -9,69 +9,67 @@ Follow the instructions below to install and configure `gm`.
 
 ### Requirements
 
-- Bourne shell (`sh`)
-- [`sconfig`](https://github.com/freshautomations/sconfig/releases) and
-  [`stoml`](https://github.com/freshautomations/stoml/releases) installed in
-  your PATH (put them in `/usr/local/bin`)
-- `sed`, `tr`
-- For shell-completion Bourne Again Shell (`bash`) for the local user
+*   Bourne shell (`sh`)
+*   [`sconfig`](https://github.com/freshautomations/sconfig/releases) and
+    [`stoml`](https://github.com/freshautomations/stoml/releases) installed in
+    your PATH (put them in `/usr/local/bin`)
+*   `sed`, `tr`
+*   For shell-completion Bourne Again Shell (`bash`) for the local user
 
 ### How to run
 
-1. Install the dependencies.
+1.  Install the dependencies.
 
-   On macOS:
-
-   ```bash
-   # You might need sudo permissions and create the `usr/local/bin` directory
-
-   curl -Lo /usr/local/bin/sconfig https://github.com/freshautomations/sconfig/releases/download/v0.1.0/sconfig_darwin_amd64
-   curl -Lo /usr/local/bin/stoml https://github.com/freshautomations/stoml/releases/download/v0.7.0/stoml_darwin_amd64
-   chmod 755 /usr/local/bin/sconfig
-   chmod 755 /usr/local/bin/stoml
-   ```
-
-   On Linux:
-
-   ```bash
-   curl -Lo /usr/local/bin/sconfig https://github.com/freshautomations/sconfig/releases/download/v0.1.0/sconfig_linux_amd64
-   curl -Lo /usr/local/bin/stoml https://github.com/freshautomations/stoml/releases/download/v0.7.0/stoml_linux_amd64
-   chmod 755 /usr/local/bin/sconfig
-   chmod 755 /usr/local/bin/stoml
-   ```
-
-2. Install `gm`
-
-   ```bash
-   {{#template ../../templates/commands/git/clone_ibc_rs}}
-   ibc-rs/scripts/gm/bin/gm install
-   ```
-
-   Alternatively, you can create the folder `$HOME/.gm/bin` and copy the files
-   from `scripts/gm/bin` in there.
-
-3. Activate `gm`
-
-- Add `source $HOME/.gm/bin/shell-support` to a file that executes when a new
-  terminal window comes up (`$HOME/.bash_profile` or `$HOME/.bashrc` or
-  `$HOME/.zprofile`)
-
-- (Optional) Enable auto-completion
-
-  - On macOS:
+    On macOS:
 
     ```bash
-    # Note: zsh is the default shell on MacOS, so no need to run this unless you explicitly use bash
-    brew install bash-completion
+    # You might need sudo permissions and create the `usr/local/bin` directory
+
+    curl -Lo /usr/local/bin/sconfig https://github.com/freshautomations/sconfig/releases/download/v0.1.0/sconfig_darwin_amd64
+    curl -Lo /usr/local/bin/stoml https://github.com/freshautomations/stoml/releases/download/v0.7.0/stoml_darwin_amd64
+    chmod 755 /usr/local/bin/sconfig
+    chmod 755 /usr/local/bin/stoml
     ```
 
-  - On Linux:
+    On Linux:
 
-    ```
-    apt install bash-completion || yum install bash-completion
+    ```bash
+    curl -Lo /usr/local/bin/sconfig https://github.com/freshautomations/sconfig/releases/download/v0.1.0/sconfig_linux_amd64
+    curl -Lo /usr/local/bin/stoml https://github.com/freshautomations/stoml/releases/download/v0.7.0/stoml_linux_amd64
+    chmod 755 /usr/local/bin/sconfig
+    chmod 755 /usr/local/bin/stoml
     ```
 
-- Restart your terminal
+2.  Install `gm`
+
+    ```bash
+    {{#template ../../templates/commands/git/clone_ibc_rs}}
+    ibc-rs/scripts/gm/bin/gm install
+    ```
+
+    Alternatively, you can create the folder `$HOME/.gm/bin` and copy the files
+    from `scripts/gm/bin` in there.
+
+3.  Activate `gm`
+
+*   Add `source $HOME/.gm/bin/shell-support` to a file that executes when a new
+    terminal window comes up (`$HOME/.bash_profile` or `$HOME/.bashrc` or
+    `$HOME/.zprofile`)
+
+*   (Optional) Enable auto-completion
+
+    *   On macOS:
+
+        ```bash
+        # Note: zsh is the default shell on MacOS, so no need to run this unless you explicitly use bash
+        brew install bash-completion
+        ```
+
+    *   On Linux:
+
+            apt install bash-completion || yum install bash-completion
+
+*   Restart your terminal
 
 Note: The `shell-support` script allows bash-completion as well as creating a
 `gm` alias, so you don't need to add more entries to your PATH environment

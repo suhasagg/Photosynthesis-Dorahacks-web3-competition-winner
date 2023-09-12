@@ -14,8 +14,8 @@ You specify the network you want to join by setting the **genesis file** and
 
 | Testnet Chain ID | Description                       | Site                                                                     | Version                                                                                 | Status  |
 | ---------------- | --------------------------------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ------- |
-| `evmos_9000-4`   | Evmos\_9000-4 Testnet              | [Evmos 9000-4](https://github.com/evmos/testnets/tree/main/evmos\_9000-4) | [`{{ $themeConfig.project.testnet_version }}`](https://github.com/evmos/evmos/releases) | `Live`  |
-| `evmos_9000-3`   | Evmos\_9000-3 Testnet              | [Evmos 9000-3](https://github.com/evmos/testnets/tree/main/evmos\_9000-3) | [`v1.0.0-beta1`](https://github.com/evmos/evmos/releases/tag/v1.0.0-beta1)              | `Stale` |
+| `evmos_9000-4`   | Evmos\_9000-4 Testnet              | [Evmos 9000-4](https://github.com/evmos/testnets/tree/main/evmos_9000-4) | [`{{ $themeConfig.project.testnet_version }}`](https://github.com/evmos/evmos/releases) | `Live`  |
+| `evmos_9000-3`   | Evmos\_9000-3 Testnet              | [Evmos 9000-3](https://github.com/evmos/testnets/tree/main/evmos_9000-3) | [`v1.0.0-beta1`](https://github.com/evmos/evmos/releases/tag/v1.0.0-beta1)              | `Stale` |
 | `evmos_9000-2`   | Olympus Mons Incentivized Testnet | [Olympus Mons](https://github.com/evmos/testnets/tree/main/olympus_mons) | [`v0.3.x`](https://github.com/evmos/evmos/releases)                                     | `Stale` |
 | `evmos_9000-1`   | Arsia Mons Testnet                | [Arsia Mons](https://github.com/evmos/testnets/tree/main/arsia_mons)     | [`v0.1.x`](https://github.com/evmos/evmos/releases)                                     | `Stale` |
 
@@ -62,7 +62,7 @@ important files for configuration are `app.toml` and `config.toml`.
 ### Copy the Genesis File
 
 Check the `genesis.json` file from the
-[`archive`](https://archive.evmos.dev/evmos\_9000-4/genesis.json) and copy it
+[`archive`](https://archive.evmos.dev/evmos_9000-4/genesis.json) and copy it
 over to the `config` directory: `~/.evmosd/config/genesis.json`. This is a
 genesis file with the chain-id and genesis accounts balances.
 
@@ -139,7 +139,7 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.evmos
 
 ## Run a Testnet Validator
 
-Claim your testnet {{ $themeConfig.project.testnet_denom }} on the
+Claim your testnet {{ $themeConfig.project.testnet\_denom }} on the
 [faucet](./../developers/testnet/faucet.md) using your validator account address
 and submit your validator account address:
 
@@ -178,7 +178,7 @@ of and would like to upgrade to the latest testnet version. :::
 
 ### Reset Data
 
-:::warning If the version \<new_version> you are upgrading to is not breaking
+:::warning If the version \<new\_version> you are upgrading to is not breaking
 from the previous one, you **should not** reset the data. If this is the case
 you can skip to [Restart](#restart) :::
 

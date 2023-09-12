@@ -1,6 +1,8 @@
 ***
 
-## order: 1&#xA;title: Introduction
+order: 1
+title: Introduction
+-------------------
 
 ::: warning
 
@@ -43,38 +45,38 @@ ATOM, delegate ATOM to validators, and vote on on-chain governance proposals.
 Note that we do not endorse any of the wallets, they are listed for your
 convenience.
 
-- [Atomic Wallet](https://atomicwallet.io/) - Android, Linux, macOS, Windows
-- [Citadel.One](https://citadel.one/#mobile) - Android, iOS
-- [Cobo](https://cobo.com/) - Android, iOS
-- [Cosmostation](https://www.cosmostation.io/) - Android, iOS
-- [Crypto.com](https://crypto.com/) - Android, iOS
-- [Huobi Wallet](https://www.huobiwallet.com/) - Android, iOS
-- <!-- markdown-link-check-disable-next-line -->
-- [imToken](https://token.im/) - Android, iOS
-- [Keplr](https://wallet.keplr.app) - Web
-- [Ledger](https://www.ledger.com/cosmos-wallet) - Hardware
-- [Lunie](https://lunie.io) - Web
-- [Math Wallet](https://www.mathwallet.org/en/) - Android, iOS, Web
-- [Rainbow Wallet](https://www.rainbow.one) - Android, iOS
-- [Trust Wallet](https://trustwallet.com/) Android, iOS
-- [Wetez](https://www.wetez.io/pc/homepage) - Android, iOS
+*   [Atomic Wallet](https://atomicwallet.io/) - Android, Linux, macOS, Windows
+*   [Citadel.One](https://citadel.one/#mobile) - Android, iOS
+*   [Cobo](https://cobo.com/) - Android, iOS
+*   [Cosmostation](https://www.cosmostation.io/) - Android, iOS
+*   [Crypto.com](https://crypto.com/) - Android, iOS
+*   [Huobi Wallet](https://www.huobiwallet.com/) - Android, iOS
+*   <!-- markdown-link-check-disable-next-line -->
+*   [imToken](https://token.im/) - Android, iOS
+*   [Keplr](https://wallet.keplr.app) - Web
+*   [Ledger](https://www.ledger.com/cosmos-wallet) - Hardware
+*   [Lunie](https://lunie.io) - Web
+*   [Math Wallet](https://www.mathwallet.org/en/) - Android, iOS, Web
+*   [Rainbow Wallet](https://www.rainbow.one) - Android, iOS
+*   [Trust Wallet](https://trustwallet.com/) Android, iOS
+*   [Wetez](https://www.wetez.io/pc/homepage) - Android, iOS
 
 ## Cosmos Hub Explorers
 
 These block explorers allow you to search, view and analyze Cosmos Hub
 data—like blocks, transactions, validators, etc.
 
-- [Anthem](https://anthem.chorus.one)
-- [ATOMScan](https://atomscan.com)
-- [Big Dipper](https://cosmos.bigdipper.live)
-- [Cosmos Overview](https://genesislab.net)
-- [Cosmoscan](https://cosmoscan.net/)
-- [Cosmos Visualizer](https://nylira.net/3d)
-- [IOBScan](https://cosmoshub.iobscan.io/)
-- [LOOK Explorer](https://cosmos.ping.pub)
-- [Lunie](https://lunie.io)
-- [Mintscan](https://mintscan.io)
-- [Union Market](https://union.market/token/cosmos)
+*   [Anthem](https://anthem.chorus.one)
+*   [ATOMScan](https://atomscan.com)
+*   [Big Dipper](https://cosmos.bigdipper.live)
+*   [Cosmos Overview](https://genesislab.net)
+*   [Cosmoscan](https://cosmoscan.net/)
+*   [Cosmos Visualizer](https://nylira.net/3d)
+*   [IOBScan](https://cosmoshub.iobscan.io/)
+*   [LOOK Explorer](https://cosmos.ping.pub)
+*   [Lunie](https://lunie.io)
+*   [Mintscan](https://mintscan.io)
+*   [Union Market](https://union.market/token/cosmos)
 
 ## Cosmos Hub CLI
 
@@ -98,11 +100,11 @@ Have questions, comments, or new ideas? Participate in the Cosmos community
 through one of the following channels. Also check out the
 [latest events](https://cosmos.network/community).
 
-- [Cosmos Community Discord](https://discord.gg/cosmosnetwork)
-- [Cosmos Community Telegram](https://t.me/cosmosproject)
-- [Cosmos Hub Governance Working Group Telegram](https://t.me/hubgov)
-- [Cosmos Forum](https://forum.cosmos.network)
-- [Cosmos on Reddit](https://reddit.com/r/cosmosnetwork)
+*   [Cosmos Community Discord](https://discord.gg/cosmosnetwork)
+*   [Cosmos Community Telegram](https://t.me/cosmosproject)
+*   [Cosmos Hub Governance Working Group Telegram](https://t.me/hubgov)
+*   [Cosmos Forum](https://forum.cosmos.network)
+*   [Cosmos on Reddit](https://reddit.com/r/cosmosnetwork)
 
 To learn more about the Cosmos Hub and how it fits within the Cosmos Network,
 visit [cosmos.network](https://cosmos.network).

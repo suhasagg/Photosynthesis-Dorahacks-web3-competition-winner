@@ -3,28 +3,28 @@
 Seamless printing to the terminal (stdout) and logging to a io.Writer (file)
 that’s as easy to use as fmt.Println.
 
-![and_that\_\_s_why_you_always_leave_a_note_by_jonnyetc-d57q7um](https://cloud.githubusercontent.com/assets/173412/11002937/ccd01654-847d-11e5-828e-12ebaf582eaf.jpg)
+![and\_that\_\_s\_why\_you\_always\_leave\_a\_note\_by\_jonnyetc-d57q7um](https://cloud.githubusercontent.com/assets/173412/11002937/ccd01654-847d-11e5-828e-12ebaf582eaf.jpg)
 Graphic by
 [JonnyEtc](http://jonnyetc.deviantart.com/art/And-That-s-Why-You-Always-Leave-a-Note-315311422)
 
 JWW is primarily a wrapper around the excellent standard log library. It
 provides a few advantages over using the standard log library alone.
 
-1. Ready to go out of the box.
-2. One library for both printing to the terminal and logging (to files).
-3. Really easy to log to either a temp file or a file you specify.
+1.  Ready to go out of the box.
+2.  One library for both printing to the terminal and logging (to files).
+3.  Really easy to log to either a temp file or a file you specify.
 
 I really wanted a very straightforward library that could seamlessly do the
 following things.
 
-1. Replace all the println, printf, etc statements thoughout my code with
-   something more useful
-2. Allow the user to easily control what levels are printed to stdout
-3. Allow the user to easily control what levels are logged
-4. Provide an easy mechanism (like fmt.Println) to print info to the user which
-   can be easily logged as well
-5. Due to 2 & 3 provide easy verbose mode for output and logs
-6. Not have any unnecessary initialization cruft. Just use it.
+1.  Replace all the println, printf, etc statements thoughout my code with
+    something more useful
+2.  Allow the user to easily control what levels are printed to stdout
+3.  Allow the user to easily control what levels are logged
+4.  Provide an easy mechanism (like fmt.Println) to print info to the user which
+    can be easily logged as well
+5.  Due to 2 & 3 provide easy verbose mode for output and logs
+6.  Not have any unnecessary initialization cruft. Just use it.
 
 # Usage
 
@@ -35,13 +35,13 @@ setup needs to happen. Just start calling things.
 
 Available Loggers are:
 
-- TRACE
-- DEBUG
-- INFO
-- WARN
-- ERROR
-- CRITICAL
-- FATAL
+*   TRACE
+*   DEBUG
+*   INFO
+*   WARN
+*   ERROR
+*   CRITICAL
+*   FATAL
 
 These each are loggers based on the log standard library and follow the standard
 usage. Eg.
@@ -98,9 +98,9 @@ only have to mean something to your project.
 
 Under the default thresholds :
 
-- Debug, Trace & Info goto /dev/null
-- Warn and above is logged (when a log file/io.Writer is provided)
-- Error and above is printed to the terminal (stdout)
+*   Debug, Trace & Info goto /dev/null
+*   Warn and above is logged (when a log file/io.Writer is provided)
+*   Error and above is printed to the terminal (stdout)
 
 ### Changing the thresholds
 

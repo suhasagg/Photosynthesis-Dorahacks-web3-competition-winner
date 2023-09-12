@@ -6,21 +6,21 @@ This is a record of past proposals, including ones that weren't drafted in the
 governance repository. These proposals are present in the cosmoshub-4 genesis
 file.
 
-## 1 Adjustment of blocks_per_year to come aligned with actual block time
+## 1 Adjustment of blocks\_per\_year to come aligned with actual block time
 
-- **Submitted:** 2019-03-20 02:41:27
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2019-03-20 02:41:27
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
-This governance proposal is for adjustment of blocks_per_year parameter to
+This governance proposal is for adjustment of blocks\_per\_year parameter to
 normalize the inflation rate and reward rate.\n ipfs link:
 https://ipfs.io/ipfs/QmXqEBr56xeUzFpgjsmDKMSit3iqnKaDEL4tabxPXoz9xc
 
 ## 2 ATOM Transfer Enablement
 
-- **Submitted:** 2019-03-25T21:42:19.240550245Z
-- **Status:** PROPOSAL_STATUS_REJECTED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2019-03-25T21:42:19.240550245Z
+*   **Status:** PROPOSAL\_STATUS\_REJECTED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 A plan is proposed to set up a testnet using the Cosmos SDK v0.34.0 release,
 along with mainnet conditions, plus transfer enablement and increased block
@@ -31,9 +31,9 @@ https://ipfs.io/ipfs/QmaUaMjXPE6i4gJR1NakQc15TZpSqjSrXNmrS1vA5veF9W
 
 ## 3 ATOM Transfer Enablement v2
 
-- **Submitted:** 2019-04-03T10:15:22.291176064Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2019-04-03T10:15:22.291176064Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 A plan for enabling ATOM transfers is being proposed, which involves the release
 and test of Cosmos SDK v0.34.0 and a strategy for the network to accept the
@@ -44,9 +44,9 @@ at https://ipfs.ink/e/Qmam1PU39qmLBzKv3eYA3kMmSJdgR6nursGwWVjnmovpSy
 
 ## 4 Proposal for issuance of fungible tokens directly on the Cosmos Hub
 
-- **Submitted:** 2019-04-15T08:45:39.072577509Z
-- **Status:** PROPOSAL_STATUS_REJECTED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2019-04-15T08:45:39.072577509Z
+*   **Status:** PROPOSAL\_STATUS\_REJECTED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 This proposal is a first step towards enabling fungible token issuance on the
 Cosmos Hub, with listing of new tokens requiring governance approval. Read the
@@ -55,18 +55,18 @@ https://github.com/validator-network/cosmoshub-proposals/blob/0d306f1fcc841a0ac6
 
 ## 5 Expedited Cosmos Upgrade Proposal
 
-- **Submitted:** 2019-04-19T00:49:55.251313656Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2019-04-19T00:49:55.251313656Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 Proposal to upgrade the Cosmos Hub at block 500,000 on April 22nd 5pm GMT.
 Details:https://ipfs.io/ipfs/QmS13GPNs1cRKSojete5y9RgW7wyf1sZ1BGqX3zjTGs7sX
 
 ## 6 Don't Burn Deposits for Rejected Governance Proposals Unless Vetoed
 
-- **Submitted:** 2019-05-03T18:14:33.209053883Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2019-05-03T18:14:33.209053883Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 Read here, or on
 https://ipfs.ink/e/QmRtR7qkeaZCpCzHDwHgJeJAZdTrbmHLxFDYXhw7RoF1ppnnThe Cosmos
@@ -97,18 +97,18 @@ proposal fails to meet quorum its deposit will be burned.
 
 ## 7 Activate the Community Pool
 
-- **Submitted:** 2019-05-03T21:08:25.443199036Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2019-05-03T21:08:25.443199036Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 Enable governance to spend funds from the community pool. Full proposal:
 https://ipfs.io/ipfs/QmNsVCsyRmEiep8rTQLxVNdMHm2uiZkmaSHCR6S72Y1sL1
 
 ## 8 Notification for Security Critical Hard Fork at Block 482100
 
-- **Submitted:** 2019-05-30T19:43:02.870666885Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2019-05-30T19:43:02.870666885Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 As described by user @Jessysaurusrex on Cosmos Forum in
 https://forum.cosmos.network/t/critical-cosmossdk-security-advisory/2211, All in
@@ -131,9 +131,9 @@ network for the upgrade.
 
 ## 10 Increase Max Validator Set Size to 125
 
-- **Submitted:** 2019-07-01T14:09:25.508939113Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2019-07-01T14:09:25.508939113Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 Read here, or on
 https://ipfs.ink/e/QmRhQycV19QiTQGLuPzPHfJwCioj1wDeHHtZvxiHegTFDd nnThis
@@ -169,9 +169,9 @@ governance.
 
 ## 12 Are Validators Charging 0% Commission Harmful to the Success of the Cosmos Hub?
 
-- **Submitted:** 2019-07-23T00:28:15.881319915Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2019-07-23T00:28:15.881319915Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 This governance proposal is intended to act purely as a signalling proposal.
 Throughout this history of the Cosmos Hub, there has been much debate about the
@@ -202,9 +202,9 @@ that they are NOT harmful.
 
 ## 13 Cosmos Hub 3 Upgrade Proposal A
 
-- **Submitted:** 2019-07-26T18:04:10.416760069Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2019-07-26T18:04:10.416760069Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 This is a proposal to approve these high-level changes for a final vote for what
 will become Cosmos Hub 3. Please read them carefully:
@@ -218,9 +218,9 @@ nhttps://ipfs.io/ipfs/QmbXnLfx9iSDH1rVSkW5zYC8ErRZHUK4qUPfaGs4ZdHdc7n
 
 ## 14 Cosmos Hub 3 Upgrade Proposal B
 
-- **Submitted:** 2019-08-23T16:16:19.814900321Z
-- **Status:** PROPOSAL_STATUS_REJECTED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2019-08-23T16:16:19.814900321Z
+*   **Status:** PROPOSAL\_STATUS\_REJECTED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 This proposal is intended to signal acceptance/rejection of the precise software
 release that will contain the changes to be included in the Cosmos Hub 3
@@ -237,9 +237,9 @@ https://ipfs.io/ipfs/Qmf54mwb8cSRf316jS4by96dL91fPCabvB9V5i2Sa1hxdznn
 
 ## 16 Cosmos Hub 3 Upgrade Proposal D
 
-- **Submitted:** 2019-09-05T21:32:32.253341577Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2019-09-05T21:32:32.253341577Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 Figment Networks (https://figment.io)nn-=-=-nnThis proposal is intended to
 supersede flawed Cosmos Hub 3 Upgrade Proposal B
@@ -264,12 +264,12 @@ proposal:nhttps://ipfs.io/ipfs/QmPbSLvAgY8m7zAgSLHzKHfDtV4wx5XaGt1S1cDzqvXqJg
 
 ## 19 Cosmos Hub 3 Upgrade Proposal E
 
-- **Submitted:** 2019-11-14T17:13:31.985706216Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2019-11-14T17:13:31.985706216Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 Figment Networks (https://figment.io)nn-=-=-nnFull
-proposal:nhttps://ipfs.io/ipfs/QmfJyd64srJSX824WoNnF6BbvF4wvPGqVBynZeN98C7ygqnn-=-=-nn_Decision_nnWe
+proposal:nhttps://ipfs.io/ipfs/QmfJyd64srJSX824WoNnF6BbvF4wvPGqVBynZeN98C7ygqnn-=-=-nn\_Decision\_nnWe
 are signalling that:nn1. The Gaia 2.0.3 implementation is aligned with the list
 of high-level changes approved in Cosmos Hub 3 Upgrade Proposal A.nn2. We are
 prepared to upgrade the Cosmos Hub to cosmoshub-3 based uponnta. Commit hash:
@@ -287,7 +287,7 @@ complete after cosmoshub-2 has reached consensus on Block 2902001.nn4. The
 upgrade will be considered complete after cosmoshub-3 has reached consensus on
 Block Height 2 within 120 minutes of genesis time.nn5. This proposal is void if
 the voting period has not concluded by Block Height
-2852202.nn-=-=-nn_Context_nThis proposal follows Cosmos Hub 3 Upgrade Proposal D
+2852202.nn-=-=-nn\_Context\_nThis proposal follows Cosmos Hub 3 Upgrade Proposal D
 (https://www.mintscan.io/cosmos/proposals/16) aka Prop 16, which passed in vote,
 but failed in execution
 (https://forum.cosmos.network/t/cosmos-hub-3-upgrade-post-mortem/2772). This
@@ -304,16 +304,16 @@ will likely be a variance from this target time, due to deviations in block
 time.nnWe are proposing that the Cosmos Hub 3 genesis time be set to 60 minutes
 after Block Height 2,902,000.nn-=-=-nnCo-ordination in case of failure will
 happen in this channel:
-https://riot.im/app/#/room/#cosmos_validators_technical_updates:matrix.org
+https://riot.im/app/#/room/#cosmos\_validators\_technical\_updates:matrix.org
 
 ## 23 Cosmos Governance Working Group - Q1 2020
 
-- **Submitted:** 2020-01-15T06:51:48.001168602Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.distribution.v1beta1.CommunityPoolSpendProposal
+*   **Submitted:** 2020-01-15T06:51:48.001168602Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.distribution.v1beta1.CommunityPoolSpendProposal
 
 Cosmos Governance Working Group - Q1 2020 fundingnnCommunity-spend proposal
-submitted by Gavin Birch (https://twitter.com/Ether_Gavin) of Figment Networks
+submitted by Gavin Birch (https://twitter.com/Ether\_Gavin) of Figment Networks
 (https://figment.io)nn-=-=-nnFull proposal:
 https://ipfs.io/ipfs/QmSMGEoY2dfxADPfgoAsJxjjC6hwpSNx1dXAqePiCEMCbYnn-=-=-nnAmount
 to spend from the community pool: 5250 ATOMsnnTimeline: Q1
@@ -336,7 +336,7 @@ stake-holders to lower the barriers to governance participation with the aim of
 empowering the Cosmos Hub’s stakeholders. The GWG will use this engagement to
 guide recommendations for future GWG planning.nnRead more about the our efforts
 to launch the Cosmos GWG here:
-https://figment.io/resources/introducing-the-cosmos-governance-working-group/nn-=-=-nn_Problem_nPerhaps
+https://figment.io/resources/introducing-the-cosmos-governance-working-group/nn-=-=-nn\_Problem\_nPerhaps
 the most difficult barrier to effective governance is that it demands one of our
 most valuable and scarce resources: our attention. Stakeholders may be
 disadvantaged by informational or resource-based asymmetries, while other
@@ -346,13 +346,13 @@ community standards, processes, and driving decentralized delegator-based
 participation, the Cosmos Hub governance mechanism could be co-opted by a
 centralized power. As governance functionality develops, potential participants
 will need to understand how to assess proposals by knowing what to pay attention
-to.nn_Solution_nWe’re forming a focused, diverse group that’s capable of
+to.nn\_Solution\_nWe’re forming a focused, diverse group that’s capable of
 assessing and synthesizing the key parts of a proposal so that the voting
 community can get a fair summary of what they need to know before voting.nnOur
 solution is to initiate a Cosmos governance working group that develops
 decentralized community governance efforts alongside the Hub’s development. We
 will develop and document governance features and practices, and then
-communicate these to the broader Cosmos community.nn_Future_nAt the end of Q1,
+communicate these to the broader Cosmos community.nn\_Future\_nAt the end of Q1,
 we’ll publish recommendations for the future of the Cosmos GWG, and ideally
 we’ll be prepared to submit a proposal based upon those recommendations for
 Q2 2020. We plan to continue our work in blockchain governance, regardless of
@@ -362,9 +362,9 @@ https://t.me/hubgovnTwitter: https://twitter.com/CosmosGov
 
 ## 25 CosmWasm Integration 1 - Permissions and Upgrades
 
-- **Submitted:** 2020-05-12T17:10:00.465282299Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.distribution.v1beta1.CommunityPoolSpendProposal
+*   **Submitted:** 2020-05-12T17:10:00.465282299Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.distribution.v1beta1.CommunityPoolSpendProposal
 
 CosmWasm Integration 1 - Permissions and UpgradesnnCommunity-spend proposal
 submitted by Ethan Frey (https://github.com/ethanfrey) of Confio UO
@@ -389,16 +389,16 @@ contract deployment and migrations (with a shorter voting cycles, eg. 3
 days)nnDetailed milestones in the full
 proposal:nhttps://ipfs.io/ipfs/QmbD3bMajQCFmtDmkuRVWhmMWVdN2sK8QP2FoFCz9cjPiCnnBeyond
 the milestones, CosmWasm will enhance documentation of the platform and offer
-technical support on our Telegram channel.nn-=-=-nn_Problem_nWith the upcoming
+technical support on our Telegram channel.nn-=-=-nn\_Problem\_nWith the upcoming
 launch of IBC, the hub will need to adapt more rapidly to the needs of the
 ecosystem, while also limiting chain restarts, which may be detrimental to IBC
 connections. In particular support for relaying Dynamic IBC Protocols and Rented
 Security, using ATOMs as collateral for smaller zones, would greatly benefit
-from CosmWasm's flexibility.nn_Solution_nWe’re adding some key features to
+from CosmWasm's flexibility.nn\_Solution\_nWe’re adding some key features to
 CosmWasm to convert it from a permissionless, immutable smart contract platform
 to a permissioned platform with governance control for upgrading or shutting
 down contracts. This is a key requirement to be able to integrate CosmWasm to
-the Cosmos Hub with minimal disruption.nn_Future_nWe will continue development
+the Cosmos Hub with minimal disruption.nn\_Future\_nWe will continue development
 of CosmWasm, especially adding IBC integration as well as working towards a
 stable 1.0 release that can be audited and safely deployed (Q3/Q4
 2020\).nn-=-=-nnTwitter: https://twitter.com/CosmWasmnMedium:
@@ -408,9 +408,9 @@ https://www.cosmwasm.comnGithub: https://github.com/CosmWasm
 
 ## 26 Takeoff Proposal from Cyber to Cosmos
 
-- **Submitted:** 2020-05-21T18:00:11.292428073Z
-- **Status:** PROPOSAL_STATUS_REJECTED
-- **Type:** /cosmos.distribution.v1beta1.CommunityPoolSpendProposal
+*   **Submitted:** 2020-05-21T18:00:11.292428073Z
+*   **Status:** PROPOSAL\_STATUS\_REJECTED
+*   **Type:** /cosmos.distribution.v1beta1.CommunityPoolSpendProposal
 
 cyber Congress (https://cybercongress.ai) developed Cyber
 (https://github.com/cybercongress/go-cyber): a software for replacing existing
@@ -482,9 +482,9 @@ https://www.mintscan.io/proposals/26
 
 ## 27 Stargate Upgrade Proposal 1
 
-- **Submitted:** 2020-07-12T06:23:02.440964897Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2020-07-12T06:23:02.440964897Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 Stargate is our name for the process of ensuring that the widely integrated
 public network known as the Cosmos Hub is able to execute the cosmoshub-3 ->
@@ -507,9 +507,9 @@ https://ipfs.io/ipfs/Qmbo3fF54tX3JdoHZNVLcSBrdkXLie56Vh2u29wLfs4PnW
 
 ## 29 Genesis fund recovery proposal on behalf of fundraiser participants unable to access their ATOMs
 
-- **Submitted:** 2020-09-09T06:47:46.521375251Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2020-09-09T06:47:46.521375251Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 The purpose of this proposal is to restore access to geneis ATOMs for a subset
 of donors who have been active participants in our community through the last
@@ -527,9 +527,9 @@ forum.nhttps://forum.cosmos.network/t/updated-genesis-atoms-recovery-request-pro
 
 ## 31 Governance Split Votes
 
-- **Submitted:** 2020-11-23T00:53:38.508414880Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2020-11-23T00:53:38.508414880Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 In the Cosmos Hub governance system, each address can only cast a vote for one
 option (Yes/No/Abstain/NoWithVeto) which uses their full voting power behind
@@ -556,9 +556,9 @@ feature in a future upgrade of the Cosmos Hub.
 
 ## 32 Funding for Development of Governance Split Votes
 
-- **Submitted:** 2020-11-24T17:22:36.584208993Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.distribution.v1beta1.CommunityPoolSpendProposal
+*   **Submitted:** 2020-11-24T17:22:36.584208993Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.distribution.v1beta1.CommunityPoolSpendProposal
 
 Sikka is requesting 1776 ATOMs from the community pool to architect and
 implement the Governance Split Votes feature proposed in Cosmos Hub Proposal
@@ -575,9 +575,9 @@ x/gov module.
 
 ## 34 Luna Mission - Funding $ATOM
 
-- **Submitted:** 2021-01-05T23:09:26.477112871Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.distribution.v1beta1.CommunityPoolSpendProposal
+*   **Submitted:** 2021-01-05T23:09:26.477112871Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.distribution.v1beta1.CommunityPoolSpendProposal
 
 The Cosmos Hub (ATOM) community is requesting a community pool spend amount of
 129,208 ATOM in order to implement a comprehensive ATOM marketing plan that will
@@ -600,9 +600,9 @@ nn The multisig administration includes: n @johnniecosmos, @JoeDirtay,
 
 ## 35 Cosmos Stargate Hub Upgrade Proposal 2: Time to Upgrade.
 
-- **Submitted:** 2021-01-12T01:37:07.471992293Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2021-01-12T01:37:07.471992293Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 Proposal to complete the Stargate upgrade, halt `cosmoshub-3` at 06:00 UTC on
 Jan 28th, export the state and start `cosmoshub-4` based on gaia 3.0.nn Gaia
@@ -613,9 +613,9 @@ n sia: https://siasky.net/EAALGMzFCafvbKkQjnAieo2cA1mpxk-JLpKsiC4XxuM6eQ
 
 ## 36 Delay of Hub Stargate Upgrade for approximately 2 weeks
 
-- **Submitted:** 2021-01-24T15:51:52.051468824Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2021-01-24T15:51:52.051468824Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 The Stargate team is recommending that the Cosmos Hub reschedule the next
 upgrade to a new commit hash. The new commit hash is expected to be available on
@@ -645,9 +645,9 @@ non-English community.
 
 ## 37 Stargate Upgrade- Second time is a charm!
 
-- **Submitted:** 2021-01-28T21:07:30.044676129Z
-- **Status:** PROPOSAL_STATUS_PASSED
-- **Type:** /cosmos.gov.v1beta1.TextProposal
+*   **Submitted:** 2021-01-28T21:07:30.044676129Z
+*   **Status:** PROPOSAL\_STATUS\_PASSED
+*   **Type:** /cosmos.gov.v1beta1.TextProposal
 
 Proposal to complete the Stargate upgrade, halt `cosmoshub-3` at 06:00 UTC on
 Feb 18th, export the state and start `cosmoshub-4` based on gaia 4.0.nn Gaia
@@ -656,6 +656,6 @@ found on n github: https://github.com/cosmos/governance/pull/13 n Rendered:
 https://ipfs.io/ipfs/QmTkzDwWqPbnAh5YiV5VwcTLnGdwSNsNTn2aDxdXBFca7D/example#/ipfs/QmYn2SxCMYk5SWs5GMcXdbXR8wMCCXRmCyW19SFyzSeZp1
 n ipfs:
 https://cloudflare-ipfs.com/ipfs/QmYn2SxCMYk5SWs5GMcXdbXR8wMCCXRmCyW19SFyzSeZp1
-n sia: https://siasky.net/EACAsPcUjpTEpQlG9\_nRI1OR07gNeRiudfEWAvKnf0tj_Q n
+n sia: https://siasky.net/EACAsPcUjpTEpQlG9\_nRI1OR07gNeRiudfEWAvKnf0tj\_Q n
 
 <!-- markdown-link-check-enable -->

@@ -11,6 +11,6 @@ We currently cover two levels of abstraction of ICS2, in accordance with the
 *level 1* (abstract), *level 2* (system model & distributed protocol).
 Consequently, we break this work across the following documents:
 
-- [L1\_2.md](./L1\_2.md) covers the highest level of abstraction (level 1) and
-  also includes an English spec of the system model and protocol (level 2);
-- [L2-tla](./L2-tla/) is a directory with the TLA+ spec for level 2.
+*   [L1\_2.md](./L1_2.md) covers the highest level of abstraction (level 1) and
+    also includes an English spec of the system model and protocol (level 2);
+*   [L2-tla](./L2-tla/) is a directory with the TLA+ spec for level 2.

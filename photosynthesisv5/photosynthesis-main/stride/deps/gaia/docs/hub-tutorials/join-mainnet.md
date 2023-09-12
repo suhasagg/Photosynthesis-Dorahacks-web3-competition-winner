@@ -1,6 +1,8 @@
 ***
 
-## order: 2&#xA;title: Joining Mainnet
+order: 2
+title: Joining Mainnet
+----------------------
 
 # Join the Cosmos Hub Mainnet
 
@@ -35,31 +37,31 @@ For instructions to join as a validator, please also see the
 
 <!-- DON'T FORGET TO KEEP INDEX UP TO DATE -->
 
-- [Join the Cosmos Hub Mainnet](#join-the-cosmos-hub-mainnet)
-  - [Overview](#overview)
-  - [Background](#background)
-  - [Explorers](#explorers)
-  - [Getting Started](#getting-started)
-  - [Hardware](#hardware)
-  - [General Configuration](#general-configuration)
-    - [Initialize Chain](#initialize-chain)
-    - [Genesis File](#genesis-file)
-    - [Seeds & Peers](#seeds--peers)
-    - [Gas & Fees](#gas--fees)
-    - [Pruning of State](#pruning-of-state)
-    - [REST API](#rest-api)
-    - [GRPC](#grpc)
-  - [Sync Options](#sync-options)
-    - [Blocksync](#blocksync)
-      - [Getting Started](#getting-started-1)
-    - [State Sync](#state-sync)
-    - [Quicksync](#quicksync)
-  - [Snapshots](#snapshots)
-  - [Releases & Upgrades](#releases--upgrades)
-  - [Cosmovisor](#cosmovisor)
-  - [Running via Background Process](#running-via-background-process)
-  - [Exporting State](#exporting-state)
-  - [Verify Mainnet](#verify-mainnet)
+*   [Join the Cosmos Hub Mainnet](#join-the-cosmos-hub-mainnet)
+    *   [Overview](#overview)
+    *   [Background](#background)
+    *   [Explorers](#explorers)
+    *   [Getting Started](#getting-started)
+    *   [Hardware](#hardware)
+    *   [General Configuration](#general-configuration)
+        *   [Initialize Chain](#initialize-chain)
+        *   [Genesis File](#genesis-file)
+        *   [Seeds & Peers](#seeds--peers)
+        *   [Gas & Fees](#gas--fees)
+        *   [Pruning of State](#pruning-of-state)
+        *   [REST API](#rest-api)
+        *   [GRPC](#grpc)
+    *   [Sync Options](#sync-options)
+        *   [Blocksync](#blocksync)
+            *   [Getting Started](#getting-started-1)
+        *   [State Sync](#state-sync)
+        *   [Quicksync](#quicksync)
+    *   [Snapshots](#snapshots)
+    *   [Releases & Upgrades](#releases--upgrades)
+    *   [Cosmovisor](#cosmovisor)
+    *   [Running via Background Process](#running-via-background-process)
+    *   [Exporting State](#exporting-state)
+    *   [Verify Mainnet](#verify-mainnet)
 
 ### Background
 
@@ -72,24 +74,24 @@ the Hub's docs for more information on previous chain migrations.
 There are many explorers for the Cosmos Hub. For reference while setting up a
 node, here are a few recommendations:
 
-- [Mintscan](https://www.mintscan.io/cosmos)
-- [Big Dipper](https://cosmos.bigdipper.live/)
+*   [Mintscan](https://www.mintscan.io/cosmos)
+*   [Big Dipper](https://cosmos.bigdipper.live/)
 
 <!-- markdown-link-check-disable-next-line -->
 
-- [Stake ID](https://cosmos.stake.id/)
+*   [Stake ID](https://cosmos.stake.id/)
 
 ## Getting Started
 
 Make sure the following prerequisites are completed:
 
-- Choose the proper hardware/server configuration. See the
-  [hardware guide](#hardware).
-- Ensure Gaia is properly installed. See the
-  [installation guide](https://hub.cosmos.network/main/getting-started/installation.html)
-  for a walk-through.
-- Follow the [configuration guide](#General-Configuration) to initialize and
-  prepare the node to sync with the network.
+*   Choose the proper hardware/server configuration. See the
+    [hardware guide](#hardware).
+*   Ensure Gaia is properly installed. See the
+    [installation guide](https://hub.cosmos.network/main/getting-started/installation.html)
+    for a walk-through.
+*   Follow the [configuration guide](#General-Configuration) to initialize and
+    prepare the node to sync with the network.
 
 ## Hardware
 
@@ -127,10 +129,8 @@ gaiad init <custom-moniker>
 
 The `moniker` can be edited in the `~/.gaia/config/config.toml` file:
 
-```
-# A custom human readable name for this node
-moniker = "<custom_moniker>"
-```
+    # A custom human readable name for this node
+    moniker = "<custom_moniker>"
 
 ### Genesis File
 
@@ -149,13 +149,11 @@ Upon startup the node will need to connect to peers. If there are specific nodes
 a node operator is interested in setting as seeds or as persistent peers, this
 can be configured in `~/.gaia/config/config.toml`
 
-```
-# Comma separated list of seed nodes to connect to
-seeds = "<seed node id 1>@<seed node address 1>:26656,<seed node id 2>@<seed node address 2>:26656"
+    # Comma separated list of seed nodes to connect to
+    seeds = "<seed node id 1>@<seed node address 1>:26656,<seed node id 2>@<seed node address 2>:26656"
 
-# Comma separated list of nodes to keep persistent connections to
-persistent_peers = "<node id 1>@<node address 1>:26656,<node id 2>@<node address 2>:26656"
-```
+    # Comma separated list of nodes to keep persistent connections to
+    persistent_peers = "<node id 1>@<node address 1>:26656,<node id 2>@<node address 2>:26656"
 
 Node operators can optionally download the
 [Quicksync address book](https://quicksync.io/addrbook.cosmos.json). Make sure
@@ -170,9 +168,7 @@ Transactions on the Cosmos Hub network need to include a transaction fee in
 order to be processed. This fee pays for the gas required to run the
 transaction. The formula is the following:
 
-```
-fees = ceil(gas * gasPrices)
-```
+    fees = ceil(gas * gasPrices)
 
 `Gas` is the smallest unit or pricing value required to perform a transaction.
 Different transactions require different amounts of `gas`. The `gas` amount for
@@ -196,12 +192,10 @@ it from spam, it is better to set a `minimum-gas-prices` that the transaction
 must meet in order to be accepted in the node's mempool. This parameter can be
 set in `~/.gaia/config/app.toml`.
 
-```
-# The minimum gas prices a validator is willing to accept for processing a
-# transaction. A transaction's fees must meet the minimum of any denomination
-# specified in this config (e.g. 0.25token1;0.0001token2).
-minimum-gas-prices = "0.0025uatom"
-```
+    # The minimum gas prices a validator is willing to accept for processing a
+    # transaction. A transaction's fees must meet the minimum of any denomination
+    # specified in this config (e.g. 0.25token1;0.0001token2).
+    minimum-gas-prices = "0.0025uatom"
 
 The initial recommended `min-gas-prices` is `0.0025uatom`, but this can be
 changed later.
@@ -218,11 +212,11 @@ an archive node.
 To set pruning, adjust the `pruning` parameter in the `~/.gaia/config/app.toml`
 file. The following pruning state settings are available:
 
-1. `everything`: Prune all saved states other than the current state.
-2. `nothing`: Save all states and delete nothing.
-3. `default`: Save the last 100 states and the state of every 10,000th block.
-4. `custom`: Specify pruning settings with the `pruning-keep-recent`,
-   `pruning-keep-every`, and `pruning-interval` parameters.
+1.  `everything`: Prune all saved states other than the current state.
+2.  `nothing`: Save all states and delete nothing.
+3.  `default`: Save the last 100 states and the state of every 10,000th block.
+4.  `custom`: Specify pruning settings with the `pruning-keep-recent`,
+    `pruning-keep-every`, and `pruning-interval` parameters.
 
 By default, every node is in `default` mode which is the recommended setting for
 most environments. If a node operator wants to change their node's pruning
@@ -230,18 +224,16 @@ strategy then this **must** be done before the node is initialized.
 
 In `~/.gaia/config/app.toml`
 
-```
-# default: the last 100 states are kept in addition to every 500th state; pruning at 10 block intervals
-# nothing: all historic states will be saved, nothing will be deleted (i.e. archiving node)
-# everything: all saved states will be deleted, storing only the current state; pruning at 10 block intervals
-# custom: allow pruning options to be manually specified through 'pruning-keep-recent', 'pruning-keep-every', and 'pruning-interval'
-pruning = "custom"
+    # default: the last 100 states are kept in addition to every 500th state; pruning at 10 block intervals
+    # nothing: all historic states will be saved, nothing will be deleted (i.e. archiving node)
+    # everything: all saved states will be deleted, storing only the current state; pruning at 10 block intervals
+    # custom: allow pruning options to be manually specified through 'pruning-keep-recent', 'pruning-keep-every', and 'pruning-interval'
+    pruning = "custom"
 
-# These are applied if and only if the pruning strategy is custom.
-pruning-keep-recent = "10"
-pruning-keep-every = "1000"
-pruning-interval = "10"
-```
+    # These are applied if and only if the pruning strategy is custom.
+    pruning-keep-recent = "10"
+    pruning-keep-every = "1000"
+    pruning-interval = "10"
 
 Passing a flag when starting `gaia` will always override settings in the
 `app.toml` file. To change the node's pruning setting to `everything` mode then
@@ -258,18 +250,16 @@ By default, the REST API is disabled. To enable the REST API, edit the
 `~/.gaia/config/app.toml` file, and set `enable` to `true` in the `[api]`
 section.
 
-```
-###############################################################################
-###                           API Configuration                             ###
-###############################################################################
-[api]
-# Enable defines if the API server should be enabled.
-enable = true
-# Swagger defines if swagger documentation should automatically be registered.
-swagger = false
-# Address defines the API server to listen on.
-address = "tcp://0.0.0.0:1317"
-```
+    ###############################################################################
+    ###                           API Configuration                             ###
+    ###############################################################################
+    [api]
+    # Enable defines if the API server should be enabled.
+    enable = true
+    # Swagger defines if swagger documentation should automatically be registered.
+    swagger = false
+    # Address defines the API server to listen on.
+    address = "tcp://0.0.0.0:1317"
 
 Optionally activate swagger by setting `swagger` to `true` or change the port of
 the REST API in the parameter `address`. After restarting the application,
@@ -283,16 +273,14 @@ By default, gRPC is enabled on port `9091`. The `~/.gaia/config/app.toml` file
 is where changes can be made in the gRPC section. To disable the gRPC endpoint,
 set `enable` to `false`. To change the port, use the `address` parameter.
 
-```
-###############################################################################
-###                           gRPC Configuration                            ###
-###############################################################################
-[grpc]
-# Enable defines if the gRPC server should be enabled.
-enable = true
-# Address defines the gRPC server address to bind to.
-address = "0.0.0.0:9091"
-```
+    ###############################################################################
+    ###                           gRPC Configuration                            ###
+    ###############################################################################
+    [grpc]
+    # Enable defines if the gRPC server should be enabled.
+    enable = true
+    # Address defines the gRPC server address to bind to.
+    address = "0.0.0.0:9091"
 
 ## Sync Options
 
@@ -398,29 +386,27 @@ sync successfully.
 > state sync is
 > [moved to the p2p layer in Tendermint 0.38](https://github.com/tendermint/tendermint/issues/6491).
 
-```
-#######################################################
-###         State Sync Configuration Options        ###
-#######################################################
-[statesync]
-# State sync rapidly bootstraps a new node by discovering, fetching, and restoring a state machine
-# snapshot from peers instead of fetching and replaying historical blocks. Requires some peers in
-# the network to take and serve state machine snapshots. State sync is not attempted if the node
-# has any local state (LastBlockHeight > 0). The node will have a truncated block history,
-# starting from the height of the snapshot.
-enable = true
+    #######################################################
+    ###         State Sync Configuration Options        ###
+    #######################################################
+    [statesync]
+    # State sync rapidly bootstraps a new node by discovering, fetching, and restoring a state machine
+    # snapshot from peers instead of fetching and replaying historical blocks. Requires some peers in
+    # the network to take and serve state machine snapshots. State sync is not attempted if the node
+    # has any local state (LastBlockHeight > 0). The node will have a truncated block history,
+    # starting from the height of the snapshot.
+    enable = true
 
-# RPC servers (comma-separated) for light client verification of the synced state machine and
-# retrieval of state data for node bootstrapping. Also needs a trusted height and corresponding
-# header hash obtained from a trusted source, and a period during which validators can be trusted.
-#
-# For Cosmos SDK-based chains, trust_period should usually be about 2/3 of the unbonding time (~2
-# weeks) during which they can be financially punished (slashed) for misbehavior.
-rpc_servers = "https://cosmos-rpc.polkachu.com:443,https://rpc-cosmoshub-ia.cosmosia.notional.ventures:443,https://rpc.cosmos.network:443"
-trust_height = 8959784
-trust_hash = "3D8F12EA302AEDA66E80939F7FC785206692F8B6EE6F727F1655F1AFB6A873A5"
-trust_period = "168h0m0s"
-```
+    # RPC servers (comma-separated) for light client verification of the synced state machine and
+    # retrieval of state data for node bootstrapping. Also needs a trusted height and corresponding
+    # header hash obtained from a trusted source, and a period during which validators can be trusted.
+    #
+    # For Cosmos SDK-based chains, trust_period should usually be about 2/3 of the unbonding time (~2
+    # weeks) during which they can be financially punished (slashed) for misbehavior.
+    rpc_servers = "https://cosmos-rpc.polkachu.com:443,https://rpc-cosmoshub-ia.cosmosia.notional.ventures:443,https://rpc.cosmos.network:443"
+    trust_height = 8959784
+    trust_hash = "3D8F12EA302AEDA66E80939F7FC785206692F8B6EE6F727F1655F1AFB6A873A5"
+    trust_period = "168h0m0s"
 
 Start Gaia to begin state sync. It may take take some time for the node to
 acquire a snapshot, but the command and output should look similar to the
@@ -473,22 +459,20 @@ value to match `pruning-keep-every` in `config.toml`.
 
 In `app.toml`
 
-```
-###############################################################################
-###                        State Sync Configuration                         ###
-###############################################################################
+    ###############################################################################
+    ###                        State Sync Configuration                         ###
+    ###############################################################################
 
-# State sync snapshots allow other nodes to rapidly join the network without replaying historical
-# blocks, instead downloading and applying a snapshot of the application state at a given height.
-[state-sync]
+    # State sync snapshots allow other nodes to rapidly join the network without replaying historical
+    # blocks, instead downloading and applying a snapshot of the application state at a given height.
+    [state-sync]
 
-# snapshot-interval specifies the block interval at which local state sync snapshots are
-# taken (0 to disable). Must be a multiple of pruning-keep-every.
-snapshot-interval = 1000
+    # snapshot-interval specifies the block interval at which local state sync snapshots are
+    # taken (0 to disable). Must be a multiple of pruning-keep-every.
+    snapshot-interval = 1000
 
-# snapshot-keep-recent specifies the number of recent snapshots to keep and serve (0 to keep all).
-snapshot-keep-recent = 10
-```
+    # snapshot-keep-recent specifies the number of recent snapshots to keep and serve (0 to keep all).
+    snapshot-keep-recent = 10
 
 ## Releases & Upgrades
 

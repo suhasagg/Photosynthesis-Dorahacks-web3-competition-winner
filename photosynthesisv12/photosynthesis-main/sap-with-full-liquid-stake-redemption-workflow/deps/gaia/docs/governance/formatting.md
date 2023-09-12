@@ -40,12 +40,12 @@ proposal has no direct effect on the change Cosmos Hub.
 
 There are three components:
 
-1. **Title** - the distinguishing name of the proposal, typically the way the
-   that explorers list proposals
-2. **Description** - the body of the proposal that further describes what is
-   being proposed and details surrounding the proposal
-3. **Deposit** - the amount that will be contributed to the deposit (in
-   micro-ATOMs "uatom") from the account submitting the proposal
+1.  **Title** - the distinguishing name of the proposal, typically the way the
+    that explorers list proposals
+2.  **Description** - the body of the proposal that further describes what is
+    being proposed and details surrounding the proposal
+3.  **Deposit** - the amount that will be contributed to the deposit (in
+    micro-ATOMs "uatom") from the account submitting the proposal
 
 ### Real example
 
@@ -65,16 +65,16 @@ the Cosmos Hub.
 
 There are five (5) components:
 
-1. **Title** - the distinguishing name of the proposal, typically the way the
-   that explorers list proposals
-2. **Description** - the body of the proposal that further describes what is
-   being proposed and details surrounding the proposal
-3. **Recipient** - the Cosmos Hub (bech32-based) address that will receive
-   funding from the Community Pool
-4. **Amount** - the amount of funding that the recipient will receive in
-   micro-ATOMs (uatom)
-5. **Deposit** - the amount that will be contributed to the deposit (in
-   micro-ATOMs "uatom") from the account submitting the proposal
+1.  **Title** - the distinguishing name of the proposal, typically the way the
+    that explorers list proposals
+2.  **Description** - the body of the proposal that further describes what is
+    being proposed and details surrounding the proposal
+3.  **Recipient** - the Cosmos Hub (bech32-based) address that will receive
+    funding from the Community Pool
+4.  **Amount** - the amount of funding that the recipient will receive in
+    micro-ATOMs (uatom)
+5.  **Deposit** - the amount that will be contributed to the deposit (in
+    micro-ATOMs "uatom") from the account submitting the proposal
 
 If the description says that a certain address will receive a certain number of
 ATOMs, it should also be programmed to do that, but it's possible that that's
@@ -112,17 +112,17 @@ the other kinds of parameter changes because `gov` has subkeys,
 For parameter-change proposals, there are arguably seven (7) components, though
 three are nested beneath 'Changes':
 
-1. **Title** - the distinguishing name of the proposal, typically the way the
-   that explorers list proposals
-2. **Description** - the body of the proposal that further describes what is
-   being proposed and details surrounding the proposal
-3. **Changes** - a component containing
-4. **Subspace** - the Cosmos Hub module with the parameter that is being changed
-5. **Key** - the parameter that will be changed
-6. **Value** - the value of the parameter that will be changed by the governance
-   mechanism
-7. **Deposit** - the amount that will be contributed to the deposit (in
-   micro-ATOMs "uatom") from the account submitting the proposal
+1.  **Title** - the distinguishing name of the proposal, typically the way the
+    that explorers list proposals
+2.  **Description** - the body of the proposal that further describes what is
+    being proposed and details surrounding the proposal
+3.  **Changes** - a component containing
+4.  **Subspace** - the Cosmos Hub module with the parameter that is being changed
+5.  **Key** - the parameter that will be changed
+6.  **Value** - the value of the parameter that will be changed by the governance
+    mechanism
+7.  **Deposit** - the amount that will be contributed to the deposit (in
+    micro-ATOMs "uatom") from the account submitting the proposal
 
 The components must be presented as shown in the example.
 

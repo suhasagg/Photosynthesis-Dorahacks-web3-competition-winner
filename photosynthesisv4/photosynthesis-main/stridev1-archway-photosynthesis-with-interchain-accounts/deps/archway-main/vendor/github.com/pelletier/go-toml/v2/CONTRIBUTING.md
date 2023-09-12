@@ -51,18 +51,18 @@ Want to contribute a patch? Very happy to hear that!
 
 First, some high-level rules:
 
-- A short proposal with some POC code is better than a lengthy piece of text
-  with no code. Code speaks louder than words. That being said, bigger changes
-  should probably start with a [discussion][discussions].
-- No backward-incompatible patch will be accepted unless discussed. Sometimes
-  it's hard, but we try not to break people's programs unless we absolutely have
-  to.
-- If you are writing a new feature or extending an existing one, make sure to
-  write some documentation.
-- Bug fixes need to be accompanied with regression tests.
-- New code needs to be tested.
-- Your commit messages need to explain why the change is needed, even if already
-  included in the PR description.
+*   A short proposal with some POC code is better than a lengthy piece of text
+    with no code. Code speaks louder than words. That being said, bigger changes
+    should probably start with a [discussion][discussions].
+*   No backward-incompatible patch will be accepted unless discussed. Sometimes
+    it's hard, but we try not to break people's programs unless we absolutely have
+    to.
+*   If you are writing a new feature or extending an existing one, make sure to
+    write some documentation.
+*   Bug fixes need to be accompanied with regression tests.
+*   New code needs to be tested.
+*   Your commit messages need to explain why the change is needed, even if already
+    included in the PR description.
 
 It does sound like a lot, but those best practices are here to save time overall
 and continuously improve the quality of the project, which is something everyone
@@ -72,11 +72,11 @@ benefits from.
 
 The fairly standard code contribution process looks like that:
 
-1. [Fork the project][fork].
-2. Make your changes, commit on any branch you like.
-3. [Open up a pull request][pull-request]
-4. Review, potential ask for changes.
-5. Merge.
+1.  [Fork the project][fork].
+2.  Make your changes, commit on any branch you like.
+3.  [Open up a pull request][pull-request]
+4.  Review, potential ask for changes.
+5.  Merge.
 
 Feel free to ask for help! You can create draft pull requests to gather some
 early feedback!
@@ -97,10 +97,8 @@ as you make changes.
 We use `go tool cover` to compute test coverage. Most code editors have a way to
 run and display code coverage, but at the end of the day, we do this:
 
-```
-go test -covermode=atomic -coverprofile=coverage.out
-go tool cover -func=coverage.out
-```
+    go test -covermode=atomic -coverprofile=coverage.out
+    go tool cover -func=coverage.out
 
 and verify that the overall percentage of tested code does not go down. This is
 a requirement. As a rule of thumb, all lines of code touched by your changes
@@ -115,20 +113,18 @@ Github Actions cannot be reliably used for benchmarking. As a result, you are
 responsible for checking that your changes do not incur a performance penalty.
 You can run their following to execute benchmarks:
 
-```
-go test ./... -bench=. -count=10
-```
+    go test ./... -bench=. -count=10
 
 Benchmark results should be compared against each other with
 [benchstat][benchstat]. Typical flow looks like this:
 
-1. On the `v2` branch, run `go test ./... -bench=. -count 10` and save output to
-   a file (for example `old.txt`).
-2. Make some code changes.
-3. Run `go test ....` again, and save the output to an other file (for example
-   `new.txt`).
-4. Run `benchstat old.txt new.txt` to check that time/op does not go up in any
-   test.
+1.  On the `v2` branch, run `go test ./... -bench=. -count 10` and save output to
+    a file (for example `old.txt`).
+2.  Make some code changes.
+3.  Run `go test ....` again, and save the output to an other file (for example
+    `new.txt`).
+4.  Run `benchstat old.txt new.txt` to check that time/op does not go up in any
+    test.
 
 On Unix you can use `./ci.sh benchmark -d v2` to verify how your code impacts
 performance.
@@ -151,41 +147,41 @@ code. We enforce using `go fmt` on the whole code base.
 
 Checklist:
 
-- Passing CI.
-- Does not introduce backward-incompatible changes (unless discussed).
-- Has relevant doc changes.
-- Benchstat does not show performance regression.
-- Pull request is [labeled appropriately][pr-labels].
-- Title will be understandable in the changelog.
+*   Passing CI.
+*   Does not introduce backward-incompatible changes (unless discussed).
+*   Has relevant doc changes.
+*   Benchstat does not show performance regression.
+*   Pull request is [labeled appropriately][pr-labels].
+*   Title will be understandable in the changelog.
 
-1. Merge using "squash and merge".
-2. Make sure to edit the commit message to keep all the useful information nice
-   and clean.
-3. Make sure the commit title is clear and contains the PR number (#123).
+1.  Merge using "squash and merge".
+2.  Make sure to edit the commit message to keep all the useful information nice
+    and clean.
+3.  Make sure the commit title is clear and contains the PR number (#123).
 
 ### New release
 
-1. Decide on the next version number. Use semver.
-2. Generate release notes using [`gh`][gh]. Example:
+1.  Decide on the next version number. Use semver.
+2.  Generate release notes using [`gh`][gh]. Example:
 
-```
-$ gh api -X POST \
-  -F tag_name='v2.0.0-beta.5' \
-  -F target_commitish='v2' \
-  -F previous_tag_name='v2.0.0-beta.4' \
-  --jq '.body' \
-  repos/pelletier/go-toml/releases/generate-notes
-```
+<!---->
 
-3. Look for "Other changes". That would indicate a pull request not labeled
-   properly. Tweak labels and pull request titles until changelog looks good for
-   users.
-4. [Draft new release][new-release].
-5. Fill tag and target with the same value used to generate the changelog.
-6. Set title to the new tag value.
-7. Paste the generated changelog.
-8. Check "create discussion", in the "Releases" category.
-9. Check pre-release if new version is an alpha or beta.
+    $ gh api -X POST \
+      -F tag_name='v2.0.0-beta.5' \
+      -F target_commitish='v2' \
+      -F previous_tag_name='v2.0.0-beta.4' \
+      --jq '.body' \
+      repos/pelletier/go-toml/releases/generate-notes
+
+3.  Look for "Other changes". That would indicate a pull request not labeled
+    properly. Tweak labels and pull request titles until changelog looks good for
+    users.
+4.  [Draft new release][new-release].
+5.  Fill tag and target with the same value used to generate the changelog.
+6.  Set title to the new tag value.
+7.  Paste the generated changelog.
+8.  Check "create discussion", in the "Releases" category.
+9.  Check pre-release if new version is an alpha or beta.
 
 [issues-tracker]: https://github.com/pelletier/go-toml/issues
 

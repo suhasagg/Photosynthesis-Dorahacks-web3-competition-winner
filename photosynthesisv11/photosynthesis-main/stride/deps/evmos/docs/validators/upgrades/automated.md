@@ -8,8 +8,8 @@ Learn how to automate chain upgrades using Cosmovisor. {synopsis}
 
 ## Pre-requisites
 
-- [Install Cosmovisor](https://docs.cosmos.network/main/tooling/cosmovisor#installation)
-  {prereq}
+*   [Install Cosmovisor](https://docs.cosmos.network/main/tooling/cosmovisor#installation)
+    {prereq}
 
 ## Using Cosmovisor
 
@@ -72,10 +72,10 @@ Cosmovisor will continually poll the `$DAEMON_HOME/data/upgrade-info.json` for
 new upgrade instructions. When an upgrade is
 [released](https://github.com/evmos/evmos/releases), node operators need to:
 
-1. Download (**NOT INSTALL**) the binary for the new release
-2. Place it under `$DAEMON_HOME/cosmovisor/upgrades/<name>/bin`, where `<name>`
-   is the URI-encoded name of the upgrade as specified in the Software Upgrade
-   Plan.
+1.  Download (**NOT INSTALL**) the binary for the new release
+2.  Place it under `$DAEMON_HOME/cosmovisor/upgrades/<name>/bin`, where `<name>`
+    is the URI-encoded name of the upgrade as specified in the Software Upgrade
+    Plan.
 
 **Example**: for a `Plan` with name `v3.0.0` with the following
 `upgrade-info.json`:

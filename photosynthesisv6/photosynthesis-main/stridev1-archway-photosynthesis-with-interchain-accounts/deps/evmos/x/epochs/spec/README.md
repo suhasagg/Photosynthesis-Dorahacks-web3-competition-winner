@@ -22,10 +22,10 @@ more easily signaled upon such events.
 
 ## Contents
 
-1. **[Concept](01\_concepts.md)**
-2. **[State](02\_state.md)**
-3. **[Events](03\_events.md)**
-4. **[Keeper](04\_keeper.md)**
-5. **[Hooks](05\_hooks.md)**
-6. **[Queries](06\_queries.md)**
-7. **[Future improvements](07\_future_improvements.md)**
+1.  **[Concept](01_concepts.md)**
+2.  **[State](02_state.md)**
+3.  **[Events](03_events.md)**
+4.  **[Keeper](04_keeper.md)**
+5.  **[Hooks](05_hooks.md)**
+6.  **[Queries](06_queries.md)**
+7.  **[Future improvements](07_future_improvements.md)**

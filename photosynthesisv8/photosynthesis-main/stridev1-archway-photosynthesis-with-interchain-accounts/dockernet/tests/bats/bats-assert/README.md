@@ -7,10 +7,10 @@
 
 `bats-assert` is a helper library providing common assertions for [Bats][bats].
 
-- [Install](#install)
-- [Usage](#usage)
-- [Options](#options)
-- [Full Assertion API](#full-assertion-api)
+*   [Install](#install)
+*   [Usage](#usage)
+*   [Options](#options)
+*   [Full Assertion API](#full-assertion-api)
 
 In the context of this project, an [assertion][wikipedia-assertions] is a
 function that perform a test and returns `1` on failure or `0` on success. To
@@ -38,18 +38,18 @@ libraries.
 
 This project provides the following functions:
 
-- [assert](#assert) / [refute](#refute) Assert a given expression evaluates to
-  `true` or `false`.
-- [assert_equal](#assert_equal) Assert two parameters are equal.
-- [assert_not_equal](#assert_not_equal) Assert two parameters are not equal.
-- [assert_success](#assert_success) / [assert_failure](#assert_failure) Assert
-  exit status is `0` or `1`.
-- [assert_output](#assert_output) / [refute_output](#refute_output) Assert
-  output does (or does not) contain given content.
-- [assert_line](#assert_line) / [refute_line](#refute_line) Assert a specific
-  line of output does (or does not) contain given content.
-- [assert_regex](#assert_regex) / [refute_regex](#refute_regex) Assert a
-  parameter does (or does not) match given pattern.
+*   [assert](#assert) / [refute](#refute) Assert a given expression evaluates to
+    `true` or `false`.
+*   [assert\_equal](#assert_equal) Assert two parameters are equal.
+*   [assert\_not\_equal](#assert_not_equal) Assert two parameters are not equal.
+*   [assert\_success](#assert_success) / [assert\_failure](#assert_failure) Assert
+    exit status is `0` or `1`.
+*   [assert\_output](#assert_output) / [refute\_output](#refute_output) Assert
+    output does (or does not) contain given content.
+*   [assert\_line](#assert_line) / [refute\_line](#refute_line) Assert a specific
+    line of output does (or does not) contain given content.
+*   [assert\_regex](#assert_regex) / [refute\_regex](#refute_regex) Assert a
+    parameter does (or does not) match given pattern.
 
 These commands are described in more detail below.
 
@@ -86,11 +86,9 @@ commands][bash-comp-cmd], such as `[[`, can be used only when executed with
 
 On failure, the failed expression is displayed.
 
-```
--- assertion failed --
-expression : [ 1 -lt 0 ]
---
-```
+    -- assertion failed --
+    expression : [ 1 -lt 0 ]
+    --
 
 ### `refute`
 
@@ -108,11 +106,9 @@ commands][bash-comp-cmd], such as `[[`, can be used only when executed with
 
 On failure, the successful expression is displayed.
 
-```
--- assertion succeeded, but it was expected to fail --
-expression : [ 1 -gt 0 ]
---
-```
+    -- assertion succeeded, but it was expected to fail --
+    expression : [ 1 -gt 0 ]
+    --
 
 ### `assert_equal`
 
@@ -127,12 +123,10 @@ equal.
 
 On failure, the expected and actual values are displayed.
 
-```
--- values do not equal --
-expected : want
-actual   : have
---
-```
+    -- values do not equal --
+    expected : want
+    actual   : have
+    --
 
 If either value is longer than one line both are displayed in *multi-line*
 format.
@@ -149,12 +143,10 @@ Fail if the two parameters, actual and unexpected value respectively, are equal.
 
 On failure, the expected and actual values are displayed.
 
-```
--- values should not be equal --
-unexpected : foobar
-actual     : foobar
---
-```
+    -- values should not be equal --
+    unexpected : foobar
+    actual     : foobar
+    --
 
 If either value is longer than one line both are displayed in *multi-line*
 format.
@@ -172,12 +164,10 @@ Fail if `$status` is not 0.
 
 On failure, `$status` and `$output` are displayed.
 
-```
--- command failed --
-status : 1
-output : Error!
---
-```
+    -- command failed --
+    status : 1
+    output : Error!
+    --
 
 If `$output` is longer than one line, it is displayed in *multi-line* format.
 
@@ -194,11 +184,9 @@ Fail if `$status` is 0.
 
 On failure, `$output` is displayed.
 
-```
--- command succeeded, but it was expected to fail --
-output : Success!
---
-```
+    -- command succeeded, but it was expected to fail --
+    output : Success!
+    --
 
 If `$output` is longer than one line, it is displayed in *multi-line* format.
 
@@ -216,13 +204,11 @@ status specified by the parameter.
 
 On failure, the expected and actual status, and `$output` are displayed.
 
-```
--- command failed as expected, but status differs --
-expected : 2
-actual   : 1
-output   : Error!
---
-```
+    -- command failed as expected, but status differs --
+    expected : 2
+    actual   : 1
+    output   : Error!
+    --
 
 If `$output` is longer than one line, it is displayed in *multi-line* format.
 
@@ -247,12 +233,10 @@ not equal the expected output.
 
 On failure, the expected and actual output are displayed.
 
-```
--- output differs --
-expected : want
-actual   : have
---
-```
+    -- output differs --
+    expected : want
+    actual   : have
+    --
 
 If either value is longer than one line both are displayed in *multi-line*
 format.
@@ -271,11 +255,9 @@ argument.
 
 On failure, an error message is displayed.
 
-```
--- no output --
-expected non-empty output, but output was empty
---
-```
+    -- no output --
+    expected non-empty output, but output was empty
+    --
 
 #### Partial matching
 
@@ -292,12 +274,10 @@ When used, the assertion fails if the expected *substring* is not found in
 
 On failure, the substring and the output are displayed.
 
-```
--- output does not contain substring --
-substring : SUCCESS
-output    : ERROR: no such file or directory
---
-```
+    -- output does not contain substring --
+    substring : SUCCESS
+    output    : ERROR: no such file or directory
+    --
 
 This option and regular expression matching (`--regexp` or `-e`) are mutually
 exclusive. An error is displayed when used simultaneously.
@@ -320,12 +300,10 @@ output (not individual lines), respectively.*
 
 On failure, the regular expression and the output are displayed.
 
-```
--- regular expression does not match output --
-regexp : ^Foobar v[0-9]+\.[0-9]+\.[0-9]$
-output : Foobar 0.1.0
---
-```
+    -- regular expression does not match output --
+    regexp : ^Foobar v[0-9]+\.[0-9]+\.[0-9]$
+    output : Foobar 0.1.0
+    --
 
 An error is displayed if the specified extended regular expression is invalid.
 
@@ -370,11 +348,9 @@ equals the unexpected output.
 
 On failure, the output is displayed.
 
-```
--- output equals, but it was expected to differ --
-output : want
---
-```
+    -- output equals, but it was expected to differ --
+    output : want
+    --
 
 If output is longer than one line it is displayed in *multi-line* format.
 
@@ -391,11 +367,9 @@ To assert that there is no output at all, simply omit the matching argument.
 
 On failure, an error message is displayed.
 
-```
--- unexpected output --
-expected no output, but output was non-empty
---
-```
+    -- unexpected output --
+    expected no output, but output was non-empty
+    --
 
 #### Partial matching
 
@@ -412,12 +386,10 @@ When used, the assertion fails if the unexpected *substring* is found in
 
 On failure, the substring and the output are displayed.
 
-```
--- output should not contain substring --
-substring : ERROR
-output    : ERROR: no such file or directory
---
-```
+    -- output should not contain substring --
+    substring : ERROR
+    output    : ERROR: no such file or directory
+    --
 
 This option and regular expression matching (`--regexp` or `-e`) are mutually
 exclusive. An error is displayed when used simultaneously.
@@ -440,12 +412,10 @@ output (not individual lines), respectively.*
 
 On failure, the regular expression and the output are displayed.
 
-```
--- regular expression should not match output --
-regexp : ^Foobar v[0-9]+\.[0-9]+\.[0-9]$
-output : Foobar v0.1.0
---
-```
+    -- regular expression should not match output --
+    regexp : ^Foobar v[0-9]+\.[0-9]+\.[0-9]$
+    output : Foobar v0.1.0
+    --
 
 An error is displayed if the specified extended regular expression is invalid.
 
@@ -500,15 +470,13 @@ On failure, the expected line and the output are displayed.
 ***Warning:*** *The output displayed does not contain empty lines. See the
 Warning above for more.*
 
-```
--- output does not contain line --
-line : want
-output (3 lines):
-  have-0
-  have-1
-  have-2
---
-```
+    -- output does not contain line --
+    line : want
+    output (3 lines):
+      have-0
+      have-1
+      have-2
+    --
 
 If output is not longer than one line, it is displayed in *two-column* format.
 
@@ -527,13 +495,11 @@ assertion fails if the expected line does not equal `${lines[<idx>]}`.
 
 On failure, the index and the compared lines are displayed.
 
-```
--- line differs --
-index    : 1
-expected : want-1
-actual   : have-1
---
-```
+    -- line differs --
+    index    : 1
+    expected : want-1
+    actual   : have-1
+    --
 
 #### Partial matching
 
@@ -551,15 +517,13 @@ line.
 On failure, the same details are displayed as for literal matching, except that
 the substring replaces the expected line.
 
-```
--- no output line contains substring --
-substring : want
-output (3 lines):
-  have 1
-  have 2
-  have 3
---
-```
+    -- no output line contains substring --
+    substring : want
+    output (3 lines):
+      have 1
+      have 2
+      have 3
+    --
 
 This option and regular expression matching (`--regexp` or `-e`) are mutually
 exclusive. An error is displayed when used simultaneously.
@@ -583,13 +547,11 @@ the matched line, respectively.*
 On failure, the same details are displayed as for literal matching, except that
 the regular expression replaces the expected line.
 
-```
--- regular expression does not match line --
-index  : 1
-regexp : ^want-[0-9]$
-line   : have-1
---
-```
+    -- regular expression does not match line --
+    index  : 1
+    regexp : ^want-[0-9]$
+    line   : have-1
+    --
 
 An error is displayed if the specified extended regular expression is invalid.
 
@@ -628,16 +590,14 @@ with the matching line highlighted are displayed.
 ***Warning:*** *The output displayed does not contain empty lines. See the
 Warning above for more.*
 
-```
--- line should not be in output --
-line  : want
-index : 1
-output (3 lines):
-  have-0
-> want
-  have-2
---
-```
+    -- line should not be in output --
+    line  : want
+    index : 1
+    output (3 lines):
+      have-0
+    > want
+      have-2
+    --
 
 If output is not longer than one line, it is displayed in *two-column* format.
 
@@ -656,12 +616,10 @@ assertion fails if the unexpected line equals `${lines[<idx>]}`.
 
 On failure, the index and the unexpected line are displayed.
 
-```
--- line should differ --
-index : 1
-line  : want-1
---
-```
+    -- line should differ --
+    index : 1
+    line  : want-1
+    --
 
 #### Partial matching
 
@@ -680,16 +638,14 @@ On failure, in addition to the details of literal matching, the substring is
 also displayed. When used with `--index <idx>` the substring replaces the
 unexpected line.
 
-```
--- no line should contain substring --
-substring : want
-index     : 1
-output (3 lines):
-  have 1
-> want 2
-  have 3
---
-```
+    -- no line should contain substring --
+    substring : want
+    index     : 1
+    output (3 lines):
+      have 1
+    > want 2
+      have 3
+    --
 
 This option and regular expression matching (`--regexp` or `-e`) are mutually
 exclusive. An error is displayed when used simultaneously.
@@ -714,13 +670,11 @@ On failure, in addition to the details of literal matching, the regular
 expression is also displayed. When used with `--index <idx>` the regular
 expression replaces the unexpected line.
 
-```
--- regular expression should not match line --
-index  : 0
-regexp : ^Foobar v[0-9]+\.[0-9]+\.[0-9]$
-line   : Foobar v0.1.0
---
-```
+    -- regular expression should not match line --
+    index  : 0
+    regexp : ^Foobar v[0-9]+\.[0-9]+\.[0-9]$
+    line   : Foobar v0.1.0
+    --
 
 An error is displayed if the specified extended regular expression is invalid.
 
@@ -743,12 +697,10 @@ parameter).
 
 On failure, the value and the pattern are displayed.
 
-```
--- values does not match regular expression --
-value    : what
-pattern  : x$
---
-```
+    -- values does not match regular expression --
+    value    : what
+    pattern  : x$
+    --
 
 If the value is longer than one line then it is displayed in *multi-line*
 format.
@@ -757,7 +709,7 @@ An error is displayed if the specified extended regular expression is invalid.
 
 For description of the matching behavior, refer to the documentation of the `=~`
 operator in the \[Bash manual]:
-https://www.gnu.org/software/bash/manual/html_node/Conditional-Constructs.html.
+https://www.gnu.org/software/bash/manual/html\_node/Conditional-Constructs.html.
 Note that the `BASH_REMATCH` array is available immediately after the assertion
 succeeds but is fragile, i.e. prone to being overwritten as a side effect of
 other actions.
@@ -777,18 +729,16 @@ Fail if the value (first parameter) matches the pattern (second parameter).
 
 On failure, the value, the pattern and the match are displayed.
 
-```
-@test 'refute_regex()' {
-  refute_regex 'WhatsApp' 'What.'
-}
+    @test 'refute_regex()' {
+      refute_regex 'WhatsApp' 'What.'
+    }
 
--- value matches regular expression --
-value    : WhatsApp
-pattern  : What.
-match    : Whats
-case     : sensitive
---
-```
+    -- value matches regular expression --
+    value    : WhatsApp
+    pattern  : What.
+    match    : Whats
+    case     : sensitive
+    --
 
 If the value or pattern is longer than one line then it is displayed in
 *multi-line* format.
@@ -797,7 +747,7 @@ An error is displayed if the specified extended regular expression is invalid.
 
 For description of the matching behavior, refer to the documentation of the `=~`
 operator in the \[Bash manual]:
-https://www.gnu.org/software/bash/manual/html_node/Conditional-Constructs.html.
+https://www.gnu.org/software/bash/manual/html\_node/Conditional-Constructs.html.
 
 Note that the `BASH_REMATCH` array is available immediately after the assertion
 fails but is fragile, i.e. prone to being overwritten as a side effect of other

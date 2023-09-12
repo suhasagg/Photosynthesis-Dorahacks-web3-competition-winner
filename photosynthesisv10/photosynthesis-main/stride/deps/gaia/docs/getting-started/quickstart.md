@@ -1,6 +1,8 @@
 ***
 
-## order: 3&#xA;title: Quick Start - Join Mainnet
+order: 3
+title: Quick Start - Join Mainnet
+---------------------------------
 
 # Join Mainnet Quick Start
 
@@ -137,25 +139,21 @@ aria2c -x5 $URL
 
 **The download logs should look like the following**
 
-```
-01/11 07:48:17 [NOTICE] Downloading 1 item(s)
-[#7cca5a 484MiB/271GiB(0%) CN:5 DL:108MiB ETA:42m41s]
-```
+    01/11 07:48:17 [NOTICE] Downloading 1 item(s)
+    [#7cca5a 484MiB/271GiB(0%) CN:5 DL:108MiB ETA:42m41s]
 
 **Completed Download Process:**
 
-```
-[#7cca5a 271GiB/271GiB(99%) CN:1 DL:77MiB]
-01/11 08:32:19 [NOTICE] Download complete: /mnt/quicksync_01/cosmoshub-4-pruned.20220111.0310.tar.lz4
+    [#7cca5a 271GiB/271GiB(99%) CN:1 DL:77MiB]
+    01/11 08:32:19 [NOTICE] Download complete: /mnt/quicksync_01/cosmoshub-4-pruned.20220111.0310.tar.lz4
 
-Download Results:
-gid   |stat|avg speed  |path/URI
-======+====+===========+=======================================================
-7cca5a|OK  |   105MiB/s|/mnt/quicksync_01/cosmoshub-4-pruned.20220111.0310.tar.lz4
+    Download Results:
+    gid   |stat|avg speed  |path/URI
+    ======+====+===========+=======================================================
+    7cca5a|OK  |   105MiB/s|/mnt/quicksync_01/cosmoshub-4-pruned.20220111.0310.tar.lz4
 
-Status Legend:
-(OK):download completed.
-```
+    Status Legend:
+    (OK):download completed.
 
 #### Unzip
 

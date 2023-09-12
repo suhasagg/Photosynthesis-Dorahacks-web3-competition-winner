@@ -1,6 +1,10 @@
 ***
 
-## order: 1&#xA;parent:&#xA;title: Governance&#xA;order: 6
+order: 1
+parent:
+title: Governance
+order: 6
+--------
 
 # Governance Overview
 
@@ -21,8 +25,8 @@ documentation in this repo was funded by the community fund itself in
 discussions happens in a number of places moderated by diverse community
 members, including:
 
-- [Forum](http://forum.cosmos.network/)
-- [Discord](https://discord.gg/W8trcGV)
-- [Twitter](https://twitter.com/CosmosGov)
-- [Reddit](http://reddit.com/r/cosmosnetwork)
-- anywhere else you might interact with members of the Cosmos community!
+*   [Forum](http://forum.cosmos.network/)
+*   [Discord](https://discord.gg/W8trcGV)
+*   [Twitter](https://twitter.com/CosmosGov)
+*   [Reddit](http://reddit.com/r/cosmosnetwork)
+*   anywhere else you might interact with members of the Cosmos community!

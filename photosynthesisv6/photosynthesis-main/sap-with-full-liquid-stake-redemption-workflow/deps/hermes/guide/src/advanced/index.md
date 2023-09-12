@@ -8,10 +8,10 @@ we provide general guidelines for troubleshooting.
 
 ## Sections
 
-- **[Features](./features.md)**
+*   **[Features](./features.md)**
 
-  - Learn about Hermes' features and how it compares to another relayer
-    implementation.
+    *   Learn about Hermes' features and how it compares to another relayer
+        implementation.
 
-- **[Troubleshooting](./troubleshooting/index.md)**
-  - Learn the general guidelines regarding troubleshooting.
+*   **[Troubleshooting](./troubleshooting/index.md)**
+    *   Learn the general guidelines regarding troubleshooting.

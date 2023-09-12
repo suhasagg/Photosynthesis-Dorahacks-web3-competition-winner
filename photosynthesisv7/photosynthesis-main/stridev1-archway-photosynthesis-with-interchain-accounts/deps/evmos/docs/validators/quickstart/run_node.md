@@ -8,8 +8,8 @@ Configure and run an Evmos node {synopsis}
 
 ## Pre-requisite Readings
 
-- [Installation](./installation.md) {prereq}
-- [`evmosd`](./binary.md) {prereq}
+*   [Installation](./installation.md) {prereq}
+*   [`evmosd`](./binary.md) {prereq}
 
 ## Automated deployment
 
@@ -90,10 +90,10 @@ evmosd config keyring-backend file
 To enable tracing when running the node, modify the last line of the
 `local_node.sh` script to be the following command, where:
 
-- `$TRACER` is the EVM tracer type to collect execution traces from the EVM
-  transaction execution (eg. `json|struct|access_list|markdown`)
-- `$TRACESTORE` is the output file which contains KVStore tracing (eg.
-  `store.txt`)
+*   `$TRACER` is the EVM tracer type to collect execution traces from the EVM
+    transaction execution (eg. `json|struct|access_list|markdown`)
+*   `$TRACESTORE` is the output file which contains KVStore tracing (eg.
+    `store.txt`)
 
 ```bash
 evmosd start --evm.tracer $TRACER --tracestore $TRACESTORE --pruning=nothing $TRACE --log_level $LOGLEVEL --minimum-gas-prices=0.0001aevmos --json-rpc.api eth,txpool,personal,net,debug,web3

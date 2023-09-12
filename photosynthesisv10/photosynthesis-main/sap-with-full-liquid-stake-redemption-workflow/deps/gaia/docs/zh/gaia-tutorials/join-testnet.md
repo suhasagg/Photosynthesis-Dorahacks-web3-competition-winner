@@ -14,8 +14,8 @@
 
 要创建一个新节点，主网的指令同样适用：
 
-- [加入 mainnet](./join-mainnet.md)
-- [部署验证人节点](./validators/validator-setup.md)
+*   [加入 mainnet](./join-mainnet.md)
+*   [部署验证人节点](./validators/validator-setup.md)
 
 只有 SDK 的版本和 genesis 文件不同。查
 看[testnet repo](https://github.com/cosmos/testnets) 获取测试网的信息，包括

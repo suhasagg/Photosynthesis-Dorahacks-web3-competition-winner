@@ -29,10 +29,10 @@ cargo run -- clone --out /tmp/cosmos --sdk-commit b75c29fc15d3320ec0c7596dbd7c78
 
 Note:
 
-- the full commit hash must be specified
-- the option `--ibc-go-commit` is not mandatory: if skipped, then the IBC go
-  repository is omitted.
-- ideally make sure the target directory `/tmp/cosmos` is empty
+*   the full commit hash must be specified
+*   the option `--ibc-go-commit` is not mandatory: if skipped, then the IBC go
+    repository is omitted.
+*   ideally make sure the target directory `/tmp/cosmos` is empty
 
 Alternatively, one can check out a tag for the Cosmos SDK with the `--sdk-tag`
 option:

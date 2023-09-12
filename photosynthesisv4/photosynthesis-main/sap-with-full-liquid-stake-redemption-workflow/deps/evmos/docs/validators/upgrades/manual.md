@@ -8,7 +8,7 @@ Learn how to manually upgrade your node. {synopsis}
 
 ## Pre-requisites
 
-- [Install Evmos](./../quickstart/installation.md) {prereq}
+*   [Install Evmos](./../quickstart/installation.md) {prereq}
 
 ## 1. Upgrade the Evmos version
 
@@ -54,9 +54,9 @@ to ensure the correct `evmosd` is running. :::
 ::: tip You can find the latest `genesis.json` file for mainnet or testnet in
 the following repositories:
 
-- **Mainnet**: [github.com/evmos/mainnet](https://github.com/evmos/mainnet)
-- **Testnet**: [github.com/evmos/testnets](https://github.com/evmos/testnets)
-  :::
+*   **Mainnet**: [github.com/evmos/mainnet](https://github.com/evmos/mainnet)
+*   **Testnet**: [github.com/evmos/testnets](https://github.com/evmos/testnets)
+    :::
 
 Save the new genesis as `new_genesis.json`. Then, replace the old `genesis.json`
 located in your `config/` directory with `new_genesis.json`:
@@ -81,7 +81,7 @@ echo "<expected_hash>  genesis.json" | sha256sum -c
 
 ::: danger Check [here](./upgrades.md) if the version you are upgrading require
 a data reset (hard fork). If this is not the case, you can skip to
-[Restart](https://docs.evmos.org/validators/upgrades/manual.html#\_4-restart-node).
+[Restart](https://docs.evmos.org/validators/upgrades/manual.html#_4-restart-node).
 :::
 
 Remove the outdated files and reset the data:

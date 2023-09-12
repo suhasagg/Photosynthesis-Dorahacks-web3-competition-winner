@@ -114,9 +114,9 @@ Log levels are supported via the
 
 ## Supported output formats
 
-- [Logfmt](https://brandur.org/logfmt)
-  ([see also](https://blog.codeship.com/logfmt-a-log-format-thats-easy-to-read-and-write))
-- JSON
+*   [Logfmt](https://brandur.org/logfmt)
+    ([see also](https://blog.codeship.com/logfmt-a-log-format-thats-easy-to-read-and-write))
+*   JSON
 
 ## Enhancements
 
@@ -144,19 +144,19 @@ Value-add packages and suggestions, like improvements to
 [the leveled logger](https://godoc.org/github.com/go-kit/log/level), are of
 course welcome. Good proposals should
 
-- Be composable with
-  [contextual loggers](https://godoc.org/github.com/go-kit/log#With),
-- Not break the behavior of
-  [log.Caller](https://godoc.org/github.com/go-kit/log#Caller) in any wrapped
-  contextual loggers, and
-- Be friendly to packages that accept only an unadorned log.Logger.
+*   Be composable with
+    [contextual loggers](https://godoc.org/github.com/go-kit/log#With),
+*   Not break the behavior of
+    [log.Caller](https://godoc.org/github.com/go-kit/log#Caller) in any wrapped
+    contextual loggers, and
+*   Be friendly to packages that accept only an unadorned log.Logger.
 
 ## Benchmarks & comparisons
 
 There are a few Go logging benchmarks and comparisons that include Go kit's
 package log.
 
-- [imkira/go-loggers-bench](https://github.com/imkira/go-loggers-bench) includes
-  kit/log
-- [uber-common/zap](https://github.com/uber-common/zap), a zero-alloc logging
-  library, includes a comparison with kit/log
+*   [imkira/go-loggers-bench](https://github.com/imkira/go-loggers-bench) includes
+    kit/log
+*   [uber-common/zap](https://github.com/uber-common/zap), a zero-alloc logging
+    library, includes a comparison with kit/log

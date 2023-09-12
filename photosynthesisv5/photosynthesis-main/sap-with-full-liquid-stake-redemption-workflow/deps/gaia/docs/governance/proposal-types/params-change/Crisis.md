@@ -38,9 +38,9 @@ refunded). If the invariant is not broken, then `ConstantFee` will be paid. All
 in Bits has published more information about the
 [crisis module here](https://docs.cosmos.network/main/modules/crisis).
 
-- on-chain value: `{{ $themeConfig.currentParameters.crisis.ConstantFee }}`
-- `cosmoshub-4` default: `1333000000` `uatom`
-- `cosmoshub-3` default: `1333000000` `uatom`
+*   on-chain value: `{{ $themeConfig.currentParameters.crisis.ConstantFee }}`
+*   `cosmoshub-4` default: `1333000000` `uatom`
+*   `cosmoshub-3` default: `1333000000` `uatom`
 
 #### Decreasing the value of `ConstantFee`
 

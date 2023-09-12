@@ -28,9 +28,9 @@ type MsgRegisterFeeShare struct {
 
 The message content stateless validation fails if:
 
-- Contract bech32 address is invalid
-- Deployer bech32 address is invalid
-- Withdraw bech32 address is invalid
+*   Contract bech32 address is invalid
+*   Deployer bech32 address is invalid
+*   Withdraw bech32 address is invalid
 
 ### `MsgUpdateFeeShare`
 
@@ -53,9 +53,9 @@ type MsgUpdateFeeShare struct {
 
 The message content stateless validation fails if:
 
-- Contract bech32 address is invalid
-- Deployer bech32 address is invalid
-- Withdraw bech32 address is invalid
+*   Contract bech32 address is invalid
+*   Deployer bech32 address is invalid
+*   Withdraw bech32 address is invalid
 
 ### `MsgCancelFeeShare`
 
@@ -76,6 +76,6 @@ type MsgCancelFeeShare struct {
 
 The message content stateless validation fails if:
 
-- Contract bech32 address is invalid
-- Contract bech32 address is zero
-- Deployer bech32 address is invalid
+*   Contract bech32 address is invalid
+*   Contract bech32 address is zero
+*   Deployer bech32 address is invalid

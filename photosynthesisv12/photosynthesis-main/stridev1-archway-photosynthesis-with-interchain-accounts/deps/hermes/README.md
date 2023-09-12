@@ -11,27 +11,27 @@ Rust implementation of the Inter-Blockchain Communication (IBC) protocol.
 
 This project comprises primarily seven crates:
 
-- The [`ibc`][ibc-crate-link] crate defines the main data structures and
-  on-chain logic for the IBC protocol.
-- The [`ibc-chain-registry`][ibc-chain-registry-crate-link] provides functions
-  to fetch data from the
-  [chain registry](https://github.com/cosmos/chain-registry) and automatically
-  generate chain configuration for `hermes`.
-- The [`ibc-relayer`][relayer-crate-link] crate provides an implementation of an
-  IBC relayer, as a *library*.
-- The [`ibc-relayer-cli`][relayer-cli-crate-link] crate is a CLI (a wrapper over
-  the `ibc-relayer` library), comprising the
-  [`hermes`](https://hermes.informal.systems) binary.
-- The [`ibc-proto`][ibc-proto-crate-link] crate is a library with Rust types
-  generated from .proto definitions necessary for interacting with
-  [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/tree/master/proto/cosmos)
-  and its [IBC structs](https://github.com/cosmos/ibc-go/tree/main/proto/ibc).
-- The [`ibc-telemetry`][ibc-telemetry-crate-link] crate is a library for use in
-  the `hermes` CLI, for gathering telemetry data and exposing that in a
-  Prometheus endpoint.
-- The [`ibc-test-framework`][ibc-test-framework-crate-link] crate provides the
-  infrastructure and framework for writing end-to-end (E2E) tests that include
-  the spawning of the relayer together with Cosmos full nodes.
+*   The [`ibc`][ibc-crate-link] crate defines the main data structures and
+    on-chain logic for the IBC protocol.
+*   The [`ibc-chain-registry`][ibc-chain-registry-crate-link] provides functions
+    to fetch data from the
+    [chain registry](https://github.com/cosmos/chain-registry) and automatically
+    generate chain configuration for `hermes`.
+*   The [`ibc-relayer`][relayer-crate-link] crate provides an implementation of an
+    IBC relayer, as a *library*.
+*   The [`ibc-relayer-cli`][relayer-cli-crate-link] crate is a CLI (a wrapper over
+    the `ibc-relayer` library), comprising the
+    [`hermes`](https://hermes.informal.systems) binary.
+*   The [`ibc-proto`][ibc-proto-crate-link] crate is a library with Rust types
+    generated from .proto definitions necessary for interacting with
+    [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/tree/master/proto/cosmos)
+    and its [IBC structs](https://github.com/cosmos/ibc-go/tree/main/proto/ibc).
+*   The [`ibc-telemetry`][ibc-telemetry-crate-link] crate is a library for use in
+    the `hermes` CLI, for gathering telemetry data and exposing that in a
+    Prometheus endpoint.
+*   The [`ibc-test-framework`][ibc-test-framework-crate-link] crate provides the
+    infrastructure and framework for writing end-to-end (E2E) tests that include
+    the spawning of the relayer together with Cosmos full nodes.
 
 See the table below for more details.
 
@@ -76,11 +76,11 @@ under active development.
 
 ## Resources
 
-- [IBC Website](https://cosmos.network/ibc)
-- [IBC Specification](https://github.com/cosmos/ibc)
-- [IBC Modules in Go](https://github.com/cosmos/ibc-go)
-- [IBC Relayer in Typescript](https://github.com/confio/ts-relayer)
-- [IBC Relayer in Go](https://github.com/cosmos/relayer)
+*   [IBC Website](https://cosmos.network/ibc)
+*   [IBC Specification](https://github.com/cosmos/ibc)
+*   [IBC Modules in Go](https://github.com/cosmos/ibc-go)
+*   [IBC Relayer in Typescript](https://github.com/confio/ts-relayer)
+*   [IBC Relayer in Go](https://github.com/cosmos/relayer)
 
 ## License
 
@@ -90,9 +90,7 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use
 the files in this repository except in compliance with the License. You may
 obtain a copy of the License at
 
-```
-https://www.apache.org/licenses/LICENSE-2.0
-```
+    https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software distributed
 under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR

@@ -143,9 +143,7 @@ Success: Added key testkey ([ADDRESS]) on [CHAIN ID] chain
 > specified in the configuration file. To use a different key name, specify the
 > `--key-name` option when invoking `keys add`.
 >
-> ```
-> hermes --config config.toml keys add --chain [CHAINID] --key-file [PRIVATE_KEY_FILE] --key-name [KEY_NAME]
-> ```
+>     hermes --config config.toml keys add --chain [CHAINID] --key-file [PRIVATE_KEY_FILE] --key-name [KEY_NAME]
 
 #### Restore a private key to a chain from a mnemonic
 
@@ -183,9 +181,7 @@ hermes --config config.toml keys add --chain <CHAIN_ID> --mnemonic-file <MNEMONI
 The mnemonic file needs to have the 24 mnemonic words on the same line,
 separated by a white space. So the content should have the following format:
 
-```
-word1 word2 word3 ... word24
-```
+    word1 word2 word3 ... word24
 
 If the command is successful a message similar to the one below will be
 displayed:
@@ -198,9 +194,7 @@ Success: Restore key testkey ([ADDRESS]) on [CHAIN ID] chain
 > specified in the configuration file. To use a different key name, specify the
 > `--key-name` option when invoking `keys add`.
 >
-> ```
-> hermes --config config.toml keys add --chain [CHAINID] --mnemonic-file "[MNEMONIC_FILE]" --key-name [KEY_NAME]
-> ```
+>     hermes --config config.toml keys add --chain [CHAINID] --mnemonic-file "[MNEMONIC_FILE]" --key-name [KEY_NAME]
 
 ### Delete keys
 
@@ -262,11 +256,9 @@ hermes --config config.toml keys list --chain [CHAIN_ID]
 If the command is successful a message similar to the one below will be
 displayed:
 
-```
-Success:
-- user2 (cosmos1attn9fxrcvjz483w3tu4cfz77ldmlyujly3q3k)
-- testkey (cosmos1dw88vdekeeuta5u50p6n5lt5v5c6y2we0pu8nz)
-```
+    Success:
+    - user2 (cosmos1attn9fxrcvjz483w3tu4cfz77ldmlyujly3q3k)
+    - testkey (cosmos1dw88vdekeeuta5u50p6n5lt5v5c6y2we0pu8nz)
 
 **JSON:**
 
@@ -322,9 +314,7 @@ REQUIRED:
 If the command is successful a message with the following format will be
 displayed:
 
-```
-Success: balance for key `KEY_NAME`: 100000000000 stake
-```
+    Success: balance for key `KEY_NAME`: 100000000000 stake
 
 **JSON:**
 

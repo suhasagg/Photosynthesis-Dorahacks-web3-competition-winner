@@ -8,8 +8,8 @@ go install github.com/cosmos/cosmos-proto/cmd/protoc-gen-go-pulsar
 
 cd path/to/proto/files
 
-protoc --go-pulsar_out=. --go-pulsar_opt=paths=source_relative
-\--go-pulsar_opt=features=marshal+unmarshal+size -I . NAME_OF_FILE.proto
+protoc --go-pulsar\_out=. --go-pulsar\_opt=paths=source\_relative
+\--go-pulsar\_opt=features=marshal+unmarshal+size -I . NAME\_OF\_FILE.proto
 
 ## Acknowledgements
 

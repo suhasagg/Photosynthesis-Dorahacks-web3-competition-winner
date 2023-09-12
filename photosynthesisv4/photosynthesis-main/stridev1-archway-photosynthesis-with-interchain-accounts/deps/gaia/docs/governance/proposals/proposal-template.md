@@ -2,7 +2,7 @@
 
 ## Changelog
 
-- {date}: {changelog}
+*   {date}: {changelog}
 
 ## Authors and Credit
 
@@ -32,16 +32,16 @@
 The following items summarize the voting options and what it means for this
 proposal.
 
-- **YES**: You approve the {type} proposal to...{one sentence summary}.
-- **NO**: You disapprove of the proposal in its current form. The NO vote can be
-  a request for improvements or adjustments, please indicated them in the
-  relevant topic in the [Cosmos forum](https://forum.cosmos.network/). You agree
-  that this proposal's motivation is valuable and that the team should create a
-  follow-up proposal once the amendments are included.
-- **NO (VETO)**: You veto the entire motivation for the proposal, are strongly
-  opposed to its implementation, and will exit the network if passed. You are
-  signalling the proposers should not create a follow-up proposal.
-- **ABSTAIN**: You are impartial to the outcome of the proposal.
+*   **YES**: You approve the {type} proposal to...{one sentence summary}.
+*   **NO**: You disapprove of the proposal in its current form. The NO vote can be
+    a request for improvements or adjustments, please indicated them in the
+    relevant topic in the [Cosmos forum](https://forum.cosmos.network/). You agree
+    that this proposal's motivation is valuable and that the team should create a
+    follow-up proposal once the amendments are included.
+*   **NO (VETO)**: You veto the entire motivation for the proposal, are strongly
+    opposed to its implementation, and will exit the network if passed. You are
+    signalling the proposers should not create a follow-up proposal.
+*   **ABSTAIN**: You are impartial to the outcome of the proposal.
 
 > State what voting for each option means in terms of this proposal.
 
@@ -49,4 +49,4 @@ proposal.
 
 ## References
 
-- {reference link}
+*   {reference link}

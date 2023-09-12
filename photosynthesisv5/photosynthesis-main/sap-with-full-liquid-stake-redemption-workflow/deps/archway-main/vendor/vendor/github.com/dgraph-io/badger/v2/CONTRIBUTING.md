@@ -1,18 +1,18 @@
 # Contribution Guide
 
-- [Before you get started](#before-you-get-started)
-  - [Code of Conduct](#code-of-conduct)
-- [Your First Contribution](#your-first-contribution)
-  - [Find a good first topic](#find-a-good-first-topic)
-- [Setting up your development environment](#setting-up-your-development-environment)
-  - [Fork the project](#fork-the-project)
-  - [Clone the project](#clone-the-project)
-  - [New branch for a new code](#new-branch-for-a-new-code)
-  - [Test](#test)
-  - [Commit and push](#commit-and-push)
-  - [Create a Pull Request](#create-a-pull-request)
-  - [Sign the CLA](#sign-the-cla)
-  - [Get a code review](#get-a-code-review)
+*   [Before you get started](#before-you-get-started)
+    *   [Code of Conduct](#code-of-conduct)
+*   [Your First Contribution](#your-first-contribution)
+    *   [Find a good first topic](#find-a-good-first-topic)
+*   [Setting up your development environment](#setting-up-your-development-environment)
+    *   [Fork the project](#fork-the-project)
+    *   [Clone the project](#clone-the-project)
+    *   [New branch for a new code](#new-branch-for-a-new-code)
+    *   [Test](#test)
+    *   [Commit and push](#commit-and-push)
+    *   [Create a Pull Request](#create-a-pull-request)
+    *   [Sign the CLA](#sign-the-cla)
+    *   [Get a code review](#get-a-code-review)
 
 ## Before you get started
 
@@ -37,8 +37,8 @@ dependencies. The version of Go should be **1.12** or above.
 
 ### Fork the project
 
-- Visit https://github.com/dgraph-io/badger
-- Click the `Fork` button (top right) to create a fork of the repository
+*   Visit https://github.com/dgraph-io/badger
+*   Click the `Fork` button (top right) to create a fork of the repository
 
 ### Clone the project
 

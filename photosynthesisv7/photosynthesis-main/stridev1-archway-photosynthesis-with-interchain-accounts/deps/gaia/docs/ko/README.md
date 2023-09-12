@@ -7,18 +7,18 @@
 
 ## 코스모스 퍼블릭 테스트넷에 참가하세요
 
-- [`gaia` 애플리케이션 설치하기](./gaia-tutorials/installation.md)
-- [풀노드를 세팅하고 현재 퍼블릭 테스트넷 참가하기](./gaia-tutorials/join-testnet.md)
-- [벨리데이터 노드로 업그레이드 하기](./validators/validator-setup.md)
+*   [`gaia` 애플리케이션 설치하기](./gaia-tutorials/installation.md)
+*   [풀노드를 세팅하고 현재 퍼블릭 테스트넷 참가하기](./gaia-tutorials/join-testnet.md)
+*   [벨리데이터 노드로 업그레이드 하기](./validators/validator-setup.md)
 
 ## 자체 `gaia` 테스트넷 세팅하기
 
-- [자체 `gaia` 테스트넷 세팅하기](./gaia-tutorials/deploy-testnet.md)
+*   [자체 `gaia` 테스트넷 세팅하기](./gaia-tutorials/deploy-testnet.md)
 
 ## 추가 리소스
 
-- [밸리데이터에 대한 소개](./validators/overview.md)
-- [밸리데이터 FAQ](./validators/validator-faq.md)
-- [밸리데이터가 알아야할 보안](./validators/security.md)
+*   [밸리데이터에 대한 소개](./validators/overview.md)
+*   [밸리데이터 FAQ](./validators/validator-faq.md)
+*   [밸리데이터가 알아야할 보안](./validators/security.md)
 
 <!-- markdown-link-check-enable -->

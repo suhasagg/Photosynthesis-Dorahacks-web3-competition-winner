@@ -11,10 +11,10 @@ wallet to track the execution of various messages and index transactions.
 
 ## Pre-requisite Readings
 
-- [Cosmos SDK Events](https://docs.cosmos.network/main/core/events.html)
-  {prereq}
-- [Ethereum's PubSub JSON-RPC API](https://geth.ethereum.org/docs/rpc/pubsub)
-  {prereq}
+*   [Cosmos SDK Events](https://docs.cosmos.network/main/core/events.html)
+    {prereq}
+*   [Ethereum's PubSub JSON-RPC API](https://geth.ethereum.org/docs/rpc/pubsub)
+    {prereq}
 
 ## Subscribing to Events
 

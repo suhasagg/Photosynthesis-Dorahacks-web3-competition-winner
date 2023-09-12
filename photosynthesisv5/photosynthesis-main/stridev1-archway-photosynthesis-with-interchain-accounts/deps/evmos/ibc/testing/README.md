@@ -4,10 +4,10 @@
 
 The testing package comprises of four parts constructed as a stack:
 
-- coordinator
-- chain
-- path
-- endpoint
+*   coordinator
+*   chain
+*   path
+*   endpoint
 
 A coordinator sits at the highest level and contains all the chains which have
 been initialized. It also stores and updates the current global time. The time
@@ -32,18 +32,18 @@ and channels. It can send, receive, and acknowledge packets.
 
 In general:
 
-- endpoints are used for initialization and execution of IBC logic on one side
-  of an IBC connection
-- paths are used to relay packets
-- chains are used to commit SDK messages
-- coordinator is used to setup a path between two chains
+*   endpoints are used for initialization and execution of IBC logic on one side
+    of an IBC connection
+*   paths are used to relay packets
+*   chains are used to commit SDK messages
+*   coordinator is used to setup a path between two chains
 
 ## Integration
 
 To integrate the testing package into your tests, you will need to define:
 
-- a testing application
-- a function to initialize the testing application
+*   a testing application
+*   a function to initialize the testing application
 
 ### TestingApp
 
@@ -227,9 +227,9 @@ Path configurations should be set to the desired values before calling any
 To initialize the clients, connections, and channels for a path we can call the
 Setup functions of the coordinator:
 
-- Setup() -> setup clients, connections, channels
-- SetupClients() -> setup clients only
-- SetupConnections() -> setup clients and connections only
+*   Setup() -> setup clients, connections, channels
+*   SetupClients() -> setup clients only
+*   SetupConnections() -> setup clients and connections only
 
 Here is a basic example of the testing package being used to simulate IBC
 functionality:

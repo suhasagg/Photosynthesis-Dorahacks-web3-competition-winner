@@ -9,9 +9,9 @@ Learn about the differences between `Gas` and `Fees` in Ethereum and Cosmos.
 
 ## Pre-requisite Readings
 
-- [Cosmos SDK Gas](https://docs.cosmos.network/main/basics/gas-fees.html)
-  {prereq}
-- [Ethereum Gas](https://ethereum.org/en/developers/docs/gas/) {prereq}
+*   [Cosmos SDK Gas](https://docs.cosmos.network/main/basics/gas-fees.html)
+    {prereq}
+*   [Ethereum Gas](https://ethereum.org/en/developers/docs/gas/) {prereq}
 
 The concept of Gas represents the amount of computational effort required to
 execute specific operations on the state machine.
@@ -40,12 +40,12 @@ bad-acting users from spamming the network.
 In the Cosmos SDK, gas is tracked in the main `GasMeter` and the
 `BlockGasMeter`:
 
-- `GasMeter`: keeps track of the gas consumed during executions that lead to
-  state transitions. It is reset on every transaction execution.
-- `BlockGasMeter`: keeps track of the gas consumed in a block and enforces that
-  the gas does not go over a predefined limit. This limit is defined in the
-  Tendermint consensus parameters and can be changed via governance parameter
-  change proposals.
+*   `GasMeter`: keeps track of the gas consumed during executions that lead to
+    state transitions. It is reset on every transaction execution.
+*   `BlockGasMeter`: keeps track of the gas consumed in a block and enforces that
+    the gas does not go over a predefined limit. This limit is defined in the
+    Tendermint consensus parameters and can be changed via governance parameter
+    change proposals.
 
 More information regarding gas in Cosmos SDK can be found
 [here](https://docs.cosmos.network/main/basics/gas-fees.html).
@@ -62,7 +62,7 @@ uses a
 for each OPCODE, whereas Cosmos uses a `GasConfig` that charges gas for each
 CRUD operation by setting a flat and per-byte cost for accessing the database.
 
-\+++
++++
 https://github.com/cosmos/cosmos-sdk/blob/3fd376bd5659f076a4dc79b644573299fd1ec1bf/store/types/gas.go#L187-L196
 
 In order to match the gas consumed by the EVM, the gas consumption logic from
@@ -74,8 +74,8 @@ To ignore the SDK gas consumption, we reset the transaction `GasMeter` count to
 0 and manually set it to the `gasUsed` value computed by the EVM module at the
 end of the execution.
 
-\+++
-https://github.com/evmos/ethermint/blob/098da6d0cc0e0c4cefbddf632df1057383973e4a/x/evm/keeper/state_transition.go#L188
++++
+https://github.com/evmos/ethermint/blob/098da6d0cc0e0c4cefbddf632df1057383973e4a/x/evm/keeper/state\_transition.go#L188
 
 ### `AnteHandler`
 
@@ -137,5 +137,5 @@ value.
 A cache context will be used during the whole execution to avoid changes be
 persisted in the state.
 
-\+++
-https://github.com/evmos/ethermint/blob/098da6d0cc0e0c4cefbddf632df1057383973e4a/x/evm/keeper/grpc_query.go#L100
++++
+https://github.com/evmos/ethermint/blob/098da6d0cc0e0c4cefbddf632df1057383973e4a/x/evm/keeper/grpc\_query.go#L100

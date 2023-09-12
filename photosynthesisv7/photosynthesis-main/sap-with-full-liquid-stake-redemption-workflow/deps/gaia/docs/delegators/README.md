@@ -1,12 +1,16 @@
 ***
 
-## order: false&#xA;parent:&#xA;title: Delegators&#xA;order: 4
+order: false
+parent:
+title: Delegators
+order: 4
+--------
 
 # Delegators
 
 This folder contains documentation relevant to delegators of the Cosmos Hub and
 other `gaia` blockchains.
 
-- [Delegator CLI Guide](./delegator-guide-cli.md)
-- [Delegators FAQ](./delegator-faq.md)
-- [Delegator Security Notice](./delegator-security.md)
+*   [Delegator CLI Guide](./delegator-guide-cli.md)
+*   [Delegators FAQ](./delegator-faq.md)
+*   [Delegator Security Notice](./delegator-security.md)

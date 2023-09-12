@@ -6,7 +6,7 @@ Accepted
 
 ## Changelog
 
-- 21.04.2022: Draft Proposed
+*   21.04.2022: Draft Proposed
 
 ## Context
 
@@ -24,11 +24,11 @@ compliant with the ICS20 spec.
 The implementation must provide a base denom type that is serializable to
 string. Additionally, the following denom types must also be provided:
 
-- `HashedDenom`: A denom type that can be serialized to a string of the form
-  `'ibc/{Hash(trace_path/base_denom)}'`.
-- `PrefixedDenom`: A denom type with a base denom which is prefixed with a
-  trace. The trace itself consists of `'{PortId}/{ChannelId}'` pairs and enables
-  coin source tracing\[^1].
+*   `HashedDenom`: A denom type that can be serialized to a string of the form
+    `'ibc/{Hash(trace_path/base_denom)}'`.
+*   `PrefixedDenom`: A denom type with a base denom which is prefixed with a
+    trace. The trace itself consists of `'{PortId}/{ChannelId}'` pairs and enables
+    coin source tracing\[^1].
 
 ```rust
 /// Base denomination type
@@ -228,9 +228,9 @@ pub fn refund_packet_token<Ctx>(_ctx: &Ctx, _data: &FungibleTokenPacketData) -> 
 
 ### Positive
 
-- Provides more clarity on the details of implementing the ICS20 application in
-  the `ibc` crate.
-- Helps align closer with the ibc-go implementation\[^3].
+*   Provides more clarity on the details of implementing the ICS20 application in
+    the `ibc` crate.
+*   Helps align closer with the ibc-go implementation\[^3].
 
 ### Negative
 

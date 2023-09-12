@@ -25,12 +25,12 @@ Users were able to stake and earn rewards, but were unable to transfer ATOMs
 between accounts until the cosmoshub-2 chain launched. Transfer functionality
 may be disabled and enabled via governance proposal.
 
-- on-chain value: `SendEnabled`:
-  `{{ $themeConfig.currentParameters.bank.SendEnabled }}`
-- on-chain value: `DefaultSendEnabled`:
-  `{{ $themeConfig.currentParameters.bank.DefaultSendEnabled }}`
-- `cosmoshub-4` added `DefaultSendEnabled`: `true`
-- `cosmoshub-3` default: `true`
+*   on-chain value: `SendEnabled`:
+    `{{ $themeConfig.currentParameters.bank.SendEnabled }}`
+*   on-chain value: `DefaultSendEnabled`:
+    `{{ $themeConfig.currentParameters.bank.DefaultSendEnabled }}`
+*   `cosmoshub-4` added `DefaultSendEnabled`: `true`
+*   `cosmoshub-3` default: `true`
 
 #### Enabling `sendenabled`
 

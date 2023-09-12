@@ -9,9 +9,9 @@ libraries written for [Bats][bats].
 
 Features:
 
-- [error reporting](#error-reporting)
-- [output formatting](#output-formatting)
-- [language tools](#language-and-execution)
+*   [error reporting](#error-reporting)
+*   [output formatting](#output-formatting)
+*   [language tools](#language-and-execution)
 
 See the [shared documentation][bats-docs] to learn how to install and load this
 library.
@@ -44,9 +44,7 @@ The message can also be specified on the standard input.
 
 This function always fails and simply outputs the given message.
 
-```
-this test always fails
-```
+    this test always fails
 
 ## Output formatting
 
@@ -59,11 +57,9 @@ the standard error.
 Simple messages without structure, e.g. one-line error messages, are simply
 wrapped in a header and a footer to help them stand out.
 
-```
--- ERROR: assert_output --
-`--partial' and `--regexp' are mutually exclusive
---
-```
+    -- ERROR: assert_output --
+    `--partial' and `--regexp' are mutually exclusive
+    --
 
 ### Key-Value pairs
 
@@ -73,40 +69,34 @@ pairs. This library provides two ways to format them.
 When the value is one line long, a pair can be displayed in a columnar fashion
 called ***two-column*** format.
 
-```
--- output differs --
-expected : want
-actual   : have
---
-```
+    -- output differs --
+    expected : want
+    actual   : have
+    --
 
 When the value is longer than one line, the key and value must be displayed on
 separate lines. First, the key is displayed along with the number of lines in
 the value. Then, the value, indented by two spaces for added readability,
 starting on the next line. This is called ***multi-line*** format.
 
-```
--- command failed --
-status : 1
-output (2 lines):
-  Error! Something went terribly wrong!
-  Our engineers are panicing... \`>`;/
---
-```
+    -- command failed --
+    status : 1
+    output (2 lines):
+      Error! Something went terribly wrong!
+      Our engineers are panicing... \`>`;/
+    --
 
 Sometimes, for clarity, it is a good idea to display related values also in this
 format, even if they are just one line long.
 
-```
--- output differs --
-expected (1 lines):
-  want
-actual (3 lines):
-  have 1
-  have 2
-  have 3
---
-```
+    -- output differs --
+    expected (1 lines):
+      want
+    actual (3 lines):
+      have 1
+      have 2
+      have 3
+    --
 
 ## Language and Execution
 

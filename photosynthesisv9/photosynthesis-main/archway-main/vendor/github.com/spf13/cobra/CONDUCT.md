@@ -54,11 +54,11 @@ patch stream for the minor release.
 
 Examples of breaking changes include:
 
-- Removing or renaming exported constant, variable, type, or function.
-- Updating the version of critical libraries such as `spf13/pflag`,
-  `spf13/viper` etc...
-  - Some version updates may be acceptable for picking up bug fixes, but
-    maintainers must exercise caution when reviewing.
+*   Removing or renaming exported constant, variable, type, or function.
+*   Updating the version of critical libraries such as `spf13/pflag`,
+    `spf13/viper` etc...
+    *   Some version updates may be acceptable for picking up bug fixes, but
+        maintainers must exercise caution when reviewing.
 
 There may, at times, need to be exceptions where breaking changes are allowed in
 release branches. These are at the discretion of the project's maintainers, and

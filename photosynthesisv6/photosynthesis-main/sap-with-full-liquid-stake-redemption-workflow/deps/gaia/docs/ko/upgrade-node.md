@@ -82,7 +82,7 @@ mv new_genesis.json genesis.json
 
 ## 데이터 리셋하기
 
-:::warning 만약 업그레이드하는 <새로운\_버전(new_version)>에 'breaking change'가
+:::warning 만약 업그레이드하는 <새로운\_버전(new\_version)>에 'breaking change'가
 포함되는 않은 경우, 데이터를 리셋할 필요가 없습니다. 만약 'breaking change'가 포
 함되지 않은 경우, 바로 [Restart](#restart) 항목으로 넘어가세요. :::
 

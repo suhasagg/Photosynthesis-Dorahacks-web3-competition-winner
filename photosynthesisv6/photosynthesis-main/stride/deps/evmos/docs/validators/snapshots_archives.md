@@ -11,7 +11,7 @@ versions using archive nodes {synopsis}
 
 Below is a list of publicly available snapshots that you can use to sync with
 the Evmos mainnet and archived
-[9001-1 mainnet](https://github.com/evmos/mainnet/tree/main/evmos\_9001-1):
+[9001-1 mainnet](https://github.com/evmos/mainnet/tree/main/evmos_9001-1):
 
 <!-- markdown-link-check-disable -->
 
@@ -21,7 +21,7 @@ the Evmos mainnet and archived
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Staketab`   | [github.com/staketab/nginx-cosmos-snap](https://github.com/staketab/nginx-cosmos-snap/blob/main/docs/evmos.md)                                                                                                                                                                               |
 | `Polkachu`   | [polkachu.com](https://www.polkachu.com/tendermint_snapshots/evmos)                                                                                                                                                                                                                          |
-| `Nodes Guru` | [snapshots.nodes.guru/evmos\_9001-2/](snapshots.nodes.guru/evmos\_9001-2/)                                                                                                                                                                                                                     |
+| `Nodes Guru` | [snapshots.nodes.guru/evmos\_9001-2/](snapshots.nodes.guru/evmos_9001-2/)                                                                                                                                                                                                                     |
 | `Notional`   | [mainnet/pruned/evmos\_9001-2(pebbledb)](https://snapshot.notional.ventures/evmos/) <br> [mainnet/archive/evmos\_9001-2(pebbledb)](https://snapshot.notional.ventures/evmos-archive/) <br> [testnet/archive/evmos\_9000-4(pebbledb)](https://snapshot.notional.ventures/evmos-testnet-archive/) |
 
 ### Archives
@@ -30,9 +30,9 @@ the Evmos mainnet and archived
 
 | Name         | URL                                                                                                          |
 | ------------ | ------------------------------------------------------------------------------------------------------------ |
-| `Nodes Guru` | [snapshots.nodes.guru/evmos\_9001-1](https://snapshots.nodes.guru/evmos\_9001-1/)                              |
-| `Polkachu`   | [polkachu.com/tendermint_snapshots/evmos](https://www.polkachu.com/tendermint_snapshots/evmos)               |
-| `Forbole`    | [bigdipper.live/evmos\_9001-1](https://s3.bigdipper.live.eu-central-1.linodeobjects.com/evmos\_9001-1.tar.lz4) |
+| `Nodes Guru` | [snapshots.nodes.guru/evmos\_9001-1](https://snapshots.nodes.guru/evmos_9001-1/)                              |
+| `Polkachu`   | [polkachu.com/tendermint\_snapshots/evmos](https://www.polkachu.com/tendermint_snapshots/evmos)               |
+| `Forbole`    | [bigdipper.live/evmos\_9001-1](https://s3.bigdipper.live.eu-central-1.linodeobjects.com/evmos_9001-1.tar.lz4) |
 
 To access snapshots and archives, follow the process below (this code snippet is
 to access a snapshot of the current network, `evmos_9001-2`, from Nodes Guru):

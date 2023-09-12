@@ -8,28 +8,28 @@ markdown-link-check-disable
 `gaia` es el nombre de la aplicación de Cosmos SDK para el Hub de Cosmos. Viene
 con 2 opciones principales de entrada:
 
-- `gaiad`: El demonio de Gaia, ejecuta un full-node con la aplicacion `gaia`.
-- `gaiad`: Interface de línea de comandos de Gaia, la cual activa la interacción
-  con en full-node de Gaia.
+*   `gaiad`: El demonio de Gaia, ejecuta un full-node con la aplicacion `gaia`.
+*   `gaiad`: Interface de línea de comandos de Gaia, la cual activa la interacción
+    con en full-node de Gaia.
 
 `gaia` es construida con el SDK de Cosmos usando los siguientes módulos:
 
-- `x/auth`: Cuentas y firmas.
-- `x/bank`: Transferencia de tokens.
-- `x/staking`: Lógica para el *staking*.
-- `x/mint`: Lógica para la inflacción.
-- `x/distribution`: Lógica para la distribución del FEE.
-- `x/slashing`: Lógica para la penalización.
-- `x/gov`: Lógica para la gobernanza.
-- `ibc-go/modules`: Transferencia entre blockchains.
-- `x/params`: Controla los parámetros del nivel de la aplicación.
-- `x/capability`:
-- `x/crisis`:
-- `x/evidence`:
-- `x/genaccounts`:
-- `x/mint`:
-- `x/simulation`:
-- `x/upgrade`:
+*   `x/auth`: Cuentas y firmas.
+*   `x/bank`: Transferencia de tokens.
+*   `x/staking`: Lógica para el *staking*.
+*   `x/mint`: Lógica para la inflacción.
+*   `x/distribution`: Lógica para la distribución del FEE.
+*   `x/slashing`: Lógica para la penalización.
+*   `x/gov`: Lógica para la gobernanza.
+*   `ibc-go/modules`: Transferencia entre blockchains.
+*   `x/params`: Controla los parámetros del nivel de la aplicación.
+*   `x/capability`:
+*   `x/crisis`:
+*   `x/evidence`:
+*   `x/genaccounts`:
+*   `x/mint`:
+*   `x/simulation`:
+*   `x/upgrade`:
 
 Acerca del Hub de Cosmos: El Hub de Cosmos es el primer Hub en ser lanzado en la
 red de Cosmos. El propósito del Hub es facilitar las transferencias entre

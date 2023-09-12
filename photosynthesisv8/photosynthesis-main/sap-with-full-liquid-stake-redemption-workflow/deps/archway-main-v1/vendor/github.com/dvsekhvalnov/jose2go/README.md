@@ -74,37 +74,37 @@ token, err := jose.Encrypt(payload, jose.DIR, jose.A128GCM, key, jose.Zip(jose.D
 
 **Signing**
 
-- HMAC signatures with HS256, HS384 and HS512.
-- RSASSA-PKCS1-V1\_5 signatures with RS256, RS384 and RS512.
-- RSASSA-PSS signatures (probabilistic signature scheme with appendix) with
-  PS256, PS384 and PS512.
-- ECDSA signatures with ES256, ES384 and ES512.
-- NONE (unprotected) plain text algorithm without integrity protection
+*   HMAC signatures with HS256, HS384 and HS512.
+*   RSASSA-PKCS1-V1\_5 signatures with RS256, RS384 and RS512.
+*   RSASSA-PSS signatures (probabilistic signature scheme with appendix) with
+    PS256, PS384 and PS512.
+*   ECDSA signatures with ES256, ES384 and ES512.
+*   NONE (unprotected) plain text algorithm without integrity protection
 
 **Encryption**
 
-- RSAES OAEP (using SHA-1 and MGF1 with SHA-1) encryption with A128CBC-HS256,
-  A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
-- RSAES OAEP 256 (using SHA-256 and MGF1 with SHA-256) encryption with
-  A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
-- RSAES-PKCS1-V1\_5 encryption with A128CBC-HS256, A192CBC-HS384, A256CBC-HS512,
-  A128GCM, A192GCM, A256GCM
-- A128KW, A192KW, A256KW encryption with A128CBC-HS256, A192CBC-HS384,
-  A256CBC-HS512, A128GCM, A192GCM, A256GCM
-- A128GCMKW, A192GCMKW, A256GCMKW encryption with A128CBC-HS256, A192CBC-HS384,
-  A256CBC-HS512, A128GCM, A192GCM, A256GCM
-- ECDH-ES with A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM,
-  A256GCM
-- ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW with A128CBC-HS256,
-  A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
-- PBES2-HS256+A128KW, PBES2-HS384+A192KW, PBES2-HS512+A256KW with A128CBC-HS256,
-  A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
-- Direct symmetric key encryption with pre-shared key A128CBC-HS256,
-  A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM and A256GCM
+*   RSAES OAEP (using SHA-1 and MGF1 with SHA-1) encryption with A128CBC-HS256,
+    A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
+*   RSAES OAEP 256 (using SHA-256 and MGF1 with SHA-256) encryption with
+    A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
+*   RSAES-PKCS1-V1\_5 encryption with A128CBC-HS256, A192CBC-HS384, A256CBC-HS512,
+    A128GCM, A192GCM, A256GCM
+*   A128KW, A192KW, A256KW encryption with A128CBC-HS256, A192CBC-HS384,
+    A256CBC-HS512, A128GCM, A192GCM, A256GCM
+*   A128GCMKW, A192GCMKW, A256GCMKW encryption with A128CBC-HS256, A192CBC-HS384,
+    A256CBC-HS512, A128GCM, A192GCM, A256GCM
+*   ECDH-ES with A128CBC-HS256, A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM,
+    A256GCM
+*   ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW with A128CBC-HS256,
+    A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
+*   PBES2-HS256+A128KW, PBES2-HS384+A192KW, PBES2-HS512+A256KW with A128CBC-HS256,
+    A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM, A256GCM
+*   Direct symmetric key encryption with pre-shared key A128CBC-HS256,
+    A192CBC-HS384, A256CBC-HS512, A128GCM, A192GCM and A256GCM
 
 **Compression**
 
-- DEFLATE compression
+*   DEFLATE compression
 
 ## Installation
 
@@ -890,9 +890,9 @@ respectively:
 
 #### RSA keys
 
-1. `Rsa.ReadPrivate(raw []byte) (key *rsa.PrivateKey,err error)` attempts to
-   parse RSA private key from PKCS1 or PKCS8 format (`BEGIN RSA PRIVATE KEY` and
-   `BEGIN PRIVATE KEY` headers)
+1.  `Rsa.ReadPrivate(raw []byte) (key *rsa.PrivateKey,err error)` attempts to
+    parse RSA private key from PKCS1 or PKCS8 format (`BEGIN RSA PRIVATE KEY` and
+    `BEGIN PRIVATE KEY` headers)
 
 ```Go
 package main
@@ -917,9 +917,9 @@ func main() {
 }
 ```
 
-2. `Rsa.ReadPublic(raw []byte) (key *rsa.PublicKey,err error)` attempts to parse
-   RSA public key from PKIX key format or PKCS1 X509 certificate
-   (`BEGIN PUBLIC KEY` and `BEGIN CERTIFICATE` headers)
+2.  `Rsa.ReadPublic(raw []byte) (key *rsa.PublicKey,err error)` attempts to parse
+    RSA public key from PKIX key format or PKCS1 X509 certificate
+    (`BEGIN PUBLIC KEY` and `BEGIN CERTIFICATE` headers)
 
 ```Go
 package main
@@ -946,9 +946,9 @@ func main() {
 
 #### ECC keys
 
-1. `ecc.ReadPrivate(raw []byte) (key *ecdsa.PrivateKey,err error)` attemps to
-   parse elliptic curve private key from PKCS1 or PKCS8 format
-   (`BEGIN EC PRIVATE KEY` and `BEGIN PRIVATE KEY` headers)
+1.  `ecc.ReadPrivate(raw []byte) (key *ecdsa.PrivateKey,err error)` attemps to
+    parse elliptic curve private key from PKCS1 or PKCS8 format
+    (`BEGIN EC PRIVATE KEY` and `BEGIN PRIVATE KEY` headers)
 
 ```Go
 package main
@@ -973,9 +973,9 @@ func main() {
 }
 ```
 
-2. `ecc.ReadPublic(raw []byte) (key *ecdsa.PublicKey,err error)` attemps to
-   parse elliptic curve public key from PKCS1 X509 or PKIX format
-   (`BEGIN PUBLIC KEY` and `BEGIN CERTIFICATE` headers)
+2.  `ecc.ReadPublic(raw []byte) (key *ecdsa.PublicKey,err error)` attemps to
+    parse elliptic curve public key from PKCS1 X509 or PKIX format
+    (`BEGIN PUBLIC KEY` and `BEGIN CERTIFICATE` headers)
 
 ```Go
 package main
@@ -1000,9 +1000,9 @@ func main() {
 }
 ```
 
-3. `ecc.NewPublic(x,y []byte) (*ecdsa.PublicKey)` constructs elliptic public key
-   from (X,Y) represented as bytes. Supported are NIST curves P-256,P-384 and
-   P-521. Curve detected automatically by input length.
+3.  `ecc.NewPublic(x,y []byte) (*ecdsa.PublicKey)` constructs elliptic public key
+    from (X,Y) represented as bytes. Supported are NIST curves P-256,P-384 and
+    P-521. Curve detected automatically by input length.
 
 ```Go
 package main
@@ -1021,9 +1021,9 @@ func main() {
 }
 ```
 
-4. `ecc.NewPrivate(x,y,d []byte) (*ecdsa.PrivateKey)` constructs elliptic
-   private key from (X,Y) and D represented as bytes. Supported are NIST curves
-   P-256,P-384 and P-521. Curve detected automatically by input length.
+4.  `ecc.NewPrivate(x,y,d []byte) (*ecdsa.PrivateKey)` constructs elliptic
+    private key from (X,Y) and D represented as bytes. Supported are NIST curves
+    P-256,P-384 and P-521. Curve detected automatically by input length.
 
 ```Go
 package main
@@ -1051,14 +1051,14 @@ Checkout `jose_test.go` for more examples.
 
 ### 1.2
 
-- interface to access token headers after decoding
-- interface to provide extra headers for token encoding
-- two-phase validation support
+*   interface to access token headers after decoding
+*   interface to provide extra headers for token encoding
+*   two-phase validation support
 
 ### 1.1
 
-- security and bug fixes
+*   security and bug fixes
 
 ### 1.0
 
-- initial stable version with full suite JOSE spec support
+*   initial stable version with full suite JOSE spec support

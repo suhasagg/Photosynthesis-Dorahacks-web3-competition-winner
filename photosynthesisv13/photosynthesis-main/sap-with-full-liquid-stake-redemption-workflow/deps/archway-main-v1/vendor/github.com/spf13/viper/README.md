@@ -21,15 +21,15 @@
 
 Many Go projects are built using Viper including:
 
-- [Hugo](http://gohugo.io)
-- [EMC RexRay](http://rexray.readthedocs.org/en/stable/)
-- [Imgur’s Incus](https://github.com/Imgur/incus)
-- [Nanobox](https://github.com/nanobox-io/nanobox)/[Nanopack](https://github.com/nanopack)
-- [Docker Notary](https://github.com/docker/Notary)
-- [BloomApi](https://www.bloomapi.com/)
-- [doctl](https://github.com/digitalocean/doctl)
-- [Clairctl](https://github.com/jgsqware/clairctl)
-- [Mercure](https://mercure.rocks)
+*   [Hugo](http://gohugo.io)
+*   [EMC RexRay](http://rexray.readthedocs.org/en/stable/)
+*   [Imgur’s Incus](https://github.com/Imgur/incus)
+*   [Nanobox](https://github.com/nanobox-io/nanobox)/[Nanopack](https://github.com/nanopack)
+*   [Docker Notary](https://github.com/docker/Notary)
+*   [BloomApi](https://www.bloomapi.com/)
+*   [doctl](https://github.com/digitalocean/doctl)
+*   [Clairctl](https://github.com/jgsqware/clairctl)
+*   [Mercure](https://mercure.rocks)
 
 ## Install
 
@@ -46,14 +46,14 @@ Viper is a complete configuration solution for Go applications including
 12-Factor apps. It is designed to work within an application, and can handle all
 types of configuration needs and formats. It supports:
 
-- setting defaults
-- reading from JSON, TOML, YAML, HCL, envfile and Java properties config files
-- live watching and re-reading of config files (optional)
-- reading from environment variables
-- reading from remote config systems (etcd or Consul), and watching changes
-- reading from command line flags
-- reading from buffer
-- setting explicit values
+*   setting defaults
+*   reading from JSON, TOML, YAML, HCL, envfile and Java properties config files
+*   live watching and re-reading of config files (optional)
+*   reading from environment variables
+*   reading from remote config systems (etcd or Consul), and watching changes
+*   reading from command line flags
+*   reading from buffer
+*   setting explicit values
 
 Viper can be thought of as a registry for all of your applications configuration
 needs.
@@ -66,26 +66,26 @@ help with that.
 
 Viper does the following for you:
 
-1. Find, load, and unmarshal a configuration file in JSON, TOML, YAML, HCL, INI,
-   envfile or Java properties formats.
-2. Provide a mechanism to set default values for your different configuration
-   options.
-3. Provide a mechanism to set override values for options specified through
-   command line flags.
-4. Provide an alias system to easily rename parameters without breaking existing
-   code.
-5. Make it easy to tell the difference between when a user has provided a
-   command line or config file which is the same as the default.
+1.  Find, load, and unmarshal a configuration file in JSON, TOML, YAML, HCL, INI,
+    envfile or Java properties formats.
+2.  Provide a mechanism to set default values for your different configuration
+    options.
+3.  Provide a mechanism to set override values for options specified through
+    command line flags.
+4.  Provide an alias system to easily rename parameters without breaking existing
+    code.
+5.  Make it easy to tell the difference between when a user has provided a
+    command line or config file which is the same as the default.
 
 Viper uses the following precedence order. Each item takes precedence over the
 item below it:
 
-- explicit call to `Set`
-- flag
-- env
-- config
-- key/value store
-- default
+*   explicit call to `Set`
+*   flag
+*   env
+*   config
+*   key/value store
+*   default
 
 **Important:** Viper configuration keys are case insensitive. There are ongoing
 discussions about making that optional.
@@ -154,16 +154,16 @@ Reading from config files is useful, but at times you want to store all
 modifications made at run time. For that, a bunch of commands are available,
 each with its own purpose:
 
-- WriteConfig - writes the current viper configuration to the predefined path,
-  if exists. Errors if no predefined path. Will overwrite the current config
-  file, if it exists.
-- SafeWriteConfig - writes the current viper configuration to the predefined
-  path. Errors if no predefined path. Will not overwrite the current config
-  file, if it exists.
-- WriteConfigAs - writes the current viper configuration to the given filepath.
-  Will overwrite the given file, if it exists.
-- SafeWriteConfigAs - writes the current viper configuration to the given
-  filepath. Will not overwrite the given file, if it exists.
+*   WriteConfig - writes the current viper configuration to the predefined path,
+    if exists. Errors if no predefined path. Will overwrite the current config
+    file, if it exists.
+*   SafeWriteConfig - writes the current viper configuration to the predefined
+    path. Errors if no predefined path. Will not overwrite the current config
+    file, if it exists.
+*   WriteConfigAs - writes the current viper configuration to the given filepath.
+    Will overwrite the given file, if it exists.
+*   SafeWriteConfigAs - writes the current viper configuration to the given
+    filepath. Will not overwrite the given file, if it exists.
 
 As a rule of the thumb, everything marked with safe won't overwrite any file,
 but just create if not existent, whilst the default behavior is to create or
@@ -259,11 +259,11 @@ Viper has full support for environment variables. This enables 12 factor
 applications out of the box. There are five methods that exist to aid working
 with ENV:
 
-- `AutomaticEnv()`
-- `BindEnv(string...) : error`
-- `SetEnvPrefix(string)`
-- `SetEnvKeyReplacer(string...) *strings.Replacer`
-- `AllowEmptyEnv(bool)`
+*   `AutomaticEnv()`
+*   `BindEnv(string...) : error`
+*   `SetEnvPrefix(string)`
+*   `SetEnvKeyReplacer(string...) *strings.Replacer`
+*   `AllowEmptyEnv(bool)`
 
 *When working with ENV variables, it’s important to recognize that Viper treats
 ENV variables as case sensitive.*
@@ -560,19 +560,19 @@ go func(){
 In Viper, there are a few ways to get a value depending on the value’s type. The
 following functions and methods exist:
 
-- `Get(key string) : interface{}`
-- `GetBool(key string) : bool`
-- `GetFloat64(key string) : float64`
-- `GetInt(key string) : int`
-- `GetIntSlice(key string) : []int`
-- `GetString(key string) : string`
-- `GetStringMap(key string) : map[string]interface{}`
-- `GetStringMapString(key string) : map[string]string`
-- `GetStringSlice(key string) : []string`
-- `GetTime(key string) : time.Time`
-- `GetDuration(key string) : time.Duration`
-- `IsSet(key string) : bool`
-- `AllSettings() : map[string]interface{}`
+*   `Get(key string) : interface{}`
+*   `GetBool(key string) : bool`
+*   `GetFloat64(key string) : float64`
+*   `GetInt(key string) : int`
+*   `GetIntSlice(key string) : []int`
+*   `GetString(key string) : string`
+*   `GetStringMap(key string) : map[string]interface{}`
+*   `GetStringMapString(key string) : map[string]string`
+*   `GetStringSlice(key string) : []string`
+*   `GetTime(key string) : time.Time`
+*   `GetDuration(key string) : time.Duration`
+*   `IsSet(key string) : bool`
+*   `AllSettings() : map[string]interface{}`
 
 One important thing to recognize is that each Get function will return a zero
 value if it’s not found. To check if a given key exists, the `IsSet()` method
@@ -743,8 +743,8 @@ map, etc.
 
 There are two methods to do this:
 
-- `Unmarshal(rawVal interface{}) : error`
-- `UnmarshalKey(key string, rawVal interface{}) : error`
+*   `Unmarshal(rawVal interface{}) : error`
+*   `UnmarshalKey(key string, rawVal interface{}) : error`
 
 Example:
 
@@ -895,7 +895,7 @@ different vipers.
 ### Why is it called “Viper”?
 
 A: Viper is designed to be a
-[companion](http://en.wikipedia.org/wiki/Viper_\(G.I.\_Joe\)) to
+[companion](http://en.wikipedia.org/wiki/Viper_\(G.I._Joe\)) to
 [Cobra](https://github.com/spf13/cobra). While both can operate completely
 independently, together they make a powerful pair to handle much of your
 application foundation needs.

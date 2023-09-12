@@ -33,4 +33,3 @@ Before running Hermes v0.11.0, make sure you remove the `mode.packets.filter` op
  # The tx confirmation mechanism periodically queries the `/tx_search` RPC
  # endpoint to check that previously-submitted transactions
 ```
-

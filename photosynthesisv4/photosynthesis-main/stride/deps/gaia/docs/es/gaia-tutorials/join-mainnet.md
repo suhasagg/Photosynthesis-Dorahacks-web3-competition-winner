@@ -39,18 +39,16 @@ Puede editar el archivo `~/.gaia/config/app.toml` para activar el mecanismo
 antispam y rechazar las transacciones entrantes con valores inferiores a los
 precios mínimos para el *gas*:
 
-```
-# This is a TOML config file.
-# For more information, see https://github.com/toml-lang/toml
+    # This is a TOML config file.
+    # For more information, see https://github.com/toml-lang/toml
 
-##### main base config options #####
+    ##### main base config options #####
 
-# The minimum gas prices a validator is willing to accept for processing a
-# transaction. A transaction's fees must meet the minimum of any denomination
-# specified in this config (e.g. 10uatom).
+    # The minimum gas prices a validator is willing to accept for processing a
+    # transaction. A transaction's fees must meet the minimum of any denomination
+    # specified in this config (e.g. 10uatom).
 
-minimum-gas-prices = ""
-```
+    minimum-gas-prices = ""
 
 ¡Su nodo completo ha sido iniciado!
 
@@ -105,9 +103,7 @@ Las transacciones en la red del Hub de Cosmos deben incluir una tarifa de
 transacción para poder ser procesadas. Esta tarifa paga el gas necesario para
 llevar a cabo la transacción. La fórmula es la siguiente:
 
-```
-tarifa = techo(gas * precioPorGas)
-```
+    tarifa = techo(gas * precioPorGas)
 
 El `gas` depende de la transacción. Diferentes transacciones requieren
 diferentes cantidades de `gas`. La cantidad de `gas` para una transacción se
@@ -144,12 +140,12 @@ querer cambiarlo más tarde.
 Hay tres estrategias para reducir el estado, por favor tenga en cuenta que esto
 es sólo para el estado y no para el almacenamiento de bloques:
 
-1. `PruneEverything`: Esto significa que todos los estados salvados serán
-   reducidos aparte del actual.
-2. `PruneNothing`: Esto significa que todo el estado se guardará y nada se
-   borrará.
-3. `PruneSyncable`: Esto significa que sólo se salvará el estado de los últimos
-   100 y cada 10.000 bloques.
+1.  `PruneEverything`: Esto significa que todos los estados salvados serán
+    reducidos aparte del actual.
+2.  `PruneNothing`: Esto significa que todo el estado se guardará y nada se
+    borrará.
+3.  `PruneSyncable`: Esto significa que sólo se salvará el estado de los últimos
+    100 y cada 10.000 bloques.
 
 Por defecto cada nodo está en modo `PruneSyncable`. Si desea cambiar su
 estrategia de reducción en su nodo, debe hacerlo cuando el nodo se ha iniciado.

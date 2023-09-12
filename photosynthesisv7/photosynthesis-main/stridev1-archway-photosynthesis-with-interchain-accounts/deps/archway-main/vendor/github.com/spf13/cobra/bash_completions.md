@@ -78,7 +78,7 @@ unable to find a solution. In the case of kubernetes a valid command might look
 something like `kubectl get pod [mypod]`. If you type
 `kubectl get pod [tab][tab]` the `__kubectl_customc_func()` will run because the
 cobra.Command only understood "kubectl" and "get." `__kubectl_custom_func()`
-will see that the cobra.Command is "kubectl_get" and will thus call another
+will see that the cobra.Command is "kubectl\_get" and will thus call another
 helper `__kubectl_get_resource()`. `__kubectl_get_resource` will look at the
 'nouns' collected. In our example the only noun will be `pod`. So it will call
 `__kubectl_parse_get pod`. `__kubectl_parse_get` will actually call out to

@@ -49,13 +49,11 @@ When most decoding errors occur, go-toml returns [`DecodeError`][decode-err]),
 which contains a human readable contextualized version of the error. For
 example:
 
-```
-2| key1 = "value1"
-3| key2 = "missing2"
- | ~~~~ missing field
-4| key3 = "missing3"
-5| key4 = "value4"
-```
+    2| key1 = "value1"
+    3| key2 = "missing2"
+     | ~~~~ missing field
+    4| key3 = "missing3"
+    5| key4 = "value4"
 
 [decode-err]: https://pkg.go.dev/github.com/pelletier/go-toml/v2#DecodeError
 
@@ -192,9 +190,9 @@ go-toml uses Go's standard modules system.
 
 Installation instructions:
 
-- Go ≥ 1.16: Nothing to do. Use the import in your code. The `go` command deals
-  with it automatically.
-- Go ≥ 1.13: `GO111MODULE=on go get github.com/pelletier/go-toml/v2`.
+*   Go ≥ 1.16: Nothing to do. Use the import in your code. The `go` command deals
+    with it automatically.
+*   Go ≥ 1.13: `GO111MODULE=on go get github.com/pelletier/go-toml/v2`.
 
 In case of trouble: [Go Modules FAQ][mod-faq].
 
@@ -204,35 +202,27 @@ In case of trouble: [Go Modules FAQ][mod-faq].
 
 Go-toml provides three handy command line tools:
 
-- `tomljson`: Reads a TOML file and outputs its JSON representation.
+*   `tomljson`: Reads a TOML file and outputs its JSON representation.
 
-  ```
-  $ go install github.com/pelletier/go-toml/v2/cmd/tomljson@latest
-  $ tomljson --help
-  ```
+        $ go install github.com/pelletier/go-toml/v2/cmd/tomljson@latest
+        $ tomljson --help
 
-- `jsontoml`: Reads a JSON file and outputs a TOML representation.
+*   `jsontoml`: Reads a JSON file and outputs a TOML representation.
 
-  ```
-  $ go install github.com/pelletier/go-toml/v2/cmd/jsontoml@latest
-  $ jsontoml --help
-  ```
+        $ go install github.com/pelletier/go-toml/v2/cmd/jsontoml@latest
+        $ jsontoml --help
 
-- `tomll`: Lints and reformats a TOML file.
+*   `tomll`: Lints and reformats a TOML file.
 
-  ```
-  $ go install github.com/pelletier/go-toml/v2/cmd/tomll@latest
-  $ tomll --help
-  ```
+        $ go install github.com/pelletier/go-toml/v2/cmd/tomll@latest
+        $ tomll --help
 
 ### Docker image
 
 Those tools are also available as a [Docker image][docker]. For example, to use
 `tomljson`:
 
-```
-docker run -i ghcr.io/pelletier/go-toml:v2 tomljson < example.toml
-```
+    docker run -i ghcr.io/pelletier/go-toml:v2 tomljson < example.toml
 
 Multiple versions are availble on [ghcr.io][docker].
 

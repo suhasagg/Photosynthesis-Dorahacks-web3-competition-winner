@@ -13,20 +13,16 @@ standard library.
 
 This package provides a straightforward API:
 
-```
-func Sum64(b []byte) uint64
-func Sum64String(s string) uint64
-type Digest struct{ ... }
-    func New() *Digest
-```
+    func Sum64(b []byte) uint64
+    func Sum64String(s string) uint64
+    type Digest struct{ ... }
+        func New() *Digest
 
 The `Digest` type implements hash.Hash64. Its key methods are:
 
-```
-func (*Digest) Write([]byte) (int, error)
-func (*Digest) WriteString(string) (int, error)
-func (*Digest) Sum64() uint64
-```
+    func (*Digest) Write([]byte) (int, error)
+    func (*Digest) WriteString(string) (int, error)
+    func (*Digest) Sum64() uint64
 
 This implementation provides a fast pure-Go implementation and an even faster
 assembly implementation for amd64.
@@ -46,13 +42,11 @@ implementations of Sum64.
 These numbers were generated on Ubuntu 18.04 with an Intel i7-8700K CPU using
 the following commands under Go 1.11.2:
 
-```
-$ go test -tags purego -benchtime 10s -bench '/xxhash,direct,bytes'
-$ go test -benchtime 10s -bench '/xxhash,direct,bytes'
-```
+    $ go test -tags purego -benchtime 10s -bench '/xxhash,direct,bytes'
+    $ go test -benchtime 10s -bench '/xxhash,direct,bytes'
 
 ## Projects using this package
 
-- [InfluxDB](https://github.com/influxdata/influxdb)
-- [Prometheus](https://github.com/prometheus/prometheus)
-- [FreeCache](https://github.com/coocood/freecache)
+*   [InfluxDB](https://github.com/influxdata/influxdb)
+*   [Prometheus](https://github.com/prometheus/prometheus)
+*   [FreeCache](https://github.com/coocood/freecache)

@@ -32,21 +32,21 @@ wallets.
 
 First, you will have to create a new configuration file with:
 
-- New packets filters.
+*   New packets filters.
 
-  In order to enable the new paths.
+    In order to enable the new paths.
 
-- Different wallets.
+*   Different wallets.
 
-  **Two instances of Hermes can not share the same wallet.**
+    **Two instances of Hermes can not share the same wallet.**
 
-- A different telemetry port.
+*   A different telemetry port.
 
-  **Two processes can not share the same port for any of their services.**
+    **Two processes can not share the same port for any of their services.**
 
 Create the following configuration file at `$HOME/hermes_second_instance.toml`:
 
-**hermes_second_instance.toml**
+**hermes\_second\_instance.toml**
 
 ```toml
 {{#template ../../templates/files/hermes/more-chains/hermes_second_instance.toml}}
@@ -72,22 +72,20 @@ Let's find the packet that was lost in the first step of the
 
 If the command runs succesfully, it should output:
 
-```
-SUCCESS Summary {
-    src: PendingPackets {
-        unreceived_packets: [
-            Sequence(
-                1,
-            ),
-        ],
-        unreceived_acks: [],
-    },
-    dst: PendingPackets {
-        unreceived_packets: [],
-        unreceived_acks: [],
-    },
-}
-```
+    SUCCESS Summary {
+        src: PendingPackets {
+            unreceived_packets: [
+                Sequence(
+                    1,
+                ),
+            ],
+            unreceived_acks: [],
+        },
+        dst: PendingPackets {
+            unreceived_packets: [],
+            unreceived_acks: [],
+        },
+    }
 
 ## Clear the packet
 
@@ -106,22 +104,20 @@ Now that we have retrieved this packet, let's clear it manually with the command
 
 If the command runs succesfully, it should output:
 
-```
-SUCCESS [
-    UpdateClient(
-        cs_h: 07-tendermint-1(1-364),
-    ),
-    WriteAcknowledgement(
-        WriteAcknowledgement - seq:1, path:channel-2/transfer->channel-1/transfer, toh:no timeout, tos:Timestamp(2022-08-29T18:29:44.733494709Z)),
-    ),
-    UpdateClient(
-        cs_h: 07-tendermint-2(3-365),
-    ),
-    AcknowledgePacket(
-        AcknowledgePacket - seq:1, path:channel-2/transfer->channel-1/transfer, toh:no timeout, tos:Timestamp(2022-08-29T18:29:44.733494709Z)),
-    ),
-]
-```
+    SUCCESS [
+        UpdateClient(
+            cs_h: 07-tendermint-1(1-364),
+        ),
+        WriteAcknowledgement(
+            WriteAcknowledgement - seq:1, path:channel-2/transfer->channel-1/transfer, toh:no timeout, tos:Timestamp(2022-08-29T18:29:44.733494709Z)),
+        ),
+        UpdateClient(
+            cs_h: 07-tendermint-2(3-365),
+        ),
+        AcknowledgePacket(
+            AcknowledgePacket - seq:1, path:channel-2/transfer->channel-1/transfer, toh:no timeout, tos:Timestamp(2022-08-29T18:29:44.733494709Z)),
+        ),
+    ]
 
 > **NOTE**: It can also output a TimeoutPacket if you execute it after the
 > packet times out (10000 seconds in this case).
@@ -135,18 +131,16 @@ directly querying packets:
 
 If the command runs successfully, it should output:
 
-```
-SUCCESS Summary {
-    src: PendingPackets {
-        unreceived_packets: [],
-        unreceived_acks: [],
-    },
-    dst: PendingPackets {
-        unreceived_packets: [],
-        unreceived_acks: [],
-    },
-}
-```
+    SUCCESS Summary {
+        src: PendingPackets {
+            unreceived_packets: [],
+            unreceived_acks: [],
+        },
+        dst: PendingPackets {
+            unreceived_packets: [],
+            unreceived_acks: [],
+        },
+    }
 
 As you can see, there is currently no stuck packet between `ibc-1` and `ibc-3`.
 
@@ -165,55 +159,51 @@ If both commands run successfully, they should output a `SUCCESS` message.
 Now, let's verify that these packets are indeed stuck with the `query packet`
 command:
 
-- On `ibc-0`:
+*   On `ibc-0`:
 
-  ```shell
-  {{#template ../../templates/commands/hermes/query_packet_pending chain=ibc-0 port=transfer channel=channel-1}}
-  ```
+    ```shell
+    {{#template ../../templates/commands/hermes/query_packet_pending chain=ibc-0 port=transfer channel=channel-1}}
+    ```
 
-  Which should output:
+    Which should output:
 
-  ```
-  SUCCESS Summary {
-      src: PendingPackets {
-          unreceived_packets: [
-              Sequence(
-                  1,
-              ),
-          ],
-          unreceived_acks: [],
-      },
-      dst: PendingPackets {
-          unreceived_packets: [],
-          unreceived_acks: [],
-      },
-  }
-  ```
+        SUCCESS Summary {
+            src: PendingPackets {
+                unreceived_packets: [
+                    Sequence(
+                        1,
+                    ),
+                ],
+                unreceived_acks: [],
+            },
+            dst: PendingPackets {
+                unreceived_packets: [],
+                unreceived_acks: [],
+            },
+        }
 
-- On `ibc-1`:
+*   On `ibc-1`:
 
-  ```shell
-  {{#template ../../templates/commands/hermes/query_packet_pending chain=ibc-1 port=transfer channel=channel-2}}
-  ```
+    ```shell
+    {{#template ../../templates/commands/hermes/query_packet_pending chain=ibc-1 port=transfer channel=channel-2}}
+    ```
 
-  Which should output:
+    Which should output:
 
-  ```
-  SUCCESS Summary {
-      src: PendingPackets {
-          unreceived_packets: [
-              Sequence(
-                  2,
-              ),
-          ],
-          unreceived_acks: [],
-      },
-      dst: PendingPackets {
-          unreceived_packets: [],
-          unreceived_acks: [],
-      },
-  }
-  ```
+        SUCCESS Summary {
+            src: PendingPackets {
+                unreceived_packets: [
+                    Sequence(
+                        2,
+                    ),
+                ],
+                unreceived_acks: [],
+            },
+            dst: PendingPackets {
+                unreceived_packets: [],
+                unreceived_acks: [],
+            },
+        }
 
 You have pending packets on the two paths filtered out by our running instance.
 
@@ -241,33 +231,31 @@ Instead of clearing packets manually again, you can just start Hermes with the
 
 At launch, Hermes will clear pending packets before moving into passive mode.
 
-- Wait a few seconds. You should observe logs produced on the terminal running
-  the second instance of Hermes.
+*   Wait a few seconds. You should observe logs produced on the terminal running
+    the second instance of Hermes.
 
-- Query for pending packets at `ibc-0` on `channel-1` and `ibc-1` on `channel-2`
-  again with the `query packet pending` command. Both should output:
-  ```
-  SUCCESS Summary {
-      src: PendingPackets {
-          unreceived_packets: [],
-          unreceived_acks: [],
-      },
-      dst: PendingPackets {
-          unreceived_packets: [],
-          unreceived_acks: [],
-      },
-  }
-  ```
+*   Query for pending packets at `ibc-0` on `channel-1` and `ibc-1` on `channel-2`
+    again with the `query packet pending` command. Both should output:
+        SUCCESS Summary {
+            src: PendingPackets {
+                unreceived_packets: [],
+                unreceived_acks: [],
+            },
+            dst: PendingPackets {
+                unreceived_packets: [],
+                unreceived_acks: [],
+            },
+        }
 
 You can now send packets between any pair of chains. One of your two instances
 will relay it. Feel free to exchange more packets and observe the logs.
 
 ## Stop relaying and stop the chains
 
-- Stop Hermes by pressing `Ctrl+C` on the terminals running
-  `{{#template ../../templates/commands/hermes/start}}`.
+*   Stop Hermes by pressing `Ctrl+C` on the terminals running
+    `{{#template ../../templates/commands/hermes/start}}`.
 
-- Stop the chains with `{{#template ../../templates/commands/gm/stop}}`.
+*   Stop the chains with `{{#template ../../templates/commands/gm/stop}}`.
 
 ***
 

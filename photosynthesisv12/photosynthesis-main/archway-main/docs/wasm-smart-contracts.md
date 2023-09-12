@@ -103,5 +103,5 @@ archwayd tx wasm instantiate 64 "{\"reward_address\": \"archway16w95tw2ueqdy0nvk
 
 ## More Info
 
-- Other commands related to wasm can be found at
-  [wasmd](https://docs.cosmwasm.com/) documentation.
+*   Other commands related to wasm can be found at
+    [wasmd](https://docs.cosmwasm.com/) documentation.

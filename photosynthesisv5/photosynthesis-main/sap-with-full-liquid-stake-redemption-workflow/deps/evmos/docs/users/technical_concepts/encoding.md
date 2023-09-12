@@ -8,9 +8,9 @@ Learn about the encoding formats used on Evmos. {synopsis}
 
 ## Pre-requisite Readings
 
-- [Cosmos SDK Encoding](https://docs.cosmos.network/main/core/encoding.html)
-  {prereq}
-- [Ethereum RLP](https://eth.wiki/en/fundamentals/rlp) {prereq}
+*   [Cosmos SDK Encoding](https://docs.cosmos.network/main/core/encoding.html)
+    {prereq}
+*   [Ethereum RLP](https://eth.wiki/en/fundamentals/rlp) {prereq}
 
 ## Encoding Formats
 

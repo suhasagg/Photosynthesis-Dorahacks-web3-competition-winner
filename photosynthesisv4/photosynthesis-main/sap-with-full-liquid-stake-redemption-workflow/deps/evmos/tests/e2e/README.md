@@ -46,17 +46,17 @@ make test-e2e E2E_SKIP_CLEANUP=true INITIAL_VERSION=<tag> TARGET_VERSION=<tag>
 
 Testing a chain upgrade is a multi-step process:
 
-1. Build a docker image for the evmos target version (local repo by default, if
-   no explicit `TARGET_VERSION` provided as argument) (e.g. `v10.0.0`)
-2. Run tests
-3. The e2e test will first run an `INITIAL_VERSION` node container.
-4. The node will submit, deposit and vote for an upgrade proposal for upgrading
-   to the `TARGET_VERSION`.
-5. After block `50` is reached, the test suite exports `/.evmosd` folder from
-   docker container to local `build/` and than purge the container.
-6. Suite will mount `TARGET_VERSION` node to local `build/` dir and start the
-   node. Node will get upgrade information from `upgrade-info.json` and will
-   execute the upgrade.
+1.  Build a docker image for the evmos target version (local repo by default, if
+    no explicit `TARGET_VERSION` provided as argument) (e.g. `v10.0.0`)
+2.  Run tests
+3.  The e2e test will first run an `INITIAL_VERSION` node container.
+4.  The node will submit, deposit and vote for an upgrade proposal for upgrading
+    to the `TARGET_VERSION`.
+5.  After block `50` is reached, the test suite exports `/.evmosd` folder from
+    docker container to local `build/` and than purge the container.
+6.  Suite will mount `TARGET_VERSION` node to local `build/` dir and start the
+    node. Node will get upgrade information from `upgrade-info.json` and will
+    execute the upgrade.
 
 ## Structure
 
@@ -70,14 +70,14 @@ initialization. This design allows for the opportunity of testing chain upgrades
 by providing an older Evmos version to the container, performing the chain
 upgrade, and running the latest test suite. Here's an overview of the files:
 
-- `e2e_suite_test.go`: defines the testing suite and contains the core
-  bootstrapping logic that creates a testing environment via Docker containers.
-  A testing network is created dynamically with 2 test validators.
+*   `e2e_suite_test.go`: defines the testing suite and contains the core
+    bootstrapping logic that creates a testing environment via Docker containers.
+    A testing network is created dynamically with 2 test validators.
 
-- `e2e_test.go`: contains the actual end-to-end integration tests that utilize
-  the testing suite.
+*   `e2e_test.go`: contains the actual end-to-end integration tests that utilize
+    the testing suite.
 
-- `e2e_utils_test.go`: contains suite upgrade params loading logic.
+*   `e2e_utils_test.go`: contains suite upgrade params loading logic.
 
 ### `upgrade` Package
 
@@ -85,14 +85,14 @@ The `e2e` package defines an upgrade `Manager` abstraction. Suite will utilize
 `Manager`'s functions to run different versions of evmos containers, propose,
 vote, delegate and query nodes.
 
-- `manager.go`: defines core manager logic for running containers, export state
-  and create networks.
+*   `manager.go`: defines core manager logic for running containers, export state
+    and create networks.
 
-- `govexec.go`: defines `gov-specific` exec commands to submit/delegate/vote
-  through nodes `gov` module.
+*   `govexec.go`: defines `gov-specific` exec commands to submit/delegate/vote
+    through nodes `gov` module.
 
-- `node.go`: defines `Node` strcuture responsible for setting node container
-  parameters before run.
+*   `node.go`: defines `Node` strcuture responsible for setting node container
+    parameters before run.
 
 ### Version retrieve
 

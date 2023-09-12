@@ -8,33 +8,33 @@ information, please follow the Notion and tracking issue links in each section.
 
 ## Long Term - Q4 2023+
 
-- [Long term Tracking Issue](https://github.com/CosmosContracts/juno/issues/611)
-- SDK v0.47, Tendermint 0.37
-- IBC v5/6, ICA v3 (optional)
-- [Native Liquid Staking](https://github.com/iqlusioninc/liquidity-staking-module)
-- Faster Block times
-- [Improving the Nakamoto Coefficient](https://github.com/CosmosContracts/juno/issues/474)
-- Wasm based oracle
+*   [Long term Tracking Issue](https://github.com/CosmosContracts/juno/issues/611)
+*   SDK v0.47, Tendermint 0.37
+*   IBC v5/6, ICA v3 (optional)
+*   [Native Liquid Staking](https://github.com/iqlusioninc/liquidity-staking-module)
+*   Faster Block times
+*   [Improving the Nakamoto Coefficient](https://github.com/CosmosContracts/juno/issues/474)
+*   Wasm based oracle
 
 ## V14 - Q2/3 2023
 
 <!-- - [Medium Blog](https://medium.com/@reecepbcups/juno-v12-update-4bab64640a62) -->
 
-- [V14 Tracking Issue](https://github.com/CosmosContracts/juno/issues/548)
+*   [V14 Tracking Issue](https://github.com/CosmosContracts/juno/issues/548)
 
 This update will focus more on upgrading the base layer of the Juno stack,
 bringing new features and pushing us to the latest versions of the software.
 
 ## Features
 
-- IBC-Hooks
-- CosmWasm v0.31
-- WasmVM v1.2.1
-- Global Minimum Fees (governance set)
-- TokenFactory: burnFrom, burnTo, ForceTransfer
-- [Interchain test](https://github.com/strangelove-ventures/interchaintest)
-- Using [Skip's MEV Tendermint fork](https://github.com/skip-mev/mev-tendermint)
-  by default
+*   IBC-Hooks
+*   CosmWasm v0.31
+*   WasmVM v1.2.1
+*   Global Minimum Fees (governance set)
+*   TokenFactory: burnFrom, burnTo, ForceTransfer
+*   [Interchain test](https://github.com/strangelove-ventures/interchaintest)
+*   Using [Skip's MEV Tendermint fork](https://github.com/skip-mev/mev-tendermint)
+    by default
 
 ***
 
@@ -42,24 +42,24 @@ bringing new features and pushing us to the latest versions of the software.
 
 Links:
 
-- [Medium Blog](https://medium.com/@JunoNetwork/jun%C3%B8-v-13-fefa9d2dfce5)
+*   [Medium Blog](https://medium.com/@JunoNetwork/jun%C3%B8-v-13-fefa9d2dfce5)
 
-- [v13 Tracking Issue](https://github.com/CosmosContracts/juno/issues/475)
+*   [v13 Tracking Issue](https://github.com/CosmosContracts/juno/issues/475)
 
 The V13 update is Juno's largest update, bringing many new features for
 developers, users, and relayers.
 
 ### V13 PRs
 
-- [x/FeeShare (CosmWasm)](https://github.com/CosmosContracts/juno/pull/385)
-- [x/TokenFactory](https://github.com/CosmosContracts/juno/pull/368)
-- [Packet Forward Middleware](https://github.com/CosmosContracts/juno/pull/513)
-- [x/GlobalFee](https://github.com/CosmosContracts/juno/pull/411)
-- [More ICA Messages](https://github.com/CosmosContracts/juno/pull/436/files)
-- [Governance Spam Prevention](https://github.com/CosmosContracts/juno/pull/394)
-- [x/wasmd 30](https://github.com/CosmosContracts/juno/pull/387)
-- [x/ibc V4](https://github.com/CosmosContracts/juno/pull/387)
-- [x/ibc-fees](https://github.com/CosmosContracts/juno/pull/432)
+*   [x/FeeShare (CosmWasm)](https://github.com/CosmosContracts/juno/pull/385)
+*   [x/TokenFactory](https://github.com/CosmosContracts/juno/pull/368)
+*   [Packet Forward Middleware](https://github.com/CosmosContracts/juno/pull/513)
+*   [x/GlobalFee](https://github.com/CosmosContracts/juno/pull/411)
+*   [More ICA Messages](https://github.com/CosmosContracts/juno/pull/436/files)
+*   [Governance Spam Prevention](https://github.com/CosmosContracts/juno/pull/394)
+*   [x/wasmd 30](https://github.com/CosmosContracts/juno/pull/387)
+*   [x/ibc V4](https://github.com/CosmosContracts/juno/pull/387)
+*   [x/ibc-fees](https://github.com/CosmosContracts/juno/pull/432)
 
 V13 is targeted at developers with relayer and user experience improvements as
 well.

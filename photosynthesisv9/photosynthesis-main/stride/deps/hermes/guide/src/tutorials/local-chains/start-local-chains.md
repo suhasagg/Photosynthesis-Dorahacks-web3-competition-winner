@@ -74,13 +74,11 @@ Run the following command to check the status of the chains:
 
 If the command is successful, you should see a message similar to:
 
-```
-NODE               PID    RPC   APP  GRPC  HOME_DIR
-ibc-0            11244  27010 27011 27012  $HOME/.gm/ibc-0
- node-0          12342  27030 27031 27032  $HOME/.gm/node-0
-ibc-1            11796  27020 27021 27022  $HOME/.gm/ibc-1
- node-1          12885  27040 27041 27042  $HOME/.gm/node-1
-```
+    NODE               PID    RPC   APP  GRPC  HOME_DIR
+    ibc-0            11244  27010 27011 27012  $HOME/.gm/ibc-0
+     node-0          12342  27030 27031 27032  $HOME/.gm/node-0
+    ibc-1            11796  27020 27021 27022  $HOME/.gm/ibc-1
+     node-1          12885  27040 27041 27042  $HOME/.gm/node-1
 
 ### Configuration file
 
@@ -121,57 +119,55 @@ line):
 
 <details><summary style="font-weight:bold">{{#template ../../templates/commands/gm/keys}} output</summary>
 
-```
-"$HOME/go/bin/gaiad" keys list --keyring-backend test --keyring-dir "$HOME/.gm/ibc-0"
+    "$HOME/go/bin/gaiad" keys list --keyring-backend test --keyring-dir "$HOME/.gm/ibc-0"
 
-- name: validator
-address: cosmos1a5545h09sdzwgjpraasgkvu0f585lc33k9h4kx
-pubkey: cosmospub1addwnpepqw5j24lg0ya34umnrn7akxuks3as2ktggndxg37cnfsx2fl5xkl8ymte6c2
-mnemonic: "confirm path season shiver adjust order quarter now empower crystal busy foam pony web chaos bachelor magnet imitate audit wear spike chunk garlic sport"
+    - name: validator
+    address: cosmos1a5545h09sdzwgjpraasgkvu0f585lc33k9h4kx
+    pubkey: cosmospub1addwnpepqw5j24lg0ya34umnrn7akxuks3as2ktggndxg37cnfsx2fl5xkl8ymte6c2
+    mnemonic: "confirm path season shiver adjust order quarter now empower crystal busy foam pony web chaos bachelor magnet imitate audit wear spike chunk garlic sport"
 
-- name: wallet
-address: cosmos14czpvfgzcr06astyylahshcexzwm0j9ne6h5p5
-pubkey: cosmospub1addwnpepqdcmngqappsxp6jp53atfx6kt5p7d6vce4un3mfvsa8gtml5n8lj2yh29q9
-mnemonic: "brass exhibit artist beef album canvas liar fine water wave bus rose sunny permit strategy eight stove legal sustain vessel offer great book loan"
+    - name: wallet
+    address: cosmos14czpvfgzcr06astyylahshcexzwm0j9ne6h5p5
+    pubkey: cosmospub1addwnpepqdcmngqappsxp6jp53atfx6kt5p7d6vce4un3mfvsa8gtml5n8lj2yh29q9
+    mnemonic: "brass exhibit artist beef album canvas liar fine water wave bus rose sunny permit strategy eight stove legal sustain vessel offer great book loan"
 
-- name: wallet1
-address: cosmos1qs5nmmf7jall4sm38fjssxfw5ay87mfp22p3xm
-pubkey: cosmospub1addwnpepqtxfgjxg8xrc9xrzqyfs3ud6svmu7wrt608s80d0t0g93rylu4kd7kpckj6
-mnemonic: "puzzle pole beyond announce clip else cause airport index pencil intact camp leisure pole nasty put meat cover garage ripple chief unfair destroy spatial"
+    - name: wallet1
+    address: cosmos1qs5nmmf7jall4sm38fjssxfw5ay87mfp22p3xm
+    pubkey: cosmospub1addwnpepqtxfgjxg8xrc9xrzqyfs3ud6svmu7wrt608s80d0t0g93rylu4kd7kpckj6
+    mnemonic: "puzzle pole beyond announce clip else cause airport index pencil intact camp leisure pole nasty put meat cover garage ripple chief unfair destroy spatial"
 
-- name: wallet2
-address: cosmos1n7qyhjkfp8szpy7ury7vlejd5wcfc2ysdd9xlx
-pubkey: cosmospub1addwnpepq2nuh2a9x9wd6ad78dcft3e8tuds5xs4ypeterl0zenw9ejt0tdvk38yd3z
-mnemonic: "february slab crane panther harbor judge artefact ghost clay torch stay cave enrich narrow sausage expand tomato margin wool repeat squeeze couch fork unhappy"
+    - name: wallet2
+    address: cosmos1n7qyhjkfp8szpy7ury7vlejd5wcfc2ysdd9xlx
+    pubkey: cosmospub1addwnpepq2nuh2a9x9wd6ad78dcft3e8tuds5xs4ypeterl0zenw9ejt0tdvk38yd3z
+    mnemonic: "february slab crane panther harbor judge artefact ghost clay torch stay cave enrich narrow sausage expand tomato margin wool repeat squeeze couch fork unhappy"
 
-"$HOME/go/bin/gaiad" keys list --keyring-backend test --keyring-dir "$HOME/.gm/ibc-1"
+    "$HOME/go/bin/gaiad" keys list --keyring-backend test --keyring-dir "$HOME/.gm/ibc-1"
 
-- name: validator
-address: cosmos14eg9y3kjlrepk8lmdavw8u5l472sl8e6xv99yk
-pubkey: cosmospub1addwnpepq0q4f0aaaq2wycg7y3x8j8gfacazdf3xlxujkjguy2k3gq654jwuyn58hhq
-mnemonic: "clarify concert lens mobile hover lucky bulk home elite fix school jungle draw soul excess siren advice accuse shallow copper model absorb salon mystery"
+    - name: validator
+    address: cosmos14eg9y3kjlrepk8lmdavw8u5l472sl8e6xv99yk
+    pubkey: cosmospub1addwnpepq0q4f0aaaq2wycg7y3x8j8gfacazdf3xlxujkjguy2k3gq654jwuyn58hhq
+    mnemonic: "clarify concert lens mobile hover lucky bulk home elite fix school jungle draw soul excess siren advice accuse shallow copper model absorb salon mystery"
 
-- name: wallet
-address: cosmos120jm7xkv49erxty6ec9trs85j8yfgjwwdlsrtz
-pubkey: cosmospub1addwnpepqgs0llcm64e7yrpx7hs9fmzqefnwxzfxnujf3qgysdpv8w5aalu2z2e86gs
-mnemonic: "shine again similar wheel also frozen equal win ask grit artist quality subject twenty pet scrub olympic ladder puppy balcony blood exotic buddy gather"
+    - name: wallet
+    address: cosmos120jm7xkv49erxty6ec9trs85j8yfgjwwdlsrtz
+    pubkey: cosmospub1addwnpepqgs0llcm64e7yrpx7hs9fmzqefnwxzfxnujf3qgysdpv8w5aalu2z2e86gs
+    mnemonic: "shine again similar wheel also frozen equal win ask grit artist quality subject twenty pet scrub olympic ladder puppy balcony blood exotic buddy gather"
 
-- name: wallet1
-address: cosmos18ccme8td0zdktcy7dafhurdhx7x8xxx0s445y2
-pubkey: cosmospub1addwnpepq045d9qjrkvfxdx39849qdcrny0zr8z2elx6z7kjkgezrvw2enepx98pyxf
-mnemonic: "join skill day disease canal alpha sweet sing icon donor relief little wheat borrow silver allow child silent teach then flower deliver arena library"
+    - name: wallet1
+    address: cosmos18ccme8td0zdktcy7dafhurdhx7x8xxx0s445y2
+    pubkey: cosmospub1addwnpepq045d9qjrkvfxdx39849qdcrny0zr8z2elx6z7kjkgezrvw2enepx98pyxf
+    mnemonic: "join skill day disease canal alpha sweet sing icon donor relief little wheat borrow silver allow child silent teach then flower deliver arena library"
 
-- name: wallet2
-address: cosmos1x45ucdaa3fegemh3x2xp0qtnxl2gv533e2fg6g
-pubkey: cosmospub1addwnpepq0ryrcm08l8x5wskhd5dczrduj535fxs9w7wky04ux97amljcffe6ewxymg
-mnemonic: "wish burden unfair subway club pulp wood helmet whip decline between maid defense sniff cash guard cargo travel donor nasty saddle tumble service fringe"
+    - name: wallet2
+    address: cosmos1x45ucdaa3fegemh3x2xp0qtnxl2gv533e2fg6g
+    pubkey: cosmospub1addwnpepq0ryrcm08l8x5wskhd5dczrduj535fxs9w7wky04ux97amljcffe6ewxymg
+    mnemonic: "wish burden unfair subway club pulp wood helmet whip decline between maid defense sniff cash guard cargo travel donor nasty saddle tumble service fringe"
 
-"$HOME/go/bin/gaiad" keys list --keyring-backend test --keyring-dir "$HOME/.gm/node-0"
-[]
+    "$HOME/go/bin/gaiad" keys list --keyring-backend test --keyring-dir "$HOME/.gm/node-0"
+    []
 
-"$HOME/go/bin/gaiad" keys list --keyring-backend test --keyring-dir "$HOME/.gm/node-1"
-[]
-```
+    "$HOME/go/bin/gaiad" keys list --keyring-backend test --keyring-dir "$HOME/.gm/node-1"
+    []
 
 </details>
 
@@ -184,19 +180,17 @@ which `hermes` will use to sign transactions.
 
 If successful, the command should show an output similar to:
 
-```
-SUCCESS Added key 'wallet' (cosmos1qsl5sq48r7xdfwq085x9pnlfu9ul5seufu3n03) on chain ibc-0
-SUCCESS Added key 'wallet2' (cosmos1haaphqucg2u9g8gwgv6z8jzegvca85r4d7yqh9) on chain ibc-0
-SUCCESS Added key 'wallet1' (cosmos1cgjf7m9txsxf2pdekxk60ll6xusx0heznqsnxn) on chain ibc-0
-SUCCESS Added key 'wallet' (cosmos1zp3t2rp7tjr23wchp36lmw7vhk77gtvvc7lc5s) on chain ibc-1
-SUCCESS Added key 'wallet2' (cosmos1644x9c8pyfwcmg43ch2u3vr6hl4rkmkz2weq39) on chain ibc-1
-SUCCESS Added key 'wallet1' (cosmos1dsrj2uqjvtssenkwperuvfkgkg2xvmydvpzswy) on chain ibc-1
-```
+    SUCCESS Added key 'wallet' (cosmos1qsl5sq48r7xdfwq085x9pnlfu9ul5seufu3n03) on chain ibc-0
+    SUCCESS Added key 'wallet2' (cosmos1haaphqucg2u9g8gwgv6z8jzegvca85r4d7yqh9) on chain ibc-0
+    SUCCESS Added key 'wallet1' (cosmos1cgjf7m9txsxf2pdekxk60ll6xusx0heznqsnxn) on chain ibc-0
+    SUCCESS Added key 'wallet' (cosmos1zp3t2rp7tjr23wchp36lmw7vhk77gtvvc7lc5s) on chain ibc-1
+    SUCCESS Added key 'wallet2' (cosmos1644x9c8pyfwcmg43ch2u3vr6hl4rkmkz2weq39) on chain ibc-1
+    SUCCESS Added key 'wallet1' (cosmos1dsrj2uqjvtssenkwperuvfkgkg2xvmydvpzswy) on chain ibc-1
 
 > **TROUBLESHOOTING**:
 >
-> - If the command does not out output anything, make sure the path to Hermes'
->   binary is set in `{{#template ../../templates/path/gm/default_path}}`.
+> *   If the command does not out output anything, make sure the path to Hermes'
+>     binary is set in `{{#template ../../templates/path/gm/default_path}}`.
 
 ### The `$HOME/.gm` directory
 

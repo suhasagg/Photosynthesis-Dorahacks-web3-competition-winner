@@ -14,8 +14,8 @@ Requires: Cosmos-SDK, go-ibc Required-By: mauth Implements: Interchain Accounts
 
 ## Changelog
 
-- 2022-02-04: added content
-- 2022-01-19: init
+*   2022-02-04: added content
+*   2022-01-19: init
 
 ## Abstract
 
@@ -62,34 +62,34 @@ backwards compatible.
 
 ## Development
 
-- Integration requirements
-  - Development has occured in [IBC-go](https://github.com/cosmos/ibc-go) and
-    progress tracked on the project board there.
-- Testing (Simulations, Core Team Testing, Partner Testing)
-  - Simulations and Core Team tested this module
-- Audits (Internal Dev review, Third-party review, Bug Bounty)
-  - An internal audit, an audit from Informal Systems, and an audit from Trail
-    of Bits all took place with fixes made to all findings.
-- Networks (Testnets, Productionnets, Mainnets)
-  - Testnets
+*   Integration requirements
+    *   Development has occured in [IBC-go](https://github.com/cosmos/ibc-go) and
+        progress tracked on the project board there.
+*   Testing (Simulations, Core Team Testing, Partner Testing)
+    *   Simulations and Core Team tested this module
+*   Audits (Internal Dev review, Third-party review, Bug Bounty)
+    *   An internal audit, an audit from Informal Systems, and an audit from Trail
+        of Bits all took place with fixes made to all findings.
+*   Networks (Testnets, Productionnets, Mainnets)
+    *   Testnets
 
 ## Governance \[optional]
 
-- **Needs Signaling Proposal**
-- Core Community Governance
-  - N/A
-- Steering Community
-  - N/A. Possibly Aditya Srinpal, Sean King, Bez?
-- Timelines & Roadmap
-  - Expected to be released as part of IBC 3.0 in Feb 2022 (currently in
-    [beta release](https://github.com/cosmos/ibc-go/releases/tag/v3.0.0-beta1))
+*   **Needs Signaling Proposal**
+*   Core Community Governance
+    *   N/A
+*   Steering Community
+    *   N/A. Possibly Aditya Srinpal, Sean King, Bez?
+*   Timelines & Roadmap
+    *   Expected to be released as part of IBC 3.0 in Feb 2022 (currently in
+        [beta release](https://github.com/cosmos/ibc-go/releases/tag/v3.0.0-beta1))
 
 ## Project Integrations \[optional]
 
-- Gaia Integrations
-  - [PR](https://github.com/cosmos/gaia/pull/1150)
-- Integration Partner
-  - IBC Team
+*   Gaia Integrations
+    *   [PR](https://github.com/cosmos/gaia/pull/1150)
+*   Integration Partner
+    *   IBC Team
 
 #### Downstream User Impact Report
 
@@ -109,5 +109,5 @@ backwards compatible.
 
 ## Additional Research & References
 
-- [Why Interchain Accounts Change Everything for Cosmos Interoperability](https://medium.com/chainapsis/why-interchain-accounts-change-everything-for-cosmos-interoperability-59c19032bf11)
-- [Interchain Account Auth Module Demo Repo](https://github.com/cosmos/interchain-accounts)
+*   [Why Interchain Accounts Change Everything for Cosmos Interoperability](https://medium.com/chainapsis/why-interchain-accounts-change-everything-for-cosmos-interoperability-59c19032bf11)
+*   [Interchain Account Auth Module Demo Repo](https://github.com/cosmos/interchain-accounts)

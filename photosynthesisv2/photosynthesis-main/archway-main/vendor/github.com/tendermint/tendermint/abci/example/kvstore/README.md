@@ -15,9 +15,9 @@ than what the mempool provides).
 The PersistentKVStoreApplication wraps the KVStoreApplication and provides two
 additional features:
 
-1. persistence of state across app restarts (using Tendermint's ABCI-Handshake
-   mechanism)
-2. validator set changes
+1.  persistence of state across app restarts (using Tendermint's ABCI-Handshake
+    mechanism)
+2.  validator set changes
 
 The state is persisted in leveldb along with the last block committed, and the
 Handshake allows any necessary blocks to be replayed. Validator set changes are

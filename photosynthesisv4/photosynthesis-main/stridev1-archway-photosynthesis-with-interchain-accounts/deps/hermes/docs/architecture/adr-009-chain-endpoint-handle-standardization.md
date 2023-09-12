@@ -7,7 +7,7 @@ Accepted - The PR has been merged in
 
 ## Changelog
 
-- 2022-04-19: Initial Proposal
+*   2022-04-19: Initial Proposal
 
 ## Context
 
@@ -60,14 +60,14 @@ particular ADR.
 
 ### Positive
 
-- The protobuf types are not exposed directly, which allows `hermes` to work
-  with future non-tendermint chains
-- Increased readability of the codebase; similar methods have a similar format
+*   The protobuf types are not exposed directly, which allows `hermes` to work
+    with future non-tendermint chains
+*   Increased readability of the codebase; similar methods have a similar format
 
 ### Negative
 
 ## References
 
-- [Option type should be used with non-zero Height #1009](https://github.com/informalsystems/ibc-rs/issues/1009)
-  - The new domain types proposed here, as well as the reduced deduplication of
-    methods, will make fixing this issue easier
+*   [Option type should be used with non-zero Height #1009](https://github.com/informalsystems/ibc-rs/issues/1009)
+    *   The new domain types proposed here, as well as the reduced deduplication of
+        methods, will make fixing this issue easier

@@ -1,23 +1,23 @@
 # Upgrade v7 Changelog
 
-1. IBC Rate Limiting
-   ([94e3a91](https://github.com/Stride-Labs/stride/commit/94e3a91dc582218a477771d9a694966bf901fdf5))
-2. Host Zone Reward Reallocation
-   ([3539983](https://github.com/Stride-Labs/stride/commit/353998347af20ae14967e5da73a3f9059c0e1826))
-3. Add Autopilot
-   ([1c173fe](https://github.com/Stride-Labs/stride/commit/1c173fed57418bea8fbb19240245757708f25472))
-4. Prevent undelegations of amount 0
-   ([3e0f404](https://github.com/Stride-Labs/stride/commit/3e0f40457ed90faa964556c6498c9d976336aa84))
-5. Change `sdkerrors` to `errorsmod`
-   ([dfc5fb0](https://github.com/Stride-Labs/stride/commit/dfc5fb0fb33a471f86f1f74992ff3809919e7e80))
-6. Remove Epoch Unbonding Records with 0 amounts
-   ([470268d](https://github.com/Stride-Labs/stride/commit/470268d393b15b0a4014e3a61c0478eaddc10756))
-7. Remove ICACallbacks from Middleware
-   ([59a872b](https://github.com/Stride-Labs/stride/commit/59a872b20d8553c1a0e8187b2d70304c2a7341b7))
-8. Remove unnecessary setting of EXIT_TRANSFER_QUEUE
-   ([0413e99](https://github.com/Stride-Labs/stride/commit/0413e999d3c67369e50ca40c61763f522dd02e06))
-9. Airdrop Reset
-   ([b7371d7](https://github.com/Stride-Labs/stride/commit/b7371d7b4e02e40cc979d0a0e417113276e3b8a3))
+1.  IBC Rate Limiting
+    ([94e3a91](https://github.com/Stride-Labs/stride/commit/94e3a91dc582218a477771d9a694966bf901fdf5))
+2.  Host Zone Reward Reallocation
+    ([3539983](https://github.com/Stride-Labs/stride/commit/353998347af20ae14967e5da73a3f9059c0e1826))
+3.  Add Autopilot
+    ([1c173fe](https://github.com/Stride-Labs/stride/commit/1c173fed57418bea8fbb19240245757708f25472))
+4.  Prevent undelegations of amount 0
+    ([3e0f404](https://github.com/Stride-Labs/stride/commit/3e0f40457ed90faa964556c6498c9d976336aa84))
+5.  Change `sdkerrors` to `errorsmod`
+    ([dfc5fb0](https://github.com/Stride-Labs/stride/commit/dfc5fb0fb33a471f86f1f74992ff3809919e7e80))
+6.  Remove Epoch Unbonding Records with 0 amounts
+    ([470268d](https://github.com/Stride-Labs/stride/commit/470268d393b15b0a4014e3a61c0478eaddc10756))
+7.  Remove ICACallbacks from Middleware
+    ([59a872b](https://github.com/Stride-Labs/stride/commit/59a872b20d8553c1a0e8187b2d70304c2a7341b7))
+8.  Remove unnecessary setting of EXIT\_TRANSFER\_QUEUE
+    ([0413e99](https://github.com/Stride-Labs/stride/commit/0413e999d3c67369e50ca40c61763f522dd02e06))
+9.  Airdrop Reset
+    ([b7371d7](https://github.com/Stride-Labs/stride/commit/b7371d7b4e02e40cc979d0a0e417113276e3b8a3))
 10. Module Account Safety
     ([0a325de](https://github.com/Stride-Labs/stride/commit/0a325deddc0bac58cc43e650773cc3408eabc011))
 11. Minor optimizations

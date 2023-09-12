@@ -1,6 +1,8 @@
 ***
 
-## order: 4&#xA;title: Validator Security
+order: 4
+title: Validator Security
+-------------------------
 
 # Validator Security
 
@@ -76,9 +78,9 @@ private_peer_ids = "node_ids_of_private_peers"
 By default, uppercase environment variables with the following prefixes will
 replace lowercase command-line flags:
 
-- `GA` (for Gaia flags)
-- `TM` (for Tendermint flags)
-- `BC` (for democli or basecli flags)
+*   `GA` (for Gaia flags)
+*   `TM` (for Tendermint flags)
+*   `BC` (for democli or basecli flags)
 
 For example, the environment variable `GA_CHAIN_ID` will map to the command line
 flag `--chain-id`. Note that while explicit command-line flags will take

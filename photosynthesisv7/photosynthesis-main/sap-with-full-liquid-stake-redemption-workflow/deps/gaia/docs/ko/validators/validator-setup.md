@@ -158,11 +158,11 @@ gaiad tx staking edit-validator
 
 **참고**: `commission-rate` 값은 다음의 규칙을 따라야 합니다:
 
-- 0 과 `commission-max-rate` 값의 사이
-- 검증인의 `commission-max-change-rate` 값을 초과할 수 없습니다.
-  `commission-max-change-rate`는 하루에 최대 커미션 값을 변경할 수 있는 한도입니
-  다. 밸리데이터는 하루에 한번 `commission-max-change-rate`의 한도 안에서만 커미
-  션을 변경할 수 있습니다.
+*   0 과 `commission-max-rate` 값의 사이
+*   검증인의 `commission-max-change-rate` 값을 초과할 수 없습니다.
+    `commission-max-change-rate`는 하루에 최대 커미션 값을 변경할 수 있는 한도입니
+    다. 밸리데이터는 하루에 한번 `commission-max-change-rate`의 한도 안에서만 커미
+    션을 변경할 수 있습니다.
 
 ## 밸리데이터 설명 확인하기
 

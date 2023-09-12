@@ -19,9 +19,9 @@ The incentives workflow is summarized in the following image:
 
 To register smart contract incentives, consider the following stages:
 
-1. [Drafting the Contract Incentives Proposal](#drafting-the-contract-incentives-proposal)
-2. [Submitting the Contract Incentives Proposal](#submitting-the-contract-incentives-proposal)
-3. [The On-Chain Contract Incentives Proposal](#the-on-chain-contract-incentives-proposal)
+1.  [Drafting the Contract Incentives Proposal](#drafting-the-contract-incentives-proposal)
+2.  [Submitting the Contract Incentives Proposal](#submitting-the-contract-incentives-proposal)
+3.  [The On-Chain Contract Incentives Proposal](#the-on-chain-contract-incentives-proposal)
 
 This document also discusses
 [incentives analysis through telemetry](#incentives-analysis-through-telemetry).
@@ -35,33 +35,33 @@ information on incentives.
 The following topics must be addressed when drafting a Contract Incentives
 Proposal:
 
-1. Provide the profile of the person(s)/entity making the proposal.
+1.  Provide the profile of the person(s)/entity making the proposal.
 
-   Who are you? What is your involvement in Cosmos and/or other blockchain
-   networks? If you are working with a team, who are the team members involved
-   and what is their relevant experience? What is the mission statement of your
-   organization or business? Do you have a website? Showcase some work you've
-   done, and some proof of who you are.
+    Who are you? What is your involvement in Cosmos and/or other blockchain
+    networks? If you are working with a team, who are the team members involved
+    and what is their relevant experience? What is the mission statement of your
+    organization or business? Do you have a website? Showcase some work you've
+    done, and some proof of who you are.
 
-2. Promote understanding of the `x/incentives` Module.
+2.  Promote understanding of the `x/incentives` Module.
 
-   Make sure to mention the
-   [`x/incentives` Module Documentation](../../../x/incentives/spec/README.md)
-   along with a brief explanation of what the `x/incentives` Module does. It's
-   also a good idea to link the
-   [Evmos Token Model](https://medium.com/evmos/the-evmos-token-model-edc07014978b),
-   since incentives are directly intertwined with Evmos tokenomics!
+    Make sure to mention the
+    [`x/incentives` Module Documentation](../../../x/incentives/spec/README.md)
+    along with a brief explanation of what the `x/incentives` Module does. It's
+    also a good idea to link the
+    [Evmos Token Model](https://medium.com/evmos/the-evmos-token-model-edc07014978b),
+    since incentives are directly intertwined with Evmos tokenomics!
 
-3. Describe what changes are being made, and why they are required.
+3.  Describe what changes are being made, and why they are required.
 
-   Give a breakdown of the proposal's payload, and explain in layman's terms
-   what the proposal will do if it passes. For the smart contract in question,
-   provide general information on its purpose, along with an argument for why it
-   requires incentives. Mention risks involved in the proposal, depending on the
-   traction of the smart contract involved and the timetable for the proposed
-   incentives. Finally, detail precautions taken during proposal formulation, if
-   applicable (including consultations made prior to proposal creation, and any
-   third-party reviews).
+    Give a breakdown of the proposal's payload, and explain in layman's terms
+    what the proposal will do if it passes. For the smart contract in question,
+    provide general information on its purpose, along with an argument for why it
+    requires incentives. Mention risks involved in the proposal, depending on the
+    traction of the smart contract involved and the timetable for the proposed
+    incentives. Finally, detail precautions taken during proposal formulation, if
+    applicable (including consultations made prior to proposal creation, and any
+    third-party reviews).
 
 Remember to provide links to the relevant
 [Commonwealth Evmos community](https://commonwealth.im/evmos) discussions
@@ -106,22 +106,22 @@ evmosd tx gov submit-legacy-proposal \
 
 with the following arguments:
 
-- `$CONTRACTADDRESS`: Ethereum hex-formatted (`0x...`) address of the contract
-  that users will interact with in your dApp. If you are using several
-  external/internal contracts, **make sure the contract is the correct one**.
-- `$ALLOCATION`: Denominations and percentage of the total rewards (25% of block
-  distribution) to be allocated to users that interact and spend gas using the
-  `$CONTRACTADDRESS` (eg. `"0.005000000000000000aevmos"` will distribute 0.5% of
-  out of the 25% tokens minted on each daily epoch rewards).
-- `$NUMWEEKS`: Number of weeks (counted by epochs) that you want the
-  `$CONTRACTADDRESS` to be incentivized for.
+*   `$CONTRACTADDRESS`: Ethereum hex-formatted (`0x...`) address of the contract
+    that users will interact with in your dApp. If you are using several
+    external/internal contracts, **make sure the contract is the correct one**.
+*   `$ALLOCATION`: Denominations and percentage of the total rewards (25% of block
+    distribution) to be allocated to users that interact and spend gas using the
+    `$CONTRACTADDRESS` (eg. `"0.005000000000000000aevmos"` will distribute 0.5% of
+    out of the 25% tokens minted on each daily epoch rewards).
+*   `$NUMWEEKS`: Number of weeks (counted by epochs) that you want the
+    `$CONTRACTADDRESS` to be incentivized for.
 
-  - 6 months (`26` epochs): recommended for long-term incentives on apps that
-    have a lot of traction
-  - 3 months (`13` epochs): recommended for long-term incentives on apps that
-    have some traction
-  - 1 months (`4` epochs): recommended for short-term incentives on apps that
-    don't have much traction
+    *   6 months (`26` epochs): recommended for long-term incentives on apps that
+        have a lot of traction
+    *   3 months (`13` epochs): recommended for long-term incentives on apps that
+        have some traction
+    *   1 months (`4` epochs): recommended for short-term incentives on apps that
+        don't have much traction
 
 See below for an example using [Diffusion Finance's](https://diffusion.fi/)
 router contract:
@@ -190,9 +190,9 @@ At this point you'll want to track which validator has voted and which has not.
 You'll want to re-engage directly with top stake-holders, ie. the
 highest-ranking validator operators, to ensure that:
 
-1. they are aware of your proposal;
-2. they can ask you any questions about your proposal; and
-3. they are prepared to vote.
+1.  they are aware of your proposal;
+2.  they can ask you any questions about your proposal; and
+3.  they are prepared to vote.
 
 Remember that any voter may change their vote at any time before the voting
 period ends. That historically doesn't happen often, but there may be an
@@ -239,12 +239,12 @@ contract user, custom metrics will have to be made following the
 [above section](#telemetry-basics--setup).
 
 In addition, gRPC queries related to the `x/incentives` module found
-[here](../../../x/incentives/spec/08\_clients.md#clients) can produce useful
+[here](../../../x/incentives/spec/08_clients.md#clients) can produce useful
 analysis.
 
 ### Additional Telemetry Information
 
 See the telemetry sources below for details not covered above:
 
-- [Cosmos SDK Telemetry Documentation](https://docs.cosmos.network/main/core/telemetry.html)
-- [Evmos Supported Telemetry Metrics](https://docs.evmos.org/protocol/telemetry.html)
+*   [Cosmos SDK Telemetry Documentation](https://docs.cosmos.network/main/core/telemetry.html)
+*   [Evmos Supported Telemetry Metrics](https://docs.evmos.org/protocol/telemetry.html)

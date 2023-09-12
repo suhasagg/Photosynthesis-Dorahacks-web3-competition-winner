@@ -239,8 +239,8 @@ Helper functions listed above assume querying (parts of the) application state
 using Tendermint RPC. For example, `GetChannel` relies on `QueryChannel`. RPC
 calls can fail if:
 
-- no response is received within some timeout or
-- malformed response is received.
+*   no response is received within some timeout or
+*   malformed response is received.
 
 In both cases, error handling logic should be defined by the caller. For
 example, in the former case, the caller might retry sending the same request to
@@ -291,5 +291,5 @@ func GetChannel(chain Chain,
 }
 ```
 
-If *LATEST_HEIGHT* is passed as a parameter, the data should be read (and the
+If *LATEST\_HEIGHT* is passed as a parameter, the data should be read (and the
 corresponding proof created) at the most recent height.

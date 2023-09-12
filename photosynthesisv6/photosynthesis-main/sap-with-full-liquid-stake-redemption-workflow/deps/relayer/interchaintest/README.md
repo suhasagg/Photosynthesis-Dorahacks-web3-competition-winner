@@ -15,15 +15,11 @@ This is provided as a nested module so that `go test ./...` from the root of the
 If you are developing a new relayer test for `interchaintest`, you may want to
 run:
 
-```
-go mod edit -replace=github.com/strangelove-ventures/interchaintest=../../../strangelove-ventures/interchaintest
-```
+    go mod edit -replace=github.com/strangelove-ventures/interchaintest=../../../strangelove-ventures/interchaintest
 
 from this directory. Be sure to drop the replace, with:
 
-```
-go mod edit -dropreplace=github.com/strangelove-ventures/interchaintest
-```
+    go mod edit -dropreplace=github.com/strangelove-ventures/interchaintest
 
 before you commit.
 
@@ -34,9 +30,7 @@ so using a commit hash.
 
 From the relayer/interchaintest directory, run:
 
-```
-go get github.com/strangelove-ventures/interchaintest@<COMMIT_HASH_HERE>
-```
+    go get github.com/strangelove-ventures/interchaintest@<COMMIT_HASH_HERE>
 
 Your go.mod file should update respectively.
 

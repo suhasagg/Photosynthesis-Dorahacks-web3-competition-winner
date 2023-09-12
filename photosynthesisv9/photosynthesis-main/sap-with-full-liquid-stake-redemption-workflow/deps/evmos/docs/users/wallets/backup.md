@@ -92,10 +92,8 @@ Enter passphrase to decrypt your key:
 
 ### Ethereum-Formatted Private Keys
 
-```
-$ evmosd keys unsafe-import-eth-key dev0-imported ./dev0.export
-Enter passphrase to encrypt your key:
-```
+    $ evmosd keys unsafe-import-eth-key dev0-imported ./dev0.export
+    Enter passphrase to encrypt your key:
 
 ### Verification
 

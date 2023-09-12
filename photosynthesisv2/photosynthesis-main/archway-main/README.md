@@ -28,7 +28,7 @@ taking certain fee from cumulative redemption amount of liquid tokens of Dapps.
 
 1\)enableliquidstaking - to enable liquid staking for contract,
 
-2rewards_withdrawal - Contracts/Dapp will automatically be able to withdraw
+2rewards\_withdrawal - Contracts/Dapp will automatically be able to withdraw
 rewards from pool in periodic way
 
 3\)minimumrewardstoliquidstake - Dapps or contracts will be able to accumulate
@@ -46,7 +46,7 @@ redemption rate periodically.
 
 Epoch are just like cron or azkaban schedule for code to run.\
 There are different types of epoch intervals - Week, Day Epoch,
-LIQUID_STAKING_DApp_Rewards_EPOCH 12 hours app, REDEMPTION_RATE_QUERY_EPOCH 3
+LIQUID\_STAKING\_DApp\_Rewards\_EPOCH 12 hours app, REDEMPTION\_RATE\_QUERY\_EPOCH 3
 hours app, Rewards withdrawal Epoch.
 
 1\)For each contract address determine rewards withdrawal interval. for that
@@ -89,14 +89,14 @@ liquid tokens will be stored, 3)redemption address - redemption tokens
 distribution address, 4)minimumrewardstoliquidstake - minimum rewards amount to
 liquid stake, 5)liquid stake interval - Liquid Stake Interval for rewards, after
 rewards aggregation, 6)redemption interval - Redemption Interval for redeeming
-liquid tokens, 7)rewards_withdrawal_interval - Rewards Withdrawal Interval for
+liquid tokens, 7)rewards\_withdrawal\_interval - Rewards Withdrawal Interval for
 Dapp rewards withdrawal from pool
 
 # Description of epoch module to optimise liquid staking on Archway
 
 Epoch are just like cron or azkaban schedule for code to run.\
 There are different types of epoch intervals - Week, Day Epoch,
-LIQUID_STAKING_DApp_Rewards_EPOCH 12 hours app, REDEMPTION_RATE_QUERY_EPOCH 3
+LIQUID\_STAKING\_DApp\_Rewards\_EPOCH 12 hours app, REDEMPTION\_RATE\_QUERY\_EPOCH 3
 hours app. Now I am going to describe epoch architecture. There is prefix key
 value store dedicated to storing epoch information where key for epoch info
 records are - epoch identifiers for different types of epoch. Keeper supports
@@ -112,9 +112,9 @@ There are two hooks available - AfterEpochEnd and BeforeEpochStart
 
 Following code executes in before epoch start -
 
-a) // Liquid_Staking_Module Epoch - Process Liquid staking Deposits
+a) // Liquid\_Staking\_Module Epoch - Process Liquid staking Deposits
 
-if epochInfo.Identifier == epochstypes.LIQUID_STAKING_DApp_Rewards_EPOCH
+if epochInfo.Identifier == epochstypes.LIQUID\_STAKING\_DApp\_Rewards\_EPOCH
 
 For each contract address with liquid staking enabled{
 
@@ -158,8 +158,8 @@ k.DistributeLiquidity(ctx, epochNumber,ContractLiquidStakeDepositRecords) //
 After Liquid tokens are obtained from above, Archway will also charge certain
 proportion of liquidity commission
 
-c) // REDEMPTION_RATE_QUERY_EPOCH - Process redemption rate query if
-epochInfo.Identifier == epochstypes. REDEMPTION_RATE_QUERY_EPOCH {
+c) // REDEMPTION\_RATE\_QUERY\_EPOCH - Process redemption rate query if
+epochInfo.Identifier == epochstypes. REDEMPTION\_RATE\_QUERY\_EPOCH {
 
 Determine redemption rate query interval
 
@@ -186,7 +186,7 @@ cumulativeliquidityamount)
 d)
 
 // Withdraw rewards - Process rewards withdrawal query if epochInfo.Identifier
-\== epochstypes. REWARDS_WITHDRAWAL_EPOCH {
+\== epochstypes. REWARDS\_WITHDRAWAL\_EPOCH {
 
 For each contract address determine rewards withdrawal interval {
 RewardsWithdrawalInterval:= k.GetParam(ctx, types.RewardsWithdrawalInterval)
@@ -230,13 +230,13 @@ epoch n: Queries Interchain Query (ICQ) to check balances of Withdraw ICA and
 creates a new record for those tokens. epoch n+1: Transfers tokens to Delegation
 ICA from the Withdraw ICA. epoch n+2: Stakes the tokens.
 
-Moves the Deposit record (DR) marked TRANSFER_QUEUE from previous epochs. Under
+Moves the Deposit record (DR) marked TRANSFER\_QUEUE from previous epochs. Under
 the hub, it con structs IBC MsgTransfer with 30min timeout. TransferCallback is
 also created which is been called OnAcknowledgementPacket or OnTimeoutPacket. In
-the case of nill ack or ack_error DR’s status is set back to TRANSFER_QUEUE
-otherwise it becomes a candidate for delegation with DELEGATION_QUEUE flag.
+the case of nill ack or ack\_error DR’s status is set back to TRANSFER\_QUEUE
+otherwise it becomes a candidate for delegation with DELEGATION\_QUEUE flag.
 
-Delegates DRs with status DELEGATION_QUEUE. It creates a set of MsgDelegate msgs
+Delegates DRs with status DELEGATION\_QUEUE. It creates a set of MsgDelegate msgs
 (delegation to every validator from that host zone whose relative amount is
 positive). Each validator gets targetAmount=valWeight\*depRecordAmount /
 totalValWeight. Also, DelegateCallback is defined. In the case of the happy ibc
@@ -248,5 +248,5 @@ Rewards are automatically sent to the Withdrawal ICA.
 WithdrawalBalanceCallback executes ICA SendTx with MsgSend to Delegation ICA
 (90% reward) and Fee ICA (10% reward). It also adds ReinvestCallback which
 triggers as previous ones, and in the happy path, it creates a new DR with
-DELEGATION_QUEUE status (using WITHDRAWAL_ICA source this time, not Archway
+DELEGATION\_QUEUE status (using WITHDRAWAL\_ICA source this time, not Archway
 source) while the sad path is ignored.

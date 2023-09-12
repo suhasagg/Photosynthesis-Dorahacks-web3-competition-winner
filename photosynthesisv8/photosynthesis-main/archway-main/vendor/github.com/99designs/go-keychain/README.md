@@ -154,6 +154,4 @@ Bindable package in `bind`. iOS project in `ios`. Run that project to test iOS.
 
 To re-generate framework:
 
-```
-(cd bind && gomobile bind -target=ios -tags=ios -o ../ios/bind.framework)
-```
+    (cd bind && gomobile bind -target=ios -tags=ios -o ../ios/bind.framework)

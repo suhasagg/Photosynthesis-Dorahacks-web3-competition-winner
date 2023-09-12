@@ -13,9 +13,9 @@ significant updates to the new version.
 
 Bump the version numbers in the following files:
 
-- contrib/rpm/bats.spec
-- libexec/bats-core/bats
-- package.json
+*   contrib/rpm/bats.spec
+*   libexec/bats-core/bats
+*   package.json
 
 Commit these changes (including the `docs/CHANGELOG.md` changes) in a commit
 with the message `Bats <VERSION>`, where `<VERSION>` is the new version number.
@@ -50,17 +50,17 @@ $ git push --follow-tags
 
 Then visit https://github.com/bats-core/bats-core/releases, and:
 
-- Click **Draft a new release**.
-- Select the new version tag.
-- Name the release: `Bats <VERSION>`.
-- Paste the same notes from the version tag annotation as the description,
-  except change the first line to read: `Released: YYYY-MM-DD`.
-- Click **Publish release**.
+*   Click **Draft a new release**.
+*   Select the new version tag.
+*   Name the release: `Bats <VERSION>`.
+*   Paste the same notes from the version tag annotation as the description,
+    except change the first line to read: `Released: YYYY-MM-DD`.
+*   Click **Publish release**.
 
 For more on `git push --follow-tags`, see:
 
-- [git push --follow-tags in the online manual][ft-man]
-- [Stack Overflow: How to push a tag to a remote repository using Git?][ft-so]
+*   [git push --follow-tags in the online manual][ft-man]
+*   [Stack Overflow: How to push a tag to a remote repository using Git?][ft-so]
 
 [ft-man]: https://git-scm.com/docs/git-push#git-push---follow-tags
 
@@ -119,11 +119,9 @@ Gitter][gitter]:
 
 [gitter]: https://gitter.im/bats-core/bats-core?at=5b42c9a57b811a6d63daacb5
 
-```
-v1.1.0 is now available via Homebrew and npm:
-https://github.com/bats-core/bats-core/releases/tag/v1.1.0
+    v1.1.0 is now available via Homebrew and npm:
+    https://github.com/bats-core/bats-core/releases/tag/v1.1.0
 
-It'll eventually be available in Alpine via the edge branch of the community
-repo once alpinelinux/aports#4696 gets merged. (Check /etc/apk/repositories to
-ensure this repo is enabled.)
-```
+    It'll eventually be available in Alpine via the edge branch of the community
+    repo once alpinelinux/aports#4696 gets merged. (Check /etc/apk/repositories to
+    ensure this repo is enabled.)

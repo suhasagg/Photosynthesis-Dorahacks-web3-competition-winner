@@ -29,14 +29,14 @@ list of streaming services for this App to employ.
 In `streamers.file` we include three configuration parameters for the file
 streaming service:
 
-1. `streamers.x.keys` contains the list of `StoreKey` names for the KVStores to
-   expose using this service. In order to expose *all* KVStores, we can include
-   `*` in this list. An empty list is equivalent to turning the service off.
-2. `streamers.file.write_dir` contains the path to the directory to write the
-   files to.
-3. `streamers.file.prefix` contains an optional prefix to prepend to the output
-   files to prevent potential collisions with other App `StreamingService`
-   output files.
+1.  `streamers.x.keys` contains the list of `StoreKey` names for the KVStores to
+    expose using this service. In order to expose *all* KVStores, we can include
+    `*` in this list. An empty list is equivalent to turning the service off.
+2.  `streamers.file.write_dir` contains the path to the directory to write the
+    files to.
+3.  `streamers.file.prefix` contains an optional prefix to prepend to the output
+    files to prevent potential collisions with other App `StreamingService`
+    output files.
 
 ##### Encoding
 

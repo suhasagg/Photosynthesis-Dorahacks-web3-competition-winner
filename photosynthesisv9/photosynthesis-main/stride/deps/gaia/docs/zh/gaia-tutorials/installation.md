@@ -42,13 +42,11 @@ gaiad version --long
 
 `gaiad`的返回应该类似于：
 
-```
-cosmos-sdk: 0.33.0
-git commit: 7b4104aced52aa5b59a96c28b5ebeea7877fc4f0
-go.sum hash: d156153bd5e128fec3868eca9a1397a63a864edb5cfa0ac486db1b574b8eecfe
-build tags: netgo ledger
-go version go1.12 linux/amd64
-```
+    cosmos-sdk: 0.33.0
+    git commit: 7b4104aced52aa5b59a96c28b5ebeea7877fc4f0
+    go.sum hash: d156153bd5e128fec3868eca9a1397a63a864edb5cfa0ac486db1b574b8eecfe
+    build tags: netgo ledger
+    go version go1.12 linux/amd64
 
 ##### Build Tags
 

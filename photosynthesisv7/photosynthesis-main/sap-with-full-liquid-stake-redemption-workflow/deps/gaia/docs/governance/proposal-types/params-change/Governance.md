@@ -18,14 +18,14 @@ The `gov` module is responsible for the on-chain governance system. In this
 system, holders of the native staking token of the chain may vote on proposals
 on a 1-token per 1-vote basis. The module supports:
 
-- **Proposal submission**: Users can submit proposals with a deposit. Once the
-  minimum deposit is reached, proposal enters voting period
-- **Vote**: Participants can vote on proposals that reached MinDeposit
-- **Inheritance and penalties**: Delegators inherit their validator's vote if
-  they don't vote themselves.
-- **Claiming deposit**: Users that deposited on proposals can recover their
-  deposits if the proposal was accepted OR if the proposal never entered voting
-  period.
+*   **Proposal submission**: Users can submit proposals with a deposit. Once the
+    minimum deposit is reached, proposal enters voting period
+*   **Vote**: Participants can vote on proposals that reached MinDeposit
+*   **Inheritance and penalties**: Delegators inherit their validator's vote if
+    they don't vote themselves.
+*   **Claiming deposit**: Users that deposited on proposals can recover their
+    deposits if the proposal was accepted OR if the proposal never entered voting
+    period.
 
 ## Governance notes on parameters
 
@@ -36,12 +36,12 @@ on a 1-token per 1-vote basis. The module supports:
 **The minimum deposit required for a proposal to enter the
 [voting period](#votingperiod), in micro-ATOMs.**
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.gov.depositparams.min_deposit }}`
-- [Proposal 47](https://www.mintscan.io/cosmos/proposals/47) change: `64000000`
-  `uatom`
-- `cosmoshub-4` default: `512000000` `uatom`
-- `cosmoshub-3` default: `512000000` `uatom`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.gov.depositparams.min_deposit }}`
+*   [Proposal 47](https://www.mintscan.io/cosmos/proposals/47) change: `64000000`
+    `uatom`
+*   `cosmoshub-4` default: `512000000` `uatom`
+*   `cosmoshub-3` default: `512000000` `uatom`
 
 Prior to a governance proposal entering the [voting period](#votingperiod) (ie.
 for the proposal to be voted upon), there must be at least a minimum number of
@@ -70,10 +70,10 @@ governance proposals.
 **The maximum amount of time that a proposal can accept deposit contributions
 before expiring, in nanoseconds.**
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.gov.depositparams.max_deposit_period}}`
-- `cosmoshub-4` default: `1209600000000000`
-- `cosmoshub-3` default: `1209600000000000`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.gov.depositparams.max_deposit_period}}`
+*   `cosmoshub-4` default: `1209600000000000`
+*   `cosmoshub-3` default: `1209600000000000`
 
 Prior to a governance proposal entering the [voting period](#votingperiod),
 there must be at least a minimum number of ATOMs deposited. This parameter
@@ -114,10 +114,10 @@ deposit in the voting period.
 **The maximum amount of time that a proposal can accept votes before the voting
 period concludes, in nanoseconds.**
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.gov.votingparams.voting_period}}`
-- `cosmoshub-4` default: `1209600000000000`
-- `cosmoshub-3` default: `1209600000000000`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.gov.votingparams.voting_period}}`
+*   `cosmoshub-4` default: `1209600000000000`
+*   `cosmoshub-3` default: `1209600000000000`
 
 Once a governance proposal enters the voting period, there is a maximum period
 of time that may elapse before the voting period concludes. This parameter
@@ -134,16 +134,16 @@ currently the same for any kind of governance proposal.
 Decreasing the value of the `votingperiod` subkey will decrease the time for
 voting on governance proposals. This will likely:
 
-1. decrease the proportion of the network that participates in voting, and
-2. decrease the likelihood that quorum will be reached.
+1.  decrease the proportion of the network that participates in voting, and
+2.  decrease the likelihood that quorum will be reached.
 
 ##### Increasing the value of `votingperiod`
 
 Increasing the value of the `votingperiod` subkey will increase the time for
 voting on governance proposals. This may:
 
-1. increase the proportion of the network that participates in voting, and
-2. increase the likelihood that quorum will be reached.
+1.  increase the proportion of the network that participates in voting, and
+2.  increase the likelihood that quorum will be reached.
 
 ##### Notes
 
@@ -160,9 +160,9 @@ power has voted in the second week of the voting period. Proposals 23, 19, and
 **The minimum proportion of network voting power required for a governance
 proposal's outcome to be considered valid.**
 
-- on-chain value: `{{ $themeConfig.currentParameters.gov.tallyparams.quorum}}`
-- `cosmoshub-4` default: `0.400000000000000000`
-- `cosmoshub-3` default: `0.400000000000000000`
+*   on-chain value: `{{ $themeConfig.currentParameters.gov.tallyparams.quorum}}`
+*   `cosmoshub-4` default: `0.400000000000000000`
+*   `cosmoshub-3` default: `0.400000000000000000`
 
 Quorum is required for the outcome of a governance proposal vote to be
 considered valid and for deposit contributors to recover their deposit amounts,
@@ -195,17 +195,17 @@ being burned.
 **The minimum proportion of participating voting power required for a governance
 proposal to pass.**
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.gov.tallyparams.threshold}}`
-- `cosmoshub-4` default: `0.500000000000000000`
-- `cosmoshub-3` default: `0.500000000000000000`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.gov.tallyparams.threshold}}`
+*   `cosmoshub-4` default: `0.500000000000000000`
+*   `cosmoshub-3` default: `0.500000000000000000`
 
 A simple majority 'yes' vote (ie. 50% of participating voting power) is required
 for a governance proposal vote to pass. Though necessary, a simple majority
 'yes' vote may not be sufficient to pass a proposal in two scenarios:
 
-1. Failure to reach [quorum](#quorum) of 40% network power or
-2. A 'no-with-veto' vote of 33.4% of participating voting power or greater.
+1.  Failure to reach [quorum](#quorum) of 40% network power or
+2.  A 'no-with-veto' vote of 33.4% of participating voting power or greater.
 
 If a governance proposal passes, deposit amounts are returned to contributors.
 If a text-based proposal passes, nothing is enacted automatically, but there is
@@ -223,28 +223,28 @@ ends.
 Decreasing the value of the `threshold` subkey will decrease the proportion of
 voting power required to pass a proposal. This may:
 
-1. increase the likelihood that a proposal will pass, and
-2. increase the likelihood that a minority group will effect changes to the
-   network.
+1.  increase the likelihood that a proposal will pass, and
+2.  increase the likelihood that a minority group will effect changes to the
+    network.
 
 ##### Increasing the value of `threshold`
 
 Increasing the value of the `threshold` subkey will increase the proportion of
 voting power required to pass a proposal. This may:
 
-1. decrease the likelihood that a proposal will pass, and
-2. decrease the likelihood that a minority group will effect changes to the
-   network.
+1.  decrease the likelihood that a proposal will pass, and
+2.  decrease the likelihood that a minority group will effect changes to the
+    network.
 
 #### `veto_threshold`
 
 **The minimum proportion of participating voting power to veto (ie. fail) a
 governance proposal.**
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.gov.tallyparams.veto_threshold}}`
-- `cosmoshub-4` default: `0.334000000000000000`
-- `cosmoshub-3` default: `0.334000000000000000`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.gov.tallyparams.veto_threshold}}`
+*   `cosmoshub-4` default: `0.334000000000000000`
+*   `cosmoshub-3` default: `0.334000000000000000`
 
 Though a simple majority 'yes' vote (ie. 50% of participating voting power) is
 required for a governance proposal vote to pass, a 'no-with-veto' vote of 33.4%
@@ -257,8 +257,8 @@ voting power to fail a proposal that would otherwise pass.
 Decreasing the value of the `veto_threshold` subkey will decrease the proportion
 of participating voting power required to veto. This will likely:
 
-1. enable a smaller minority group to prevent proposals from passing, and
-2. decrease the likelihood that contentious proposals will pass.
+1.  enable a smaller minority group to prevent proposals from passing, and
+2.  decrease the likelihood that contentious proposals will pass.
 
 ##### Increasing the value of `veto_threshold`
 

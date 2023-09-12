@@ -3,7 +3,7 @@
 [![godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/rs/zerolog)
 [![license](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://raw.githubusercontent.com/rs/zerolog/master/LICENSE)
 [![Build Status](https://travis-ci.org/rs/zerolog.svg?branch=master)](https://travis-ci.org/rs/zerolog)
-[![Coverage](http://gocover.io/\_badge/github.com/rs/zerolog)](http://gocover.io/github.com/rs/zerolog)
+[![Coverage](http://gocover.io/_badge/github.com/rs/zerolog)](http://gocover.io/github.com/rs/zerolog)
 
 The zerolog package provides a fast and simple logger dedicated to JSON output.
 
@@ -28,17 +28,17 @@ and add your company / project to the list.
 
 ## Features
 
-- [Blazing fast](#benchmarks)
-- [Low to zero allocation](#benchmarks)
-- [Leveled logging](#leveled-logging)
-- [Sampling](#log-sampling)
-- [Hooks](#hooks)
-- [Contextual fields](#contextual-logging)
-- `context.Context` integration
-- [Integration with `net/http`](#integration-with-nethttp)
-- [JSON and CBOR encoding formats](#binary-encoding)
-- [Pretty logging for development](#pretty-logging)
-- [Error Logging (with optional Stacktrace)](#error-logging)
+*   [Blazing fast](#benchmarks)
+*   [Low to zero allocation](#benchmarks)
+*   [Leveled logging](#leveled-logging)
+*   [Sampling](#log-sampling)
+*   [Hooks](#hooks)
+*   [Contextual fields](#contextual-logging)
+*   `context.Context` integration
+*   [Integration with `net/http`](#integration-with-nethttp)
+*   [JSON and CBOR encoding formats](#binary-encoding)
+*   [Pretty logging for development](#pretty-logging)
+*   [Error Logging (with optional Stacktrace)](#error-logging)
 
 ## Installation
 
@@ -138,13 +138,13 @@ func main() {
 
 **zerolog** allows for logging at the following levels (from highest to lowest):
 
-- panic (`zerolog.PanicLevel`, 5)
-- fatal (`zerolog.FatalLevel`, 4)
-- error (`zerolog.ErrorLevel`, 3)
-- warn (`zerolog.WarnLevel`, 2)
-- info (`zerolog.InfoLevel`, 1)
-- debug (`zerolog.DebugLevel`, 0)
-- trace (`zerolog.TraceLevel`, -1)
+*   panic (`zerolog.PanicLevel`, 5)
+*   fatal (`zerolog.FatalLevel`, 4)
+*   error (`zerolog.ErrorLevel`, 3)
+*   warn (`zerolog.WarnLevel`, 2)
+*   info (`zerolog.InfoLevel`, 1)
+*   debug (`zerolog.DebugLevel`, 0)
+*   trace (`zerolog.TraceLevel`, -1)
 
 You can set the Global logging level to any of these options using the
 `SetGlobalLevel` function in the zerolog package, passing in one of the given
@@ -623,50 +623,50 @@ func main() {
 
 Some settings can be changed and will be applied to all loggers:
 
-- `log.Logger`: You can set this value to customize the global logger (the one
-  used by package level methods).
-- `zerolog.SetGlobalLevel`: Can raise the minimum level of all loggers. Call
-  this with `zerolog.Disabled` to disable logging altogether (quiet mode).
-- `zerolog.DisableSampling`: If argument is `true`, all sampled loggers will
-  stop sampling and issue 100% of their log events.
-- `zerolog.TimestampFieldName`: Can be set to customize `Timestamp` field name.
-- `zerolog.LevelFieldName`: Can be set to customize level field name.
-- `zerolog.MessageFieldName`: Can be set to customize message field name.
-- `zerolog.ErrorFieldName`: Can be set to customize `Err` field name.
-- `zerolog.TimeFieldFormat`: Can be set to customize `Time` field value
-  formatting. If set with `zerolog.TimeFormatUnix`, `zerolog.TimeFormatUnixMs`
-  or `zerolog.TimeFormatUnixMicro`, times are formated as UNIX timestamp.
-- `zerolog.DurationFieldUnit`: Can be set to customize the unit for
-  time.Duration type fields added by `Dur` (default: `time.Millisecond`).
-- `zerolog.DurationFieldInteger`: If set to `true`, `Dur` fields are formatted
-  as integers instead of floats (default: `false`).
-- `zerolog.ErrorHandler`: Called whenever zerolog fails to write an event on its
-  output. If not set, an error is printed on the stderr. This handler must be
-  thread safe and non-blocking.
+*   `log.Logger`: You can set this value to customize the global logger (the one
+    used by package level methods).
+*   `zerolog.SetGlobalLevel`: Can raise the minimum level of all loggers. Call
+    this with `zerolog.Disabled` to disable logging altogether (quiet mode).
+*   `zerolog.DisableSampling`: If argument is `true`, all sampled loggers will
+    stop sampling and issue 100% of their log events.
+*   `zerolog.TimestampFieldName`: Can be set to customize `Timestamp` field name.
+*   `zerolog.LevelFieldName`: Can be set to customize level field name.
+*   `zerolog.MessageFieldName`: Can be set to customize message field name.
+*   `zerolog.ErrorFieldName`: Can be set to customize `Err` field name.
+*   `zerolog.TimeFieldFormat`: Can be set to customize `Time` field value
+    formatting. If set with `zerolog.TimeFormatUnix`, `zerolog.TimeFormatUnixMs`
+    or `zerolog.TimeFormatUnixMicro`, times are formated as UNIX timestamp.
+*   `zerolog.DurationFieldUnit`: Can be set to customize the unit for
+    time.Duration type fields added by `Dur` (default: `time.Millisecond`).
+*   `zerolog.DurationFieldInteger`: If set to `true`, `Dur` fields are formatted
+    as integers instead of floats (default: `false`).
+*   `zerolog.ErrorHandler`: Called whenever zerolog fails to write an event on its
+    output. If not set, an error is printed on the stderr. This handler must be
+    thread safe and non-blocking.
 
 ## Field Types
 
 ### Standard Types
 
-- `Str`
-- `Bool`
-- `Int`, `Int8`, `Int16`, `Int32`, `Int64`
-- `Uint`, `Uint8`, `Uint16`, `Uint32`, `Uint64`
-- `Float32`, `Float64`
+*   `Str`
+*   `Bool`
+*   `Int`, `Int8`, `Int16`, `Int32`, `Int64`
+*   `Uint`, `Uint8`, `Uint16`, `Uint32`, `Uint64`
+*   `Float32`, `Float64`
 
 ### Advanced Fields
 
-- `Err`: Takes an `error` and renders it as a string using the
-  `zerolog.ErrorFieldName` field name.
-- `Func`: Run a `func` only if the level is enabled.
-- `Timestamp`: Inserts a timestamp field with `zerolog.TimestampFieldName` field
-  name, formatted using `zerolog.TimeFieldFormat`.
-- `Time`: Adds a field with time formatted with `zerolog.TimeFieldFormat`.
-- `Dur`: Adds a field with `time.Duration`.
-- `Dict`: Adds a sub-key/value as a field of the event.
-- `RawJSON`: Adds a field with an already encoded JSON (`[]byte`)
-- `Hex`: Adds a field with value formatted as a hexadecimal string (`[]byte`)
-- `Interface`: Uses reflection to marshal the type.
+*   `Err`: Takes an `error` and renders it as a string using the
+    `zerolog.ErrorFieldName` field name.
+*   `Func`: Run a `func` only if the level is enabled.
+*   `Timestamp`: Inserts a timestamp field with `zerolog.TimestampFieldName` field
+    name, formatted using `zerolog.TimeFieldFormat`.
+*   `Time`: Adds a field with time formatted with `zerolog.TimeFieldFormat`.
+*   `Dur`: Adds a field with `time.Duration`.
+*   `Dict`: Adds a sub-key/value as a field of the event.
+*   `RawJSON`: Adds a field with an already encoded JSON (`[]byte`)
+*   `Hex`: Adds a field with value formatted as a hexadecimal string (`[]byte`)
+*   `Interface`: Uses reflection to marshal the type.
 
 Most fields are also available in the slice format (`Strs` for `[]string`,
 `Errs` for `[]error` etc.)
@@ -686,12 +686,12 @@ tested to work with zerolog library is [CSD](https://github.com/toravir/csd/).
 
 ## Related Projects
 
-- [grpc-zerolog](https://github.com/cheapRoc/grpc-zerolog): Implementation of
-  `grpclog.LoggerV2` interface using `zerolog`
-- [overlog](https://github.com/Trendyol/overlog): Implementation of
-  `Mapped Diagnostic Context` interface using `zerolog`
-- [zerologr](https://github.com/go-logr/zerologr): Implementation of
-  `logr.LogSink` interface using `zerolog`
+*   [grpc-zerolog](https://github.com/cheapRoc/grpc-zerolog): Implementation of
+    `grpclog.LoggerV2` interface using `zerolog`
+*   [overlog](https://github.com/Trendyol/overlog): Implementation of
+    `Mapped Diagnostic Context` interface using `zerolog`
+*   [zerologr](https://github.com/go-logr/zerologr): Implementation of
+    `logr.LogSink` interface using `zerolog`
 
 ## Benchmarks
 
@@ -710,8 +710,8 @@ BenchmarkLogFields-8       10000000     184 ns/op      0 B/op       0 allocs/op
 
 There are a few Go logging benchmarks and comparisons that include zerolog.
 
-- [imkira/go-loggers-bench](https://github.com/imkira/go-loggers-bench)
-- [uber-common/zap](https://github.com/uber-go/zap#performance)
+*   [imkira/go-loggers-bench](https://github.com/imkira/go-loggers-bench)
+*   [uber-common/zap](https://github.com/uber-go/zap#performance)
 
 Using Uber's zap comparison benchmark:
 

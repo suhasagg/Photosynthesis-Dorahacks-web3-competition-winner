@@ -1,6 +1,9 @@
 ***
 
-## title: "Interchainquery"&#xA;excerpt: ""&#xA;category: 6392913957c533007128548e
+title: "Interchainquery"
+excerpt: ""
+category: 6392913957c533007128548e
+----------------------------------
 
 <!--
 order: 0
@@ -23,11 +26,11 @@ is in x/stakeibc/keeper/callbacks.go.
 
 ## Contents
 
-1. **[Concepts](#concepts)**
-2. **[State](#state)**
-3. **[Events](#events)**
-4. **[Keeper](#keeper)**
-5. **[Msgs](#msgs)**
+1.  **[Concepts](#concepts)**
+2.  **[State](#state)**
+3.  **[Events](#events)**
+4.  **[Keeper](#keeper)**
+5.  **[Msgs](#msgs)**
 
 ## State
 
@@ -39,17 +42,17 @@ from query to query, as defined in `proto/interchainquery/v1/genesis.proto`
 `Query` has information types that pertain to the query itself. `Query` keeps
 the following:
 
-1. `id` keeps the query identification string.
-2. `connection_id` keeps the id of the channel or connection between the
-   controller and host chain.
-3. `chain_id` keeps the id of the queried chain.
-4. `query_type` keeps the type of interchain query
-5. `request` keeps an bytecode encoded version of the interchain query
-6. `period` TODO
-7. `last_height` keeps the blockheight of the last block before the query was
-   made
-8. `callback_id` keeps the function that will be called by the interchain query
-9. `ttl` TODO
+1.  `id` keeps the query identification string.
+2.  `connection_id` keeps the id of the channel or connection between the
+    controller and host chain.
+3.  `chain_id` keeps the id of the queried chain.
+4.  `query_type` keeps the type of interchain query
+5.  `request` keeps an bytecode encoded version of the interchain query
+6.  `period` TODO
+7.  `last_height` keeps the blockheight of the last block before the query was
+    made
+8.  `callback_id` keeps the function that will be called by the interchain query
+9.  `ttl` TODO
 10. `height` keeps the height at which the ICQ query should execute on the host
     zone. This is often `0`, meaning the query should execute at the latest
     height on the host zone.
@@ -57,10 +60,10 @@ the following:
 `DataPoint` has information types that pertain to the data that is queried.
 `DataPoint` keeps the following:
 
-1. `id` keeps the identification string of the datapoint
-2. `remote_height` keeps the block height of the queried chain
-3. `local_height` keeps the block height of the querying chain
-4. `value` keeps the bytecode value of the data retrieved by the Query
+1.  `id` keeps the identification string of the datapoint
+2.  `remote_height` keeps the block height of the queried chain
+3.  `local_height` keeps the block height of the querying chain
+4.  `value` keeps the bytecode value of the data retrieved by the Query
 
 ## Events
 

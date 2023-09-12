@@ -70,10 +70,10 @@ the documentation. You can also check the instructions to
 The following chat channels and forums are a great spot to ask questions about
 Evmos:
 
-- [Evmos Twitter](https://twitter.com/EvmosOrg)
-- [Evmos Discord](https://discord.gg/evmos)
-- [Evmos Forum](https://commonwealth.im/evmos)
-- [Tharsis Twitter](https://twitter.com/TharsisHQ)
+*   [Evmos Twitter](https://twitter.com/EvmosOrg)
+*   [Evmos Discord](https://discord.gg/evmos)
+*   [Evmos Forum](https://commonwealth.im/evmos)
+*   [Tharsis Twitter](https://twitter.com/TharsisHQ)
 
 ## Contributing
 

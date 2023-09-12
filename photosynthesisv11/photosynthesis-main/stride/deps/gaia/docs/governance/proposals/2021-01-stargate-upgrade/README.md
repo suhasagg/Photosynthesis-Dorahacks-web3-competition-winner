@@ -45,28 +45,28 @@ and organizational risks outlined in the
 It was also an attempt to create a process for complex future on-chain upgrades
 on the Cosmos Hub. That included the following steps:
 
-1. Run the Stargate Testnet and use this as an integration testing target with
-   widest possible ecosystem participation to help confirm the readiness of the
-   release software.
+1.  Run the Stargate Testnet and use this as an integration testing target with
+    widest possible ecosystem participation to help confirm the readiness of the
+    release software.
 
-2. Engage and support critical partners during the integration process so that
-   partners are able to actively participate in the testing process and provide
-   insights into their success with the upgrade.
+2.  Engage and support critical partners during the integration process so that
+    partners are able to actively participate in the testing process and provide
+    insights into their success with the upgrade.
 
-3. Dedicate significant resources in terms of full time human resources and
-   documentation efforts to ensure that everyone integrated into the Cosmos Hub
-   can self-certify as Stargate-ready.
+3.  Dedicate significant resources in terms of full time human resources and
+    documentation efforts to ensure that everyone integrated into the Cosmos Hub
+    can self-certify as Stargate-ready.
 
-4. Report back to the Hub on the success of the integration process.
+4.  Report back to the Hub on the success of the integration process.
 
-   - We expect that the primary responsibility of the Cosmos Hub is to assess
-     whether we have mitigated the above risks sufficiently.
+    *   We expect that the primary responsibility of the Cosmos Hub is to assess
+        whether we have mitigated the above risks sufficiently.
 
-   - Provide a written report of the entire Stargate effort to enable Hub
-     governance to make an informed decision.
+    *   Provide a written report of the entire Stargate effort to enable Hub
+        governance to make an informed decision.
 
-5. At conclusion, we will indicate why we have confidence that an upgrade won't
-   be disruptive to the Hub’s ecosystem.
+5.  At conclusion, we will indicate why we have confidence that an upgrade won't
+    be disruptive to the Hub’s ecosystem.
 
 ## Stargate Plan Results
 
@@ -163,27 +163,27 @@ Cosmos Stargate includes the following steps:
 
 This section is with the current `gaia 2.0.*` implementation.
 
-1. Validators should set their `gaia` with a halt time of `1611813600`ie. 06:00
-   UTC on Jan 28th in Unix time.
+1.  Validators should set their `gaia` with a halt time of `1611813600`ie. 06:00
+    UTC on Jan 28th in Unix time.
 
-2. Validators should then export the current cosmos state with
-   `gaiad export > cosmoshub-3-export.json`
+2.  Validators should then export the current cosmos state with
+    `gaiad export > cosmoshub-3-export.json`
 
-3. Validators should determine the height of the last block as
-   `last-cosmoshub-3_block`.
+3.  Validators should determine the height of the last block as
+    `last-cosmoshub-3_block`.
 
-4. Validators should back up their `.gaiad` directory.
+4.  Validators should back up their `.gaiad` directory.
 
 This section is with the upgraded `gaia 3.0.*` implemenataion.
 
-1. Validators should then migrate the exported genesis state.
-   `gaiad migrate cosmoshub-3-export.json --chain-id=cosmoshub-4 --initial-height [last_cosmoshub-3_block+1] > genesis.json`
-2. Validators should (**AFTER ENSURING IT IS BACKED UP**!) delete their
-   `~/.gaiad` directory and create a new one with `gaiad init [name]` and then
-   edit their configuration files or recover the config files from backups.
-3. Validators should then start `cosmoshub-4` with `gaiad start`. Automated
-   audits of the genesis state can take 30-120 min using the crisis module. This
-   can be disabled by `gaiad start --x-crisis-skip-assert-invariants`.
+1.  Validators should then migrate the exported genesis state.
+    `gaiad migrate cosmoshub-3-export.json --chain-id=cosmoshub-4 --initial-height [last_cosmoshub-3_block+1] > genesis.json`
+2.  Validators should (**AFTER ENSURING IT IS BACKED UP**!) delete their
+    `~/.gaiad` directory and create a new one with `gaiad init [name]` and then
+    edit their configuration files or recover the config files from backups.
+3.  Validators should then start `cosmoshub-4` with `gaiad start`. Automated
+    audits of the genesis state can take 30-120 min using the crisis module. This
+    can be disabled by `gaiad start --x-crisis-skip-assert-invariants`.
 
 Validators should expect that at least 16GB of RAM needs to be provisioned to
 process the first new block on cosmoshub-4.
@@ -195,10 +195,10 @@ process the first new block on cosmoshub-4.
 We propose scheduling the Cosmoshub-3 to Cosmoshub-4 upgrade for Thursday Jan
 28th, 2021 at 0600 UTC
 
-- West Coast USA: 10 PM on Jan 27
-- East Coast USA: 1 AM on Jan 28
-- Central Europe: 7 AM on Jan 28
-- Seoul: 5 PM on Jan 28
+*   West Coast USA: 10 PM on Jan 27
+*   East Coast USA: 1 AM on Jan 28
+*   Central Europe: 7 AM on Jan 28
+*   Seoul: 5 PM on Jan 28
 
 ## The git commit of Gaia that we are upgrading to
 
@@ -228,15 +228,15 @@ completed end to end testing. We expect a hard deadline to be motivating.
 There are multiple circumstances where the proposal should be abandoned even if
 it passes:
 
-1. A critical vulnerability may be found in the software. If the development
-   teams change their recommended version of gaia, the validator set should
-   implicitly abandon this upgrade procedure. A future proposal will be made to
-   the Hub to upgrade to the new target commit.
+1.  A critical vulnerability may be found in the software. If the development
+    teams change their recommended version of gaia, the validator set should
+    implicitly abandon this upgrade procedure. A future proposal will be made to
+    the Hub to upgrade to the new target commit.
 
-2. The migration process fails could fail to produce a valid cosmoshub-4 genesis
-   file. This would manifest as ad-hoc changes to genesis needed to start or a
-   failure to produce blocks from `cosmoshub-4`. In this case, the validator set
-   should restart cosmoshub-3 at `last-cosmoshub-3_block` and a future
-   governance proposal will be done to initiate another upgrade.
+2.  The migration process fails could fail to produce a valid cosmoshub-4 genesis
+    file. This would manifest as ad-hoc changes to genesis needed to start or a
+    failure to produce blocks from `cosmoshub-4`. In this case, the validator set
+    should restart cosmoshub-3 at `last-cosmoshub-3_block` and a future
+    governance proposal will be done to initiate another upgrade.
 
 <!-- markdown-link-check-enable -->

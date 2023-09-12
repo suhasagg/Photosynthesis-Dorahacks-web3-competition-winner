@@ -29,16 +29,16 @@ filesystem for full interoperability.
 
 ## Afero Features
 
-- A single consistent API for accessing a variety of filesystems
-- Interoperation between a variety of file system types
-- A set of interfaces to encourage and enforce interoperability between backends
-- An atomic cross platform memory backed file system
-- Support for compositional (union) file systems by combining multiple file
-  systems acting as one
-- Specialized backends which modify existing filesystems (Read Only, Regexp
-  filtered)
-- A set of utility functions ported from io, ioutil & hugo to be afero aware
-- Wrapper for go 1.16 filesystem abstraction `io/fs.FS`
+*   A single consistent API for accessing a variety of filesystems
+*   Interoperation between a variety of file system types
+*   A set of interfaces to encourage and enforce interoperability between backends
+*   An atomic cross platform memory backed file system
+*   Support for compositional (union) file systems by combining multiple file
+    systems acting as one
+*   Specialized backends which modify existing filesystems (Read Only, Regexp
+    filtered)
+*   A set of utility functions ported from io, ioutil & hugo to be afero aware
+*   Wrapper for go 1.16 filesystem abstraction `io/fs.FS`
 
 # Using Afero
 
@@ -46,18 +46,16 @@ Afero is easy to use and easier to adopt.
 
 A few different ways you could use Afero:
 
-- Use the interfaces alone to define your own file system.
-- Wrapper for the OS packages.
-- Define different filesystems for different parts of your application.
-- Use Afero for mock filesystems while testing
+*   Use the interfaces alone to define your own file system.
+*   Wrapper for the OS packages.
+*   Define different filesystems for different parts of your application.
+*   Use Afero for mock filesystems while testing
 
 ## Step 1: Install Afero
 
 First use go get to install the latest version of the library.
 
-```
-$ go get github.com/spf13/afero
-```
+    $ go get github.com/spf13/afero
 
 Next include Afero in your application.
 
@@ -202,11 +200,11 @@ and the file access would be fast while also saving you from all the annoying
 issues with deleting temporary files, Windows file locking, etc. The MemMapFs
 backend is perfect for testing.
 
-- Much faster than performing I/O operations on disk
-- Avoid security issues and permissions
-- Far more control. 'rm -rf /' with confidence
-- Test setup is far more easier to do
-- No test cleanup needed
+*   Much faster than performing I/O operations on disk
+*   Avoid security issues and permissions
+*   Far more control. 'rm -rf /' with confidence
+*   Test setup is far more easier to do
+*   No test cleanup needed
 
 One way to accomplish this is to define a variable as mentioned above. In your
 application this will be set to afero.NewOsFs() during testing you can set it to
@@ -285,14 +283,14 @@ credentials or use `opts` in `NewGcsFS` to configure access to your GCS bucket.
 
 Some known limitations of the existing implementation:
 
-- No Chmod support - The GCS ACL could probably be mapped to \*nix style
-  permissions but that would add another level of complexity and is ignored in
-  this version.
-- No Chtimes support - Could be simulated with attributes (gcs a/m-times are set
-  implicitly) but that's is left for another version.
-- Not thread safe - Also assumes all file operations are done through the same
-  instance of the GcsFs. File operations between different GcsFs instances are
-  not guaranteed to be consistent.
+*   No Chmod support - The GCS ACL could probably be mapped to \*nix style
+    permissions but that would add another level of complexity and is ignored in
+    this version.
+*   No Chtimes support - Could be simulated with attributes (gcs a/m-times are set
+    implicitly) but that's is left for another version.
+*   Not thread safe - Also assumes all file operations are done through the same
+    instance of the GcsFs. File operations between different GcsFs instances are
+    not guaranteed to be consistent.
 
 ## Filtering Backends
 
@@ -413,8 +411,8 @@ leaving the base filesystem (OsFs) untouched.
 The following is a short list of possible backends we hope someone will
 implement:
 
-- SSH
-- S3
+*   SSH
+*   S3
 
 # About the project
 
@@ -443,20 +441,20 @@ See the [Releases Page](https://github.com/spf13/afero/releases).
 
 ## Contributing
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+1.  Fork it
+2.  Create your feature branch (`git checkout -b my-new-feature`)
+3.  Commit your changes (`git commit -am 'Add some feature'`)
+4.  Push to the branch (`git push origin my-new-feature`)
+5.  Create new Pull Request
 
 ## Contributors
 
 Names in no particular order:
 
-- [spf13](https://github.com/spf13)
-- [jaqx0r](https://github.com/jaqx0r)
-- [mbertschler](https://github.com/mbertschler)
-- [xor-gate](https://github.com/xor-gate)
+*   [spf13](https://github.com/spf13)
+*   [jaqx0r](https://github.com/jaqx0r)
+*   [mbertschler](https://github.com/mbertschler)
+*   [xor-gate](https://github.com/xor-gate)
 
 ## License
 

@@ -6,7 +6,7 @@ This library supports TOML version [v1.0.0-rc.3](https://toml.io/en/v1.0.0-rc.3)
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/pelletier/go-toml.svg)](https://pkg.go.dev/github.com/pelletier/go-toml)
 [![license](https://img.shields.io/github/license/pelletier/go-toml.svg)](https://github.com/pelletier/go-toml/blob/master/LICENSE)
-[![Build Status](https://dev.azure.com/pelletierthomas/go-toml-ci/\_apis/build/status/pelletier.go-toml?branchName=master)](https://dev.azure.com/pelletierthomas/go-toml-ci/\_build/latest?definitionId=1\&branchName=master)
+[![Build Status](https://dev.azure.com/pelletierthomas/go-toml-ci/_apis/build/status/pelletier.go-toml?branchName=master)](https://dev.azure.com/pelletierthomas/go-toml-ci/_build/latest?definitionId=1\&branchName=master)
 [![codecov](https://codecov.io/gh/pelletier/go-toml/branch/master/graph/badge.svg)](https://codecov.io/gh/pelletier/go-toml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/pelletier/go-toml)](https://goreportcard.com/report/github.com/pelletier/go-toml)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpelletier%2Fgo-toml.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpelletier%2Fgo-toml?ref=badge_shield)
@@ -44,12 +44,12 @@ deprecated.
 Go-toml provides the following features for using data parsed from TOML
 documents:
 
-- Load TOML documents from files and string data
-- Easily navigate TOML structure using Tree
-- Marshaling and unmarshaling to and from data structures
-- Line & column position data for all parsed elements
-- [Query support similar to JSON-Path](query/)
-- Syntax errors contain line and column numbers
+*   Load TOML documents from files and string data
+*   Easily navigate TOML structure using Tree
+*   Marshaling and unmarshaling to and from data structures
+*   Line & column position data for all parsed elements
+*   [Query support similar to JSON-Path](query/)
+*   Syntax errors contain line and column numbers
 
 ## Import
 
@@ -115,26 +115,20 @@ The documentation and additional examples are available at
 
 Go-toml provides three handy command line tools:
 
-- `tomll`: Reads TOML files and lints them.
+*   `tomll`: Reads TOML files and lints them.
 
-  ```
-  go install github.com/pelletier/go-toml/cmd/tomll
-  tomll --help
-  ```
+        go install github.com/pelletier/go-toml/cmd/tomll
+        tomll --help
 
-- `tomljson`: Reads a TOML file and outputs its JSON representation.
+*   `tomljson`: Reads a TOML file and outputs its JSON representation.
 
-  ```
-  go install github.com/pelletier/go-toml/cmd/tomljson
-  tomljson --help
-  ```
+        go install github.com/pelletier/go-toml/cmd/tomljson
+        tomljson --help
 
-- `jsontoml`: Reads a JSON file and outputs a TOML representation.
+*   `jsontoml`: Reads a JSON file and outputs a TOML representation.
 
-  ```
-  go install github.com/pelletier/go-toml/cmd/jsontoml
-  jsontoml --help
-  ```
+        go install github.com/pelletier/go-toml/cmd/jsontoml
+        jsontoml --help
 
 ### Docker image
 
@@ -142,16 +136,12 @@ Those tools are also available as a Docker image from
 [dockerhub](https://hub.docker.com/r/pelletier/go-toml). For example, to use
 `tomljson`:
 
-```
-docker run -v $PWD:/workdir pelletier/go-toml tomljson /workdir/example.toml
-```
+    docker run -v $PWD:/workdir pelletier/go-toml tomljson /workdir/example.toml
 
 Only master (`latest`) and tagged versions are published to dockerhub. You can
 build your own image as usual:
 
-```
-docker build -t go-toml .
-```
+    docker build -t go-toml .
 
 ## Contribute
 

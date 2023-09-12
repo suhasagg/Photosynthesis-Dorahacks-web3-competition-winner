@@ -42,28 +42,28 @@ gaiad config chain-id cosmoshub-2
 
 키의 형태는 총 3개가 있습니다:
 
-- `cosmos`
+*   `cosmos`
 
-  - `gaiad keys add`로 생성되는 계정 키
-  - 자금을 받는데 사용
-  - 예시) `cosmos15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc`
+    *   `gaiad keys add`로 생성되는 계정 키
+    *   자금을 받는데 사용
+    *   예시) `cosmos15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc`
 
-- `cosmosvaloper`
+*   `cosmosvaloper`
 
-  - 특정 검증인을 운영자와 연관하는데 사용됨
-  - 스테이킹 명령 요청에 이용됨
-  - 예시) `cosmosvaloper1carzvgq3e6y3z5kz5y6gxp3wpy3qdrv928vyah`
+    *   특정 검증인을 운영자와 연관하는데 사용됨
+    *   스테이킹 명령 요청에 이용됨
+    *   예시) `cosmosvaloper1carzvgq3e6y3z5kz5y6gxp3wpy3qdrv928vyah`
 
-- `cosmospub`
-  - `gaiad keys add`로 생성되는 계정 키
-  - 예시)
-    `cosmospub1zcjduc3q7fu03jnlu2xpl75s2nkt7krm6grh4cc5aqth73v0zwmea25wj2hsqhlqzm`
+*   `cosmospub`
+    *   `gaiad keys add`로 생성되는 계정 키
+    *   예시)
+        `cosmospub1zcjduc3q7fu03jnlu2xpl75s2nkt7krm6grh4cc5aqth73v0zwmea25wj2hsqhlqzm`
 
-- `cosmosvalconspub`
-  - `gaiad init`로 새로운 노드가 생성될때 같이 생성되는 키.
-  - `gaiad tendermint show-validator` 명령으로 키 값을 확인할 수 있음
-  - 예시)
-    `cosmosvalconspub1zcjduepq0ms2738680y72v44tfyqm3c9ppduku8fs6sr73fx7m666sjztznqzp2emf`
+*   `cosmosvalconspub`
+    *   `gaiad init`로 새로운 노드가 생성될때 같이 생성되는 키.
+    *   `gaiad tendermint show-validator` 명령으로 키 값을 확인할 수 있음
+    *   예시)
+        `cosmosvalconspub1zcjduepq0ms2738680y72v44tfyqm3c9ppduku8fs6sr73fx7m666sjztznqzp2emf`
 
 #### 키 생성하기
 
@@ -329,12 +329,12 @@ gaiad query txs --events='message.sender=cosmos1...' --page=1 --limit=20
 
 각 SDK 모듈에 대한 `events`는 여기에서 확인할 수 있습니다:
 
-- [Staking events](https://github.com/cosmos/cosmos-sdk/tree/main/x/staking#events)
-- [Governance events](https://github.com/cosmos/cosmos-sdk/tree/main/x/gov#events)
-- [Slashing events](https://github.com/cosmos/cosmos-sdk/tree/main/x/slashing#events)
-- [Distribution events](https://github.com/cosmos/cosmos-sdk/tree/main/x/distribution#events)
-- [Bank events](https://github.com/cosmos/cosmos-sdk/tree/main/x/bank#events)
-  :::
+*   [Staking events](https://github.com/cosmos/cosmos-sdk/tree/main/x/staking#events)
+*   [Governance events](https://github.com/cosmos/cosmos-sdk/tree/main/x/gov#events)
+*   [Slashing events](https://github.com/cosmos/cosmos-sdk/tree/main/x/slashing#events)
+*   [Distribution events](https://github.com/cosmos/cosmos-sdk/tree/main/x/distribution#events)
+*   [Bank events](https://github.com/cosmos/cosmos-sdk/tree/main/x/bank#events)
+    :::
 
 #### 트랜잭션 해시로 검색하기
 
@@ -547,9 +547,9 @@ gaiad query staking params
 
 위 명령어는 다음과 같은 정보를 표기합니다:
 
-- 언본딩 기간
-- 최대 검증인 수
-- 스테이킹 코인 표기
+*   언본딩 기간
+*   최대 검증인 수
+*   스테이킹 코인 표기
 
 해당 값은 거버넌스 절차의 `ParameterChange`(파라미터 변경) 프로포절을 통해서 변
 경됩니다.
@@ -565,10 +565,10 @@ gaiad query staking pool
 
 `pool` 명령은 다음과 같은 정보에 대한 현재 값을 제공합니다:
 
-- 본딩된 토큰 / 본딩 되어있지 않은 토큰
-- 총 토큰 수량
-- 연 인플레이션 비율과 가장 최근에 인플레이션이 변경된 블록 높이
-- 가장 최근 기록된 bonded shares
+*   본딩된 토큰 / 본딩 되어있지 않은 토큰
+*   총 토큰 수량
+*   연 인플레이션 비율과 가장 최근에 인플레이션이 변경된 블록 높이
+*   가장 최근 기록된 bonded shares
 
 ##### 검증인 위임 조회하기
 
@@ -587,18 +587,18 @@ gaiad query staking pool
 
 다음은 투표 절차에 대한 정보입니다:
 
-- 투표권은 본딩된 `Atom`을 소유한 유저에게만 주어지며, `본딩된 아톰 1개 = 1표`
-  기준으로 집계됩니다
-- 투표권을 행사하지 않은 위임자는 본인이 위임한 검증인의 투표를 따르게 됩니다
-- 표는 각 프로포절의 투표 마감 시점(메인넷 기준 2주)에서 집계됩니다. 각 계정은
-  투표기간 중 표를 변경할 수 있으며(트랜잭션 수수료는 부과됩니다), 가장 마지막
-  표가 유효한 표로 집계됩니다
-- 투표자들은 `Yes`, `No`, `NoWithVeto`와 `Abstain` 중에서 하나를 선택하여 투표할
-  수 있습니다
-- 프로포절은 다음 조건을 충족할 경우에만 통과한 것으로 간주됩니다:
-  - `(YesVote/(YesVotes+NoVotes+NoWithVetoVotes)) > 1/2`
-  - `(NoWithVetoVotes/(YesVotes+NoVotes+NoWithVetoVotes)) < 1/3`
-  - `((YesVotes+NoVotes+NoWithVetoVotes) / totalBondedStake) >= quorum`
+*   투표권은 본딩된 `Atom`을 소유한 유저에게만 주어지며, `본딩된 아톰 1개 = 1표`
+    기준으로 집계됩니다
+*   투표권을 행사하지 않은 위임자는 본인이 위임한 검증인의 투표를 따르게 됩니다
+*   표는 각 프로포절의 투표 마감 시점(메인넷 기준 2주)에서 집계됩니다. 각 계정은
+    투표기간 중 표를 변경할 수 있으며(트랜잭션 수수료는 부과됩니다), 가장 마지막
+    표가 유효한 표로 집계됩니다
+*   투표자들은 `Yes`, `No`, `NoWithVeto`와 `Abstain` 중에서 하나를 선택하여 투표할
+    수 있습니다
+*   프로포절은 다음 조건을 충족할 경우에만 통과한 것으로 간주됩니다:
+    *   `(YesVote/(YesVotes+NoVotes+NoWithVetoVotes)) > 1/2`
+    *   `(NoWithVetoVotes/(YesVotes+NoVotes+NoWithVetoVotes)) < 1/3`
+    *   `((YesVotes+NoVotes+NoWithVetoVotes) / totalBondedStake) >= quorum`
 
 거버넌스 절차에 대한 더 자세한 정보는
 [거버넌스 모듈 스펙](./../spec/governance)을 확인하세요.

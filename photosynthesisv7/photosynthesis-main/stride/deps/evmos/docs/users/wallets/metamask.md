@@ -6,7 +6,7 @@ order: 2
 
 Connect your Metamask wallet with Evmos. {synopsis}
 
-- [Install Metamask](https://metamask.io/download/) {prereq}
+*   [Install Metamask](https://metamask.io/download/) {prereq}
 
 The [MetaMask](https://metamask.io/) browser extension is a wallet for accessing
 Ethereum-enabled applications and managing user identities. It can be used to
@@ -35,31 +35,31 @@ Alternatively, to get the full Chain ID from Genesis, check the
 
 Here is the list of fields that you can use to paste on Metamask:
 
-- Mainnet
+*   Mainnet
 
-  - **Network Name:** `{{ $themeConfig.project.name }} Mainnet`
-  - **New RPC URL:** `{{ $themeConfig.project.rpc_url }}`
-  - **Chain ID:** `{{ $themeConfig.project.chain_id }}`
-  - **Currency Symbol (optional):** `{{ $themeConfig.project.ticker }}`
-  - **Block Explorer URL (optional):**
-    `{{ $themeConfig.project.evm_explorer_url }}`
+    *   **Network Name:** `{{ $themeConfig.project.name }} Mainnet`
+    *   **New RPC URL:** `{{ $themeConfig.project.rpc_url }}`
+    *   **Chain ID:** `{{ $themeConfig.project.chain_id }}`
+    *   **Currency Symbol (optional):** `{{ $themeConfig.project.ticker }}`
+    *   **Block Explorer URL (optional):**
+        `{{ $themeConfig.project.evm_explorer_url }}`
 
-- Testnet
+*   Testnet
 
-  - **Network Name:** `{{ $themeConfig.project.name }} Testnet`
-  - **New RPC URL:** `{{ $themeConfig.project.rpc_url_testnet }}`
-  - **Chain ID:** `{{ $themeConfig.project.testnet_chain_id }}`
-  - **Currency Symbol (optional):** `{{ $themeConfig.project.testnet_ticker }}`
-  - **Block Explorer URL (optional):**
-    `{{ $themeConfig.project.testnet_evm_explorer_url }}`
+    *   **Network Name:** `{{ $themeConfig.project.name }} Testnet`
+    *   **New RPC URL:** `{{ $themeConfig.project.rpc_url_testnet }}`
+    *   **Chain ID:** `{{ $themeConfig.project.testnet_chain_id }}`
+    *   **Currency Symbol (optional):** `{{ $themeConfig.project.testnet_ticker }}`
+    *   **Block Explorer URL (optional):**
+        `{{ $themeConfig.project.testnet_evm_explorer_url }}`
 
-- Local Node
+*   Local Node
 
-  - **Network Name:** `{{ $themeConfig.project.name }} Local`
-  - **New RPC URL:** `{{ $themeConfig.project.rpc_url_local }}`
-  - **Chain ID:** `{{ $themeConfig.project.testnet_chain_id }}`
-  - **Currency Symbol (optional):** `{{ $themeConfig.project.testnet_ticker }}`
-  - **Block Explorer URL (optional):** `n/a`
+    *   **Network Name:** `{{ $themeConfig.project.name }} Local`
+    *   **New RPC URL:** `{{ $themeConfig.project.rpc_url_local }}`
+    *   **Chain ID:** `{{ $themeConfig.project.testnet_chain_id }}`
+    *   **Currency Symbol (optional):** `{{ $themeConfig.project.testnet_ticker }}`
+    *   **Block Explorer URL (optional):** `n/a`
 
 ## Import Account to Metamask
 
@@ -68,11 +68,11 @@ Here is the list of fields that you can use to paste on Metamask:
 Once you have added {{ $themeConfig.project.name }} to the Metamask `Networks`,
 you can automatically import your accounts by:
 
-1. Go to the official EVM Chain ID Registry website:
-   [chainlist.org](https://chainlist.org/)
-2. Search for `"Evmos"` ![chainlist.org website](./../../img/chainlist.png)
-3. Click the `Connect Wallet` button under `Evmos Testnet`
-   ![add accounts via chainlist](./../../img/chainlist_metamask.png)
+1.  Go to the official EVM Chain ID Registry website:
+    [chainlist.org](https://chainlist.org/)
+2.  Search for `"Evmos"` ![chainlist.org website](./../../img/chainlist.png)
+3.  Click the `Connect Wallet` button under `Evmos Testnet`
+    ![add accounts via chainlist](./../../img/chainlist_metamask.png)
 
 ### Manual Import
 

@@ -52,8 +52,8 @@ evmosd tendermint show-node-id
 ac29d21d0a6885465048a4481d16c12f59b2e58b
 ```
 
-- **Peer Format**: `node-id@ip:port`
-- **Example**: `ac29d21d0a6885465048a4481d16c12f59b2e58b@143.198.224.124:26656`
+*   **Peer Format**: `node-id@ip:port`
+*   **Example**: `ac29d21d0a6885465048a4481d16c12f59b2e58b@143.198.224.124:26656`
 
 ### Healthy peers
 

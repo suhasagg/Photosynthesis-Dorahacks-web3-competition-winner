@@ -6,263 +6,263 @@
 
 ## Table of Contents
 
-- [evmos/claims/v1/claims.proto](#evmos/claims/v1/claims.proto)
+*   [evmos/claims/v1/claims.proto](#evmos/claims/v1/claims.proto)
 
-  - [Claim](#evmos.claims.v1.Claim)
+    *   [Claim](#evmos.claims.v1.Claim)
 
-  - [ClaimsRecord](#evmos.claims.v1.ClaimsRecord)
+    *   [ClaimsRecord](#evmos.claims.v1.ClaimsRecord)
 
-  - [ClaimsRecordAddress](#evmos.claims.v1.ClaimsRecordAddress)
+    *   [ClaimsRecordAddress](#evmos.claims.v1.ClaimsRecordAddress)
 
-  - [Action](#evmos.claims.v1.Action)
+    *   [Action](#evmos.claims.v1.Action)
 
-- [evmos/claims/v1/genesis.proto](#evmos/claims/v1/genesis.proto)
-  - [GenesisState](#evmos.claims.v1.GenesisState)
-  - [Params](#evmos.claims.v1.Params)
+*   [evmos/claims/v1/genesis.proto](#evmos/claims/v1/genesis.proto)
+    *   [GenesisState](#evmos.claims.v1.GenesisState)
+    *   [Params](#evmos.claims.v1.Params)
 
-- [evmos/claims/v1/query.proto](#evmos/claims/v1/query.proto)
+*   [evmos/claims/v1/query.proto](#evmos/claims/v1/query.proto)
 
-  - [QueryClaimsRecordRequest](#evmos.claims.v1.QueryClaimsRecordRequest)
+    *   [QueryClaimsRecordRequest](#evmos.claims.v1.QueryClaimsRecordRequest)
 
-  - [QueryClaimsRecordResponse](#evmos.claims.v1.QueryClaimsRecordResponse)
+    *   [QueryClaimsRecordResponse](#evmos.claims.v1.QueryClaimsRecordResponse)
 
-  - [QueryClaimsRecordsRequest](#evmos.claims.v1.QueryClaimsRecordsRequest)
+    *   [QueryClaimsRecordsRequest](#evmos.claims.v1.QueryClaimsRecordsRequest)
 
-  - [QueryClaimsRecordsResponse](#evmos.claims.v1.QueryClaimsRecordsResponse)
+    *   [QueryClaimsRecordsResponse](#evmos.claims.v1.QueryClaimsRecordsResponse)
 
-  - [QueryParamsRequest](#evmos.claims.v1.QueryParamsRequest)
+    *   [QueryParamsRequest](#evmos.claims.v1.QueryParamsRequest)
 
-  - [QueryParamsResponse](#evmos.claims.v1.QueryParamsResponse)
+    *   [QueryParamsResponse](#evmos.claims.v1.QueryParamsResponse)
 
-  - [QueryTotalUnclaimedRequest](#evmos.claims.v1.QueryTotalUnclaimedRequest)
+    *   [QueryTotalUnclaimedRequest](#evmos.claims.v1.QueryTotalUnclaimedRequest)
 
-  - [QueryTotalUnclaimedResponse](#evmos.claims.v1.QueryTotalUnclaimedResponse)
+    *   [QueryTotalUnclaimedResponse](#evmos.claims.v1.QueryTotalUnclaimedResponse)
 
-  - [Query](#evmos.claims.v1.Query)
+    *   [Query](#evmos.claims.v1.Query)
 
-- [evmos/epochs/v1/genesis.proto](#evmos/epochs/v1/genesis.proto)
-  - [EpochInfo](#evmos.epochs.v1.EpochInfo)
-  - [GenesisState](#evmos.epochs.v1.GenesisState)
+*   [evmos/epochs/v1/genesis.proto](#evmos/epochs/v1/genesis.proto)
+    *   [EpochInfo](#evmos.epochs.v1.EpochInfo)
+    *   [GenesisState](#evmos.epochs.v1.GenesisState)
 
-- [evmos/epochs/v1/query.proto](#evmos/epochs/v1/query.proto)
+*   [evmos/epochs/v1/query.proto](#evmos/epochs/v1/query.proto)
 
-  - [QueryCurrentEpochRequest](#evmos.epochs.v1.QueryCurrentEpochRequest)
+    *   [QueryCurrentEpochRequest](#evmos.epochs.v1.QueryCurrentEpochRequest)
 
-  - [QueryCurrentEpochResponse](#evmos.epochs.v1.QueryCurrentEpochResponse)
+    *   [QueryCurrentEpochResponse](#evmos.epochs.v1.QueryCurrentEpochResponse)
 
-  - [QueryEpochsInfoRequest](#evmos.epochs.v1.QueryEpochsInfoRequest)
+    *   [QueryEpochsInfoRequest](#evmos.epochs.v1.QueryEpochsInfoRequest)
 
-  - [QueryEpochsInfoResponse](#evmos.epochs.v1.QueryEpochsInfoResponse)
+    *   [QueryEpochsInfoResponse](#evmos.epochs.v1.QueryEpochsInfoResponse)
 
-  - [Query](#evmos.epochs.v1.Query)
+    *   [Query](#evmos.epochs.v1.Query)
 
-- [evmos/erc20/v1/erc20.proto](#evmos/erc20/v1/erc20.proto)
+*   [evmos/erc20/v1/erc20.proto](#evmos/erc20/v1/erc20.proto)
 
-  - [ProposalMetadata](#evmos.erc20.v1.ProposalMetadata)
+    *   [ProposalMetadata](#evmos.erc20.v1.ProposalMetadata)
 
-  - [RegisterCoinProposal](#evmos.erc20.v1.RegisterCoinProposal)
+    *   [RegisterCoinProposal](#evmos.erc20.v1.RegisterCoinProposal)
 
-  - [RegisterERC20Proposal](#evmos.erc20.v1.RegisterERC20Proposal)
+    *   [RegisterERC20Proposal](#evmos.erc20.v1.RegisterERC20Proposal)
 
-  - [ToggleTokenConversionProposal](#evmos.erc20.v1.ToggleTokenConversionProposal)
+    *   [ToggleTokenConversionProposal](#evmos.erc20.v1.ToggleTokenConversionProposal)
 
-  - [TokenPair](#evmos.erc20.v1.TokenPair)
+    *   [TokenPair](#evmos.erc20.v1.TokenPair)
 
-  - [Owner](#evmos.erc20.v1.Owner)
+    *   [Owner](#evmos.erc20.v1.Owner)
 
-- [evmos/erc20/v1/genesis.proto](#evmos/erc20/v1/genesis.proto)
-  - [GenesisState](#evmos.erc20.v1.GenesisState)
-  - [Params](#evmos.erc20.v1.Params)
+*   [evmos/erc20/v1/genesis.proto](#evmos/erc20/v1/genesis.proto)
+    *   [GenesisState](#evmos.erc20.v1.GenesisState)
+    *   [Params](#evmos.erc20.v1.Params)
 
-- [evmos/erc20/v1/query.proto](#evmos/erc20/v1/query.proto)
+*   [evmos/erc20/v1/query.proto](#evmos/erc20/v1/query.proto)
 
-  - [QueryParamsRequest](#evmos.erc20.v1.QueryParamsRequest)
+    *   [QueryParamsRequest](#evmos.erc20.v1.QueryParamsRequest)
 
-  - [QueryParamsResponse](#evmos.erc20.v1.QueryParamsResponse)
+    *   [QueryParamsResponse](#evmos.erc20.v1.QueryParamsResponse)
 
-  - [QueryTokenPairRequest](#evmos.erc20.v1.QueryTokenPairRequest)
+    *   [QueryTokenPairRequest](#evmos.erc20.v1.QueryTokenPairRequest)
 
-  - [QueryTokenPairResponse](#evmos.erc20.v1.QueryTokenPairResponse)
+    *   [QueryTokenPairResponse](#evmos.erc20.v1.QueryTokenPairResponse)
 
-  - [QueryTokenPairsRequest](#evmos.erc20.v1.QueryTokenPairsRequest)
+    *   [QueryTokenPairsRequest](#evmos.erc20.v1.QueryTokenPairsRequest)
 
-  - [QueryTokenPairsResponse](#evmos.erc20.v1.QueryTokenPairsResponse)
+    *   [QueryTokenPairsResponse](#evmos.erc20.v1.QueryTokenPairsResponse)
 
-  - [Query](#evmos.erc20.v1.Query)
+    *   [Query](#evmos.erc20.v1.Query)
 
-- [evmos/erc20/v1/tx.proto](#evmos/erc20/v1/tx.proto)
+*   [evmos/erc20/v1/tx.proto](#evmos/erc20/v1/tx.proto)
 
-  - [MsgConvertCoin](#evmos.erc20.v1.MsgConvertCoin)
+    *   [MsgConvertCoin](#evmos.erc20.v1.MsgConvertCoin)
 
-  - [MsgConvertCoinResponse](#evmos.erc20.v1.MsgConvertCoinResponse)
+    *   [MsgConvertCoinResponse](#evmos.erc20.v1.MsgConvertCoinResponse)
 
-  - [MsgConvertERC20](#evmos.erc20.v1.MsgConvertERC20)
+    *   [MsgConvertERC20](#evmos.erc20.v1.MsgConvertERC20)
 
-  - [MsgConvertERC20Response](#evmos.erc20.v1.MsgConvertERC20Response)
+    *   [MsgConvertERC20Response](#evmos.erc20.v1.MsgConvertERC20Response)
 
-  - [Msg](#evmos.erc20.v1.Msg)
+    *   [Msg](#evmos.erc20.v1.Msg)
 
-- [evmos/incentives/v1/incentives.proto](#evmos/incentives/v1/incentives.proto)
-  - [CancelIncentiveProposal](#evmos.incentives.v1.CancelIncentiveProposal)
-  - [GasMeter](#evmos.incentives.v1.GasMeter)
-  - [Incentive](#evmos.incentives.v1.Incentive)
-  - [RegisterIncentiveProposal](#evmos.incentives.v1.RegisterIncentiveProposal)
+*   [evmos/incentives/v1/incentives.proto](#evmos/incentives/v1/incentives.proto)
+    *   [CancelIncentiveProposal](#evmos.incentives.v1.CancelIncentiveProposal)
+    *   [GasMeter](#evmos.incentives.v1.GasMeter)
+    *   [Incentive](#evmos.incentives.v1.Incentive)
+    *   [RegisterIncentiveProposal](#evmos.incentives.v1.RegisterIncentiveProposal)
 
-- [evmos/incentives/v1/genesis.proto](#evmos/incentives/v1/genesis.proto)
-  - [GenesisState](#evmos.incentives.v1.GenesisState)
-  - [Params](#evmos.incentives.v1.Params)
+*   [evmos/incentives/v1/genesis.proto](#evmos/incentives/v1/genesis.proto)
+    *   [GenesisState](#evmos.incentives.v1.GenesisState)
+    *   [Params](#evmos.incentives.v1.Params)
 
-- [evmos/incentives/v1/query.proto](#evmos/incentives/v1/query.proto)
+*   [evmos/incentives/v1/query.proto](#evmos/incentives/v1/query.proto)
 
-  - [QueryAllocationMeterRequest](#evmos.incentives.v1.QueryAllocationMeterRequest)
+    *   [QueryAllocationMeterRequest](#evmos.incentives.v1.QueryAllocationMeterRequest)
 
-  - [QueryAllocationMeterResponse](#evmos.incentives.v1.QueryAllocationMeterResponse)
+    *   [QueryAllocationMeterResponse](#evmos.incentives.v1.QueryAllocationMeterResponse)
 
-  - [QueryAllocationMetersRequest](#evmos.incentives.v1.QueryAllocationMetersRequest)
+    *   [QueryAllocationMetersRequest](#evmos.incentives.v1.QueryAllocationMetersRequest)
 
-  - [QueryAllocationMetersResponse](#evmos.incentives.v1.QueryAllocationMetersResponse)
+    *   [QueryAllocationMetersResponse](#evmos.incentives.v1.QueryAllocationMetersResponse)
 
-  - [QueryGasMeterRequest](#evmos.incentives.v1.QueryGasMeterRequest)
+    *   [QueryGasMeterRequest](#evmos.incentives.v1.QueryGasMeterRequest)
 
-  - [QueryGasMeterResponse](#evmos.incentives.v1.QueryGasMeterResponse)
+    *   [QueryGasMeterResponse](#evmos.incentives.v1.QueryGasMeterResponse)
 
-  - [QueryGasMetersRequest](#evmos.incentives.v1.QueryGasMetersRequest)
+    *   [QueryGasMetersRequest](#evmos.incentives.v1.QueryGasMetersRequest)
 
-  - [QueryGasMetersResponse](#evmos.incentives.v1.QueryGasMetersResponse)
+    *   [QueryGasMetersResponse](#evmos.incentives.v1.QueryGasMetersResponse)
 
-  - [QueryIncentiveRequest](#evmos.incentives.v1.QueryIncentiveRequest)
+    *   [QueryIncentiveRequest](#evmos.incentives.v1.QueryIncentiveRequest)
 
-  - [QueryIncentiveResponse](#evmos.incentives.v1.QueryIncentiveResponse)
+    *   [QueryIncentiveResponse](#evmos.incentives.v1.QueryIncentiveResponse)
 
-  - [QueryIncentivesRequest](#evmos.incentives.v1.QueryIncentivesRequest)
+    *   [QueryIncentivesRequest](#evmos.incentives.v1.QueryIncentivesRequest)
 
-  - [QueryIncentivesResponse](#evmos.incentives.v1.QueryIncentivesResponse)
+    *   [QueryIncentivesResponse](#evmos.incentives.v1.QueryIncentivesResponse)
 
-  - [QueryParamsRequest](#evmos.incentives.v1.QueryParamsRequest)
+    *   [QueryParamsRequest](#evmos.incentives.v1.QueryParamsRequest)
 
-  - [QueryParamsResponse](#evmos.incentives.v1.QueryParamsResponse)
+    *   [QueryParamsResponse](#evmos.incentives.v1.QueryParamsResponse)
 
-  - [Query](#evmos.incentives.v1.Query)
+    *   [Query](#evmos.incentives.v1.Query)
 
-- [evmos/inflation/v1/inflation.proto](#evmos/inflation/v1/inflation.proto)
-  - [ExponentialCalculation](#evmos.inflation.v1.ExponentialCalculation)
-  - [InflationDistribution](#evmos.inflation.v1.InflationDistribution)
+*   [evmos/inflation/v1/inflation.proto](#evmos/inflation/v1/inflation.proto)
+    *   [ExponentialCalculation](#evmos.inflation.v1.ExponentialCalculation)
+    *   [InflationDistribution](#evmos.inflation.v1.InflationDistribution)
 
-- [evmos/inflation/v1/genesis.proto](#evmos/inflation/v1/genesis.proto)
-  - [GenesisState](#evmos.inflation.v1.GenesisState)
-  - [Params](#evmos.inflation.v1.Params)
+*   [evmos/inflation/v1/genesis.proto](#evmos/inflation/v1/genesis.proto)
+    *   [GenesisState](#evmos.inflation.v1.GenesisState)
+    *   [Params](#evmos.inflation.v1.Params)
 
-- [evmos/inflation/v1/query.proto](#evmos/inflation/v1/query.proto)
+*   [evmos/inflation/v1/query.proto](#evmos/inflation/v1/query.proto)
 
-  - [QueryCirculatingSupplyRequest](#evmos.inflation.v1.QueryCirculatingSupplyRequest)
+    *   [QueryCirculatingSupplyRequest](#evmos.inflation.v1.QueryCirculatingSupplyRequest)
 
-  - [QueryCirculatingSupplyResponse](#evmos.inflation.v1.QueryCirculatingSupplyResponse)
+    *   [QueryCirculatingSupplyResponse](#evmos.inflation.v1.QueryCirculatingSupplyResponse)
 
-  - [QueryEpochMintProvisionRequest](#evmos.inflation.v1.QueryEpochMintProvisionRequest)
+    *   [QueryEpochMintProvisionRequest](#evmos.inflation.v1.QueryEpochMintProvisionRequest)
 
-  - [QueryEpochMintProvisionResponse](#evmos.inflation.v1.QueryEpochMintProvisionResponse)
+    *   [QueryEpochMintProvisionResponse](#evmos.inflation.v1.QueryEpochMintProvisionResponse)
 
-  - [QueryInflationRateRequest](#evmos.inflation.v1.QueryInflationRateRequest)
+    *   [QueryInflationRateRequest](#evmos.inflation.v1.QueryInflationRateRequest)
 
-  - [QueryInflationRateResponse](#evmos.inflation.v1.QueryInflationRateResponse)
+    *   [QueryInflationRateResponse](#evmos.inflation.v1.QueryInflationRateResponse)
 
-  - [QueryParamsRequest](#evmos.inflation.v1.QueryParamsRequest)
+    *   [QueryParamsRequest](#evmos.inflation.v1.QueryParamsRequest)
 
-  - [QueryParamsResponse](#evmos.inflation.v1.QueryParamsResponse)
+    *   [QueryParamsResponse](#evmos.inflation.v1.QueryParamsResponse)
 
-  - [QueryPeriodRequest](#evmos.inflation.v1.QueryPeriodRequest)
+    *   [QueryPeriodRequest](#evmos.inflation.v1.QueryPeriodRequest)
 
-  - [QueryPeriodResponse](#evmos.inflation.v1.QueryPeriodResponse)
+    *   [QueryPeriodResponse](#evmos.inflation.v1.QueryPeriodResponse)
 
-  - [QuerySkippedEpochsRequest](#evmos.inflation.v1.QuerySkippedEpochsRequest)
+    *   [QuerySkippedEpochsRequest](#evmos.inflation.v1.QuerySkippedEpochsRequest)
 
-  - [QuerySkippedEpochsResponse](#evmos.inflation.v1.QuerySkippedEpochsResponse)
+    *   [QuerySkippedEpochsResponse](#evmos.inflation.v1.QuerySkippedEpochsResponse)
 
-  - [Query](#evmos.inflation.v1.Query)
+    *   [Query](#evmos.inflation.v1.Query)
 
-- [evmos/recovery/v1/genesis.proto](#evmos/recovery/v1/genesis.proto)
-  - [GenesisState](#evmos.recovery.v1.GenesisState)
-  - [Params](#evmos.recovery.v1.Params)
+*   [evmos/recovery/v1/genesis.proto](#evmos/recovery/v1/genesis.proto)
+    *   [GenesisState](#evmos.recovery.v1.GenesisState)
+    *   [Params](#evmos.recovery.v1.Params)
 
-- [evmos/recovery/v1/query.proto](#evmos/recovery/v1/query.proto)
+*   [evmos/recovery/v1/query.proto](#evmos/recovery/v1/query.proto)
 
-  - [QueryParamsRequest](#evmos.recovery.v1.QueryParamsRequest)
+    *   [QueryParamsRequest](#evmos.recovery.v1.QueryParamsRequest)
 
-  - [QueryParamsResponse](#evmos.recovery.v1.QueryParamsResponse)
+    *   [QueryParamsResponse](#evmos.recovery.v1.QueryParamsResponse)
 
-  - [Query](#evmos.recovery.v1.Query)
+    *   [Query](#evmos.recovery.v1.Query)
 
-- [evmos/revenue/v1/revenue.proto](#evmos/revenue/v1/revenue.proto)
-  - [Revenue](#evmos.revenue.v1.Revenue)
+*   [evmos/revenue/v1/revenue.proto](#evmos/revenue/v1/revenue.proto)
+    *   [Revenue](#evmos.revenue.v1.Revenue)
 
-- [evmos/revenue/v1/genesis.proto](#evmos/revenue/v1/genesis.proto)
-  - [GenesisState](#evmos.revenue.v1.GenesisState)
-  - [Params](#evmos.revenue.v1.Params)
+*   [evmos/revenue/v1/genesis.proto](#evmos/revenue/v1/genesis.proto)
+    *   [GenesisState](#evmos.revenue.v1.GenesisState)
+    *   [Params](#evmos.revenue.v1.Params)
 
-- [evmos/revenue/v1/query.proto](#evmos/revenue/v1/query.proto)
+*   [evmos/revenue/v1/query.proto](#evmos/revenue/v1/query.proto)
 
-  - [QueryDeployerRevenuesRequest](#evmos.revenue.v1.QueryDeployerRevenuesRequest)
+    *   [QueryDeployerRevenuesRequest](#evmos.revenue.v1.QueryDeployerRevenuesRequest)
 
-  - [QueryDeployerRevenuesResponse](#evmos.revenue.v1.QueryDeployerRevenuesResponse)
+    *   [QueryDeployerRevenuesResponse](#evmos.revenue.v1.QueryDeployerRevenuesResponse)
 
-  - [QueryParamsRequest](#evmos.revenue.v1.QueryParamsRequest)
+    *   [QueryParamsRequest](#evmos.revenue.v1.QueryParamsRequest)
 
-  - [QueryParamsResponse](#evmos.revenue.v1.QueryParamsResponse)
+    *   [QueryParamsResponse](#evmos.revenue.v1.QueryParamsResponse)
 
-  - [QueryRevenueRequest](#evmos.revenue.v1.QueryRevenueRequest)
+    *   [QueryRevenueRequest](#evmos.revenue.v1.QueryRevenueRequest)
 
-  - [QueryRevenueResponse](#evmos.revenue.v1.QueryRevenueResponse)
+    *   [QueryRevenueResponse](#evmos.revenue.v1.QueryRevenueResponse)
 
-  - [QueryRevenuesRequest](#evmos.revenue.v1.QueryRevenuesRequest)
+    *   [QueryRevenuesRequest](#evmos.revenue.v1.QueryRevenuesRequest)
 
-  - [QueryRevenuesResponse](#evmos.revenue.v1.QueryRevenuesResponse)
+    *   [QueryRevenuesResponse](#evmos.revenue.v1.QueryRevenuesResponse)
 
-  - [QueryWithdrawerRevenuesRequest](#evmos.revenue.v1.QueryWithdrawerRevenuesRequest)
+    *   [QueryWithdrawerRevenuesRequest](#evmos.revenue.v1.QueryWithdrawerRevenuesRequest)
 
-  - [QueryWithdrawerRevenuesResponse](#evmos.revenue.v1.QueryWithdrawerRevenuesResponse)
+    *   [QueryWithdrawerRevenuesResponse](#evmos.revenue.v1.QueryWithdrawerRevenuesResponse)
 
-  - [Query](#evmos.revenue.v1.Query)
+    *   [Query](#evmos.revenue.v1.Query)
 
-- [evmos/revenue/v1/tx.proto](#evmos/revenue/v1/tx.proto)
+*   [evmos/revenue/v1/tx.proto](#evmos/revenue/v1/tx.proto)
 
-  - [MsgCancelRevenue](#evmos.revenue.v1.MsgCancelRevenue)
+    *   [MsgCancelRevenue](#evmos.revenue.v1.MsgCancelRevenue)
 
-  - [MsgCancelRevenueResponse](#evmos.revenue.v1.MsgCancelRevenueResponse)
+    *   [MsgCancelRevenueResponse](#evmos.revenue.v1.MsgCancelRevenueResponse)
 
-  - [MsgRegisterRevenue](#evmos.revenue.v1.MsgRegisterRevenue)
+    *   [MsgRegisterRevenue](#evmos.revenue.v1.MsgRegisterRevenue)
 
-  - [MsgRegisterRevenueResponse](#evmos.revenue.v1.MsgRegisterRevenueResponse)
+    *   [MsgRegisterRevenueResponse](#evmos.revenue.v1.MsgRegisterRevenueResponse)
 
-  - [MsgUpdateRevenue](#evmos.revenue.v1.MsgUpdateRevenue)
+    *   [MsgUpdateRevenue](#evmos.revenue.v1.MsgUpdateRevenue)
 
-  - [MsgUpdateRevenueResponse](#evmos.revenue.v1.MsgUpdateRevenueResponse)
+    *   [MsgUpdateRevenueResponse](#evmos.revenue.v1.MsgUpdateRevenueResponse)
 
-  - [Msg](#evmos.revenue.v1.Msg)
+    *   [Msg](#evmos.revenue.v1.Msg)
 
-- [evmos/vesting/v1/query.proto](#evmos/vesting/v1/query.proto)
+*   [evmos/vesting/v1/query.proto](#evmos/vesting/v1/query.proto)
 
-  - [QueryBalancesRequest](#evmos.vesting.v1.QueryBalancesRequest)
+    *   [QueryBalancesRequest](#evmos.vesting.v1.QueryBalancesRequest)
 
-  - [QueryBalancesResponse](#evmos.vesting.v1.QueryBalancesResponse)
+    *   [QueryBalancesResponse](#evmos.vesting.v1.QueryBalancesResponse)
 
-  - [Query](#evmos.vesting.v1.Query)
+    *   [Query](#evmos.vesting.v1.Query)
 
-- [evmos/vesting/v1/tx.proto](#evmos/vesting/v1/tx.proto)
+*   [evmos/vesting/v1/tx.proto](#evmos/vesting/v1/tx.proto)
 
-  - [MsgClawback](#evmos.vesting.v1.MsgClawback)
+    *   [MsgClawback](#evmos.vesting.v1.MsgClawback)
 
-  - [MsgClawbackResponse](#evmos.vesting.v1.MsgClawbackResponse)
+    *   [MsgClawbackResponse](#evmos.vesting.v1.MsgClawbackResponse)
 
-  - [MsgCreateClawbackVestingAccount](#evmos.vesting.v1.MsgCreateClawbackVestingAccount)
+    *   [MsgCreateClawbackVestingAccount](#evmos.vesting.v1.MsgCreateClawbackVestingAccount)
 
-  - [MsgCreateClawbackVestingAccountResponse](#evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse)
+    *   [MsgCreateClawbackVestingAccountResponse](#evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse)
 
-  - [Msg](#evmos.vesting.v1.Msg)
+    *   [Msg](#evmos.vesting.v1.Msg)
 
-- [evmos/vesting/v1/vesting.proto](#evmos/vesting/v1/vesting.proto)
-  - [ClawbackVestingAccount](#evmos.vesting.v1.ClawbackVestingAccount)
+*   [evmos/vesting/v1/vesting.proto](#evmos/vesting/v1/vesting.proto)
+    *   [ClawbackVestingAccount](#evmos.vesting.v1.ClawbackVestingAccount)
 
-- [Scalar Value Types](#scalar-value-types)
+*   [Scalar Value Types](#scalar-value-types)
 
 <a name="evmos/claims/v1/claims.proto"></a>
 
@@ -317,11 +317,11 @@ Action defines the list of available actions to claim the airdrop tokens.
 
 | Name                | Number | Description                                                         |
 | ------------------- | ------ | ------------------------------------------------------------------- |
-| ACTION_UNSPECIFIED  | 0      | UNSPECIFIED defines an invalid action.                              |
-| ACTION_VOTE         | 1      | VOTE defines a proposal vote.                                       |
-| ACTION_DELEGATE     | 2      | DELEGATE defines an staking delegation.                             |
-| ACTION_EVM          | 3      | EVM defines an EVM transaction.                                     |
-| ACTION_IBC_TRANSFER | 4      | IBC Transfer defines a fungible token transfer transaction via IBC. |
+| ACTION\_UNSPECIFIED  | 0      | UNSPECIFIED defines an invalid action.                              |
+| ACTION\_VOTE         | 1      | VOTE defines a proposal vote.                                       |
+| ACTION\_DELEGATE     | 2      | DELEGATE defines an staking delegation.                             |
+| ACTION\_EVM          | 3      | EVM defines an EVM transaction.                                     |
+| ACTION\_IBC\_TRANSFER | 4      | IBC Transfer defines a fungible token transfer transaction via IBC. |
 
  <!-- end enums -->
 
@@ -470,10 +470,10 @@ Query defines the gRPC querier service.
 
 | Method Name      | Request Type                                                              | Response Type                                                               | Description                                                        | HTTP Verb | Endpoint                                  |
 | ---------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------ | --------- | ----------------------------------------- |
-| `TotalUnclaimed` | [QueryTotalUnclaimedRequest](#evmos.claims.v1.QueryTotalUnclaimedRequest) | [QueryTotalUnclaimedResponse](#evmos.claims.v1.QueryTotalUnclaimedResponse) | TotalUnclaimed queries the total unclaimed tokens from the airdrop | GET       | /evmos/claims/v1/total_unclaimed          |
+| `TotalUnclaimed` | [QueryTotalUnclaimedRequest](#evmos.claims.v1.QueryTotalUnclaimedRequest) | [QueryTotalUnclaimedResponse](#evmos.claims.v1.QueryTotalUnclaimedResponse) | TotalUnclaimed queries the total unclaimed tokens from the airdrop | GET       | /evmos/claims/v1/total\_unclaimed          |
 | `Params`         | [QueryParamsRequest](#evmos.claims.v1.QueryParamsRequest)                 | [QueryParamsResponse](#evmos.claims.v1.QueryParamsResponse)                 | Params returns the claims module parameters                        | GET       | /evmos/claims/v1/params                   |
-| `ClaimsRecords`  | [QueryClaimsRecordsRequest](#evmos.claims.v1.QueryClaimsRecordsRequest)   | [QueryClaimsRecordsResponse](#evmos.claims.v1.QueryClaimsRecordsResponse)   | ClaimsRecords returns all claims records                           | GET       | /evmos/claims/v1/claims_records           |
-| `ClaimsRecord`   | [QueryClaimsRecordRequest](#evmos.claims.v1.QueryClaimsRecordRequest)     | [QueryClaimsRecordResponse](#evmos.claims.v1.QueryClaimsRecordResponse)     | ClaimsRecord returns the claims record for a given address         | GET       | /evmos/claims/v1/claims_records/{address} |
+| `ClaimsRecords`  | [QueryClaimsRecordsRequest](#evmos.claims.v1.QueryClaimsRecordsRequest)   | [QueryClaimsRecordsResponse](#evmos.claims.v1.QueryClaimsRecordsResponse)   | ClaimsRecords returns all claims records                           | GET       | /evmos/claims/v1/claims\_records           |
+| `ClaimsRecord`   | [QueryClaimsRecordRequest](#evmos.claims.v1.QueryClaimsRecordRequest)     | [QueryClaimsRecordResponse](#evmos.claims.v1.QueryClaimsRecordResponse)     | ClaimsRecord returns the claims record for a given address         | GET       | /evmos/claims/v1/claims\_records/{address} |
 
  <!-- end services -->
 
@@ -569,7 +569,7 @@ Query defines the gRPC querier service.
 | Method Name    | Request Type                                                          | Response Type                                                           | Description                                                | HTTP Verb | Endpoint                       |
 | -------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------- | --------- | ------------------------------ |
 | `EpochInfos`   | [QueryEpochsInfoRequest](#evmos.epochs.v1.QueryEpochsInfoRequest)     | [QueryEpochsInfoResponse](#evmos.epochs.v1.QueryEpochsInfoResponse)     | EpochInfos provide running epochInfos                      | GET       | /evmos/epochs/v1/epochs        |
-| `CurrentEpoch` | [QueryCurrentEpochRequest](#evmos.epochs.v1.QueryCurrentEpochRequest) | [QueryCurrentEpochResponse](#evmos.epochs.v1.QueryCurrentEpochResponse) | CurrentEpoch provide current epoch of specified identifier | GET       | /evmos/epochs/v1/current_epoch |
+| `CurrentEpoch` | [QueryCurrentEpochRequest](#evmos.epochs.v1.QueryCurrentEpochRequest) | [QueryCurrentEpochResponse](#evmos.epochs.v1.QueryCurrentEpochResponse) | CurrentEpoch provide current epoch of specified identifier | GET       | /evmos/epochs/v1/current\_epoch |
 
  <!-- end services -->
 
@@ -653,9 +653,9 @@ Owner enumerates the ownership of a ERC20 contract.
 
 | Name              | Number | Description                                              |
 | ----------------- | ------ | -------------------------------------------------------- |
-| OWNER_UNSPECIFIED | 0      | OWNER_UNSPECIFIED defines an invalid/undefined owner.    |
-| OWNER_MODULE      | 1      | OWNER_MODULE erc20 is owned by the erc20 module account. |
-| OWNER_EXTERNAL    | 2      | EXTERNAL erc20 is owned by an external account.          |
+| OWNER\_UNSPECIFIED | 0      | OWNER\_UNSPECIFIED defines an invalid/undefined owner.    |
+| OWNER\_MODULE      | 1      | OWNER\_MODULE erc20 is owned by the erc20 module account. |
+| OWNER\_EXTERNAL    | 2      | EXTERNAL erc20 is owned by an external account.          |
 
  <!-- end enums -->
 
@@ -777,8 +777,8 @@ Query defines the gRPC querier service.
 
 | Method Name  | Request Type                                                     | Response Type                                                      | Description                                 | HTTP Verb | Endpoint                            |
 | ------------ | ---------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------- | --------- | ----------------------------------- |
-| `TokenPairs` | [QueryTokenPairsRequest](#evmos.erc20.v1.QueryTokenPairsRequest) | [QueryTokenPairsResponse](#evmos.erc20.v1.QueryTokenPairsResponse) | TokenPairs retrieves registered token pairs | GET       | /evmos/erc20/v1/token_pairs         |
-| `TokenPair`  | [QueryTokenPairRequest](#evmos.erc20.v1.QueryTokenPairRequest)   | [QueryTokenPairResponse](#evmos.erc20.v1.QueryTokenPairResponse)   | TokenPair retrieves a registered token pair | GET       | /evmos/erc20/v1/token_pairs/{token} |
+| `TokenPairs` | [QueryTokenPairsRequest](#evmos.erc20.v1.QueryTokenPairsRequest) | [QueryTokenPairsResponse](#evmos.erc20.v1.QueryTokenPairsResponse) | TokenPairs retrieves registered token pairs | GET       | /evmos/erc20/v1/token\_pairs         |
+| `TokenPair`  | [QueryTokenPairRequest](#evmos.erc20.v1.QueryTokenPairRequest)   | [QueryTokenPairResponse](#evmos.erc20.v1.QueryTokenPairResponse)   | TokenPair retrieves a registered token pair | GET       | /evmos/erc20/v1/token\_pairs/{token} |
 | `Params`     | [QueryParamsRequest](#evmos.erc20.v1.QueryParamsRequest)         | [QueryParamsResponse](#evmos.erc20.v1.QueryParamsResponse)         | Params retrieves the erc20 module params    | GET       | /evmos/erc20/v1/params              |
 
  <!-- end services -->
@@ -840,8 +840,8 @@ Msg defines the erc20 Msg service.
 
 | Method Name    | Request Type                                       | Response Type                                                      | Description                                                                                                                 | HTTP Verb | Endpoint                         |
 | -------------- | -------------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- | --------- | -------------------------------- |
-| `ConvertCoin`  | [MsgConvertCoin](#evmos.erc20.v1.MsgConvertCoin)   | [MsgConvertCoinResponse](#evmos.erc20.v1.MsgConvertCoinResponse)   | ConvertCoin mints a ERC20 representation of the native Cosmos coin denom that is registered on the token mapping.           | GET       | /evmos/erc20/v1/tx/convert_coin  |
-| `ConvertERC20` | [MsgConvertERC20](#evmos.erc20.v1.MsgConvertERC20) | [MsgConvertERC20Response](#evmos.erc20.v1.MsgConvertERC20Response) | ConvertERC20 mints a native Cosmos coin representation of the ERC20 token contract that is registered on the token mapping. | GET       | /evmos/erc20/v1/tx/convert_erc20 |
+| `ConvertCoin`  | [MsgConvertCoin](#evmos.erc20.v1.MsgConvertCoin)   | [MsgConvertCoinResponse](#evmos.erc20.v1.MsgConvertCoinResponse)   | ConvertCoin mints a ERC20 representation of the native Cosmos coin denom that is registered on the token mapping.           | GET       | /evmos/erc20/v1/tx/convert\_coin  |
+| `ConvertERC20` | [MsgConvertERC20](#evmos.erc20.v1.MsgConvertERC20) | [MsgConvertERC20Response](#evmos.erc20.v1.MsgConvertERC20Response) | ConvertERC20 mints a native Cosmos coin representation of the ERC20 token contract that is registered on the token mapping. | GET       | /evmos/erc20/v1/tx/convert\_erc20 |
 
  <!-- end services -->
 
@@ -1119,10 +1119,10 @@ Query defines the gRPC querier service.
 | ------------------ | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------- | -------------------------------------------------------- |
 | `Incentives`       | [QueryIncentivesRequest](#evmos.incentives.v1.QueryIncentivesRequest)             | [QueryIncentivesResponse](#evmos.incentives.v1.QueryIncentivesResponse)             | Incentives retrieves registered incentives                                   | GET       | /evmos/incentives/v1/incentives                          |
 | `Incentive`        | [QueryIncentiveRequest](#evmos.incentives.v1.QueryIncentiveRequest)               | [QueryIncentiveResponse](#evmos.incentives.v1.QueryIncentiveResponse)               | Incentive retrieves a registered incentive                                   | GET       | /evmos/incentives/v1/incentives/{contract}               |
-| `GasMeters`        | [QueryGasMetersRequest](#evmos.incentives.v1.QueryGasMetersRequest)               | [QueryGasMetersResponse](#evmos.incentives.v1.QueryGasMetersResponse)               | GasMeters retrieves active gas meters for a given contract                   | GET       | /evmos/incentives/v1/gas_meters/{contract}               |
-| `GasMeter`         | [QueryGasMeterRequest](#evmos.incentives.v1.QueryGasMeterRequest)                 | [QueryGasMeterResponse](#evmos.incentives.v1.QueryGasMeterResponse)                 | GasMeter Retrieves a active gas meter                                        | GET       | /evmos/incentives/v1/gas_meters/{contract}/{participant} |
-| `AllocationMeters` | [QueryAllocationMetersRequest](#evmos.incentives.v1.QueryAllocationMetersRequest) | [QueryAllocationMetersResponse](#evmos.incentives.v1.QueryAllocationMetersResponse) | AllocationMeters retrieves active allocation meters for a given denomination | GET       | /evmos/incentives/v1/allocation_meters                   |
-| `AllocationMeter`  | [QueryAllocationMeterRequest](#evmos.incentives.v1.QueryAllocationMeterRequest)   | [QueryAllocationMeterResponse](#evmos.incentives.v1.QueryAllocationMeterResponse)   | AllocationMeter Retrieves a active gas meter                                 | GET       | /evmos/incentives/v1/allocation_meters/{denom}           |
+| `GasMeters`        | [QueryGasMetersRequest](#evmos.incentives.v1.QueryGasMetersRequest)               | [QueryGasMetersResponse](#evmos.incentives.v1.QueryGasMetersResponse)               | GasMeters retrieves active gas meters for a given contract                   | GET       | /evmos/incentives/v1/gas\_meters/{contract}               |
+| `GasMeter`         | [QueryGasMeterRequest](#evmos.incentives.v1.QueryGasMeterRequest)                 | [QueryGasMeterResponse](#evmos.incentives.v1.QueryGasMeterResponse)                 | GasMeter Retrieves a active gas meter                                        | GET       | /evmos/incentives/v1/gas\_meters/{contract}/{participant} |
+| `AllocationMeters` | [QueryAllocationMetersRequest](#evmos.incentives.v1.QueryAllocationMetersRequest) | [QueryAllocationMetersResponse](#evmos.incentives.v1.QueryAllocationMetersResponse) | AllocationMeters retrieves active allocation meters for a given denomination | GET       | /evmos/incentives/v1/allocation\_meters                   |
+| `AllocationMeter`  | [QueryAllocationMeterRequest](#evmos.incentives.v1.QueryAllocationMeterRequest)   | [QueryAllocationMeterResponse](#evmos.incentives.v1.QueryAllocationMeterResponse)   | AllocationMeter Retrieves a active gas meter                                 | GET       | /evmos/incentives/v1/allocation\_meters/{denom}           |
 | `Params`           | [QueryParamsRequest](#evmos.incentives.v1.QueryParamsRequest)                     | [QueryParamsResponse](#evmos.incentives.v1.QueryParamsResponse)                     | Params retrieves the incentives module params                                | GET       | /evmos/incentives/v1/params                              |
 
  <!-- end services -->
@@ -1139,8 +1139,8 @@ Query defines the gRPC querier service.
 
 ExponentialCalculation holds factors to calculate exponential inflation on each
 period. Calculation reference: periodProvision = exponentialDecay \_
-bondingIncentive f(x) = (a \_ (1 - r) ^ x + c) \_ (1 + max_variance - bondedRatio
-\_ (max_variance / bonding_target))
+bondingIncentive f(x) = (a \_ (1 - r) ^ x + c) \_ (1 + max\_variance - bondedRatio
+\_ (max\_variance / bonding\_target))
 
 | Field            | Type              | Label | Description         |
 | ---------------- | ----------------- | ----- | ------------------- |
@@ -1163,9 +1163,9 @@ mintDistribution1 = distribution1 / (1 - teamVestingDistribution) 0.5333333 =
 
 | Field              | Type              | Label | Description                                                                                                                 |
 | ------------------ | ----------------- | ----- | --------------------------------------------------------------------------------------------------------------------------- |
-| `staking_rewards`  | [string](#string) |       | staking_rewards defines the proportion of the minted minted_denom that is to be allocated as staking rewards                |
-| `usage_incentives` | [string](#string) |       | usage_incentives defines the proportion of the minted minted_denom that is to be allocated to the incentives module address |
-| `community_pool`   | [string](#string) |       | community_pool defines the proportion of the minted minted_denom that is to be allocated to the community pool              |
+| `staking_rewards`  | [string](#string) |       | staking\_rewards defines the proportion of the minted minted\_denom that is to be allocated as staking rewards                |
+| `usage_incentives` | [string](#string) |       | usage\_incentives defines the proportion of the minted minted\_denom that is to be allocated to the incentives module address |
+| `community_pool`   | [string](#string) |       | community\_pool defines the proportion of the minted minted\_denom that is to be allocated to the community pool              |
 
  <!-- end messages -->
 
@@ -1206,7 +1206,7 @@ Params holds parameters for the inflation module.
 | `mint_denom`              | [string](#string)                                                    |       | type of coin to mint                                                 |
 | `exponential_calculation` | [ExponentialCalculation](#evmos.inflation.v1.ExponentialCalculation) |       | variables to calculate exponential inflation                         |
 | `inflation_distribution`  | [InflationDistribution](#evmos.inflation.v1.InflationDistribution)   |       | inflation distribution of the minted denom                           |
-| `enable_inflation`        | [bool](#bool)                                                        |       | parameter to enable inflation and halt increasing the skipped_epochs |
+| `enable_inflation`        | [bool](#bool)                                                        |       | parameter to enable inflation and halt increasing the skipped\_epochs |
 
  <!-- end messages -->
 
@@ -1256,7 +1256,7 @@ Query/EpochMintProvision RPC method.
 
 | Field                  | Type                                                        | Label | Description                                                            |
 | ---------------------- | ----------------------------------------------------------- | ----- | ---------------------------------------------------------------------- |
-| `epoch_mint_provision` | [cosmos.base.v1beta1.DecCoin](#cosmos.base.v1beta1.DecCoin) |       | epoch_mint_provision is the current minting per epoch provision value. |
+| `epoch_mint_provision` | [cosmos.base.v1beta1.DecCoin](#cosmos.base.v1beta1.DecCoin) |       | epoch\_mint\_provision is the current minting per epoch provision value. |
 
 <a name="evmos.inflation.v1.QueryInflationRateRequest"></a>
 
@@ -1341,10 +1341,10 @@ Query provides defines the gRPC querier service.
 | Method Name          | Request Type                                                                         | Response Type                                                                          | Description                                                                                                      | HTTP Verb | Endpoint                                 |
 | -------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | --------- | ---------------------------------------- |
 | `Period`             | [QueryPeriodRequest](#evmos.inflation.v1.QueryPeriodRequest)                         | [QueryPeriodResponse](#evmos.inflation.v1.QueryPeriodResponse)                         | Period retrieves current period.                                                                                 | GET       | /evmos/inflation/v1/period               |
-| `EpochMintProvision` | [QueryEpochMintProvisionRequest](#evmos.inflation.v1.QueryEpochMintProvisionRequest) | [QueryEpochMintProvisionResponse](#evmos.inflation.v1.QueryEpochMintProvisionResponse) | EpochMintProvision retrieves current minting epoch provision value.                                              | GET       | /evmos/inflation/v1/epoch_mint_provision |
-| `SkippedEpochs`      | [QuerySkippedEpochsRequest](#evmos.inflation.v1.QuerySkippedEpochsRequest)           | [QuerySkippedEpochsResponse](#evmos.inflation.v1.QuerySkippedEpochsResponse)           | SkippedEpochs retrieves the total number of skipped epochs.                                                      | GET       | /evmos/inflation/v1/skipped_epochs       |
-| `CirculatingSupply`  | [QueryCirculatingSupplyRequest](#evmos.inflation.v1.QueryCirculatingSupplyRequest)   | [QueryCirculatingSupplyResponse](#evmos.inflation.v1.QueryCirculatingSupplyResponse)   | CirculatingSupply retrieves the total number of tokens that are in circulation (i.e. excluding unvested tokens). | GET       | /evmos/inflation/v1/circulating_supply   |
-| `InflationRate`      | [QueryInflationRateRequest](#evmos.inflation.v1.QueryInflationRateRequest)           | [QueryInflationRateResponse](#evmos.inflation.v1.QueryInflationRateResponse)           | InflationRate retrieves the inflation rate of the current period.                                                | GET       | /evmos/inflation/v1/inflation_rate       |
+| `EpochMintProvision` | [QueryEpochMintProvisionRequest](#evmos.inflation.v1.QueryEpochMintProvisionRequest) | [QueryEpochMintProvisionResponse](#evmos.inflation.v1.QueryEpochMintProvisionResponse) | EpochMintProvision retrieves current minting epoch provision value.                                              | GET       | /evmos/inflation/v1/epoch\_mint\_provision |
+| `SkippedEpochs`      | [QuerySkippedEpochsRequest](#evmos.inflation.v1.QuerySkippedEpochsRequest)           | [QuerySkippedEpochsResponse](#evmos.inflation.v1.QuerySkippedEpochsResponse)           | SkippedEpochs retrieves the total number of skipped epochs.                                                      | GET       | /evmos/inflation/v1/skipped\_epochs       |
+| `CirculatingSupply`  | [QueryCirculatingSupplyRequest](#evmos.inflation.v1.QueryCirculatingSupplyRequest)   | [QueryCirculatingSupplyResponse](#evmos.inflation.v1.QueryCirculatingSupplyResponse)   | CirculatingSupply retrieves the total number of tokens that are in circulation (i.e. excluding unvested tokens). | GET       | /evmos/inflation/v1/circulating\_supply   |
+| `InflationRate`      | [QueryInflationRateRequest](#evmos.inflation.v1.QueryInflationRateRequest)           | [QueryInflationRateResponse](#evmos.inflation.v1.QueryInflationRateResponse)           | InflationRate retrieves the inflation rate of the current period.                                                | GET       | /evmos/inflation/v1/inflation\_rate       |
 | `Params`             | [QueryParamsRequest](#evmos.inflation.v1.QueryParamsRequest)                         | [QueryParamsResponse](#evmos.inflation.v1.QueryParamsResponse)                         | Params retrieves the total set of minting parameters.                                                            | GET       | /evmos/inflation/v1/params               |
 
  <!-- end services -->
@@ -1441,7 +1441,7 @@ owner of a given smart contract
 | -------------------- | ----------------- | ----- | ---------------------------------------------------------------------------------------- |
 | `contract_address`   | [string](#string) |       | hex address of registered contract                                                       |
 | `deployer_address`   | [string](#string) |       | bech32 address of contract deployer                                                      |
-| `withdrawer_address` | [string](#string) |       | bech32 address of account receiving the transaction fees it defaults to deployer_address |
+| `withdrawer_address` | [string](#string) |       | bech32 address of account receiving the transaction fees it defaults to deployer\_address |
 
  <!-- end messages -->
 
@@ -1476,9 +1476,9 @@ Params defines the revenue module params
 
 | Field                         | Type              | Label | Description                                                                                                                |
 | ----------------------------- | ----------------- | ----- | -------------------------------------------------------------------------------------------------------------------------- |
-| `enable_revenue`              | [bool](#bool)     |       | enable_revenue defines a parameter to enable the revenue module                                                            |
-| `developer_shares`            | [string](#string) |       | developer_shares defines the proportion of the transaction fees to be distributed to the registered contract owner         |
-| `addr_derivation_cost_create` | [uint64](#uint64) |       | addr_derivation_cost_create defines the cost of address derivation for verifying the contract deployer at fee registration |
+| `enable_revenue`              | [bool](#bool)     |       | enable\_revenue defines a parameter to enable the revenue module                                                            |
+| `developer_shares`            | [string](#string) |       | developer\_shares defines the proportion of the transaction fees to be distributed to the registered contract owner         |
+| `addr_derivation_cost_create` | [uint64](#uint64) |       | addr\_derivation\_cost\_create defines the cost of address derivation for verifying the contract deployer at fee registration |
 
  <!-- end messages -->
 
@@ -1614,10 +1614,10 @@ Query defines the gRPC querier service.
 | Method Name          | Request Type                                                                       | Response Type                                                                        | Description                                                                  | HTTP Verb | Endpoint                                        |
 | -------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- | --------- | ----------------------------------------------- |
 | `Revenues`           | [QueryRevenuesRequest](#evmos.revenue.v1.QueryRevenuesRequest)                     | [QueryRevenuesResponse](#evmos.revenue.v1.QueryRevenuesResponse)                     | Revenues retrieves all registered revenues                                   | GET       | /evmos/revenue/v1/revenues                      |
-| `Revenue`            | [QueryRevenueRequest](#evmos.revenue.v1.QueryRevenueRequest)                       | [QueryRevenueResponse](#evmos.revenue.v1.QueryRevenueResponse)                       | Revenue retrieves a registered revenue for a given contract address          | GET       | /evmos/revenue/v1/revenues/{contract_address}   |
+| `Revenue`            | [QueryRevenueRequest](#evmos.revenue.v1.QueryRevenueRequest)                       | [QueryRevenueResponse](#evmos.revenue.v1.QueryRevenueResponse)                       | Revenue retrieves a registered revenue for a given contract address          | GET       | /evmos/revenue/v1/revenues/{contract\_address}   |
 | `Params`             | [QueryParamsRequest](#evmos.revenue.v1.QueryParamsRequest)                         | [QueryParamsResponse](#evmos.revenue.v1.QueryParamsResponse)                         | Params retrieves the revenue module params                                   | GET       | /evmos/revenue/v1/params                        |
-| `DeployerRevenues`   | [QueryDeployerRevenuesRequest](#evmos.revenue.v1.QueryDeployerRevenuesRequest)     | [QueryDeployerRevenuesResponse](#evmos.revenue.v1.QueryDeployerRevenuesResponse)     | DeployerRevenues retrieves all revenues that a given deployer has registered | GET       | /evmos/revenue/v1/revenues/{deployer_address}   |
-| `WithdrawerRevenues` | [QueryWithdrawerRevenuesRequest](#evmos.revenue.v1.QueryWithdrawerRevenuesRequest) | [QueryWithdrawerRevenuesResponse](#evmos.revenue.v1.QueryWithdrawerRevenuesResponse) | WithdrawerRevenues retrieves all revenues with a given withdrawer address    | GET       | /evmos/revenue/v1/revenues/{withdrawer_address} |
+| `DeployerRevenues`   | [QueryDeployerRevenuesRequest](#evmos.revenue.v1.QueryDeployerRevenuesRequest)     | [QueryDeployerRevenuesResponse](#evmos.revenue.v1.QueryDeployerRevenuesResponse)     | DeployerRevenues retrieves all revenues that a given deployer has registered | GET       | /evmos/revenue/v1/revenues/{deployer\_address}   |
+| `WithdrawerRevenues` | [QueryWithdrawerRevenuesRequest](#evmos.revenue.v1.QueryWithdrawerRevenuesRequest) | [QueryWithdrawerRevenuesResponse](#evmos.revenue.v1.QueryWithdrawerRevenuesResponse) | WithdrawerRevenues retrieves all revenues with a given withdrawer address    | GET       | /evmos/revenue/v1/revenues/{withdrawer\_address} |
 
  <!-- end services -->
 
@@ -1696,9 +1696,9 @@ Msg defines the fees Msg service.
 
 | Method Name       | Request Type                                               | Response Type                                                              | Description                                                                                  | HTTP Verb | Endpoint                              |
 | ----------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | --------- | ------------------------------------- |
-| `RegisterRevenue` | [MsgRegisterRevenue](#evmos.revenue.v1.MsgRegisterRevenue) | [MsgRegisterRevenueResponse](#evmos.revenue.v1.MsgRegisterRevenueResponse) | RegisterRevenue registers a new contract for receiving transaction fees                      | POST      | /evmos/revenue/v1/tx/register_revenue |
-| `UpdateRevenue`   | [MsgUpdateRevenue](#evmos.revenue.v1.MsgUpdateRevenue)     | [MsgUpdateRevenueResponse](#evmos.revenue.v1.MsgUpdateRevenueResponse)     | UpdateRevenue updates the withdrawer address of a revenue                                    | POST      | /evmos/revenue/v1/tx/update_revenue   |
-| `CancelRevenue`   | [MsgCancelRevenue](#evmos.revenue.v1.MsgCancelRevenue)     | [MsgCancelRevenueResponse](#evmos.revenue.v1.MsgCancelRevenueResponse)     | CancelRevenue cancels a contract's fee registration and further receival of transaction fees | POST      | /evmos/revenue/v1/tx/cancel_revenue   |
+| `RegisterRevenue` | [MsgRegisterRevenue](#evmos.revenue.v1.MsgRegisterRevenue) | [MsgRegisterRevenueResponse](#evmos.revenue.v1.MsgRegisterRevenueResponse) | RegisterRevenue registers a new contract for receiving transaction fees                      | POST      | /evmos/revenue/v1/tx/register\_revenue |
+| `UpdateRevenue`   | [MsgUpdateRevenue](#evmos.revenue.v1.MsgUpdateRevenue)     | [MsgUpdateRevenueResponse](#evmos.revenue.v1.MsgUpdateRevenueResponse)     | UpdateRevenue updates the withdrawer address of a revenue                                    | POST      | /evmos/revenue/v1/tx/update\_revenue   |
+| `CancelRevenue`   | [MsgCancelRevenue](#evmos.revenue.v1.MsgCancelRevenue)     | [MsgCancelRevenueResponse](#evmos.revenue.v1.MsgCancelRevenueResponse)     | CancelRevenue cancels a contract's fee registration and further receival of transaction fees | POST      | /evmos/revenue/v1/tx/cancel\_revenue   |
 
  <!-- end services -->
 
@@ -1763,9 +1763,9 @@ ClawbackVestingAccount.
 
 | Field             | Type              | Label | Description                                                                                                                                                        |
 | ----------------- | ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `funder_address`  | [string](#string) |       | funder_address is the address which funded the account                                                                                                             |
-| `account_address` | [string](#string) |       | account_address is the address of the ClawbackVestingAccount to claw back from.                                                                                    |
-| `dest_address`    | [string](#string) |       | dest_address specifies where the clawed-back tokens should be transferred to. If empty, the tokens will be transferred back to the original funder of the account. |
+| `funder_address`  | [string](#string) |       | funder\_address is the address which funded the account                                                                                                             |
+| `account_address` | [string](#string) |       | account\_address is the address of the ClawbackVestingAccount to claw back from.                                                                                    |
+| `dest_address`    | [string](#string) |       | dest\_address specifies where the clawed-back tokens should be transferred to. If empty, the tokens will be transferred back to the original funder of the account. |
 
 <a name="evmos.vesting.v1.MsgClawbackResponse"></a>
 
@@ -1782,12 +1782,12 @@ ClawbackVestingAccount.
 
 | Field             | Type                                                            | Label    | Description                                                                                                                                                                                                                                                                                     |
 | ----------------- | --------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `from_address`    | [string](#string)                                               |          | from_address specifies the account to provide the funds and sign the clawback request                                                                                                                                                                                                           |
-| `to_address`      | [string](#string)                                               |          | to_address specifies the account to receive the funds                                                                                                                                                                                                                                           |
-| `start_time`      | [google.protobuf.Timestamp](#google.protobuf.Timestamp)         |          | start_time defines the time at which the vesting period begins                                                                                                                                                                                                                                  |
-| `lockup_periods`  | [cosmos.vesting.v1beta1.Period](#cosmos.vesting.v1beta1.Period) | repeated | lockup_periods defines the unlocking schedule relative to the start_time                                                                                                                                                                                                                        |
-| `vesting_periods` | [cosmos.vesting.v1beta1.Period](#cosmos.vesting.v1beta1.Period) | repeated | vesting_periods defines thevesting schedule relative to the start_time                                                                                                                                                                                                                          |
-| `merge`           | [bool](#bool)                                                   |          | merge specifies a the creation mechanism for existing ClawbackVestingAccounts. If true, merge this new grant into an existing ClawbackVestingAccount, or create it if it does not exist. If false, creates a new account. New grants to an existing account must be from the same from_address. |
+| `from_address`    | [string](#string)                                               |          | from\_address specifies the account to provide the funds and sign the clawback request                                                                                                                                                                                                           |
+| `to_address`      | [string](#string)                                               |          | to\_address specifies the account to receive the funds                                                                                                                                                                                                                                           |
+| `start_time`      | [google.protobuf.Timestamp](#google.protobuf.Timestamp)         |          | start\_time defines the time at which the vesting period begins                                                                                                                                                                                                                                  |
+| `lockup_periods`  | [cosmos.vesting.v1beta1.Period](#cosmos.vesting.v1beta1.Period) | repeated | lockup\_periods defines the unlocking schedule relative to the start\_time                                                                                                                                                                                                                        |
+| `vesting_periods` | [cosmos.vesting.v1beta1.Period](#cosmos.vesting.v1beta1.Period) | repeated | vesting\_periods defines thevesting schedule relative to the start\_time                                                                                                                                                                                                                          |
+| `merge`           | [bool](#bool)                                                   |          | merge specifies a the creation mechanism for existing ClawbackVestingAccounts. If true, merge this new grant into an existing ClawbackVestingAccount, or create it if it does not exist. If false, creates a new account. New grants to an existing account must be from the same from\_address. |
 
 <a name="evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse"></a>
 
@@ -1810,7 +1810,7 @@ Msg defines the vesting Msg service.
 
 | Method Name                    | Request Type                                                                         | Response Type                                                                                        | Description                                                                                                                              | HTTP Verb | Endpoint                                             |
 | ------------------------------ | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------- |
-| `CreateClawbackVestingAccount` | [MsgCreateClawbackVestingAccount](#evmos.vesting.v1.MsgCreateClawbackVestingAccount) | [MsgCreateClawbackVestingAccountResponse](#evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse) | CreateClawbackVestingAccount creats a vesting account that is subject to clawback and the configuration of vesting and lockup schedules. | GET       | /evmos/vesting/v1/tx/create_clawback_vesting_account |
+| `CreateClawbackVestingAccount` | [MsgCreateClawbackVestingAccount](#evmos.vesting.v1.MsgCreateClawbackVestingAccount) | [MsgCreateClawbackVestingAccountResponse](#evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse) | CreateClawbackVestingAccount creats a vesting account that is subject to clawback and the configuration of vesting and lockup schedules. | GET       | /evmos/vesting/v1/tx/create\_clawback\_vesting\_account |
 | `Clawback`                     | [MsgClawback](#evmos.vesting.v1.MsgClawback)                                         | [MsgClawbackResponse](#evmos.vesting.v1.MsgClawbackResponse)                                         | Clawback removes the unvested tokens from a ClawbackVestingAccount.                                                                      | GET       | /evmos/vesting/v1/tx/clawback                        |
 
  <!-- end services -->
@@ -1832,11 +1832,11 @@ tokens, or a combination (tokens vest, but are still locked).
 
 | Field                  | Type                                                                                    | Label    | Description                                                                                                                                      |
 | ---------------------- | --------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `base_vesting_account` | [cosmos.vesting.v1beta1.BaseVestingAccount](#cosmos.vesting.v1beta1.BaseVestingAccount) |          | base_vesting_account implements the VestingAccount interface. It contains all the necessary fields needed for any vesting account implementation |
-| `funder_address`       | [string](#string)                                                                       |          | funder_address specifies the account which can perform clawback                                                                                  |
-| `start_time`           | [google.protobuf.Timestamp](#google.protobuf.Timestamp)                                 |          | start_time defines the time at which the vesting period begins                                                                                   |
-| `lockup_periods`       | [cosmos.vesting.v1beta1.Period](#cosmos.vesting.v1beta1.Period)                         | repeated | lockup_periods defines the unlocking schedule relative to the start_time                                                                         |
-| `vesting_periods`      | [cosmos.vesting.v1beta1.Period](#cosmos.vesting.v1beta1.Period)                         | repeated | vesting_periods defines the vesting schedule relative to the start_time                                                                          |
+| `base_vesting_account` | [cosmos.vesting.v1beta1.BaseVestingAccount](#cosmos.vesting.v1beta1.BaseVestingAccount) |          | base\_vesting\_account implements the VestingAccount interface. It contains all the necessary fields needed for any vesting account implementation |
+| `funder_address`       | [string](#string)                                                                       |          | funder\_address specifies the account which can perform clawback                                                                                  |
+| `start_time`           | [google.protobuf.Timestamp](#google.protobuf.Timestamp)                                 |          | start\_time defines the time at which the vesting period begins                                                                                   |
+| `lockup_periods`       | [cosmos.vesting.v1beta1.Period](#cosmos.vesting.v1beta1.Period)                         | repeated | lockup\_periods defines the unlocking schedule relative to the start\_time                                                                         |
+| `vesting_periods`      | [cosmos.vesting.v1beta1.Period](#cosmos.vesting.v1beta1.Period)                         | repeated | vesting\_periods defines the vesting schedule relative to the start\_time                                                                          |
 
  <!-- end messages -->
 

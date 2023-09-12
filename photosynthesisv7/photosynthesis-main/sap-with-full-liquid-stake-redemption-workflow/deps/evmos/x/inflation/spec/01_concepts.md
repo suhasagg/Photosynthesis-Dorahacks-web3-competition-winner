@@ -31,9 +31,9 @@ issue 1 billion Evmos tokens within the first 4 years.
 
 We implement two different inflation mechanisms to support the token model:
 
-1. linear inflation for team vesting and
-2. exponential inflation for staking rewards, usage incentives and community
-   pool.
+1.  linear inflation for team vesting and
+2.  exponential inflation for staking rewards, usage incentives and community
+    pool.
 
 ### Linear Inflation - Team Vesting
 

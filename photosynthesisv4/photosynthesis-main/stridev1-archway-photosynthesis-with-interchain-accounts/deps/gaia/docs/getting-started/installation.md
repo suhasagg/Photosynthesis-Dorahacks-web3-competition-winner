@@ -1,6 +1,8 @@
 ***
 
-## order: 2&#xA;title: Installing Gaia
+order: 2
+title: Installing Gaia
+----------------------
 
 # Installation
 
@@ -17,9 +19,9 @@ possible to install `gaiad` on Unix, while Windows may require additional
 unsupported third party installation. All steps are listed below for a clean
 install.
 
-1. [Update & install build tools](#build-tools)
-2. [Install Go](#install-go)
-3. [Install `Gaiad` binaries](#install-the-binaries)
+1.  [Update & install build tools](#build-tools)
+2.  [Install Go](#install-go)
+3.  [Install `Gaiad` binaries](#install-the-binaries)
 
 ## Build Tools
 
@@ -83,19 +85,15 @@ cd gaia && make install
 If this command fails due to the following error message, you might have already
 set `LDFLAGS` prior to running this step.
 
-```
-# github.com/cosmos/gaia/cmd/gaiad
-flag provided but not defined: -L
-usage: link [options] main.o
-...
-make: *** [install] Error 2
-```
+    # github.com/cosmos/gaia/cmd/gaiad
+    flag provided but not defined: -L
+    usage: link [options] main.o
+    ...
+    make: *** [install] Error 2
 
 Unset this environment variable and try again.
 
-```
-LDFLAGS="" make install
-```
+    LDFLAGS="" make install
 
 > *NOTE*: If you still have issues at this step, please check that you have the
 > latest stable version of GO installed.
@@ -133,11 +131,11 @@ To work with your own modifications of the Cosmos SDK, make a fork of this repo,
 and add a `replace` clause to the `go.mod` file. The `replace` clause you add to
 `go.mod` must provide the correct import path:
 
-- Make appropriate changes
-- Add `replace github.com/cosmos/cosmos-sdk => /path/to/clone/cosmos-sdk` to
-  `go.mod`
-- Run `make clean install` or `make clean build`
-- Test changes
+*   Make appropriate changes
+*   Add `replace github.com/cosmos/cosmos-sdk => /path/to/clone/cosmos-sdk` to
+    `go.mod`
+*   Run `make clean install` or `make clean build`
+*   Test changes
 
 ## Next
 

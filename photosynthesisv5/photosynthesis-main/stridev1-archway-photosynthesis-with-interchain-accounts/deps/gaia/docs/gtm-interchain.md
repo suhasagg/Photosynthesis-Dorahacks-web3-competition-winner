@@ -50,29 +50,29 @@ Mead*
 
 **What's Needed to Successfully Go to Market?**
 
-1. **Project management**
+1.  **Project management**
 
 In sum, project management will focus on surfacing issues, dependencies,
 relative roadmaps, and coordinating across all stakeholders. Questions that will
 be considered throughout each phase of the Gaia roadmap:
 
-- What is missing from an integration points perspective with end users?
+*   What is missing from an integration points perspective with end users?
 
-- Which relationships are missing?
+*   Which relationships are missing?
 
-- What's the highest priority? Least priority?
+*   What's the highest priority? Least priority?
 
-2. **Market validation**
+2.  **Market validation**
 
 The user is paramount. For Gaia and IBC, we see the users being:
 
-- ATOM holders
-- Existing zones
-- New zones
-- Validators on hub and zones
-- Nodes on hub and zones
-- Other service providers on hubs and zones (wallets, explorers, exchanges,
-  etc.)
+*   ATOM holders
+*   Existing zones
+*   New zones
+*   Validators on hub and zones
+*   Nodes on hub and zones
+*   Other service providers on hubs and zones (wallets, explorers, exchanges,
+    etc.)
 
 We will also want to be tracking outreach to the relevant users per phase to
 ensure that Hub utility (and IBC where appropriate) are being validated.
@@ -81,17 +81,17 @@ IBC (i.e. bridge to Ethereum, AMM, etc). We will also be conducting continous
 outbound outreach to look for partners that are aligned with the interchain
 mission.
 
-3. **Communications**
+3.  **Communications**
 
 Communications should focus on the features of IBC and the Hub that demonstrate
 the most utility for users. Stories should answer questions such as:
 
-- How does IBC relate to ATOM and the Hub?
-- How does IBC derive its value from the Hub, and vice versa?
-- Why should you build your blockchain with IBC?
-- How does a blockchain benefit from connecting to the Hub?
+*   How does IBC relate to ATOM and the Hub?
+*   How does IBC derive its value from the Hub, and vice versa?
+*   Why should you build your blockchain with IBC?
+*   How does a blockchain benefit from connecting to the Hub?
 
-4. **Technical Support**
+4.  **Technical Support**
 
 We will need technical support for users depending on the phase that is being
 rolled out. A phase rollout is not complete without proper technical support.
@@ -100,23 +100,23 @@ Further, we will need technical support that goes beyond the different phase
 rollouts. Importantly, to create an IBC connected blockchain developers will
 need the following things:
 
-- A value proposition
+*   A value proposition
 
-  - A State Machine:
-    - Built on Cosmos SDK
-    - ABCI
-    - Cosmos-rs.. etc
-  - Security:
-    - Cross chain Validation
-    - Validator set formation
-  - Community
-    - Discoverability Opportunities
-  - Connectivity
-  - Visibility
-    - Wallet, Block Explorer, etc
+    *   A State Machine:
+        *   Built on Cosmos SDK
+        *   ABCI
+        *   Cosmos-rs.. etc
+    *   Security:
+        *   Cross chain Validation
+        *   Validator set formation
+    *   Community
+        *   Discoverability Opportunities
+    *   Connectivity
+    *   Visibility
+        *   Wallet, Block Explorer, etc
 
-5. **METRICS: How do we know when IBC is succeeding? How do we know when Hub is
-   providing value to an interconnected ecosystem of sovereign blockchains?**
+5.  **METRICS: How do we know when IBC is succeeding? How do we know when Hub is
+    providing value to an interconnected ecosystem of sovereign blockchains?**
 
 The go-to-market team should be tracking the extent to which IBC is succeeding
 or failing in terms of key metrics. This will require continuous experimentation

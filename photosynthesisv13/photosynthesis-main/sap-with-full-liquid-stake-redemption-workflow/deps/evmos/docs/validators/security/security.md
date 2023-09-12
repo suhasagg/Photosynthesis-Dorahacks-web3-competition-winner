@@ -19,12 +19,12 @@ signing service for Tendermint nodes
 > Take your validator infrastructure to the next level of security and
 > availability:
 >
-> - Composed of a cluster of signer nodes in place of the
->   [remote signer](https://docs.tendermint.com/master/nodes/remote-signer.html),
->   enabling High Availability (HA) for block signing through fault tolerance.
-> - Secure your validator private key by splitting it across multiple private
->   signer nodes using threshold Ed25519 signatures
-> - Add security and availability without sacrificing block sign performance.
+> *   Composed of a cluster of signer nodes in place of the
+>     [remote signer](https://docs.tendermint.com/master/nodes/remote-signer.html),
+>     enabling High Availability (HA) for block signing through fault tolerance.
+> *   Secure your validator private key by splitting it across multiple private
+>     signer nodes using threshold Ed25519 signatures
+> *   Add security and availability without sacrificing block sign performance.
 
 See documentation
 [here](https://github.com/strangelove-ventures/horcrux/blob/main/docs/migrating.md)
@@ -107,9 +107,9 @@ private_peer_ids = "node_ids_of_private_peers"
 By default, uppercase environment variables with the following prefixes will
 replace lowercase command-line flags:
 
-- `EVMOS` (for Evmos flags)
-- `TM` (for Tendermint flags)
-- `BC` (for democli or basecli flags)
+*   `EVMOS` (for Evmos flags)
+*   `TM` (for Tendermint flags)
+*   `BC` (for democli or basecli flags)
 
 For example, the environment variable `EVMOS_CHAIN_ID` will map to the command
 line flag `--chain-id`. Note that while explicit command-line flags will take

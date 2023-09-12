@@ -1,6 +1,9 @@
 ***
 
-## order: 3&#xA;parent:&#xA;order: 1
+order: 3
+parent:
+order: 1
+--------
 
 # Community Pool Spend
 
@@ -55,10 +58,10 @@ sustainable. There is also some debate about who should receive funding. For
 example, part of the community believes that the funds should only be used for
 those who need funding most. Other topics of concern include:
 
-- retroactive grants
-- price negotiation
-- fund disbursal (eg. payments in stages; payments pegged to reduce volitiliy)
-- radical overhaul of how the community-spend mechanism functions
+*   retroactive grants
+*   price negotiation
+*   fund disbursal (eg. payments in stages; payments pegged to reduce volitiliy)
+*   radical overhaul of how the community-spend mechanism functions
 
 We can expect this to take shape as proposals are discussed, accepted, and
 rejected by the Cosmos Hub community.

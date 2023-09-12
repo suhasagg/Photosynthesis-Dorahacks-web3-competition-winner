@@ -1,1 +1,1 @@
-- Disable reloading of configuration upon receiving a SIGHUP signal. ([#1885](https://github.com/informalsystems/ibc-rs/issues/1885))
+*   Disable reloading of configuration upon receiving a SIGHUP signal. ([#1885](https://github.com/informalsystems/ibc-rs/issues/1885))

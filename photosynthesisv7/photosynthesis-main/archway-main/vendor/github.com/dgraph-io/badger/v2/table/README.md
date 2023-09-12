@@ -2,17 +2,15 @@ Size of table is 123,217,667 bytes for all benchmarks.
 
 # BenchmarkRead
 
-```
-$ go test -bench ^BenchmarkRead$ -run ^$ -count 3
-goos: linux
-goarch: amd64
-pkg: github.com/dgraph-io/badger/table
-BenchmarkRead-16    	      10	 154074944 ns/op
-BenchmarkRead-16    	      10	 154340411 ns/op
-BenchmarkRead-16    	      10	 151914489 ns/op
-PASS
-ok  	github.com/dgraph-io/badger/table	22.467s
-```
+    $ go test -bench ^BenchmarkRead$ -run ^$ -count 3
+    goos: linux
+    goarch: amd64
+    pkg: github.com/dgraph-io/badger/table
+    BenchmarkRead-16    	      10	 154074944 ns/op
+    BenchmarkRead-16    	      10	 154340411 ns/op
+    BenchmarkRead-16    	      10	 151914489 ns/op
+    PASS
+    ok  	github.com/dgraph-io/badger/table	22.467s
 
 Size of table is 123,217,667 bytes, which is ~118MB.
 
@@ -78,25 +76,23 @@ value.
 
 # DB Open benchmark
 
-1. Create badger DB with 2 billion key-value pairs (about 380GB of data)
+1.  Create badger DB with 2 billion key-value pairs (about 380GB of data)
 
-```
-badger fill -m 2000 --dir="/tmp/data" --sorted
-```
+<!---->
 
-2. Clear buffers and swap memory
+    badger fill -m 2000 --dir="/tmp/data" --sorted
 
-```
-free -mh && sync && echo 3 | sudo tee /proc/sys/vm/drop_caches && sudo swapoff -a && sudo swapon -a && free -mh
-```
+2.  Clear buffers and swap memory
+
+<!---->
+
+    free -mh && sync && echo 3 | sudo tee /proc/sys/vm/drop_caches && sudo swapoff -a && sudo swapon -a && free -mh
 
 Also flush disk buffers
 
-```
-blockdev --flushbufs /dev/nvme0n1p4
-```
+    blockdev --flushbufs /dev/nvme0n1p4
 
-3. Run the benchmark
+3.  Run the benchmark
 
 ```
 go test -run=^$ github.com/dgraph-io/badger -bench ^BenchmarkDBOpen$ -benchdir="/tmp/data" -v

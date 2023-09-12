@@ -15,11 +15,11 @@ Gorilla WebSocket is a [Go](http://golang.org/) implementation of the
 
 ### Documentation
 
-- [API Reference](https://pkg.go.dev/github.com/gorilla/websocket?tab=doc)
-- [Chat example](https://github.com/gorilla/websocket/tree/master/examples/chat)
-- [Command example](https://github.com/gorilla/websocket/tree/master/examples/command)
-- [Client and server example](https://github.com/gorilla/websocket/tree/master/examples/echo)
-- [File watch example](https://github.com/gorilla/websocket/tree/master/examples/filewatch)
+*   [API Reference](https://pkg.go.dev/github.com/gorilla/websocket?tab=doc)
+*   [Chat example](https://github.com/gorilla/websocket/tree/master/examples/chat)
+*   [Command example](https://github.com/gorilla/websocket/tree/master/examples/command)
+*   [Client and server example](https://github.com/gorilla/websocket/tree/master/examples/echo)
+*   [File watch example](https://github.com/gorilla/websocket/tree/master/examples/filewatch)
 
 ### Status
 
@@ -29,9 +29,7 @@ API is stable.
 
 ### Installation
 
-```
-go get github.com/gorilla/websocket
-```
+    go get github.com/gorilla/websocket
 
 ### Protocol Compliance
 

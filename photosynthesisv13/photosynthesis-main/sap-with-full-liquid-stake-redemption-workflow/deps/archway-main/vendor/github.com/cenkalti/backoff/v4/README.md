@@ -17,9 +17,9 @@ Use https://pkg.go.dev/github.com/cenkalti/backoff/v4 to view the documentation.
 
 ## Contributing
 
-- I would like to keep this library as small as possible.
-- Please don't send a PR without opening an issue and discussing it first.
-- If proposed change is not a common use case, I will probably not accept it.
+*   I would like to keep this library as small as possible.
+*   Please don't send a PR without opening an issue and discussing it first.
+*   If proposed change is not a common use case, I will probably not accept it.
 
 [godoc]: https://pkg.go.dev/github.com/cenkalti/backoff/v4
 

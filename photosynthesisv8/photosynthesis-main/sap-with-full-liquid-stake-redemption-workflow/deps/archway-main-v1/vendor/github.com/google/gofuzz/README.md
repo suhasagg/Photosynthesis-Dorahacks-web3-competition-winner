@@ -7,9 +7,9 @@ gofuzz is a library for populating go objects with random values.
 
 This is useful for testing:
 
-- Do your project's objects really serialize/unserialize correctly in all cases?
-- Is there an incorrectly formatted object that will cause your project to
-  panic?
+*   Do your project's objects really serialize/unserialize correctly in all cases?
+*   Is there an incorrectly formatted object that will cause your project to
+    panic?
 
 Import with `import "github.com/google/gofuzz"`
 

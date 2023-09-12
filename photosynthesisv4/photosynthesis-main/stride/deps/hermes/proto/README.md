@@ -13,9 +13,9 @@ Rust crate for interacting with Cosmos SDK
 
 ## Requirements
 
-- Rust 1.51+
-- `make`, `curl`
-- Cosmos SDK (downloaded automatically if you are using `make`)
+*   Rust 1.51+
+*   `make`, `curl`
+*   Cosmos SDK (downloaded automatically if you are using `make`)
 
 ## License
 
@@ -25,9 +25,7 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use
 the files in this repository except in compliance with the License. You may
 obtain a copy of the License at
 
-```
-https://www.apache.org/licenses/LICENSE-2.0
-```
+    https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software distributed
 under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR

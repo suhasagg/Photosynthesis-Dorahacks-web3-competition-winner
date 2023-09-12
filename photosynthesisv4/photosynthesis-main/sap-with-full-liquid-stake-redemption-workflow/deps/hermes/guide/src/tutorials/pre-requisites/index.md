@@ -8,8 +8,8 @@ are installed on your machine.
 
 ## Sections
 
-- **[Gaia](./gaia.md)**
-  - Install `Gaia`, the first implementation of the CosmosHub.
-- **[Gaiad Manager](./gaia.md)**
-  - Install Gaiad Manager, a command-line tool (CLI) that helps manage local
-    `gaiad` networks.
+*   **[Gaia](./gaia.md)**
+    *   Install `Gaia`, the first implementation of the CosmosHub.
+*   **[Gaiad Manager](./gaia.md)**
+    *   Install Gaiad Manager, a command-line tool (CLI) that helps manage local
+        `gaiad` networks.

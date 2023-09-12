@@ -1,6 +1,8 @@
 ***
 
-## order: 3&#xA;title: Delegator Security
+order: 3
+title: Delegator Security
+-------------------------
 
 # Delegator Security
 
@@ -34,26 +36,26 @@ with someone else, you can always verify it before engaging with it by
 navigating to our official website or an official Cosmos communication channel
 on your own.
 
-- **Be skeptical of unexpected attachments, or emails that ask you to visit a
-  suspicious or unfamiliar website in the context of blockchains or
-  cryptocurrency.** An attacker may attempt to lure you to a
-  [compromised site](https://blog.malwarebytes.com/cybercrime/2013/02/tools-of-the-trade-exploit-kits/)
-  designed to steal sensitive information from your computer. If you're a Gmail
-  user, test your resilience against the latest email-based phishing tactics
-  [here](https://phishingquiz.withgoogle.com/) .
+*   **Be skeptical of unexpected attachments, or emails that ask you to visit a
+    suspicious or unfamiliar website in the context of blockchains or
+    cryptocurrency.** An attacker may attempt to lure you to a
+    [compromised site](https://blog.malwarebytes.com/cybercrime/2013/02/tools-of-the-trade-exploit-kits/)
+    designed to steal sensitive information from your computer. If you're a Gmail
+    user, test your resilience against the latest email-based phishing tactics
+    [here](https://phishingquiz.withgoogle.com/) .
 
-- **Do your due diligence before purchasing ATOM. Neither the Tendermint team
-  nor the Interchain Foundation will be selling ATOM at launch**, so if you see
-  social media posts or emails advertising a token sale from us, they're not
-  real and should be dismissed immediately. If you're on the hunt for ATOM, make
-  sure that you've researched the seller or exchange to confirm that the tokens
-  are coming from a trustworthy source.
+*   **Do your due diligence before purchasing ATOM. Neither the Tendermint team
+    nor the Interchain Foundation will be selling ATOM at launch**, so if you see
+    social media posts or emails advertising a token sale from us, they're not
+    real and should be dismissed immediately. If you're on the hunt for ATOM, make
+    sure that you've researched the seller or exchange to confirm that the tokens
+    are coming from a trustworthy source.
 
-- **No one from Cosmos, the Tendermint team or the Interchain Foundation will
-  ever send an email that asks for you to share any kind of account credentials
-  or your 12 words with us**, and we will always use our official Twitter,
-  Medium, and Github accounts to communicate important news directly to the
-  Cosmos community.
+*   **No one from Cosmos, the Tendermint team or the Interchain Foundation will
+    ever send an email that asks for you to share any kind of account credentials
+    or your 12 words with us**, and we will always use our official Twitter,
+    Medium, and Github accounts to communicate important news directly to the
+    Cosmos community.
 
 If you receive an email or tweet that sounds too good to be true, is likely to
 be a scam.
@@ -118,16 +120,16 @@ For people who hold cryptocurrency, there are two specific account security
 actions that can be taken to eliminate specific risks that come with being part
 of the blockchain world.
 
-- First, it is important to enable 2-factor authentication everywhere you can,
-  and to make sure that you are using a code generator or
-  [U2F hardware key](https://en.wikipedia.org/wiki/Universal\_2nd_Factor) as a
-  second factor.
+*   First, it is important to enable 2-factor authentication everywhere you can,
+    and to make sure that you are using a code generator or
+    [U2F hardware key](https://en.wikipedia.org/wiki/Universal_2nd_Factor) as a
+    second factor.
 
-- Second, be mindful of account recovery methods used to regain access to your
-  most important accounts and make sure that you do not use SMS as a recovery
-  method. If you haven't done so yet, start using an authenticator app or a
-  hardware key immediately for your personal email account and wherever else you
-  manage your tokens, especially if you use online exchanges.
+*   Second, be mindful of account recovery methods used to regain access to your
+    most important accounts and make sure that you do not use SMS as a recovery
+    method. If you haven't done so yet, start using an authenticator app or a
+    hardware key immediately for your personal email account and wherever else you
+    manage your tokens, especially if you use online exchanges.
 
 ## Supply Chain Attacks
 

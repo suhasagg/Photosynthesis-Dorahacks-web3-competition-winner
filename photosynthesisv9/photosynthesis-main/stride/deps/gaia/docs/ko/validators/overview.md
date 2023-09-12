@@ -58,7 +58,7 @@ CPU와 메모리 사용량이 높아질 것으로 예상됩니다. 추가적으�
 추가적으로 검증인을 운영하는 것에 대한 질문과 정보는 검증인 커뮤니티 채팅방과 포
 럼을 이용하세요:
 
-- [검증인 채팅](https://riot.im/app/#/room/#cosmos_validators:matrix.org)
-- [검증인 포럼](https://forum.cosmos.network/c/validating)
+*   [검증인 채팅](https://riot.im/app/#/room/#cosmos_validators:matrix.org)
+*   [검증인 포럼](https://forum.cosmos.network/c/validating)
 
 <!-- markdown-link-check-enable -->

@@ -31,11 +31,11 @@ type MsgRegisterRevenue struct {
 
 The message content stateless validation fails if:
 
-- Contract hex address is invalid
-- Contract hex address is zero
-- Deployer bech32 address is invalid
-- Withdraw bech32 address is invalid
-- Nonces array is empty
+*   Contract hex address is invalid
+*   Contract hex address is zero
+*   Deployer bech32 address is invalid
+*   Withdraw bech32 address is invalid
+*   Nonces array is empty
 
 ### `MsgUpdateRevenue`
 
@@ -56,11 +56,11 @@ type MsgUpdateRevenue struct {
 
 The message content stateless validation fails if:
 
-- Contract hex address is invalid
-- Contract hex address is zero
-- Deployer bech32 address is invalid
-- Withdraw bech32 address is invalid
-- Withdraw bech32 address is same as deployer address
+*   Contract hex address is invalid
+*   Contract hex address is zero
+*   Deployer bech32 address is invalid
+*   Withdraw bech32 address is invalid
+*   Withdraw bech32 address is same as deployer address
 
 ### `MsgCancelRevenue`
 
@@ -80,6 +80,6 @@ type MsgCancelRevenue struct {
 
 The message content stateless validation fails if:
 
-- Contract hex address is invalid
-- Contract hex address is zero
-- Deployer bech32 address is invalid
+*   Contract hex address is invalid
+*   Contract hex address is zero
+*   Deployer bech32 address is invalid

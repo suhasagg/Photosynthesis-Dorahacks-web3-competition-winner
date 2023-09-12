@@ -8,11 +8,11 @@ You can read more about the ADR concept in this
 
 An ADR should provide:
 
-- Context on the relevant goals and the current state
-- Proposed changes to achieve the goals
-- Summary of pros and cons
-- References
-- Changelog
+*   Context on the relevant goals and the current state
+*   Proposed changes to achieve the goals
+*   Summary of pros and cons
+*   References
+*   Changelog
 
 Note the distinction between an ADR and a spec. The ADR provides the context,
 intuition, reasoning, and justification for a change in architecture, or for the

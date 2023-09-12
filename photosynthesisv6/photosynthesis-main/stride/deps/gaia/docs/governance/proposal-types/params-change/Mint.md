@@ -28,12 +28,12 @@ some non-staked tokens in order to help provide some liquidity.
 
 It can be broken down in the following way:
 
-- If the inflation rate is below the goal %-bonded the inflation rate will
-  increase until a maximum value is reached
-- If the goal % bonded (67% in Cosmos-Hub) is maintained, then the inflation
-  rate will stay constant
-- If the inflation rate is above the goal %-bonded the inflation rate will
-  decrease until a minimum value is reached
+*   If the inflation rate is below the goal %-bonded the inflation rate will
+    increase until a maximum value is reached
+*   If the goal % bonded (67% in Cosmos-Hub) is maintained, then the inflation
+    rate will stay constant
+*   If the inflation rate is above the goal %-bonded the inflation rate will
+    decrease until a minimum value is reached
 
 ## Governance notes on parameters
 
@@ -41,9 +41,9 @@ It can be broken down in the following way:
 
 **Type of asset/coin that the Cosmos Hub mints.**
 
-- on-chain value `{{ $themeConfig.currentParameters.mint.MintDenom }}`
-- `cosmoshub-4` default: `uatom`
-- `cosmoshub-3` default: `uatom`
+*   on-chain value `{{ $themeConfig.currentParameters.mint.MintDenom }}`
+*   `cosmoshub-4` default: `uatom`
+*   `cosmoshub-3` default: `uatom`
 
 This is the type of asset (aka coin) that is being minted. The Cosmos Hub
 produces `uatom`, or micro-ATOM, where 1,000,000 uatom is equivalent to 1 ATOM.
@@ -59,12 +59,12 @@ expectations of staking participants.
 **A factor of and limit to the speed at which the Cosmos Hub's inflation rate
 changes.**
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.mint.InflationRateChange }}`
-- [Proposal 48](https://www.mintscan.io/cosmos/proposals/48) change to
-  `1.000000000000000000`
-- `cosmoshub-4` default: `0.130000000000000000`
-- `cosmoshub-3` default: `0.130000000000000000`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.mint.InflationRateChange }}`
+*   [Proposal 48](https://www.mintscan.io/cosmos/proposals/48) change to
+    `1.000000000000000000`
+*   `cosmoshub-4` default: `0.130000000000000000`
+*   `cosmoshub-3` default: `0.130000000000000000`
 
 Cosmos Hub's inflation rate can change faster or slower, depending on staking
 participation, and is limited to a minimum of 7% and maximum of 20%. The
@@ -72,14 +72,14 @@ inflation rate cannot increase or decrease faster than 13% per year
 (`InflationRateChange`). The speed that the inflation rate changes depends upon
 two things:
 
-1. how far away the *current staking participation ratio* is from
-   [`GoalBonded`](#5-GoalBonded) (67%)
-2. the value of `InflationRateChange`, which is
-   `{{ $themeConfig.currentParameters.mint.InflationRateChange }}`
+1.  how far away the *current staking participation ratio* is from
+    [`GoalBonded`](#5-GoalBonded) (67%)
+2.  the value of `InflationRateChange`, which is
+    `{{ $themeConfig.currentParameters.mint.InflationRateChange }}`
 
-```
-inflationRateChangePerYear = (1 - bondedRatio/params.GoalBonded) * params.InflationRateChange
-```
+<!---->
+
+    inflationRateChangePerYear = (1 - bondedRatio/params.GoalBonded) * params.InflationRateChange
 
 [The source for this information can be found here](https://github.com/cosmos/cosmos-sdk/tree/main/x/mint#begin-block).
 
@@ -131,9 +131,9 @@ respond more strongly.
 **The maximum rate that the Cosmos Hub can mint new ATOMs, proportional to the
 supply.**
 
-- on-chain value: `{{ $themeConfig.currentParameters.mint.InflationMax }}`
-- `cosmoshub-4` default: `0.200000000000000000`
-- `cosmoshub-3` default: `0.200000000000000000`
+*   on-chain value: `{{ $themeConfig.currentParameters.mint.InflationMax }}`
+*   `cosmoshub-4` default: `0.200000000000000000`
+*   `cosmoshub-3` default: `0.200000000000000000`
 
 The maximum rate that the Cosmos Hub can be set to mint new ATOMs is determined
 by `InflationMax`, which is 20% (`0.200000000000000000`) of the ATOM supply per
@@ -172,9 +172,9 @@ year, and effectively inflation will be higher than the set rate.
 **The minimum rate that the Cosmos Hub can mint new ATOMs, proportional to the
 supply.**
 
-- on-chain value: `{{ $themeConfig.currentParameters.mint.InflationMin }}`
-- `cosmoshub-4` default: `0.070000000000000000`
-- `cosmoshub-3` default: `0.070000000000000000`
+*   on-chain value: `{{ $themeConfig.currentParameters.mint.InflationMin }}`
+*   `cosmoshub-4` default: `0.070000000000000000`
+*   `cosmoshub-3` default: `0.070000000000000000`
 
 The minimum rate that the Cosmos Hub can be set to mint new ATOMs is determined
 by `InflationMin`, which is 7% (`0.070000000000000000`) of the ATOM supply per
@@ -212,9 +212,9 @@ year, and effectively inflation will be higher than the set rate.
 
 **The target proportion of staking participation, relative to the ATOM supply.**
 
-- on-chain value: `{{ $themeConfig.currentParameters.mint.GoalBonded }}`
-- `cosmoshub-4` default: `0.670000000000000000`
-- `cosmoshub-3` default: `0.670000000000000000`
+*   on-chain value: `{{ $themeConfig.currentParameters.mint.GoalBonded }}`
+*   `cosmoshub-4` default: `0.670000000000000000`
+*   `cosmoshub-3` default: `0.670000000000000000`
 
 `GoalBonded` is the target proportion of staking participation, relative to the
 ATOM supply. Currently the goal of the system's design is to have 67%
@@ -244,10 +244,10 @@ may increase the incentive for staking participation.
 **The system's assumed number of blocks that the Cosmos Hub will produce in one
 year.**
 
-- on-chain value: `{{ $themeConfig.currentParameters.mint.BlocksPerYear }}`
-- `cosmoshub-4` default: `4360000`
-- [Proposal 30](https://www.mintscan.io/cosmos/proposals/30) change to `4360000`
-- `cosmoshub-3` default: `4855015`
+*   on-chain value: `{{ $themeConfig.currentParameters.mint.BlocksPerYear }}`
+*   `cosmoshub-4` default: `4360000`
+*   [Proposal 30](https://www.mintscan.io/cosmos/proposals/30) change to `4360000`
+*   `cosmoshub-3` default: `4855015`
 
 `BlocksPerYear` is the setting for the system's assumed number of blocks that
 the Cosmos Hub will produce in one year. `BlocksPerYear` is currently

@@ -88,9 +88,7 @@ func main() {
 
 ## Installation and Upgrade
 
-```
-$ go get -u github.com/magiconair/properties
-```
+    $ go get -u github.com/magiconair/properties
 
 ## License
 
@@ -100,7 +98,7 @@ details.
 
 ## ToDo
 
-- Dump contents with passwords and secrets obscured
+*   Dump contents with passwords and secrets obscured
 
 ## Updated Git tags
 

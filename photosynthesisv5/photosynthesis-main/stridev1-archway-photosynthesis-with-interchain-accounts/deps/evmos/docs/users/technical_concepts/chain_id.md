@@ -15,7 +15,7 @@ version of the software and mainnet. :::
 
 | Name                                            | Chain ID                                      | Identifier | EIP155 Number                         | Version Number                              |
 | ----------------------------------------------- | --------------------------------------------- | ---------- | ------------------------------------- | ------------------------------------------- |
-| Evmos {{ $themeConfig.project.version_number }} | `evmos_{{ $themeConfig.project.chain_id }}-2` | `evmos`    | `{{ $themeConfig.project.chain_id }}` | `{{ $themeConfig.project.version_number }}` |
+| Evmos {{ $themeConfig.project.version\_number }} | `evmos_{{ $themeConfig.project.chain_id }}-2` | `evmos`    | `{{ $themeConfig.project.chain_id }}` | `{{ $themeConfig.project.version_number }}` |
 | Evmos 1                                         | `evmos_{{ $themeConfig.project.chain_id }}-1` | `evmos`    | `{{ $themeConfig.project.chain_id }}` | `1`                                         |
 
 ### Testnet
@@ -46,13 +46,13 @@ chain identifiers.
 
 The Evmos Chain ID contains 3 main components
 
-- **Identifier**: Unstructured string that defines the name of the application.
-- **EIP155 Number**: Immutable
-  [EIP155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md)
-  `CHAIN_ID` that defines the replay attack protection number.
-- **Version Number**: Is the version number (always positive) that the chain is
-  currently running. This number **MUST** be incremented every time the chain is
-  upgraded or forked in order to avoid network or consensus errors.
+*   **Identifier**: Unstructured string that defines the name of the application.
+*   **EIP155 Number**: Immutable
+    [EIP155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md)
+    `CHAIN_ID` that defines the replay attack protection number.
+*   **Version Number**: Is the version number (always positive) that the chain is
+    currently running. This number **MUST** be incremented every time the chain is
+    upgraded or forked in order to avoid network or consensus errors.
 
 ### Format
 

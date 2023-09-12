@@ -26,9 +26,9 @@ determining the effective validator set for the system.
 **The time duration required for bonded ATOMs to unbond and become
 transferrable, in nanoseconds.**
 
-- on-chain value: `{{ $themeConfig.currentParameters.staking.UnbondingTime }}`
-- `cosmoshub-4` default: `1814400000000000`
-- `cosmoshub-3` default: `1814400000000000`
+*   on-chain value: `{{ $themeConfig.currentParameters.staking.UnbondingTime }}`
+*   `cosmoshub-4` default: `1814400000000000`
+*   `cosmoshub-3` default: `1814400000000000`
 
 In order to participate as a Cosmos Hub validator or delegator, ATOMs must be
 bonded (also known as staking). Once bonded, ATOMs are locked by the protocol
@@ -77,9 +77,9 @@ the strength of the protocol's security guarantees.
 **The maximum number of validators that may participate in validating blocks,
 earning rewards, and governance voting.**
 
-- on-chain value: `{{ $themeConfig.currentParameters.staking.MaxValidators }}`
-- `cosmoshub-4` default: `125`
-- `cosmoshub-3` default: `125`
+*   on-chain value: `{{ $themeConfig.currentParameters.staking.MaxValidators }}`
+*   `cosmoshub-4` default: `125`
+*   `cosmoshub-3` default: `125`
 
 Validators are ranked by stake-backing based upon the sum of their delegations,
 and only the top 125 are designated to be active (aka "the active set"). The
@@ -120,18 +120,18 @@ to the Cosmos Hub.
 
 ### `KeyMaxEntries`
 
-- **The maximum number of unbondings between a delegator and validator within
-  the [unbonding period](#UnbondingTime).**
+*   **The maximum number of unbondings between a delegator and validator within
+    the [unbonding period](#UnbondingTime).**
 
-- **A delegator's maximum number of simultaneous redelegations from one
-  validator to another validator within the
-  [unbonding period](#1-UnbondingTime).**
+*   **A delegator's maximum number of simultaneous redelegations from one
+    validator to another validator within the
+    [unbonding period](#1-UnbondingTime).**
 
-- on-chain value: `{{ $themeConfig.currentParameters.staking.KeyMaxEntries }}`
+*   on-chain value: `{{ $themeConfig.currentParameters.staking.KeyMaxEntries }}`
 
-- `cosmoshub-4` default: `7`
+*   `cosmoshub-4` default: `7`
 
-- `cosmoshub-3` default: `7`
+*   `cosmoshub-3` default: `7`
 
 Each delegator has a limited number of times that they may unbond ATOM amounts
 from a unique validator within the [unbonding period](#1-UnbondingTime). Each
@@ -170,9 +170,9 @@ Aleksandr (All in Bits; Fission Labs) wrote more about `KeyMaxEntries`
 
 **The unit and denomination for the asset bonded in the system.**
 
-- on-chain value: `{{ $themeConfig.currentParameters.staking.BondDenom }}`
-- `cosmoshub-4` default: `uatom`
-- `cosmoshub-3` default: `uatom`
+*   on-chain value: `{{ $themeConfig.currentParameters.staking.BondDenom }}`
+*   `cosmoshub-4` default: `uatom`
+*   `cosmoshub-3` default: `uatom`
 
 When using an asset as a bond on the Cosmos Hub, the unit and denomination of
 the asset is denoted as the `uatom`, or micro-ATOM, where 1 ATOM is considered
@@ -190,10 +190,10 @@ functionality.
 
 **The number of HistoricalEntries to keep.**
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.staking.HistoricalEntries }}`
-- `cosmoshub-4` default: `10000`
-- Did not exist in `cosmoshub-3` genesis
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.staking.HistoricalEntries }}`
+*   `cosmoshub-4` default: `10000`
+*   Did not exist in `cosmoshub-3` genesis
 
 Read
 [ADR-17](https://github.com/cosmos/cosmos-sdk/blob/master/docs/architecture/adr-017-historical-header-module.md)

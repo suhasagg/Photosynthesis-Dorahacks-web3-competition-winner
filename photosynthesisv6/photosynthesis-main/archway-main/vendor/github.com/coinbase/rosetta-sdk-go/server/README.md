@@ -32,13 +32,11 @@ invoked by controllers.
 
 ## Recommended Folder Structure
 
-```
-main.go
-/services
-  block_service.go
-  network_service.go
-  ...
-```
+    main.go
+    /services
+      block_service.go
+      network_service.go
+      ...
 
 ## Examples
 

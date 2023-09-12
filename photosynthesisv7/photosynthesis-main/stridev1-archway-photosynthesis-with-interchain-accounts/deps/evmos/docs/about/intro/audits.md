@@ -19,4 +19,4 @@ for anyone deploying on or using Evmos.
 This page lists the publicly available audits, that have been conducted on the
 Evmos and Ethermint codebases:
 
-- [Informal Systems Security Audit](https://github.com/informalsystems/audits/blob/main/Evmos2021Q4/informal-evmos-report-2021q4.pdf)
+*   [Informal Systems Security Audit](https://github.com/informalsystems/audits/blob/main/Evmos2021Q4/informal-evmos-report-2021q4.pdf)

@@ -101,9 +101,9 @@ enabled on your project by default.
 
 Workspace contains:
 
-- **rust**: for builds
-- [wasmd](https://github.com/CosmWasm/wasmd): for local node setup and client
-- **jq**: shell JSON manipulation tool
+*   **rust**: for builds
+*   [wasmd](https://github.com/CosmWasm/wasmd): for local node setup and client
+*   **jq**: shell JSON manipulation tool
 
 Follow [Gitpod Getting Started](https://www.gitpod.io/docs/getting-started) and
 launch your workspace.

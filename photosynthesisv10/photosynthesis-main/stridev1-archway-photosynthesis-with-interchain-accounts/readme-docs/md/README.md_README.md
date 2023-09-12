@@ -1,6 +1,9 @@
 ***
 
-## title: "Stride Modules"&#xA;excerpt: ""&#xA;category: 62c5c5ff03a5bf069004def2
+title: "Stride Modules"
+excerpt: ""
+category: 62c5c5ff03a5bf069004def2
+----------------------------------
 
 ## Stride Modules
 
@@ -26,18 +29,14 @@ We use the following modules from
 [Osmosis](https://github.com/osmosis-labs/osmosis) provided under
 [this License](https://github.com/osmosis-labs/osmosis/blob/main/LICENSE):
 
-```
-x/epochs
-x/mint
-```
+    x/epochs
+    x/mint
 
 We use the following module (marketed as public infra) from
 [Quicksilver](https://github.com/ingenuity-build/quicksilver) provided under
 [this License](https://github.com/ingenuity-build/quicksilver/blob/main/LICENSE):
 
-```
-x/interchainqueries
-```
+    x/interchainqueries
 
 Relevant licenses with full attribution can be found in the relevant repo
 subdirectories.

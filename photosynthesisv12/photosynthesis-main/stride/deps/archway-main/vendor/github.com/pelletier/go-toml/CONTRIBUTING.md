@@ -49,17 +49,17 @@ Want to contribute a patch? Very happy to hear that!
 
 First, some high-level rules:
 
-- A short proposal with some POC code is better than a lengthy piece of text
-  with no code. Code speaks louder than words.
-- No backward-incompatible patch will be accepted unless discussed. Sometimes
-  it's hard, and Go's lack of versioning by default does not help, but we try
-  not to break people's programs unless we absolutely have to.
-- If you are writing a new feature or extending an existing one, make sure to
-  write some documentation.
-- Bug fixes need to be accompanied with regression tests.
-- New code needs to be tested.
-- Your commit messages need to explain why the change is needed, even if already
-  included in the PR description.
+*   A short proposal with some POC code is better than a lengthy piece of text
+    with no code. Code speaks louder than words.
+*   No backward-incompatible patch will be accepted unless discussed. Sometimes
+    it's hard, and Go's lack of versioning by default does not help, but we try
+    not to break people's programs unless we absolutely have to.
+*   If you are writing a new feature or extending an existing one, make sure to
+    write some documentation.
+*   Bug fixes need to be accompanied with regression tests.
+*   New code needs to be tested.
+*   Your commit messages need to explain why the change is needed, even if already
+    included in the PR description.
 
 It does sound like a lot, but those best practices are here to save time overall
 and continuously improve the quality of the project, which is something everyone
@@ -69,11 +69,11 @@ benefits from.
 
 The fairly standard code contribution process looks like that:
 
-1. [Fork the project][fork].
-2. Make your changes, commit on any branch you like.
-3. [Open up a pull request][pull-request]
-4. Review, potential ask for changes.
-5. Merge. You're in!
+1.  [Fork the project][fork].
+2.  Make your changes, commit on any branch you like.
+3.  [Open up a pull request][pull-request]
+4.  Review, potential ask for changes.
+5.  Merge. You're in!
 
 Feel free to ask for help! You can create draft pull requests to gather some
 early feedback!
@@ -97,25 +97,25 @@ code. We enforce using `go fmt` on the whole code base.
 
 Checklist:
 
-- Passing CI.
-- Does not introduce backward-incompatible changes (unless discussed).
-- Has relevant doc changes.
-- Has relevant unit tests.
+*   Passing CI.
+*   Does not introduce backward-incompatible changes (unless discussed).
+*   Has relevant doc changes.
+*   Has relevant unit tests.
 
-1. Merge using "squash and merge".
-2. Make sure to edit the commit message to keep all the useful information nice
-   and clean.
-3. Make sure the commit title is clear and contains the PR number (#123).
+1.  Merge using "squash and merge".
+2.  Make sure to edit the commit message to keep all the useful information nice
+    and clean.
+3.  Make sure the commit title is clear and contains the PR number (#123).
 
 #### New release
 
-1. Go to [releases][releases]. Click on "X commits to master since this
-   release".
-2. Make note of all the changes. Look for backward incompatible changes, new
-   features, and bug fixes.
-3. Pick the new version using the above and semver.
-4. Create a [new release][new-release].
-5. Follow the same format as [1.1.0][release-110].
+1.  Go to [releases][releases]. Click on "X commits to master since this
+    release".
+2.  Make note of all the changes. Look for backward incompatible changes, new
+    features, and bug fixes.
+3.  Pick the new version using the above and semver.
+4.  Create a [new release][new-release].
+5.  Follow the same format as [1.1.0][release-110].
 
 [issues-tracker]: https://github.com/pelletier/go-toml/issues
 

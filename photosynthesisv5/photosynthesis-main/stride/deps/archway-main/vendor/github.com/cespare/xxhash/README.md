@@ -10,17 +10,15 @@ standard library.
 The API is very small, taking its cue from the other hashing packages in the
 standard library:
 
-```
-$ go doc github.com/cespare/xxhash                                                                                                                                                                                              !
-package xxhash // import "github.com/cespare/xxhash"
+    $ go doc github.com/cespare/xxhash                                                                                                                                                                                              !
+    package xxhash // import "github.com/cespare/xxhash"
 
-Package xxhash implements the 64-bit variant of xxHash (XXH64) as described
-at http://cyan4973.github.io/xxHash/.
+    Package xxhash implements the 64-bit variant of xxHash (XXH64) as described
+    at http://cyan4973.github.io/xxHash/.
 
-func New() hash.Hash64
-func Sum64(b []byte) uint64
-func Sum64String(s string) uint64
-```
+    func New() hash.Hash64
+    func Sum64(b []byte) uint64
+    func Sum64String(s string) uint64
 
 This implementation provides a fast pure-Go implementation and an even faster
 assembly implementation for amd64.
@@ -40,13 +38,11 @@ implementations of Sum64 against another popular Go XXH64 implementation,
 
 These numbers were generated with:
 
-```
-$ go test -benchtime 10s -bench '/OneOfOne,'
-$ go test -tags purego -benchtime 10s -bench '/xxhash,'
-$ go test -benchtime 10s -bench '/xxhash,'
-```
+    $ go test -benchtime 10s -bench '/OneOfOne,'
+    $ go test -tags purego -benchtime 10s -bench '/xxhash,'
+    $ go test -benchtime 10s -bench '/xxhash,'
 
 ## Projects using this package
 
-- [InfluxDB](https://github.com/influxdata/influxdb)
-- [Prometheus](https://github.com/prometheus/prometheus)
+*   [InfluxDB](https://github.com/influxdata/influxdb)
+*   [Prometheus](https://github.com/prometheus/prometheus)

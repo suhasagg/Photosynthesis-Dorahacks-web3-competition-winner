@@ -1,6 +1,9 @@
 ***
 
-## title: "Records"&#xA;excerpt: ""&#xA;category: 6392913957c533007128548e
+title: "Records"
+excerpt: ""
+category: 6392913957c533007128548e
+----------------------------------
 
 # The Records Module
 
@@ -17,69 +20,69 @@ before passing messages to the underlying `transfer` module.
 
 Note:
 
-- The middleware stack is added in `app.go`
-- The custom handler logic is added in `ibc_module.go` by implementing the
-  IBCModule interface
+*   The middleware stack is added in `app.go`
+*   The custom handler logic is added in `ibc_module.go` by implementing the
+    IBCModule interface
 
 ## Keeper functions
 
 Deposit Records
 
-- `GetDepositRecordCount()`
-- `SetDepositRecordCount()`
-- `AppendDepositRecord()`
-- `SetDepositRecord()`
-- `GetDepositRecord()`
-- `RemoveDepositRecord()`
-- `GetAllDepositRecord()`
-- `GetTransferDepositRecordByEpochAndChain()`
+*   `GetDepositRecordCount()`
+*   `SetDepositRecordCount()`
+*   `AppendDepositRecord()`
+*   `SetDepositRecord()`
+*   `GetDepositRecord()`
+*   `RemoveDepositRecord()`
+*   `GetAllDepositRecord()`
+*   `GetTransferDepositRecordByEpochAndChain()`
 
 Epoch Unbonding Records
 
-- `SetEpochUnbondingRecord()`
-- `GetEpochUnbondingRecord()`
-- `RemoveEpochUnbondingRecord()`
-- `GetAllEpochUnbondingRecord()`
-- `GetAllPreviousEpochUnbondingRecords()`
-- `GetHostZoneUnbondingByChainId()`
-- `AddHostZoneToEpochUnbondingRecord()`
-- `SetHostZoneUnbondings()`
+*   `SetEpochUnbondingRecord()`
+*   `GetEpochUnbondingRecord()`
+*   `RemoveEpochUnbondingRecord()`
+*   `GetAllEpochUnbondingRecord()`
+*   `GetAllPreviousEpochUnbondingRecords()`
+*   `GetHostZoneUnbondingByChainId()`
+*   `AddHostZoneToEpochUnbondingRecord()`
+*   `SetHostZoneUnbondings()`
 
 User Redemption Records
 
-- `SetUserRedemptionRecord()`
-- `GetUserRedemptionRecord()`
-- `RemoveUserRedemptionRecord()`
-- `GetAllUserRedemptionRecord()`
-- `IterateUserRedemptionRecords()`
+*   `SetUserRedemptionRecord()`
+*   `GetUserRedemptionRecord()`
+*   `RemoveUserRedemptionRecord()`
+*   `GetAllUserRedemptionRecord()`
+*   `IterateUserRedemptionRecords()`
 
 ## State
 
 Callbacks
 
-- `TransferCallback`
+*   `TransferCallback`
 
 Genesis
 
-- `UserRedemptionRecord`
-- `Params`
-- `RecordsPacketData`
-- `NoData`
-- `DepositRecord`
-- `HostZoneUnbonding`
-- `EpochUnbondingRecord`
-- `GenesisState`
+*   `UserRedemptionRecord`
+*   `Params`
+*   `RecordsPacketData`
+*   `NoData`
+*   `DepositRecord`
+*   `HostZoneUnbonding`
+*   `EpochUnbondingRecord`
+*   `GenesisState`
 
 ## Queries
 
-- `Params`
-- `GetDepositRecord`
-- `AllDepositRecord`
-- `GetUserRedemptionRecord`
-- `AllUserRedemptionRecord`
-- `AllUserRedemptionRecordForUser`
-- `GetEpochUnbondingRecord`
-- `AllEpochUnbondingRecord`
+*   `Params`
+*   `GetDepositRecord`
+*   `AllDepositRecord`
+*   `GetUserRedemptionRecord`
+*   `AllUserRedemptionRecord`
+*   `AllUserRedemptionRecordForUser`
+*   `GetEpochUnbondingRecord`
+*   `AllEpochUnbondingRecord`
 
 ## Events
 

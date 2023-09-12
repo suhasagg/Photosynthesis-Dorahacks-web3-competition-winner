@@ -8,8 +8,8 @@ Learn how Evmos handles pending state queries. {synopsis}
 
 ## Pre-requisite Readings
 
-- [Tendermint Mempool](https://docs.tendermint.com/master/tendermint-core/mempool/)
-  {prereq}
+*   [Tendermint Mempool](https://docs.tendermint.com/master/tendermint-core/mempool/)
+    {prereq}
 
 ## Evmos vs Ethereum
 
@@ -43,10 +43,10 @@ pending state will not be the same for the same query to two different nodes.
 
 ### JSON-RPC Calls on Pending Transactions
 
-- [`eth_getBalance`](./../../developers/json-rpc/endpoints.md#eth_getbalance)
-- [`eth_getTransactionCount`](./../../developers/json-rpc/endpoints.md#eth-gettransactioncount)
-- [`eth_getBlockTransactionCountByNumber`](./../../developers/json-rpc/endpoints.md#eth-getblocktransactioncountbynumber)
-- [`eth_getBlockByNumber`](./../../developers/json-rpc/endpoints.md#eth-getblockbynumber)
-- [`eth_getTransactionByHash`](./../../developers/json-rpc/endpoints.md#eth-gettransactionbyhash)
-- [`eth_getTransactionByBlockNumberAndIndex`](./../../developers/json-rpc/endpoints.md#eth-gettransactionbyblockhashandindex)
-- [`eth_sendTransaction`](./../../developers/json-rpc/endpoints.md#eth-sendtransaction)
+*   [`eth_getBalance`](./../../developers/json-rpc/endpoints.md#eth_getbalance)
+*   [`eth_getTransactionCount`](./../../developers/json-rpc/endpoints.md#eth-gettransactioncount)
+*   [`eth_getBlockTransactionCountByNumber`](./../../developers/json-rpc/endpoints.md#eth-getblocktransactioncountbynumber)
+*   [`eth_getBlockByNumber`](./../../developers/json-rpc/endpoints.md#eth-getblockbynumber)
+*   [`eth_getTransactionByHash`](./../../developers/json-rpc/endpoints.md#eth-gettransactionbyhash)
+*   [`eth_getTransactionByBlockNumberAndIndex`](./../../developers/json-rpc/endpoints.md#eth-gettransactionbyblockhashandindex)
+*   [`eth_sendTransaction`](./../../developers/json-rpc/endpoints.md#eth-sendtransaction)

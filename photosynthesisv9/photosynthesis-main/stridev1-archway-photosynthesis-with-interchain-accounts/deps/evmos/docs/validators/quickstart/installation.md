@@ -8,8 +8,8 @@ Build and install the Evmos binaries from source or using Docker. {synopsis}
 
 ## Pre-requisites
 
-- [Install Go 1.19+](https://golang.org/dl/) {prereq}
-- [Install jq](https://stedolan.github.io/jq/download/) {prereq}
+*   [Install Go 1.19+](https://golang.org/dl/) {prereq}
+*   [Install jq](https://stedolan.github.io/jq/download/) {prereq}
 
 ## Install Go
 

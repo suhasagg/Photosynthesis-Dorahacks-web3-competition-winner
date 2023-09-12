@@ -71,9 +71,9 @@ private_peer_ids = "프라이빗_피어_노드_ID"
 기본적으로 다음 프리픽스(prefix)의 대문자 환경 변수(environment variables)는 소
 문자 커맨드라인 플래그를 대체하게 됩니다:
 
-- `GA` (for Gaia 플래그)
-- `TM` (for Tendermint 플래그)
-- `BC` (for democli 또는 basecli 플래그)
+*   `GA` (for Gaia 플래그)
+*   `TM` (for Tendermint 플래그)
+*   `BC` (for democli 또는 basecli 플래그)
 
 예를들어 `GA_CHAIN_ID` 환경 변수는 `--chain-id` 커맨드라인 플래그에 매핑됩니다.
 명백한(explicit) 커맨드라인 플래그는 환경 변수 보다 상위에 속하며, 환경 변수는

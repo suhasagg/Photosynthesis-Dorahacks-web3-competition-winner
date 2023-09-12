@@ -1,8 +1,6 @@
 # filippo.io/edwards25519
 
-```
-import "filippo.io/edwards25519"
-```
+    import "filippo.io/edwards25519"
 
 This library implements the edwards25519 elliptic curve, exposing the necessary
 APIs to build a wide array of higher-level primitives. Read the docs at

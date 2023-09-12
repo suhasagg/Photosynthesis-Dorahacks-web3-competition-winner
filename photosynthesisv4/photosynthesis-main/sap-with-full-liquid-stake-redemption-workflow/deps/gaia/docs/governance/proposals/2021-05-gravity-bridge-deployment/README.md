@@ -44,11 +44,11 @@ Cosmos back to Ethereum can be up to 50% less costly than a normal ERC20 send.
 Cosmos Hub validators will run three key software components of the Gravity
 bridge:
 
-- The Gravity bridge module, integrated into gaiad (the binary that runs the
-  Cosmos Hub)
-- The Gravity bridge Orchestrator
-- A Geth light client or any Ethereum full node implementing the JSON-rpc
-  standard
+*   The Gravity bridge module, integrated into gaiad (the binary that runs the
+    Cosmos Hub)
+*   The Gravity bridge Orchestrator
+*   A Geth light client or any Ethereum full node implementing the JSON-rpc
+    standard
 
 ### Cosmos to Ethereum:
 
@@ -94,11 +94,11 @@ https://github.com/cosmos/gravity-bridge/blob/main/spec/slashing-spec.md
 
 Gravity consists of 4 parts:
 
-- An Ethereum contract called Gravity.sol
-- The Gravity Cosmos module of Gaia
-- The orchestrator program which is run by Cosmos validators alongside the
-  Gravity module
-- A market of relayers, who compete to submit transactions to Ethereum
+*   An Ethereum contract called Gravity.sol
+*   The Gravity Cosmos module of Gaia
+*   The orchestrator program which is run by Cosmos validators alongside the
+    Gravity module
+*   A market of relayers, who compete to submit transactions to Ethereum
 
 ### Gravity.sol
 
@@ -221,13 +221,13 @@ Zaki Manian, Sommelier/Iqlusion
 The following items summarize the voting options and what it means for this
 proposal.
 
-- **YES**: You agree that Gravity Bridge should be deployed to the Cosmos Hub.
-- **NO**: You disapprove of deploying Gravity bridge on the Cosmos Hub in its
-  current form (please indicate in the
-  [Cosmos Forum](https://forum.cosmos.network/) why this is the case).
-- **NO WITH VETO**: You are strongly opposed to the deployment of Gravity bridge
-  on the Cosmos Hub and will exit the network if this occurred.
-- **ABSTAIN**: You are impartial to the outcome of the proposal.
+*   **YES**: You agree that Gravity Bridge should be deployed to the Cosmos Hub.
+*   **NO**: You disapprove of deploying Gravity bridge on the Cosmos Hub in its
+    current form (please indicate in the
+    [Cosmos Forum](https://forum.cosmos.network/) why this is the case).
+*   **NO WITH VETO**: You are strongly opposed to the deployment of Gravity bridge
+    on the Cosmos Hub and will exit the network if this occurred.
+*   **ABSTAIN**: You are impartial to the outcome of the proposal.
 
 ## Appendix
 
@@ -256,17 +256,17 @@ Ethereum.
 Gravity Bridge slashing conditions closely mirror the slashing conditions which
 validators are already subject to.
 
-- Uptime: Validators on Cosmos currently must keep their validator software
-  running at all times, or risk slashing. Gravity adds an additional binary
-  which must be run, which is low in difficulty, resource usage, and operational
-  requirements.
+*   Uptime: Validators on Cosmos currently must keep their validator software
+    running at all times, or risk slashing. Gravity adds an additional binary
+    which must be run, which is low in difficulty, resource usage, and operational
+    requirements.
 
-- Equivocation: Validators on Cosmos are subject to slashing if they sign two
-  blocks at the same height. It is possible for this to happen through
-  accidental misconfiguration. Gravity adds an additional item which must not be
-  signed, which are the fraudulent bridge transactions that never existed on
-  Cosmos. It is not possible for this to happen by accident, so this slashing
-  condition is much less of a risk than the Hub’s existing slashing conditions.
+*   Equivocation: Validators on Cosmos are subject to slashing if they sign two
+    blocks at the same height. It is possible for this to happen through
+    accidental misconfiguration. Gravity adds an additional item which must not be
+    signed, which are the fraudulent bridge transactions that never existed on
+    Cosmos. It is not possible for this to happen by accident, so this slashing
+    condition is much less of a risk than the Hub’s existing slashing conditions.
 
 ### What about peg zones?
 
@@ -276,31 +276,31 @@ blockchain. We believe that running Gravity Bridge on the Cosmos Hub and
 connecting directly is the superior solution. First, let's look at what
 different forms peg zones could take.
 
-1. The most likely type of peg zone is what will result if this proposal does
-   not pass. There are at least 5 Cosmos SDK chains who will be using the
-   Gravity Bridge module to connect to Ethereum. There will be no official way
-   to bridge Ethereum assets into the Cosmos ecosystem. Instead there will be
-   many dueling representations of Ethereum assets. It goes without saying that
-   this will confuse Cosmos users. If one of these peg zones gains the upper
-   hand and becomes dominant, the Cosmos Hub will miss out on all the
-   transaction fees that it generates.
+1.  The most likely type of peg zone is what will result if this proposal does
+    not pass. There are at least 5 Cosmos SDK chains who will be using the
+    Gravity Bridge module to connect to Ethereum. There will be no official way
+    to bridge Ethereum assets into the Cosmos ecosystem. Instead there will be
+    many dueling representations of Ethereum assets. It goes without saying that
+    this will confuse Cosmos users. If one of these peg zones gains the upper
+    hand and becomes dominant, the Cosmos Hub will miss out on all the
+    transaction fees that it generates.
 
-2. It would also be possible to establish an official peg zone, and airdrop its
-   staking token 1:1 to current Atom holders. This would at least allow the
-   Cosmos Hub stakeholders to keep the economic benefit of activity on the peg
-   zone. However, this is capital inefficient. A dollar staked on this peg zone
-   would not be staked on the hub and vice versa. Splitting stake between these
-   two important chains would make both weaker. Cosmos users will also need to
-   choose whether to put value into Atom or put value into the peg zone token,
-   resulting in less value in Atom.
+2.  It would also be possible to establish an official peg zone, and airdrop its
+    staking token 1:1 to current Atom holders. This would at least allow the
+    Cosmos Hub stakeholders to keep the economic benefit of activity on the peg
+    zone. However, this is capital inefficient. A dollar staked on this peg zone
+    would not be staked on the hub and vice versa. Splitting stake between these
+    two important chains would make both weaker. Cosmos users will also need to
+    choose whether to put value into Atom or put value into the peg zone token,
+    resulting in less value in Atom.
 
-3. Shared security has been talked about for a long time in Cosmos, but it is
-   not yet in production. Establishing a peg zone with shared security with the
-   Cosmos Hub would allow the same validator set to validate both chains, and
-   put the same Atoms at stake to secure each of them. This would avoid the
-   issues of scenarios 1 and 2 above. However, we cannot afford to wait. Many
-   other PoS blockchains already have Ethereum bridges and Cosmos needs to
-   continue innovating to stay relevant.
+3.  Shared security has been talked about for a long time in Cosmos, but it is
+    not yet in production. Establishing a peg zone with shared security with the
+    Cosmos Hub would allow the same validator set to validate both chains, and
+    put the same Atoms at stake to secure each of them. This would avoid the
+    issues of scenarios 1 and 2 above. However, we cannot afford to wait. Many
+    other PoS blockchains already have Ethereum bridges and Cosmos needs to
+    continue innovating to stay relevant.
 
 This is easier to both design and debug, and is ideal for high-value chains like
 the Hub.

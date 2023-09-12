@@ -11,6 +11,6 @@ thanks go to the original authors.
 
 ***
 
-> [Register a Contract](spec/00\_register.md)
+> [Register a Contract](spec/00_register.md)
 
-> [Update Conrtact Withdraw Address](spec/00\_update.md)
+> [Update Conrtact Withdraw Address](spec/00_update.md)

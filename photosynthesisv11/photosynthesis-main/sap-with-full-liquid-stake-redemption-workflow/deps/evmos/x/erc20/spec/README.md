@@ -44,20 +44,20 @@ coins, etc.) as well.
 
 With the `x/erc20` users on Evmos can
 
-- use existing native cosmos assets (like $OSMO or $ATOM) on EVM-based chains,
-  e.g. for Trading IBC tokens on DeFi protocols, buying NFT, etc.
-- transfer existing tokens on Ethereum and other EVM-based chains to Evmos to
-  take advantage of application-specific chains in the Cosmos ecosystem
-- build new applications that are based on ERC-20 smart contracts and have
-  access to the Cosmos ecosystem.
+*   use existing native cosmos assets (like $OSMO or $ATOM) on EVM-based chains,
+    e.g. for Trading IBC tokens on DeFi protocols, buying NFT, etc.
+*   transfer existing tokens on Ethereum and other EVM-based chains to Evmos to
+    take advantage of application-specific chains in the Cosmos ecosystem
+*   build new applications that are based on ERC-20 smart contracts and have
+    access to the Cosmos ecosystem.
 
 ## Contents
 
-1. **[Concepts](01\_concepts.md)**
-2. **[State](02\_state.md)**
-3. **[State Transitions](03\_state_transitions.md)**
-4. **[Transactions](04\_transactions.md)**
-5. **[Hooks](05\_hooks.md)**
-6. **[Events](06\_events.md)**
-7. **[Parameters](07\_parameters.md)**
-8. **[Clients](08\_clients.md)**
+1.  **[Concepts](01_concepts.md)**
+2.  **[State](02_state.md)**
+3.  **[State Transitions](03_state_transitions.md)**
+4.  **[Transactions](04_transactions.md)**
+5.  **[Hooks](05_hooks.md)**
+6.  **[Events](06_events.md)**
+7.  **[Parameters](07_parameters.md)**
+8.  **[Clients](08_clients.md)**

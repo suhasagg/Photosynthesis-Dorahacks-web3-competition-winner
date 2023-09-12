@@ -18,12 +18,12 @@ $$
 
 where:
 
-- $TxFees$ - transaction fees provided by a user;
-- $TxGasLimit$ - transaction gas limit provided by a user;
-- $MinConsensusFee$ - minimum gas unit price estimated by the module;
-- $ContractAddress\_{msg}$ - contract address of the msg which needs to be
-  executed;
-- $flatfee(x)$ - function which fetches the flat fee for the given input;
+*   $TxFees$ - transaction fees provided by a user;
+*   $TxGasLimit$ - transaction gas limit provided by a user;
+*   $MinConsensusFee$ - minimum gas unit price estimated by the module;
+*   $ContractAddress\_{msg}$ - contract address of the msg which needs to be
+    executed;
+*   $flatfee(x)$ - function which fetches the flat fee for the given input;
 
 Every msg in the transaction is parsed to check if it is a
 `wasmTypes.MsgExecuteContract` or a `authz.MsgExec` msg. Contract address is
@@ -35,4 +35,4 @@ contract addresses.
 The [DeductFeeDecorator](../ante/fee_deduction.go#L29) handler splits a
 transaction fees between the **FeeCollector** (`x/auth`) and the **Rewards**
 (`x/rewards`) modules using the *TxFeeRebateRatio* module parameter. Handler
-also creates a new [TxRewards](01\_state.md#TxRewards) tracking entry.
+also creates a new [TxRewards](01_state.md#TxRewards) tracking entry.

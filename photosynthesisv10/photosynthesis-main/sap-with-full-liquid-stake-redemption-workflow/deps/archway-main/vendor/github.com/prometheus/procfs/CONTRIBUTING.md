@@ -2,25 +2,25 @@
 
 Prometheus uses GitHub to manage reviews of pull requests.
 
-- If you are a new contributor see: [Steps to Contribute](#steps-to-contribute)
+*   If you are a new contributor see: [Steps to Contribute](#steps-to-contribute)
 
-- If you have a trivial fix or improvement, go ahead and create a pull request,
-  addressing (with `@...`) a suitable maintainer of this repository (see
-  [MAINTAINERS.md](MAINTAINERS.md)) in the description of the pull request.
+*   If you have a trivial fix or improvement, go ahead and create a pull request,
+    addressing (with `@...`) a suitable maintainer of this repository (see
+    [MAINTAINERS.md](MAINTAINERS.md)) in the description of the pull request.
 
-- If you plan to do something more involved, first discuss your ideas on our
-  [mailing list](https://groups.google.com/forum/?fromgroups#!forum/prometheus-developers).
-  This will avoid unnecessary work and surely give you and us a good deal of
-  inspiration. Also please see our
-  [non-goals issue](https://github.com/prometheus/docs/issues/149) on areas that
-  the Prometheus community doesn't plan to work on.
+*   If you plan to do something more involved, first discuss your ideas on our
+    [mailing list](https://groups.google.com/forum/?fromgroups#!forum/prometheus-developers).
+    This will avoid unnecessary work and surely give you and us a good deal of
+    inspiration. Also please see our
+    [non-goals issue](https://github.com/prometheus/docs/issues/149) on areas that
+    the Prometheus community doesn't plan to work on.
 
-- Relevant coding style guidelines are the
-  [Go Code Review Comments](https://code.google.com/p/go-wiki/wiki/CodeReviewComments)
-  and the *Formatting and style* section of Peter Bourgon's
-  [Go: Best Practices for Production Environments](https://peter.bourgon.org/go-in-production/#formatting-and-style).
+*   Relevant coding style guidelines are the
+    [Go Code Review Comments](https://code.google.com/p/go-wiki/wiki/CodeReviewComments)
+    and the *Formatting and style* section of Peter Bourgon's
+    [Go: Best Practices for Production Environments](https://peter.bourgon.org/go-in-production/#formatting-and-style).
 
-- Be sure to sign off on the [DCO](https://github.com/probot/dco#how-it-works)
+*   Be sure to sign off on the [DCO](https://github.com/probot/dco#how-it-works)
 
 ## Steps to Contribute
 
@@ -37,9 +37,7 @@ of the maintainers will clarify it. For a quicker response, contact us over
 
 For quickly compiling and testing your changes do:
 
-```
-make test         # Make sure all the tests pass before you commit and push :)
-```
+    make test         # Make sure all the tests pass before you commit and push :)
 
 We use [`golangci-lint`](https://github.com/golangci/golangci-lint) for linting
 the code. If it reports an issue and you think that the warning needs to be
@@ -50,26 +48,26 @@ the preferred course of action.
 
 ## Pull Request Checklist
 
-- Branch from the master branch and, if needed, rebase to the current master
-  branch before submitting your pull request. If it doesn't merge cleanly with
-  master you may be asked to rebase your changes.
+*   Branch from the master branch and, if needed, rebase to the current master
+    branch before submitting your pull request. If it doesn't merge cleanly with
+    master you may be asked to rebase your changes.
 
-- Commits should be as small as possible, while ensuring that each commit is
-  correct independently (i.e., each commit should compile and pass tests).
+*   Commits should be as small as possible, while ensuring that each commit is
+    correct independently (i.e., each commit should compile and pass tests).
 
-- If your patch is not getting reviewed or you need a specific person to review
-  it, you can @-reply a reviewer asking for a review in the pull request or a
-  comment, or you can ask for a review on IRC channel
-  [#prometheus](https://webchat.freenode.net/?channels=#prometheus) on
-  irc.freenode.net (for the easiest start,
-  [join via Riot](https://riot.im/app/#/room/#prometheus:matrix.org)).
+*   If your patch is not getting reviewed or you need a specific person to review
+    it, you can @-reply a reviewer asking for a review in the pull request or a
+    comment, or you can ask for a review on IRC channel
+    [#prometheus](https://webchat.freenode.net/?channels=#prometheus) on
+    irc.freenode.net (for the easiest start,
+    [join via Riot](https://riot.im/app/#/room/#prometheus:matrix.org)).
 
-- Add tests relevant to the fixed bug or new feature.
+*   Add tests relevant to the fixed bug or new feature.
 
 ## Dependency management
 
 The Prometheus project uses
-[Go modules](https://golang.org/cmd/go/#hdr-Modules\_\_module_versions\_\_and_more)
+[Go modules](https://golang.org/cmd/go/#hdr-Modules__module_versions__and_more)
 to manage dependencies on external packages. This requires a working Go
 environment with version 1.12 or greater installed.
 
@@ -137,20 +135,16 @@ Note that parsing the file's contents can still be performed one line at a time.
 This is done by first reading the full file, and then using a scanner on the
 `[]byte` or `string` containing the data.
 
-```
-    data, err := util.ReadFileNoStat("/proc/cpuinfo")
-    if err != nil {
-        return err
-    }
-    reader := bytes.NewReader(data)
-    scanner := bufio.NewScanner(reader)
-```
+        data, err := util.ReadFileNoStat("/proc/cpuinfo")
+        if err != nil {
+            return err
+        }
+        reader := bytes.NewReader(data)
+        scanner := bufio.NewScanner(reader)
 
 The `/sys` filesystem contains many very small files which contain only a single
 numeric or text value. These files can be read using an internal function called
 `util.SysReadFile` which is similar to `os.ReadFile` but does not bother to
 check the size of the file before reading.
 
-```
-    data, err := util.SysReadFile("/sys/class/power_supply/BAT0/capacity")
-```
+        data, err := util.SysReadFile("/sys/class/power_supply/BAT0/capacity")

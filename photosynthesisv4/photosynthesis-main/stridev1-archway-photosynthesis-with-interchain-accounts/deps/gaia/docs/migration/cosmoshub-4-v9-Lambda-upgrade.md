@@ -1,6 +1,8 @@
 ***
 
-## title: Cosmos Hub 4, Lambda Upgrade&#xA;order: 1
+title: Cosmos Hub 4, Lambda Upgrade
+order: 1
+--------
 
 <!-- markdown-link-check-disable -->
 
@@ -11,60 +13,60 @@ successful execution of the
 [v9-Lambda Upgrade](https://github.com/cosmos/gaia/blob/main/docs/roadmap/cosmos-hub-roadmap-2.0.md#v9-lambda-upgrade-expected-q1-2023),
 which contains the following main new features/improvement:
 
-- [Interchain-Security](https://github.com/cosmos/interchain-security)
-  [v1.0.0](https://github.com/cosmos/interchain-security/releases/tag/v1.0.0)
-  provider module. See the
-  [ICS Spec](https://github.com/cosmos/ibc/blob/main/spec/app/ics-028-cross-chain-validation/README.md)
-  for more details.
-- [cosmos-sdk](https://github.com/cosmos/cosmos-sdk) to
-  [v0.45.13-ics](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.45.13-ics).
-  See
-  [CHANGELOG.md](https://github.com/cosmos/cosmos-sdk/blob/releases/tag/v0.45.13-ics)
-  for details.
-- [ibc-go](https://github.com/cosmos/ibc-go) to
-  [v4.2.0](https://github.com/cosmos/ibc-go/blob/release/v4.2.x/CHANGELOG.md).
-  See [v4.2 Release Notes](https://github.com/cosmos/ibc-go/releases/tag/v4.2.0)
-  for details.
-- [tendermint](https://github.com/informalsystems/tendermint) to
-  [0.34.26](https://github.com/informalsystems/tendermint/tree/v0.34.26). See
-  [CHANGELOG.md](https://github.com/informalsystems/tendermint/blob/v0.34.26/CHANGELOG.md#v03426)
-  for details.
-- [packet-forward-middleware](https://github.com/strangelove-ventures/packet-forward-middleware)
-  to
-  [v4.0.4](https://github.com/strangelove-ventures/packet-forward-middleware/releases/tag/v4.0.4).
-- [E2E ccv tests](https://github.com/cosmos/gaia/blob/main/tests/e2e/e2e_gov_test.go#L138).
-  Tests covering new functionality introduced by the provider module to add and
-  remove a consumer chain via governance proposal.
-- [integration ccv tests](https://github.com/cosmos/gaia/blob/main/tests/ics/interchain_security_test.go).
-  Imports Interchain-Security's `TestCCVTestSuite` and implements Gaia as the
-  provider chain.
+*   [Interchain-Security](https://github.com/cosmos/interchain-security)
+    [v1.0.0](https://github.com/cosmos/interchain-security/releases/tag/v1.0.0)
+    provider module. See the
+    [ICS Spec](https://github.com/cosmos/ibc/blob/main/spec/app/ics-028-cross-chain-validation/README.md)
+    for more details.
+*   [cosmos-sdk](https://github.com/cosmos/cosmos-sdk) to
+    [v0.45.13-ics](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.45.13-ics).
+    See
+    [CHANGELOG.md](https://github.com/cosmos/cosmos-sdk/blob/releases/tag/v0.45.13-ics)
+    for details.
+*   [ibc-go](https://github.com/cosmos/ibc-go) to
+    [v4.2.0](https://github.com/cosmos/ibc-go/blob/release/v4.2.x/CHANGELOG.md).
+    See [v4.2 Release Notes](https://github.com/cosmos/ibc-go/releases/tag/v4.2.0)
+    for details.
+*   [tendermint](https://github.com/informalsystems/tendermint) to
+    [0.34.26](https://github.com/informalsystems/tendermint/tree/v0.34.26). See
+    [CHANGELOG.md](https://github.com/informalsystems/tendermint/blob/v0.34.26/CHANGELOG.md#v03426)
+    for details.
+*   [packet-forward-middleware](https://github.com/strangelove-ventures/packet-forward-middleware)
+    to
+    [v4.0.4](https://github.com/strangelove-ventures/packet-forward-middleware/releases/tag/v4.0.4).
+*   [E2E ccv tests](https://github.com/cosmos/gaia/blob/main/tests/e2e/e2e_gov_test.go#L138).
+    Tests covering new functionality introduced by the provider module to add and
+    remove a consumer chain via governance proposal.
+*   [integration ccv tests](https://github.com/cosmos/gaia/blob/main/tests/ics/interchain_security_test.go).
+    Imports Interchain-Security's `TestCCVTestSuite` and implements Gaia as the
+    provider chain.
 
 TOC:
 
-- [Cosmos Hub 4, v9-Lambda Upgrade, Instructions](#cosmos-hub-4-v9-lambda-upgrade-instructions)
-  - [On-chain governance proposal attains consensus](#on-chain-governance-proposal-attains-consensus)
-  - [Upgrade will take place March 15, 203](#upgrade-will-take-place-march-15-2023)
-  - [Chain-id will remain the same](#chain-id-will-remain-the-same)
-  - [Preparing for the upgrade](#preparing-for-the-upgrade)
-    - [System requirement](#system-requirement)
-    - [Backups](#backups)
-    - [Testing](#testing)
-    - [Current runtime, cosmoshub-4 (pre-v9-Lambda upgrade) is running Gaia v8.0.1](#current-runtime-cosmoshub-4-pre-v9-lambda-upgrade-is-running-gaia-v801)
-    - [Target runtime, cosmoshub-4 (post-v9-Lambda upgrade) will run Gaia v9.0.0](#target-runtime-cosmoshub-4-post-v9-lambda-upgrade-will-run-gaia-v900)
-  - [v9-Lambda upgrade steps](#v9-Lambda-upgrade-steps)
-    - [Method I: Manual Upgrade](#method-i-manual-upgrade)
-    - [Method II: Upgrade using Cosmovisor](#method-ii-upgrade-using-cosmovisor)
-      - [Manually preparing the binary](#manually-preparing-the-gaia-v900-binary)
-        - [Preparation](#preparation)
-        - [Expected upgrade result](#expected-upgrade-result)
-      - [Auto-Downloading the Gaia v9.0.0 binary (not recommended!)](#auto-downloading-the-gaia-v900-binary-not-recommended)
-        - [Preparation](#preparation-1)
-        - [Expected result](#expected-result)
-  - [Upgrade duration](#upgrade-duration)
-  - [Rollback plan](#rollback-plan)
-  - [Communications](#communications)
-  - [Risks](#risks)
-  - [Reference](#reference)
+*   [Cosmos Hub 4, v9-Lambda Upgrade, Instructions](#cosmos-hub-4-v9-lambda-upgrade-instructions)
+    *   [On-chain governance proposal attains consensus](#on-chain-governance-proposal-attains-consensus)
+    *   [Upgrade will take place March 15, 203](#upgrade-will-take-place-march-15-2023)
+    *   [Chain-id will remain the same](#chain-id-will-remain-the-same)
+    *   [Preparing for the upgrade](#preparing-for-the-upgrade)
+        *   [System requirement](#system-requirement)
+        *   [Backups](#backups)
+        *   [Testing](#testing)
+        *   [Current runtime, cosmoshub-4 (pre-v9-Lambda upgrade) is running Gaia v8.0.1](#current-runtime-cosmoshub-4-pre-v9-lambda-upgrade-is-running-gaia-v801)
+        *   [Target runtime, cosmoshub-4 (post-v9-Lambda upgrade) will run Gaia v9.0.0](#target-runtime-cosmoshub-4-post-v9-lambda-upgrade-will-run-gaia-v900)
+    *   [v9-Lambda upgrade steps](#v9-Lambda-upgrade-steps)
+        *   [Method I: Manual Upgrade](#method-i-manual-upgrade)
+        *   [Method II: Upgrade using Cosmovisor](#method-ii-upgrade-using-cosmovisor)
+            *   [Manually preparing the binary](#manually-preparing-the-gaia-v900-binary)
+                *   [Preparation](#preparation)
+                *   [Expected upgrade result](#expected-upgrade-result)
+            *   [Auto-Downloading the Gaia v9.0.0 binary (not recommended!)](#auto-downloading-the-gaia-v900-binary-not-recommended)
+                *   [Preparation](#preparation-1)
+                *   [Expected result](#expected-result)
+    *   [Upgrade duration](#upgrade-duration)
+    *   [Rollback plan](#rollback-plan)
+    *   [Communications](#communications)
+    *   [Risks](#risks)
+    *   [Reference](#reference)
 
 ## On-chain governance proposal attains consensus
 
@@ -146,11 +148,11 @@ The Cosmos Hub mainnet network, `cosmoshub-4`, will run
 
 There are 2 major ways to upgrade a node:
 
-- Manual upgrade
-- Upgrade using
-  [Cosmovisor](https://github.com/cosmos/cosmos-sdk/tree/master/cosmovisor)
-  - Either by manually preparing the new binary
-  - Or by using the auto-download functionality (this is not yet recommended)
+*   Manual upgrade
+*   Upgrade using
+    [Cosmovisor](https://github.com/cosmos/cosmos-sdk/tree/master/cosmovisor)
+    *   Either by manually preparing the new binary
+    *   Or by using the auto-download functionality (this is not yet recommended)
 
 If you prefer to use Cosmovisor to upgrade, some preparation work is needed
 before upgrade.
@@ -332,13 +334,13 @@ with a total sum voting power > 2/3 complete their nodes upgrades.
 
 *Please Note:*
 
-- In general, auto-download comes with the risk that the verification of correct
-  download is done automatically. If users want to have the highest guarantee
-  users should confirm the check-sum manually. We hope more node operators will
-  use the auto-download for this release but please be aware this is a risk and
-  users should take at your own discretion.
-- Users should use run node on v8.0.1 if they use the cosmovisor v1.3.0 with
-  auto-download enabled for upgrade process.
+*   In general, auto-download comes with the risk that the verification of correct
+    download is done automatically. If users want to have the highest guarantee
+    users should confirm the check-sum manually. We hope more node operators will
+    use the auto-download for this release but please be aware this is a risk and
+    users should take at your own discretion.
+*   Users should use run node on v8.0.1 if they use the cosmovisor v1.3.0 with
+    auto-download enabled for upgrade process.
 
 ## Upgrade duration
 

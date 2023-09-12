@@ -87,10 +87,10 @@ official
 
 The main events you can subscribe to are:
 
-- `NewBlock`: Contains `events` triggered during `BeginBlock` and `EndBlock`.
-- `Tx`: Contains `events` triggered during `DeliverTx` (i.e. transaction
-  processing).
-- `ValidatorSetUpdates`: Contains validator set updates for the block.
+*   `NewBlock`: Contains `events` triggered during `BeginBlock` and `EndBlock`.
+*   `Tx`: Contains `events` triggered during `DeliverTx` (i.e. transaction
+    processing).
+*   `ValidatorSetUpdates`: Contains validator set updates for the block.
 
 ::: tip
 
@@ -176,70 +176,70 @@ directly with an Evmos node though the CLI.
 the `--node` flag. Look for a publicly available addresses for testnet and
 mainnet in the [Quick Connect](./connect.md) page. :::
 
-- **Transactions**: `{{ $themeConfig.project.binary }} tx`
+*   **Transactions**: `{{ $themeConfig.project.binary }} tx`
 
-  The list of available commands, as of `v3.0.0`, are:
+    The list of available commands, as of `v3.0.0`, are:
 
-  ```bash
-  Available Commands:
-    authz               Authorization transactions subcommands
-    bank                Bank transaction subcommands
-    broadcast           Broadcast transactions generated offline
-    crisis              Crisis transactions subcommands
-    decode              Decode a binary encoded transaction string
-    distribution        Distribution transactions subcommands
-    encode              Encode transactions generated offline
-    erc20               erc20 subcommands
-    evidence            Evidence transaction subcommands
-    evm                 evm transactions subcommands
-    feegrant            Feegrant transactions subcommands
-    gov                 Governance transactions subcommands
-    ibc                 IBC transaction subcommands
-    ibc-transfer        IBC fungible token transfer transaction subcommands
-    multisign           Generate multisig signatures for transactions generated offline
-    multisign-batch     Assemble multisig transactions in batch from batch signatures
-    sign                Sign a transaction generated offline
-    sign-batch          Sign transaction batch files
-    slashing            Slashing transaction subcommands
-    staking             Staking transaction subcommands
-    validate-signatures validate transactions signatures
-    vesting             Vesting transaction subcommands
-  ```
+    ```bash
+    Available Commands:
+      authz               Authorization transactions subcommands
+      bank                Bank transaction subcommands
+      broadcast           Broadcast transactions generated offline
+      crisis              Crisis transactions subcommands
+      decode              Decode a binary encoded transaction string
+      distribution        Distribution transactions subcommands
+      encode              Encode transactions generated offline
+      erc20               erc20 subcommands
+      evidence            Evidence transaction subcommands
+      evm                 evm transactions subcommands
+      feegrant            Feegrant transactions subcommands
+      gov                 Governance transactions subcommands
+      ibc                 IBC transaction subcommands
+      ibc-transfer        IBC fungible token transfer transaction subcommands
+      multisign           Generate multisig signatures for transactions generated offline
+      multisign-batch     Assemble multisig transactions in batch from batch signatures
+      sign                Sign a transaction generated offline
+      sign-batch          Sign transaction batch files
+      slashing            Slashing transaction subcommands
+      staking             Staking transaction subcommands
+      validate-signatures validate transactions signatures
+      vesting             Vesting transaction subcommands
+    ```
 
-- **Queries**: `{{ $themeConfig.project.binary }} query`
+*   **Queries**: `{{ $themeConfig.project.binary }} query`
 
-  The list of available commands, as of `v3.0.0`, are:
+    The list of available commands, as of `v3.0.0`, are:
 
-  ```bash
-  Available Commands:
-    account                  Query for account by address
-    auth                     Querying commands for the auth module
-    authz                    Querying commands for the authz module
-    bank                     Querying commands for the bank module
-    block                    Get verified data for a the block at given height
-    claims                   Querying commands for the claims module
-    distribution             Querying commands for the distribution module
-    epochs                   Querying commands for the epochs module
-    erc20                    Querying commands for the erc20 module
-    evidence                 Query for evidence by hash or for all (paginated) submitted evidence
-    evm                      Querying commands for the evm module
-    feegrant                 Querying commands for the feegrant module
-    feemarket                Querying commands for the fee market module
-    gov                      Querying commands for the governance module
-    ibc                      Querying commands for the IBC module
-    ibc-transfer             IBC fungible token transfer query subcommands
-    incentives               Querying commands for the incentives module
-    inflation                Querying commands for the inflation module
-    params                   Querying commands for the params module
-    recovery                 Querying commands for the recovery module
-    slashing                 Querying commands for the slashing module
-    staking                  Querying commands for the staking module
-    tendermint-validator-set Get the full tendermint validator set at given height
-    tx                       Query for a transaction by hash, "<addr>/<seq>" combination or comma-separated signatures in a committed block
-    txs                      Query for paginated transactions that match a set of events
-    upgrade                  Querying commands for the upgrade module
-    vesting                  Querying commands for the vesting module
-  ```
+    ```bash
+    Available Commands:
+      account                  Query for account by address
+      auth                     Querying commands for the auth module
+      authz                    Querying commands for the authz module
+      bank                     Querying commands for the bank module
+      block                    Get verified data for a the block at given height
+      claims                   Querying commands for the claims module
+      distribution             Querying commands for the distribution module
+      epochs                   Querying commands for the epochs module
+      erc20                    Querying commands for the erc20 module
+      evidence                 Query for evidence by hash or for all (paginated) submitted evidence
+      evm                      Querying commands for the evm module
+      feegrant                 Querying commands for the feegrant module
+      feemarket                Querying commands for the fee market module
+      gov                      Querying commands for the governance module
+      ibc                      Querying commands for the IBC module
+      ibc-transfer             IBC fungible token transfer query subcommands
+      incentives               Querying commands for the incentives module
+      inflation                Querying commands for the inflation module
+      params                   Querying commands for the params module
+      recovery                 Querying commands for the recovery module
+      slashing                 Querying commands for the slashing module
+      staking                  Querying commands for the staking module
+      tendermint-validator-set Get the full tendermint validator set at given height
+      tx                       Query for a transaction by hash, "<addr>/<seq>" combination or comma-separated signatures in a committed block
+      txs                      Query for paginated transactions that match a set of events
+      upgrade                  Querying commands for the upgrade module
+      vesting                  Querying commands for the vesting module
+    ```
 
 ::: tip **Note:** When querying Ethereum transactions versus Cosmos
 transactions, the transaction hashes are different. When querying Ethereum

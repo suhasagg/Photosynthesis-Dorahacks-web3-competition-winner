@@ -26,11 +26,11 @@ to be non-consensus breaking.**
 
 For a SoftwareUpgradeProposal via governance:
 
-1. Validators will be told via the announcements channel when the prop is live
-2. Validators will be told via the announcements channel if it passes
-3. Validators will be told via the announcements channel when the upgrade
-   instructions are available, and the upgrade will be coordinated in the
-   private validators channel as the target upgrade block nears.
+1.  Validators will be told via the announcements channel when the prop is live
+2.  Validators will be told via the announcements channel if it passes
+3.  Validators will be told via the announcements channel when the upgrade
+    instructions are available, and the upgrade will be coordinated in the
+    private validators channel as the target upgrade block nears.
 
 ## Emergency upgrade or security patch
 
@@ -40,23 +40,23 @@ then a special procedure applies.
 This procedure minimizes the amount that is publicly shared about a potential
 issue.
 
-1. An announcement calling validators to check in on the private validators
-   channel will be posted on the *validator's announcement channel* on discord.
-   No specifics will be shared here, as it is public.
-2. Details of the patch and the upgrade plan will be shared on the private
-   channel, as well as an expected ETA.
-3. When instructions are available, they will be pinned, and a second
-   announcement sent on the announcements channel. A thread for acknowledgments
-   will be created for validators to signal readiness.
-4. The team will compile a spreadsheet of validator readiness to check we are
-   past 67%.
+1.  An announcement calling validators to check in on the private validators
+    channel will be posted on the *validator's announcement channel* on discord.
+    No specifics will be shared here, as it is public.
+2.  Details of the patch and the upgrade plan will be shared on the private
+    channel, as well as an expected ETA.
+3.  When instructions are available, they will be pinned, and a second
+    announcement sent on the announcements channel. A thread for acknowledgments
+    will be created for validators to signal readiness.
+4.  The team will compile a spreadsheet of validator readiness to check we are
+    past 67%.
 
 There are two further considerations:
 
-1. If the change is consensus-breaking, a halt height will be applied and
-   validators will manually upgrade at that block, after the halt.
-2. If the change is non-consensus breaking, validators will apply when ready,
-   and then signal readiness.
+1.  If the change is consensus-breaking, a halt height will be applied and
+    validators will manually upgrade at that block, after the halt.
+2.  If the change is non-consensus breaking, validators will apply when ready,
+    and then signal readiness.
 
 ## Syncing from genesis
 

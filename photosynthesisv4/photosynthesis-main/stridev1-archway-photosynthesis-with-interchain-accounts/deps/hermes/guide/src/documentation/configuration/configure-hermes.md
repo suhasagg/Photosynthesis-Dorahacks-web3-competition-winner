@@ -65,11 +65,9 @@ a proxy or a load balancer. In order to enable this, you'll want to set the
 connection via HTTPS using the following scheme (note that the port number 443
 is just used for example):
 
-```
-rpc_addr = 'https://domain.com:443'
-grpc_addr = 'https://domain.com:443'
-websocket_addr = 'wss://domain.com:443/websocket'
-```
+    rpc_addr = 'https://domain.com:443'
+    grpc_addr = 'https://domain.com:443'
+    websocket_addr = 'wss://domain.com:443/websocket'
 
 ## Support for Interchain Accounts
 
@@ -81,9 +79,9 @@ Hermes will relay on all existing and future channels, including ICA channels.
 
 There are two kinds of ICA channels:
 
-1. The host channels, whose port is `icahost`
-2. The controller channels, whose port starts with `icacontroller-` followed by
-   the owner account address. [See the spec for more details][ica].
+1.  The host channels, whose port is `icahost`
+2.  The controller channels, whose port starts with `icacontroller-` followed by
+    the owner account address. [See the spec for more details][ica].
 
 If you wish to only relay on a few specific standard channels (here `channel-0`
 and `channel-1`), but also relay on all ICA channels, you can specify the

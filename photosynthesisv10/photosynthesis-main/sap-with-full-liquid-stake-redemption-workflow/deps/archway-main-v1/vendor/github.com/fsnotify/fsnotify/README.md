@@ -111,10 +111,10 @@ Privacy settings* until we have a native FSEvents implementation (see [#11][]).
 
 There are OS-specific limits as to how many watches can be created:
 
-- Linux: /proc/sys/fs/inotify/max_user_watches contains the limit, reaching this
-  limit results in a "no space left on device" error.
-- BSD / OSX: sysctl variables "kern.maxfiles" and "kern.maxfilesperproc",
-  reaching these limits results in a "too many open files" error.
+*   Linux: /proc/sys/fs/inotify/max\_user\_watches contains the limit, reaching this
+    limit results in a "no space left on device" error.
+*   BSD / OSX: sysctl variables "kern.maxfiles" and "kern.maxfilesperproc",
+    reaching these limits results in a "too many open files" error.
 
 **Why don't notifications work with NFS filesystems or filesystem in userspace
 (FUSE)?**
@@ -134,5 +134,5 @@ does not provide network level support for file notifications.
 
 ## Related Projects
 
-- [notify](https://github.com/rjeczalik/notify)
-- [fsevents](https://github.com/fsnotify/fsevents)
+*   [notify](https://github.com/rjeczalik/notify)
+*   [fsevents](https://github.com/fsnotify/fsevents)

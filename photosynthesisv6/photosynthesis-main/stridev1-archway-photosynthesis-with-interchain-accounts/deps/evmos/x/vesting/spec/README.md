@@ -36,21 +36,21 @@ members and advisors to incentivize long-term participation in the project.
 
 ## Contents
 
-1. **[Concepts](01\_concepts.md)**
-2. **[State](02\_state.md)**
-3. **[State Transitions](03\_state_transitions.md)**
-4. **[Transactions](04\_transactions.md)**
-5. **[AnteHandlers](05\_antehandlers.md)**
-6. **[Events](06\_events.md)**
-7. **[Clients](07\_clients.md)**
+1.  **[Concepts](01_concepts.md)**
+2.  **[State](02_state.md)**
+3.  **[State Transitions](03_state_transitions.md)**
+4.  **[Transactions](04_transactions.md)**
+5.  **[AnteHandlers](05_antehandlers.md)**
+6.  **[Events](06_events.md)**
+7.  **[Clients](07_clients.md)**
 
 ## References
 
-- SDK vesting specification:
-  <https://docs.cosmos.network/main/modules/auth/vesting>
-- SDK vesting implementation:
-  <https://github.com/cosmos/cosmos-sdk/tree/master/x/auth/vesting>
-- Agoric’s Vesting Clawback Account:
-  <https://github.com/Agoric/agoric-sdk/issues/4085>
-- Agoric’s `vestcalc` tool:
-  <https://github.com/agoric-labs/cosmos-sdk/tree/Agoric/x/auth/vesting/cmd/vestcalc>
+*   SDK vesting specification:
+    <https://docs.cosmos.network/main/modules/auth/vesting>
+*   SDK vesting implementation:
+    <https://github.com/cosmos/cosmos-sdk/tree/master/x/auth/vesting>
+*   Agoric’s Vesting Clawback Account:
+    <https://github.com/Agoric/agoric-sdk/issues/4085>
+*   Agoric’s `vestcalc` tool:
+    <https://github.com/agoric-labs/cosmos-sdk/tree/Agoric/x/auth/vesting/cmd/vestcalc>

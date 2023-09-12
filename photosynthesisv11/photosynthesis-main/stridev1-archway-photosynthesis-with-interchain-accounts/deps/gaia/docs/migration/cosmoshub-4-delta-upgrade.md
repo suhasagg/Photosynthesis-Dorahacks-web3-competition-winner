@@ -1,6 +1,8 @@
 ***
 
-## title: Cosmos Hub 4, Delta Upgrade&#xA;order: 4
+title: Cosmos Hub 4, Delta Upgrade
+order: 4
+--------
 
 <!-- markdown-link-check-disable -->
 
@@ -13,21 +15,21 @@ which adds the **Gravity DEX** to the Cosmos Hub.
 
 TOC:
 
-- [On-chain governance proposal attains consensus](#on-chain-governance-proposal-attains-consensus)
-- [Upgrade will take place July 12, 2021](#upgrade-will-take-place-july-12-2021)
-- [Chain-id will remain the same](#chain-id-will-remain-the-same)
-- [Preparing for the upgrade](#preparing-for-the-upgrade)
-  - [Backups](#backups)
-  - [Testing](#testing)
-  - [Public testnet](#public-testnet)
-  - [Current runtime, cosmoshub-4 (pre-Delta upgrade) is running Gaia v4.2.1](#current-runtime-cosmoshub-4-pre-delta-upgrade-is-running-gaia-v421)
-  - [Target runtime, cosmoshub-4 (post-Delta upgrade) will run Gaia v5.0.0](#target-runtime-cosmoshub-4-post-delta-upgrade-will-run-gaia-v500)
-- [Delta upgrade steps](#delta-upgrade-steps)
-- [Upgrade duration](#upgrade-duration)
-- [Rollback plan](#rollback-plan)
-- [Communications](#communications)
-- [Risks](#risks)
-- [FAQ](#faq)
+*   [On-chain governance proposal attains consensus](#on-chain-governance-proposal-attains-consensus)
+*   [Upgrade will take place July 12, 2021](#upgrade-will-take-place-july-12-2021)
+*   [Chain-id will remain the same](#chain-id-will-remain-the-same)
+*   [Preparing for the upgrade](#preparing-for-the-upgrade)
+    *   [Backups](#backups)
+    *   [Testing](#testing)
+    *   [Public testnet](#public-testnet)
+    *   [Current runtime, cosmoshub-4 (pre-Delta upgrade) is running Gaia v4.2.1](#current-runtime-cosmoshub-4-pre-delta-upgrade-is-running-gaia-v421)
+    *   [Target runtime, cosmoshub-4 (post-Delta upgrade) will run Gaia v5.0.0](#target-runtime-cosmoshub-4-post-delta-upgrade-will-run-gaia-v500)
+*   [Delta upgrade steps](#delta-upgrade-steps)
+*   [Upgrade duration](#upgrade-duration)
+*   [Rollback plan](#rollback-plan)
+*   [Communications](#communications)
+*   [Risks](#risks)
+*   [FAQ](#faq)
 
 ## On-chain governance proposal attains consensus
 
@@ -100,10 +102,10 @@ The following steps assume that an operator is running v4.2.1 (running an
 earlier version is untested). The upgrade has only been tested with v4.2.1 and
 these instructions follow this prerequisite.
 
-1. Prior to the upgrade, operators *MUST* be running Gaia v4.2.1.
-2. At the upgrade block height of
-   [6910000](#Upgrade-will-take-place-July-12,-2021), the Gaia software will
-   panic with a message similar to the below:
+1.  Prior to the upgrade, operators *MUST* be running Gaia v4.2.1.
+2.  At the upgrade block height of
+    [6910000](#Upgrade-will-take-place-July-12,-2021), the Gaia software will
+    panic with a message similar to the below:
 
 > ERR UPGRADE "Gravity-DEX" NEEDED at height: 6910000:
 > v5.0.0-4760cf1f1266accec7a107f440d46d9724c6fd08
@@ -115,10 +117,10 @@ these instructions follow this prerequisite.
 the node yourself. If the node shuts down before the panic message, start the
 node and let it run until the panic stops the node for you.
 
-3. Important note to all validators: Although the upgrade path is essentially to
-   replace the binary when the software panics and halts at the upgrade height,
-   an important disaster recovery operation is to take a snapshot of your state
-   after the halt and before starting v5.0.0.
+3.  Important note to all validators: Although the upgrade path is essentially to
+    replace the binary when the software panics and halts at the upgrade height,
+    an important disaster recovery operation is to take a snapshot of your state
+    after the halt and before starting v5.0.0.
 
 ```bash
 cp -r ~/.gaia ./gaia_backup
@@ -127,10 +129,10 @@ cp -r ~/.gaia ./gaia_backup
 Note: use the home directory relevant to your node's Gaia configuration (if
 different from `~/.gaia`).
 
-4. Replace the Gaia v4.2.1 binary with the Gaia v5.0.0 binary
-5. Start the Gaia v5.0.0 binary using the following command (also applying any
-   additional flags and parameters to the binary needed by the operator, e.g.,
-   `--home $HOME`):
+4.  Replace the Gaia v4.2.1 binary with the Gaia v5.0.0 binary
+5.  Start the Gaia v5.0.0 binary using the following command (also applying any
+    additional flags and parameters to the binary needed by the operator, e.g.,
+    `--home $HOME`):
 
 > gaiad start --x-crisis-skip-assert-invariants
 
@@ -138,14 +140,14 @@ IMPORTANT: The flag `--x-crisis-skip-assert-invariants` is optional and can be
 used to reduce memory and processing requirements while the in-place ugprade
 takes place before resuming connecting to the network.
 
-5. Wait until 2/3+ of voting power has upgraded for the network to start
-   producing blocks
-6. You can use the following commands to check peering status and state:
+5.  Wait until 2/3+ of voting power has upgraded for the network to start
+    producing blocks
+6.  You can use the following commands to check peering status and state:
 
-> curl -s <http://127.0.0.1:26657/net_info> | grep n_peers
+> curl -s <http://127.0.0.1:26657/net_info> | grep n\_peers
 >
-> curl -s localhost:26657/consensus_state | jq -r
-> .result.round_state.height_vote_set\[].prevotes_bit_array
+> curl -s localhost:26657/consensus\_state | jq -r
+> .result.round\_state.height\_vote\_set\[].prevotes\_bit\_array
 
 ## Upgrade duration
 
@@ -197,19 +199,19 @@ before correcting it.
 
 ## FAQ
 
-1. If I am a new operator and I want to join the network, what should I do?
+1.  If I am a new operator and I want to join the network, what should I do?
 
 In order to join the cosmoshub-4 network after the Delta upgrade, you have two
 options:
 
-- Use a post-delta upgrade state snapshot, such as one provided by
-  [quicksync](https://cosmos.quicksync.io/) and start a node using the gaia
-  v5.0.0 binary.
-- If not using a snapshot, or using a pre-delta upgrade snapshot, sync with the
-  network using the gaia v4.2.1 binary until the upgrade height and panic, then
-  switch the gaia binary for v5.0.0.
+*   Use a post-delta upgrade state snapshot, such as one provided by
+    [quicksync](https://cosmos.quicksync.io/) and start a node using the gaia
+    v5.0.0 binary.
+*   If not using a snapshot, or using a pre-delta upgrade snapshot, sync with the
+    network using the gaia v4.2.1 binary until the upgrade height and panic, then
+    switch the gaia binary for v5.0.0.
 
-2. Does the post-Delta upgrade introduce any changes of note?
+2.  Does the post-Delta upgrade introduce any changes of note?
 
 The core Cosmos SDK and Tendermint dependencies have only their minor versions
 bumped, so there are no significant changes of note to the API.
@@ -218,21 +220,21 @@ The only integration points that would be affected would be anything that parses
 all Cosmos SDK messages. The additional messages are
 [here](https://github.com/Gravity-Devs/liquidity/blob/master/proto/tendermint/liquidity/v1beta1/tx.proto).
 
-3. Is Amino still supported in the post-Delta upgrade?
+3.  Is Amino still supported in the post-Delta upgrade?
 
 Amino is still supported. Amino support is still present in the master branch of
 the Cosmos SDK. No upgrade to remove Amino is currently scheduled.
 
-4. Has the Gravity DEX module undergone a professional 3rd-party audit?
+4.  Has the Gravity DEX module undergone a professional 3rd-party audit?
 
 Yes, the audit was led by Least Authority, and have released the
 [audit report](https://leastauthority.com/blog/audit-of-cosmos-sdk-liquidity-module-for-all-in-bits/).
 
-4. We have some self-healing node infrastructure in place. If the node starts
-   failing when the chain halts, and we automatically spin up another 4.2.1 node
-   with state from within the past couple of hours, is there a risk of it double
-   signing transactions as it "catches up" to the point where block processing
-   stops?
+4.  We have some self-healing node infrastructure in place. If the node starts
+    failing when the chain halts, and we automatically spin up another 4.2.1 node
+    with state from within the past couple of hours, is there a risk of it double
+    signing transactions as it "catches up" to the point where block processing
+    stops?
 
 When the network is halted, there is no risk of double-signing since no blocks
 are being produced. You only need to ensure that the self-healing infrastructure

@@ -1,6 +1,9 @@
 ***
 
-## order: 4&#xA;parent:&#xA;order: 1
+order: 4
+parent:
+order: 1
+--------
 
 # Parameter Change
 
@@ -25,17 +28,17 @@ modules are in use on the Hub.
 There are currently 8 modules active in the Cosmos Hub with parameters that may
 be altered via governance proposal. New modules may be introduced in the future.
 
-1. [auth](./params-change/Auth.md) - Authentication of accounts and transactions
-2. [bank](./params-change/Bank.md) - Token transfer functionalities
-3. [gov](./params-change/Governance.md) - On-chain governance proposals and
-   voting
-4. [staking](./params-change/Staking.md) - Proof-of-stake layer
-5. [slashing](./params-change/Slashing.md) - Validator punishment mechanisms
-6. [distribution](./params-change/Distribution.md) - Fee distribution and
-   staking token provision distribution
-7. [crisis](./params-change/Crisis.md) - Halting the blockchain under certain
-   circumstances (ie. if an invariant is broken)
-8. [mint](./params-change/Mint.md) - Creation of new units of staking token
+1.  [auth](./params-change/Auth.md) - Authentication of accounts and transactions
+2.  [bank](./params-change/Bank.md) - Token transfer functionalities
+3.  [gov](./params-change/Governance.md) - On-chain governance proposals and
+    voting
+4.  [staking](./params-change/Staking.md) - Proof-of-stake layer
+5.  [slashing](./params-change/Slashing.md) - Validator punishment mechanisms
+6.  [distribution](./params-change/Distribution.md) - Fee distribution and
+    staking token provision distribution
+7.  [crisis](./params-change/Crisis.md) - Halting the blockchain under certain
+    circumstances (ie. if an invariant is broken)
+8.  [mint](./params-change/Mint.md) - Creation of new units of staking token
 
 <!-- markdown-link-check-disable -->
 
@@ -52,13 +55,11 @@ subcommands for the module you want to query. For example,
 `gaiad q staking params --chain-id <chain-id> --node <node-id>` returns the
 settings of relevant parameters:
 
-```
-bond_denom: uatom
-historical_entries: 10000
-max_entries: 7
-max_validators: 175
-unbonding_time: 1814400s
-```
+    bond_denom: uatom
+    historical_entries: 10000
+    max_entries: 7
+    max_validators: 175
+    unbonding_time: 1814400s
 
 If a parameter-change proposal is successful, the change takes effect
 immediately upon completion of the voting period.
@@ -107,20 +108,20 @@ In late 2021 and early 2022 significant updates were made by
 
 **Special thanks** to the following for providing credible information:
 
-- Aleks (All in Bits; Fission Labs) for answering countless questions about
-  these parameters
-- Alessio (All in Bits) for explaining how
-  [`SigVerifyCostED25519`](https://hub.cosmos.network/main/governance/proposal-types/params-change/Auth.html#4-sigverifycosted25519)
-  &
-  [`SigVerifyCostSecp256k1`](https://hub.cosmos.network/main/governance/proposal-types/params-change/Auth.html#5-sigverifycostsecp256k1)
-  work, and detailed answers to my many questions
-- Vidor for volunteering to explain
-  [`ConstantFee`](https://hub.cosmos.network/main/governance/proposal-types/params-change/Crisis.html#1-constantfee)
-  and answering my many questions in detail
-- Hyung (B-Harvest) for volunteering how
-  [`InflationRateChange`](https://hub.cosmos.network/main/governance/proposal-types/params-change/Mint.html#2-inflationratechange)
-  works
-- Joe (Chorus One) for explaining the security details involved with using full
-  nodes for transactions
-- Sunny (All in Bits; Sikka) for volunteering an explanation of the purpose of
-  [`withdrawaddrenabled`](https://hub.cosmos.network/main/governance/proposal-types/params-change/Distribution.html#4-withdrawaddrenabled)
+*   Aleks (All in Bits; Fission Labs) for answering countless questions about
+    these parameters
+*   Alessio (All in Bits) for explaining how
+    [`SigVerifyCostED25519`](https://hub.cosmos.network/main/governance/proposal-types/params-change/Auth.html#4-sigverifycosted25519)
+    &
+    [`SigVerifyCostSecp256k1`](https://hub.cosmos.network/main/governance/proposal-types/params-change/Auth.html#5-sigverifycostsecp256k1)
+    work, and detailed answers to my many questions
+*   Vidor for volunteering to explain
+    [`ConstantFee`](https://hub.cosmos.network/main/governance/proposal-types/params-change/Crisis.html#1-constantfee)
+    and answering my many questions in detail
+*   Hyung (B-Harvest) for volunteering how
+    [`InflationRateChange`](https://hub.cosmos.network/main/governance/proposal-types/params-change/Mint.html#2-inflationratechange)
+    works
+*   Joe (Chorus One) for explaining the security details involved with using full
+    nodes for transactions
+*   Sunny (All in Bits; Sikka) for volunteering an explanation of the purpose of
+    [`withdrawaddrenabled`](https://hub.cosmos.network/main/governance/proposal-types/params-change/Distribution.html#4-withdrawaddrenabled)

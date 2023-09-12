@@ -2,7 +2,7 @@
 
 [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/dgraph-io/ristretto)
 [![Go Report Card](https://img.shields.io/badge/go%20report-A%2B-brightgreen)](https://goreportcard.com/report/github.com/dgraph-io/ristretto)
-[![Coverage](https://gocover.io/\_badge/github.com/dgraph-io/ristretto)](https://gocover.io/github.com/dgraph-io/ristretto)
+[![Coverage](https://gocover.io/_badge/github.com/dgraph-io/ristretto)](https://gocover.io/github.com/dgraph-io/ristretto)
 ![Tests](https://github.com/dgraph-io/ristretto/workflows/tests/badge.svg)
 
 Ristretto is a fast, concurrent cache library built with a focus on performance
@@ -18,22 +18,22 @@ for reporting issues about this repository.**
 
 ## Features
 
-- **High Hit Ratios** - with our unique admission/eviction policy pairing,
-  Ristretto's performance is best in class.
-  - **Eviction: SampledLFU** - on par with exact LRU and better performance on
-    Search and Database traces.
-  - **Admission: TinyLFU** - extra performance with little memory overhead (12
-    bits per counter).
-- **Fast Throughput** - we use a variety of techniques for managing contention
-  and the result is excellent throughput.
-- **Cost-Based Eviction** - any large new item deemed valuable can evict
-  multiple smaller items (cost could be anything).
-- **Fully Concurrent** - you can use as many goroutines as you want with little
-  throughput degradation.
-- **Metrics** - optional performance metrics for throughput, hit ratios, and
-  other stats.
-- **Simple API** - just figure out your ideal `Config` values and you're off and
-  running.
+*   **High Hit Ratios** - with our unique admission/eviction policy pairing,
+    Ristretto's performance is best in class.
+    *   **Eviction: SampledLFU** - on par with exact LRU and better performance on
+        Search and Database traces.
+    *   **Admission: TinyLFU** - extra performance with little memory overhead (12
+        bits per counter).
+*   **Fast Throughput** - we use a variety of techniques for managing contention
+    and the result is excellent throughput.
+*   **Cost-Based Eviction** - any large new item deemed valuable can evict
+    multiple smaller items (cost could be anything).
+*   **Fully Concurrent** - you can use as many goroutines as you want with little
+    throughput degradation.
+*   **Metrics** - optional performance metrics for throughput, hit ratios, and
+    other stats.
+*   **Simple API** - just figure out your ideal `Config` values and you're off and
+    running.
 
 ## Status
 
@@ -42,28 +42,28 @@ Ristretto is production-ready. See
 
 ## Table of Contents
 
-- [Usage](#Usage)
-  - [Example](#Example)
-  - [Config](#Config)
-    - [NumCounters](#Config)
-    - [MaxCost](#Config)
-    - [BufferItems](#Config)
-    - [Metrics](#Config)
-    - [OnEvict](#Config)
-    - [KeyToHash](#Config)
-      - [Cost](#Config)
-- [Benchmarks](#Benchmarks)
-  - [Hit Ratios](#Hit-Ratios)
-    - [Search](#Search)
-    - [Database](#Database)
-    - [Looping](#Looping)
-    - [CODASYL](#CODASYL)
-  - [Throughput](#Throughput)
-    - [Mixed](#Mixed)
-    - [Read](#Read)
-    - [Write](#Write)
-- [Projects using Ristretto](#projects-using-ristretto)
-- [FAQ](#FAQ)
+*   [Usage](#Usage)
+    *   [Example](#Example)
+    *   [Config](#Config)
+        *   [NumCounters](#Config)
+        *   [MaxCost](#Config)
+        *   [BufferItems](#Config)
+        *   [Metrics](#Config)
+        *   [OnEvict](#Config)
+        *   [KeyToHash](#Config)
+            *   [Cost](#Config)
+*   [Benchmarks](#Benchmarks)
+    *   [Hit Ratios](#Hit-Ratios)
+        *   [Search](#Search)
+        *   [Database](#Database)
+        *   [Looping](#Looping)
+        *   [CODASYL](#CODASYL)
+    *   [Throughput](#Throughput)
+        *   [Mixed](#Mixed)
+        *   [Read](#Read)
+        *   [Write](#Write)
+*   [Projects using Ristretto](#projects-using-ristretto)
+*   [FAQ](#FAQ)
 
 ## Usage
 
@@ -163,8 +163,8 @@ waste time on items that will be dropped anyways).
 
 To signal to Ristretto that you'd like to use this Cost function:
 
-1. Set the Cost field to a non-nil function.
-2. When calling Set for new items or item updates, use a `cost` of 0.
+1.  Set the Cost field to a non-nil function.
+2.  When calling Set for new items or item updates, use a `cost` of 0.
 
 ## Benchmarks
 
@@ -235,11 +235,11 @@ of RAM.
 
 Below is a list of known projects that use Ristretto:
 
-- [Badger](https://github.com/dgraph-io/badger) - Embeddable key-value DB in Go
-- [Dgraph](https://github.com/dgraph-io/dgraph) - Horizontally scalable and
-  distributed GraphQL database with a graph backend
-- [Vitess](https://github.com/vitessio/vitess) - database clustering system for
-  horizontal scaling of MySQL
+*   [Badger](https://github.com/dgraph-io/badger) - Embeddable key-value DB in Go
+*   [Dgraph](https://github.com/dgraph-io/dgraph) - Horizontally scalable and
+    distributed GraphQL database with a graph backend
+*   [Vitess](https://github.com/vitessio/vitess) - database clustering system for
+    horizontal scaling of MySQL
 
 ## FAQ
 

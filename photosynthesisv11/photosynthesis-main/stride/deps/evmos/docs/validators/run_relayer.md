@@ -8,9 +8,9 @@ Learn how to run an IBC Relayer for Evmos. {synopsis}
 
 ## Minimum Requirements
 
-- 8 core (4 physical core), x86\_64 architecture processor
-- 32 GB RAM (or equivalent swap file set up)
-- 1 TB+ nVME drives
+*   8 core (4 physical core), x86\_64 architecture processor
+*   32 GB RAM (or equivalent swap file set up)
+*   1 TB+ nVME drives
 
 If running many nodes on a single VM,
 [ensure your open files limit is increased](https://tecadmin.net/increase-open-files-limit-ubuntu/).

@@ -9,28 +9,20 @@ ability to log in. The database to connect to test with is "pqgotest," on
 
 Example:
 
-```
-PGHOST=/run/postgresql go test
-```
+    PGHOST=/run/postgresql go test
 
 ## Benchmarks
 
 A benchmark suite can be run as part of the tests:
 
-```
-go test -bench .
-```
+    go test -bench .
 
 ## Example setup (Docker)
 
 Run a postgres container:
 
-```
-docker run --expose 5432:5432 postgres
-```
+    docker run --expose 5432:5432 postgres
 
 Run tests:
 
-```
-PGHOST=localhost PGPORT=5432 PGUSER=postgres PGSSLMODE=disable PGDATABASE=postgres go test
-```
+    PGHOST=localhost PGPORT=5432 PGUSER=postgres PGSSLMODE=disable PGDATABASE=postgres go test

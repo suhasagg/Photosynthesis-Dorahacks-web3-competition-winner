@@ -8,10 +8,10 @@ and this project adheres to
 
 ### Added
 
-- Add Submessages and Subcall types ([#197])
-- Add WasmMsg::Migrate message type ([#197])
-- Add IBC and Stargate message types ([#167], [#174])
-- Expose IBC entry points and AnalyzeCode ([#167], [#174])
+*   Add Submessages and Subcall types ([#197])
+*   Add WasmMsg::Migrate message type ([#197])
+*   Add IBC and Stargate message types ([#167], [#174])
+*   Expose IBC entry points and AnalyzeCode ([#167], [#174])
 
 [#167]: https://github.com/CosmWasm/wasmvm/pull/167
 
@@ -21,10 +21,10 @@ and this project adheres to
 
 ### Changed
 
-- Renamed the Go type `CodeID` to `Checksum` to clarify the difference between
-  the numeric code ID assigned by x/wasm and the hash used to identify it in the
-  cache.
-- Update required Rust version in build scripts to 1.50 ([#197])
+*   Renamed the Go type `CodeID` to `Checksum` to clarify the difference between
+    the numeric code ID assigned by x/wasm and the hash used to identify it in the
+    cache.
+*   Update required Rust version in build scripts to 1.50 ([#197])
 
 ## 0.13.0
 

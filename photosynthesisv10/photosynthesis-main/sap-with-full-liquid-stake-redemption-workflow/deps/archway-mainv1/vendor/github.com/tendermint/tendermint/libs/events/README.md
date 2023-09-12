@@ -2,8 +2,8 @@
 
 `import "github.com/tendermint/tendermint/libs/events"`
 
-- [Overview](#pkg-overview)
-- [Index](#pkg-index)
+*   [Overview](#pkg-overview)
+*   [Index](#pkg-index)
 
 ## Overview
 
@@ -11,20 +11,20 @@ Pub-Sub in go with event caching
 
 ## Index
 
-- [type EventCache](#EventCache)
-  - [func NewEventCache(evsw Fireable) \*EventCache](#NewEventCache)
-  - [func (evc \*EventCache) FireEvent(event string, data EventData)](#EventCache.FireEvent)
-  - [func (evc \*EventCache) Flush()](#EventCache.Flush)
-- [type EventCallback](#EventCallback)
-- [type EventData](#EventData)
-- [type EventSwitch](#EventSwitch)
-  - [func NewEventSwitch() EventSwitch](#NewEventSwitch)
-- [type Eventable](#Eventable)
-- [type Fireable](#Fireable)
+*   [type EventCache](#EventCache)
+    *   [func NewEventCache(evsw Fireable) \*EventCache](#NewEventCache)
+    *   [func (evc \*EventCache) FireEvent(event string, data EventData)](#EventCache.FireEvent)
+    *   [func (evc \*EventCache) Flush()](#EventCache.Flush)
+*   [type EventCallback](#EventCallback)
+*   [type EventData](#EventData)
+*   [type EventSwitch](#EventSwitch)
+    *   [func NewEventSwitch() EventSwitch](#NewEventSwitch)
+*   [type Eventable](#Eventable)
+*   [type Fireable](#Fireable)
 
 ### Package files
 
-[event_cache.go](/src/github.com/tendermint/tendermint/libs/events/event_cache.go)
+[event\_cache.go](/src/github.com/tendermint/tendermint/libs/events/event_cache.go)
 [events.go](/src/github.com/tendermint/tendermint/libs/events/events.go)
 
 ## Type [EventCache](/src/target/event_cache.go?s=116:179#L5)

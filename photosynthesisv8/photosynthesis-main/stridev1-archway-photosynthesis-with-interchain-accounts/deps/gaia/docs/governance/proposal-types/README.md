@@ -1,14 +1,17 @@
 ***
 
-## order: 1&#xA;parent:&#xA;order: 6
+order: 1
+parent:
+order: 6
+--------
 
 # Proposal Types
 
-- [**Text**](../proposal-types/text-prop.md)
-- [**Community Pool Spend**](../proposal-types/community-pool-spend.md)
-- [**Parameter Change**](../proposal-types/param-change.md)
-- **Software Upgrade**
-- **IBC Client Update**
+*   [**Text**](../proposal-types/text-prop.md)
+*   [**Community Pool Spend**](../proposal-types/community-pool-spend.md)
+*   [**Parameter Change**](../proposal-types/param-change.md)
+*   **Software Upgrade**
+*   **IBC Client Update**
 
 ## Drafting a Proposal
 
@@ -24,10 +27,10 @@ and have made an informed decision to vote down the proposal.
 If you are considering drafting a proposal, you should first review the general
 background on drafting and submitting a proposal:
 
-1. [How the voting process and governance mechanism works](../process.md)
-2. [How to draft your proposal and engage with the Cosmos community about it](../best-practices.md)
-3. [How to format proposals](../formatting.md)
-4. [How to submit your proposal](../submitting.md)
+1.  [How the voting process and governance mechanism works](../process.md)
+2.  [How to draft your proposal and engage with the Cosmos community about it](../best-practices.md)
+3.  [How to format proposals](../formatting.md)
+4.  [How to submit your proposal](../submitting.md)
 
 You should also review details specific to each kind of proposal, listed in this
 section.

@@ -5,8 +5,8 @@ This section describes the types of relaying that hermes can perform.
 Hermes can send transactions triggered by IBC events. It currently handles
 channel handshake and packet events:
 
-- [packets messages only](./packets.md#packet-relaying)
-- [channel and packet messages](./handshakes.md)
+*   [packets messages only](./packets.md#packet-relaying)
+*   [channel and packet messages](./handshakes.md)
 
 ## The `start` Command
 

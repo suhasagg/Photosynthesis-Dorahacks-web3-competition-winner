@@ -2,7 +2,7 @@
 
 ## Changelog
 
-- {date}: {changelog}
+*   {date}: {changelog}
 
 ## Context
 
@@ -42,4 +42,4 @@
 > Are there any relevant PR comments, issues that led up to this, or articles
 > referrenced for why we made the given design choice? If so link them here!
 
-- {reference link}
+*   {reference link}

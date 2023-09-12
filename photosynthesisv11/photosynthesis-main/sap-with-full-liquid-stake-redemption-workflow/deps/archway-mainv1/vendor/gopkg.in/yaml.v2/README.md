@@ -21,15 +21,13 @@ The import path for the package is *gopkg.in/yaml.v2*.
 
 To install it, run:
 
-```
-go get gopkg.in/yaml.v2
-```
+    go get gopkg.in/yaml.v2
 
 ## API documentation
 
 If opened in a browser, the import path itself leads to the API documentation:
 
-- <https://gopkg.in/yaml.v2>
+*   <https://gopkg.in/yaml.v2>
 
 ## API stability
 
@@ -103,25 +101,23 @@ func main() {
 
 This example will generate the following output:
 
-```
---- t:
-{Easy! {2 [3 4]}}
+    --- t:
+    {Easy! {2 [3 4]}}
 
---- t dump:
-a: Easy!
-b:
-  c: 2
-  d: [3, 4]
+    --- t dump:
+    a: Easy!
+    b:
+      c: 2
+      d: [3, 4]
 
 
---- m:
-map[a:Easy! b:map[c:2 d:[3 4]]]
+    --- m:
+    map[a:Easy! b:map[c:2 d:[3 4]]]
 
---- m dump:
-a: Easy!
-b:
-  c: 2
-  d:
-  - 3
-  - 4
-```
+    --- m dump:
+    a: Easy!
+    b:
+      c: 2
+      d:
+      - 3
+      - 4

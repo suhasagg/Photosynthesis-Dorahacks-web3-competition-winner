@@ -12,13 +12,13 @@ mint module via the attached hyperlink:
 In this proposal we will be looking at adjusting the inflation rate change
 variable.
 
-- When the cosmos hub inflation dynamics were originally designed, the goal was
-  for the hub to go from the minimum rate (7%) to the maximum rate (20%) in
-  roughly one year after a shock had unbond occurred. Thus, for the variable
-  “inflation rate change” a value of .13 was chosen. Unfortunately, in practice
-  the variable didn’t work as intended due to the fact the change in the
-  inflation rate for the hub is proportional to the Target Bonded / current
-  bonded ratio.
+*   When the cosmos hub inflation dynamics were originally designed, the goal was
+    for the hub to go from the minimum rate (7%) to the maximum rate (20%) in
+    roughly one year after a shock had unbond occurred. Thus, for the variable
+    “inflation rate change” a value of .13 was chosen. Unfortunately, in practice
+    the variable didn’t work as intended due to the fact the change in the
+    inflation rate for the hub is proportional to the Target Bonded / current
+    bonded ratio.
 
 **How to select “inflation rate change” AKA Maximum Slope of the inflation
 curve**

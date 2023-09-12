@@ -96,9 +96,9 @@ comes online, the Cosmos mainnet will be live.
 
 These are the official accounts that will communicate launch details:
 
-- [Cosmos Network](https://twitter.com/cosmos)
-- [Cosmos GitHub](https://github.com/cosmos)
-- [Cosmos Blog](https://blog.cosmos.network)
+*   [Cosmos Network](https://twitter.com/cosmos)
+*   [Cosmos GitHub](https://github.com/cosmos)
+*   [Cosmos Blog](https://blog.cosmos.network)
 
 Please be aware that the [Cosmos forum][forum], [Riot chat groups][riot], and
 [Telegram group][telegram] should not be treated as official news from Cosmos.
@@ -137,56 +137,56 @@ eliminate the risk of key or credential theft.
 **Here are few rules of engagement to keep in mind when you’re preparing for
 Cosmos mainnet launch:**
 
-- Download software directly from official sources, and make sure that you’re
-  always using the latest, most secure version of gaiad when you’re doing
-  anything that involves your 12 words. The latest versions of Tendermint, the
-  Cosmos-SDK, and gaiad will always be available from our official GitHub
-  repositories, and downloading them from there ensures that you will not be
-  tricked into using a maliciously modified version of software.
+*   Download software directly from official sources, and make sure that you’re
+    always using the latest, most secure version of gaiad when you’re doing
+    anything that involves your 12 words. The latest versions of Tendermint, the
+    Cosmos-SDK, and gaiad will always be available from our official GitHub
+    repositories, and downloading them from there ensures that you will not be
+    tricked into using a maliciously modified version of software.
 
-- Do not share your 12 words with anyone. The only person who should ever need
-  to know them is you. This is especially important if you’re ever approached by
-  someone attempting to offer custodial services for your Atom: to avoid losing
-  control of your tokens, you should store them offline to minimize the risk of
-  theft and have a strong backup strategy in place. And never, ever share them
-  with anyone else.
+*   Do not share your 12 words with anyone. The only person who should ever need
+    to know them is you. This is especially important if you’re ever approached by
+    someone attempting to offer custodial services for your Atom: to avoid losing
+    control of your tokens, you should store them offline to minimize the risk of
+    theft and have a strong backup strategy in place. And never, ever share them
+    with anyone else.
 
-- Be skeptical of unexpected attachments or emails that ask you to visit a
-  suspicious or unfamiliar website in the context of blockchains or
-  cryptocurrency. An attacker may attempt to lure you to a [compromised site]
-  designed to steal sensitive information from your computer. If you’re a Gmail
-  user, test your resilience against the latest email-based phishing tactics
-  [here][quiz].
+*   Be skeptical of unexpected attachments or emails that ask you to visit a
+    suspicious or unfamiliar website in the context of blockchains or
+    cryptocurrency. An attacker may attempt to lure you to a [compromised site]
+    designed to steal sensitive information from your computer. If you’re a Gmail
+    user, test your resilience against the latest email-based phishing tactics
+    [here][quiz].
 
-- Do your due diligence before purchasing Atoms. Atoms will not be transferable
-  at launch, so they *cannot* be bought or sold until a hard fork enables them
-  to be. If and when they become transferable, make sure that you’ve researched
-  the seller or exchange to confirm that the Atoms are coming from a trustworthy
-  source.
+*   Do your due diligence before purchasing Atoms. Atoms will not be transferable
+    at launch, so they *cannot* be bought or sold until a hard fork enables them
+    to be. If and when they become transferable, make sure that you’ve researched
+    the seller or exchange to confirm that the Atoms are coming from a trustworthy
+    source.
 
-- Neither the Tendermint team nor the Interchain Foundation will be selling
-  Atoms, so if you see social media posts or emails advertising a token sale
-  from us, they’re not real and should be avoided. Enable 2-factor
-  authentication, and be mindful of recovery methods used to regain access to
-  your most important accounts. Unprotected accounts like email, social media,
-  your GitHub account, the Cosmos Forum and anything in between could give an
-  attacker opportunities to gain foothold in your online life. If you haven’t
-  done so yet, start using an authenticator app or a hardware key immediately
-  wherever you manage your tokens. This is a simple, effective, and proven way
-  to reduce the risk of account theft.
+*   Neither the Tendermint team nor the Interchain Foundation will be selling
+    Atoms, so if you see social media posts or emails advertising a token sale
+    from us, they’re not real and should be avoided. Enable 2-factor
+    authentication, and be mindful of recovery methods used to regain access to
+    your most important accounts. Unprotected accounts like email, social media,
+    your GitHub account, the Cosmos Forum and anything in between could give an
+    attacker opportunities to gain foothold in your online life. If you haven’t
+    done so yet, start using an authenticator app or a hardware key immediately
+    wherever you manage your tokens. This is a simple, effective, and proven way
+    to reduce the risk of account theft.
 
-- Be skeptical of technical advice, especially advice that comes from people you
-  do not know in forums and on group chat channels. Familiarize yourself with
-  important commands, especially those that will help you carry out high-risk
-  actions, and consult our official documentation to make sure that you’re not
-  being tricked into doing something that will harm you or your validator. And
-  remember that the Cosmos forum, Riot channels, and Telegram are not sources of
-  official information or news about Cosmos.
+*   Be skeptical of technical advice, especially advice that comes from people you
+    do not know in forums and on group chat channels. Familiarize yourself with
+    important commands, especially those that will help you carry out high-risk
+    actions, and consult our official documentation to make sure that you’re not
+    being tricked into doing something that will harm you or your validator. And
+    remember that the Cosmos forum, Riot channels, and Telegram are not sources of
+    official information or news about Cosmos.
 
-- Verify transactions before hitting send. Yes, those address strings are long,
-  but visually comparing them in blocks of 4 characters at a time may be the
-  difference between sending them to the right place or sending them into
-  oblivion.
+*   Verify transactions before hitting send. Yes, those address strings are long,
+    but visually comparing them in blocks of 4 characters at a time may be the
+    difference between sending them to the right place or sending them into
+    oblivion.
 
 *If a deal pops up that [sounds too good to be true][good], or a message shows
 up asking for information that should never, ever be shared with someone else,

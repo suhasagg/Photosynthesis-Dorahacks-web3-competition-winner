@@ -44,7 +44,7 @@ proposal details must be supplied via a JSON file.
 evmosd tx gov submit-legacy-proposal register-coin METADATA_FILE [flags]
 ```
 
-Where METADATA_FILE contains (example):
+Where METADATA\_FILE contains (example):
 
 ```json
 {

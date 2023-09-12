@@ -14,13 +14,13 @@ moving to the [next section](./start-local-chains.md).
 
 ## Sections
 
-- **[Start Local Chains](./start-local-chains.md)**
+*   **[Start Local Chains](./start-local-chains.md)**
 
-  - Start two local chains with `gm` and set up Hermes.
+    *   Start two local chains with `gm` and set up Hermes.
 
-- **[Add a new relay path](./add-a-new-relay-path.md)**
+*   **[Add a new relay path](./add-a-new-relay-path.md)**
 
-  - Add a relay path between the two chains you started.
+    *   Add a relay path between the two chains you started.
 
-- **[Start relaying](./start-relaying.md)**
-  - Exchange and relay packets between two local chains.
+*   **[Start relaying](./start-relaying.md)**
+    *   Exchange and relay packets between two local chains.

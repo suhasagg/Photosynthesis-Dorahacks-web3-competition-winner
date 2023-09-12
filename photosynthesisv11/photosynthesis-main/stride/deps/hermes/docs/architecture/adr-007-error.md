@@ -2,7 +2,7 @@
 
 ## Changelog
 
-- 2020-07-26: Initial Proposal
+*   2020-07-26: Initial Proposal
 
 ## Context
 
@@ -36,19 +36,19 @@ impl Kind {
 
 The design above is meant to separate between two concerns:
 
-- The metadata about an error, as captured in `Kind`.
-- The trace of how the error occured, as captured in `anomaly::Context`.
-- The type `Error` is defined to be `anomaly::Error<Kind>`, which is a newtype
-  wrapper to `Box<anomaly::Context<Kind>>`.
+*   The metadata about an error, as captured in `Kind`.
+*   The trace of how the error occured, as captured in `anomaly::Context`.
+*   The type `Error` is defined to be `anomaly::Error<Kind>`, which is a newtype
+    wrapper to `Box<anomaly::Context<Kind>>`.
 
 There are a few issues with the original design using `anomaly`:
 
-- The error source type is erased and turned into a
-  `Box<dyn std::error::Error>`, making it difficult to recover metadata
-  information about the original error.
-- The `Kind::context` method allows any error type to be used as an error
-  source, making it difficult to statically analyze which sub-error has what
-  kind of error source.
+*   The error source type is erased and turned into a
+    `Box<dyn std::error::Error>`, making it difficult to recover metadata
+    information about the original error.
+*   The `Kind::context` method allows any error type to be used as an error
+    source, making it difficult to statically analyze which sub-error has what
+    kind of error source.
 
 We can demonstrate the design issue with a specific use case:
 
@@ -111,16 +111,16 @@ impl Error {
 
 There are a few things addressed by the design above:
 
-- We use the `eyre::Report` type as an *error tracer* to trace the error
-  sources, together with additional information such as backtrace.
-- Depending on the error source type, we want to have different strategies to
-  trace the error.
-  - For example, we may not care about the metadata inside
-    `tonic::TransportError`, so we just discard the data after tracing it using
-    `eyre`.
-- We define *error constructor functions* that handle the error source using
-  different strategies. The function constructs the `ErrorDetail` and
-  `eyre::Report` values, and then wrap them as the `Error` tuple.
+*   We use the `eyre::Report` type as an *error tracer* to trace the error
+    sources, together with additional information such as backtrace.
+*   Depending on the error source type, we want to have different strategies to
+    trace the error.
+    *   For example, we may not care about the metadata inside
+        `tonic::TransportError`, so we just discard the data after tracing it using
+        `eyre`.
+*   We define *error constructor functions* that handle the error source using
+    different strategies. The function constructs the `ErrorDetail` and
+    `eyre::Report` values, and then wrap them as the `Error` tuple.
 
 In general, when the error sources are defined by external libraries, we have
 little control of how the types are defined, and need to have different ways to
@@ -207,28 +207,28 @@ All error definitions in the `ibc-rs` project will be defined using the
 
 ### Positive
 
-- Fine grained error handling.
-- Flexible error tracing.
-- `no_std` support.
+*   Fine grained error handling.
+*   Flexible error tracing.
+*   `no_std` support.
 
 ### Negative
 
-- It takes time to learn about the DSL and how to manage different error
-  sources.
-- Compile errors arise inside the macros may be difficult to debug.
-- IDE provides limited integration for code inside macros.
+*   It takes time to learn about the DSL and how to manage different error
+    sources.
+*   Compile errors arise inside the macros may be difficult to debug.
+*   IDE provides limited integration for code inside macros.
 
 ### Neutral
 
-- The error variants are defined in the `ErrorDetail::ErrorVariant{...}`
-  convention, but the error constructor functions are defined in the
-  `Error::error_variant(...)` convention.
+*   The error variants are defined in the `ErrorDetail::ErrorVariant{...}`
+    convention, but the error constructor functions are defined in the
+    `Error::error_variant(...)` convention.
 
 ## References
 
-- [PR #988](https://github.com/informalsystems/ibc-rs/pull/988): Use flex-error
-  to define errors
-- [Issue #712](https://github.com/informalsystems/ibc-rs/issues/712): Relayer
-  error handling specification
-- [Issue #11588](https://github.com/informalsystems/ibc-rs/issues/1158):
-  Tracking issue for no-std support
+*   [PR #988](https://github.com/informalsystems/ibc-rs/pull/988): Use flex-error
+    to define errors
+*   [Issue #712](https://github.com/informalsystems/ibc-rs/issues/712): Relayer
+    error handling specification
+*   [Issue #11588](https://github.com/informalsystems/ibc-rs/issues/1158):
+    Tracking issue for no-std support

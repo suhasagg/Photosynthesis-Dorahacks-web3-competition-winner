@@ -1,6 +1,8 @@
 ***
 
-## order: 4&#xA;title: Upgrading Your Node
+order: 4
+title: Upgrading Your Node
+--------------------------
 
 # Upgrade Your Node
 
@@ -150,7 +152,7 @@ and re-store them. You can find an example of such script
 
 ## Reset Data
 
-:::warning If the version \<new_version> you are upgrading to is not breaking
+:::warning If the version \<new\_version> you are upgrading to is not breaking
 from the previous one, you should not reset the data. If it is not breaking, you
 can skip to [Restart](#restart) :::
 

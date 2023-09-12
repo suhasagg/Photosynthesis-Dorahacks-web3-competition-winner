@@ -31,9 +31,7 @@ func main() {
 
 ## Installation
 
-```
-$ go get github.com/mattn/go-isatty
-```
+    $ go get github.com/mattn/go-isatty
 
 ## License
 
@@ -45,6 +43,6 @@ Yasuhiro Matsumoto (a.k.a mattn)
 
 ## Thanks
 
-- k-takata: base idea for IsCygwinTerminal
+*   k-takata: base idea for IsCygwinTerminal
 
-  https://github.com/k-takata/go-iscygpty
+    https://github.com/k-takata/go-iscygpty

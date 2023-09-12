@@ -60,9 +60,9 @@ The multisig will consist of a 2/3 key holder set consisting of the following
 individuals whom have all agreed to participate in this process shall this
 proposal pass:
 
-- Zaki Manian
-- Federico Kunze
-- Marko Baricevic
+*   Zaki Manian
+*   Federico Kunze
+*   Marko Baricevic
 
 This is one small step for the Hub, but one giant leap for ATOM-aligned.
 

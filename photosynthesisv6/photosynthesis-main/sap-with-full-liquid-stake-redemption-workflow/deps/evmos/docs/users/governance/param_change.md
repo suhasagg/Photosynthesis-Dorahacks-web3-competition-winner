@@ -26,10 +26,10 @@ For a comprehensive list of available module parameters see the table below:
 | `slashing`     | `cosmos-sdk` | [reference](https://docs.cosmos.network/main/modules/slashing#parameters)     |
 | `staking`      | `cosmos-sdk` | [reference](https://docs.cosmos.network/main/modules/staking#parameters)      |
 | `transfer`     | `ibc-go`     | [reference](https://ibc.cosmos.network/main/ibc/params.html)                  |
-| `evm`          | `ethermint`  | [reference](https://docs.evmos.org/modules/evm/08\_params.html)                |
-| `feemarket`    | `ethermint`  | [reference](https://docs.evmos.org/modules/feemarket/07\_params.html)          |
-| `claims`       | `evmos`      | [reference](https://docs.evmos.org/modules/claims/06\_parameters.html)         |
-| `erc20`        | `evmos`      | [reference](https://docs.evmos.org/modules/erc20/07\_parameters.html)          |
-| `revenue`      | `evmos`      | [reference](https://docs.evmos.org/modules/revenue/07\_parameters.html)        |
-| `incentives`   | `evmos`      | [reference](https://docs.evmos.org/modules/incentives/07\_parameters.html)     |
-| `inflation`    | `evmos`      | [reference](https://docs.evmos.org/modules/inflation/05\_parameters.html)      |
+| `evm`          | `ethermint`  | [reference](https://docs.evmos.org/modules/evm/08_params.html)                |
+| `feemarket`    | `ethermint`  | [reference](https://docs.evmos.org/modules/feemarket/07_params.html)          |
+| `claims`       | `evmos`      | [reference](https://docs.evmos.org/modules/claims/06_parameters.html)         |
+| `erc20`        | `evmos`      | [reference](https://docs.evmos.org/modules/erc20/07_parameters.html)          |
+| `revenue`      | `evmos`      | [reference](https://docs.evmos.org/modules/revenue/07_parameters.html)        |
+| `incentives`   | `evmos`      | [reference](https://docs.evmos.org/modules/incentives/07_parameters.html)     |
+| `inflation`    | `evmos`      | [reference](https://docs.evmos.org/modules/inflation/05_parameters.html)      |

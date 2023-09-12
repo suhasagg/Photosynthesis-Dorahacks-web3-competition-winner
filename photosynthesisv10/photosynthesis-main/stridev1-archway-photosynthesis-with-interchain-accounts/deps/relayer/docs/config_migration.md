@@ -6,27 +6,27 @@ compatible.
 To migrate, you will need to re-initialize your config file. Follow the steps
 below:
 
-1. Delete old config (assuming it's in default location).
+1.  Delete old config (assuming it's in default location).
 
 ```sh
  rm -r ~/.relayer/config
 ```
 
-2. Re-init config.
+2.  Re-init config.
 
 ```sh
 rly config init
 ```
 
-3. Add chains to relay for to the config. This fetches chain meta-data from
-   `cosmos/chain-registry`. Example:
+3.  Add chains to relay for to the config. This fetches chain meta-data from
+    `cosmos/chain-registry`. Example:
 
 ```sh
 rly chains add cosmoshub osmosis juno
 ```
 
-4. Auto configure path meta-data from `cosmos/chain-registry/_IBC` (you can
-   optionally do this manually).
+4.  Auto configure path meta-data from `cosmos/chain-registry/_IBC` (you can
+    optionally do this manually).
 
 ```sh
 rly paths fetch

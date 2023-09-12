@@ -1,6 +1,8 @@
 ***
 
-## title: Cosmos Hub 4, Rho Upgrade&#xA;order: 2
+title: Cosmos Hub 4, Rho Upgrade
+order: 2
+--------
 
 <!-- markdown-link-check-disable -->
 
@@ -11,75 +13,75 @@ successful execution of the
 [v8-Rho Upgrade](https://github.com/cosmos/gaia/blob/main/docs/roadmap/cosmos-hub-roadmap-2.0.md#v8-rho-upgrade-expected-q1-2023),
 which contains the following main new features/improvement:
 
-- [ibc-go](https://github.com/cosmos/ibc-go) to
-  [v3.4.0](https://github.com/cosmos/ibc-go/blob/v3.4.0/CHANGELOG.md) to fix a
-  vulnerability in ICA. See
-  [v3.4.0 CHANGELOG.md](https://github.com/cosmos/ibc-go/releases/tag/v3.4.0)
-  and
-  [v3.2.1 Release Notes](https://github.com/cosmos/ibc-go/releases/tag/v3.2.1)
-  for details.
-- [cosmos-sdk](https://github.com/cosmos/cosmos-sdk) to
-  [v0.45.12](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.45.12). See
-  [CHANGELOG.md](https://github.com/cosmos/cosmos-sdk/blob/release/v0.45.x/CHANGELOG.md)
-  for details.
-- [tendermint](https://github.com/tendermint/tendermint) to
-  [0.34.24](https://github.com/tendermint/tendermint/tree/v0.34.24). See
-  [CHANGELOG.md](https://github.com/tendermint/tendermint/blob/v0.34.24/CHANGELOG.md)
-  for details.
-- [liquidity](https://github.com/Gravity-Devs/liquidity) to
-  [v1.5.3](https://github.com/Gravity-Devs/liquidity/releases/tag/v1.5.3).
-- [packet-forwarding-middleware](https://github.com/strangelove-ventures/packet-forward-middleware)
-  to
-  [v3.1.1](https://github.com/strangelove-ventures/packet-forward-middleware/releases/tag/v3.1.1).
-- [globalfee](https://github.com/cosmos/gaia/tree/main/x/globalfee) module. See
-  [globalfee docs](https://github.com/cosmos/gaia/blob/main/docs/modules/globalfee.md)
-  for more details.
-- [#1845](https://github.com/cosmos/gaia/pull/1845) Add bech32-convert command
-  to gaiad.
-- [Add new fee decorator](https://github.com/cosmos/gaia/pull/1961) to change
-  `MaxBypassMinFeeMsgGasUsage` so importers of x/globalfee can change `MaxGas`.
-- [#1870](https://github.com/cosmos/gaia/issues/1870) Fix bank denom metadata in
-  migration. See [#1892](https://github.com/cosmos/gaia/pull/1892) for more
-  details.
-- [#1976](https://github.com/cosmos/gaia/pull/1976) Fix Quicksilver ICA exploit
-  in migration. See
-  [the bug fix forum post](https://forum.cosmos.network/t/upcoming-interchain-accounts-bugfix-release/8911)
-  for more details.
-- [E2E tests](https://github.com/cosmos/gaia/tree/main/tests/e2e). The tests
-  cover transactions/queries tests of different modules, including Bank,
-  Distribution, Encode, Evidence, FeeGrant, Global Fee, Gov, IBC, packet
-  forwarding middleware, Slashing, Staking, and Vesting module.
-- [#1941](https://github.com/cosmos/gaia/pull/1941) Fix packet forward
-  configuration for e2e tests.
-- Use gaiad to swap out [Ignite](https://github.com/ignite/cli) in
-  [liveness tests](https://github.com/cosmos/gaia/blob/main/.github/workflows/test.yml).
+*   [ibc-go](https://github.com/cosmos/ibc-go) to
+    [v3.4.0](https://github.com/cosmos/ibc-go/blob/v3.4.0/CHANGELOG.md) to fix a
+    vulnerability in ICA. See
+    [v3.4.0 CHANGELOG.md](https://github.com/cosmos/ibc-go/releases/tag/v3.4.0)
+    and
+    [v3.2.1 Release Notes](https://github.com/cosmos/ibc-go/releases/tag/v3.2.1)
+    for details.
+*   [cosmos-sdk](https://github.com/cosmos/cosmos-sdk) to
+    [v0.45.12](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.45.12). See
+    [CHANGELOG.md](https://github.com/cosmos/cosmos-sdk/blob/release/v0.45.x/CHANGELOG.md)
+    for details.
+*   [tendermint](https://github.com/tendermint/tendermint) to
+    [0.34.24](https://github.com/tendermint/tendermint/tree/v0.34.24). See
+    [CHANGELOG.md](https://github.com/tendermint/tendermint/blob/v0.34.24/CHANGELOG.md)
+    for details.
+*   [liquidity](https://github.com/Gravity-Devs/liquidity) to
+    [v1.5.3](https://github.com/Gravity-Devs/liquidity/releases/tag/v1.5.3).
+*   [packet-forwarding-middleware](https://github.com/strangelove-ventures/packet-forward-middleware)
+    to
+    [v3.1.1](https://github.com/strangelove-ventures/packet-forward-middleware/releases/tag/v3.1.1).
+*   [globalfee](https://github.com/cosmos/gaia/tree/main/x/globalfee) module. See
+    [globalfee docs](https://github.com/cosmos/gaia/blob/main/docs/modules/globalfee.md)
+    for more details.
+*   [#1845](https://github.com/cosmos/gaia/pull/1845) Add bech32-convert command
+    to gaiad.
+*   [Add new fee decorator](https://github.com/cosmos/gaia/pull/1961) to change
+    `MaxBypassMinFeeMsgGasUsage` so importers of x/globalfee can change `MaxGas`.
+*   [#1870](https://github.com/cosmos/gaia/issues/1870) Fix bank denom metadata in
+    migration. See [#1892](https://github.com/cosmos/gaia/pull/1892) for more
+    details.
+*   [#1976](https://github.com/cosmos/gaia/pull/1976) Fix Quicksilver ICA exploit
+    in migration. See
+    [the bug fix forum post](https://forum.cosmos.network/t/upcoming-interchain-accounts-bugfix-release/8911)
+    for more details.
+*   [E2E tests](https://github.com/cosmos/gaia/tree/main/tests/e2e). The tests
+    cover transactions/queries tests of different modules, including Bank,
+    Distribution, Encode, Evidence, FeeGrant, Global Fee, Gov, IBC, packet
+    forwarding middleware, Slashing, Staking, and Vesting module.
+*   [#1941](https://github.com/cosmos/gaia/pull/1941) Fix packet forward
+    configuration for e2e tests.
+*   Use gaiad to swap out [Ignite](https://github.com/ignite/cli) in
+    [liveness tests](https://github.com/cosmos/gaia/blob/main/.github/workflows/test.yml).
 
 TOC:
 
-- [Cosmos Hub 4, v8-Rho Upgrade, Instructions](#cosmos-hub-4-v8-rho-upgrade-instructions)
-  - [On-chain governance proposal attains consensus](#on-chain-governance-proposal-attains-consensus)
-  - [Upgrade will take place Feb 16, 203](#upgrade-will-take-place-feb-16-2023)
-  - [Chain-id will remain the same](#chain-id-will-remain-the-same)
-  - [Preparing for the upgrade](#preparing-for-the-upgrade)
-    - [System requirement](#system-requirement)
-    - [Backups](#backups)
-    - [Testing](#testing)
-    - [Current runtime, cosmoshub-4 (pre-v8-Rho upgrade) is running Gaia v7.0.x](#current-runtime-cosmoshub-4-pre-v7-theta-upgrade-is-running-gaia-v60x)
-    - [Target runtime, cosmoshub-4 (post-v8-Rho upgrade) will run Gaia v8.0.0](#target-runtime-cosmoshub-4-post-v8-rho-upgrade-will-run-gaia-v800)
-  - [v8-Rho upgrade steps](#v8-Rho-upgrade-steps)
-    - [Method I: Manual Upgrade](#method-i-manual-upgrade)
-    - [Method II: Upgrade using Cosmovisor](#method-ii-upgrade-using-cosmovisor)
-      - [Manually preparing the binary](#manually-preparing-the-gaia-v800-binary)
-        - [Preparation](#preparation)
-        - [Expected upgrade result](#expected-upgrade-result)
-      - [Auto-Downloading the Gaia v8.0.0 binary (not recommended!)](#auto-downloading-the-gaia-v800-binary-not-recommended)
-        - [Preparation](#preparation-1)
-        - [Expected result](#expected-result)
-  - [Upgrade duration](#upgrade-duration)
-  - [Rollback plan](#rollback-plan)
-  - [Communications](#communications)
-  - [Risks](#risks)
-  - [Reference](#reference)
+*   [Cosmos Hub 4, v8-Rho Upgrade, Instructions](#cosmos-hub-4-v8-rho-upgrade-instructions)
+    *   [On-chain governance proposal attains consensus](#on-chain-governance-proposal-attains-consensus)
+    *   [Upgrade will take place Feb 16, 203](#upgrade-will-take-place-feb-16-2023)
+    *   [Chain-id will remain the same](#chain-id-will-remain-the-same)
+    *   [Preparing for the upgrade](#preparing-for-the-upgrade)
+        *   [System requirement](#system-requirement)
+        *   [Backups](#backups)
+        *   [Testing](#testing)
+        *   [Current runtime, cosmoshub-4 (pre-v8-Rho upgrade) is running Gaia v7.0.x](#current-runtime-cosmoshub-4-pre-v7-theta-upgrade-is-running-gaia-v60x)
+        *   [Target runtime, cosmoshub-4 (post-v8-Rho upgrade) will run Gaia v8.0.0](#target-runtime-cosmoshub-4-post-v8-rho-upgrade-will-run-gaia-v800)
+    *   [v8-Rho upgrade steps](#v8-Rho-upgrade-steps)
+        *   [Method I: Manual Upgrade](#method-i-manual-upgrade)
+        *   [Method II: Upgrade using Cosmovisor](#method-ii-upgrade-using-cosmovisor)
+            *   [Manually preparing the binary](#manually-preparing-the-gaia-v800-binary)
+                *   [Preparation](#preparation)
+                *   [Expected upgrade result](#expected-upgrade-result)
+            *   [Auto-Downloading the Gaia v8.0.0 binary (not recommended!)](#auto-downloading-the-gaia-v800-binary-not-recommended)
+                *   [Preparation](#preparation-1)
+                *   [Expected result](#expected-result)
+    *   [Upgrade duration](#upgrade-duration)
+    *   [Rollback plan](#rollback-plan)
+    *   [Communications](#communications)
+    *   [Risks](#risks)
+    *   [Reference](#reference)
 
 ## On-chain governance proposal attains consensus
 
@@ -161,11 +163,11 @@ The Cosmos Hub mainnet network, `cosmoshub-4`, will run
 
 There are 2 major ways to upgrade a node:
 
-- Manual upgrade
-- Upgrade using
-  [Cosmovisor](https://github.com/cosmos/cosmos-sdk/tree/master/cosmovisor)
-  - Either by manually preparing the new binary
-  - Or by using the auto-download functionality (this is not yet recommended)
+*   Manual upgrade
+*   Upgrade using
+    [Cosmovisor](https://github.com/cosmos/cosmos-sdk/tree/master/cosmovisor)
+    *   Either by manually preparing the new binary
+    *   Or by using the auto-download functionality (this is not yet recommended)
 
 If you prefer to use Cosmovisor to upgrade, some preparation work is needed
 before upgrade.
@@ -343,13 +345,13 @@ with a total sum voting power > 2/3 complete their nodes upgrades.
 
 *Please Note:*
 
-- In general, auto-download comes with the risk that the verification of correct
-  download is done automatically. If users want to have the highest guarantee
-  users should confirm the check-sum manually. We hope more node operators will
-  use the auto-download for this release but please be aware this is a risk and
-  users should take at your own discretion.
-- Users should use run node on v7.1.1 if they use the cosmovisor v1.1.0 with
-  auto-download enabled for upgrade process.
+*   In general, auto-download comes with the risk that the verification of correct
+    download is done automatically. If users want to have the highest guarantee
+    users should confirm the check-sum manually. We hope more node operators will
+    use the auto-download for this release but please be aware this is a risk and
+    users should take at your own discretion.
+*   Users should use run node on v7.1.1 if they use the cosmovisor v1.1.0 with
+    auto-download enabled for upgrade process.
 
 ## Upgrade duration
 

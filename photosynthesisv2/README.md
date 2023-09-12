@@ -227,7 +227,7 @@ https://docs.google.com/document/d/1BVwVHjStAMk0f0IYKlBXW9OoAZ6N0JBo/edit?usp=sh
 
 # Justin Bieber music studios based NFTs
 
-https://docs.google.com/document/d/1JWbt_HTbAacJCPfN\_55iTAHrSz7uaXBd/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
+https://docs.google.com/document/d/1JWbt\_HTbAacJCPfN\_55iTAHrSz7uaXBd/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 # Some P2E Games
 
@@ -237,7 +237,7 @@ https://docs.google.com/document/d/1VYHsaFEsLstoP8ht56IZXzqwWGfC9pSD/edit?usp=sh
 
 Mission Impossible based P2E game - Mission impossible
 
-https://docs.google.com/document/d/15BiFBWG_WbizrmiBwXIgdayjypqwUcDK/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
+https://docs.google.com/document/d/15BiFBWG\_WbizrmiBwXIgdayjypqwUcDK/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
 
 WWE based P2E game - WWE universe
 

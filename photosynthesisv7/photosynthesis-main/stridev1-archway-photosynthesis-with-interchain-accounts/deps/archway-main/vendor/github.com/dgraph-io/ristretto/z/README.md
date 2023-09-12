@@ -36,9 +36,9 @@ go get github.com/AndreasBriese/bbloom
 
 \###test
 
-- change to folder ../bbloom
-- create wordlist in file "words.txt" (you might use `python permut.py`)
-- run 'go test -bench=.' within the folder
+*   change to folder ../bbloom
+*   create wordlist in file "words.txt" (you might use `python permut.py`)
+*   run 'go test -bench=.' within the folder
 
 ```go
 go test -bench=.
@@ -125,20 +125,18 @@ https://github.com/willf/bloom . And it is about so fast as my \[]bool set
 variant for Boom filters (see https://github.com/AndreasBriese/bloom ) but
 having a 8times smaller memory footprint:
 
-```
-Bloom filter (filter size 524288, 7 hashlocs)
-github.com/AndreasBriese/bbloom 'Add' 65536 items (10 repetitions): 6595800 ns (100 ns/op)
-github.com/AndreasBriese/bbloom 'Has' 65536 items (10 repetitions): 5986600 ns (91 ns/op)
-github.com/AndreasBriese/bloom 'Add' 65536 items (10 repetitions): 6304684 ns (96 ns/op)
-github.com/AndreasBriese/bloom 'Has' 65536 items (10 repetitions): 6568663 ns (100 ns/op)
+    Bloom filter (filter size 524288, 7 hashlocs)
+    github.com/AndreasBriese/bbloom 'Add' 65536 items (10 repetitions): 6595800 ns (100 ns/op)
+    github.com/AndreasBriese/bbloom 'Has' 65536 items (10 repetitions): 5986600 ns (91 ns/op)
+    github.com/AndreasBriese/bloom 'Add' 65536 items (10 repetitions): 6304684 ns (96 ns/op)
+    github.com/AndreasBriese/bloom 'Has' 65536 items (10 repetitions): 6568663 ns (100 ns/op)
 
-github.com/willf/bloom 'Add' 65536 items (10 repetitions): 24367224 ns (371 ns/op)
-github.com/willf/bloom 'Test' 65536 items (10 repetitions): 21881142 ns (333 ns/op)
-github.com/dataence/bloom/standard 'Add' 65536 items (10 repetitions): 23041644 ns (351 ns/op)
-github.com/dataence/bloom/standard 'Check' 65536 items (10 repetitions): 19153133 ns (292 ns/op)
-github.com/cabello/bloom 'Add' 65536 items (10 repetitions): 131921507 ns (2012 ns/op)
-github.com/cabello/bloom 'Contains' 65536 items (10 repetitions): 131108962 ns (2000 ns/op)
-```
+    github.com/willf/bloom 'Add' 65536 items (10 repetitions): 24367224 ns (371 ns/op)
+    github.com/willf/bloom 'Test' 65536 items (10 repetitions): 21881142 ns (333 ns/op)
+    github.com/dataence/bloom/standard 'Add' 65536 items (10 repetitions): 23041644 ns (351 ns/op)
+    github.com/dataence/bloom/standard 'Check' 65536 items (10 repetitions): 19153133 ns (292 ns/op)
+    github.com/cabello/bloom 'Add' 65536 items (10 repetitions): 131921507 ns (2012 ns/op)
+    github.com/cabello/bloom 'Contains' 65536 items (10 repetitions): 131108962 ns (2000 ns/op)
 
 (on MBPro15 OSX10.8.5 i7 4Core 2.4Ghz)
 

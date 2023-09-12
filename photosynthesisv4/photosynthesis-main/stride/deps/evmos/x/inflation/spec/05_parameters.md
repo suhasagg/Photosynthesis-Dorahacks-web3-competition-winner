@@ -32,7 +32,7 @@ for the calculation of the `epochMintProvision`. The values `A`, `R` and `C`
 describe the decrease of inflation over time. The `BondingTarget` and
 `MaxVariance` allow for an increase in inflation, which is automatically
 regulated by the `bonded ratio`, the portion of staked tokens in the network.
-The exact formula can be found under [Concepts](./01\_concepts.md).
+The exact formula can be found under [Concepts](./01_concepts.md).
 
 ## Inflation Distribution
 

@@ -49,7 +49,7 @@ SGX 变得更加普及时才会有所改善。由于这个原因，验证人必�
 
 在我们的社区聊天频道和论坛上讨论有关成为验证人的更多细节：
 
-- [Validator Chat](https://riot.im/app/#/room/#cosmos_validators:matrix.org)
-- [Validator Forum](https://forum.cosmos.network/c/validating)
+*   [Validator Chat](https://riot.im/app/#/room/#cosmos_validators:matrix.org)
+*   [Validator Forum](https://forum.cosmos.network/c/validating)
 
 <!-- markdown-link-check-enable -->

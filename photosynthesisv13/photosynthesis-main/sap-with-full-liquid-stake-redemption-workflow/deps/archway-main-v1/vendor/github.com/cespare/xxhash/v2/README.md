@@ -10,20 +10,16 @@ standard library.
 
 This package provides a straightforward API:
 
-```
-func Sum64(b []byte) uint64
-func Sum64String(s string) uint64
-type Digest struct{ ... }
-    func New() *Digest
-```
+    func Sum64(b []byte) uint64
+    func Sum64String(s string) uint64
+    type Digest struct{ ... }
+        func New() *Digest
 
 The `Digest` type implements hash.Hash64. Its key methods are:
 
-```
-func (*Digest) Write([]byte) (int, error)
-func (*Digest) WriteString(string) (int, error)
-func (*Digest) Sum64() uint64
-```
+    func (*Digest) Write([]byte) (int, error)
+    func (*Digest) WriteString(string) (int, error)
+    func (*Digest) Sum64() uint64
 
 This implementation provides a fast pure-Go implementation and an even faster
 assembly implementation for amd64.
@@ -34,9 +30,9 @@ This package is in a module and the latest code is in version 2 of the module.
 You need a version of Go with at least "minimal module compatibility" to use
 github.com/cespare/xxhash/v2:
 
-- 1.9.7+ for Go 1.9
-- 1.10.3+ for Go 1.10
-- Go 1.11 or later
+*   1.9.7+ for Go 1.9
+*   1.10.3+ for Go 1.10
+*   Go 1.11 or later
 
 I recommend using the latest release of Go.
 
@@ -55,15 +51,13 @@ implementations of Sum64.
 These numbers were generated on Ubuntu 18.04 with an Intel i7-8700K CPU using
 the following commands under Go 1.11.2:
 
-```
-$ go test -tags purego -benchtime 10s -bench '/xxhash,direct,bytes'
-$ go test -benchtime 10s -bench '/xxhash,direct,bytes'
-```
+    $ go test -tags purego -benchtime 10s -bench '/xxhash,direct,bytes'
+    $ go test -benchtime 10s -bench '/xxhash,direct,bytes'
 
 ## Projects using this package
 
-- [InfluxDB](https://github.com/influxdata/influxdb)
-- [Prometheus](https://github.com/prometheus/prometheus)
-- [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics)
-- [FreeCache](https://github.com/coocood/freecache)
-- [FastCache](https://github.com/VictoriaMetrics/fastcache)
+*   [InfluxDB](https://github.com/influxdata/influxdb)
+*   [Prometheus](https://github.com/prometheus/prometheus)
+*   [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics)
+*   [FreeCache](https://github.com/coocood/freecache)
+*   [FastCache](https://github.com/VictoriaMetrics/fastcache)

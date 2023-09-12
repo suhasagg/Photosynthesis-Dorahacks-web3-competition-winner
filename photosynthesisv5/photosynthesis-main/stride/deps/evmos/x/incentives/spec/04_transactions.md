@@ -31,13 +31,13 @@ type RegisterIncentiveProposal struct {
 
 The proposal content stateless validation fails if:
 
-- Title is invalid (length or char)
-- Description is invalid (length or char)
-- Contract address is invalid
-- Allocations are invalid
-  - no allocation included in Allocations
-  - invalid amount of at least one allocation (below 0 or above 1)
-- Epochs are invalid (zero)
+*   Title is invalid (length or char)
+*   Description is invalid (length or char)
+*   Contract address is invalid
+*   Allocations are invalid
+    *   no allocation included in Allocations
+    *   invalid amount of at least one allocation (below 0 or above 1)
+*   Epochs are invalid (zero)
 
 ## `CancelIncentiveProposal`
 
@@ -58,6 +58,6 @@ type CancelIncentiveProposal struct {
 
 The proposal content stateless validation fails if:
 
-- Title is invalid (length or char)
-- Description is invalid (length or char)
-- Contract address is invalid
+*   Title is invalid (length or char)
+*   Description is invalid (length or char)
+*   Contract address is invalid

@@ -53,23 +53,23 @@ that are then sent either to the `source` chain or the counterparty
 
 Current events and actions are:
 
-- `send_packet`: the relayer builds a packet message with the `packet` obtained
-  from the event and any required proofs obtained from the counterparty of the
-  chain where the message is sent. The concrete packet is:
-  - `MsgRecvPacket`, sent to `destination` chain if the channel is in open state
-    on the `destination` chain, and a timeout has not occurred,
-  - `MsgTimeout`, sent to the `source` chain if the channel is in open state on
-    the `destination` chain, but a timeout has occurred.
-  - `MsgTimeoutOnClose`, sent to the `source` chain if the channel is in closed
-    state on the `destination` chain.
-- `write_acknowledgement`: the relayer builds a `MsgAcknowledgement` packet that
-  is sent to the `destination` chain.
+*   `send_packet`: the relayer builds a packet message with the `packet` obtained
+    from the event and any required proofs obtained from the counterparty of the
+    chain where the message is sent. The concrete packet is:
+    *   `MsgRecvPacket`, sent to `destination` chain if the channel is in open state
+        on the `destination` chain, and a timeout has not occurred,
+    *   `MsgTimeout`, sent to the `source` chain if the channel is in open state on
+        the `destination` chain, but a timeout has occurred.
+    *   `MsgTimeoutOnClose`, sent to the `source` chain if the channel is in closed
+        state on the `destination` chain.
+*   `write_acknowledgement`: the relayer builds a `MsgAcknowledgement` packet that
+    is sent to the `destination` chain.
 
 In addition to these events, the relayer will also handle channel closing
 events:
 
-- `chan_close_init`: the relayer builds a `MsgChannelCloseConfirm` and sends it
-  to the `destination` chain
+*   `chan_close_init`: the relayer builds a `MsgChannelCloseConfirm` and sends it
+    to the `destination` chain
 
 ## Packet Delay
 

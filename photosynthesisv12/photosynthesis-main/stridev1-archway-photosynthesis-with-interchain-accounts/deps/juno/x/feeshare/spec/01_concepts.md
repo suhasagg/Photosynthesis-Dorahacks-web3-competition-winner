@@ -35,9 +35,9 @@ As described above, developers will earn a portion of the transaction fee after
 registering their contracts. To understand how transaction fees are distributed,
 we will look at the following in detail:
 
-- The transactions eligible are only
-  [Wasm Execute Txs](https://github.com/CosmWasm/wasmd/blob/main/proto/cosmwasm/wasm/v1/tx.proto#L115-L127)
-  (`MsgExecuteContract`).
+*   The transactions eligible are only
+    [Wasm Execute Txs](https://github.com/CosmWasm/wasmd/blob/main/proto/cosmwasm/wasm/v1/tx.proto#L115-L127)
+    (`MsgExecuteContract`).
 
 ### WASM Transaction Fees
 

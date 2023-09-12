@@ -40,7 +40,7 @@ Aggarwal
 [uses the analogy](https://blog.cosmos.network/deep-dive-how-will-ibc-create-value-for-the-cosmos-hub-eedefb83c7a0)
 that IBC as a form of standardization allows for "economic integration without
 political integration." Sunny also
-[talks about](https://www.youtube.com/watch?v=LApEkXJR\_0M) how governance
+[talks about](https://www.youtube.com/watch?v=LApEkXJR_0M) how governance
 controlled by a community that shares culture and trust can "achieve greater
 security than economic incentives alone." For example, the Regen Network has a
 [governance model](https://medium.com/regen-network/community-stake-governance-model-b949bcb1eca3)
@@ -65,7 +65,7 @@ contracts.
 
 The existing [governance module](https://docs.cosmos.network/main/modules/gov/)
 is described as a minimum viable product for the governance module, with
-[ideas for future improvement](https://docs.cosmos.network/main/modules/gov/05\_future_improvements.html)
+[ideas for future improvement](https://docs.cosmos.network/main/modules/gov/05_future_improvements.html)
 . For example an active product team is currently aligning
 [groups and governance functionality](https://docs.google.com/document/d/1w-fwa8i8kkgirbn9DOFklHwcu9xO_IdbMN910ASr2oQ/edit#)
 will change current governance practices and open up new avenues to explore and
@@ -78,17 +78,17 @@ support through on- and off- chain processes
 Governance practices and decisions are communicated through different types of
 documents and design artefacts:
 
-- On-chain governance [proposals](https://cosmoscan.net/governance-stats)
-- Decision records
-  - Cosmos Improvement Proposals ([CIPs](https://cips.cosmos.network/))
-  - Cosmos SDK's [ADRs](https://docs.cosmos.network/main/architecture/)
-  - Tendermint's
-    [ADRs](https://github.com/tendermint/tendermint/tree/master/docs/architecture)
-- Technical standards / specifications
-  - Interchain Standard ([ICS](https://github.com/cosmos/ibc))
-  - [RFCs](https://github.com/tendermint/spec/blob/master/rfc/README.md)
-- [Opinion pieces](https://blog.cosmos.network/the-cosmos-hub-is-a-port-city-5b7f2d28debf)
-- [Light papers](https://github.com/cosmos/gaia/issues/659)
+*   On-chain governance [proposals](https://cosmoscan.net/governance-stats)
+*   Decision records
+    *   Cosmos Improvement Proposals ([CIPs](https://cips.cosmos.network/))
+    *   Cosmos SDK's [ADRs](https://docs.cosmos.network/main/architecture/)
+    *   Tendermint's
+        [ADRs](https://github.com/tendermint/tendermint/tree/master/docs/architecture)
+*   Technical standards / specifications
+    *   Interchain Standard ([ICS](https://github.com/cosmos/ibc))
+    *   [RFCs](https://github.com/tendermint/spec/blob/master/rfc/README.md)
+*   [Opinion pieces](https://blog.cosmos.network/the-cosmos-hub-is-a-port-city-5b7f2d28debf)
+*   [Light papers](https://github.com/cosmos/gaia/issues/659)
 
 ### Decision-making and Discussion Venues
 
@@ -102,70 +102,70 @@ community occurs organically.
 meetings and coordinating Cosmos stakeholders occurs in semi-/open online
 spaces:
 
-- **[All in Bits Cosmos Forum](http://forum.cosmos.network/)**
-  - For long form discussion. Cosmos core developers have an active presence
-    (e.g., Ethan, Zaki, Sunny)
-  - Cosmos Hub governance topics and proposals have a governance tag and usually
-    get the most activity and substantive feedback, especially from validators
-    (e.g.,
-    [direct conversations](https://forum.cosmos.network/t/proposal-are-validators-charging-0-commission-harmful-to-the-success-of-the-cosmos-hub/2505/8),
-    ones that
-    [spin out](https://forum.cosmos.network/t/on-the-interrelationship-between-the-security-budget-and-the-business-prospects-of-the-cosmos-network/2547)
-    of proposals, and
-    [meta discussions on process](https://forum.cosmos.network/t/streamline-the-gov-process/3997))
-  - Developing and sharing of opinion pieces, light papers, hot takes etc., also
-    happens on the forum (e.g.,
-    [Where I see the Cosmos at Present](https://forum.cosmos.network/t/where-i-see-cosmos-at-present/5022))
-  - [Chinese language discussion](https://forum.cosmos.network/c/chinese/9) is
-    one of the largest categories with 269 posts
-  - There are still some old links to
-    [Matrix chat](https://riot.im/app/#/room/#cosmos_validators:matrix.org),
-    which has been deprecated
-- **[/r/cosmonetwork Subreddit](http://reddit.com/r/cosmosnetwork)**
-  - Venue primarily for ATOM holders to discuss ATOM and other ecosystem coins
-  - Discussion topics mostly about investing in the ecosystem and include:
-    [investment theses](https://www.reddit.com/r/cosmosnetwork/comments/o38psh/i_think_atom_is_undervalued/),
-    where to buy tokens, wallets to use, how to stake, and more recently, how to
-    get involved with DeFi in the ecosystem (e.g., with Osmosis)
-  - Community managers use it for announcements (e.g., catdotfish)
-- **[Cosmos Community Discord](https://discord.gg/W8trcGV)**
-  - For ecosystem cross-pollination with an active developer presence. Older
-    Riot chats have moved here.
-  - `#validator-verified` channel for example discussing proposals, upgrades
-    etc.
-  - Major ecosystem chains all have a presence here, cross-validator convo,
-    artefacts like:
-    [Citadel.one Validator Constitution](https://drive.google.com/file/d/1wDTqro208y\_1q3zF6rt39QjwYkcvVd7P/view)
-- **Cosmos Hub Discord (semi-private)**
-  - For
-    [core development teams](https://cosmos.network/learn/faq/who-is-building-cosmos/)
-    to have multi-team discussions that are mature
-  - Internal org channels (e.g., Interchain Slack) and slack-connect (private)
-  - For internal team coordinating, 1-1s between specific core development
-    teams, multi-team discussions that are early stage, have private or
-    strategic team info too early to share out
-- **[Telegram (Governance Working Group)](https://t.me/hubgov)**
-  - For coordinating a working group that: "develops decentralized community
-    governance efforts alongside the Hub's governance development."
-  - Working Group came out of
-    [a community pool proposal](https://www.figment.io/resources/introducing-the-cosmos-governance-working-group).
-  - Some interest in deprecating but remains actives
-- **GitHub repositories** for governance processes
-  ([Cosmos governance](https://github.com/cosmos/governance),
-  [Cosmos cips](https://github.com/cosmos/cips),
-  [Cosmos ibc](https://github.com/cosmos/ibc))
-  - For discussing meta aspects of governance processes, discussion and
-    development of specific off-chain design records and technical specs, and
-    repository for on-chain proposals
-  - The Cosmos governance repo is officially deprecated as of October 2021.
-- **Bi-weekly Cosmos Gaia / ATOM sync call**
-  - For cross-team discussion on the
-    [Gaia roadmap](https://github.com/cosmos/gaia/projects/9)
-- (Informal) **Google Docs for early feedback**
-  - For individuals and collaborators to develop and iterative on governance
-    ideas before proposing them formally
-- **[Matrix chat](https://riot.im/app/#/room/#cosmos_validators:matrix.org)**
-  (deprecated)
+*   **[All in Bits Cosmos Forum](http://forum.cosmos.network/)**
+    *   For long form discussion. Cosmos core developers have an active presence
+        (e.g., Ethan, Zaki, Sunny)
+    *   Cosmos Hub governance topics and proposals have a governance tag and usually
+        get the most activity and substantive feedback, especially from validators
+        (e.g.,
+        [direct conversations](https://forum.cosmos.network/t/proposal-are-validators-charging-0-commission-harmful-to-the-success-of-the-cosmos-hub/2505/8),
+        ones that
+        [spin out](https://forum.cosmos.network/t/on-the-interrelationship-between-the-security-budget-and-the-business-prospects-of-the-cosmos-network/2547)
+        of proposals, and
+        [meta discussions on process](https://forum.cosmos.network/t/streamline-the-gov-process/3997))
+    *   Developing and sharing of opinion pieces, light papers, hot takes etc., also
+        happens on the forum (e.g.,
+        [Where I see the Cosmos at Present](https://forum.cosmos.network/t/where-i-see-cosmos-at-present/5022))
+    *   [Chinese language discussion](https://forum.cosmos.network/c/chinese/9) is
+        one of the largest categories with 269 posts
+    *   There are still some old links to
+        [Matrix chat](https://riot.im/app/#/room/#cosmos_validators:matrix.org),
+        which has been deprecated
+*   **[/r/cosmonetwork Subreddit](http://reddit.com/r/cosmosnetwork)**
+    *   Venue primarily for ATOM holders to discuss ATOM and other ecosystem coins
+    *   Discussion topics mostly about investing in the ecosystem and include:
+        [investment theses](https://www.reddit.com/r/cosmosnetwork/comments/o38psh/i_think_atom_is_undervalued/),
+        where to buy tokens, wallets to use, how to stake, and more recently, how to
+        get involved with DeFi in the ecosystem (e.g., with Osmosis)
+    *   Community managers use it for announcements (e.g., catdotfish)
+*   **[Cosmos Community Discord](https://discord.gg/W8trcGV)**
+    *   For ecosystem cross-pollination with an active developer presence. Older
+        Riot chats have moved here.
+    *   `#validator-verified` channel for example discussing proposals, upgrades
+        etc.
+    *   Major ecosystem chains all have a presence here, cross-validator convo,
+        artefacts like:
+        [Citadel.one Validator Constitution](https://drive.google.com/file/d/1wDTqro208y_1q3zF6rt39QjwYkcvVd7P/view)
+*   **Cosmos Hub Discord (semi-private)**
+    *   For
+        [core development teams](https://cosmos.network/learn/faq/who-is-building-cosmos/)
+        to have multi-team discussions that are mature
+    *   Internal org channels (e.g., Interchain Slack) and slack-connect (private)
+    *   For internal team coordinating, 1-1s between specific core development
+        teams, multi-team discussions that are early stage, have private or
+        strategic team info too early to share out
+*   **[Telegram (Governance Working Group)](https://t.me/hubgov)**
+    *   For coordinating a working group that: "develops decentralized community
+        governance efforts alongside the Hub's governance development."
+    *   Working Group came out of
+        [a community pool proposal](https://www.figment.io/resources/introducing-the-cosmos-governance-working-group).
+    *   Some interest in deprecating but remains actives
+*   **GitHub repositories** for governance processes
+    ([Cosmos governance](https://github.com/cosmos/governance),
+    [Cosmos cips](https://github.com/cosmos/cips),
+    [Cosmos ibc](https://github.com/cosmos/ibc))
+    *   For discussing meta aspects of governance processes, discussion and
+        development of specific off-chain design records and technical specs, and
+        repository for on-chain proposals
+    *   The Cosmos governance repo is officially deprecated as of October 2021.
+*   **Bi-weekly Cosmos Gaia / ATOM sync call**
+    *   For cross-team discussion on the
+        [Gaia roadmap](https://github.com/cosmos/gaia/projects/9)
+*   (Informal) **Google Docs for early feedback**
+    *   For individuals and collaborators to develop and iterative on governance
+        ideas before proposing them formally
+*   **[Matrix chat](https://riot.im/app/#/room/#cosmos_validators:matrix.org)**
+    (deprecated)
 
 ### Roles and Stakeholders
 
@@ -315,36 +315,36 @@ merits of the proposal are discussed in these respective channels and validators
 
 ### Process overview
 
-![Diagram of process for on-chain governance proposals](https://lh6.googleusercontent.com/FPQ176gx\_-0jR5zbpImJtWx3iTnL-JJPc41hT4NUsNIYj5FziO6bsFWFn_CWV2ARr4vxm-HJi\_3Fn4zowN1d2JuXB_CW2mTzJwn8L45mIPY0W\_8sfjz3w3jeFr2q1NCcFVeRu7j\_)
+![Diagram of process for on-chain governance proposals](https://lh6.googleusercontent.com/FPQ176gx_-0jR5zbpImJtWx3iTnL-JJPc41hT4NUsNIYj5FziO6bsFWFn_CWV2ARr4vxm-HJi_3Fn4zowN1d2JuXB_CW2mTzJwn8L45mIPY0W_8sfjz3w3jeFr2q1NCcFVeRu7j_)
 
 On-chain governance on the hub is implemented in Gaia using the x/gov module in
 the Cosmos SDK. Every bonded token is allowed a single vote.
 
 Participants in the process include:
 
-- The proposal creator: develops the proposal, solicits feedback, submits and
-  socializes the on-chain proposal
-- Validators: vote on behalf of delegators. Voting power of validators is
-  equivalent to total ATOMS delegated to them. There are currently 125 active
-  validators in the validator set, updated from 100 validators through
-  governance [proposal #10](https://cosmoscan.net/proposal/10).
-- Delegators: can cast their own vote, otherwise they inherit the vote of their
-  delegates
+*   The proposal creator: develops the proposal, solicits feedback, submits and
+    socializes the on-chain proposal
+*   Validators: vote on behalf of delegators. Voting power of validators is
+    equivalent to total ATOMS delegated to them. There are currently 125 active
+    validators in the validator set, updated from 100 validators through
+    governance [proposal #10](https://cosmoscan.net/proposal/10).
+*   Delegators: can cast their own vote, otherwise they inherit the vote of their
+    delegates
 
 ### Process owners
 
-- Former process owners are listed in the now-deprecated
-  [governance repo](https://github.com/cosmos/governance).
+*   Former process owners are listed in the now-deprecated
+    [governance repo](https://github.com/cosmos/governance).
 
 ### Process maturity
 
-- 37 proposals that have been voted on so far. The latest proposal as of July
-  2nd, 2021 is proposal ID #51 (proposals that don't meet minimum deposit don't
-  count towards the 37)
-- [Cosmoscan's governance charts](https://cosmoscan.net/governance-charts)
-  provide insight on turnout and voter activity.
-  [Mintscan](https://www.mintscan.io/cosmos/proposals) can be used to fill in
-  any gaps.
+*   37 proposals that have been voted on so far. The latest proposal as of July
+    2nd, 2021 is proposal ID #51 (proposals that don't meet minimum deposit don't
+    count towards the 37)
+*   [Cosmoscan's governance charts](https://cosmoscan.net/governance-charts)
+    provide insight on turnout and voter activity.
+    [Mintscan](https://www.mintscan.io/cosmos/proposals) can be used to fill in
+    any gaps.
 
 ## Cosmos Improvement Proposals (CIPs)
 
@@ -389,24 +389,24 @@ updated to "living" and it is merged by the cips repo owner.
 
 ![Diagram of standarization process for CIPS](https://github.com/cosmos/cips/raw/main/assets/cip-1/CIP-process.png)
 
-- Ideas are ideally socialized first: "It is thus recommended to open a
-  discussion thread on the Cosmos forum to do this, but you can also use the
-  Cosmos Discord, the Cosmos subreddit or the Issues section of this
-  repository." If the author decides to proceed, CIPs are drafted and submitted
-  using the [cosmos/cips](https://github.com/cosmos/cips/) GitHub repo.
-- When a CIP reaches the "Final" state, it represents a completed standard that
-  is ready to be adopted.
-- CIPs do not represent the views of the wider Cosmos community. CIP-1 states
-  that "finalization of a CIP does not equate to acceptance into Cosmos. For
-  that, CIP authors must turn to Cosmos Governance."
-- Not all CIPS are taken through an on-chain vote
-- A situation where CIPs interact with Cosmos Governance is while coordinating a
-  software upgrade among validators.
-  [CIP-5](https://github.com/cosmos/cips/blob/17a9ffc1cc40933ea3cf4460849ae713e6c244e3/CIPS/cip-5.md)
-  \[PR not merged], which offers guidelines for new modules to be integrated into
-  Cosmos Hub ensuring safety and robustness, states "motivated by
-  decentralization and the Cosmos community's decisions, a module's code is
-  activated by submitting a parameter change proposal."
+*   Ideas are ideally socialized first: "It is thus recommended to open a
+    discussion thread on the Cosmos forum to do this, but you can also use the
+    Cosmos Discord, the Cosmos subreddit or the Issues section of this
+    repository." If the author decides to proceed, CIPs are drafted and submitted
+    using the [cosmos/cips](https://github.com/cosmos/cips/) GitHub repo.
+*   When a CIP reaches the "Final" state, it represents a completed standard that
+    is ready to be adopted.
+*   CIPs do not represent the views of the wider Cosmos community. CIP-1 states
+    that "finalization of a CIP does not equate to acceptance into Cosmos. For
+    that, CIP authors must turn to Cosmos Governance."
+*   Not all CIPS are taken through an on-chain vote
+*   A situation where CIPs interact with Cosmos Governance is while coordinating a
+    software upgrade among validators.
+    [CIP-5](https://github.com/cosmos/cips/blob/17a9ffc1cc40933ea3cf4460849ae713e6c244e3/CIPS/cip-5.md)
+    \[PR not merged], which offers guidelines for new modules to be integrated into
+    Cosmos Hub ensuring safety and robustness, states "motivated by
+    decentralization and the Cosmos community's decisions, a module's code is
+    activated by submitting a parameter change proposal."
 
 ### Process owners
 
@@ -414,8 +414,8 @@ CIP editor: Ethan Buchman ([@ebuchman](https://github.com/ebuchman))
 
 ### Process maturity
 
-- There are 12 CIPs proposed to date, none are living, have been finalized, or
-  taken through the on-chain governance process to be widely adopted.
+*   There are 12 CIPs proposed to date, none are living, have been finalized, or
+    taken through the on-chain governance process to be widely adopted.
 
 ## Cosmos SDK Architecture Decision Records (ADR)
 
@@ -434,47 +434,47 @@ and maintained in a project constitute its decision log."
 
 ### Process overview
 
-- Ideas are socialized on GitHub first: "Every proposal SHOULD start with a new
-  GitHub Issue or be a result of existing Issues. The Issue should contain just
-  a brief proposal summary. Once the motivation is validated, a GitHub Pull
-  Request (PR) is created"
-- If the author decides to proceed, ADRs are drafted and submitted using the
-  [cosmos/cosmos-sdk](https://github.com/cosmos/cosmos-sdk/tree/master/docs/architecture)
-  GitHub repo.
-  1. Copy the adr-template.md file. Use the following filename pattern:
-     adr-next_number-title.md
-  2. Create a draft Pull Request if you want to get an early feedback.
-  3. Make sure the context and a solution is clear and well documented.
-  4. Add an entry to a list in the
-     [README](https://docs.cosmos.network/main/architecture/) file.
-  5. Create a Pull Request to propose a new ADR.
-     `<https://docs.cosmos.network/main/architecture/PROCESS.html>`
-- ADRs go through a lifecycle:
-  <https://docs.cosmos.network/main/architecture/PROCESS.html#adr-life-cycle>
+*   Ideas are socialized on GitHub first: "Every proposal SHOULD start with a new
+    GitHub Issue or be a result of existing Issues. The Issue should contain just
+    a brief proposal summary. Once the motivation is validated, a GitHub Pull
+    Request (PR) is created"
+*   If the author decides to proceed, ADRs are drafted and submitted using the
+    [cosmos/cosmos-sdk](https://github.com/cosmos/cosmos-sdk/tree/master/docs/architecture)
+    GitHub repo.
+    1.  Copy the adr-template.md file. Use the following filename pattern:
+        adr-next\_number-title.md
+    2.  Create a draft Pull Request if you want to get an early feedback.
+    3.  Make sure the context and a solution is clear and well documented.
+    4.  Add an entry to a list in the
+        [README](https://docs.cosmos.network/main/architecture/) file.
+    5.  Create a Pull Request to propose a new ADR.
+        `<https://docs.cosmos.network/main/architecture/PROCESS.html>`
+*   ADRs go through a lifecycle:
+    <https://docs.cosmos.network/main/architecture/PROCESS.html#adr-life-cycle>
 
-```
-DRAFT -> PROPOSED -> LAST CALL yyyy-mm-dd -> ACCEPTED | REJECTED -> SUPERSEEDED by ADR-xxx
+<!---->
 
-                  \        |
+    DRAFT -> PROPOSED -> LAST CALL yyyy-mm-dd -> ACCEPTED | REJECTED -> SUPERSEEDED by ADR-xxx
 
-                   \       |
+                      \        |
 
-                    v      v
+                       \       |
 
-                     ABANDONED
-```
+                        v      v
+
+                         ABANDONED
 
 ### Process owners
 
-- SDK
-  [codeowners](https://github.com/cosmos/cosmos-sdk/blob/master/.github/CODEOWNERS):
-  Aaron Craelius ([@aaronc](https://github.com/aaronc)) and Aleksandr Bezobchuk
-  ([@alexanderbez](https://github.com/alexanderbez))
+*   SDK
+    [codeowners](https://github.com/cosmos/cosmos-sdk/blob/master/.github/CODEOWNERS):
+    Aaron Craelius ([@aaronc](https://github.com/aaronc)) and Aleksandr Bezobchuk
+    ([@alexanderbez](https://github.com/alexanderbez))
 
 ### Process maturity
 
-- A bunch have passed, many are proposed:
-  <https://github.com/cosmos/cosmos-sdk/tree/master/docs/architecture>
+*   A bunch have passed, many are proposed:
+    <https://github.com/cosmos/cosmos-sdk/tree/master/docs/architecture>
 
 ## Tendermint Request for Comments (RFC)
 
@@ -497,21 +497,21 @@ accepted, we'll write a transition plan for the RPC layer and execute it." 🔗
 
 ### Process overview
 
-- Not publicly documented
+*   Not publicly documented
 
 ### Process owners
 
-- Specification
-  [general codeowners](https://github.com/tendermint/spec/blob/master/.github/CODEOWNERS):
-  Zarko Milosevic ([@milosevic](https://github.com/milosevic)), Ethan Buchman
-  ([@ebuchman](https://github.com/ebuchman)), Josef Widder
-  ([@josef-widder](https://github.com/josef-widder)), Igor Konnov
-  ([@konnov](https://github.com/konnov))
+*   Specification
+    [general codeowners](https://github.com/tendermint/spec/blob/master/.github/CODEOWNERS):
+    Zarko Milosevic ([@milosevic](https://github.com/milosevic)), Ethan Buchman
+    ([@ebuchman](https://github.com/ebuchman)), Josef Widder
+    ([@josef-widder](https://github.com/josef-widder)), Igor Konnov
+    ([@konnov](https://github.com/konnov))
 
 ### Process maturity
 
-- 5 RFCs have been merged to the repo with an active pull request for adding one
-  more
+*   5 RFCs have been merged to the repo with an active pull request for adding one
+    more
 
 ## Interchain Standards (ICS)
 
@@ -532,38 +532,38 @@ communicating with relevant stakeholders to ensure (social) consensus." 🔗
 
 ### Process overview
 
-- Unclear where early discussions would happen
-- ICSs are drafted and submitted using the
-  [cosmos/ibc](https://github.com/cosmos/ibc) GitHub repo:
-- To propose a new standard,
-  [open an issue](https://github.com/cosmos/ics/issues/new).
-- To start a new standardisation document, copy the
-  [template](https://github.com/cosmos/ibc/blob/master/spec/ics-template.md) and
-  open a PR.
-- Standardization process has 4 phases, laid out in
-  [PROCESS.md](https://github.com/cosmos/ibc/blob/master/meta/PROCESS.md) for a
-  description of the standardisation process.
-  - Stage 1 - Strawman. Start the specification process
-  - Stage 2 - Draft. Make the case for the addition of this specification to the
-    IBC ecosystem, describe the shape of a potential solution, and Identify
-    challenges to this proposal.
-  - Stage 3 - Candidate. Indicate that further refinement will require feedback
-    from implementations and users
-  - Stage 4 - Finalised. Indicate that the addition is included in the formal
-    ICS standard set
+*   Unclear where early discussions would happen
+*   ICSs are drafted and submitted using the
+    [cosmos/ibc](https://github.com/cosmos/ibc) GitHub repo:
+*   To propose a new standard,
+    [open an issue](https://github.com/cosmos/ics/issues/new).
+*   To start a new standardisation document, copy the
+    [template](https://github.com/cosmos/ibc/blob/master/spec/ics-template.md) and
+    open a PR.
+*   Standardization process has 4 phases, laid out in
+    [PROCESS.md](https://github.com/cosmos/ibc/blob/master/meta/PROCESS.md) for a
+    description of the standardisation process.
+    *   Stage 1 - Strawman. Start the specification process
+    *   Stage 2 - Draft. Make the case for the addition of this specification to the
+        IBC ecosystem, describe the shape of a potential solution, and Identify
+        challenges to this proposal.
+    *   Stage 3 - Candidate. Indicate that further refinement will require feedback
+        from implementations and users
+    *   Stage 4 - Finalised. Indicate that the addition is included in the formal
+        ICS standard set
 
 ### Process owners
 
-- IBC
-  [Standards Committee](https://github.com/cosmos/ibc/blob/master/meta/STANDARDS_COMMITTEE.md):
-  Aditya Sripal ([@adityasripal](https://github.com/adityasripal)), Christopher
-  Goes ([@cwgoes](https://github.com/cwgoes)), Zarko Milosevic
-  ([@milosevic](https://github.com/milosevic))
+*   IBC
+    [Standards Committee](https://github.com/cosmos/ibc/blob/master/meta/STANDARDS_COMMITTEE.md):
+    Aditya Sripal ([@adityasripal](https://github.com/adityasripal)), Christopher
+    Goes ([@cwgoes](https://github.com/cwgoes)), Zarko Milosevic
+    ([@milosevic](https://github.com/milosevic))
 
 ### Process maturity
 
-- 16 have been merged into the repo with at least one more under active
-  discussion: <https://github.com/cosmos/ibc>
+*   16 have been merged into the repo with at least one more under active
+    discussion: <https://github.com/cosmos/ibc>
 
 ***
 
@@ -578,52 +578,52 @@ on process refinement and
 
 ### On-chain processes
 
-- UX limits who can create and vote for proposals, currently requiring the use
-  of the CLI. If Cosmos Hub sees
-  [itself as a port city](https://blog.cosmos.network/the-cosmos-hub-is-a-port-city-5b7f2d28debf),
-  offering the best possible services, there is an argument to be made that it
-  should extend that commitment to governance to ensure a diverse range of city
-  dwellers and visitors can participate.
-- Some validators feel that active participation in governance is a bottleneck
-  to setting up validator businesses. I.e., that there are already a number of
-  proposals they are asked to vote on.
-- Cosmos Hub governance documentation is out of date, challenging to maintain,
-  and difficult to discover. Current governance documentation is in the
-  [`governance` repo as markdown](https://github.com/cosmos/governance), the
-  [`gaia` documentation as vuepress](https://hub.cosmos.network/main/), and
-  [`cosmos-sdk` documentation as vuepress](https://docs.cosmos.network/).
-- Assessing this and making improvements is work that Hypha is currently
-  undertaking, but there can be ongoing improvements
-- The
-  [upcoming x/gov and x/group alignment](https://docs.google.com/document/d/1w-fwa8i8kkgirbn9DOFklHwcu9xO_IdbMN910ASr2oQ/edit#)
-  will allow for permissions related to governance to be delegated to other
-  groups, opening up possibilities for multi-stakeholder governance approaches
-  and products (see [related links](https://linktr.ee/cosmos_gov)).
+*   UX limits who can create and vote for proposals, currently requiring the use
+    of the CLI. If Cosmos Hub sees
+    [itself as a port city](https://blog.cosmos.network/the-cosmos-hub-is-a-port-city-5b7f2d28debf),
+    offering the best possible services, there is an argument to be made that it
+    should extend that commitment to governance to ensure a diverse range of city
+    dwellers and visitors can participate.
+*   Some validators feel that active participation in governance is a bottleneck
+    to setting up validator businesses. I.e., that there are already a number of
+    proposals they are asked to vote on.
+*   Cosmos Hub governance documentation is out of date, challenging to maintain,
+    and difficult to discover. Current governance documentation is in the
+    [`governance` repo as markdown](https://github.com/cosmos/governance), the
+    [`gaia` documentation as vuepress](https://hub.cosmos.network/main/), and
+    [`cosmos-sdk` documentation as vuepress](https://docs.cosmos.network/).
+*   Assessing this and making improvements is work that Hypha is currently
+    undertaking, but there can be ongoing improvements
+*   The
+    [upcoming x/gov and x/group alignment](https://docs.google.com/document/d/1w-fwa8i8kkgirbn9DOFklHwcu9xO_IdbMN910ASr2oQ/edit#)
+    will allow for permissions related to governance to be delegated to other
+    groups, opening up possibilities for multi-stakeholder governance approaches
+    and products (see [related links](https://linktr.ee/cosmos_gov)).
 
 ### Off-chain processes
 
-- More clarity is needed on when the CIPs should be used. It could be seen as
-  the canonical home for high level decisions where alignment is required across
-  the ecosystem but needs to be presented as such and the process needs
-  refinement
-- Some CIPS clearly impact all Cosmos ecosystem and blockchains and need
-  ecosystem-wide buy-in, for example
-  [CIP-11: Cosmos Hierarchical Deterministic key derivation](https://github.com/cosmos/cips/pull/11).
-- ["RFC Interchain Staking Light Paper"](https://github.com/cosmos/gaia/issues/659)
-  an example of a potential CIP that was PRd to the Gaia repo. The ambiguity
-  makes sense: it fits criteria of informational CIP about the Cosmos
-  environment (Light Paper), but also a shorter and higher level document is
-  needed to function as more of a summary in order to get early user feedback
-  and market ideas that isn't a CIP <https://github.com/cosmos/gaia/issues/659>
-- The terms "Cosmos" and "Cosmos Hub" are used interchangeably in the CIPs
-  repository, so the intended audience could be made more clear. The
-  [module readiness process and checklist](https://github.com/cosmos/cips/pull/6/files),
-  which proposes a process for modules to be adopted by the Gaia team, suggests
-  that the process is intended for teams involved in development related to the
-  Cosmos Hub.
-- Tendermint has an
-  [ADR process](https://github.com/tendermint/tendermint/tree/master/docs/architecture)
-  as well. Documentation around the relationship between the Tendermint ADR and
-  the RFC processes would be valuable.
+*   More clarity is needed on when the CIPs should be used. It could be seen as
+    the canonical home for high level decisions where alignment is required across
+    the ecosystem but needs to be presented as such and the process needs
+    refinement
+*   Some CIPS clearly impact all Cosmos ecosystem and blockchains and need
+    ecosystem-wide buy-in, for example
+    [CIP-11: Cosmos Hierarchical Deterministic key derivation](https://github.com/cosmos/cips/pull/11).
+*   ["RFC Interchain Staking Light Paper"](https://github.com/cosmos/gaia/issues/659)
+    an example of a potential CIP that was PRd to the Gaia repo. The ambiguity
+    makes sense: it fits criteria of informational CIP about the Cosmos
+    environment (Light Paper), but also a shorter and higher level document is
+    needed to function as more of a summary in order to get early user feedback
+    and market ideas that isn't a CIP <https://github.com/cosmos/gaia/issues/659>
+*   The terms "Cosmos" and "Cosmos Hub" are used interchangeably in the CIPs
+    repository, so the intended audience could be made more clear. The
+    [module readiness process and checklist](https://github.com/cosmos/cips/pull/6/files),
+    which proposes a process for modules to be adopted by the Gaia team, suggests
+    that the process is intended for teams involved in development related to the
+    Cosmos Hub.
+*   Tendermint has an
+    [ADR process](https://github.com/tendermint/tendermint/tree/master/docs/architecture)
+    as well. Documentation around the relationship between the Tendermint ADR and
+    the RFC processes would be valuable.
 
 <!-- markdown-link-check-enable -->

@@ -24,9 +24,9 @@ sudo apt install docker-compose -y
 The following commands must be executed from the root folder of the Stride
 repository.
 
-1. Make any change to the stride code that you want to test
+1.  Make any change to the stride code that you want to test
 
-2. Initialize LocalStride:
+2.  Initialize LocalStride:
 
 ```bash
 make localnet-init
@@ -34,10 +34,10 @@ make localnet-init
 
 The command:
 
-- Builds a local docker image with the latest changes
-- Cleans the `$HOME/.stride` folder
+*   Builds a local docker image with the latest changes
+*   Cleans the `$HOME/.stride` folder
 
-3. Start LocalStride:
+3.  Start LocalStride:
 
 ```bash
 make localnet-start
@@ -49,27 +49,27 @@ make localnet-start
 >
 > `make localnet-startd`
 
-4. (optional) Add your validator wallet and 10 other preloaded wallets
-   automatically:
+4.  (optional) Add your validator wallet and 10 other preloaded wallets
+    automatically:
 
 ```bash
 make localnet-keys
 ```
 
-- These keys are added to your `--keyring-backend test`
-- If the keys are already on your keyring, you will get an `"Error: aborted"`
-- Ensure you use the name of the account as listed in the table below, as well
-  as ensure you append the `--keyring-backend test` to your txs
-- Example:
-  `strided tx bank send ls-test2 stride1kwax6g0q2nwny5n43fswexgefedge033t5g95j --keyring-backend test --chain-id localstride`
+*   These keys are added to your `--keyring-backend test`
+*   If the keys are already on your keyring, you will get an `"Error: aborted"`
+*   Ensure you use the name of the account as listed in the table below, as well
+    as ensure you append the `--keyring-backend test` to your txs
+*   Example:
+    `strided tx bank send ls-test2 stride1kwax6g0q2nwny5n43fswexgefedge033t5g95j --keyring-backend test --chain-id localstride`
 
-5. You can stop the chain, keeping the state with
+5.  You can stop the chain, keeping the state with
 
 ```bash
 make localnet-stop
 ```
 
-6. When you are done you can clean up the environment with:
+6.  When you are done you can clean up the environment with:
 
 ```bash
 make localnet-clean
@@ -86,14 +86,14 @@ upgrade with mainnet state goes smoothly.
 
 ### Create a mainnet state export
 
-1. Set up a node on mainnet
+1.  Set up a node on mainnet
 
-2. Ensure your node is caught up to the head of the network, or whatever block
-   you want to start your testnet from
+2.  Ensure your node is caught up to the head of the network, or whatever block
+    you want to start your testnet from
 
-3. Stop your Stride daemon
+3.  Stop your Stride daemon
 
-4. Take a state export snapshot with the following command:
+4.  Take a state export snapshot with the following command:
 
 ```sh
 strided export > state_export.json
@@ -104,14 +104,14 @@ current mainnet state.
 
 ### Use the state export in LocalStride
 
-5. Copy the `state_export.json` to the `localstride/state_export` folder within
-   the stride repo
+5.  Copy the `state_export.json` to the `localstride/state_export` folder within
+    the stride repo
 
 ```sh
 cp $HOME/state_export.json $HOME/stride/testutil/localstride/state_export/
 ```
 
-6. Ensure you have docker and docker-compose installed:
+6.  Ensure you have docker and docker-compose installed:
 
 ```sh
 # Docker
@@ -123,8 +123,8 @@ sudo apt install docker.io -y
 sudo apt install docker-compose -y
 ```
 
-7. Build the `local:stride` docker image (select yes if prompted to recursively
-   remove):
+7.  Build the `local:stride` docker image (select yes if prompted to recursively
+    remove):
 
 ```bash
 make localnet-state-export-init
@@ -132,10 +132,10 @@ make localnet-state-export-init
 
 The command:
 
-- Builds a local docker image with the latest changes
-- Cleans the `$HOME/.stride` folder
+*   Builds a local docker image with the latest changes
+*   Cleans the `$HOME/.stride` folder
 
-8. Start LocalStride:
+8.  Start LocalStride:
 
 ```bash
 make localnet-state-export-start
@@ -149,9 +149,9 @@ make localnet-state-export-start
 
 When running this command for the first time, `local:stride` will:
 
-- Modify the provided `state_export.json` to create a new state suitable for a
-  testnet
-- Start the chain
+*   Modify the provided `state_export.json` to create a new state suitable for a
+    testnet
+*   Start the chain
 
 You will then go through the genesis initialization process and hit the first
 block (not block 1, but the block number after your snapshot was taken)
@@ -159,7 +159,7 @@ block (not block 1, but the block number after your snapshot was taken)
 During this process, you may see only p2p logs and no blocks. **This could be
 the case for the next 30 minutes**, but will eventually start hitting blocks.
 
-9. The following account was added to your machine:
+9.  The following account was added to your machine:
 
 ```bash
 Address:
@@ -206,8 +206,8 @@ experience this.
 
 ### Testing the upgrade
 
-- Once localstride starts churning blocks, you are ready to test the upgrade.
-  Run the following to submit and vote on the upgrade:
+*   Once localstride starts churning blocks, you are ready to test the upgrade.
+    Run the following to submit and vote on the upgrade:
 
 ```bash
 # Check the localstride logs to determine the current block and propose the upgrade at a height at least 75 blocks in the future
@@ -215,28 +215,28 @@ make localnet-state-export-upgrade upgrade_name={upgrade_name} upgrade_height={u
 #  Ex: make localnet-state-export-upgrade upgrade_name=v5 upgrade_height=1956500
 ```
 
-- Wait for the upgrade height and confirm the node crashed. Run the following to
-  take down the container:
+*   Wait for the upgrade height and confirm the node crashed. Run the following to
+    take down the container:
 
-```
-make localnet-state-export-stop
-```
+<!---->
 
-- Switch the repo back to the version we're upgrading to and re-build the stride
-  image **without clearing the state**:
+    make localnet-state-export-stop
+
+*   Switch the repo back to the version we're upgrading to and re-build the stride
+    image **without clearing the state**:
 
 ```bash
 git checkout main
 make localnet-state-export-build
 ```
 
-- Finally, start the node back up with the updated binary
+*   Finally, start the node back up with the updated binary
 
 ```bash
 make localnet-state-export-start
 ```
 
-- Check the localstride logs and confirm the upgrade succeeded
+*   Check the localstride logs and confirm the upgrade succeeded
 
 ## LocalStride Accounts
 

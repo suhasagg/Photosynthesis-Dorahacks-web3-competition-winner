@@ -31,9 +31,7 @@ key).
 
 **Example**
 
-```
-❯ curl -s -X GET 'http://127.0.0.1:3000/version' | jq
-```
+    ❯ curl -s -X GET 'http://127.0.0.1:3000/version' | jq
 
 ```json
 [
@@ -57,9 +55,7 @@ details.
 
 **Example**
 
-```
-❯ curl -s -X GET 'http://127.0.0.1:3000/chains' | jq
-```
+    ❯ curl -s -X GET 'http://127.0.0.1:3000/chains' | jq
 
 ```json
 {
@@ -78,9 +74,7 @@ where `:id` stands for the identifier.
 
 **Example**
 
-```
-❯ curl -s -X GET 'http://127.0.0.1:3000/chain/ibc-0' | jq
-```
+    ❯ curl -s -X GET 'http://127.0.0.1:3000/chain/ibc-0' | jq
 
 ```json
 {
@@ -121,9 +115,7 @@ This endpoint returns the current state of the relayer, namely which chains it
 is connected to, as well as a description of all the workers which are currently
 active.
 
-```
-❯ curl -s -X GET 'http://127.0.0.1:3000/state' | jq
-```
+    ❯ curl -s -X GET 'http://127.0.0.1:3000/state' | jq
 
 ```json
 {

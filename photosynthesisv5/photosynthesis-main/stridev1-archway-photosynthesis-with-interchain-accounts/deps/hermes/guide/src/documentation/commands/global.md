@@ -68,9 +68,7 @@ The first three lines are printed to `stderr`, while the last line with a
 
 To improve the readability, pipe all the output to `jq`:
 
-```
-hermes --config /home/my_chain.toml --json create client --host-chain ibc-0 --reference-chain ibc-1 2>&1 | jq
-```
+    hermes --config /home/my_chain.toml --json create client --host-chain ibc-0 --reference-chain ibc-1 2>&1 | jq
 
 ```json
 {
@@ -122,12 +120,8 @@ hermes --config /home/my_chain.toml --json create client --host-chain ibc-0 --re
 
 To extract the identifier of the newly created client above:
 
-```
-hermes --config /home/my_chain.toml --json create client --host-chain ibc-0 --reference-chain ibc-1 | jq '.result.CreateClient.client_id'
-```
+    hermes --config /home/my_chain.toml --json create client --host-chain ibc-0 --reference-chain ibc-1 | jq '.result.CreateClient.client_id'
 
 Which should output:
 
-```
-"07-tendermint-2"
-```
+    "07-tendermint-2"

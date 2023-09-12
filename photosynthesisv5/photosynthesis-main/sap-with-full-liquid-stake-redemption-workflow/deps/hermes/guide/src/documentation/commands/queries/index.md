@@ -18,21 +18,19 @@ The `query` command provides the following sub-commands:
 
 ## Usage
 
-```
-USAGE:
-    hermes query <SUBCOMMAND>
+    USAGE:
+        hermes query <SUBCOMMAND>
 
-DESCRIPTION:
-    Query objects from the chain
+    DESCRIPTION:
+        Query objects from the chain
 
-SUBCOMMANDS:
-    client         Query information about clients
-    clients        Query clients
-    connection     Query information about connections
-    connections    Query the identifiers of all connections on a chain
-    channel        Query information about channels
-    channels       Query the identifiers of all channels on a given chain
-    packet         Query information about packets
-    transfer       Query information about token transfers
-    tx             Query information about transactions
-```
+    SUBCOMMANDS:
+        client         Query information about clients
+        clients        Query clients
+        connection     Query information about connections
+        connections    Query the identifiers of all connections on a chain
+        channel        Query information about channels
+        channels       Query the identifiers of all channels on a given chain
+        packet         Query information about packets
+        transfer       Query information about token transfers
+        tx             Query information about transactions

@@ -1,6 +1,8 @@
 ***
 
-## order: 6&#xA;title: Service Providers
+order: 6
+title: Service Providers
+------------------------
 
 # Service Providers
 
@@ -14,28 +16,28 @@ wallet builders that want to provide Light Client functionalities.
 
 This document describes:
 
-- [Connection Options](#connection-options)
-- [Running a Full Node](#running-a-full-node)
-  - [What is a Full Node?](#what-is-a-full-node)
-  - [Installation and Configuration](#installation-and-configuration)
-- [Command-Line Interface](#command-line-interface)
-  - [Available Commands](#available-commands)
-  - [Remote Access to gaiad](#remote-access-to-gaiad)
-  - [Create a Key pair](#create-a-key-pair)
-  - [Check your Account](#check-your-account)
-  - [Check your Balance](#check-your-balance)
-  - [Send coins using the CLI](#send-coins-using-the-cli)
-- [REST API](#rest-api)
-  - [Listen for incoming transactions](#listen-for-incoming-transaction)
+*   [Connection Options](#connection-options)
+*   [Running a Full Node](#running-a-full-node)
+    *   [What is a Full Node?](#what-is-a-full-node)
+    *   [Installation and Configuration](#installation-and-configuration)
+*   [Command-Line Interface](#command-line-interface)
+    *   [Available Commands](#available-commands)
+    *   [Remote Access to gaiad](#remote-access-to-gaiad)
+    *   [Create a Key pair](#create-a-key-pair)
+    *   [Check your Account](#check-your-account)
+    *   [Check your Balance](#check-your-balance)
+    *   [Send coins using the CLI](#send-coins-using-the-cli)
+*   [REST API](#rest-api)
+    *   [Listen for incoming transactions](#listen-for-incoming-transaction)
 
 ## Connection Options
 
 There are four main technologies to consider to connect to the Cosmos Hub:
 
-- Full Nodes: Interact with the blockchain.
-- REST Server: Serves for HTTP calls.
-- REST API: Use available endpoints for the REST Server.
-- GRPC: Connect to the Cosmos Hub using gRPC.
+*   Full Nodes: Interact with the blockchain.
+*   REST Server: Serves for HTTP calls.
+*   REST API: Use available endpoints for the REST Server.
+*   GRPC: Connect to the Cosmos Hub using gRPC.
 
 ## Running a Full Node
 
@@ -209,13 +211,13 @@ gaiad keys add <your_key_name>
 You will be asked to create a password (at least 8 characters) for this
 key-pair. This will return the information listed below:
 
-- `NAME`: Name of your key
-- `TYPE`: Type of your key, always `local`.
-- `ADDRESS`: Your address. Used to receive funds.
-- `PUBKEY`: Your public key. Useful for validators.
-- `MNEMONIC`: 24-word phrase. **Save this mnemonic somewhere safe**. This phrase
-  is required to recover your private key in case you forget the password. The
-  mnemonic is displayed at the end of the output.
+*   `NAME`: Name of your key
+*   `TYPE`: Type of your key, always `local`.
+*   `ADDRESS`: Your address. Used to receive funds.
+*   `PUBKEY`: Your public key. Useful for validators.
+*   `MNEMONIC`: 24-word phrase. **Save this mnemonic somewhere safe**. This phrase
+    is required to recover your private key in case you forget the password. The
+    mnemonic is displayed at the end of the output.
 
 You can see all available keys by typing:
 
@@ -291,17 +293,17 @@ gaiad tx bank send [from_key_or_address] [to_address] [amount] [flags]
 
 Parameters:
 
-- `<from_key_or_address>`: Key name or address of sending account.
-- `<to_address>`: Address of the recipient.
-- `<amount>`: This parameter accepts the format `<value|coinName>`, such as
-  `1000000uatom`.
+*   `<from_key_or_address>`: Key name or address of sending account.
+*   `<to_address>`: Address of the recipient.
+*   `<amount>`: This parameter accepts the format `<value|coinName>`, such as
+    `1000000uatom`.
 
 Flags:
 
-- `--chain-id`: This flag allows you to specify the id of the chain. There are
-  different ids for different testnet chains and mainnet chains.
-- `--gas-prices`: This flag allows you to specify the gas prices you pay for the
-  transaction. The format is used as `0.0025uatom`
+*   `--chain-id`: This flag allows you to specify the id of the chain. There are
+    different ids for different testnet chains and mainnet chains.
+*   `--gas-prices`: This flag allows you to specify the gas prices you pay for the
+    transaction. The format is used as `0.0025uatom`
 
 ## REST API
 

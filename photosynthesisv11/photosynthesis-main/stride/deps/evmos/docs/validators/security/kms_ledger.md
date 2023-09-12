@@ -8,8 +8,8 @@ Set up Tendermint KMS with the Tendermint Ledger app {synopsis}
 
 ## Pre-requisites
 
-- [Ledger device](https://shop.ledger.com/) {prereq}
-- [Install Ledger Live](https://www.ledger.com/ledger-live) {prereq}
+*   [Ledger device](https://shop.ledger.com/) {prereq}
+*   [Install Ledger Live](https://www.ledger.com/ledger-live) {prereq}
 
 ## Checklist
 
@@ -17,12 +17,12 @@ Set up Tendermint KMS with the Tendermint Ledger app {synopsis}
 comprehensive guideline. You should consider and research more about the
 [security implications](./security.md) of activating an external KMS. :::
 
-- ✅ Ledger [Nano X](https://shop.ledger.com/pages/ledger-nano-x) or
-  [Nano S](https://shop.ledger.com/products/ledger-nano-s) device (compare
-  [here](https://shop.ledger.com/pages/hardware-wallets-comparison))
-- ✅ [Ledger Live](https://www.ledger.com/ledger-live) installed
-- ✅ Tendermint app installed (only in `Developer Mode`)
-- ✅ Latest Versions (Firmware and Tendermint app)
+*   ✅ Ledger [Nano X](https://shop.ledger.com/pages/ledger-nano-x) or
+    [Nano S](https://shop.ledger.com/products/ledger-nano-s) device (compare
+    [here](https://shop.ledger.com/pages/hardware-wallets-comparison))
+*   ✅ [Ledger Live](https://www.ledger.com/ledger-live) installed
+*   ✅ Tendermint app installed (only in `Developer Mode`)
+*   ✅ Latest Versions (Firmware and Tendermint app)
 
 ## Tendermint Validator app (for Ledger devices)
 
@@ -44,27 +44,27 @@ Tendermint Validator App.
 You can find other configuration examples
 [here](https://github.com/iqlusioninc/tmkms/blob/master/tmkms.toml.example)
 
-- Create a `~/.tmkms/tmkms.toml` file with the following content (use an
-  adequate `chain_id`)
+*   Create a `~/.tmkms/tmkms.toml` file with the following content (use an
+    adequate `chain_id`)
 
-  ```toml
-  # Example KMS configuration file
-  [[validator]]
-  addr = "tcp://localhost:26657"                  # or "unix:///path/to/socket"
-  chain_id = "evmos_9001-1"
-  reconnect = true                                # true is the default
-  secret_key = "~/.tmkms/secret_connection.key"
+    ```toml
+    # Example KMS configuration file
+    [[validator]]
+    addr = "tcp://localhost:26657"                  # or "unix:///path/to/socket"
+    chain_id = "evmos_9001-1"
+    reconnect = true                                # true is the default
+    secret_key = "~/.tmkms/secret_connection.key"
 
-  [[providers.ledger]]
-  chain_ids = ["evmos_9001-1"]
-  ```
+    [[providers.ledger]]
+    chain_ids = ["evmos_9001-1"]
+    ```
 
-- Edit `addr` to point to your `evmosd` instance.
+*   Edit `addr` to point to your `evmosd` instance.
 
-- Adjust `chain-id` to match your `.evmosd/config/config.toml` settings.
+*   Adjust `chain-id` to match your `.evmosd/config/config.toml` settings.
 
-- `provider.ledger` has not additional parameters at the moment, however, it is
-  important that you keep that header to enable the feature.
+*   `provider.ledger` has not additional parameters at the moment, however, it is
+    important that you keep that header to enable the feature.
 
 *Plug your Ledger device and open the Tendermint validator app.*
 
@@ -130,14 +130,14 @@ signature request.
 Once the Ledger device receives the first message, it will ask for confirmation
 that the values are adequate.
 
-![Tendermint Ledger app "Init Validation"](./../../img/kms_tm_ledger\_01.jpg)
+![Tendermint Ledger app "Init Validation"](./../../img/kms_tm_ledger_01.jpg)
 
 Click the right button, if the height and round are correct.
 
 After that, you will see that the KMS will start forwarding all signature
 requests to the Ledger app:
 
-![Tendermint Ledger app "Proposal"](./../../img/kms_tm_ledger\_02.jpg)
+![Tendermint Ledger app "Proposal"](./../../img/kms_tm_ledger_02.jpg)
 
 ::: warning The word `TEST` in the second picture, second line appears because
 they were taken on a pre-release version. Once the app as been released in

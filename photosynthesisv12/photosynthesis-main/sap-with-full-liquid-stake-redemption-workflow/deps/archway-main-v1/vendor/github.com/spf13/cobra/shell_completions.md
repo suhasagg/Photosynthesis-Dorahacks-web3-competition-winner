@@ -3,10 +3,10 @@
 Cobra can generate shell completions for multiple shells. The currently
 supported shells are:
 
-- Bash
-- Zsh
-- fish
-- PowerShell
+*   Bash
+*   Zsh
+*   fish
+*   PowerShell
 
 Cobra will automatically provide your program with a fully functional
 `completion` command, similarly to how it provides the `help` command.
@@ -101,28 +101,20 @@ such options you must set the `CompletionOptions` field on the *root* command.
 
 To tell Cobra *not* to provide the default `completion` command:
 
-```
-rootCmd.CompletionOptions.DisableDefaultCmd = true
-```
+    rootCmd.CompletionOptions.DisableDefaultCmd = true
 
 To tell Cobra to mark the default `completion` command as *hidden*:
 
-```
-rootCmd.CompletionOptions.HiddenDefaultCmd = true
-```
+    rootCmd.CompletionOptions.HiddenDefaultCmd = true
 
 To tell Cobra *not* to provide the user with the `--no-descriptions` flag to the
 completion sub-commands:
 
-```
-rootCmd.CompletionOptions.DisableNoDescFlag = true
-```
+    rootCmd.CompletionOptions.DisableNoDescFlag = true
 
 To tell Cobra to completely disable descriptions for completions:
 
-```
-rootCmd.CompletionOptions.DisableDescriptions = true
-```
+    rootCmd.CompletionOptions.DisableDescriptions = true
 
 # Customizing completions
 
@@ -442,19 +434,15 @@ supported for each shell (however, for bash, it is only available in the
 will provide the descriptions automatically, based on usage information. For
 example, using zsh:
 
-```
-$ helm s[tab]
-search  -- search for a keyword in charts
-show    -- show information of a chart
-status  -- displays the status of the named release
-```
+    $ helm s[tab]
+    search  -- search for a keyword in charts
+    show    -- show information of a chart
+    status  -- displays the status of the named release
 
 while using fish:
 
-```
-$ helm s[tab]
-search  (search for a keyword in charts)  show  (show information of a chart)  status  (displays the status of the named release)
-```
+    $ helm s[tab]
+    search  (search for a keyword in charts)  show  (show information of a chart)  status  (displays the status of the named release)
 
 Cobra allows you to add descriptions to your own completions. Simply add the
 description text after each completion, following a `\t` separator. This
@@ -518,12 +506,12 @@ dynamic completion solution described in this document. Unless your program
 already uses the legacy dynamic completion solution, it is recommended that you
 use the bash completion V2 solution which provides the following extra features:
 
-- Supports completion descriptions (like the other shells)
-- Small completion script of less than 300 lines (v1 generates scripts of
-  thousands of lines; `kubectl` for example has a bash v1 completion script of
-  over 13K lines)
-- Streamlined user experience thanks to a completion behavior aligned with the
-  other shells
+*   Supports completion descriptions (like the other shells)
+*   Small completion script of less than 300 lines (v1 generates scripts of
+    thousands of lines; `kubectl` for example has a bash v1 completion script of
+    over 13K lines)
+*   Streamlined user experience thanks to a completion behavior aligned with the
+    other shells
 
 `Bash` completion V2 supports descriptions for completions. When calling
 `GenBashCompletionV2()` or `GenBashCompletionFileV2()` you must provide these
@@ -532,16 +520,14 @@ with a description; Cobra will provide the description automatically based on
 usage information. You can choose to make this option configurable by your
 users.
 
-```
-# With descriptions
-$ helm s[tab][tab]
-search  (search for a keyword in charts)           status  (display the status of the named release)
-show    (show information of a chart)
+    # With descriptions
+    $ helm s[tab][tab]
+    search  (search for a keyword in charts)           status  (display the status of the named release)
+    show    (show information of a chart)
 
-# Without descriptions
-$ helm s[tab][tab]
-search  show  status
-```
+    # Without descriptions
+    $ helm s[tab][tab]
+    search  show  status
 
 **Note**: Cobra's default `completion` command uses bash completion V2. If for
 some reason you need to use bash completion V1, you will need to implement your
@@ -560,32 +546,30 @@ disable such descriptions by using `GenZshCompletionNoDesc()` or
 `GenZshCompletionFileNoDesc()`. You can choose to make this a configurable
 option to your users.
 
-```
-# With descriptions
-$ helm s[tab]
-search  -- search for a keyword in charts
-show    -- show information of a chart
-status  -- displays the status of the named release
+    # With descriptions
+    $ helm s[tab]
+    search  -- search for a keyword in charts
+    show    -- show information of a chart
+    status  -- displays the status of the named release
 
-# Without descriptions
-$ helm s[tab]
-search  show  status
-```
+    # Without descriptions
+    $ helm s[tab]
+    search  show  status
 
 *Note*: Because of backward-compatibility requirements, we were forced to have a
 different API to disable completion descriptions between `zsh` and `fish`.
 
 ### Limitations
 
-- Custom completions implemented in Bash scripting (legacy) are not supported
-  and will be ignored for `zsh` (including the use of the `BashCompCustom` flag
-  annotation).
-  - You should instead use `ValidArgsFunction` and
-    `RegisterFlagCompletionFunc()` which are portable to the different shells
-    (`bash`, `zsh`, `fish`, `powershell`).
-- The function `MarkFlagCustom()` is not supported and will be ignored for
-  `zsh`.
-  - You should instead use `RegisterFlagCompletionFunc()`.
+*   Custom completions implemented in Bash scripting (legacy) are not supported
+    and will be ignored for `zsh` (including the use of the `BashCompCustom` flag
+    annotation).
+    *   You should instead use `ValidArgsFunction` and
+        `RegisterFlagCompletionFunc()` which are portable to the different shells
+        (`bash`, `zsh`, `fish`, `powershell`).
+*   The function `MarkFlagCustom()` is not supported and will be ignored for
+    `zsh`.
+    *   You should instead use `RegisterFlagCompletionFunc()`.
 
 ### Zsh completions standardization
 
@@ -603,44 +587,42 @@ with a parameter indicating if the completions should be annotated with a
 description; Cobra will provide the description automatically based on usage
 information. You can choose to make this option configurable by your users.
 
-```
-# With descriptions
-$ helm s[tab]
-search  (search for a keyword in charts)  show  (show information of a chart)  status  (displays the status of the named release)
+    # With descriptions
+    $ helm s[tab]
+    search  (search for a keyword in charts)  show  (show information of a chart)  status  (displays the status of the named release)
 
-# Without descriptions
-$ helm s[tab]
-search  show  status
-```
+    # Without descriptions
+    $ helm s[tab]
+    search  show  status
 
 *Note*: Because of backward-compatibility requirements, we were forced to have a
 different API to disable completion descriptions between `zsh` and `fish`.
 
 ### Limitations
 
-- Custom completions implemented in bash scripting (legacy) are not supported
-  and will be ignored for `fish` (including the use of the `BashCompCustom` flag
-  annotation).
-  - You should instead use `ValidArgsFunction` and
-    `RegisterFlagCompletionFunc()` which are portable to the different shells
-    (`bash`, `zsh`, `fish`, `powershell`).
-- The function `MarkFlagCustom()` is not supported and will be ignored for
-  `fish`.
-  - You should instead use `RegisterFlagCompletionFunc()`.
-- The following flag completion annotations are not supported and will be
-  ignored for `fish`:
-  - `BashCompFilenameExt` (filtering by file extension)
-  - `BashCompSubdirsInDir` (filtering by directory)
-- The functions corresponding to the above annotations are consequently not
-  supported and will be ignored for `fish`:
-  - `MarkFlagFilename()` and `MarkPersistentFlagFilename()` (filtering by file
-    extension)
-  - `MarkFlagDirname()` and `MarkPersistentFlagDirname()` (filtering by
-    directory)
-- Similarly, the following completion directives are not supported and will be
-  ignored for `fish`:
-  - `ShellCompDirectiveFilterFileExt` (filtering by file extension)
-  - `ShellCompDirectiveFilterDirs` (filtering by directory)
+*   Custom completions implemented in bash scripting (legacy) are not supported
+    and will be ignored for `fish` (including the use of the `BashCompCustom` flag
+    annotation).
+    *   You should instead use `ValidArgsFunction` and
+        `RegisterFlagCompletionFunc()` which are portable to the different shells
+        (`bash`, `zsh`, `fish`, `powershell`).
+*   The function `MarkFlagCustom()` is not supported and will be ignored for
+    `fish`.
+    *   You should instead use `RegisterFlagCompletionFunc()`.
+*   The following flag completion annotations are not supported and will be
+    ignored for `fish`:
+    *   `BashCompFilenameExt` (filtering by file extension)
+    *   `BashCompSubdirsInDir` (filtering by directory)
+*   The functions corresponding to the above annotations are consequently not
+    supported and will be ignored for `fish`:
+    *   `MarkFlagFilename()` and `MarkPersistentFlagFilename()` (filtering by file
+        extension)
+    *   `MarkFlagDirname()` and `MarkPersistentFlagDirname()` (filtering by
+        directory)
+*   Similarly, the following completion directives are not supported and will be
+    ignored for `fish`:
+    *   `ShellCompDirectiveFilterFileExt` (filtering by file extension)
+    *   `ShellCompDirectiveFilterDirs` (filtering by directory)
 
 ## PowerShell completions
 
@@ -654,10 +636,10 @@ this option configurable by your users.
 
 The script is designed to support all three PowerShell completion modes:
 
-- TabCompleteNext (default windows style - on each key press the next option is
-  displayed)
-- Complete (works like bash)
-- MenuComplete (works like zsh)
+*   TabCompleteNext (default windows style - on each key press the next option is
+    displayed)
+*   Complete (works like bash)
+*   MenuComplete (works like zsh)
 
 You set the mode with `Set-PSReadLineKeyHandler -Key Tab -Function <mode>`.
 Descriptions are only displayed when using the `Complete` or `MenuComplete`
@@ -669,37 +651,33 @@ completions to a file and source this file from their PowerShell profile, which
 is referenced by the `$Profile` environment variable. See
 `Get-Help about_Profiles` for more info about PowerShell profiles.
 
-```
-# With descriptions and Mode 'Complete'
-$ helm s[tab]
-search  (search for a keyword in charts)  show  (show information of a chart)  status  (displays the status of the named release)
+    # With descriptions and Mode 'Complete'
+    $ helm s[tab]
+    search  (search for a keyword in charts)  show  (show information of a chart)  status  (displays the status of the named release)
 
-# With descriptions and Mode 'MenuComplete' The description of the current selected value will be displayed below the suggestions.
-$ helm s[tab]
-search    show     status
+    # With descriptions and Mode 'MenuComplete' The description of the current selected value will be displayed below the suggestions.
+    $ helm s[tab]
+    search    show     status
 
-search for a keyword in charts
+    search for a keyword in charts
 
-# Without descriptions
-$ helm s[tab]
-search  show  status
-```
+    # Without descriptions
+    $ helm s[tab]
+    search  show  status
 
 ### Aliases
 
 You can also configure `powershell` aliases for your program and they will also
 support completions.
 
-```
-$ sal aliasname origcommand
-$ Register-ArgumentCompleter -CommandName 'aliasname' -ScriptBlock $__origcommandCompleterBlock
+    $ sal aliasname origcommand
+    $ Register-ArgumentCompleter -CommandName 'aliasname' -ScriptBlock $__origcommandCompleterBlock
 
-# and now when you run `aliasname` completion will make
-# suggestions as it did for `origcommand`.
+    # and now when you run `aliasname` completion will make
+    # suggestions as it did for `origcommand`.
 
-$ aliasname <tab>
-completion     firstcommand   secondcommand
-```
+    $ aliasname <tab>
+    completion     firstcommand   secondcommand
 
 The name of the completer block variable is of the form
 `$__<programName>CompleterBlock` where every `-` and `:` in the program name
@@ -707,26 +685,26 @@ have been replaced with `_`, to respect powershell naming syntax.
 
 ### Limitations
 
-- Custom completions implemented in bash scripting (legacy) are not supported
-  and will be ignored for `powershell` (including the use of the
-  `BashCompCustom` flag annotation).
-  - You should instead use `ValidArgsFunction` and
-    `RegisterFlagCompletionFunc()` which are portable to the different shells
-    (`bash`, `zsh`, `fish`, `powershell`).
-- The function `MarkFlagCustom()` is not supported and will be ignored for
-  `powershell`.
-  - You should instead use `RegisterFlagCompletionFunc()`.
-- The following flag completion annotations are not supported and will be
-  ignored for `powershell`:
-  - `BashCompFilenameExt` (filtering by file extension)
-  - `BashCompSubdirsInDir` (filtering by directory)
-- The functions corresponding to the above annotations are consequently not
-  supported and will be ignored for `powershell`:
-  - `MarkFlagFilename()` and `MarkPersistentFlagFilename()` (filtering by file
-    extension)
-  - `MarkFlagDirname()` and `MarkPersistentFlagDirname()` (filtering by
-    directory)
-- Similarly, the following completion directives are not supported and will be
-  ignored for `powershell`:
-  - `ShellCompDirectiveFilterFileExt` (filtering by file extension)
-  - `ShellCompDirectiveFilterDirs` (filtering by directory)
+*   Custom completions implemented in bash scripting (legacy) are not supported
+    and will be ignored for `powershell` (including the use of the
+    `BashCompCustom` flag annotation).
+    *   You should instead use `ValidArgsFunction` and
+        `RegisterFlagCompletionFunc()` which are portable to the different shells
+        (`bash`, `zsh`, `fish`, `powershell`).
+*   The function `MarkFlagCustom()` is not supported and will be ignored for
+    `powershell`.
+    *   You should instead use `RegisterFlagCompletionFunc()`.
+*   The following flag completion annotations are not supported and will be
+    ignored for `powershell`:
+    *   `BashCompFilenameExt` (filtering by file extension)
+    *   `BashCompSubdirsInDir` (filtering by directory)
+*   The functions corresponding to the above annotations are consequently not
+    supported and will be ignored for `powershell`:
+    *   `MarkFlagFilename()` and `MarkPersistentFlagFilename()` (filtering by file
+        extension)
+    *   `MarkFlagDirname()` and `MarkPersistentFlagDirname()` (filtering by
+        directory)
+*   Similarly, the following completion directives are not supported and will be
+    ignored for `powershell`:
+    *   `ShellCompDirectiveFilterFileExt` (filtering by file extension)
+    *   `ShellCompDirectiveFilterDirs` (filtering by directory)

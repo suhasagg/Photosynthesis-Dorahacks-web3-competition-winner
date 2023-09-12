@@ -14,14 +14,14 @@ dependencies of the monitoring platform.
 
 ## Sections
 
-- **[Set up Grafana](./setup-grafana.md)**
+*   **[Set up Grafana](./setup-grafana.md)**
 
-  - Learn how to set up [Grafana](https://grafana.com)'s monitoring stack for
-    Hermes.
+    *   Learn how to set up [Grafana](https://grafana.com)'s monitoring stack for
+        Hermes.
 
-- **[Set up Hermes](./setup-hermes.md)**
+*   **[Set up Hermes](./setup-hermes.md)**
 
-  - Learn how to configure Hermes on production chains (Cosmos Hub <> Osmosis).
+    *   Learn how to configure Hermes on production chains (Cosmos Hub <> Osmosis).
 
-- **[Start relaying](./start-relaying.md)**
-  - Exchange and relay packets between production chains.
+*   **[Start relaying](./start-relaying.md)**
+    *   Exchange and relay packets between production chains.

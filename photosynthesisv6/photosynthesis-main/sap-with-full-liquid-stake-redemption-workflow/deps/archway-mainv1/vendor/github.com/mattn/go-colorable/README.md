@@ -35,9 +35,7 @@ You can compile above code on non-windows OSs.
 
 ## Installation
 
-```
-$ go get github.com/mattn/go-colorable
-```
+    $ go get github.com/mattn/go-colorable
 
 # License
 

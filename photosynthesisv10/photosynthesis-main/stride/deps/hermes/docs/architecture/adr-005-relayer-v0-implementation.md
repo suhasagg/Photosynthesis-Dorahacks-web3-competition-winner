@@ -2,8 +2,8 @@
 
 ## Changelog
 
-- 04.01.2020: First draft proposed.
-- 09.02.2020: Revised, fixed todos, reviewed.
+*   04.01.2020: First draft proposed.
+*   09.02.2020: Revised, fixed todos, reviewed.
 
 ## Context
 
@@ -109,10 +109,10 @@ synchronization with starts of other threads should be required.
 Beside the application thread, the relayer maintains one or more threads for
 each chain. The number of threads per chain is chain-specific:
 
-- For the production chain \[Gaia]\[gaia] (see also the \[References] (#references)
-  below), there are three separate threads, described in more detail in the
-  [architecture](#architecture) section.
-- For the mock chain ([Mock](#references)), there is one thread.
+*   For the production chain \[Gaia]\[gaia] (see also the \[References] (#references)
+    below), there are three separate threads, described in more detail in the
+    [architecture](#architecture) section.
+*   For the mock chain ([Mock](#references)), there is one thread.
 
 The link runs in the main application thread. This consumes events from the
 chains, performs queries and sends transactions synchronously.
@@ -144,40 +144,40 @@ we can break down the levels of abstraction as follows:
 
 ###### 1. The actual chain, comprising a number of full nodes
 
-- This is the lowest level of abstraction, the farthest away from relayer users
-- The relayer communicates with a chain via three interfaces:
-  - (i) the `LightClient` trait (handled via the supervisor for the production
-    chain),
-  - (ii) the `Chain` trait (where the communication happens over the ABCI/gRPC
-    interface primarily), and
-  - (iii) an `EventMonitor` which subscribes to a full node, and carries batches
-    of events from that node to the chain runtime in the relayer. Currently, the
-    relayer registers for `Tx` and `Block` notifications. It then extracts the
-    IBC events from the `Tx` and generates a `NewBlock` event also for the
-    block. Note that a notification may include multiple IBC Events.
+*   This is the lowest level of abstraction, the farthest away from relayer users
+*   The relayer communicates with a chain via three interfaces:
+    *   (i) the `LightClient` trait (handled via the supervisor for the production
+        chain),
+    *   (ii) the `Chain` trait (where the communication happens over the ABCI/gRPC
+        interface primarily), and
+    *   (iii) an `EventMonitor` which subscribes to a full node, and carries batches
+        of events from that node to the chain runtime in the relayer. Currently, the
+        relayer registers for `Tx` and `Block` notifications. It then extracts the
+        IBC events from the `Tx` and generates a `NewBlock` event also for the
+        block. Note that a notification may include multiple IBC Events.
 
 ###### 2. The chain runtime
 
-- This is an intermediary layer, sitting between the relayer application and any
-  chain(s);
-- The runtime is universal for all possible chains, i.e., does *not* contain any
-  chain-specific code;
-- Accepts as input requests from the application (Hermes, the CLI), in the form
-  of [`ChainRequest`][chain-req] via a crossbeam channel
-- Responds to the application via a crossbeam channel
-- Has objects which implement the three interfaces named above (`LightClient`,
-  `Chain`, and `EventMonitor`) and orchestrates access to these objects as
-  required by application requests
+*   This is an intermediary layer, sitting between the relayer application and any
+    chain(s);
+*   The runtime is universal for all possible chains, i.e., does *not* contain any
+    chain-specific code;
+*   Accepts as input requests from the application (Hermes, the CLI), in the form
+    of [`ChainRequest`][chain-req] via a crossbeam channel
+*   Responds to the application via a crossbeam channel
+*   Has objects which implement the three interfaces named above (`LightClient`,
+    `Chain`, and `EventMonitor`) and orchestrates access to these objects as
+    required by application requests
 
 ###### 3. The relayer application
 
-- Communicates with the runtime via a `ChainHandle`, which contains the
-  appropriate crossbeam sender and receiver channels to/from the runtime
-- Upon start-up, instantiates relayer-level objects in the following order: two
-  `ForeignClient`s (one per chain), a `Connection` (which contains the two
-  clients), a `Channel` (containing the connection), and on top of that a
-  `Link`.
-- The code here is part of the Hermes (relayer CLI) binary.
+*   Communicates with the runtime via a `ChainHandle`, which contains the
+    appropriate crossbeam sender and receiver channels to/from the runtime
+*   Upon start-up, instantiates relayer-level objects in the following order: two
+    `ForeignClient`s (one per chain), a `Connection` (which contains the two
+    clients), a `Channel` (containing the connection), and on top of that a
+    `Link`.
+*   The code here is part of the Hermes (relayer CLI) binary.
 
 ##### Threads
 
@@ -193,7 +193,7 @@ Accepted
 
 ### Positive
 
-- prepares the relayer crate for incremental growth
+*   prepares the relayer crate for incremental growth
 
 ### Negative
 
@@ -201,14 +201,14 @@ Accepted
 
 ## References:
 
-- **Gaia**: the correct Gaia instance for working with `v0.1` can be obtained
-  from https://github.com/cosmos/relayer, with `git checkout v4.0.0` by
-  executing `make build-gaia`. This
-  [comment](https://github.com/informalsystems/ibc-rs/pull/449#issuecomment-750248113)
-  provides additional insights into development-time relayer `v0.1` environment.
+*   **Gaia**: the correct Gaia instance for working with `v0.1` can be obtained
+    from https://github.com/cosmos/relayer, with `git checkout v4.0.0` by
+    executing `make build-gaia`. This
+    [comment](https://github.com/informalsystems/ibc-rs/pull/449#issuecomment-750248113)
+    provides additional insights into development-time relayer `v0.1` environment.
 
-- **Mock**:
-  https://github.com/informalsystems/ibc-rs/blob/master/relayer/src/chain/mock.rs
+*   **Mock**:
+    https://github.com/informalsystems/ibc-rs/blob/master/relayer/src/chain/mock.rs
 
 [ids]: https://github.com/cosmos/cosmos-sdk/pull/7993
 

@@ -8,13 +8,13 @@ If you have a final draft of your proposal ready to submit, you may want to push
 your proposal live on the testnet first. These are the three primary steps to
 getting your proposal live on-chain.
 
-1. (**Optional**)
-   [Hosting supplementary materials](#hosting-supplementary-materials) for your
-   proposal with IPFS (InterPlanetary File System)
-2. [Formatting the JSON file](#formatting-the-json-file-for-the-governance-proposal)
-   for the governance proposal transaction that will be on-chain
-3. [Sending the transaction](#sending-the-transaction-that-submits-your-governance-proposal)
-   that submits your governance proposal on-chain
+1.  (**Optional**)
+    [Hosting supplementary materials](#hosting-supplementary-materials) for your
+    proposal with IPFS (InterPlanetary File System)
+2.  [Formatting the JSON file](#formatting-the-json-file-for-the-governance-proposal)
+    for the governance proposal transaction that will be on-chain
+3.  [Sending the transaction](#sending-the-transaction-that-submits-your-governance-proposal)
+    that submits your governance proposal on-chain
 
 ## Hosting supplementary materials
 
@@ -25,8 +25,8 @@ censorship resistant data-hosting platform, like IPFS.
 Once you have drafted your proposal, ideally as a Markdown file, you can upload
 it to the IPFS network:
 
-1. either by [running an IPFS node and the IPFS software](https://ipfs.io), or
-2. using a service such as <https://pinata.cloud>
+1.  either by [running an IPFS node and the IPFS software](https://ipfs.io), or
+2.  using a service such as <https://pinata.cloud>
 
 Ensure that you "pin" the file so that it continues to be available on the
 network. You should get a URL like this:
@@ -83,16 +83,16 @@ participate in to claim tokens from the Evmos Rektdrop.
 
 For community pool spend proposals, there are five components:
 
-1. **Title** - the distinguishing name of the proposal, typically the way the
-   that explorers list proposals
-2. **Description** - the body of the proposal that further describes what is
-   being proposed and details surrounding the proposal
-3. **Recipient** - the Evmos (bech32-based) address that will receive funding
-   from the Community Pool
-4. **Amount** - the amount of funding that the recipient will receive in
-   atto-EVMOS (`aevmos`)
-5. **Deposit** - the amount that will be contributed to the deposit (in
-   `aevmos`) from the account submitting the proposal
+1.  **Title** - the distinguishing name of the proposal, typically the way the
+    that explorers list proposals
+2.  **Description** - the body of the proposal that further describes what is
+    being proposed and details surrounding the proposal
+3.  **Recipient** - the Evmos (bech32-based) address that will receive funding
+    from the Community Pool
+4.  **Amount** - the amount of funding that the recipient will receive in
+    atto-EVMOS (`aevmos`)
+5.  **Deposit** - the amount that will be contributed to the deposit (in
+    `aevmos`) from the account submitting the proposal
 
 #### Made-Up Example
 
@@ -172,18 +172,18 @@ other kinds of parameter changes because `gov` has subkeys,
 
 For parameter-change proposals, there are seven components:
 
-1. **Title** - the distinguishing name of the proposal, typically the way the
-   that explorers list proposals
-2. **Description** - the body of the proposal that further describes what is
-   being proposed and details surrounding the proposal
-3. **Subspace** - the Evmos module with the parameter that is being changed
-4. **Key** - the parameter that will be changed
-5. **Value** - the value of the parameter that will be changed by the governance
-   mechanism
-6. **Denom** - `aevmos` (atto-EVMOS) will be the type of asset used as the
-   deposit
-7. **Amount** - the amount that will be contributed to the deposit (in `aevmos`)
-   from the account submitting the proposal
+1.  **Title** - the distinguishing name of the proposal, typically the way the
+    that explorers list proposals
+2.  **Description** - the body of the proposal that further describes what is
+    being proposed and details surrounding the proposal
+3.  **Subspace** - the Evmos module with the parameter that is being changed
+4.  **Key** - the parameter that will be changed
+5.  **Value** - the value of the parameter that will be changed by the governance
+    mechanism
+6.  **Denom** - `aevmos` (atto-EVMOS) will be the type of asset used as the
+    deposit
+7.  **Amount** - the amount that will be contributed to the deposit (in `aevmos`)
+    from the account submitting the proposal
 
 #### Real Example
 
@@ -256,29 +256,29 @@ evmosd tx gov submit-legacy-proposal \
 ::: tip Use the `evmos tx gov --help` flag to get more info about the governance
 commands :::
 
-1. `evmosd` is the command-line interface client that is used to send
-   transactions and query Evmos
-2. `tx gov submit-legacy-proposal param-change` indicates that the transaction
-   is submitting a parameter-change proposal
-3. `--from dev0` is the account key that pays the transaction fee and deposit
-   amount
-4. `--gas 500000` is the maximum amount of gas permitted to be used to process
-   the transaction
-   - the more content there is in the description of your proposal, the more gas
-     your transaction will consume
-   - if this number isn't high enough and there isn't enough gas to process your
-     transaction, the transaction will fail
-   - the transaction will only use the amount of gas needed to process the
-     transaction
-5. `--gas-prices` is the flat-rate per unit of gas value for a validator to
-   process your transaction
-6. `--chain-id evmos_9001-2` is Evmos Mainnet. For current and past chain-id's,
-   please look at the [Chain ID](./../technical_concepts/chain_id.md)
-   documentation.
-   - the testnet chain ID is [evmos\_9000-4](https://testnet.mintscan.io/evmos).
-     For current and past testnet information, please look at the
-     [testnet repository](https://github.com/evmos/testnets)
-7. `--node` is using a full node to send the transaction to the Evmos Mainnet
+1.  `evmosd` is the command-line interface client that is used to send
+    transactions and query Evmos
+2.  `tx gov submit-legacy-proposal param-change` indicates that the transaction
+    is submitting a parameter-change proposal
+3.  `--from dev0` is the account key that pays the transaction fee and deposit
+    amount
+4.  `--gas 500000` is the maximum amount of gas permitted to be used to process
+    the transaction
+    *   the more content there is in the description of your proposal, the more gas
+        your transaction will consume
+    *   if this number isn't high enough and there isn't enough gas to process your
+        transaction, the transaction will fail
+    *   the transaction will only use the amount of gas needed to process the
+        transaction
+5.  `--gas-prices` is the flat-rate per unit of gas value for a validator to
+    process your transaction
+6.  `--chain-id evmos_9001-2` is Evmos Mainnet. For current and past chain-id's,
+    please look at the [Chain ID](./../technical_concepts/chain_id.md)
+    documentation.
+    *   the testnet chain ID is [evmos\_9000-4](https://testnet.mintscan.io/evmos).
+        For current and past testnet information, please look at the
+        [testnet repository](https://github.com/evmos/testnets)
+7.  `--node` is using a full node to send the transaction to the Evmos Mainnet
 
 ### Verifying your transaction
 
@@ -320,17 +320,17 @@ In our case above, the `<proposal-id>` would be 59 as queried earlier. The
 You may want to submit your proposal to the testnet chain before the mainnet for
 a number of reasons:
 
-1. To see what the proposal description will look like
-2. To signal that your proposal is about to go live on the mainnet
-3. To share what the proposal will look like in advance with stakeholders
-4. To test the functionality of the governance features
+1.  To see what the proposal description will look like
+2.  To signal that your proposal is about to go live on the mainnet
+3.  To share what the proposal will look like in advance with stakeholders
+4.  To test the functionality of the governance features
 
 Submitting your proposal to the testnet increases the likelihood that you will
 discover a flaw before deploying your proposal on mainnet. A few things to keep
 in mind:
 
-- you'll need testnet tokens for your proposal (ask around for a
-  [faucet](./../../developers/testnet/faucet.md))
-- the parameters for testnet proposals are different (eg. voting period timing,
-  deposit amount, deposit denomination)
-- the deposit denomination is in `'atevmos'` instead of `'aevmos'`
+*   you'll need testnet tokens for your proposal (ask around for a
+    [faucet](./../../developers/testnet/faucet.md))
+*   the parameters for testnet proposals are different (eg. voting period timing,
+    deposit amount, deposit denomination)
+*   the deposit denomination is in `'atevmos'` instead of `'aevmos'`

@@ -183,8 +183,8 @@ block:
 
 Get the current rewards pool balance:
 
-- undistributed yet tokens;
-- treasury tokens;
+*   undistributed yet tokens;
+*   treasury tokens;
 
 Usage:
 
@@ -235,8 +235,8 @@ archwayd tx rewards -h
 
 Create / update a contract metadata state. Operation is authorized to:
 
-- Creating metadata: contract admin (set via CosmWasm *Instantiate* operation);
-- Updating metadata: metadata's `owner_address`;
+*   Creating metadata: contract admin (set via CosmWasm *Instantiate* operation);
+*   Updating metadata: metadata's `owner_address`;
 
 Usage:
 
@@ -246,8 +246,8 @@ archwayd tx rewards set-contract-metadata [contract-address] [flags]
 
 Command specific flags:
 
-- `--owner-address` - update the contract owner address;
-- `--rewards-address` - update the contract rewards receiver address;
+*   `--owner-address` - update the contract owner address;
+*   `--rewards-address` - update the contract rewards receiver address;
 
 Example (delegate rewards ownership to the contract):
 
@@ -268,8 +268,8 @@ of credited rewards by a specific contract at a block height. The
 `withdraw-rewards` command has two operation modes, which defines which
 `RewardsRecord` objects to process:
 
-- *Records by limit* - select the first N `RewardsRecord` objects available;
-- *Records by IDs* - select specific `RewardsRecord` objects by their IDs;
+*   *Records by limit* - select the first N `RewardsRecord` objects available;
+*   *Records by IDs* - select specific `RewardsRecord` objects by their IDs;
 
 Usage:
 
@@ -279,8 +279,8 @@ archwayd tx rewards withdraw-rewards [flags]
 
 Command specific flags:
 
-- `--records-limit` - the maximum number of `RewardsRecord` objects to process;
-- `--record-ids` - the list of `RewardsRecord` object IDs to process;
+*   `--records-limit` - the maximum number of `RewardsRecord` objects to process;
+*   `--record-ids` - the list of `RewardsRecord` object IDs to process;
 
 > `records-limit` value / `record-ids` length must be equal or less than the
 > `MaxWithdrawRecords` parameter value.

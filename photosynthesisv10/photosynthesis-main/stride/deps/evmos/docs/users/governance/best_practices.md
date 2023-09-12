@@ -6,15 +6,15 @@ order: 3
 
 ::: tip **Note:**
 
-- If users are creating governance proposals which require community pool
-  funding (such as those of type `CommunityPoolSpendProposal`), refer to
-  [this section](#community-spend-proposal).
-- If users are creating governance proposals concerned with the ERC-20 Module
-  (such as those of type `RegisterCoinProposal`), refer to
-  [this section](#erc-20-proposal).
-- If users are creating governance proposals concerned with changing parameters
-  (such as those of type `ParameterChangeProposal`), refer to
-  [this section](#parameter-change-proposal).
+*   If users are creating governance proposals which require community pool
+    funding (such as those of type `CommunityPoolSpendProposal`), refer to
+    [this section](#community-spend-proposal).
+*   If users are creating governance proposals concerned with the ERC-20 Module
+    (such as those of type `RegisterCoinProposal`), refer to
+    [this section](#erc-20-proposal).
+*   If users are creating governance proposals concerned with changing parameters
+    (such as those of type `ParameterChangeProposal`), refer to
+    [this section](#parameter-change-proposal).
 
 :::
 
@@ -38,9 +38,9 @@ In the first stage of this strategy, you should engage people (ideally experts)
 informally about your idea. You'll want to start with the minimal, critical
 components (name, value to cosmos hub, timeline, any funding needs) and check:
 
-- Does it make sense?
-- Are there critical flaws?
-- Does it need to be reconsidered?
+*   Does it make sense?
+*   Are there critical flaws?
+*   Does it need to be reconsidered?
 
 You should be able engaging with key stakeholders (eg. a large validator
 operator) with a few short sentences to measure their support. Here's an
@@ -65,12 +65,12 @@ important for them to clearly understand why you think what you're proposing
 will be valuable to Evmos, and if possible, why it will be valuable to them as
 long-term stakeholders. :::
 
-- If you're just developing your idea, [start at Stage 1](#stage-1-your-idea).
-- If you're already confident about your idea,
-  [skip to Stage 2](#stage-2-your-draft-proposal).
-- If you've drafted your proposal, engaged with the community, and submitted
-  your proposal to the testnet,
-  [skip to Stage 3](#stage-3-your-on-chain-proposal).
+*   If you're just developing your idea, [start at Stage 1](#stage-1-your-idea).
+*   If you're already confident about your idea,
+    [skip to Stage 2](#stage-2-your-draft-proposal).
+*   If you've drafted your proposal, engaged with the community, and submitted
+    your proposal to the testnet,
+    [skip to Stage 3](#stage-3-your-on-chain-proposal).
 
 ## Stage 1: Your Idea
 
@@ -130,12 +130,12 @@ understanding of what the changes are and how they are likely to be impacted.
 
 Every proposal should contain a summary with key details:
 
-- who is submitting the proposal
-- the amount of the proposal or parameter(s) being changed;
-- and deliverables and timeline
-- a reason for the proposal and potential impacts
-- a short summary of the history (what compelled this proposal), solution that's
-  being presented, and future expectations
+*   who is submitting the proposal
+*   the amount of the proposal or parameter(s) being changed;
+*   and deliverables and timeline
+*   a reason for the proposal and potential impacts
+*   a short summary of the history (what compelled this proposal), solution that's
+    being presented, and future expectations
 
 Assume that many people will stop reading at this point. However, it is
 important to provide in-depth information, so a few more pointers for
@@ -143,108 +143,108 @@ Parameter-Change, Community Spend, and ERC-20 Module proposals are below.
 
 #### Parameter-Change Proposal
 
-1. Problem/Value - generally the problem or value that's motivating the
-   parameter change(s)
-2. Solution - generally how changing the parameter(s) will address the problem
-   or improve the network
-   - the beneficiaries of the change(s) (ie. who will these changes impact and
-     how?)
-     - voters should understand the importance of the change(s) in a simple way
-3. Risks & Benefits - clearly describe how making this/these change(s) may
-   expose stakeholders to new benefits and/or risks
-4. Supplementary materials - optional materials eg. models, graphs, tables,
-   research, signed petition, etc
+1.  Problem/Value - generally the problem or value that's motivating the
+    parameter change(s)
+2.  Solution - generally how changing the parameter(s) will address the problem
+    or improve the network
+    *   the beneficiaries of the change(s) (ie. who will these changes impact and
+        how?)
+        *   voters should understand the importance of the change(s) in a simple way
+3.  Risks & Benefits - clearly describe how making this/these change(s) may
+    expose stakeholders to new benefits and/or risks
+4.  Supplementary materials - optional materials eg. models, graphs, tables,
+    research, signed petition, etc
 
 #### Community Spend Proposal
 
-1. Applicant(s) - the profile of the person(s)/entity making the proposal
-   - who you are and your involvement in Cosmos and/or other blockchain networks
-   - an overview of team members involved and their relevant experience
-   - brief mission statement for your organization/business (if applicable) eg.
-     website
-   - past work you've done eg. include your Github
-   - some sort of proof of who you are eg. Keybase
-2. Problem - generally what you're solving and/or opportunity you're addressing
-   - provide relevant information about both past and present issues created by
-     this problem
-   - give suggestions as to the state of the future if this work is not
-     completed
-3. Solution - generally how you're proposing to deliver the solution
-   - your plan to fix the problem or deliver value
-   - the beneficiaries of this plan (ie. who will your plan impact and how?)
-     - follow the "as a user" template ie. write a short user story about the
-       problem you are trying to solve and how users will interact with what
-       you're proposing to deliver (eg. benefits and functionality from a user’s
-       perspective)
-     - voters should understand the value of what you're providing in a simple
-       way
-   - your reasons for selecting this plan
-   - your motivation for delivering this solution/value
-4. Funding - amount and denomination proposed eg. 5000 EVMOS
-   - the entity controlling the account receiving the funding
-   - consider an itemized breakdown of funding per major deliverable
-   - consider outlining how the funds will be spent
-5. Deliverables and timeline - the specifics of what you're delivering and how,
-   and what to expect
-   - what are the specific deliverables? (be detailed)
-   - when will each of these be delivered?
-   - will there be a date at which the project will be considered failed if the
-     deliverables have not been met?
-   - how will each of these be delivered?
-   - what will happen if you do not deliver on time?
-     - what is the deadline for the project to be considered failed?
-     - do you have a plan to return the funds?
-   - how will you be accountable to Evmos stakeholders?
-     - how will you communicate updates and how often?
-     - how can the community observe your progress?
-     - how can the community provide feedback?
-   - how should the quality of deliverables be assessed? eg. metrics
-6. Relationships and disclosures
-   - have you received or applied for grants or funding? for similar work? eg.
-     from the
-     [Evmos Grants Program](https://medium.com/evmos/announcing-evmos-grants-78aa28562db6)
-   - how will you and/or your organization benefit?
-   - do you see this work continuing in the future and is there a plan?
-   - what are the risks involved with this work?
-   - do you have conflicts of interest to declare?
+1.  Applicant(s) - the profile of the person(s)/entity making the proposal
+    *   who you are and your involvement in Cosmos and/or other blockchain networks
+    *   an overview of team members involved and their relevant experience
+    *   brief mission statement for your organization/business (if applicable) eg.
+        website
+    *   past work you've done eg. include your Github
+    *   some sort of proof of who you are eg. Keybase
+2.  Problem - generally what you're solving and/or opportunity you're addressing
+    *   provide relevant information about both past and present issues created by
+        this problem
+    *   give suggestions as to the state of the future if this work is not
+        completed
+3.  Solution - generally how you're proposing to deliver the solution
+    *   your plan to fix the problem or deliver value
+    *   the beneficiaries of this plan (ie. who will your plan impact and how?)
+        *   follow the "as a user" template ie. write a short user story about the
+            problem you are trying to solve and how users will interact with what
+            you're proposing to deliver (eg. benefits and functionality from a user’s
+            perspective)
+        *   voters should understand the value of what you're providing in a simple
+            way
+    *   your reasons for selecting this plan
+    *   your motivation for delivering this solution/value
+4.  Funding - amount and denomination proposed eg. 5000 EVMOS
+    *   the entity controlling the account receiving the funding
+    *   consider an itemized breakdown of funding per major deliverable
+    *   consider outlining how the funds will be spent
+5.  Deliverables and timeline - the specifics of what you're delivering and how,
+    and what to expect
+    *   what are the specific deliverables? (be detailed)
+    *   when will each of these be delivered?
+    *   will there be a date at which the project will be considered failed if the
+        deliverables have not been met?
+    *   how will each of these be delivered?
+    *   what will happen if you do not deliver on time?
+        *   what is the deadline for the project to be considered failed?
+        *   do you have a plan to return the funds?
+    *   how will you be accountable to Evmos stakeholders?
+        *   how will you communicate updates and how often?
+        *   how can the community observe your progress?
+        *   how can the community provide feedback?
+    *   how should the quality of deliverables be assessed? eg. metrics
+6.  Relationships and disclosures
+    *   have you received or applied for grants or funding? for similar work? eg.
+        from the
+        [Evmos Grants Program](https://medium.com/evmos/announcing-evmos-grants-78aa28562db6)
+    *   how will you and/or your organization benefit?
+    *   do you see this work continuing in the future and is there a plan?
+    *   what are the risks involved with this work?
+    *   do you have conflicts of interest to declare?
 
 #### ERC-20 Proposal
 
-1. Applicant(s) - the profile of the person(s)/entity making the proposal
-   - who you are and your involvement in Cosmos and/or other blockchain networks
-   - an overview of team members involved and their relevant experience
-   - brief mission statement for your organization/business (if applicable) eg.
-     website
-   - past work you've done eg. include your Github
-   - some sort of proof of who you are eg. Keybase
-2. Background information - promote understanding of the ERC-20 Module
-   - a mention of the original
-     [blog post](https://medium.com/evmos/introducing-evmos-erc20-module-f40a61e05273)
-     that introduced the ERC-20 Module
-   - a brief explanation of what the ERC-20 Module does
-   - a mention of the
-     [ERC-20 Module documentation](https://docs.evmos.org/modules/erc20/)
-3. Solution - generally how ERC-20 Module changes will be made
-   - a brief explanation of what the proposal will do if it passes
-   - a brief explanation of the precautions taken, how it was tested, and who
-     was consulted prior to making the proposal
-   - a breakdown of the proposal's payload, and third-party review
-   - a brief explanation of the risks involved (depending on the direction of
-     IBC Coin, ERC-20)
-   - ensure the following are both adhered to and documented:
-     - the contracts are verified (either through the
-       [EVM explorer](https://evm.evmos.org) or via
-       [Sourcify](https://sourcify.dev))
-     - the contracts are deployed open-source
-     - the contracts do not extend the `IERC20.sol` interface through a
-       malicious implementation
-     - the contracts use the main libraries for ERC-20s (eg.
-       [OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/erc20),
-       [dapp.tools](https://dapp.tools/))
-     - the transfer logic is not modified (i.e. transfer logic is not directly
-       manipulated)
-     - no malicious `Approve` events can directly manipulate users' balance
-       through a delayed granted allowance
+1.  Applicant(s) - the profile of the person(s)/entity making the proposal
+    *   who you are and your involvement in Cosmos and/or other blockchain networks
+    *   an overview of team members involved and their relevant experience
+    *   brief mission statement for your organization/business (if applicable) eg.
+        website
+    *   past work you've done eg. include your Github
+    *   some sort of proof of who you are eg. Keybase
+2.  Background information - promote understanding of the ERC-20 Module
+    *   a mention of the original
+        [blog post](https://medium.com/evmos/introducing-evmos-erc20-module-f40a61e05273)
+        that introduced the ERC-20 Module
+    *   a brief explanation of what the ERC-20 Module does
+    *   a mention of the
+        [ERC-20 Module documentation](https://docs.evmos.org/modules/erc20/)
+3.  Solution - generally how ERC-20 Module changes will be made
+    *   a brief explanation of what the proposal will do if it passes
+    *   a brief explanation of the precautions taken, how it was tested, and who
+        was consulted prior to making the proposal
+    *   a breakdown of the proposal's payload, and third-party review
+    *   a brief explanation of the risks involved (depending on the direction of
+        IBC Coin, ERC-20)
+    *   ensure the following are both adhered to and documented:
+        *   the contracts are verified (either through the
+            [EVM explorer](https://evm.evmos.org) or via
+            [Sourcify](https://sourcify.dev))
+        *   the contracts are deployed open-source
+        *   the contracts do not extend the `IERC20.sol` interface through a
+            malicious implementation
+        *   the contracts use the main libraries for ERC-20s (eg.
+            [OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/erc20),
+            [dapp.tools](https://dapp.tools/))
+        *   the transfer logic is not modified (i.e. transfer logic is not directly
+            manipulated)
+        *   no malicious `Approve` events can directly manipulate users' balance
+            through a delayed granted allowance
 
 Remember to provide links to the relevant
 [Commonwealth Evmos community](https://commonwealth.im/evmos) discussions
@@ -265,19 +265,19 @@ for details on writing markdown files.
 
 ### Engage the community with your draft proposal
 
-1. Post a discussion in the
-   [Commonwealth Evmos community](https://commonwealth.im/evmos). Ideally this
-   should contain a link to this repository, either directly to your proposal if
-   it has been merged, or else to a pull-request containing your proposal if it
-   has not been merged yet.
-2. Directly engage key members of the community for feedback. These could be
-   large contributors, those likely to be most impacted by the proposal, and
-   entities with high stake-backing (eg. high-ranked validators; large stakers).
-3. Target members of the community in a semi-public way before bringing the
-   draft to a full public audience. The burden of public scrutiny in a
-   semi-anonymized environment (eg. Twitter) can be stressful and overwhelming
-   without establishing support. Solicit opinions in places with people who have
-   established reputations first.
+1.  Post a discussion in the
+    [Commonwealth Evmos community](https://commonwealth.im/evmos). Ideally this
+    should contain a link to this repository, either directly to your proposal if
+    it has been merged, or else to a pull-request containing your proposal if it
+    has not been merged yet.
+2.  Directly engage key members of the community for feedback. These could be
+    large contributors, those likely to be most impacted by the proposal, and
+    entities with high stake-backing (eg. high-ranked validators; large stakers).
+3.  Target members of the community in a semi-public way before bringing the
+    draft to a full public audience. The burden of public scrutiny in a
+    semi-anonymized environment (eg. Twitter) can be stressful and overwhelming
+    without establishing support. Solicit opinions in places with people who have
+    established reputations first.
 
 ### Submit your proposal to the testnet
 
@@ -335,9 +335,9 @@ At this point you'll want to track which validator has voted and which has not.
 You'll want to re-engage directly with top stake-holders, ie. the
 highest-ranking validator operators, to ensure that:
 
-1. they are aware of your proposal;
-2. they can ask you any questions about your proposal; and
-3. they are prepared to vote.
+1.  they are aware of your proposal;
+2.  they can ask you any questions about your proposal; and
+3.  they are prepared to vote.
 
 Remember that any voter may change their vote at any time before the voting
 period ends. That historically doesn't happen often, but there may be an

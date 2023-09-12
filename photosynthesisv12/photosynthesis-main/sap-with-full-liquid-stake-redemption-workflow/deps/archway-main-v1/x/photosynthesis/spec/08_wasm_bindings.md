@@ -14,8 +14,8 @@ query a specific module data by a contract.
 
 This query is expected to fail if:
 
-- Query has no sub-query specified (`rewards` field is not defined);
-- Query has more than one sub-query specified;
+*   Query has no sub-query specified (`rewards` field is not defined);
+*   Query has more than one sub-query specified;
 
 ## Custom message
 
@@ -24,8 +24,8 @@ send a module specific state change message by a contract.
 
 This message is expected to fail if:
 
-- Message has no sub-message specified (`rewards` field is not defined);
-- Message has more than one sub-message specified;
+*   Message has no sub-message specified (`rewards` field is not defined);
+*   Message has more than one sub-message specified;
 
 ## Rewards module bindings
 
@@ -36,9 +36,9 @@ used to query the `x/rewards` module specific data.
 
 This query is expected to fail if:
 
-- Query has no request specified (`metadata` and `rewards_records` fields are
-  not defined);
-- Query has more than one request specified;
+*   Query has no request specified (`metadata` and `rewards_records` fields are
+    not defined);
+*   Query has more than one request specified;
 
 #### Metadata
 
@@ -69,7 +69,7 @@ Example response:
 
 #### Rewards records
 
-The [rewards_records](../../../wasmbinding/rewards/types/query_records.go#L17)
+The [rewards\_records](../../../wasmbinding/rewards/types/query_records.go#L17)
 request returns the paginated list of `RewardsRecord` objects credited to an
 account address. A
 [RewardsRecord](../../../wasmbinding/rewards/types/query_records.go#L35) entry
@@ -161,13 +161,13 @@ used to send the `x/rewards` module specific state change message.
 
 This message is expected to fail if:
 
-- Message has no operations specified (`update_metadata` and `withdraw_rewards`
-  and `set_flat_fee` fields are not defined);
-- Message has more than one operation specified;
+*   Message has no operations specified (`update_metadata` and `withdraw_rewards`
+    and `set_flat_fee` fields are not defined);
+*   Message has more than one operation specified;
 
 #### Update metadata
 
-The [update_metadata](../../../wasmbinding/rewards/types/msg_metadata.go#L12)
+The [update\_metadata](../../../wasmbinding/rewards/types/msg_metadata.go#L12)
 request is used to update an existing contract metadata.
 
 Message example (CosmWasm's `CosmosMsg`):
@@ -187,25 +187,25 @@ Message example (CosmWasm's `CosmosMsg`):
 
 Sub-message fields:
 
-- `owner_address` - update the contract metadata owner address (optional).
-  Update is skipped if this field is omitted or empty.
-- `rewards_address` - update the contract rewards received address (optional).
-  Update is skipped if this field is omitted or empty.
+*   `owner_address` - update the contract metadata owner address (optional).
+    Update is skipped if this field is omitted or empty.
+*   `rewards_address` - update the contract rewards received address (optional).
+    Update is skipped if this field is omitted or empty.
 
 This sub-message doesn't return a response data.
 
 This sub-message is expected to fail if:
 
-- Contract does not exist;
-- Metadata is not set for a contract;
-- No fields to update were set (`owner_address` and `rewards_address` are
-  empty);
-- The contract address is not set as the metadata's `owner_address` (request is
-  unauthorized);
+*   Contract does not exist;
+*   Metadata is not set for a contract;
+*   No fields to update were set (`owner_address` and `rewards_address` are
+    empty);
+*   The contract address is not set as the metadata's `owner_address` (request is
+    unauthorized);
 
 #### Withdraw rewards
 
-The [withdraw_rewards](../../../wasmbinding/rewards/types/msg_withdraw.go#L12)
+The [withdraw\_rewards](../../../wasmbinding/rewards/types/msg_withdraw.go#L12)
 request is used to withdraw the current credited to a contract address reward
 tokens.
 
@@ -217,17 +217,17 @@ This sub-message uses `RewardsRecord` objects that are created for a specific
 command has two operation modes, which defines which `RewardsRecord` objects to
 process:
 
-- *Records by limit* - select the first N `RewardsRecord` objects available;
-- *Records by IDs* - select specific `RewardsRecord` objects by their IDs;
+*   *Records by limit* - select the first N `RewardsRecord` objects available;
+*   *Records by IDs* - select specific `RewardsRecord` objects by their IDs;
 
 Sub-message is expected to fail if:
 
-- Specified `records_limit` field value or the length of `record_ids` exceeds
-  the `MaxWithdrawRecords` module parameter;
-- The `records_limit` and the `record_ids` fields are both set (one of is
-  allowed);
-- Provided record ID is not found;
-- Provided record ID is not linked to the `contract_address`;
+*   Specified `records_limit` field value or the length of `record_ids` exceeds
+    the `MaxWithdrawRecords` module parameter;
+*   The `records_limit` and the `record_ids` fields are both set (one of is
+    allowed);
+*   Provided record ID is not found;
+*   Provided record ID is not linked to the `contract_address`;
 
 Message example (CosmWasm's `CosmosMsg`):
 
@@ -263,7 +263,7 @@ Response example:
 
 #### Set Flat Fee
 
-The [set_flat_fee](../../../wasmbinding/rewards/types/msg_flatfee.go#L12)
+The [set\_flat\_fee](../../../wasmbinding/rewards/types/msg_flatfee.go#L12)
 request is used to update an existing contract metadata.
 
 Message example (CosmWasm's `CosmosMsg`):
@@ -286,18 +286,18 @@ Message example (CosmWasm's `CosmosMsg`):
 
 Sub-message fields:
 
-- `contract_address` - the contract address to update the flat fee for.
-- `flat_fee_amount` - flat fee amount .
+*   `contract_address` - the contract address to update the flat fee for.
+*   `flat_fee_amount` - flat fee amount .
 
 This sub-message doesn't return a response data. If the message coins zero value
 amount, the existing flat fee is removed.
 
 This sub-message is expected to fail if:
 
-- Contract does not exist;
-- Metadata is not set for a contract;
-- The contract address is not set as the metadata's `owner_address` (request is
-  unauthorized);
+*   Contract does not exist;
+*   Metadata is not set for a contract;
+*   The contract address is not set as the metadata's `owner_address` (request is
+    unauthorized);
 
 ## Usage examples
 

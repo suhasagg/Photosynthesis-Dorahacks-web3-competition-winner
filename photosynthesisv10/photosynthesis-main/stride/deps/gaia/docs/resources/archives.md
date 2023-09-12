@@ -1,6 +1,8 @@
 ***
 
-## order: 2&#xA;title: Cosmos Hub Archives
+order: 2
+title: Cosmos Hub Archives
+--------------------------
 
 # Cosmos Hub Archives
 
@@ -21,9 +23,9 @@ links where you can find the information:
 
 ### Big Dipper
 
-- [Cosmos Hub 1](https://cosmoshub-1.bigdipper.live/)
-- [Cosmos Hub 2](https://cosmoshub-2.bigdipper.live/)
-- [Cosmos Hub 3](https://cosmoshub-3.bigdipper.live/)
+*   [Cosmos Hub 1](https://cosmoshub-1.bigdipper.live/)
+*   [Cosmos Hub 2](https://cosmoshub-2.bigdipper.live/)
+*   [Cosmos Hub 3](https://cosmoshub-3.bigdipper.live/)
 
 If you want to makes archives available to the community, feel free to open a PR
 to this file and add them.

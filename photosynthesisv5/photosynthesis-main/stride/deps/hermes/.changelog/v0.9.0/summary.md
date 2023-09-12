@@ -49,4 +49,3 @@ then on top of the changes above, `mode.connections.enabled` and `mode.chhanels.
 [See the relevant section][config-mode-toml] of the documented `config.toml` file in the repository for more details.
 
 [config-mode-toml]: https://github.com/informalsystems/ibc-rs/blob/v0.9.0/config.toml#L9-L59
-

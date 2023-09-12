@@ -17,7 +17,7 @@ The tracking module measures gas consumption per transaction.
 
 Transactions could have multiple operations for one or more contracts (for
 example contract A calls contract B). In order to persist this information, the
-[ContractOperationInfo](01\_state.md#ContractOperationInfo) object is used.
+[ContractOperationInfo](01_state.md#ContractOperationInfo) object is used.
 
 > This object is pruned as soon as rewards are disbursed by the
 > [x/rewards module](../../rewards/spec/README.md).
@@ -27,18 +27,18 @@ example contract A calls contract B). In order to persist this information, the
 In order to accurately measure gas consumption, each tracked transaction must
 have:
 
-- a unique ID increased sequentially;
-- height related to the block height of the transaction;
-- total gas represented by the sum of gas consumed in all contract operations:
+*   a unique ID increased sequentially;
+*   height related to the block height of the transaction;
+*   total gas represented by the sum of gas consumed in all contract operations:
 
-  $$
-  TotalGas  = GasSDK + GasVM
-  $$
+    $$
+    TotalGas  = GasSDK + GasVM
+    $$
 
-  where:
+    where:
 
-  - *GasSDK* - total gas used by the transaction outside of the VM;
-  - *GasVM* - total gas used by contract within the CosmWasm VM;
+    *   *GasSDK* - total gas used by the transaction outside of the VM;
+    *   *GasVM* - total gas used by contract within the CosmWasm VM;
 
 ### Tracking engine
 
@@ -55,15 +55,15 @@ operation gas usage.
 
 Tx tracking happens as follows:
 
-1. Tx is received by [ante handler](02\_ante_handlers.md).
-2. An empty [TxInfo](01\_state.md#TxInfo) is created.
-3. \[Gas processor]\(README.md#Gas processor) creates a new
-   [ContractOperationInfo](01\_state.md#ContractOperationInfo).
-4. [EndBlocker](03\_end_block.md) finalizes tx tracking for the current block.
+1.  Tx is received by [ante handler](02_ante_handlers.md).
+2.  An empty [TxInfo](01_state.md#TxInfo) is created.
+3.  \[Gas processor]\(README.md#Gas processor) creates a new
+    [ContractOperationInfo](01_state.md#ContractOperationInfo).
+4.  [EndBlocker](03_end_block.md) finalizes tx tracking for the current block.
 
 ## Contents
 
-1. **[State](01\_state.md)**
-2. **[Ante Handlers](02\_ante_handlers.md)**
-3. **[End-Block](03\_end_block.md)**
-4. **[Client](04\_client.md)**
+1.  **[State](01_state.md)**
+2.  **[Ante Handlers](02_ante_handlers.md)**
+3.  **[End-Block](03_end_block.md)**
+4.  **[Client](04_client.md)**

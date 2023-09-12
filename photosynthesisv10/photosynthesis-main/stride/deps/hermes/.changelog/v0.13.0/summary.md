@@ -20,9 +20,9 @@ Hermes will relay on all existing and future channels, including ICA channels.
 
 There are two kinds of ICA channels:
 
-1. The host channels, whose port is `icahost`
-2. The controller channels, whose port starts with `icacontroller-` followed
-   by the owner account address. [See the spec for more details][ica].
+1.  The host channels, whose port is `icahost`
+2.  The controller channels, whose port starts with `icacontroller-` followed
+    by the owner account address. [See the spec for more details][ica].
 
 If you wish to only relay on a few specific standard channels (here `channel-0` and `channel-1`),
 but also relay on all ICA channels, you can specify the following packet filter:
@@ -55,5 +55,5 @@ list = [
 This information can also be found in the [Hermes guide][guide-ica].
 
 [ica]: https://github.com/cosmos/ibc/blob/master/spec/app/ics-027-interchain-accounts/README.md
-[guide-ica]: https://hermes.informal.systems/config.html#support-for-interchain-accounts
 
+[guide-ica]: https://hermes.informal.systems/config.html#support-for-interchain-accounts

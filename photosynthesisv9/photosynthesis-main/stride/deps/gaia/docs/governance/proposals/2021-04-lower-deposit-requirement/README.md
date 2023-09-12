@@ -10,12 +10,12 @@ the requirement to 64 ATOMS.
 
 ## Objectives
 
-1. Enable community members with good ideas but little capital to participate in
-   governance and request resources from the community pool treasury.
-2. Improve the governance UX for holders who keep most of their ATOM staked.
-3. Increase utilisation of treasury (currently 666,457 ATOM, approximately $14
-   MM USD, at time of writing).
-4. Accelerate Cosmos Hub development and growth.
+1.  Enable community members with good ideas but little capital to participate in
+    governance and request resources from the community pool treasury.
+2.  Improve the governance UX for holders who keep most of their ATOM staked.
+3.  Increase utilisation of treasury (currently 666,457 ATOM, approximately $14
+    MM USD, at time of writing).
+4.  Accelerate Cosmos Hub development and growth.
 
 ## Background
 
@@ -84,12 +84,12 @@ will help in the short-term.
 The following items summarise the voting options and what it means for this
 proposal.
 
-- **YES**: You approve the parameter change proposal to decrease the governance
-  proposal deposit requirements from 512 to 64 ATOMs.
-- **NO**: You disapprove of the parameter change in its current form (please
-  indicate in the Cosmos Forum why this is the case).
-- **NO WITH VETO**: You are strongly opposed to this change and will exit the
-  network if passed.
-- **ABSTAIN**: You are impartial to the outcome of the proposal.
+*   **YES**: You approve the parameter change proposal to decrease the governance
+    proposal deposit requirements from 512 to 64 ATOMs.
+*   **NO**: You disapprove of the parameter change in its current form (please
+    indicate in the Cosmos Forum why this is the case).
+*   **NO WITH VETO**: You are strongly opposed to this change and will exit the
+    network if passed.
+*   **ABSTAIN**: You are impartial to the outcome of the proposal.
 
 <!-- markdown-link-check-enable -->

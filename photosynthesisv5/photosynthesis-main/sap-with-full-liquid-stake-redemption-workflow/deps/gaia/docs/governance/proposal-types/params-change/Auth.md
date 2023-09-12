@@ -31,9 +31,9 @@ Cosmos Hub transactions, whether sending funds, delegating, voting, or other
 transaction types. This parameter limits the number of characters that may be
 included in the memo line of each transaction.
 
-- on-chain value: `{{ $themeConfig.currentParameters.auth.MaxMemoCharacters }}`
-- `cosmoshub-4` genesis: `512`
-- `cosmoshub-3` genesis: `512`
+*   on-chain value: `{{ $themeConfig.currentParameters.auth.MaxMemoCharacters }}`
+*   `cosmoshub-4` genesis: `512`
+*   `cosmoshub-3` genesis: `512`
 
 #### Decreasing the value of `MaxMemoCharacters`
 
@@ -64,9 +64,9 @@ Users and applications may create multisignature (aka multisig) accounts. These
 accounts require more than one signature to generate a transaction. This
 parameter limits the number of signatures in a transaction.
 
-- on-chain value: `{{ $themeConfig.currentParameters.auth.TxSigLimit }}`
-- `cosmoshub-4` genesis: `7`
-- `cosmoshub-3` genesis: `7`
+*   on-chain value: `{{ $themeConfig.currentParameters.auth.TxSigLimit }}`
+*   `cosmoshub-4` genesis: `7`
+*   `cosmoshub-3` genesis: `7`
 
 #### Decreasing the value of `TxSigLimit`
 
@@ -93,9 +93,9 @@ is costlier than other operations).
 `TxSizeCostPerByte` is used to compute the gas-unit consumption for each
 transaction.
 
-- on-chain value: `{{ $themeConfig.currentParameters.auth.TxSizeCostPerByte }}`
-- `cosmoshub-4` genesis: `10`
-- `cosmoshub-3` genesis: `10`
+*   on-chain value: `{{ $themeConfig.currentParameters.auth.TxSizeCostPerByte }}`
+*   `cosmoshub-4` genesis: `10`
+*   `cosmoshub-3` genesis: `10`
 
 #### Decreasing the value of `TxSizeCostPerByte`
 
@@ -120,10 +120,10 @@ Curve25519) that is used by Cosmos Hub validators. `SigVerifyCostED25519` is the
 gas (ie. computational) cost for verifying ED25519 signatures, and ED25519-based
 transactions are not currently accepted by the Cosmos Hub.
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.auth.SigVerifyCostED25519 }}`
-- `cosmoshub-4` genesis: `590`
-- `cosmoshub-3` genesis: `590`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.auth.SigVerifyCostED25519 }}`
+*   `cosmoshub-4` genesis: `590`
+*   `cosmoshub-3` genesis: `590`
 
 #### Decreasing the value of `SigVerifyCostED25519`
 
@@ -156,10 +156,10 @@ used by user accounts in the Cosmos Hub. `SigVerifyCostSecp256k1` is the gas
 (ie. computational) cost for verifying Secp256k1 signatures. Practically all
 Cosmos Hub transactions require Secp256k1 signature verifications.
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.auth.SigVerifyCostSecp256k1 }}`
-- `cosmoshub-4` default: `1000`
-- `cosmoshub-3` default: `1000`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.auth.SigVerifyCostSecp256k1 }}`
+*   `cosmoshub-4` default: `1000`
+*   `cosmoshub-3` default: `1000`
 
 #### Decreasing the value of `SigVerifyCostSecp256k1`
 

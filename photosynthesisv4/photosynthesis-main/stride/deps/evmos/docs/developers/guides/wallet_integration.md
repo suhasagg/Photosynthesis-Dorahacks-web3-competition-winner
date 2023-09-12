@@ -14,17 +14,17 @@ covered here? Check out both the
 
 ## Pre-requisite Readings
 
-- [MetaMask documentation](https://docs.metamask.io/guide/) {prereq}
-- [Keplr documentation](https://docs.keplr.app/) {prereq}
+*   [MetaMask documentation](https://docs.metamask.io/guide/) {prereq}
+*   [Keplr documentation](https://docs.keplr.app/) {prereq}
 
 ## Implementation Checklist
 
 The integration implementation checklist for dApp developers consists of three
 categories:
 
-1. [Frontend features](#frontend)
-2. [Transactions and wallet interactions](#transactions)
-3. [Client-side provider](#connections)
+1.  [Frontend features](#frontend)
+2.  [Transactions and wallet interactions](#transactions)
+3.  [Client-side provider](#connections)
 
 ### Frontend
 
@@ -48,8 +48,8 @@ Developers should determine whether users are using Keplr or MetaMask. Whether
 MetaMask or Keplr is installed on the user device can be determined by checking
 the corresponding `window.ethereum` or `window.keplr` value.
 
-- **For MetaMask**: `await window.ethereum.enable(chainId);`
-- **For Keplr**: `await window.keplr.enable(chainId);`
+*   **For MetaMask**: `await window.ethereum.enable(chainId);`
+*   **For Keplr**: `await window.keplr.enable(chainId);`
 
 If either `window.ethereum` or `window.keplr` returns `undefined` after
 `document.load`, then MetaMask (or, correspondingly, Keplr) is not installed.

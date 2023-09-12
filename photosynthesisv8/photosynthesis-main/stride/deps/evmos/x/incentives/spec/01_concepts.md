@@ -48,11 +48,11 @@ Users can be rewarded in several coin denominations. These are organized in
 `allocations`. An allocation includes the coin denomination and the percentage
 of rewards that are allocated from the inflation pool.
 
-- There is a cap on how high the reward percentage can be per allocation. It is
-  defined via the chain parameters and can be modified via governance
-- The amount of incentives is limited by the sum of all active incentivized
-  contracts' allocations. If the sum is > 100%, no further incentive can be
-  proposed until another allocation becomes inactive.
+*   There is a cap on how high the reward percentage can be per allocation. It is
+    defined via the chain parameters and can be modified via governance
+*   The amount of incentives is limited by the sum of all active incentivized
+    contracts' allocations. If the sum is > 100%, no further incentive can be
+    proposed until another allocation becomes inactive.
 
 ## Distribution
 

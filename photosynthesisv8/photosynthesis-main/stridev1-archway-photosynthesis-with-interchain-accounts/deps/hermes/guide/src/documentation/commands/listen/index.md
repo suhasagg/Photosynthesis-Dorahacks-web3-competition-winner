@@ -154,16 +154,16 @@ listen for.
 
 At the moment, two event types are available:
 
-- `NewBlock`
-- `Tx`
+*   `NewBlock`
+*   `Tx`
 
 The `--event` flag can be repeated to specify more than one event type.
 
-- To listen for only `NewBlock` events on `ibc-0`, invoke
-  `hermes listen --chain ibc-0 --events NewBlock`
-- To listen for only `Tx` events on `ibc-0`, invoke
-  `hermes listen --chain ibc-0 --events Tx`
-- To listen for both `NewBlock` and `Tx` events on `ibc-0`, invoke
-  `hermes listen --chain ibc-0 --events NewBlock Tx`
+*   To listen for only `NewBlock` events on `ibc-0`, invoke
+    `hermes listen --chain ibc-0 --events NewBlock`
+*   To listen for only `Tx` events on `ibc-0`, invoke
+    `hermes listen --chain ibc-0 --events Tx`
+*   To listen for both `NewBlock` and `Tx` events on `ibc-0`, invoke
+    `hermes listen --chain ibc-0 --events NewBlock Tx`
 
 If the `--event` flag is omitted, the relayer will subscribe to all event types.

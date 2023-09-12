@@ -36,19 +36,15 @@ cd gaia && make install
 만약 다음과 같은 에러 메시지로 명령어가 실패하는 경우, 이미 `LDFLAGS`를 설정하셨
 을 수 있습니다.
 
-```
-# github.com/cosmos/gaia/cmd/gaiad
-flag provided but not defined: -L
-usage: link [options] main.o
-...
-make: *** [install] Error 2
-```
+    # github.com/cosmos/gaia/cmd/gaiad
+    flag provided but not defined: -L
+    usage: link [options] main.o
+    ...
+    make: *** [install] Error 2
 
 해당 환경변수를 언세팅 하신 후 다시 시도해보세요.
 
-```
-LDFLAGS="" make install
-```
+    LDFLAGS="" make install
 
 > *참고*: 여기에서 문제가 발생한다면, Go의 최신 스테이블 버전이 설치되어있는지
 > 확인하십시오.
@@ -92,11 +88,11 @@ go: go version go1.12.5 darwin/amd64
 코스모스 SDK 또는 텐더민트의 변경 사항을 테스팅하기 위해서는 `replace` 항목이
 `go.mod`에 추가하여 올바른 import path를 제공해야합니다.
 
-- 변경 사항 적용
-- `go.mod`에 `replace github.com/cosmos/cosmos-sdk => /path/to/clone/cosmos-sdk`
-  추가
-- `make clean install` 또는 `make clean build` 실행
-- 변경 사항 테스트
+*   변경 사항 적용
+*   `go.mod`에 `replace github.com/cosmos/cosmos-sdk => /path/to/clone/cosmos-sdk`
+    추가
+*   `make clean install` 또는 `make clean build` 실행
+*   변경 사항 테스트
 
 ### 다음 절차
 

@@ -25,12 +25,12 @@ Closes: #XXX
 
 I have...
 
-- \[ ] Run and PASSED locally all GAIA integration tests
-- \[ ] If the change is contentful, I either:
-  - \[ ] Added a new unit test OR
-  - \[ ] Added test cases to existing unit tests
-- \[ ] OR this change is a trivial rework / code cleanup without any test
-  coverage
+*   \[ ] Run and PASSED locally all GAIA integration tests
+*   \[ ] If the change is contentful, I either:
+    *   \[ ] Added a new unit test OR
+    *   \[ ] Added test cases to existing unit tests
+*   \[ ] OR this change is a trivial rework / code cleanup without any test
+    coverage
 
 If skipped any of the tests above, explain.
 
@@ -48,21 +48,21 @@ items.*
 
 I have...
 
-- \[ ] reviewed state machine logic
-- \[ ] reviewed API design and naming
-- \[ ] manually tested (if applicable)
-- \[ ] confirmed the author wrote unit tests for new logic
-- \[ ] reviewed documentation exists and is accurate
+*   \[ ] reviewed state machine logic
+*   \[ ] reviewed API design and naming
+*   \[ ] manually tested (if applicable)
+*   \[ ] confirmed the author wrote unit tests for new logic
+*   \[ ] reviewed documentation exists and is accurate
 
 ## Documentation and Release Note
 
-- \[ ] Does this pull request introduce a new feature or user-facing behavior
-  changes?
-- \[ ] Is a relevant changelog entry added to the `Unreleased` section in
-  `CHANGELOG.md`?
-- \[ ] This pull request updates existing proto field values (and require a
-  backend and frontend migration)?
-- \[ ] Does this pull request change existing proto field names (and require a
-  frontend migration)? How is the feature or change documented? - \[ ] not
-  applicable - \[ ] jira ticket `XXX` - \[ ] specification
-  (`x/<module>/spec/`) - \[ ] README.md - \[ ] not documented <!-- because ... EXPLAIN WHY! -->
+*   \[ ] Does this pull request introduce a new feature or user-facing behavior
+    changes?
+*   \[ ] Is a relevant changelog entry added to the `Unreleased` section in
+    `CHANGELOG.md`?
+*   \[ ] This pull request updates existing proto field values (and require a
+    backend and frontend migration)?
+*   \[ ] Does this pull request change existing proto field names (and require a
+    frontend migration)? How is the feature or change documented? - \[ ] not
+    applicable - \[ ] jira ticket `XXX` - \[ ] specification
+    (`x/<module>/spec/`) - \[ ] README.md - \[ ] not documented <!-- because ... EXPLAIN WHY! -->

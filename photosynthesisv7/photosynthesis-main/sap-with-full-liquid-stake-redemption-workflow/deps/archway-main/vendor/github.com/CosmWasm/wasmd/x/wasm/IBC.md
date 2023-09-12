@@ -30,32 +30,32 @@ as how contracts can properly identify their counterparty.
 (We considered on port for the `x/wasm` module and multiplexing on it, but
 [dismissed that idea](#rejected-ideas))
 
-- Upon `Instantiate`, if a contract is *IBC Enabled*, we dynamically bind a port
-  for this contract. The port name is `wasm.<contract address>`, eg.
-  `wasm.cosmos1hmdudppzceg27qsuq707tjg8rkgj7g5hnvnw29`
-- If a *Channel* is being established with a registered `wasm.xyz` port, the
-  `x/wasm.Keeper` will handle this and call into the appropriate contract to
-  determine supported protocol versions during the
-  [`ChanOpenTry` and `ChanOpenAck` phases](https://docs.cosmos.network/master/ibc/overview.html#channels).
-  (See
-  [Channel Handshake Version Negotiation](https://docs.cosmos.network/master/ibc/custom.html#channel-handshake-version-negotiation))
-- Both the *Port* and the *Channel* are fully owned by one contract.
-- `x/wasm` will allow both *ORDERED* and *UNORDERED* channels and pass that mode
-  down to the contract in `OnChanOpenTry`, so the contract can decide if it
-  accepts the mode. We will recommend the contract developers stick with
-  *ORDERED* channels for custom protocols unless they can reason about async
-  packet timing.
-- When sending a packet, the CosmWasm contract must specify the local
-  *ChannelID*. As there is a unique *PortID* per contract, that is filled in by
-  `x/wasm` to produce the globally unique `(PortID, ChannelID)`
-- When receiving a Packet (or Ack or Timeout), the contracts receives the local
-  *ChannelID* it came from, as well as the packet that was sent by the
-  counterparty.
-- When receiving an Ack or Timeout packet, the contract also receives the
-  original packet that it sent earlier.
-- We do not support multihop packets in this model (they are rejected by
-  `x/wasm`). They are currently not fully specified nor implemented in IBC 1.0,
-  so let us simplify our model until this is well established
+*   Upon `Instantiate`, if a contract is *IBC Enabled*, we dynamically bind a port
+    for this contract. The port name is `wasm.<contract address>`, eg.
+    `wasm.cosmos1hmdudppzceg27qsuq707tjg8rkgj7g5hnvnw29`
+*   If a *Channel* is being established with a registered `wasm.xyz` port, the
+    `x/wasm.Keeper` will handle this and call into the appropriate contract to
+    determine supported protocol versions during the
+    [`ChanOpenTry` and `ChanOpenAck` phases](https://docs.cosmos.network/master/ibc/overview.html#channels).
+    (See
+    [Channel Handshake Version Negotiation](https://docs.cosmos.network/master/ibc/custom.html#channel-handshake-version-negotiation))
+*   Both the *Port* and the *Channel* are fully owned by one contract.
+*   `x/wasm` will allow both *ORDERED* and *UNORDERED* channels and pass that mode
+    down to the contract in `OnChanOpenTry`, so the contract can decide if it
+    accepts the mode. We will recommend the contract developers stick with
+    *ORDERED* channels for custom protocols unless they can reason about async
+    packet timing.
+*   When sending a packet, the CosmWasm contract must specify the local
+    *ChannelID*. As there is a unique *PortID* per contract, that is filled in by
+    `x/wasm` to produce the globally unique `(PortID, ChannelID)`
+*   When receiving a Packet (or Ack or Timeout), the contracts receives the local
+    *ChannelID* it came from, as well as the packet that was sent by the
+    counterparty.
+*   When receiving an Ack or Timeout packet, the contract also receives the
+    original packet that it sent earlier.
+*   We do not support multihop packets in this model (they are rejected by
+    `x/wasm`). They are currently not fully specified nor implemented in IBC 1.0,
+    so let us simplify our model until this is well established
 
 ## Workflow
 
@@ -79,9 +79,9 @@ Here are some ideas we may add in the future
 
 ### Dynamic Ports and Channels
 
-- multiple ports per contract
-- elastic ports that can be assigned to different contracts
-- transfer of channels to another contract
+*   multiple ports per contract
+*   elastic ports that can be assigned to different contracts
+*   transfer of channels to another contract
 
 This is inspired by the Agoric design, but also adds considerable complexity to
 both the `x/wasm` implementation as well as the correctness reasoning of any
@@ -110,36 +110,34 @@ This can be well defined name like `wasm`. Since we always have
 contracts as long as we have a clear way to map the `ChannelID` to a specific
 contract when it is being established.
 
-- On genesis we bind the port `wasm` for all communication with the `x/wasm`
-  module.
-- The *Port* is fully owned by `x/wasm`
-- Each *Channel* is fully owned by one contract.
-- `x/wasm` only accepts *ORDERED Channels* for simplicity of contract
-  correctness.
+*   On genesis we bind the port `wasm` for all communication with the `x/wasm`
+    module.
+*   The *Port* is fully owned by `x/wasm`
+*   Each *Channel* is fully owned by one contract.
+*   `x/wasm` only accepts *ORDERED Channels* for simplicity of contract
+    correctness.
 
 To clarify:
 
-- When a *Channel* is being established with port `wasm`, the `x/wasm.Keeper`
-  must be able to identify for which contract this is destined. **how to do
-  so**??
-  - One idea: the channel name must be the contract address. This means (`wasm`,
-    `cosmos13d...`) will map to the given contract in the wasm module. The
-    problem with this is that if two contracts from chainA want to connect to
-    the same contracts on chainB, they will want to claim the same *ChannelID*
-    and *PortID*. Not sure how to differentiate multiple parties in this way.
-  - Other ideas: have a special field we send on `OnChanOpenInit` that specifies
-    the destination contract, and allow any *ChannelID*. However, looking at
-    [`OnChanOpenInit` function signature](https://docs.cosmos.network/master/ibc/custom.html#implement-ibcmodule-interface-and-callbacks),
-    I don't see a place to put this extra info, without abusing the version
-    field, which is a
-    [specified field](https://docs.cosmos.network/master/ibc/custom.html#channel-handshake-version-negotiation):
-    ```
-    Versions must be strings but can implement any versioning structure.
-    If your application plans to have linear releases then semantic versioning is recommended.
-    ...
-    Valid version selection includes selecting a compatible version identifier with a subset
-    of features supported by your application for that version.
-    ...
-    ICS20 currently implements basic string matching with a
-    single supported version.
-    ```
+*   When a *Channel* is being established with port `wasm`, the `x/wasm.Keeper`
+    must be able to identify for which contract this is destined. **how to do
+    so**??
+    *   One idea: the channel name must be the contract address. This means (`wasm`,
+        `cosmos13d...`) will map to the given contract in the wasm module. The
+        problem with this is that if two contracts from chainA want to connect to
+        the same contracts on chainB, they will want to claim the same *ChannelID*
+        and *PortID*. Not sure how to differentiate multiple parties in this way.
+    *   Other ideas: have a special field we send on `OnChanOpenInit` that specifies
+        the destination contract, and allow any *ChannelID*. However, looking at
+        [`OnChanOpenInit` function signature](https://docs.cosmos.network/master/ibc/custom.html#implement-ibcmodule-interface-and-callbacks),
+        I don't see a place to put this extra info, without abusing the version
+        field, which is a
+        [specified field](https://docs.cosmos.network/master/ibc/custom.html#channel-handshake-version-negotiation):
+            Versions must be strings but can implement any versioning structure.
+            If your application plans to have linear releases then semantic versioning is recommended.
+            ...
+            Valid version selection includes selecting a compatible version identifier with a subset
+            of features supported by your application for that version.
+            ...
+            ICS20 currently implements basic string matching with a
+            single supported version.

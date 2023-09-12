@@ -52,15 +52,15 @@ In addition to the events described in
 [Packet Relaying](packets.md#packet-relaying), the following IBC events may be
 handled:
 
-- Channels (if `mode.channels.enabled=true`):
+*   Channels (if `mode.channels.enabled=true`):
 
-  - `chan_open_init`: the relayer builds a `MsgChannelOpenTry` message
-  - `chan_open_try`: the relayer builds a `MsgChannelOpenAck` message
-  - `chan_open_ack`: the relayer builds a `MsgChannelOpenConfirm` message
-  - `chan_open_confirm`: no message is sent out, channel opening is finished
+    *   `chan_open_init`: the relayer builds a `MsgChannelOpenTry` message
+    *   `chan_open_try`: the relayer builds a `MsgChannelOpenAck` message
+    *   `chan_open_ack`: the relayer builds a `MsgChannelOpenConfirm` message
+    *   `chan_open_confirm`: no message is sent out, channel opening is finished
 
-- Connections (if `mode.connections.enabled=true`):
-  - `conn_open_init`: the relayer builds a `MsgConnOpenTry` message
-  - `conn_open_try`: the relayer builds a `MsgConnOpenAck` message
-  - `conn_open_ack`: the relayer builds a `MsgConnOpenConfirm` message
-  - `conn_open_confirm`: no message is sent out, connection opening is finished
+*   Connections (if `mode.connections.enabled=true`):
+    *   `conn_open_init`: the relayer builds a `MsgConnOpenTry` message
+    *   `conn_open_try`: the relayer builds a `MsgConnOpenAck` message
+    *   `conn_open_ack`: the relayer builds a `MsgConnOpenConfirm` message
+    *   `conn_open_confirm`: no message is sent out, connection opening is finished

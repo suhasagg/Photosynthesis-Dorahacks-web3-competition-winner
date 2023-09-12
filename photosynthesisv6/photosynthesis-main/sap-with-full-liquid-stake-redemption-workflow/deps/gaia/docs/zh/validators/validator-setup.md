@@ -105,7 +105,7 @@ gaiad gentx \
 定要委托的验证人节点。确保为下面的每个标识提供输入，否则该字段将默认为空（
 `--moniker`默认为机器名称）。
 
-\<key_name>指定你要编辑的验证人。如果你选择不包含此标识，记住必须要含有--from 标
+\<key\_name>指定你要编辑的验证人。如果你选择不包含此标识，记住必须要含有--from 标
 识来指定你要更新的验证人。
 
 `--identity`可用于验证和 Keybase 或 UPort 这样的系统一起验证身份。与 Keybase 一
@@ -128,10 +128,10 @@ gaiad tx staking edit-validator
 
 **注意** : `commission-rate`的值必须符合如下的不变量检查：
 
-- 必须在 0 和 验证人的`commission-max-rate` 之间
-- 不得超过 验证人的`commission-max-change-rate`, 该参数标识**每日**最大的百分点
-  变化数。也就是，一个验证人在`commission-max-change-rate`的界限内每日一次可调整
-  的最大佣金变化。
+*   必须在 0 和 验证人的`commission-max-rate` 之间
+*   不得超过 验证人的`commission-max-change-rate`, 该参数标识**每日**最大的百分点
+    变化数。也就是，一个验证人在`commission-max-change-rate`的界限内每日一次可调整
+    的最大佣金变化。
 
 ## 查看验证人的描述信息
 

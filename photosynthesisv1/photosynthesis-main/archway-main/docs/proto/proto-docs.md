@@ -6,194 +6,194 @@
 
 ## Table of Contents
 
-- [archway/photosynthesis/photosynthesis.proto](#archway/photosynthesis/photosynthesis.proto)
-  - [Coin](#.Coin)
-  - [Contract](#.Contract)
-  - [DepositRecord](#.DepositRecord)
-  - [DepositRecords](#.DepositRecords)
-  - [RedemptionRecord](#.RedemptionRecord)
-  - [RedemptionRecords](#.RedemptionRecords)
+*   [archway/photosynthesis/photosynthesis.proto](#archway/photosynthesis/photosynthesis.proto)
+    *   [Coin](#.Coin)
+    *   [Contract](#.Contract)
+    *   [DepositRecord](#.DepositRecord)
+    *   [DepositRecords](#.DepositRecords)
+    *   [RedemptionRecord](#.RedemptionRecord)
+    *   [RedemptionRecords](#.RedemptionRecords)
 
-- [archway/photosynthesis/query.proto](#archway/photosynthesis/query.proto)
+*   [archway/photosynthesis/query.proto](#archway/photosynthesis/query.proto)
 
-  - [QueryAirdropStatusParams](#.QueryAirdropStatusParams)
+    *   [QueryAirdropStatusParams](#.QueryAirdropStatusParams)
 
-  - [QueryAirdropStatusResponse](#.QueryAirdropStatusResponse)
+    *   [QueryAirdropStatusResponse](#.QueryAirdropStatusResponse)
 
-  - [QueryArchLiquidStakeIntervalRequest](#.QueryArchLiquidStakeIntervalRequest)
+    *   [QueryArchLiquidStakeIntervalRequest](#.QueryArchLiquidStakeIntervalRequest)
 
-  - [QueryArchLiquidStakeIntervalResponse](#.QueryArchLiquidStakeIntervalResponse)
+    *   [QueryArchLiquidStakeIntervalResponse](#.QueryArchLiquidStakeIntervalResponse)
 
-  - [QueryCumulativeLiquidityAmountRequest](#.QueryCumulativeLiquidityAmountRequest)
+    *   [QueryCumulativeLiquidityAmountRequest](#.QueryCumulativeLiquidityAmountRequest)
 
-  - [QueryCumulativeLiquidityAmountResponse](#.QueryCumulativeLiquidityAmountResponse)
+    *   [QueryCumulativeLiquidityAmountResponse](#.QueryCumulativeLiquidityAmountResponse)
 
-  - [QueryLatestRedemptionRecordRequest](#.QueryLatestRedemptionRecordRequest)
+    *   [QueryLatestRedemptionRecordRequest](#.QueryLatestRedemptionRecordRequest)
 
-  - [QueryLatestRedemptionRecordResponse](#.QueryLatestRedemptionRecordResponse)
+    *   [QueryLatestRedemptionRecordResponse](#.QueryLatestRedemptionRecordResponse)
 
-  - [QueryLiquidStakingDepositParams](#.QueryLiquidStakingDepositParams)
+    *   [QueryLiquidStakingDepositParams](#.QueryLiquidStakingDepositParams)
 
-  - [QueryLiquidStakingDepositResponse](#.QueryLiquidStakingDepositResponse)
+    *   [QueryLiquidStakingDepositResponse](#.QueryLiquidStakingDepositResponse)
 
-  - [QueryLiquidTokensParams](#.QueryLiquidTokensParams)
+    *   [QueryLiquidTokensParams](#.QueryLiquidTokensParams)
 
-  - [QueryLiquidityTokenBalanceParams](#.QueryLiquidityTokenBalanceParams)
+    *   [QueryLiquidityTokenBalanceParams](#.QueryLiquidityTokenBalanceParams)
 
-  - [QueryLiquidityTokenBalanceResponse](#.QueryLiquidityTokenBalanceResponse)
+    *   [QueryLiquidityTokenBalanceResponse](#.QueryLiquidityTokenBalanceResponse)
 
-  - [QueryRedemptionIntervalRequest](#.QueryRedemptionIntervalRequest)
+    *   [QueryRedemptionIntervalRequest](#.QueryRedemptionIntervalRequest)
 
-  - [QueryRedemptionIntervalResponse](#.QueryRedemptionIntervalResponse)
+    *   [QueryRedemptionIntervalResponse](#.QueryRedemptionIntervalResponse)
 
-  - [QueryRedemptionRateParams](#.QueryRedemptionRateParams)
+    *   [QueryRedemptionRateParams](#.QueryRedemptionRateParams)
 
-  - [QueryRedemptionRateQueryIntervalRequest](#.QueryRedemptionRateQueryIntervalRequest)
+    *   [QueryRedemptionRateQueryIntervalRequest](#.QueryRedemptionRateQueryIntervalRequest)
 
-  - [QueryRedemptionRateQueryIntervalResponse](#.QueryRedemptionRateQueryIntervalResponse)
+    *   [QueryRedemptionRateQueryIntervalResponse](#.QueryRedemptionRateQueryIntervalResponse)
 
-  - [QueryRedemptionRateResponse](#.QueryRedemptionRateResponse)
+    *   [QueryRedemptionRateResponse](#.QueryRedemptionRateResponse)
 
-  - [QueryRedemptionRateThresholdRequest](#.QueryRedemptionRateThresholdRequest)
+    *   [QueryRedemptionRateThresholdRequest](#.QueryRedemptionRateThresholdRequest)
 
-  - [QueryRedemptionRateThresholdResponse](#.QueryRedemptionRateThresholdResponse)
+    *   [QueryRedemptionRateThresholdResponse](#.QueryRedemptionRateThresholdResponse)
 
-  - [QueryRewardsWithdrawalIntervalRequest](#.QueryRewardsWithdrawalIntervalRequest)
+    *   [QueryRewardsWithdrawalIntervalRequest](#.QueryRewardsWithdrawalIntervalRequest)
 
-  - [QueryRewardsWithdrawalIntervalResponse](#.QueryRewardsWithdrawalIntervalResponse)
+    *   [QueryRewardsWithdrawalIntervalResponse](#.QueryRewardsWithdrawalIntervalResponse)
 
-  - [Query](#.Query)
+    *   [Query](#.Query)
 
-- [archway/photosynthesis/tx.proto](#archway/photosynthesis/tx.proto)
+*   [archway/photosynthesis/tx.proto](#archway/photosynthesis/tx.proto)
 
-  - [MsgLiquidStakeDeposit](#.MsgLiquidStakeDeposit)
+    *   [MsgLiquidStakeDeposit](#.MsgLiquidStakeDeposit)
 
-  - [MsgMintNFT](#.MsgMintNFT)
+    *   [MsgMintNFT](#.MsgMintNFT)
 
-  - [MsgRedeemLiquidTokens](#.MsgRedeemLiquidTokens)
+    *   [MsgRedeemLiquidTokens](#.MsgRedeemLiquidTokens)
 
-  - [MsgSetArchLiquidStakeInterval](#.MsgSetArchLiquidStakeInterval)
+    *   [MsgSetArchLiquidStakeInterval](#.MsgSetArchLiquidStakeInterval)
 
-  - [MsgSetArchLiquidStakeIntervalResponse](#.MsgSetArchLiquidStakeIntervalResponse)
+    *   [MsgSetArchLiquidStakeIntervalResponse](#.MsgSetArchLiquidStakeIntervalResponse)
 
-  - [MsgSetRedemptionInterval](#.MsgSetRedemptionInterval)
+    *   [MsgSetRedemptionInterval](#.MsgSetRedemptionInterval)
 
-  - [MsgSetRedemptionIntervalResponse](#.MsgSetRedemptionIntervalResponse)
+    *   [MsgSetRedemptionIntervalResponse](#.MsgSetRedemptionIntervalResponse)
 
-  - [MsgSetRedemptionRateQueryInterval](#.MsgSetRedemptionRateQueryInterval)
+    *   [MsgSetRedemptionRateQueryInterval](#.MsgSetRedemptionRateQueryInterval)
 
-  - [MsgSetRedemptionRateQueryIntervalResponse](#.MsgSetRedemptionRateQueryIntervalResponse)
+    *   [MsgSetRedemptionRateQueryIntervalResponse](#.MsgSetRedemptionRateQueryIntervalResponse)
 
-  - [MsgSetRedemptionRateThreshold](#.MsgSetRedemptionRateThreshold)
+    *   [MsgSetRedemptionRateThreshold](#.MsgSetRedemptionRateThreshold)
 
-  - [MsgSetRedemptionRateThresholdResponse](#.MsgSetRedemptionRateThresholdResponse)
+    *   [MsgSetRedemptionRateThresholdResponse](#.MsgSetRedemptionRateThresholdResponse)
 
-  - [MsgSetRewardsWithdrawalInterval](#.MsgSetRewardsWithdrawalInterval)
+    *   [MsgSetRewardsWithdrawalInterval](#.MsgSetRewardsWithdrawalInterval)
 
-  - [MsgSetRewardsWithdrawalIntervalResponse](#.MsgSetRewardsWithdrawalIntervalResponse)
+    *   [MsgSetRewardsWithdrawalIntervalResponse](#.MsgSetRewardsWithdrawalIntervalResponse)
 
-  - [Msg](#.Msg)
+    *   [Msg](#.Msg)
 
-- [archway/rewards/v1beta1/rewards.proto](#archway/rewards/v1beta1/rewards.proto)
-  - [BlockRewards](#archway.rewards.v1beta1.BlockRewards)
-  - [ContractMetadata](#archway.rewards.v1beta1.ContractMetadata)
-  - [FlatFee](#archway.rewards.v1beta1.FlatFee)
-  - [Params](#archway.rewards.v1beta1.Params)
-  - [RewardsRecord](#archway.rewards.v1beta1.RewardsRecord)
-  - [TxRewards](#archway.rewards.v1beta1.TxRewards)
+*   [archway/rewards/v1beta1/rewards.proto](#archway/rewards/v1beta1/rewards.proto)
+    *   [BlockRewards](#archway.rewards.v1beta1.BlockRewards)
+    *   [ContractMetadata](#archway.rewards.v1beta1.ContractMetadata)
+    *   [FlatFee](#archway.rewards.v1beta1.FlatFee)
+    *   [Params](#archway.rewards.v1beta1.Params)
+    *   [RewardsRecord](#archway.rewards.v1beta1.RewardsRecord)
+    *   [TxRewards](#archway.rewards.v1beta1.TxRewards)
 
-- [archway/rewards/v1beta1/events.proto](#archway/rewards/v1beta1/events.proto)
-  - [ContractFlatFeeSetEvent](#archway.rewards.v1beta1.ContractFlatFeeSetEvent)
-  - [ContractMetadataSetEvent](#archway.rewards.v1beta1.ContractMetadataSetEvent)
-  - [ContractRewardCalculationEvent](#archway.rewards.v1beta1.ContractRewardCalculationEvent)
-  - [MinConsensusFeeSetEvent](#archway.rewards.v1beta1.MinConsensusFeeSetEvent)
-  - [RewardsWithdrawEvent](#archway.rewards.v1beta1.RewardsWithdrawEvent)
+*   [archway/rewards/v1beta1/events.proto](#archway/rewards/v1beta1/events.proto)
+    *   [ContractFlatFeeSetEvent](#archway.rewards.v1beta1.ContractFlatFeeSetEvent)
+    *   [ContractMetadataSetEvent](#archway.rewards.v1beta1.ContractMetadataSetEvent)
+    *   [ContractRewardCalculationEvent](#archway.rewards.v1beta1.ContractRewardCalculationEvent)
+    *   [MinConsensusFeeSetEvent](#archway.rewards.v1beta1.MinConsensusFeeSetEvent)
+    *   [RewardsWithdrawEvent](#archway.rewards.v1beta1.RewardsWithdrawEvent)
 
-- [archway/rewards/v1beta1/genesis.proto](#archway/rewards/v1beta1/genesis.proto)
-  - [GenesisState](#archway.rewards.v1beta1.GenesisState)
+*   [archway/rewards/v1beta1/genesis.proto](#archway/rewards/v1beta1/genesis.proto)
+    *   [GenesisState](#archway.rewards.v1beta1.GenesisState)
 
-- [archway/rewards/v1beta1/query.proto](#archway/rewards/v1beta1/query.proto)
+*   [archway/rewards/v1beta1/query.proto](#archway/rewards/v1beta1/query.proto)
 
-  - [BlockTracking](#archway.rewards.v1beta1.BlockTracking)
+    *   [BlockTracking](#archway.rewards.v1beta1.BlockTracking)
 
-  - [QueryBlockRewardsTrackingRequest](#archway.rewards.v1beta1.QueryBlockRewardsTrackingRequest)
+    *   [QueryBlockRewardsTrackingRequest](#archway.rewards.v1beta1.QueryBlockRewardsTrackingRequest)
 
-  - [QueryBlockRewardsTrackingResponse](#archway.rewards.v1beta1.QueryBlockRewardsTrackingResponse)
+    *   [QueryBlockRewardsTrackingResponse](#archway.rewards.v1beta1.QueryBlockRewardsTrackingResponse)
 
-  - [QueryContractMetadataRequest](#archway.rewards.v1beta1.QueryContractMetadataRequest)
+    *   [QueryContractMetadataRequest](#archway.rewards.v1beta1.QueryContractMetadataRequest)
 
-  - [QueryContractMetadataResponse](#archway.rewards.v1beta1.QueryContractMetadataResponse)
+    *   [QueryContractMetadataResponse](#archway.rewards.v1beta1.QueryContractMetadataResponse)
 
-  - [QueryEstimateTxFeesRequest](#archway.rewards.v1beta1.QueryEstimateTxFeesRequest)
+    *   [QueryEstimateTxFeesRequest](#archway.rewards.v1beta1.QueryEstimateTxFeesRequest)
 
-  - [QueryEstimateTxFeesResponse](#archway.rewards.v1beta1.QueryEstimateTxFeesResponse)
+    *   [QueryEstimateTxFeesResponse](#archway.rewards.v1beta1.QueryEstimateTxFeesResponse)
 
-  - [QueryFlatFeeRequest](#archway.rewards.v1beta1.QueryFlatFeeRequest)
+    *   [QueryFlatFeeRequest](#archway.rewards.v1beta1.QueryFlatFeeRequest)
 
-  - [QueryFlatFeeResponse](#archway.rewards.v1beta1.QueryFlatFeeResponse)
+    *   [QueryFlatFeeResponse](#archway.rewards.v1beta1.QueryFlatFeeResponse)
 
-  - [QueryOutstandingRewardsRequest](#archway.rewards.v1beta1.QueryOutstandingRewardsRequest)
+    *   [QueryOutstandingRewardsRequest](#archway.rewards.v1beta1.QueryOutstandingRewardsRequest)
 
-  - [QueryOutstandingRewardsResponse](#archway.rewards.v1beta1.QueryOutstandingRewardsResponse)
+    *   [QueryOutstandingRewardsResponse](#archway.rewards.v1beta1.QueryOutstandingRewardsResponse)
 
-  - [QueryParamsRequest](#archway.rewards.v1beta1.QueryParamsRequest)
+    *   [QueryParamsRequest](#archway.rewards.v1beta1.QueryParamsRequest)
 
-  - [QueryParamsResponse](#archway.rewards.v1beta1.QueryParamsResponse)
+    *   [QueryParamsResponse](#archway.rewards.v1beta1.QueryParamsResponse)
 
-  - [QueryRewardsPoolRequest](#archway.rewards.v1beta1.QueryRewardsPoolRequest)
+    *   [QueryRewardsPoolRequest](#archway.rewards.v1beta1.QueryRewardsPoolRequest)
 
-  - [QueryRewardsPoolResponse](#archway.rewards.v1beta1.QueryRewardsPoolResponse)
+    *   [QueryRewardsPoolResponse](#archway.rewards.v1beta1.QueryRewardsPoolResponse)
 
-  - [QueryRewardsRecordsRequest](#archway.rewards.v1beta1.QueryRewardsRecordsRequest)
+    *   [QueryRewardsRecordsRequest](#archway.rewards.v1beta1.QueryRewardsRecordsRequest)
 
-  - [QueryRewardsRecordsResponse](#archway.rewards.v1beta1.QueryRewardsRecordsResponse)
+    *   [QueryRewardsRecordsResponse](#archway.rewards.v1beta1.QueryRewardsRecordsResponse)
 
-  - [Query](#archway.rewards.v1beta1.Query)
+    *   [Query](#archway.rewards.v1beta1.Query)
 
-- [archway/rewards/v1beta1/tx.proto](#archway/rewards/v1beta1/tx.proto)
+*   [archway/rewards/v1beta1/tx.proto](#archway/rewards/v1beta1/tx.proto)
 
-  - [MsgSetContractMetadata](#archway.rewards.v1beta1.MsgSetContractMetadata)
+    *   [MsgSetContractMetadata](#archway.rewards.v1beta1.MsgSetContractMetadata)
 
-  - [MsgSetContractMetadataResponse](#archway.rewards.v1beta1.MsgSetContractMetadataResponse)
+    *   [MsgSetContractMetadataResponse](#archway.rewards.v1beta1.MsgSetContractMetadataResponse)
 
-  - [MsgSetFlatFee](#archway.rewards.v1beta1.MsgSetFlatFee)
+    *   [MsgSetFlatFee](#archway.rewards.v1beta1.MsgSetFlatFee)
 
-  - [MsgSetFlatFeeResponse](#archway.rewards.v1beta1.MsgSetFlatFeeResponse)
+    *   [MsgSetFlatFeeResponse](#archway.rewards.v1beta1.MsgSetFlatFeeResponse)
 
-  - [MsgWithdrawRewards](#archway.rewards.v1beta1.MsgWithdrawRewards)
+    *   [MsgWithdrawRewards](#archway.rewards.v1beta1.MsgWithdrawRewards)
 
-  - [MsgWithdrawRewards.RecordIDs](#archway.rewards.v1beta1.MsgWithdrawRewards.RecordIDs)
+    *   [MsgWithdrawRewards.RecordIDs](#archway.rewards.v1beta1.MsgWithdrawRewards.RecordIDs)
 
-  - [MsgWithdrawRewards.RecordsLimit](#archway.rewards.v1beta1.MsgWithdrawRewards.RecordsLimit)
+    *   [MsgWithdrawRewards.RecordsLimit](#archway.rewards.v1beta1.MsgWithdrawRewards.RecordsLimit)
 
-  - [MsgWithdrawRewardsResponse](#archway.rewards.v1beta1.MsgWithdrawRewardsResponse)
+    *   [MsgWithdrawRewardsResponse](#archway.rewards.v1beta1.MsgWithdrawRewardsResponse)
 
-  - [Msg](#archway.rewards.v1beta1.Msg)
+    *   [Msg](#archway.rewards.v1beta1.Msg)
 
-- [archway/tracking/v1beta1/tracking.proto](#archway/tracking/v1beta1/tracking.proto)
+*   [archway/tracking/v1beta1/tracking.proto](#archway/tracking/v1beta1/tracking.proto)
 
-  - [BlockTracking](#archway.tracking.v1beta1.BlockTracking)
+    *   [BlockTracking](#archway.tracking.v1beta1.BlockTracking)
 
-  - [ContractOperationInfo](#archway.tracking.v1beta1.ContractOperationInfo)
+    *   [ContractOperationInfo](#archway.tracking.v1beta1.ContractOperationInfo)
 
-  - [TxInfo](#archway.tracking.v1beta1.TxInfo)
+    *   [TxInfo](#archway.tracking.v1beta1.TxInfo)
 
-  - [TxTracking](#archway.tracking.v1beta1.TxTracking)
+    *   [TxTracking](#archway.tracking.v1beta1.TxTracking)
 
-  - [ContractOperation](#archway.tracking.v1beta1.ContractOperation)
+    *   [ContractOperation](#archway.tracking.v1beta1.ContractOperation)
 
-- [archway/tracking/v1beta1/genesis.proto](#archway/tracking/v1beta1/genesis.proto)
-  - [GenesisState](#archway.tracking.v1beta1.GenesisState)
+*   [archway/tracking/v1beta1/genesis.proto](#archway/tracking/v1beta1/genesis.proto)
+    *   [GenesisState](#archway.tracking.v1beta1.GenesisState)
 
-- [archway/tracking/v1beta1/query.proto](#archway/tracking/v1beta1/query.proto)
+*   [archway/tracking/v1beta1/query.proto](#archway/tracking/v1beta1/query.proto)
 
-  - [QueryBlockGasTrackingRequest](#archway.tracking.v1beta1.QueryBlockGasTrackingRequest)
+    *   [QueryBlockGasTrackingRequest](#archway.tracking.v1beta1.QueryBlockGasTrackingRequest)
 
-  - [QueryBlockGasTrackingResponse](#archway.tracking.v1beta1.QueryBlockGasTrackingResponse)
+    *   [QueryBlockGasTrackingResponse](#archway.tracking.v1beta1.QueryBlockGasTrackingResponse)
 
-  - [Query](#archway.tracking.v1beta1.Query)
+    *   [Query](#archway.tracking.v1beta1.Query)
 
-- [Scalar Value Types](#scalar-value-types)
+*   [Scalar Value Types](#scalar-value-types)
 
 <a name="archway/photosynthesis/photosynthesis.proto"></a>
 
@@ -648,8 +648,8 @@ BlockRewards defines block related rewards distribution data.
 | Field               | Type                                                  | Label | Description                                                                                                       |
 | ------------------- | ----------------------------------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
 | `height`            | [int64](#int64)                                       |       | height defines the block height.                                                                                  |
-| `inflation_rewards` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |       | inflation_rewards is the rewards to be distributed.                                                               |
-| `max_gas`           | [uint64](#uint64)                                     |       | max_gas defines the maximum gas for the block that is used to distribute inflation rewards (consensus parameter). |
+| `inflation_rewards` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |       | inflation\_rewards is the rewards to be distributed.                                                               |
+| `max_gas`           | [uint64](#uint64)                                     |       | max\_gas defines the maximum gas for the block that is used to distribute inflation rewards (consensus parameter). |
 
 <a name="archway.rewards.v1beta1.ContractMetadata"></a>
 
@@ -660,9 +660,9 @@ particular contract.
 
 | Field                                   | Type              | Label | Description                                                                                                                                                                                                                                                                  |
 | --------------------------------------- | ----------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `contract_address`                      | [string](#string) |       | contract_address defines the contract address (bech32 encoded).                                                                                                                                                                                                              |
-| `owner_address`                         | [string](#string) |       | owner_address is the contract owner address that can modify contract reward options (bech32 encoded). That could be the contract admin or the contract itself. If owner_address is set to contract address, contract can modify the metadata on its own using WASM bindings. |
-| `rewards_address`                       | [string](#string) |       | rewards_address is an address to distribute rewards to (bech32 encoded). If not set (empty), rewards are not distributed for this contract.                                                                                                                                  |
+| `contract_address`                      | [string](#string) |       | contract\_address defines the contract address (bech32 encoded).                                                                                                                                                                                                              |
+| `owner_address`                         | [string](#string) |       | owner\_address is the contract owner address that can modify contract reward options (bech32 encoded). That could be the contract admin or the contract itself. If owner\_address is set to contract address, contract can modify the metadata on its own using WASM bindings. |
+| `rewards_address`                       | [string](#string) |       | rewards\_address is an address to distribute rewards to (bech32 encoded). If not set (empty), rewards are not distributed for this contract.                                                                                                                                  |
 | `minimum_reward_amount`                 | [uint64](#uint64) |       |                                                                                                                                                                                                                                                                              |
 | `liquidity_token_address`               | [string](#string) |       |                                                                                                                                                                                                                                                                              |
 | `liquid_stake_interval`                 | [uint64](#uint64) |       |                                                                                                                                                                                                                                                                              |
@@ -687,8 +687,8 @@ FlatFee defines the flat fee for a particular contract.
 
 | Field              | Type                                                  | Label | Description                                                     |
 | ------------------ | ----------------------------------------------------- | ----- | --------------------------------------------------------------- |
-| `contract_address` | [string](#string)                                     |       | contract_address defines the contract address (bech32 encoded). |
-| `flat_fee`         | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |       | flat_fee defines the minimum flat fee set by the contract_owner |
+| `contract_address` | [string](#string)                                     |       | contract\_address defines the contract address (bech32 encoded). |
+| `flat_fee`         | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |       | flat\_fee defines the minimum flat fee set by the contract\_owner |
 
 <a name="archway.rewards.v1beta1.Params"></a>
 
@@ -698,9 +698,9 @@ Params defines the module parameters.
 
 | Field                     | Type              | Label | Description                                                                                                                                                               |
 | ------------------------- | ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `inflation_rewards_ratio` | [string](#string) |       | inflation_rewards_ratio defines the percentage of minted inflation tokens that are used for dApp rewards \[0.0, 1.0]. If set to 0.0, no inflation rewards are distributed. |
-| `tx_fee_rebate_ratio`     | [string](#string) |       | tx_fee_rebate_ratio defines the percentage of tx fees that are used for dApp rewards \[0.0, 1.0]. If set to 0.0, no fee rewards are distributed.                           |
-| `max_withdraw_records`    | [uint64](#uint64) |       | max_withdraw_records defines the maximum number of RewardsRecord objects used for the withdrawal operation.                                                               |
+| `inflation_rewards_ratio` | [string](#string) |       | inflation\_rewards\_ratio defines the percentage of minted inflation tokens that are used for dApp rewards \[0.0, 1.0]. If set to 0.0, no inflation rewards are distributed. |
+| `tx_fee_rebate_ratio`     | [string](#string) |       | tx\_fee\_rebate\_ratio defines the percentage of tx fees that are used for dApp rewards \[0.0, 1.0]. If set to 0.0, no fee rewards are distributed.                           |
+| `max_withdraw_records`    | [uint64](#uint64) |       | max\_withdraw\_records defines the maximum number of RewardsRecord objects used for the withdrawal operation.                                                               |
 
 <a name="archway.rewards.v1beta1.RewardsRecord"></a>
 
@@ -711,15 +711,15 @@ distribution). This record is being created by the x/rewards EndBlocker and
 pruned after the rewards are distributed. An actual rewards x/bank transfer
 might be triggered by a Tx (via CLI for example) or by a contract via WASM
 bindings. For a contract to trigger rewards transfer, contract address must be
-set as the rewards_address in a corresponding ContractMetadata.
+set as the rewards\_address in a corresponding ContractMetadata.
 
 | Field               | Type                                                    | Label    | Description                                                               |
 | ------------------- | ------------------------------------------------------- | -------- | ------------------------------------------------------------------------- |
 | `id`                | [uint64](#uint64)                                       |          | id is the unique ID of the record.                                        |
-| `rewards_address`   | [string](#string)                                       |          | rewards_address is the address to distribute rewards to (bech32 encoded). |
+| `rewards_address`   | [string](#string)                                       |          | rewards\_address is the address to distribute rewards to (bech32 encoded). |
 | `rewards`           | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin)   | repeated | rewards are the rewards to be transferred later.                          |
-| `calculated_height` | [int64](#int64)                                         |          | calculated_height defines the block height of rewards calculation event.  |
-| `calculated_time`   | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |          | calculated_time defines the block time of rewards calculation event.      |
+| `calculated_height` | [int64](#int64)                                         |          | calculated\_height defines the block height of rewards calculation event.  |
+| `calculated_time`   | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |          | calculated\_time defines the block time of rewards calculation event.      |
 
 <a name="archway.rewards.v1beta1.TxRewards"></a>
 
@@ -729,9 +729,9 @@ TxRewards defines transaction related rewards distribution data.
 
 | Field         | Type                                                  | Label    | Description                                                                          |
 | ------------- | ----------------------------------------------------- | -------- | ------------------------------------------------------------------------------------ |
-| `tx_id`       | [uint64](#uint64)                                     |          | tx_id is the tracking transaction ID (x/tracking is the data source for this value). |
+| `tx_id`       | [uint64](#uint64)                                     |          | tx\_id is the tracking transaction ID (x/tracking is the data source for this value). |
 | `height`      | [int64](#int64)                                       |          | height defines the block height.                                                     |
-| `fee_rewards` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) | repeated | fee_rewards is the rewards to be distributed.                                        |
+| `fee_rewards` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) | repeated | fee\_rewards is the rewards to be distributed.                                        |
 
  <!-- end messages -->
 
@@ -755,8 +755,8 @@ ContractFlatFeeSetEvent is emitted when the contract flat fee is updated
 
 | Field              | Type                                                  | Label | Description                                                                               |
 | ------------------ | ----------------------------------------------------- | ----- | ----------------------------------------------------------------------------------------- |
-| `contract_address` | [string](#string)                                     |       | contract_address defines the bech32 address of the contract for which the flat fee is set |
-| `flat_fee`         | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |       | flat_fee defines the amount that has been set as the minimum fee for the contract         |
+| `contract_address` | [string](#string)                                     |       | contract\_address defines the bech32 address of the contract for which the flat fee is set |
+| `flat_fee`         | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |       | flat\_fee defines the amount that has been set as the minimum fee for the contract         |
 
 <a name="archway.rewards.v1beta1.ContractMetadataSetEvent"></a>
 
@@ -767,7 +767,7 @@ updated.
 
 | Field              | Type                                                          | Label | Description                                       |
 | ------------------ | ------------------------------------------------------------- | ----- | ------------------------------------------------- |
-| `contract_address` | [string](#string)                                             |       | contract_address defines the contract address.    |
+| `contract_address` | [string](#string)                                             |       | contract\_address defines the contract address.    |
 | `metadata`         | [ContractMetadata](#archway.rewards.v1beta1.ContractMetadata) |       | metadata defines the new contract metadata state. |
 
 <a name="archway.rewards.v1beta1.ContractRewardCalculationEvent"></a>
@@ -779,10 +779,10 @@ calculated.
 
 | Field                | Type                                                          | Label    | Description                                                                                   |
 | -------------------- | ------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------- |
-| `contract_address`   | [string](#string)                                             |          | contract_address defines the contract address.                                                |
-| `gas_consumed`       | [uint64](#uint64)                                             |          | gas_consumed defines the total gas consumption by all WASM operations within one transaction. |
-| `inflation_rewards`  | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin)         |          | inflation_rewards defines the inflation rewards portions of the rewards.                      |
-| `fee_rebate_rewards` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin)         | repeated | fee_rebate_rewards defines the fee rebate rewards portions of the rewards.                    |
+| `contract_address`   | [string](#string)                                             |          | contract\_address defines the contract address.                                                |
+| `gas_consumed`       | [uint64](#uint64)                                             |          | gas\_consumed defines the total gas consumption by all WASM operations within one transaction. |
+| `inflation_rewards`  | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin)         |          | inflation\_rewards defines the inflation rewards portions of the rewards.                      |
+| `fee_rebate_rewards` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin)         | repeated | fee\_rebate\_rewards defines the fee rebate rewards portions of the rewards.                    |
 | `metadata`           | [ContractMetadata](#archway.rewards.v1beta1.ContractMetadata) |          | metadata defines the contract metadata (if set).                                              |
 
 <a name="archway.rewards.v1beta1.MinConsensusFeeSetEvent"></a>
@@ -800,12 +800,12 @@ MinConsensusFeeSetEvent is emitted when the minimum consensus fee is updated.
 ### RewardsWithdrawEvent
 
 RewardsWithdrawEvent is emitted when credited rewards for a specific
-rewards_address are distributed. Event could be triggered by a transaction (via
+rewards\_address are distributed. Event could be triggered by a transaction (via
 CLI for example) or by a contract via WASM bindings.
 
 | Field            | Type                                                  | Label    | Description                                                             |
 | ---------------- | ----------------------------------------------------- | -------- | ----------------------------------------------------------------------- |
-| `reward_address` | [string](#string)                                     |          | rewards_address defines the rewards address rewards are distributed to. |
+| `reward_address` | [string](#string)                                     |          | rewards\_address defines the rewards address rewards are distributed to. |
 | `rewards`        | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) | repeated | rewards defines the total rewards being distributed.                    |
 
  <!-- end messages -->
@@ -831,13 +831,13 @@ GenesisState defines the initial state of the tracking module.
 | Field                    | Type                                                          | Label    | Description                                                                   |
 | ------------------------ | ------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------- |
 | `params`                 | [Params](#archway.rewards.v1beta1.Params)                     |          | params defines all the module parameters.                                     |
-| `contracts_metadata`     | [ContractMetadata](#archway.rewards.v1beta1.ContractMetadata) | repeated | contracts_metadata defines a list of all contracts metadata.                  |
-| `block_rewards`          | [BlockRewards](#archway.rewards.v1beta1.BlockRewards)         | repeated | block_rewards defines a list of all block rewards objects.                    |
-| `tx_rewards`             | [TxRewards](#archway.rewards.v1beta1.TxRewards)               | repeated | tx_rewards defines a list of all tx rewards objects.                          |
-| `min_consensus_fee`      | [cosmos.base.v1beta1.DecCoin](#cosmos.base.v1beta1.DecCoin)   |          | min_consensus_fee defines the minimum gas unit price.                         |
-| `rewards_record_last_id` | [uint64](#uint64)                                             |          | rewards_record_last_id defines the last unique ID for a RewardsRecord objs.   |
-| `rewards_records`        | [RewardsRecord](#archway.rewards.v1beta1.RewardsRecord)       | repeated | rewards_records defines a list of all active (undistributed) rewards records. |
-| `flat_fees`              | [FlatFee](#archway.rewards.v1beta1.FlatFee)                   | repeated | flat_fees defines a list of contract flat fee.                                |
+| `contracts_metadata`     | [ContractMetadata](#archway.rewards.v1beta1.ContractMetadata) | repeated | contracts\_metadata defines a list of all contracts metadata.                  |
+| `block_rewards`          | [BlockRewards](#archway.rewards.v1beta1.BlockRewards)         | repeated | block\_rewards defines a list of all block rewards objects.                    |
+| `tx_rewards`             | [TxRewards](#archway.rewards.v1beta1.TxRewards)               | repeated | tx\_rewards defines a list of all tx rewards objects.                          |
+| `min_consensus_fee`      | [cosmos.base.v1beta1.DecCoin](#cosmos.base.v1beta1.DecCoin)   |          | min\_consensus\_fee defines the minimum gas unit price.                         |
+| `rewards_record_last_id` | [uint64](#uint64)                                             |          | rewards\_record\_last\_id defines the last unique ID for a RewardsRecord objs.   |
+| `rewards_records`        | [RewardsRecord](#archway.rewards.v1beta1.RewardsRecord)       | repeated | rewards\_records defines a list of all active (undistributed) rewards records. |
+| `flat_fees`              | [FlatFee](#archway.rewards.v1beta1.FlatFee)                   | repeated | flat\_fees defines a list of contract flat fee.                                |
 
  <!-- end messages -->
 
@@ -861,8 +861,8 @@ BlockTracking is the tracking information for a block.
 
 | Field               | Type                                                  | Label    | Description                                                    |
 | ------------------- | ----------------------------------------------------- | -------- | -------------------------------------------------------------- |
-| `inflation_rewards` | [BlockRewards](#archway.rewards.v1beta1.BlockRewards) |          | inflation_rewards defines the inflation rewards for the block. |
-| `tx_rewards`        | [TxRewards](#archway.rewards.v1beta1.TxRewards)       | repeated | tx_rewards defines the transaction rewards for the block.      |
+| `inflation_rewards` | [BlockRewards](#archway.rewards.v1beta1.BlockRewards) |          | inflation\_rewards defines the inflation rewards for the block. |
+| `tx_rewards`        | [TxRewards](#archway.rewards.v1beta1.TxRewards)       | repeated | tx\_rewards defines the transaction rewards for the block.      |
 
 <a name="archway.rewards.v1beta1.QueryBlockRewardsTrackingRequest"></a>
 
@@ -889,7 +889,7 @@ QueryContractMetadataRequest is the request for Query.ContractMetadata.
 
 | Field              | Type              | Label | Description                                                |
 | ------------------ | ----------------- | ----- | ---------------------------------------------------------- |
-| `contract_address` | [string](#string) |       | contract_address is the contract address (bech32 encoded). |
+| `contract_address` | [string](#string) |       | contract\_address is the contract address (bech32 encoded). |
 
 <a name="archway.rewards.v1beta1.QueryContractMetadataResponse"></a>
 
@@ -909,8 +909,8 @@ QueryEstimateTxFeesRequest is the request for Query.EstimateTxFees.
 
 | Field              | Type              | Label | Description                                                            |
 | ------------------ | ----------------- | ----- | ---------------------------------------------------------------------- |
-| `gas_limit`        | [uint64](#uint64) |       | gas_limit is the transaction gas limit.                                |
-| `contract_address` | [string](#string) |       | contract_address whose flat fee is considered when estimating tx fees. |
+| `gas_limit`        | [uint64](#uint64) |       | gas\_limit is the transaction gas limit.                                |
+| `contract_address` | [string](#string) |       | contract\_address whose flat fee is considered when estimating tx fees. |
 
 <a name="archway.rewards.v1beta1.QueryEstimateTxFeesResponse"></a>
 
@@ -920,8 +920,8 @@ QueryEstimateTxFeesResponse is the response for Query.EstimateTxFees.
 
 | Field            | Type                                                        | Label    | Description                                                           |
 | ---------------- | ----------------------------------------------------------- | -------- | --------------------------------------------------------------------- |
-| `gas_unit_price` | [cosmos.base.v1beta1.DecCoin](#cosmos.base.v1beta1.DecCoin) |          | gas_unit_price defines the minimum transaction fee per gas unit.      |
-| `estimated_fee`  | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin)       | repeated | estimated_fee is the estimated transaction fee for a given gas limit. |
+| `gas_unit_price` | [cosmos.base.v1beta1.DecCoin](#cosmos.base.v1beta1.DecCoin) |          | gas\_unit\_price defines the minimum transaction fee per gas unit.      |
+| `estimated_fee`  | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin)       | repeated | estimated\_fee is the estimated transaction fee for a given gas limit. |
 
 <a name="archway.rewards.v1beta1.QueryFlatFeeRequest"></a>
 
@@ -931,7 +931,7 @@ QueryFlatFeeRequest is the request for Query.FlatFeet
 
 | Field              | Type              | Label | Description                                                |
 | ------------------ | ----------------- | ----- | ---------------------------------------------------------- |
-| `contract_address` | [string](#string) |       | contract_address is the contract address (bech32 encoded). |
+| `contract_address` | [string](#string) |       | contract\_address is the contract address (bech32 encoded). |
 
 <a name="archway.rewards.v1beta1.QueryFlatFeeResponse"></a>
 
@@ -941,7 +941,7 @@ QueryFlatFeeResponse is the response for Query.FlatFee
 
 | Field             | Type                                                  | Label | Description                                                                                    |
 | ----------------- | ----------------------------------------------------- | ----- | ---------------------------------------------------------------------------------------------- |
-| `flat_fee_amount` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |       | flat_fee_amount defines the minimum flat fee set by the contract_owner per contract execution. |
+| `flat_fee_amount` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |       | flat\_fee\_amount defines the minimum flat fee set by the contract\_owner per contract execution. |
 
 <a name="archway.rewards.v1beta1.QueryOutstandingRewardsRequest"></a>
 
@@ -951,7 +951,7 @@ QueryOutstandingRewardsRequest is the request for Query.OutstandingRewards.
 
 | Field             | Type              | Label | Description                                                                             |
 | ----------------- | ----------------- | ----- | --------------------------------------------------------------------------------------- |
-| `rewards_address` | [string](#string) |       | rewards_address is the target address to query calculated rewards for (bech32 encoded). |
+| `rewards_address` | [string](#string) |       | rewards\_address is the target address to query calculated rewards for (bech32 encoded). |
 
 <a name="archway.rewards.v1beta1.QueryOutstandingRewardsResponse"></a>
 
@@ -961,8 +961,8 @@ QueryOutstandingRewardsResponse is the response for Query.OutstandingRewards.
 
 | Field           | Type                                                  | Label    | Description                                                                              |
 | --------------- | ----------------------------------------------------- | -------- | ---------------------------------------------------------------------------------------- |
-| `total_rewards` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) | repeated | total_rewards is the total rewards credited to the rewards_address.                      |
-| `records_num`   | [uint64](#uint64)                                     |          | records_num is the total number of RewardsRecord objects stored for the rewards_address. |
+| `total_rewards` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) | repeated | total\_rewards is the total rewards credited to the rewards\_address.                      |
+| `records_num`   | [uint64](#uint64)                                     |          | records\_num is the total number of RewardsRecord objects stored for the rewards\_address. |
 
 <a name="archway.rewards.v1beta1.QueryParamsRequest"></a>
 
@@ -994,8 +994,8 @@ QueryRewardsPoolResponse is the response for Query.RewardsPool.
 
 | Field                 | Type                                                  | Label    | Description                                                                                                                                                                      |
 | --------------------- | ----------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `undistributed_funds` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) | repeated | undistributed_funds are undistributed yet tokens (ready for withdrawal).                                                                                                         |
-| `treasury_funds`      | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) | repeated | treasury_funds are treasury tokens available (no mechanism is available to withdraw ATM). Treasury tokens are collected on a block basis. Those tokens are unused block rewards. |
+| `undistributed_funds` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) | repeated | undistributed\_funds are undistributed yet tokens (ready for withdrawal).                                                                                                         |
+| `treasury_funds`      | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) | repeated | treasury\_funds are treasury tokens available (no mechanism is available to withdraw ATM). Treasury tokens are collected on a block basis. Those tokens are unused block rewards. |
 
 <a name="archway.rewards.v1beta1.QueryRewardsRecordsRequest"></a>
 
@@ -1005,7 +1005,7 @@ QueryRewardsRecordsRequest is the request for Query.RewardsRecords.
 
 | Field             | Type                                                                            | Label | Description                                                                  |
 | ----------------- | ------------------------------------------------------------------------------- | ----- | ---------------------------------------------------------------------------- |
-| `rewards_address` | [string](#string)                                                               |       | rewards_address is the target address to query records for (bech32 encoded). |
+| `rewards_address` | [string](#string)                                                               |       | rewards\_address is the target address to query records for (bech32 encoded). |
 | `pagination`      | [cosmos.base.query.v1beta1.PageRequest](#cosmos.base.query.v1beta1.PageRequest) |       | pagination is an optional pagination options for the request.                |
 
 <a name="archway.rewards.v1beta1.QueryRewardsRecordsResponse"></a>
@@ -1034,13 +1034,13 @@ Query service for the tracking module.
 | Method Name            | Request Type                                                                                  | Response Type                                                                                   | Description                                                                                                                                            | HTTP Verb | Endpoint                                   |
 | ---------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ------------------------------------------ |
 | `Params`               | [QueryParamsRequest](#archway.rewards.v1beta1.QueryParamsRequest)                             | [QueryParamsResponse](#archway.rewards.v1beta1.QueryParamsResponse)                             | Params returns module parameters.                                                                                                                      | GET       | /archway/rewards/v1/params                 |
-| `ContractMetadata`     | [QueryContractMetadataRequest](#archway.rewards.v1beta1.QueryContractMetadataRequest)         | [QueryContractMetadataResponse](#archway.rewards.v1beta1.QueryContractMetadataResponse)         | ContractMetadata returns the contract rewards parameters (metadata).                                                                                   | GET       | /archway/rewards/v1/contract_metadata      |
-| `BlockRewardsTracking` | [QueryBlockRewardsTrackingRequest](#archway.rewards.v1beta1.QueryBlockRewardsTrackingRequest) | [QueryBlockRewardsTrackingResponse](#archway.rewards.v1beta1.QueryBlockRewardsTrackingResponse) | BlockRewardsTracking returns block rewards tracking for the current block.                                                                             | GET       | /archway/rewards/v1/block_rewards_tracking |
-| `RewardsPool`          | [QueryRewardsPoolRequest](#archway.rewards.v1beta1.QueryRewardsPoolRequest)                   | [QueryRewardsPoolResponse](#archway.rewards.v1beta1.QueryRewardsPoolResponse)                   | RewardsPool returns the current undistributed rewards pool funds.                                                                                      | GET       | /archway/rewards/v1/rewards_pool           |
-| `EstimateTxFees`       | [QueryEstimateTxFeesRequest](#archway.rewards.v1beta1.QueryEstimateTxFeesRequest)             | [QueryEstimateTxFeesResponse](#archway.rewards.v1beta1.QueryEstimateTxFeesResponse)             | EstimateTxFees returns the estimated transaction fees for the given transaction gas limit using the minimum consensus fee value for the current block. | GET       | /archway/rewards/v1/estimate_tx_fees       |
-| `RewardsRecords`       | [QueryRewardsRecordsRequest](#archway.rewards.v1beta1.QueryRewardsRecordsRequest)             | [QueryRewardsRecordsResponse](#archway.rewards.v1beta1.QueryRewardsRecordsResponse)             | RewardsRecords returns the paginated list of RewardsRecord objects stored for the provided rewards_address.                                            | GET       | /archway/rewards/v1/rewards_records        |
-| `OutstandingRewards`   | [QueryOutstandingRewardsRequest](#archway.rewards.v1beta1.QueryOutstandingRewardsRequest)     | [QueryOutstandingRewardsResponse](#archway.rewards.v1beta1.QueryOutstandingRewardsResponse)     | OutstandingRewards returns total rewards credited from different contracts for the provided rewards_address.                                           | GET       | /archway/rewards/v1/outstanding_rewards    |
-| `FlatFee`              | [QueryFlatFeeRequest](#archway.rewards.v1beta1.QueryFlatFeeRequest)                           | [QueryFlatFeeResponse](#archway.rewards.v1beta1.QueryFlatFeeResponse)                           | FlatFee returns the flat fee set by the contract owner for the provided contract_address                                                               | GET       | /archway/rewards/v1/flat_fee               |
+| `ContractMetadata`     | [QueryContractMetadataRequest](#archway.rewards.v1beta1.QueryContractMetadataRequest)         | [QueryContractMetadataResponse](#archway.rewards.v1beta1.QueryContractMetadataResponse)         | ContractMetadata returns the contract rewards parameters (metadata).                                                                                   | GET       | /archway/rewards/v1/contract\_metadata      |
+| `BlockRewardsTracking` | [QueryBlockRewardsTrackingRequest](#archway.rewards.v1beta1.QueryBlockRewardsTrackingRequest) | [QueryBlockRewardsTrackingResponse](#archway.rewards.v1beta1.QueryBlockRewardsTrackingResponse) | BlockRewardsTracking returns block rewards tracking for the current block.                                                                             | GET       | /archway/rewards/v1/block\_rewards\_tracking |
+| `RewardsPool`          | [QueryRewardsPoolRequest](#archway.rewards.v1beta1.QueryRewardsPoolRequest)                   | [QueryRewardsPoolResponse](#archway.rewards.v1beta1.QueryRewardsPoolResponse)                   | RewardsPool returns the current undistributed rewards pool funds.                                                                                      | GET       | /archway/rewards/v1/rewards\_pool           |
+| `EstimateTxFees`       | [QueryEstimateTxFeesRequest](#archway.rewards.v1beta1.QueryEstimateTxFeesRequest)             | [QueryEstimateTxFeesResponse](#archway.rewards.v1beta1.QueryEstimateTxFeesResponse)             | EstimateTxFees returns the estimated transaction fees for the given transaction gas limit using the minimum consensus fee value for the current block. | GET       | /archway/rewards/v1/estimate\_tx\_fees       |
+| `RewardsRecords`       | [QueryRewardsRecordsRequest](#archway.rewards.v1beta1.QueryRewardsRecordsRequest)             | [QueryRewardsRecordsResponse](#archway.rewards.v1beta1.QueryRewardsRecordsResponse)             | RewardsRecords returns the paginated list of RewardsRecord objects stored for the provided rewards\_address.                                            | GET       | /archway/rewards/v1/rewards\_records        |
+| `OutstandingRewards`   | [QueryOutstandingRewardsRequest](#archway.rewards.v1beta1.QueryOutstandingRewardsRequest)     | [QueryOutstandingRewardsResponse](#archway.rewards.v1beta1.QueryOutstandingRewardsResponse)     | OutstandingRewards returns total rewards credited from different contracts for the provided rewards\_address.                                           | GET       | /archway/rewards/v1/outstanding\_rewards    |
+| `FlatFee`              | [QueryFlatFeeRequest](#archway.rewards.v1beta1.QueryFlatFeeRequest)                           | [QueryFlatFeeResponse](#archway.rewards.v1beta1.QueryFlatFeeResponse)                           | FlatFee returns the flat fee set by the contract owner for the provided contract\_address                                                               | GET       | /archway/rewards/v1/flat\_fee               |
 
  <!-- end services -->
 
@@ -1058,7 +1058,7 @@ MsgSetContractMetadata is the request for Msg.SetContractMetadata.
 
 | Field            | Type                                                          | Label | Description                                                                                              |
 | ---------------- | ------------------------------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------- |
-| `sender_address` | [string](#string)                                             |       | sender_address is the msg sender address (bech32 encoded).                                               |
+| `sender_address` | [string](#string)                                             |       | sender\_address is the msg sender address (bech32 encoded).                                               |
 | `metadata`       | [ContractMetadata](#archway.rewards.v1beta1.ContractMetadata) |       | metadata is the contract metadata to set / update. If metadata exists, non-empty fields will be updated. |
 
 <a name="archway.rewards.v1beta1.MsgSetContractMetadataResponse"></a>
@@ -1075,9 +1075,9 @@ MsgSetFlatFee is the request for Msg.SetFlatFee.
 
 | Field              | Type                                                  | Label | Description                                                            |
 | ------------------ | ----------------------------------------------------- | ----- | ---------------------------------------------------------------------- |
-| `sender_address`   | [string](#string)                                     |       | sender_address is the msg sender address (bech32 encoded).             |
-| `contract_address` | [string](#string)                                     |       | contract_address is the contract address (bech32 encoded).             |
-| `flat_fee_amount`  | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |       | flat_fee_amount defines the minimum flat fee set by the contract_owner |
+| `sender_address`   | [string](#string)                                     |       | sender\_address is the msg sender address (bech32 encoded).             |
+| `contract_address` | [string](#string)                                     |       | contract\_address is the contract address (bech32 encoded).             |
+| `flat_fee_amount`  | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |       | flat\_fee\_amount defines the minimum flat fee set by the contract\_owner |
 
 <a name="archway.rewards.v1beta1.MsgSetFlatFeeResponse"></a>
 
@@ -1093,9 +1093,9 @@ MsgWithdrawRewards is the request for Msg.WithdrawRewards.
 
 | Field             | Type                                                                                        | Label | Description                                                                                                                      |
 | ----------------- | ------------------------------------------------------------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `rewards_address` | [string](#string)                                                                           |       | rewards_address is the address to distribute rewards to (bech32 encoded).                                                        |
-| `records_limit`   | [MsgWithdrawRewards.RecordsLimit](#archway.rewards.v1beta1.MsgWithdrawRewards.RecordsLimit) |       | records_limit defines the maximum number of RewardsRecord objects to process. If provided limit is 0, the default limit is used. |
-| `record_ids`      | [MsgWithdrawRewards.RecordIDs](#archway.rewards.v1beta1.MsgWithdrawRewards.RecordIDs)       |       | record_ids defines specific RewardsRecord object IDs to process.                                                                 |
+| `rewards_address` | [string](#string)                                                                           |       | rewards\_address is the address to distribute rewards to (bech32 encoded).                                                        |
+| `records_limit`   | [MsgWithdrawRewards.RecordsLimit](#archway.rewards.v1beta1.MsgWithdrawRewards.RecordsLimit) |       | records\_limit defines the maximum number of RewardsRecord objects to process. If provided limit is 0, the default limit is used. |
+| `record_ids`      | [MsgWithdrawRewards.RecordIDs](#archway.rewards.v1beta1.MsgWithdrawRewards.RecordIDs)       |       | record\_ids defines specific RewardsRecord object IDs to process.                                                                 |
 
 <a name="archway.rewards.v1beta1.MsgWithdrawRewards.RecordIDs"></a>
 
@@ -1121,7 +1121,7 @@ MsgWithdrawRewardsResponse is the response for Msg.WithdrawRewards.
 
 | Field           | Type                                                  | Label    | Description                                                   |
 | --------------- | ----------------------------------------------------- | -------- | ------------------------------------------------------------- |
-| `records_num`   | [uint64](#uint64)                                     |          | records_num is the number of RewardsRecord objects processed. |
+| `records_num`   | [uint64](#uint64)                                     |          | records\_num is the number of RewardsRecord objects processed. |
 | `total_rewards` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) | repeated | rewards are the total rewards transferred.                    |
 
  <!-- end messages -->
@@ -1139,7 +1139,7 @@ Msg defines the module messaging service.
 | Method Name           | Request Type                                                              | Response Type                                                                             | Description                                                                                                                                                                      | HTTP Verb | Endpoint |
 | --------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | -------- |
 | `SetContractMetadata` | [MsgSetContractMetadata](#archway.rewards.v1beta1.MsgSetContractMetadata) | [MsgSetContractMetadataResponse](#archway.rewards.v1beta1.MsgSetContractMetadataResponse) | SetContractMetadata creates or updates an existing contract metadata. Method is authorized to the contract owner (admin if no metadata exists).                                  |           |
-| `WithdrawRewards`     | [MsgWithdrawRewards](#archway.rewards.v1beta1.MsgWithdrawRewards)         | [MsgWithdrawRewardsResponse](#archway.rewards.v1beta1.MsgWithdrawRewardsResponse)         | WithdrawRewards performs collected rewards distribution. Rewards might be credited from multiple contracts (rewards_address must be set in the corresponding contract metadata). |           |
+| `WithdrawRewards`     | [MsgWithdrawRewards](#archway.rewards.v1beta1.MsgWithdrawRewards)         | [MsgWithdrawRewardsResponse](#archway.rewards.v1beta1.MsgWithdrawRewardsResponse)         | WithdrawRewards performs collected rewards distribution. Rewards might be credited from multiple contracts (rewards\_address must be set in the corresponding contract metadata). |           |
 | `SetFlatFee`          | [MsgSetFlatFee](#archway.rewards.v1beta1.MsgSetFlatFee)                   | [MsgSetFlatFeeResponse](#archway.rewards.v1beta1.MsgSetFlatFeeResponse)                   | SetFlatFee sets or updates or removes the flat fee to interact with the contract Method is authorized to the contract owner.                                                     |           |
 
  <!-- end services -->
@@ -1170,11 +1170,11 @@ Object is being created by the IngestGasRecord call from the wasmd.
 | Field              | Type                                                             | Label | Description                                                                                                                                                                     |
 | ------------------ | ---------------------------------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `id`               | [uint64](#uint64)                                                |       | id defines the unique operation ID.                                                                                                                                             |
-| `tx_id`            | [uint64](#uint64)                                                |       | tx_id defines a transaction ID operation relates to (TxInfo.id).                                                                                                                |
-| `contract_address` | [string](#string)                                                |       | contract_address defines the contract address operation relates to.                                                                                                             |
-| `operation_type`   | [ContractOperation](#archway.tracking.v1beta1.ContractOperation) |       | operation_type defines the gas consumption type.                                                                                                                                |
-| `vm_gas`           | [uint64](#uint64)                                                |       | vm_gas is the gas consumption reported by the WASM VM. Value is adjusted by this module (CalculateUpdatedGas func).                                                             |
-| `sdk_gas`          | [uint64](#uint64)                                                |       | sdk_gas is the gas consumption reported by the SDK gas meter and the WASM GasRegister (cost of Execute/Query/etc). Value is adjusted by this module (CalculateUpdatedGas func). |
+| `tx_id`            | [uint64](#uint64)                                                |       | tx\_id defines a transaction ID operation relates to (TxInfo.id).                                                                                                                |
+| `contract_address` | [string](#string)                                                |       | contract\_address defines the contract address operation relates to.                                                                                                             |
+| `operation_type`   | [ContractOperation](#archway.tracking.v1beta1.ContractOperation) |       | operation\_type defines the gas consumption type.                                                                                                                                |
+| `vm_gas`           | [uint64](#uint64)                                                |       | vm\_gas is the gas consumption reported by the WASM VM. Value is adjusted by this module (CalculateUpdatedGas func).                                                             |
+| `sdk_gas`          | [uint64](#uint64)                                                |       | sdk\_gas is the gas consumption reported by the SDK gas meter and the WASM GasRegister (cost of Execute/Query/etc). Value is adjusted by this module (CalculateUpdatedGas func). |
 
 <a name="archway.tracking.v1beta1.TxInfo"></a>
 
@@ -1187,7 +1187,7 @@ module EndBlocker.
 | ----------- | ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `id`        | [uint64](#uint64) |       | id defines the unique transaction ID.                                                                                                |
 | `height`    | [int64](#int64)   |       | height defines the block height of the transaction.                                                                                  |
-| `total_gas` | [uint64](#uint64) |       | total_gas defines total gas consumption by the transaction. It is the sum of gas consumed by all contract operations (VM + SDK gas). |
+| `total_gas` | [uint64](#uint64) |       | total\_gas defines total gas consumption by the transaction. It is the sum of gas consumed by all contract operations (VM + SDK gas). |
 
 <a name="archway.tracking.v1beta1.TxTracking"></a>
 
@@ -1198,7 +1198,7 @@ TxTracking is the tracking information for a single transaction.
 | Field                 | Type                                                                     | Label    | Description                                                                              |
 | --------------------- | ------------------------------------------------------------------------ | -------- | ---------------------------------------------------------------------------------------- |
 | `info`                | [TxInfo](#archway.tracking.v1beta1.TxInfo)                               |          | info defines the transaction details.                                                    |
-| `contract_operations` | [ContractOperationInfo](#archway.tracking.v1beta1.ContractOperationInfo) | repeated | contract_operations defines the list of contract operations consumed by the transaction. |
+| `contract_operations` | [ContractOperationInfo](#archway.tracking.v1beta1.ContractOperationInfo) | repeated | contract\_operations defines the list of contract operations consumed by the transaction. |
 
  <!-- end messages -->
 
@@ -1210,14 +1210,14 @@ ContractOperation denotes which operation consumed gas.
 
 | Name                             | Number | Description                  |
 | -------------------------------- | ------ | ---------------------------- |
-| CONTRACT_OPERATION_UNSPECIFIED   | 0      | Invalid or unknown operation |
-| CONTRACT_OPERATION_INSTANTIATION | 1      | Instantiate operation        |
-| CONTRACT_OPERATION_EXECUTION     | 2      | Execute operation            |
-| CONTRACT_OPERATION_QUERY         | 3      | Query                        |
-| CONTRACT_OPERATION_MIGRATE       | 4      | Migrate operation            |
-| CONTRACT_OPERATION_IBC           | 5      | IBC operations               |
-| CONTRACT_OPERATION_SUDO          | 6      | Sudo operation               |
-| CONTRACT_OPERATION_REPLY         | 7      | Reply callback operation     |
+| CONTRACT\_OPERATION\_UNSPECIFIED   | 0      | Invalid or unknown operation |
+| CONTRACT\_OPERATION\_INSTANTIATION | 1      | Instantiate operation        |
+| CONTRACT\_OPERATION\_EXECUTION     | 2      | Execute operation            |
+| CONTRACT\_OPERATION\_QUERY         | 3      | Query                        |
+| CONTRACT\_OPERATION\_MIGRATE       | 4      | Migrate operation            |
+| CONTRACT\_OPERATION\_IBC           | 5      | IBC operations               |
+| CONTRACT\_OPERATION\_SUDO          | 6      | Sudo operation               |
+| CONTRACT\_OPERATION\_REPLY         | 7      | Reply callback operation     |
 
  <!-- end enums -->
 
@@ -1239,10 +1239,10 @@ GenesisState defines the initial state of the tracking module.
 
 | Field                      | Type                                                                     | Label    | Description                                                                         |
 | -------------------------- | ------------------------------------------------------------------------ | -------- | ----------------------------------------------------------------------------------- |
-| `tx_info_last_id`          | [uint64](#uint64)                                                        |          | tx_info_last_id defines the last unique ID for a TxInfo objs.                       |
-| `tx_infos`                 | [TxInfo](#archway.tracking.v1beta1.TxInfo)                               | repeated | tx_infos defines a list of all the tracked transactions.                            |
-| `contract_op_info_last_id` | [uint64](#uint64)                                                        |          | contract_op_info_last_id defines the last unique ID for ContractOperationInfo objs. |
-| `contract_op_infos`        | [ContractOperationInfo](#archway.tracking.v1beta1.ContractOperationInfo) | repeated | contract_op_infos defines a list of all the tracked contract operations.            |
+| `tx_info_last_id`          | [uint64](#uint64)                                                        |          | tx\_info\_last\_id defines the last unique ID for a TxInfo objs.                       |
+| `tx_infos`                 | [TxInfo](#archway.tracking.v1beta1.TxInfo)                               | repeated | tx\_infos defines a list of all the tracked transactions.                            |
+| `contract_op_info_last_id` | [uint64](#uint64)                                                        |          | contract\_op\_info\_last\_id defines the last unique ID for ContractOperationInfo objs. |
+| `contract_op_infos`        | [ContractOperationInfo](#archway.tracking.v1beta1.ContractOperationInfo) | repeated | contract\_op\_infos defines a list of all the tracked contract operations.            |
 
  <!-- end messages -->
 
@@ -1288,7 +1288,7 @@ Query service for the tracking module.
 
 | Method Name        | Request Type                                                                           | Response Type                                                                            | Description                                                       | HTTP Verb | Endpoint                                |
 | ------------------ | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | --------- | --------------------------------------- |
-| `BlockGasTracking` | [QueryBlockGasTrackingRequest](#archway.tracking.v1beta1.QueryBlockGasTrackingRequest) | [QueryBlockGasTrackingResponse](#archway.tracking.v1beta1.QueryBlockGasTrackingResponse) | BlockGasTracking returns block gas tracking for the current block | GET       | /archway/tracking/v1/block_gas_tracking |
+| `BlockGasTracking` | [QueryBlockGasTrackingRequest](#archway.tracking.v1beta1.QueryBlockGasTrackingRequest) | [QueryBlockGasTrackingResponse](#archway.tracking.v1beta1.QueryBlockGasTrackingResponse) | BlockGasTracking returns block gas tracking for the current block | GET       | /archway/tracking/v1/block\_gas\_tracking |
 
  <!-- end services -->
 

@@ -17,7 +17,7 @@ JSON encoding packages by a factor of 2-3x.
 tinyjson aims to keep generated Go code simple enough so that it can be easily
 optimized or fixed. Another goal is to provide users with the ability to
 customize the generated code by providing options not available with the
-standard `encoding/json` package, such as generating "snake_case" names or
+standard `encoding/json` package, such as generating "snake\_case" names or
 enabling `omitempty` behavior by default.
 
 ## Usage
@@ -94,28 +94,28 @@ type A struct {}
 
 Additional option notes:
 
-- `-snake_case` tells tinyjson to generate snake_case field names by default
-  (unless overridden by a field tag). The CamelCase to snake_case conversion
-  algorithm should work in most cases (ie, HTTPVersion will be converted to
-  "http_version").
+*   `-snake_case` tells tinyjson to generate snake\_case field names by default
+    (unless overridden by a field tag). The CamelCase to snake\_case conversion
+    algorithm should work in most cases (ie, HTTPVersion will be converted to
+    "http\_version").
 
-- `-build_tags` will add the specified build tags to generated Go sources.
+*   `-build_tags` will add the specified build tags to generated Go sources.
 
-- `-gen_build_flags` will execute the tinyjson bootstapping code to launch the
-  actual generator command with provided flags. Multiple arguments should be
-  separated by space e.g. `-gen_build_flags="-mod=mod -x"`.
+*   `-gen_build_flags` will execute the tinyjson bootstapping code to launch the
+    actual generator command with provided flags. Multiple arguments should be
+    separated by space e.g. `-gen_build_flags="-mod=mod -x"`.
 
 ## Structure json tag options
 
 Besides standart json tag options like 'omitempty' the following are supported:
 
-- 'nocopy' - disables allocation and copying of string values, making them refer
-  to original json buffer memory. This works great for short lived objects which
-  are not hold in memory after decoding and immediate usage. Note if string
-  requires unescaping it will be processed as normally.
-- 'intern' - string "interning" (deduplication) to save memory when the very
-  same string dictionary values are often met all over the structure. See below
-  for more details.
+*   'nocopy' - disables allocation and copying of string values, making them refer
+    to original json buffer memory. This works great for short lived objects which
+    are not hold in memory after decoding and immediate usage. Note if string
+    requires unescaping it will be processed as normally.
+*   'intern' - string "interning" (deduplication) to save memory when the very
+    same string dictionary values are often met all over the structure. See below
+    for more details.
 
 ## Generated Marshaler/Unmarshaler Funcs
 
@@ -198,46 +198,46 @@ type Foo struct {
 
 ## Issues, Notes, and Limitations
 
-- tinyjson is still early in its development. As such, there are likely to be
-  bugs and missing features when compared to `encoding/json`. In the case of a
-  missing feature or bug, please create a GitHub issue. Pull requests are
-  welcome!
+*   tinyjson is still early in its development. As such, there are likely to be
+    bugs and missing features when compared to `encoding/json`. In the case of a
+    missing feature or bug, please create a GitHub issue. Pull requests are
+    welcome!
 
-- Unlike `encoding/json`, object keys are case-sensitive. Case-insensitive
-  matching is not currently provided due to the significant performance hit when
-  doing case-insensitive key matching. In the future, case-insensitive object
-  key matching may be provided via an option to the generator.
+*   Unlike `encoding/json`, object keys are case-sensitive. Case-insensitive
+    matching is not currently provided due to the significant performance hit when
+    doing case-insensitive key matching. In the future, case-insensitive object
+    key matching may be provided via an option to the generator.
 
-- tinyjson makes use of `unsafe`, which simplifies the code and provides
-  significant performance benefits by allowing no-copy conversion from `[]byte`
-  to `string`. That said, `unsafe` is used only when unmarshaling and parsing
-  JSON, and any `unsafe` operations / memory allocations done will be safely
-  deallocated by tinyjson. Set the build tag `tinyjson_nounsafe` to compile it
-  without `unsafe`.
+*   tinyjson makes use of `unsafe`, which simplifies the code and provides
+    significant performance benefits by allowing no-copy conversion from `[]byte`
+    to `string`. That said, `unsafe` is used only when unmarshaling and parsing
+    JSON, and any `unsafe` operations / memory allocations done will be safely
+    deallocated by tinyjson. Set the build tag `tinyjson_nounsafe` to compile it
+    without `unsafe`.
 
-- tinyjson is compatible with Google App Engine. The `appengine` build tag (set
-  by App Engine's environment) will automatically disable the use of `unsafe`,
-  which is not allowed in App Engine's Standard Environment. Note that the use
-  with App Engine is still experimental.
+*   tinyjson is compatible with Google App Engine. The `appengine` build tag (set
+    by App Engine's environment) will automatically disable the use of `unsafe`,
+    which is not allowed in App Engine's Standard Environment. Note that the use
+    with App Engine is still experimental.
 
-- Floats are formatted using the default precision from Go's `strconv` package.
-  As such, tinyjson will not correctly handle high precision floats when
-  marshaling/unmarshaling JSON. Note, however, that there are very few/limited
-  uses where this behavior is not sufficient for general use. That said, a
-  different package may be needed if precise marshaling/unmarshaling of high
-  precision floats to/from JSON is required.
+*   Floats are formatted using the default precision from Go's `strconv` package.
+    As such, tinyjson will not correctly handle high precision floats when
+    marshaling/unmarshaling JSON. Note, however, that there are very few/limited
+    uses where this behavior is not sufficient for general use. That said, a
+    different package may be needed if precise marshaling/unmarshaling of high
+    precision floats to/from JSON is required.
 
-- While unmarshaling, the JSON parser does the minimal amount of work needed to
-  skip over unmatching parens, and as such full validation is not done for the
-  entire JSON value being unmarshaled/parsed.
+*   While unmarshaling, the JSON parser does the minimal amount of work needed to
+    skip over unmatching parens, and as such full validation is not done for the
+    entire JSON value being unmarshaled/parsed.
 
-- Currently there is no true streaming support for encoding/decoding as
-  typically for many uses/protocols the final, marshaled length of the JSON
-  needs to be known prior to sending the data. Currently this is not possible
-  with tinyjson's architecture.
+*   Currently there is no true streaming support for encoding/decoding as
+    typically for many uses/protocols the final, marshaled length of the JSON
+    needs to be known prior to sending the data. Currently this is not possible
+    with tinyjson's architecture.
 
-- tinyjson parser and codegen based on reflection, so it won't work on
-  `package main` files, because they cant be imported by parser.
+*   tinyjson parser and codegen based on reflection, so it won't work on
+    `package main` files, because they cant be imported by parser.
 
 ## Benchmarks
 
@@ -249,14 +249,14 @@ ideal for JSON serialization benchmarks.
 
 Note:
 
-- For small request benchmarks, an 80 byte portion of the above example was
-  used.
+*   For small request benchmarks, an 80 byte portion of the above example was
+    used.
 
-- For large request marshaling benchmarks, a struct containing 50 regular
-  samples was used, making a ~500kB output JSON.
+*   For large request marshaling benchmarks, a struct containing 50 regular
+    samples was used, making a ~500kB output JSON.
 
-- Benchmarks are showing the results of tinyjson's default behaviour, which
-  makes use of `unsafe`.
+*   Benchmarks are showing the results of tinyjson's default behaviour, which
+    makes use of `unsafe`.
 
 Benchmarks are available in the repository and can be run by invoking `make`.
 

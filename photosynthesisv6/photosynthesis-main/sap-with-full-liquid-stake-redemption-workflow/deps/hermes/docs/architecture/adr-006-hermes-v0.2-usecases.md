@@ -2,7 +2,7 @@
 
 ## Changelog
 
-- 16.02.2021: Proposed.
+*   16.02.2021: Proposed.
 
 ## Context
 
@@ -17,18 +17,18 @@ requirements of (any) future users.
 
 Three elements that provide further context for this discussion are:
 
-1. Hermes is still at an early stage of implementation, so these use-cases are
-   not set in stone.
+1.  Hermes is still at an early stage of implementation, so these use-cases are
+    not set in stone.
 
-2. Some concrete use-cases are starting to emerge ([#628][#628]), which Hermes
-   v0.1.0 either does not cover altogether, or covers poorly (e.g., because of
-   inconsistent UX), thus informing this proposal.
+2.  Some concrete use-cases are starting to emerge ([#628][#628]), which Hermes
+    v0.1.0 either does not cover altogether, or covers poorly (e.g., because of
+    inconsistent UX), thus informing this proposal.
 
-3. Hermes is one of *three* relayer binaries that are being developed roughly in
-   parallel. The other two are being developed in Go and Typescript,
-   respectively (see the [references](#references) section). In this context, it
-   is plausible that Hermes will focus on performance, robustness, and richness
-   of features on a longer term.
+3.  Hermes is one of *three* relayer binaries that are being developed roughly in
+    parallel. The other two are being developed in Go and Typescript,
+    respectively (see the [references](#references) section). In this context, it
+    is plausible that Hermes will focus on performance, robustness, and richness
+    of features on a longer term.
 
 ## Decision
 
@@ -38,38 +38,38 @@ length to a minimum.
 
 To create and update a client:
 
-- `create client <host-chain-id> <target-chain-id>`
-  - Optional params:
-    `[--clock-drift <millis>] [--trusting-period <days>] [--trust-threshold <numerator/denominator>]`
-- `update client <host-chain-id> <client-id>`
+*   `create client <host-chain-id> <target-chain-id>`
+    *   Optional params:
+        `[--clock-drift <millis>] [--trusting-period <days>] [--trust-threshold <numerator/denominator>]`
+*   `update client <host-chain-id> <client-id>`
 
 To create a connection:
 
-- `create connection <chain-a-id> <chain-b-id>`
-  - Optional: `[--delay <delay>]`
-- `create connection <chain-a-id> --client-a <client-a-id> --client-b <client-b-id>`
-  - Optional: `[--delay <delay>]`
+*   `create connection <chain-a-id> <chain-b-id>`
+    *   Optional: `[--delay <delay>]`
+*   `create connection <chain-a-id> --client-a <client-a-id> --client-b <client-b-id>`
+    *   Optional: `[--delay <delay>]`
 
 To create a channel:
 
-- `create channel <chain-a-id> <chain-b-id> --port-a <port-id> --port-b <port-id>`
-  - Optional: `[--order <order>] [--version <version>]`
-- `create channel <chain-a-id> --connection-a <connection-id> --port-a <port-id> --port-b <port-id>`
-  - Optional: `[--order <order>] [--version <version>]`
+*   `create channel <chain-a-id> <chain-b-id> --port-a <port-id> --port-b <port-id>`
+    *   Optional: `[--order <order>] [--version <version>]`
+*   `create channel <chain-a-id> --connection-a <connection-id> --port-a <port-id> --port-b <port-id>`
+    *   Optional: `[--order <order>] [--version <version>]`
 
 To start packet relaying:
 
-- `start <chain-a-id> <chain-b-id> --port-a <port-id> --port-b <port-id>`
-  - Optional: `[--order <order>] [--version <version>]`
-- `start <chain-a-id> --connection-a <connection-id> --port-a <port-id> --port-b <port-id>`
-  - Optional: `[--order <order>] [--version <version>]`
-- `start <chain-a-id> --channel-a <channel-id> --port-a <port-id>`
+*   `start <chain-a-id> <chain-b-id> --port-a <port-id> --port-b <port-id>`
+    *   Optional: `[--order <order>] [--version <version>]`
+*   `start <chain-a-id> --connection-a <connection-id> --port-a <port-id> --port-b <port-id>`
+    *   Optional: `[--order <order>] [--version <version>]`
+*   `start <chain-a-id> --channel-a <channel-id> --port-a <port-id>`
 
 For finishing pre-initialized, but unfinished object handshakes, for connection
 and channel:
 
-- `establish connection <chain-a-id> --connection-a <connection-id>`
-- `establish channel <chain-a-id> --channel-a <channel-id> --port-a <port-id>`
+*   `establish connection <chain-a-id> --connection-a <connection-id>`
+*   `establish channel <chain-a-id> --channel-a <channel-id> --port-a <port-id>`
 
 ### Rationale
 
@@ -90,19 +90,19 @@ connection in the creation of a new channel).
 
 We propose two basic patterns that Hermes should be able to fulfil.
 
-1. Simple invocations to perform basic actions.
+1.  Simple invocations to perform basic actions.
 
-   - By *action* here we mean doing the complete handshake for an object from
-     scratch (specifically *connection* or *channel*) on two chains, or relaying
-     packets between two chains.
-   - The focus here is for the command to include retrying mechanisms (perform
-     it *robustly*) and have the simplest interface.
+    *   By *action* here we mean doing the complete handshake for an object from
+        scratch (specifically *connection* or *channel*) on two chains, or relaying
+        packets between two chains.
+    *   The focus here is for the command to include retrying mechanisms (perform
+        it *robustly*) and have the simplest interface.
 
-2. Allow reusing of pre-existing state for basic commands.
-   - The pre-existing state could be a client with some specific trust options,
-     for instance, and in this case Hermes would provide support for creating a
-     connection that uses this specific client.
-   - This pattern should also include a retrying mechanism.
+2.  Allow reusing of pre-existing state for basic commands.
+    *   The pre-existing state could be a client with some specific trust options,
+        for instance, and in this case Hermes would provide support for creating a
+        connection that uses this specific client.
+    *   This pattern should also include a retrying mechanism.
 
 #### Details of Use-Cases
 
@@ -111,11 +111,11 @@ commands that Hermes v0.2.0 should fulfil.
 
 ##### Create & Update a Client
 
-- Minimal invocation: this will create the client from scratch:
+*   Minimal invocation: this will create the client from scratch:
 
-```
-create client <host-chain-id> <target-chain-id> [--clock-drift <millis>] [--trusting-period <days>] [--trust-threshold <numerator/denominator>]
-```
+<!---->
+
+    create client <host-chain-id> <target-chain-id> [--clock-drift <millis>] [--trusting-period <days>] [--trust-threshold <numerator/denominator>]
 
 **Details:** Submits a transaction of type [client create][client-create] to
 chain `<host-chain-id>` (sometimes called the *destination* chain of this
@@ -125,44 +125,44 @@ transaction). The new client will be verifying headers for chain
 See also the [limitations](#limitations) section discussing the optional
 security parameters for this command.
 
-- Update a client:
+*   Update a client:
 
-```
-update client <host-chain-id> <client-id>
-```
+<!---->
+
+    update client <host-chain-id> <client-id>
 
 **Details:** Submits a transaction to chain id `<host-chain-id>` to update the
 client having identifier `<client-id>` with new consensus state from up-to-date
 headers. Hermes will automatically infer the target chain of this client from
 the [client state][client-state].
 
-- Upgrade a client:
+*   Upgrade a client:
 
-```
-upgrade client <host-chain-id> <client-id>
-```
+<!---->
+
+    upgrade client <host-chain-id> <client-id>
 
 **Details:** Submits a transaction to chain id `<host-chain-id>` to upgrade the
 client having identifier `<client-id>`. Hermes will automatically infer the
 target chain of this client from the [client state][client-state].
 
-- Upgrade all clients that target a specific chain:
+*   Upgrade all clients that target a specific chain:
 
-```
-upgrade clients <target-chain-id>
-```
+<!---->
+
+    upgrade clients <target-chain-id>
 
 **Details:** Submits a transaction to upgrade clients of all chains in the
 config that target chain id `<target-chain-id>`.
 
 ##### Create New Connection
 
-- Minimal invocation: this will create the connection from scratch, using *new*
-  clients:
+*   Minimal invocation: this will create the connection from scratch, using *new*
+    clients:
 
-```
-create connection <chain-a-id> <chain-b-id> [--delay <delay>]
-```
+<!---->
+
+    create connection <chain-a-id> <chain-b-id> [--delay <delay>]
 
 **Details:** Starts a transaction to perform the connection open handshake
 protocol between two chains. The chains are called symbolically `a` and `b`,
@@ -174,11 +174,11 @@ The optional parameter `--delay` is the delay period that the new connection
 should have. Note also the [limitations](#limitations) around the `delay_period`
 feature.
 
-- Reusing pre-existing state, concretely, with *existing* clients:
+*   Reusing pre-existing state, concretely, with *existing* clients:
 
-```
-create connection <chain-a-id> --client-a <client-id> --client-b <client-id> [--delay <delay>]
-```
+<!---->
+
+    create connection <chain-a-id> --client-a <client-id> --client-b <client-id> [--delay <delay>]
 
 **Details:** Similar to the previous command, this command will perform the
 connection open handshake protocol, but will reuse the client with identifier
@@ -192,54 +192,54 @@ establish the connection using the client with identifier from the option
 
 ##### Create New Channel
 
-- With *new* connection and clients:
+*   With *new* connection and clients:
 
-```
-create channel <chain-a-id> <chain-b-id> --port-a <port-id> --port-b <port-id> [--order <order>] [--version <version>]
-```
+<!---->
 
-- With *existing* specific connection:
+    create channel <chain-a-id> <chain-b-id> --port-a <port-id> --port-b <port-id> [--order <order>] [--version <version>]
 
-```
-create channel <chain-a-id> --connection-a <connection-id> --port-a <port-id> --port-b <port-id> [--order <order>] [--version <version>]
-```
+*   With *existing* specific connection:
+
+<!---->
+
+    create channel <chain-a-id> --connection-a <connection-id> --port-a <port-id> --port-b <port-id> [--order <order>] [--version <version>]
 
 ##### Packet Relaying
 
-- relay packets over a *new* channel, *new* connection, and *new* clients:
+*   relay packets over a *new* channel, *new* connection, and *new* clients:
 
-```
-start <chain-a-id> <chain-b-id> --port-a <port-id> --port-b <port-id> [--order <order>] [--version <version>]
-```
+<!---->
 
-- relay packets over a *new* channel that re-uses an *existing* connection:
+    start <chain-a-id> <chain-b-id> --port-a <port-id> --port-b <port-id> [--order <order>] [--version <version>]
 
-```
-start <chain-a-id> --connection-a <connection-id> --port-a <port-id> --port-b <port-id> [--order <order>] [--version <version>]
-```
+*   relay packets over a *new* channel that re-uses an *existing* connection:
 
-- relay packets over an *existing* channel:
+<!---->
 
-```
-start <chain-a-id> --channel-a <channel-id> --port-a <port-id>
-```
+    start <chain-a-id> --connection-a <connection-id> --port-a <port-id> --port-b <port-id> [--order <order>] [--version <version>]
+
+*   relay packets over an *existing* channel:
+
+<!---->
+
+    start <chain-a-id> --channel-a <channel-id> --port-a <port-id>
 
 ##### Finishing partially complete handshakes:
 
 These commands serve the purpose of covering certain corner-cases where a
 handshake may be partially started.
 
-- Finalize handshake for *partially established* connection:
+*   Finalize handshake for *partially established* connection:
 
-```
-establish connection <chain-a-id> --connection-a <connection-id>
-```
+<!---->
 
-- Finalize handshake for *partially established* channel:
+    establish connection <chain-a-id> --connection-a <connection-id>
 
-```
-establish channel <chain-a-id> --channel-a <channel-id> --port-a <port-id>
-```
+*   Finalize handshake for *partially established* channel:
+
+<!---->
+
+    establish channel <chain-a-id> --channel-a <channel-id> --port-a <port-id>
 
 ### Command Output
 
@@ -266,22 +266,22 @@ Partially implemented.
 
 ### Positive
 
-- Simpler, more accurate CLI invocation: "create" is more precise than "tx" or
-  "handshake"
-- Improved output for human operators.
+*   Simpler, more accurate CLI invocation: "create" is more precise than "tx" or
+    "handshake"
+*   Improved output for human operators.
 
 ### Negative
 
-- Some commands will possibly turn out to be useless.
-- Requires some rethinking of the Relayer architecture (mainly because of the
-  [limitations](#limitations) surrounding light clients.)
+*   Some commands will possibly turn out to be useless.
+*   Requires some rethinking of the Relayer architecture (mainly because of the
+    [limitations](#limitations) surrounding light clients.)
 
 ### Neutral
 
 ## References
 
-- Relayer in Go: https://github.com/cosmos/relayer
-- Relayer in Typescript: https://github.com/confio/ts-relayer
+*   Relayer in Go: https://github.com/cosmos/relayer
+*   Relayer in Typescript: https://github.com/confio/ts-relayer
 
 [#628]: https://github.com/informalsystems/ibc-rs/issues/628
 

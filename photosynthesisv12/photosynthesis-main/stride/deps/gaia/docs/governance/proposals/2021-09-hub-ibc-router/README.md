@@ -5,13 +5,11 @@
 The following is a selection from the
 [Cosmos Whitepaper](https://v1.cosmos.network/resources/whitepaper):
 
-```
-The Cosmos Hub connects to many other blockchains (or zones) via a novel inter-blockchain communication protocol. The Cosmos Hub tracks numerous token types and keeps record of the total number of tokens in each connected zone. Tokens can be transferred from one zone to another securely and quickly without the need for a liquid exchange between zones, because all inter-zone coin transfers go through the Cosmos Hub.
+    The Cosmos Hub connects to many other blockchains (or zones) via a novel inter-blockchain communication protocol. The Cosmos Hub tracks numerous token types and keeps record of the total number of tokens in each connected zone. Tokens can be transferred from one zone to another securely and quickly without the need for a liquid exchange between zones, because all inter-zone coin transfers go through the Cosmos Hub.
 
-...
+    ...
 
-Any of the zones can themselves be hubs to form an acyclic graph, but for the sake of clarity we will only describe the simple configuration where there is only one hub, and many non-hub zones.
-```
+    Any of the zones can themselves be hubs to form an acyclic graph, but for the sake of clarity we will only describe the simple configuration where there is only one hub, and many non-hub zones.
 
 The Hub has long been envisioned as a central point in the IBC architecture. In
 the battle to build and ship IBC this central vision has remained unchanged, but

@@ -1,6 +1,9 @@
 ***
 
-## title: "Claim"&#xA;excerpt: ""&#xA;category: 6392913957c533007128548e
+title: "Claim"
+excerpt: ""
+category: 6392913957c533007128548e
+----------------------------------
 
 # The Claim Module
 
@@ -8,8 +11,8 @@ Users are required participate in core network activities to claim their
 airdrop. An Airdrop recipient is given 20% of the airdrop amount which is not in
 vesting, and then they have to perform the following activities to get the rest:
 
-- 20% vesting over 3 months by staking
-- 60% vesting over 3 months by liquid staking
+*   20% vesting over 3 months by staking
+*   60% vesting over 3 months by liquid staking
 
 These claimable assets 'expire' if not claimed. Users have three months
 (`AirdropDuration`) to claim their full airdrop amount. After three months from
@@ -177,11 +180,11 @@ message Params {
 }
 ```
 
-1. `airdrop_start_time` refers to the time when user can start to claim airdrop.
-2. `airdrop_duration` refers to the duration from start time to end time.
-3. `claim_denom` refers to the denomination of claiming tokens. As a default,
-   it's `ustrd`.
-4. `distributor_address` refers to the address of distribution account.
+1.  `airdrop_start_time` refers to the time when user can start to claim airdrop.
+2.  `airdrop_duration` refers to the duration from start time to end time.
+3.  `claim_denom` refers to the denomination of claiming tokens. As a default,
+    it's `ustrd`.
+4.  `distributor_address` refers to the address of distribution account.
 
 ## Queries
 
@@ -232,4 +235,4 @@ strided query claim total-claimable $(strided keys show -a {your key name}) Acti
 | Type  | Attribute Key | Attribute Value |
 | ----- | ------------- | --------------- |
 | claim | sender        | {receiver}      |
-| claim | amount        | {claim_amount}  |
+| claim | amount        | {claim\_amount}  |

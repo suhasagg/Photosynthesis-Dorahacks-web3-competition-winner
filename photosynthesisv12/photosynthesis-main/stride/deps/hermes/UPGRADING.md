@@ -9,20 +9,20 @@
 
 This release includes multiple changes related to telemetry:
 
-- Renamed the following metrics:
-  - `ibc_client_updates` to `client_updates_submitted`
-  - ` ibc_client_misbehaviours  ` to `client_misbehaviours_submitted`
-  - `ibc_receive_packets` to `receive_packets_confirmed`
-  - ` ibc_acknowledgment_packets  ` to `acknowledgment_packets_confirmed`
-  - ` ibc_timeout_packets  ` to `timeout_packets_confirmed`
-  - `cache_hits` to `queries_cache_hits`
-  - `msg_num` to `total_messages_submitted`
-  - `send_packet_count` to `send_packet_events`
-  - `acknowledgement_count` to `acknowledgement_events`
-  - `cleared_send_packet_count` to `cleared_send_packet_events`
-  - `cleared_acknowledgment_count` to `cleared_acknowledgment_events`
-- Added the following metric:
-  - `timeout_events`
+*   Renamed the following metrics:
+    *   `ibc_client_updates` to `client_updates_submitted`
+    *   `ibc_client_misbehaviours ` to `client_misbehaviours_submitted`
+    *   `ibc_receive_packets` to `receive_packets_confirmed`
+    *   `ibc_acknowledgment_packets ` to `acknowledgment_packets_confirmed`
+    *   `ibc_timeout_packets ` to `timeout_packets_confirmed`
+    *   `cache_hits` to `queries_cache_hits`
+    *   `msg_num` to `total_messages_submitted`
+    *   `send_packet_count` to `send_packet_events`
+    *   `acknowledgement_count` to `acknowledgement_events`
+    *   `cleared_send_packet_count` to `cleared_send_packet_events`
+    *   `cleared_acknowledgment_count` to `cleared_acknowledgment_events`
+*   Added the following metric:
+    *   `timeout_events`
 
 For more details, please check out the [new section that was added to
 guide][telemetry-guide], which describes how the new metrics can be used to
@@ -55,24 +55,24 @@ If you previously did not specify a value for this setting, you will have to set
 The `raw` prefix was removed from all the commands listed below, they are now
 available directly under the `tx` namespace:
 
-- `hermes tx chan-close-confirm`
-- `hermes tx chan-close-init`
-- `hermes tx chan-open-ack`
-- `hermes tx chan-open-confirm`
-- `hermes tx chan-open-init`
-- `hermes tx chan-open-try`
-- `hermes tx conn-ack`
-- `hermes tx conn-confirm`
-- `hermes tx conn-init`
-- `hermes tx conn-try`
-- `hermes tx create-client`
-- `hermes tx ft-transfer`
-- `hermes tx packet-ack`
-- `hermes tx packet-recv`
-- `hermes tx update-client`
-- `hermes tx upgrade-chain`
-- `hermes tx upgrade-client`
-- `hermes tx upgrade-clients`
+*   `hermes tx chan-close-confirm`
+*   `hermes tx chan-close-init`
+*   `hermes tx chan-open-ack`
+*   `hermes tx chan-open-confirm`
+*   `hermes tx chan-open-init`
+*   `hermes tx chan-open-try`
+*   `hermes tx conn-ack`
+*   `hermes tx conn-confirm`
+*   `hermes tx conn-init`
+*   `hermes tx conn-try`
+*   `hermes tx create-client`
+*   `hermes tx ft-transfer`
+*   `hermes tx packet-ack`
+*   `hermes tx packet-recv`
+*   `hermes tx update-client`
+*   `hermes tx upgrade-chain`
+*   `hermes tx upgrade-client`
+*   `hermes tx upgrade-clients`
 
 ### Rename `--a-` and `--b-` prefixes in `hermes tx` subcommands to `--src-` and `--dst-`
 
@@ -101,16 +101,12 @@ For example, in version 0.15.0 the `create client` command would be invoked as
 follows to create a client on host chain `ibc-0` which tracks reference chain
 `ibc-1`:
 
-```
-$ hermes create client ibc-0 ibc-1
-```
+    $ hermes create client ibc-0 ibc-1
 
 As of version 1.0.0-rc.0, the command must now be invoked as follows, using
 flags instead of positional arguments:
 
-```
-$ hermes create client --host-chain ibc-0 --reference-chain ibc-1
-```
+    $ hermes create client --host-chain ibc-0 --reference-chain ibc-1
 
 Please [consult the ADR][adr-010] which describes the new CLI flags for all
 commands.
@@ -129,9 +125,7 @@ As of version 1.0.0-rc.0, one must use the `keys add` command as follows in
 order to restore a key from a mnemonic file instead of the `keys restore`
 command:
 
-```
-$ hermes keys add -chain <CHAIN_ID> --mnemonic-file <MNEMONIC_FILE>
-```
+    $ hermes keys add -chain <CHAIN_ID> --mnemonic-file <MNEMONIC_FILE>
 
 ### The `gas_adjustment` setting has been deprecated in favor of `gas_multiplier`
 

@@ -1,6 +1,9 @@
 ***
 
-## order: 2&#xA;parent:&#xA;order: 1
+order: 2
+parent:
+order: 1
+--------
 
 # Text (Signaling)
 
@@ -12,18 +15,18 @@ they do not directly cause any changes to the Hub once passed.
 
 Past signalling proposals have been used for a variety of reasons:
 
-- Agreement to adopt (or not adopt) a feature in a future release
-  ([7](https://www.mintscan.io/cosmos/proposals/7),
-  [31](https://www.mintscan.io/cosmos/proposals/31),
-  [38](https://www.mintscan.io/cosmos/proposals/38),
-  [49](https://www.mintscan.io/cosmos/proposals/49),
-  [69](https://www.mintscan.io/cosmos/proposals/69))
-- A high-signal alert to validators
-  ([8](https://www.mintscan.io/cosmos/proposals/8))
-- On-chain record of community opinion
-  ([12](https://www.mintscan.io/cosmos/proposals/12))
-- Ratification of a social norm
-  ([75](https://www.mintscan.io/cosmos/proposals/75))
+*   Agreement to adopt (or not adopt) a feature in a future release
+    ([7](https://www.mintscan.io/cosmos/proposals/7),
+    [31](https://www.mintscan.io/cosmos/proposals/31),
+    [38](https://www.mintscan.io/cosmos/proposals/38),
+    [49](https://www.mintscan.io/cosmos/proposals/49),
+    [69](https://www.mintscan.io/cosmos/proposals/69))
+*   A high-signal alert to validators
+    ([8](https://www.mintscan.io/cosmos/proposals/8))
+*   On-chain record of community opinion
+    ([12](https://www.mintscan.io/cosmos/proposals/12))
+*   Ratification of a social norm
+    ([75](https://www.mintscan.io/cosmos/proposals/75))
 
 ### A note on historical text proposals
 
@@ -67,10 +70,10 @@ enforced by code, there can still be value from having a proposal on-chain and
 subject to discussion. Whether a proposal passes or fails, we all get
 information from it having been considered.
 
-- The community might have had a thorough, thoughtful discussion about a topic
-  that they otherwise wouldn't have had.
-- A dev team interested in a feature might have a better idea of how their work
-  will be received by the community.
-- The community might be more informed about a topic than they previously were.
-- The community might feel confident that we are aligned on a particular
-  definition or social norm.
+*   The community might have had a thorough, thoughtful discussion about a topic
+    that they otherwise wouldn't have had.
+*   A dev team interested in a feature might have a better idea of how their work
+    will be received by the community.
+*   The community might be more informed about a topic than they previously were.
+*   The community might feel confident that we are aligned on a particular
+    definition or social norm.

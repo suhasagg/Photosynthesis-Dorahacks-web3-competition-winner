@@ -25,9 +25,9 @@ connections, and channels.
 Chains allocate identifiers using a chain-specific allocation scheme. Currently,
 the *cosmos-sdk* implementation uses the following identifiers:
 
-- `07-tendermint-<n>` for tendermint clients.
-- `connection-<n>` for connections.
-- `channel-<n>` for channels.
+*   `07-tendermint-<n>` for tendermint clients.
+*   `connection-<n>` for connections.
+*   `channel-<n>` for channels.
 
 It is possible for two chains to use the same identifier to designate two
 different objects. For example, two different channels, one on the Hub and one
@@ -129,204 +129,202 @@ If the command runs successfully, it should output something similar to:
 
 <details><summary style="font-weight:bold">Create connection output</summary>
 
-```
-2022-08-29T11:16:39.833467Z  INFO ThreadId(01) using default configuration from '$HOME/.hermes/config.toml'
-2022-08-29T11:16:39.838071Z  INFO ThreadId(01) Creating a new connection with pre-existing clients 07-tendermint-0 and 07-tendermint-0
-2022-08-29T11:16:39.843103Z  INFO ThreadId(15) wait_for_block_commits: waiting for commit of tx hashes(s) F87AE29F8BA86EA9F6533C0CE8A34101C90948B824446E0B4889C4F953A9E094 id=ibc-0
-2022-08-29T11:16:41.047867Z  INFO ThreadId(01) 🥂 ibc-0 => IbcEventWithHeight {
-    event: OpenInitConnection(
-        OpenInit(
-            Attributes {
-                connection_id: Some(
-                    ConnectionId(
-                        "connection-0",
+    2022-08-29T11:16:39.833467Z  INFO ThreadId(01) using default configuration from '$HOME/.hermes/config.toml'
+    2022-08-29T11:16:39.838071Z  INFO ThreadId(01) Creating a new connection with pre-existing clients 07-tendermint-0 and 07-tendermint-0
+    2022-08-29T11:16:39.843103Z  INFO ThreadId(15) wait_for_block_commits: waiting for commit of tx hashes(s) F87AE29F8BA86EA9F6533C0CE8A34101C90948B824446E0B4889C4F953A9E094 id=ibc-0
+    2022-08-29T11:16:41.047867Z  INFO ThreadId(01) 🥂 ibc-0 => IbcEventWithHeight {
+        event: OpenInitConnection(
+            OpenInit(
+                Attributes {
+                    connection_id: Some(
+                        ConnectionId(
+                            "connection-0",
+                        ),
                     ),
-                ),
-                client_id: ClientId(
-                    "07-tendermint-0",
-                ),
-                counterparty_connection_id: None,
-                counterparty_client_id: ClientId(
-                    "07-tendermint-0",
-                ),
-            },
-        ),
-    ),
-    height: Height {
-        revision: 0,
-        height: 29,
-    },
-}
-
-2022-08-29T11:16:44.061620Z  INFO ThreadId(15) wait_for_block_commits: waiting for commit of tx hashes(s) AEEAE5846991C6748248ECD81A5B8D83E7E0388322202900788C72518649EF7B id=ibc-0
-2022-08-29T11:16:51.249114Z  INFO ThreadId(41) wait_for_block_commits: waiting for commit of tx hashes(s) BFED59B2EBE5D75A19C1CBB1FB931FF6FC81EF02F872CEB3D37AA40DDA5101B4 id=ibc-1
-2022-08-29T11:16:52.452619Z  INFO ThreadId(01) 🥂 ibc-1 => IbcEventWithHeight {
-    event: OpenTryConnection(
-        OpenTry(
-            Attributes {
-                connection_id: Some(
-                    ConnectionId(
-                        "connection-0",
+                    client_id: ClientId(
+                        "07-tendermint-0",
                     ),
-                ),
-                client_id: ClientId(
-                    "07-tendermint-0",
-                ),
-                counterparty_connection_id: Some(
-                    ConnectionId(
-                        "connection-0",
+                    counterparty_connection_id: None,
+                    counterparty_client_id: ClientId(
+                        "07-tendermint-0",
                     ),
-                ),
-                counterparty_client_id: ClientId(
-                    "07-tendermint-0",
-                ),
-            },
-        ),
-    ),
-    height: Height {
-        revision: 1,
-        height: 31,
-    },
-}
-
-2022-08-29T11:16:55.459367Z  WARN ThreadId(01) [ibc-0 -> ibc-1:07-tendermint-0] resolving trusted height from the full list of consensus state heights for target height 0-31; this may take a while
-2022-08-29T11:16:55.469498Z  INFO ThreadId(41) wait_for_block_commits: waiting for commit of tx hashes(s) D232FCF03549B692604A06AFC1D82494FB1D466E61880E9A8653FEFC2F41BA69 id=ibc-1
-2022-08-29T11:17:02.248045Z  INFO ThreadId(15) wait_for_block_commits: waiting for commit of tx hashes(s) 0ABC352714048C0873537CCEBE31393E1CB09F810B5AAE495833436A8F9447C0 id=ibc-0
-2022-08-29T11:17:06.159408Z  INFO ThreadId(01) 🥂 ibc-0 => IbcEventWithHeight {
-    event: OpenAckConnection(
-        OpenAck(
-            Attributes {
-                connection_id: Some(
-                    ConnectionId(
-                        "connection-0",
-                    ),
-                ),
-                client_id: ClientId(
-                    "07-tendermint-0",
-                ),
-                counterparty_connection_id: Some(
-                    ConnectionId(
-                        "connection-0",
-                    ),
-                ),
-                counterparty_client_id: ClientId(
-                    "07-tendermint-0",
-                ),
-            },
-        ),
-    ),
-    height: Height {
-        revision: 0,
-        height: 34,
-    },
-}
-
-2022-08-29T11:17:11.202362Z  INFO ThreadId(41) wait_for_block_commits: waiting for commit of tx hashes(s) F5A344056C7F8775620581756985C2C5DB43F396A18956C017E56EFB4A8FF616 id=ibc-1
-2022-08-29T11:17:12.407373Z  INFO ThreadId(01) 🥂 ibc-1 => IbcEventWithHeight {
-    event: OpenConfirmConnection(
-        OpenConfirm(
-            Attributes {
-                connection_id: Some(
-                    ConnectionId(
-                        "connection-0",
-                    ),
-                ),
-                client_id: ClientId(
-                    "07-tendermint-0",
-                ),
-                counterparty_connection_id: Some(
-                    ConnectionId(
-                        "connection-0",
-                    ),
-                ),
-                counterparty_client_id: ClientId(
-                    "07-tendermint-0",
-                ),
-            },
-        ),
-    ),
-    height: Height {
-        revision: 1,
-        height: 35,
-    },
-}
-
-2022-08-29T11:17:15.409868Z  INFO ThreadId(01) connection handshake already finished for Connection {
-    delay_period: 0ns,
-    a_side: ConnectionSide {
-        chain: BaseChainHandle {
-            chain_id: ChainId {
-                id: "ibc-0",
-                version: 0,
-            },
-            runtime_sender: Sender { .. },
-        },
-        client_id: ClientId(
-            "07-tendermint-0",
-        ),
-        connection_id: Some(
-            ConnectionId(
-                "connection-0",
+                },
             ),
         ),
-    },
-    b_side: ConnectionSide {
-        chain: BaseChainHandle {
-            chain_id: ChainId {
-                id: "ibc-1",
-                version: 1,
-            },
-            runtime_sender: Sender { .. },
+        height: Height {
+            revision: 0,
+            height: 29,
         },
-        client_id: ClientId(
-            "07-tendermint-0",
-        ),
-        connection_id: Some(
-            ConnectionId(
-                "connection-0",
-            ),
-        ),
-    },
-}
+    }
 
-SUCCESS Connection {
-    delay_period: 0ns,
-    a_side: ConnectionSide {
-        chain: BaseChainHandle {
-            chain_id: ChainId {
-                id: "ibc-0",
-                version: 0,
-            },
-            runtime_sender: Sender { .. },
-        },
-        client_id: ClientId(
-            "07-tendermint-0",
-        ),
-        connection_id: Some(
-            ConnectionId(
-                "connection-0",
+    2022-08-29T11:16:44.061620Z  INFO ThreadId(15) wait_for_block_commits: waiting for commit of tx hashes(s) AEEAE5846991C6748248ECD81A5B8D83E7E0388322202900788C72518649EF7B id=ibc-0
+    2022-08-29T11:16:51.249114Z  INFO ThreadId(41) wait_for_block_commits: waiting for commit of tx hashes(s) BFED59B2EBE5D75A19C1CBB1FB931FF6FC81EF02F872CEB3D37AA40DDA5101B4 id=ibc-1
+    2022-08-29T11:16:52.452619Z  INFO ThreadId(01) 🥂 ibc-1 => IbcEventWithHeight {
+        event: OpenTryConnection(
+            OpenTry(
+                Attributes {
+                    connection_id: Some(
+                        ConnectionId(
+                            "connection-0",
+                        ),
+                    ),
+                    client_id: ClientId(
+                        "07-tendermint-0",
+                    ),
+                    counterparty_connection_id: Some(
+                        ConnectionId(
+                            "connection-0",
+                        ),
+                    ),
+                    counterparty_client_id: ClientId(
+                        "07-tendermint-0",
+                    ),
+                },
             ),
         ),
-    },
-    b_side: ConnectionSide {
-        chain: BaseChainHandle {
-            chain_id: ChainId {
-                id: "ibc-1",
-                version: 1,
-            },
-            runtime_sender: Sender { .. },
+        height: Height {
+            revision: 1,
+            height: 31,
         },
-        client_id: ClientId(
-            "07-tendermint-0",
-        ),
-        connection_id: Some(
-            ConnectionId(
-                "connection-0",
+    }
+
+    2022-08-29T11:16:55.459367Z  WARN ThreadId(01) [ibc-0 -> ibc-1:07-tendermint-0] resolving trusted height from the full list of consensus state heights for target height 0-31; this may take a while
+    2022-08-29T11:16:55.469498Z  INFO ThreadId(41) wait_for_block_commits: waiting for commit of tx hashes(s) D232FCF03549B692604A06AFC1D82494FB1D466E61880E9A8653FEFC2F41BA69 id=ibc-1
+    2022-08-29T11:17:02.248045Z  INFO ThreadId(15) wait_for_block_commits: waiting for commit of tx hashes(s) 0ABC352714048C0873537CCEBE31393E1CB09F810B5AAE495833436A8F9447C0 id=ibc-0
+    2022-08-29T11:17:06.159408Z  INFO ThreadId(01) 🥂 ibc-0 => IbcEventWithHeight {
+        event: OpenAckConnection(
+            OpenAck(
+                Attributes {
+                    connection_id: Some(
+                        ConnectionId(
+                            "connection-0",
+                        ),
+                    ),
+                    client_id: ClientId(
+                        "07-tendermint-0",
+                    ),
+                    counterparty_connection_id: Some(
+                        ConnectionId(
+                            "connection-0",
+                        ),
+                    ),
+                    counterparty_client_id: ClientId(
+                        "07-tendermint-0",
+                    ),
+                },
             ),
         ),
-    },
-}
-```
+        height: Height {
+            revision: 0,
+            height: 34,
+        },
+    }
+
+    2022-08-29T11:17:11.202362Z  INFO ThreadId(41) wait_for_block_commits: waiting for commit of tx hashes(s) F5A344056C7F8775620581756985C2C5DB43F396A18956C017E56EFB4A8FF616 id=ibc-1
+    2022-08-29T11:17:12.407373Z  INFO ThreadId(01) 🥂 ibc-1 => IbcEventWithHeight {
+        event: OpenConfirmConnection(
+            OpenConfirm(
+                Attributes {
+                    connection_id: Some(
+                        ConnectionId(
+                            "connection-0",
+                        ),
+                    ),
+                    client_id: ClientId(
+                        "07-tendermint-0",
+                    ),
+                    counterparty_connection_id: Some(
+                        ConnectionId(
+                            "connection-0",
+                        ),
+                    ),
+                    counterparty_client_id: ClientId(
+                        "07-tendermint-0",
+                    ),
+                },
+            ),
+        ),
+        height: Height {
+            revision: 1,
+            height: 35,
+        },
+    }
+
+    2022-08-29T11:17:15.409868Z  INFO ThreadId(01) connection handshake already finished for Connection {
+        delay_period: 0ns,
+        a_side: ConnectionSide {
+            chain: BaseChainHandle {
+                chain_id: ChainId {
+                    id: "ibc-0",
+                    version: 0,
+                },
+                runtime_sender: Sender { .. },
+            },
+            client_id: ClientId(
+                "07-tendermint-0",
+            ),
+            connection_id: Some(
+                ConnectionId(
+                    "connection-0",
+                ),
+            ),
+        },
+        b_side: ConnectionSide {
+            chain: BaseChainHandle {
+                chain_id: ChainId {
+                    id: "ibc-1",
+                    version: 1,
+                },
+                runtime_sender: Sender { .. },
+            },
+            client_id: ClientId(
+                "07-tendermint-0",
+            ),
+            connection_id: Some(
+                ConnectionId(
+                    "connection-0",
+                ),
+            ),
+        },
+    }
+
+    SUCCESS Connection {
+        delay_period: 0ns,
+        a_side: ConnectionSide {
+            chain: BaseChainHandle {
+                chain_id: ChainId {
+                    id: "ibc-0",
+                    version: 0,
+                },
+                runtime_sender: Sender { .. },
+            },
+            client_id: ClientId(
+                "07-tendermint-0",
+            ),
+            connection_id: Some(
+                ConnectionId(
+                    "connection-0",
+                ),
+            ),
+        },
+        b_side: ConnectionSide {
+            chain: BaseChainHandle {
+                chain_id: ChainId {
+                    id: "ibc-1",
+                    version: 1,
+                },
+                runtime_sender: Sender { .. },
+            },
+            client_id: ClientId(
+                "07-tendermint-0",
+            ),
+            connection_id: Some(
+                ConnectionId(
+                    "connection-0",
+                ),
+            ),
+        },
+    }
 
 </details>
 
@@ -348,12 +346,143 @@ If the command runs succesfully, it should output something similar to:
 
 <details><summary style="font-weight:bold">Create channel output</summary>
 
-```
-2022-08-29T11:26:28.027659Z  INFO ThreadId(01) using default configuration from '$HOME/.hermes/config.toml'
-2022-08-29T11:26:28.040558Z  INFO ThreadId(15) wait_for_block_commits: waiting for commit of tx hashes(s) A7B19D0BB98DD6724B7E41A2CAD8381989D38C8D9E8C141D111DBF9DB5C20DC1 id=ibc-0
-2022-08-29T11:26:33.455062Z  INFO ThreadId(01) 🎊  ibc-0 => IbcEventWithHeight {
-    event: OpenInitChannel(
-        OpenInit {
+    2022-08-29T11:26:28.027659Z  INFO ThreadId(01) using default configuration from '$HOME/.hermes/config.toml'
+    2022-08-29T11:26:28.040558Z  INFO ThreadId(15) wait_for_block_commits: waiting for commit of tx hashes(s) A7B19D0BB98DD6724B7E41A2CAD8381989D38C8D9E8C141D111DBF9DB5C20DC1 id=ibc-0
+    2022-08-29T11:26:33.455062Z  INFO ThreadId(01) 🎊  ibc-0 => IbcEventWithHeight {
+        event: OpenInitChannel(
+            OpenInit {
+                port_id: PortId(
+                    "transfer",
+                ),
+                channel_id: Some(
+                    ChannelId(
+                        "channel-0",
+                    ),
+                ),
+                connection_id: ConnectionId(
+                    "connection-0",
+                ),
+                counterparty_port_id: PortId(
+                    "transfer",
+                ),
+                counterparty_channel_id: None,
+            },
+        ),
+        height: Height {
+            revision: 0,
+            height: 147,
+        },
+    }
+
+    2022-08-29T11:26:38.199410Z  INFO ThreadId(41) wait_for_block_commits: waiting for commit of tx hashes(s) 31CBCFAA6806315A5A6D96C71AEBFDFD71757F823914037B51893F123332282D id=ibc-1
+    2022-08-29T11:26:39.704788Z  INFO ThreadId(01) 🎊  ibc-1 => IbcEventWithHeight {
+        event: OpenTryChannel(
+            OpenTry {
+                port_id: PortId(
+                    "transfer",
+                ),
+                channel_id: Some(
+                    ChannelId(
+                        "channel-0",
+                    ),
+                ),
+                connection_id: ConnectionId(
+                    "connection-0",
+                ),
+                counterparty_port_id: PortId(
+                    "transfer",
+                ),
+                counterparty_channel_id: Some(
+                    ChannelId(
+                        "channel-0",
+                    ),
+                ),
+            },
+        ),
+        height: Height {
+            revision: 1,
+            height: 148,
+        },
+    }
+
+    2022-08-29T11:26:44.242127Z  INFO ThreadId(15) wait_for_block_commits: waiting for commit of tx hashes(s) 0B6EAF8ABCC7E807EDBD65E73EEE32CEE736BE787D2791C49D1436F2BA810F37 id=ibc-0
+    2022-08-29T11:26:48.455749Z  INFO ThreadId(01) 🎊  ibc-0 => IbcEventWithHeight {
+        event: OpenAckChannel(
+            OpenAck {
+                port_id: PortId(
+                    "transfer",
+                ),
+                channel_id: Some(
+                    ChannelId(
+                        "channel-0",
+                    ),
+                ),
+                counterparty_channel_id: Some(
+                    ChannelId(
+                        "channel-0",
+                    ),
+                ),
+                connection_id: ConnectionId(
+                    "connection-0",
+                ),
+                counterparty_port_id: PortId(
+                    "transfer",
+                ),
+            },
+        ),
+        height: Height {
+            revision: 0,
+            height: 150,
+        },
+    }
+
+    2022-08-29T11:26:53.297494Z  INFO ThreadId(41) wait_for_block_commits: waiting for commit of tx hashes(s) 005B0105B4E1541F3ABF56CF5AB340EDA4DE0A81939CF379F1FEA272160C47EE id=ibc-1
+    2022-08-29T11:26:54.501966Z  INFO ThreadId(01) 🎊  ibc-1 => IbcEventWithHeight {
+        event: OpenConfirmChannel(
+            OpenConfirm {
+                port_id: PortId(
+                    "transfer",
+                ),
+                channel_id: Some(
+                    ChannelId(
+                        "channel-0",
+                    ),
+                ),
+                connection_id: ConnectionId(
+                    "connection-0",
+                ),
+                counterparty_port_id: PortId(
+                    "transfer",
+                ),
+                counterparty_channel_id: Some(
+                    ChannelId(
+                        "channel-0",
+                    ),
+                ),
+            },
+        ),
+        height: Height {
+            revision: 1,
+            height: 151,
+        },
+    }
+
+    2022-08-29T11:26:57.503582Z  INFO ThreadId(01) channel handshake already finished for Channel {
+        ordering: Unordered,
+        a_side: ChannelSide {
+            chain: BaseChainHandle {
+                chain_id: ChainId {
+                    id: "ibc-0",
+                    version: 0,
+                },
+                runtime_sender: Sender { .. },
+            },
+            client_id: ClientId(
+                "07-tendermint-0",
+            ),
+            connection_id: ConnectionId(
+                "connection-0",
+            ),
             port_id: PortId(
                 "transfer",
             ),
@@ -362,25 +491,22 @@ If the command runs succesfully, it should output something similar to:
                     "channel-0",
                 ),
             ),
+            version: None,
+        },
+        b_side: ChannelSide {
+            chain: BaseChainHandle {
+                chain_id: ChainId {
+                    id: "ibc-1",
+                    version: 1,
+                },
+                runtime_sender: Sender { .. },
+            },
+            client_id: ClientId(
+                "07-tendermint-0",
+            ),
             connection_id: ConnectionId(
                 "connection-0",
             ),
-            counterparty_port_id: PortId(
-                "transfer",
-            ),
-            counterparty_channel_id: None,
-        },
-    ),
-    height: Height {
-        revision: 0,
-        height: 147,
-    },
-}
-
-2022-08-29T11:26:38.199410Z  INFO ThreadId(41) wait_for_block_commits: waiting for commit of tx hashes(s) 31CBCFAA6806315A5A6D96C71AEBFDFD71757F823914037B51893F123332282D id=ibc-1
-2022-08-29T11:26:39.704788Z  INFO ThreadId(01) 🎊  ibc-1 => IbcEventWithHeight {
-    event: OpenTryChannel(
-        OpenTry {
             port_id: PortId(
                 "transfer",
             ),
@@ -389,29 +515,27 @@ If the command runs succesfully, it should output something similar to:
                     "channel-0",
                 ),
             ),
+            version: None,
+        },
+        connection_delay: 0ns,
+    }
+
+    SUCCESS Channel {
+        ordering: Unordered,
+        a_side: ChannelSide {
+            chain: BaseChainHandle {
+                chain_id: ChainId {
+                    id: "ibc-0",
+                    version: 0,
+                },
+                runtime_sender: Sender { .. },
+            },
+            client_id: ClientId(
+                "07-tendermint-0",
+            ),
             connection_id: ConnectionId(
                 "connection-0",
             ),
-            counterparty_port_id: PortId(
-                "transfer",
-            ),
-            counterparty_channel_id: Some(
-                ChannelId(
-                    "channel-0",
-                ),
-            ),
-        },
-    ),
-    height: Height {
-        revision: 1,
-        height: 148,
-    },
-}
-
-2022-08-29T11:26:44.242127Z  INFO ThreadId(15) wait_for_block_commits: waiting for commit of tx hashes(s) 0B6EAF8ABCC7E807EDBD65E73EEE32CEE736BE787D2791C49D1436F2BA810F37 id=ibc-0
-2022-08-29T11:26:48.455749Z  INFO ThreadId(01) 🎊  ibc-0 => IbcEventWithHeight {
-    event: OpenAckChannel(
-        OpenAck {
             port_id: PortId(
                 "transfer",
             ),
@@ -420,29 +544,22 @@ If the command runs succesfully, it should output something similar to:
                     "channel-0",
                 ),
             ),
-            counterparty_channel_id: Some(
-                ChannelId(
-                    "channel-0",
-                ),
+            version: None,
+        },
+        b_side: ChannelSide {
+            chain: BaseChainHandle {
+                chain_id: ChainId {
+                    id: "ibc-1",
+                    version: 1,
+                },
+                runtime_sender: Sender { .. },
+            },
+            client_id: ClientId(
+                "07-tendermint-0",
             ),
             connection_id: ConnectionId(
                 "connection-0",
             ),
-            counterparty_port_id: PortId(
-                "transfer",
-            ),
-        },
-    ),
-    height: Height {
-        revision: 0,
-        height: 150,
-    },
-}
-
-2022-08-29T11:26:53.297494Z  INFO ThreadId(41) wait_for_block_commits: waiting for commit of tx hashes(s) 005B0105B4E1541F3ABF56CF5AB340EDA4DE0A81939CF379F1FEA272160C47EE id=ibc-1
-2022-08-29T11:26:54.501966Z  INFO ThreadId(01) 🎊  ibc-1 => IbcEventWithHeight {
-    event: OpenConfirmChannel(
-        OpenConfirm {
             port_id: PortId(
                 "transfer",
             ),
@@ -451,131 +568,10 @@ If the command runs succesfully, it should output something similar to:
                     "channel-0",
                 ),
             ),
-            connection_id: ConnectionId(
-                "connection-0",
-            ),
-            counterparty_port_id: PortId(
-                "transfer",
-            ),
-            counterparty_channel_id: Some(
-                ChannelId(
-                    "channel-0",
-                ),
-            ),
+            version: None,
         },
-    ),
-    height: Height {
-        revision: 1,
-        height: 151,
-    },
-}
-
-2022-08-29T11:26:57.503582Z  INFO ThreadId(01) channel handshake already finished for Channel {
-    ordering: Unordered,
-    a_side: ChannelSide {
-        chain: BaseChainHandle {
-            chain_id: ChainId {
-                id: "ibc-0",
-                version: 0,
-            },
-            runtime_sender: Sender { .. },
-        },
-        client_id: ClientId(
-            "07-tendermint-0",
-        ),
-        connection_id: ConnectionId(
-            "connection-0",
-        ),
-        port_id: PortId(
-            "transfer",
-        ),
-        channel_id: Some(
-            ChannelId(
-                "channel-0",
-            ),
-        ),
-        version: None,
-    },
-    b_side: ChannelSide {
-        chain: BaseChainHandle {
-            chain_id: ChainId {
-                id: "ibc-1",
-                version: 1,
-            },
-            runtime_sender: Sender { .. },
-        },
-        client_id: ClientId(
-            "07-tendermint-0",
-        ),
-        connection_id: ConnectionId(
-            "connection-0",
-        ),
-        port_id: PortId(
-            "transfer",
-        ),
-        channel_id: Some(
-            ChannelId(
-                "channel-0",
-            ),
-        ),
-        version: None,
-    },
-    connection_delay: 0ns,
-}
-
-SUCCESS Channel {
-    ordering: Unordered,
-    a_side: ChannelSide {
-        chain: BaseChainHandle {
-            chain_id: ChainId {
-                id: "ibc-0",
-                version: 0,
-            },
-            runtime_sender: Sender { .. },
-        },
-        client_id: ClientId(
-            "07-tendermint-0",
-        ),
-        connection_id: ConnectionId(
-            "connection-0",
-        ),
-        port_id: PortId(
-            "transfer",
-        ),
-        channel_id: Some(
-            ChannelId(
-                "channel-0",
-            ),
-        ),
-        version: None,
-    },
-    b_side: ChannelSide {
-        chain: BaseChainHandle {
-            chain_id: ChainId {
-                id: "ibc-1",
-                version: 1,
-            },
-            runtime_sender: Sender { .. },
-        },
-        client_id: ClientId(
-            "07-tendermint-0",
-        ),
-        connection_id: ConnectionId(
-            "connection-0",
-        ),
-        port_id: PortId(
-            "transfer",
-        ),
-        channel_id: Some(
-            ChannelId(
-                "channel-0",
-            ),
-        ),
-        version: None,
-    },
-    connection_delay: 0ns,
-}
-```
+        connection_delay: 0ns,
+    }
 
 </details>
 
@@ -589,9 +585,7 @@ You can visualize the topology of the current network with:
 
 If all the commands were successful, this command should output :
 
-```
-ibc-0: transfer/channel-0 --- ibc-1: transfer/channel-0
-```
+    ibc-0: transfer/channel-0 --- ibc-1: transfer/channel-0
 
 The chains **ibc-0** and **ibc-1** are now set up and configured as so:
 

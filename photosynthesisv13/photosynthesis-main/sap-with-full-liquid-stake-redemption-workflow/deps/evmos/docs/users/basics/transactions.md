@@ -46,11 +46,11 @@ include specific transactions in blocks.
 
 There are several categories of Ethereum transactions:
 
-- regular transactions: transactions from one account to another
-- contract deployment transactions: transactions without a `to` address, where
-  the contract code is sent in the `data` field
-- execution of a contract: transactions that interact with a deployed smart
-  contract, where the `to` address is the smart contract address
+*   regular transactions: transactions from one account to another
+*   contract deployment transactions: transactions without a `to` address, where
+    the contract code is sent in the `data` field
+*   execution of a contract: transactions that interact with a deployed smart
+    contract, where the `to` address is the smart contract address
 
 For more information on Ethereum transactions and the transaction lifecycle,
 [go here](https://ethereum.org/en/developers/docs/transactions/).
@@ -60,9 +60,9 @@ Evmos supports the following Ethereum transactions.
 :::tip **Note**: Unprotected legacy transactions are not supported by default.
 :::
 
-- Dynamic Fee Transactions ([EIP-1559](https://eips.ethereum.org/EIPS/eip-1559))
-- Access List Transactions ([EIP-2930](https://eips.ethereum.org/EIPS/eip-2930))
-- Legacy Transactions ([EIP-2718](https://eips.ethereum.org/EIPS/eip-2718))
+*   Dynamic Fee Transactions ([EIP-1559](https://eips.ethereum.org/EIPS/eip-1559))
+*   Access List Transactions ([EIP-2930](https://eips.ethereum.org/EIPS/eip-2930))
+*   Legacy Transactions ([EIP-2718](https://eips.ethereum.org/EIPS/eip-2718))
 
 ### Interchain Transactions
 

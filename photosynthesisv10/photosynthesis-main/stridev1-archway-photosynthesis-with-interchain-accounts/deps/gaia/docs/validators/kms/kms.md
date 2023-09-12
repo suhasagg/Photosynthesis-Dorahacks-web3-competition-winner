@@ -8,9 +8,9 @@ order: 5
 service that allows separating key management from Tendermint nodes. In addition
 it provides other advantages such as:
 
-- Improved security and risk management policies
-- Unified API and support for various HSM (hardware security modules)
-- Double signing protection (software or hardware based)
+*   Improved security and risk management policies
+*   Unified API and support for various HSM (hardware security modules)
+*   Double signing protection (software or hardware based)
 
 It is recommended that the KMS service runs in a separate physical hosts.
 

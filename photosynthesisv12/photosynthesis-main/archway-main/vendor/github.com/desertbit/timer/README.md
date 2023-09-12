@@ -18,12 +18,12 @@ t := timer.NewTimer(x)
 
 See issues:
 
-- https://github.com/golang/go/issues/11513
-- https://github.com/golang/go/issues/14383
-- https://github.com/golang/go/issues/12721
-- https://github.com/golang/go/issues/14038
-- https://groups.google.com/forum/#!msg/golang-dev/c9UUfASVPoU/tlbK2BpFEwAJ
-- http://grokbase.com/t/gg/golang-nuts/1571eh3tv7/go-nuts-reusing-time-timer
+*   https://github.com/golang/go/issues/11513
+*   https://github.com/golang/go/issues/14383
+*   https://github.com/golang/go/issues/12721
+*   https://github.com/golang/go/issues/14038
+*   https://groups.google.com/forum/#!msg/golang-dev/c9UUfASVPoU/tlbK2BpFEwAJ
+*   http://grokbase.com/t/gg/golang-nuts/1571eh3tv7/go-nuts-reusing-time-timer
 
 Quote from the [Timer Go doc reference](https://golang.org/pkg/time/#Timer):
 

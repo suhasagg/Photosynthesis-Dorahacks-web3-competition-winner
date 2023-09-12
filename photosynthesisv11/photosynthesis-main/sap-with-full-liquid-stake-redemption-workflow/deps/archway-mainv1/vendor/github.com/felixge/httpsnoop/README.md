@@ -78,10 +78,8 @@ over the alternatives ;).
 
 ## Performance
 
-```
-BenchmarkBaseline-8      	   20000	     94912 ns/op
-BenchmarkCaptureMetrics-8	   20000	     95461 ns/op
-```
+    BenchmarkBaseline-8      	   20000	     94912 ns/op
+    BenchmarkCaptureMetrics-8	   20000	     95461 ns/op
 
 As you can see, using `CaptureMetrics` on a vanilla http.Handler introduces an
 overhead of ~500 ns per http request on my machine. However, the margin of error

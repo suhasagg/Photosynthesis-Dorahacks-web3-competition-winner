@@ -2,11 +2,11 @@
 
 # Cosmos Hub 主网上线计划
 
-- 2016 年夏天，Cosmos 首次发表了项目白皮书。
-- 2017 年春天，Cosmos 完成了首次募资。
-- 2019 年一月，Cosmos Hub 软件完成功能开发。
-- 至此，Cosmos Hub 主网即将启动。
-- 那么，Cosmos 主网上线将为 Cosmos 通证（Atom）的持有者带来什么呢？
+*   2016 年夏天，Cosmos 首次发表了项目白皮书。
+*   2017 年春天，Cosmos 完成了首次募资。
+*   2019 年一月，Cosmos Hub 软件完成功能开发。
+*   至此，Cosmos Hub 主网即将启动。
+*   那么，Cosmos 主网上线将为 Cosmos 通证（Atom）的持有者带来什么呢？
 
 如果你是一个 Atom 通证的持有者，你可以将通证委托给主网的验证人并参加对链上治理提
 案的投票。 实际上，通证持有者的委托和参与治理对于未来网络的成功具有决定性的意义
@@ -16,7 +16,7 @@
 **Atom 通证持有人务必仔细阅读以下内容，以保障您的通证能够安全委托给验证人。在您
 开始实际操作前，请先仔细阅读整个 CLI 指南并熟悉所有命令**
 
-- [CLI 指南](../delegator/delegator-guide-cli.md)
+*   [CLI 指南](../delegator/delegator-guide-cli.md)
 
 CLI 指南中所介绍的流程是至今为止唯一经过验证的在主网实现通证委托的安全途径。这是
 因为指南中用到的 gaiacli 工具是唯一正在进行第三方安全审计的数字钱包软件，目前尚
@@ -34,8 +34,8 @@ CLI 指南中所介绍的流程是至今为止唯一经过验证的在主网实�
 跨链基金会和/或 Tendermint 团队不对因软件引起的损失承担任何责任。所以，务必请谨
 慎行事！**
 
-- [跨链 Cosmos 贡献条款](https://github.com/cosmos/cosmos/blob/master/fundraiser/Interchain%20Cosmos%20Contribution%20Terms%20-%20FINAL.pdf)
-- [Apache 2.0 授权协议](https://www.apache.org/licenses/LICENSE-2.0)
+*   [跨链 Cosmos 贡献条款](https://github.com/cosmos/cosmos/blob/master/fundraiser/Interchain%20Cosmos%20Contribution%20Terms%20-%20FINAL.pdf)
+*   [Apache 2.0 授权协议](https://www.apache.org/licenses/LICENSE-2.0)
 
 如果您希望获得更多关于通证委托的介绍并且愿意和 Cosmos 的开发者做直接的交流，您可
 以参加我们 2 月 14 日的线上直播，在直播中我们将介绍主网启动后通证委托的整个流程
@@ -49,38 +49,38 @@ CLI 指南中所介绍的流程是至今为止唯一经过验证的在主网实�
 欢迎收藏[cosmos.network/launch](https://cosmos.network/launch)，跟踪主网启动全过
 程。
 
-- Cosmos-SDK 安全审计 ✔: 在 1 月初，Cosmos-SDK 启动了 2019 年一季度计划进行的一
-  系列第三方安全评估的第一个评估项目。此次安全评估审计持续 2 周半的时间，2 个不
-  同的安全审计公司对 Cosmos-SDK 各部分做了安全评估，而第三家安全审计公司的评估工
-  作也正在进行中。
-- Cosmos-SDK 正式发布版本: RC 版本一旦完成，Cosmos-SDK 的功能在主网上线前将不再
-  变更，此后 Cosmos-SDK 团队将开始一轮内部漏洞检测，以便进一步确保在发布前完成最
-  终的安全性检查。Cosmos-SDK v0.31.0 一发布，我们将启动一个新的 Gaia 测试网，以
-  便在实际运行环境中找到那些在测试中难以被发现的漏洞。
-- 权益争夺赛结束: 2018 年 12 月启动的权益争夺赛（GoS）是同类区块链网络的第一个对
-  抗性的测试网络。GoS 旨在对纯 PoS 网络中的经济激励和社区协作进行压力测试。到目
-  前为止，GoS 区块链网络已经完成了 3 次硬分叉。GoS 任务结束后，我们将通过记分准
-  则来判断获胜者，并且在整个活动结束时宣布对获胜者的奖励
-  。[GoS 记分准则](https://github.com/cosmos/game-of-stakes/blob/master/README.md#scoring)
-- 创世交易的收集: 跨链基金会将对创世时 Atom 通证的分配情况发布一个议案，提出了对
-  Cosmos 投资者，参与者，早期贡献者和权益争夺赛的获胜者的通证分配方案。任何被推
-  荐获得通证分配的个人（或机构）都可以提交一个 gentx 文件，只有提交了该文件才有
-  可能在主网启动创世时成为 Cosmos 验证人。推荐分配数量和 gentx 收集的最终结果将
-  保存在创世 genesis 文件中
-- Cosmos Hub 主网启动 🔥 🚀 🌔🔥: 一旦社区接受了 genesis 文件， 并且占有 2/3 以
-  上投票权的验证人们上线，Cosmos 主网就可以启动了。
+*   Cosmos-SDK 安全审计 ✔: 在 1 月初，Cosmos-SDK 启动了 2019 年一季度计划进行的一
+    系列第三方安全评估的第一个评估项目。此次安全评估审计持续 2 周半的时间，2 个不
+    同的安全审计公司对 Cosmos-SDK 各部分做了安全评估，而第三家安全审计公司的评估工
+    作也正在进行中。
+*   Cosmos-SDK 正式发布版本: RC 版本一旦完成，Cosmos-SDK 的功能在主网上线前将不再
+    变更，此后 Cosmos-SDK 团队将开始一轮内部漏洞检测，以便进一步确保在发布前完成最
+    终的安全性检查。Cosmos-SDK v0.31.0 一发布，我们将启动一个新的 Gaia 测试网，以
+    便在实际运行环境中找到那些在测试中难以被发现的漏洞。
+*   权益争夺赛结束: 2018 年 12 月启动的权益争夺赛（GoS）是同类区块链网络的第一个对
+    抗性的测试网络。GoS 旨在对纯 PoS 网络中的经济激励和社区协作进行压力测试。到目
+    前为止，GoS 区块链网络已经完成了 3 次硬分叉。GoS 任务结束后，我们将通过记分准
+    则来判断获胜者，并且在整个活动结束时宣布对获胜者的奖励
+    。[GoS 记分准则](https://github.com/cosmos/game-of-stakes/blob/master/README.md#scoring)
+*   创世交易的收集: 跨链基金会将对创世时 Atom 通证的分配情况发布一个议案，提出了对
+    Cosmos 投资者，参与者，早期贡献者和权益争夺赛的获胜者的通证分配方案。任何被推
+    荐获得通证分配的个人（或机构）都可以提交一个 gentx 文件，只有提交了该文件才有
+    可能在主网启动创世时成为 Cosmos 验证人。推荐分配数量和 gentx 收集的最终结果将
+    保存在创世 genesis 文件中
+*   Cosmos Hub 主网启动 🔥 🚀 🌔🔥: 一旦社区接受了 genesis 文件， 并且占有 2/3 以
+    上投票权的验证人们上线，Cosmos 主网就可以启动了。
 
 ## Cosmos 官方交流渠道
 
 **以下是 Cosmos 有关主网启动的官方渠道**
 
-- Cosmos Network (twitter.com/cosmos)
-- Cosmos GitHub (github.com/cosmos)
-- Cosmos Blog (blog.cosmos.network) **请注意 Cosmos forum，Riot 群，和 Telegram
-  群将不被视为官方信息发布渠道。**
-- [Cosmos forum](https://forum.cosmos.network)
-- [Riot 群](https://riot.im/app/#/group/+cosmos:matrix.org)
-- [Telegram 群](http://t.me/cosmosproject)
+*   Cosmos Network (twitter.com/cosmos)
+*   Cosmos GitHub (github.com/cosmos)
+*   Cosmos Blog (blog.cosmos.network) **请注意 Cosmos forum，Riot 群，和 Telegram
+    群将不被视为官方信息发布渠道。**
+*   [Cosmos forum](https://forum.cosmos.network)
+*   [Riot 群](https://riot.im/app/#/group/+cosmos:matrix.org)
+*   [Telegram 群](http://t.me/cosmosproject)
 
 如果你对下一步应该做什么或者消息来源的可信度还有什么疑虑，那么在启动时请先不要有
 任何行动，您可以关注以上三个 Cosmos 官方渠道发布的最新情况，另外不要向任何管理员
@@ -106,28 +106,28 @@ Signal，Telegram，SMS，Twitter 或只是在论坛、社交媒体上接收信�
 
 #### 参与 Cosmos 主网启动，您需要熟记以下规则
 
-- 直接从官方来源下载软件，并确保在您进行助记词相关的任何操作时始终使用最新、最安
-  全的 gaiacli 版本。最新版的 Tendermint，Cosmos-SDK 和 gaiacli 只能从我们官方
-  GitHub 仓库中获取，从这些渠道下载可避免上当受骗，避免使用恶意修改的软件版本。
-- 不要将助记词告诉给任何人，你是助记词的唯一保管人。如果有人试图为您的 Atom 提供
-  托管服务，那么就要警惕了：为了避免对通证失去控制，您应该将其离线存储，最大限度
-  降低被盗风险，并制定安全的备份策略，永远不要与任何人分享。
-- 对于在区块链或加密货币环境中要求您访问来自可疑或不熟悉网站的附件或电子邮件要保
-  持警惕。攻击者可能会试图引诱您访问虚假网站，以从您的计算机窃取敏感信息。如果您
-  是 Gmail 用户
-  ，[请在此处对钓鱼邮件进行测试](https://phishingquiz.withgoogle.com)。
-- 在购买 Atoms 之前，请做好充分的信息调研。通证在主网启动时是不允许交易的，所以
-  它们不能进行买卖。只有到实现交易功能的硬叉发布后才能实现通证的在线交易。通证的
-  在线交易功能实现后，请首先对卖方和交易所进行全面调研，确保 Atom 通证的来源可信
-  。
-- Tendermint 团队和跨链基金会都不会出售 Atom 通证，所以，如果您在社交媒体或者电
-  子邮件中看到我们发出的通证销售广告，请不要相信，一定是假的。
-- 对于来自论坛或者技术交流群中的陌生人提供的技术建议必须保持警惕！您需要熟悉所有
-  重要的指令，特别是那些可能存在高风险的操作指令。您可以查阅我们的官方文档，以避
-  免上当受骗，损害自身及他人的利益。请牢记：Cosmos 论坛，Riot 群，和 Telegram 群
-  都不是 Cosmos 官方信息或者新闻的发布渠道。
-- 在发送交易前再次确认交易。链上地址的确很长，但请仔细检查，确保交易发送到正确的
-  地址，防止错误发送。
+*   直接从官方来源下载软件，并确保在您进行助记词相关的任何操作时始终使用最新、最安
+    全的 gaiacli 版本。最新版的 Tendermint，Cosmos-SDK 和 gaiacli 只能从我们官方
+    GitHub 仓库中获取，从这些渠道下载可避免上当受骗，避免使用恶意修改的软件版本。
+*   不要将助记词告诉给任何人，你是助记词的唯一保管人。如果有人试图为您的 Atom 提供
+    托管服务，那么就要警惕了：为了避免对通证失去控制，您应该将其离线存储，最大限度
+    降低被盗风险，并制定安全的备份策略，永远不要与任何人分享。
+*   对于在区块链或加密货币环境中要求您访问来自可疑或不熟悉网站的附件或电子邮件要保
+    持警惕。攻击者可能会试图引诱您访问虚假网站，以从您的计算机窃取敏感信息。如果您
+    是 Gmail 用户
+    ，[请在此处对钓鱼邮件进行测试](https://phishingquiz.withgoogle.com)。
+*   在购买 Atoms 之前，请做好充分的信息调研。通证在主网启动时是不允许交易的，所以
+    它们不能进行买卖。只有到实现交易功能的硬叉发布后才能实现通证的在线交易。通证的
+    在线交易功能实现后，请首先对卖方和交易所进行全面调研，确保 Atom 通证的来源可信
+    。
+*   Tendermint 团队和跨链基金会都不会出售 Atom 通证，所以，如果您在社交媒体或者电
+    子邮件中看到我们发出的通证销售广告，请不要相信，一定是假的。
+*   对于来自论坛或者技术交流群中的陌生人提供的技术建议必须保持警惕！您需要熟悉所有
+    重要的指令，特别是那些可能存在高风险的操作指令。您可以查阅我们的官方文档，以避
+    免上当受骗，损害自身及他人的利益。请牢记：Cosmos 论坛，Riot 群，和 Telegram 群
+    都不是 Cosmos 官方信息或者新闻的发布渠道。
+*   在发送交易前再次确认交易。链上地址的确很长，但请仔细检查，确保交易发送到正确的
+    地址，防止错误发送。
 
 如果突然出现的交易极具诱惑，或显示的消息要求您提供永远不应该与其他人分享的信息，
 您就应该立刻通过 Cosmos 网站或者其他官方渠道来验证这些信息。请再次牢记，来自

@@ -12,16 +12,16 @@ Current API:
 The `metrics` package makes use of a `MetricSink` interface to support delivery
 to any type of backend. Currently the following sinks are provided:
 
-- StatsiteSink : Sinks to a [statsite](https://github.com/armon/statsite/)
-  instance (TCP)
-- StatsdSink: Sinks to a [StatsD](https://github.com/etsy/statsd/) / statsite
-  instance (UDP)
-- PrometheusSink: Sinks to a [Prometheus](http://prometheus.io/) metrics
-  endpoint (exposed via HTTP for scrapes)
-- InmemSink : Provides in-memory aggregation, can be used to export stats
-- FanoutSink : Sinks to multiple sinks. Enables writing to multiple statsite
-  instances for example.
-- BlackholeSink : Sinks to nowhere
+*   StatsiteSink : Sinks to a [statsite](https://github.com/armon/statsite/)
+    instance (TCP)
+*   StatsdSink: Sinks to a [StatsD](https://github.com/etsy/statsd/) / statsite
+    instance (UDP)
+*   PrometheusSink: Sinks to a [Prometheus](http://prometheus.io/) metrics
+    endpoint (exposed via HTTP for scrapes)
+*   InmemSink : Provides in-memory aggregation, can be used to export stats
+*   FanoutSink : Sinks to multiple sinks. Enables writing to multiple statsite
+    instances for example.
+*   BlackholeSink : Sinks to nowhere
 
 In addition to the sinks, the `InmemSignal` can be used to catch a signal, and
 dump a formatted output of recent metrics. For example, when a process gets a
@@ -37,10 +37,10 @@ Since some of these labels may increase greatly cardinality of metrics, the
 library allow to filter labels using a blacklist/whitelist filtering system
 which is global to all metrics.
 
-- If `Config.AllowedLabels` is not nil, then only labels specified in this value
-  will be sent to underlying Sink, otherwise, all labels are sent by default.
-- If `Config.BlockedLabels` is not nil, any label specified in this value will
-  not be sent to underlying Sinks.
+*   If `Config.AllowedLabels` is not nil, then only labels specified in this value
+    will be sent to underlying Sink, otherwise, all labels are sent by default.
+*   If `Config.BlockedLabels` is not nil, any label specified in this value will
+    not be sent to underlying Sinks.
 
 By default, both `Config.AllowedLabels` and `Config.BlockedLabels` are nil,
 meaning that no tags are filetered at all, but it allow to a user to globally
@@ -89,9 +89,7 @@ inm.AddSample([]string{"method", "wow"}, 22)
 
 When a signal comes in, output like the following will be dumped to stderr:
 
-```
-[2014-01-28 14:57:33.04 -0800 PST][G] 'foo': 42.000
-[2014-01-28 14:57:33.04 -0800 PST][P] 'bar': 30.000
-[2014-01-28 14:57:33.04 -0800 PST][C] 'baz': Count: 3 Min: 1.000 Mean: 41.000 Max: 80.000 Stddev: 39.509
-[2014-01-28 14:57:33.04 -0800 PST][S] 'method.wow': Count: 3 Min: 22.000 Mean: 54.667 Max: 100.000 Stddev: 40.513
-```
+    [2014-01-28 14:57:33.04 -0800 PST][G] 'foo': 42.000
+    [2014-01-28 14:57:33.04 -0800 PST][P] 'bar': 30.000
+    [2014-01-28 14:57:33.04 -0800 PST][C] 'baz': Count: 3 Min: 1.000 Mean: 41.000 Max: 80.000 Stddev: 39.509
+    [2014-01-28 14:57:33.04 -0800 PST][S] 'method.wow': Count: 3 Min: 22.000 Mean: 54.667 Max: 100.000 Stddev: 40.513

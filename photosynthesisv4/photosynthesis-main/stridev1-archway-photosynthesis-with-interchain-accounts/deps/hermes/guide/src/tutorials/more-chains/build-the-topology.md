@@ -9,18 +9,16 @@ correctly configured. You can perform a `health-check` with the command :
 
 If the command runs successfully, it should output something similar to:
 
-```
-    2022-08-23T15:54:58.150005Z  INFO ThreadId(01) using default configuration from '$HOME/.hermes/config.toml'
-    2022-08-23T15:54:58.150179Z  INFO ThreadId(01) [ibc-0] performing health check...
-    2022-08-23T15:54:58.163298Z  INFO ThreadId(01) chain is healthy chain=ibc-0
-    2022-08-23T15:54:58.163323Z  INFO ThreadId(01) [ibc-1] performing health check...
-    2022-08-23T15:54:58.169132Z  INFO ThreadId(01) chain is healthy chain=ibc-1
-    2022-08-23T15:54:58.169154Z  INFO ThreadId(01) [ibc-2] performing health check...
-    2022-08-23T15:54:58.178418Z  INFO ThreadId(01) chain is healthy chain=ibc-2
-    2022-08-23T15:54:58.178445Z  INFO ThreadId(01) [ibc-3] performing health check...
-    2022-08-23T15:54:58.184615Z  INFO ThreadId(01) chain is healthy chain=ibc-3
-    SUCCESS performed health check for all chains in the config
-```
+        2022-08-23T15:54:58.150005Z  INFO ThreadId(01) using default configuration from '$HOME/.hermes/config.toml'
+        2022-08-23T15:54:58.150179Z  INFO ThreadId(01) [ibc-0] performing health check...
+        2022-08-23T15:54:58.163298Z  INFO ThreadId(01) chain is healthy chain=ibc-0
+        2022-08-23T15:54:58.163323Z  INFO ThreadId(01) [ibc-1] performing health check...
+        2022-08-23T15:54:58.169132Z  INFO ThreadId(01) chain is healthy chain=ibc-1
+        2022-08-23T15:54:58.169154Z  INFO ThreadId(01) [ibc-2] performing health check...
+        2022-08-23T15:54:58.178418Z  INFO ThreadId(01) chain is healthy chain=ibc-2
+        2022-08-23T15:54:58.178445Z  INFO ThreadId(01) [ibc-3] performing health check...
+        2022-08-23T15:54:58.184615Z  INFO ThreadId(01) chain is healthy chain=ibc-3
+        SUCCESS performed health check for all chains in the config
 
 In the following tutorial, we will connect all of these chains in a full mesh
 topology, then use `Packet filters` to simulate the topology given at the
@@ -53,10 +51,10 @@ If this command runs successfully, it should output the following:
 
 Executing these commands will:
 
-- For every pair of chains, create a client on both chain tracking the state of
-  the counterparty chain.
-- Create a connection between these two clients.
-- Create a `transfer` channel over this connection.
+*   For every pair of chains, create a client on both chain tracking the state of
+    the counterparty chain.
+*   Create a connection between these two clients.
+*   Create a `transfer` channel over this connection.
 
 Use the flag `--exec` flag to execute these commands:
 
@@ -129,23 +127,21 @@ You can verify that everything is correct with the commands:
 
 Which should normally output:
 
-```
-ibc-0: transfer/channel-0 --- ibc-1: transfer/channel-0
-ibc-0: transfer/channel-1 --- ibc-2: transfer/channel-0
-ibc-0: transfer/channel-2 --- ibc-3: transfer/channel-0
+    ibc-0: transfer/channel-0 --- ibc-1: transfer/channel-0
+    ibc-0: transfer/channel-1 --- ibc-2: transfer/channel-0
+    ibc-0: transfer/channel-2 --- ibc-3: transfer/channel-0
 
-ibc-1: transfer/channel-0 --- ibc-0: transfer/channel-0
-ibc-1: transfer/channel-1 --- ibc-2: transfer/channel-1
-ibc-1: transfer/channel-2 --- ibc-3: transfer/channel-1
+    ibc-1: transfer/channel-0 --- ibc-0: transfer/channel-0
+    ibc-1: transfer/channel-1 --- ibc-2: transfer/channel-1
+    ibc-1: transfer/channel-2 --- ibc-3: transfer/channel-1
 
-ibc-2: transfer/channel-0 --- ibc-0: transfer/channel-1
-ibc-2: transfer/channel-1 --- ibc-1: transfer/channel-1
-ibc-2: transfer/channel-2 --- ibc-3: transfer/channel-2
+    ibc-2: transfer/channel-0 --- ibc-0: transfer/channel-1
+    ibc-2: transfer/channel-1 --- ibc-1: transfer/channel-1
+    ibc-2: transfer/channel-2 --- ibc-3: transfer/channel-2
 
-ibc-3: transfer/channel-0 --- ibc-0: transfer/channel-2
-ibc-3: transfer/channel-1 --- ibc-1: transfer/channel-2
-ibc-3: transfer/channel-2 --- ibc-2: transfer/channel-2
-```
+    ibc-3: transfer/channel-0 --- ibc-0: transfer/channel-2
+    ibc-3: transfer/channel-1 --- ibc-1: transfer/channel-2
+    ibc-3: transfer/channel-2 --- ibc-2: transfer/channel-2
 
 ## Add packet filters
 
@@ -153,42 +149,34 @@ Let's use packet filters to relay only on the green paths specified in the
 chart. In order to add filters, open your default configuration file
 `$HOME/.hermes/config.toml` and add:
 
-- Under `ibc-0`'s config:
-  ```
-  [chains.packet_filter]
-  policy = 'allow'
-  list = [
-      ['transfer', 'channel-0'],
-      ['transfer', 'channel-2'],
-  ]
-  ```
-- Under `ibc-1`'s config:
-  ```
-  [chains.packet_filter]
-  policy = 'allow'
-  list = [
-      ['transfer', 'channel-0'],
-      ['transfer', 'channel-1'],
-  ]
-  ```
-- Under `ibc-2`'s config:
-  ```
-  [chains.packet_filter]
-  policy = 'allow'
-  list = [
-      ['transfer', 'channel-0'],
-      ['transfer', 'channel-2'],
-  ]
-  ```
-- Under `ibc-3`'s config:
-  ```
-  [chains.packet_filter]
-  policy = 'allow'
-  list = [
-      ['transfer', 'channel-0'],
-      ['transfer', 'channel-2'],
-  ]
-  ```
+*   Under `ibc-0`'s config:
+        [chains.packet_filter]
+        policy = 'allow'
+        list = [
+            ['transfer', 'channel-0'],
+            ['transfer', 'channel-2'],
+        ]
+*   Under `ibc-1`'s config:
+        [chains.packet_filter]
+        policy = 'allow'
+        list = [
+            ['transfer', 'channel-0'],
+            ['transfer', 'channel-1'],
+        ]
+*   Under `ibc-2`'s config:
+        [chains.packet_filter]
+        policy = 'allow'
+        list = [
+            ['transfer', 'channel-0'],
+            ['transfer', 'channel-2'],
+        ]
+*   Under `ibc-3`'s config:
+        [chains.packet_filter]
+        policy = 'allow'
+        list = [
+            ['transfer', 'channel-0'],
+            ['transfer', 'channel-2'],
+        ]
 
 > **NOTE**: It is also possible to use a `deny` policy to filter out the
 > channels you do not want to relay on. However, if other channels exist or are
@@ -198,9 +186,7 @@ At this point, your config file should look like this:
 
 <details><summary style="font-weight:bold">config.toml</summary>
 
-```
-{{#template ../../templates/files/hermes/more-chains/config_with_filters.toml}}
-```
+    {{#template ../../templates/files/hermes/more-chains/config_with_filters.toml}}
 
 </details>
 
@@ -213,9 +199,7 @@ command:
 
 If the command runs successfully, the output should be:
 
-```
-SUCCESS "configuration is valid"
-```
+    SUCCESS "configuration is valid"
 
 ***
 

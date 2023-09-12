@@ -45,16 +45,14 @@ Install: `go get -u github.com/minio/highwayhash`
 Below are the single core results on an Intel Core i7 (3.1 GHz) for 256 bit
 outputs:
 
-```
-BenchmarkSum256_16      		  204.17 MB/s
-BenchmarkSum256_64      		 1040.63 MB/s
-BenchmarkSum256_1K      		 8653.30 MB/s
-BenchmarkSum256_8K      		13476.07 MB/s
-BenchmarkSum256_1M      		14928.71 MB/s
-BenchmarkSum256_5M      		14180.04 MB/s
-BenchmarkSum256_10M     		12458.65 MB/s
-BenchmarkSum256_25M     		11927.25 MB/s
-```
+    BenchmarkSum256_16      		  204.17 MB/s
+    BenchmarkSum256_64      		 1040.63 MB/s
+    BenchmarkSum256_1K      		 8653.30 MB/s
+    BenchmarkSum256_8K      		13476.07 MB/s
+    BenchmarkSum256_1M      		14928.71 MB/s
+    BenchmarkSum256_5M      		14180.04 MB/s
+    BenchmarkSum256_10M     		12458.65 MB/s
+    BenchmarkSum256_25M     		11927.25 MB/s
 
 So for moderately sized messages it tops out at about 15 GB/sec. Also for small
 messages (1K) the performance is already at approximately 60% of the maximum
@@ -65,28 +63,24 @@ throughput.
 Below are the single core results on an EC2 m6g.4xlarge (Graviton2) instance for
 256 bit outputs:
 
-```
-BenchmarkSum256_16                 96.82 MB/s
-BenchmarkSum256_64                445.35 MB/s
-BenchmarkSum256_1K               2782.46 MB/s
-BenchmarkSum256_8K               4083.58 MB/s
-BenchmarkSum256_1M               4986.41 MB/s
-BenchmarkSum256_5M               4992.72 MB/s
-BenchmarkSum256_10M              4993.32 MB/s
-BenchmarkSum256_25M              4992.55 MB/s
-```
+    BenchmarkSum256_16                 96.82 MB/s
+    BenchmarkSum256_64                445.35 MB/s
+    BenchmarkSum256_1K               2782.46 MB/s
+    BenchmarkSum256_8K               4083.58 MB/s
+    BenchmarkSum256_1M               4986.41 MB/s
+    BenchmarkSum256_5M               4992.72 MB/s
+    BenchmarkSum256_10M              4993.32 MB/s
+    BenchmarkSum256_25M              4992.55 MB/s
 
 ### ppc64le Performance
 
 The ppc64le accelerated version is roughly 10x faster compared to the
 non-optimized version:
 
-```
-benchmark              old MB/s     new MB/s     speedup
-BenchmarkWrite_8K      531.19       5566.41      10.48x
-BenchmarkSum64_8K      518.86       4971.88      9.58x
-BenchmarkSum256_8K     502.45       4474.20      8.90x
-```
+    benchmark              old MB/s     new MB/s     speedup
+    BenchmarkWrite_8K      531.19       5566.41      10.48x
+    BenchmarkSum64_8K      518.86       4971.88      9.58x
+    BenchmarkSum256_8K     502.45       4474.20      8.90x
 
 ### Performance compared to other hashing techniques
 
@@ -95,15 +89,13 @@ HighwayHash compares to other hashing techniques for 5 MB messages (single core
 performance, all Golang implementations, see
 [benchmark](https://github.com/fwessels/HashCompare/blob/master/benchmarks_test.go)).
 
-```
-BenchmarkHighwayHash      	    	11986.98 MB/s
-BenchmarkSHA256_AVX512    	    	 3552.74 MB/s
-BenchmarkBlake2b          	    	  972.38 MB/s
-BenchmarkSHA1             	    	  950.64 MB/s
-BenchmarkMD5              	    	  684.18 MB/s
-BenchmarkSHA512           	    	  562.04 MB/s
-BenchmarkSHA256           	    	  383.07 MB/s
-```
+    BenchmarkHighwayHash      	    	11986.98 MB/s
+    BenchmarkSHA256_AVX512    	    	 3552.74 MB/s
+    BenchmarkBlake2b          	    	  972.38 MB/s
+    BenchmarkSHA1             	    	  950.64 MB/s
+    BenchmarkMD5              	    	  684.18 MB/s
+    BenchmarkSHA512           	    	  562.04 MB/s
+    BenchmarkSHA256           	    	  383.07 MB/s
 
 *Note: the AVX512 version of SHA256 uses the
 [multi-buffer crypto library](https://github.com/intel/intel-ipsec-mb) technique

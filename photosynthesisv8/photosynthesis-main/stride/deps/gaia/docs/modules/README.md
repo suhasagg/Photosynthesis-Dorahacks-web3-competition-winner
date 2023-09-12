@@ -5,4 +5,4 @@ blockchain with relevant info and links for each one.
 
 ## New Modules in Rho V8
 
-- [Global Fee](./globalfee.md)
+*   [Global Fee](./globalfee.md)

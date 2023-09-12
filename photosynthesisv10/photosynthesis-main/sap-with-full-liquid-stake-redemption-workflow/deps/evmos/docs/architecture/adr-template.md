@@ -2,7 +2,7 @@
 
 ## Changelog
 
-- {date}: {changelog}
+*   {date}: {changelog}
 
 ## Status
 
@@ -73,4 +73,4 @@ applicable.
 
 ## References
 
-- {reference link}
+*   {reference link}

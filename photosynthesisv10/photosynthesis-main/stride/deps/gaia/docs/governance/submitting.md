@@ -11,17 +11,17 @@ getting your proposal live on-chain.
 Interacting with the Cosmos Hub via the command line in order to run queries or
 submit proposals has several prerequisites:
 
-- You will need to compile
-  [`gaiad`](https://hub.cosmos.network/main/getting-started/installation.html)
-  from source into a binary file executable by your operating system eg. MacOS,
-  Windows, Linux
-- You will need to indicate which chain you are querying, and currently this is
-  `--chain-id cosmoshub-4`
-- You will need to connect to a full node. You can find a list of available
-  Cosmos Hub endpoints under the
-  [API section](https://github.com/cosmos/chain-registry/blob/master/cosmoshub/chain.json)
-  in the [Chain Registry](https://github.com/cosmos/chain-registry).
-- More info is in the Walkthrough Example section.
+*   You will need to compile
+    [`gaiad`](https://hub.cosmos.network/main/getting-started/installation.html)
+    from source into a binary file executable by your operating system eg. MacOS,
+    Windows, Linux
+*   You will need to indicate which chain you are querying, and currently this is
+    `--chain-id cosmoshub-4`
+*   You will need to connect to a full node. You can find a list of available
+    Cosmos Hub endpoints under the
+    [API section](https://github.com/cosmos/chain-registry/blob/master/cosmoshub/chain.json)
+    in the [Chain Registry](https://github.com/cosmos/chain-registry).
+*   More info is in the Walkthrough Example section.
 
 Running a full node can be difficult for those not technically-inclined, so you
 may choose to use a third-party's full node. In this case, the primary security
@@ -38,8 +38,8 @@ censorship resistant data-hosting platform, like IPFS.
 Once you have drafted your proposal, ideally as a Markdown file, you can upload
 it to the IPFS network:
 
-1. By [running an IPFS node and the IPFS software](https://ipfs.io), or
-2. By using a service such as <https://pinata.cloud>
+1.  By [running an IPFS node and the IPFS software](https://ipfs.io), or
+2.  By using a service such as <https://pinata.cloud>
 
 Ensure that you "pin" the file so that it continues to be available on the
 network. You should get a URL like this:
@@ -72,9 +72,9 @@ guide for the contents of your proposal. When you're done, save the file as a
 Each proposal type is unique in how the JSON should be formatted. See the
 relevant section for the type of proposal you are drafting:
 
-- [Text Proposals](./formatting.md#text)
-- [Community Pool Spend Proposals](./formatting.md#community-pool-spend)
-- [Parameter Change Proposals](./formatting.md#parameter-change)
+*   [Text Proposals](./formatting.md#text)
+*   [Community Pool Spend Proposals](./formatting.md#community-pool-spend)
+*   [Parameter Change Proposals](./formatting.md#parameter-change)
 
 Once on-chain, most people will rely upon block explorers to interpret this
 information with a graphical user interface (GUI).
@@ -120,40 +120,40 @@ If `<proposal type>` is left blank, the type will be a Text proposal. Otherwise,
 it can be set to `param-change` or `community-pool-spend`. Use `--help` to get
 more info from the tool.
 
-1. `gaiad` is the command-line interface client that is used to send
-   transactions and query the Cosmos Hub.
-2. `tx gov submit-proposal community-pool-spend` indicates that the transaction
-   is submitting a community pool spend proposal.
-3. `--~/community_spend_proposal.json` indicates the file containing the
-   proposal details.
-4. `--from hypha-dev-wallet` is the account key that pays the transaction fee
-   and deposit amount. This account key must be already saved in the keyring on
-   your device and it must be an address you control.
-5. `--gas 500000` is the maximum amount of gas permitted to be used to process
-   the transaction.
-   - The more content there is in the description of your proposal, the more gas
-     your transaction will consume
-   - If this number isn't high enough and there isn't enough gas to process your
-     transaction, the transaction will fail.
-   - The transaction will only use the amount of gas needed to process the
-     transaction.
-6. `--fees` is a flat-rate incentive for a validator to process your
-   transaction.
-   - The network still accepts zero fees, but many nodes will not transmit your
-     transaction to the network without a minimum fee.
-   - Many nodes (including the Figment node) use a minimum fee to disincentivize
-     transaction spamming.
-   - 7500uatom is equal to 0.0075 ATOM.
-7. `--chain-id cosmoshub-4` is Cosmos Hub 4. For current and past chain-id's,
-   please look at the
-   [cosmos/mainnet resource](https://github.com/cosmos/mainnet).
-   - The testnet chain ID is `theta-testnet-001`. For current and past testnet
-     information, please look at the
-     [testnet repository](https://github.com/cosmos/testnets).
-8. `--node https://rpc.cosmos.network:443` is using an established node to send
-   the transaction to the Cosmos Hub 4 network. For available nodes, please look
-   at the
-   [Chain Registry](https://github.com/cosmos/chain-registry/blob/master/cosmoshub/chain.json).
+1.  `gaiad` is the command-line interface client that is used to send
+    transactions and query the Cosmos Hub.
+2.  `tx gov submit-proposal community-pool-spend` indicates that the transaction
+    is submitting a community pool spend proposal.
+3.  `--~/community_spend_proposal.json` indicates the file containing the
+    proposal details.
+4.  `--from hypha-dev-wallet` is the account key that pays the transaction fee
+    and deposit amount. This account key must be already saved in the keyring on
+    your device and it must be an address you control.
+5.  `--gas 500000` is the maximum amount of gas permitted to be used to process
+    the transaction.
+    *   The more content there is in the description of your proposal, the more gas
+        your transaction will consume
+    *   If this number isn't high enough and there isn't enough gas to process your
+        transaction, the transaction will fail.
+    *   The transaction will only use the amount of gas needed to process the
+        transaction.
+6.  `--fees` is a flat-rate incentive for a validator to process your
+    transaction.
+    *   The network still accepts zero fees, but many nodes will not transmit your
+        transaction to the network without a minimum fee.
+    *   Many nodes (including the Figment node) use a minimum fee to disincentivize
+        transaction spamming.
+    *   7500uatom is equal to 0.0075 ATOM.
+7.  `--chain-id cosmoshub-4` is Cosmos Hub 4. For current and past chain-id's,
+    please look at the
+    [cosmos/mainnet resource](https://github.com/cosmos/mainnet).
+    *   The testnet chain ID is `theta-testnet-001`. For current and past testnet
+        information, please look at the
+        [testnet repository](https://github.com/cosmos/testnets).
+8.  `--node https://rpc.cosmos.network:443` is using an established node to send
+    the transaction to the Cosmos Hub 4 network. For available nodes, please look
+    at the
+    [Chain Registry](https://github.com/cosmos/chain-registry/blob/master/cosmoshub/chain.json).
 
 **Note**: be careful what you use for `--fees`. A mistake here could result in
 spending hundreds or thousands of ATOMs accidentally, which cannot be recovered.
@@ -171,12 +171,12 @@ The hash should look something like this:
 
 There are a number of reasons why a transaction may fail. Here are two examples:
 
-1. **Running out of gas** - The more data there is in a transaction, the more
-   gas it will need to be processed. If you don't specify enough gas, the
-   transaction will fail.
+1.  **Running out of gas** - The more data there is in a transaction, the more
+    gas it will need to be processed. If you don't specify enough gas, the
+    transaction will fail.
 
-2. **Incorrect denomination** - You may have specified an amount in 'utom' or
-   'atom' instead of 'uatom', causing the transaction to fail.
+2.  **Incorrect denomination** - You may have specified an amount in 'utom' or
+    'atom' instead of 'uatom', causing the transaction to fail.
 
 If you encounter a problem, try to troubleshoot it first, and then ask for help
 on the Cosmos Hub forum:
@@ -191,22 +191,16 @@ to get the proposal into the voting stage. In order to deposit tokens, you'll
 need to know what your proposal ID is after you've submitted your proposal. You
 can query all proposals by the following command:
 
-```
-gaiad q gov proposals
-```
+    gaiad q gov proposals
 
 If there are a lot of proposals on the chain already, you can also filter by
 your own address. For the proposal above, that would be:
 
-```
-gaiad q gov proposals --depositor cosmos1hxv7mpztvln45eghez6evw2ypcw4vjmsmr8cdx
-```
+    gaiad q gov proposals --depositor cosmos1hxv7mpztvln45eghez6evw2ypcw4vjmsmr8cdx
 
 Once you have the proposal ID, this is the command to deposit extra tokens:
 
-```
-gaiad tx gov deposit <proposal-id> <deposit> --from <name>
-```
+    gaiad tx gov deposit <proposal-id> <deposit> --from <name>
 
 In our case above, the `<proposal-id>` would be 59 as queried earlier. The
 `<deposit>` is written as `500000uatom`, just like the example above.
@@ -216,16 +210,16 @@ In our case above, the `<proposal-id>` would be 59 as queried earlier. The
 Submitting to the testnet is identical to mainnet submissions aside from a few
 changes:
 
-1. The chain-id is `theta-testnet-001`.
-2. The list of usable endpoints can be found
-   [here](https://github.com/cosmos/testnets/tree/master/public#readme).
-3. You will need testnet tokens, not ATOM. There is a faucet available in the
-   Developer [Discord](https://discord.gg/W8trcGV).
+1.  The chain-id is `theta-testnet-001`.
+2.  The list of usable endpoints can be found
+    [here](https://github.com/cosmos/testnets/tree/master/public#readme).
+3.  You will need testnet tokens, not ATOM. There is a faucet available in the
+    Developer [Discord](https://discord.gg/W8trcGV).
 
 You may want to submit your proposal to the testnet chain before the mainnet for
 a number of reasons:
 
-1. To see what the proposal description will look like.
-2. To signal that your proposal is about to go live on the mainnet.
-3. To share what the proposal will look like in advance with stakeholders.
-4. To test the functionality of the governance features.
+1.  To see what the proposal description will look like.
+2.  To signal that your proposal is about to go live on the mainnet.
+3.  To share what the proposal will look like in advance with stakeholders.
+4.  To test the functionality of the governance features.

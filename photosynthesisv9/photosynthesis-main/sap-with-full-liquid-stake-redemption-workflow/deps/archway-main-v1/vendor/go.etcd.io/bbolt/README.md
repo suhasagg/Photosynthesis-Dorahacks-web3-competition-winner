@@ -46,34 +46,34 @@ to the API.
 
 ## Table of Contents
 
-- [Getting Started](#getting-started)
-  - [Installing](#installing)
-  - [Opening a database](#opening-a-database)
-  - [Transactions](#transactions)
-    - [Read-write transactions](#read-write-transactions)
-    - [Read-only transactions](#read-only-transactions)
-    - [Batch read-write transactions](#batch-read-write-transactions)
-    - [Managing transactions manually](#managing-transactions-manually)
-  - [Using buckets](#using-buckets)
-  - [Using key/value pairs](#using-keyvalue-pairs)
-  - [Autoincrementing integer for the bucket](#autoincrementing-integer-for-the-bucket)
-  - [Iterating over keys](#iterating-over-keys)
-    - [Prefix scans](#prefix-scans)
-    - [Range scans](#range-scans)
-    - [ForEach()](#foreach)
-  - [Nested buckets](#nested-buckets)
-  - [Database backups](#database-backups)
-  - [Statistics](#statistics)
-  - [Read-Only Mode](#read-only-mode)
-  - [Mobile Use (iOS/Android)](#mobile-use-iosandroid)
-- [Resources](#resources)
-- [Comparison with other databases](#comparison-with-other-databases)
-  - [Postgres, MySQL, & other relational databases](#postgres-mysql--other-relational-databases)
-  - [LevelDB, RocksDB](#leveldb-rocksdb)
-  - [LMDB](#lmdb)
-- [Caveats & Limitations](#caveats--limitations)
-- [Reading the Source](#reading-the-source)
-- [Other Projects Using Bolt](#other-projects-using-bolt)
+*   [Getting Started](#getting-started)
+    *   [Installing](#installing)
+    *   [Opening a database](#opening-a-database)
+    *   [Transactions](#transactions)
+        *   [Read-write transactions](#read-write-transactions)
+        *   [Read-only transactions](#read-only-transactions)
+        *   [Batch read-write transactions](#batch-read-write-transactions)
+        *   [Managing transactions manually](#managing-transactions-manually)
+    *   [Using buckets](#using-buckets)
+    *   [Using key/value pairs](#using-keyvalue-pairs)
+    *   [Autoincrementing integer for the bucket](#autoincrementing-integer-for-the-bucket)
+    *   [Iterating over keys](#iterating-over-keys)
+        *   [Prefix scans](#prefix-scans)
+        *   [Range scans](#range-scans)
+        *   [ForEach()](#foreach)
+    *   [Nested buckets](#nested-buckets)
+    *   [Database backups](#database-backups)
+    *   [Statistics](#statistics)
+    *   [Read-Only Mode](#read-only-mode)
+    *   [Mobile Use (iOS/Android)](#mobile-use-iosandroid)
+*   [Resources](#resources)
+*   [Comparison with other databases](#comparison-with-other-databases)
+    *   [Postgres, MySQL, & other relational databases](#postgres-mysql--other-relational-databases)
+    *   [LevelDB, RocksDB](#leveldb-rocksdb)
+    *   [LMDB](#lmdb)
+*   [Caveats & Limitations](#caveats--limitations)
+*   [Reading the Source](#reading-the-source)
+*   [Other Projects Using Bolt](#other-projects-using-bolt)
 
 ## Getting Started
 
@@ -394,13 +394,11 @@ forward or backward through the keys one at a time.
 
 The following functions are available on the cursor:
 
-```
-First()  Move to the first key.
-Last()   Move to the last key.
-Seek()   Move to a specific key.
-Next()   Move to the next key.
-Prev()   Move to the previous key.
-```
+    First()  Move to the first key.
+    Last()   Move to the last key.
+    Seek()   Move to a specific key.
+    Next()   Move to the next key.
+    Prev()   Move to the previous key.
 
 Each of those functions has a return signature of `(key []byte, value []byte)`.
 When you have iterated to the end of the cursor then `Next()` will return a
@@ -716,10 +714,10 @@ Boltmobiledemo.BoltDB boltDB = Boltmobiledemo.NewBoltDB(path)
 For more information on getting started with Bolt, check out the following
 articles:
 
-- [Intro to BoltDB: Painless Performant Persistence](http://npf.io/2014/07/intro-to-boltdb-painless-performant-persistence/)
-  by [Nate Finch](https://github.com/natefinch).
-- [Bolt -- an embedded key/value database for Go](https://www.progville.com/go/bolt-embedded-db-golang/)
-  by Progville
+*   [Intro to BoltDB: Painless Performant Persistence](http://npf.io/2014/07/intro-to-boltdb-painless-performant-persistence/)
+    by [Nate Finch](https://github.com/natefinch).
+*   [Bolt -- an embedded key/value database for Go](https://www.progville.com/go/bolt-embedded-db-golang/)
+    by Progville
 
 ## Comparison with other databases
 
@@ -779,58 +777,58 @@ flags whereas Bolt splits these specialized cases into their own functions.
 It's important to pick the right tool for the job and Bolt is no exception. Here
 are a few things to note when evaluating and using Bolt:
 
-- Bolt is good for read intensive workloads. Sequential write performance is
-  also fast but random writes can be slow. You can use `DB.Batch()` or add a
-  write-ahead log to help mitigate this issue.
+*   Bolt is good for read intensive workloads. Sequential write performance is
+    also fast but random writes can be slow. You can use `DB.Batch()` or add a
+    write-ahead log to help mitigate this issue.
 
-- Bolt uses a B+tree internally so there can be a lot of random page access.
-  SSDs provide a significant performance boost over spinning disks.
+*   Bolt uses a B+tree internally so there can be a lot of random page access.
+    SSDs provide a significant performance boost over spinning disks.
 
-- Try to avoid long running read transactions. Bolt uses copy-on-write so old
-  pages cannot be reclaimed while an old transaction is using them.
+*   Try to avoid long running read transactions. Bolt uses copy-on-write so old
+    pages cannot be reclaimed while an old transaction is using them.
 
-- Byte slices returned from Bolt are only valid during a transaction. Once the
-  transaction has been committed or rolled back then the memory they point to
-  can be reused by a new page or can be unmapped from virtual memory and you'll
-  see an `unexpected fault address` panic when accessing it.
+*   Byte slices returned from Bolt are only valid during a transaction. Once the
+    transaction has been committed or rolled back then the memory they point to
+    can be reused by a new page or can be unmapped from virtual memory and you'll
+    see an `unexpected fault address` panic when accessing it.
 
-- Bolt uses an exclusive write lock on the database file so it cannot be shared
-  by multiple processes.
+*   Bolt uses an exclusive write lock on the database file so it cannot be shared
+    by multiple processes.
 
-- Be careful when using `Bucket.FillPercent`. Setting a high fill percent for
-  buckets that have random inserts will cause your database to have very poor
-  page utilization.
+*   Be careful when using `Bucket.FillPercent`. Setting a high fill percent for
+    buckets that have random inserts will cause your database to have very poor
+    page utilization.
 
-- Use larger buckets in general. Smaller buckets causes poor page utilization
-  once they become larger than the page size (typically 4KB).
+*   Use larger buckets in general. Smaller buckets causes poor page utilization
+    once they become larger than the page size (typically 4KB).
 
-- Bulk loading a lot of random writes into a new bucket can be slow as the page
-  will not split until the transaction is committed. Randomly inserting more
-  than 100,000 key/value pairs into a single new bucket in a single transaction
-  is not advised.
+*   Bulk loading a lot of random writes into a new bucket can be slow as the page
+    will not split until the transaction is committed. Randomly inserting more
+    than 100,000 key/value pairs into a single new bucket in a single transaction
+    is not advised.
 
-- Bolt uses a memory-mapped file so the underlying operating system handles the
-  caching of the data. Typically, the OS will cache as much of the file as it
-  can in memory and will release memory as needed to other processes. This means
-  that Bolt can show very high memory usage when working with large databases.
-  However, this is expected and the OS will release memory as needed. Bolt can
-  handle databases much larger than the available physical RAM, provided its
-  memory-map fits in the process virtual address space. It may be problematic on
-  32-bits systems.
+*   Bolt uses a memory-mapped file so the underlying operating system handles the
+    caching of the data. Typically, the OS will cache as much of the file as it
+    can in memory and will release memory as needed to other processes. This means
+    that Bolt can show very high memory usage when working with large databases.
+    However, this is expected and the OS will release memory as needed. Bolt can
+    handle databases much larger than the available physical RAM, provided its
+    memory-map fits in the process virtual address space. It may be problematic on
+    32-bits systems.
 
-- The data structures in the Bolt database are memory mapped so the data file
-  will be endian specific. This means that you cannot copy a Bolt file from a
-  little endian machine to a big endian machine and have it work. For most users
-  this is not a concern since most modern CPUs are little endian.
+*   The data structures in the Bolt database are memory mapped so the data file
+    will be endian specific. This means that you cannot copy a Bolt file from a
+    little endian machine to a big endian machine and have it work. For most users
+    this is not a concern since most modern CPUs are little endian.
 
-- Because of the way pages are laid out on disk, Bolt cannot truncate data files
-  and return free pages back to the disk. Instead, Bolt maintains a free list of
-  unused pages within its data file. These free pages can be reused by later
-  transactions. This works well for many use cases as databases generally tend
-  to grow. However, it's important to note that deleting large chunks of data
-  will not allow you to reclaim that space on disk.
+*   Because of the way pages are laid out on disk, Bolt cannot truncate data files
+    and return free pages back to the disk. Instead, Bolt maintains a free list of
+    unused pages within its data file. These free pages can be reused by later
+    transactions. This works well for many use cases as databases generally tend
+    to grow. However, it's important to note that deleting large chunks of data
+    will not allow you to reclaim that space on disk.
 
-  For more information on page allocation, [see this comment][page-allocation].
+    For more information on page allocation, [see this comment][page-allocation].
 
 [page-allocation]: https://github.com/boltdb/bolt/issues/308#issuecomment-74811638
 
@@ -842,43 +840,43 @@ interested in how databases work.
 
 The best places to start are the main entry points into Bolt:
 
-- `Open()` - Initializes the reference to the database. It's responsible for
-  creating the database if it doesn't exist, obtaining an exclusive lock on the
-  file, reading the meta pages, & memory-mapping the file.
+*   `Open()` - Initializes the reference to the database. It's responsible for
+    creating the database if it doesn't exist, obtaining an exclusive lock on the
+    file, reading the meta pages, & memory-mapping the file.
 
-- `DB.Begin()` - Starts a read-only or read-write transaction depending on the
-  value of the `writable` argument. This requires briefly obtaining the "meta"
-  lock to keep track of open transactions. Only one read-write transaction can
-  exist at a time so the "rwlock" is acquired during the life of a read-write
-  transaction.
+*   `DB.Begin()` - Starts a read-only or read-write transaction depending on the
+    value of the `writable` argument. This requires briefly obtaining the "meta"
+    lock to keep track of open transactions. Only one read-write transaction can
+    exist at a time so the "rwlock" is acquired during the life of a read-write
+    transaction.
 
-- `Bucket.Put()` - Writes a key/value pair into a bucket. After validating the
-  arguments, a cursor is used to traverse the B+tree to the page and position
-  where they key & value will be written. Once the position is found, the bucket
-  materializes the underlying page and the page's parent pages into memory as
-  "nodes". These nodes are where mutations occur during read-write transactions.
-  These changes get flushed to disk during commit.
+*   `Bucket.Put()` - Writes a key/value pair into a bucket. After validating the
+    arguments, a cursor is used to traverse the B+tree to the page and position
+    where they key & value will be written. Once the position is found, the bucket
+    materializes the underlying page and the page's parent pages into memory as
+    "nodes". These nodes are where mutations occur during read-write transactions.
+    These changes get flushed to disk during commit.
 
-- `Bucket.Get()` - Retrieves a key/value pair from a bucket. This uses a cursor
-  to move to the page & position of a key/value pair. During a read-only
-  transaction, the key and value data is returned as a direct reference to the
-  underlying mmap file so there's no allocation overhead. For read-write
-  transactions, this data may reference the mmap file or one of the in-memory
-  node values.
+*   `Bucket.Get()` - Retrieves a key/value pair from a bucket. This uses a cursor
+    to move to the page & position of a key/value pair. During a read-only
+    transaction, the key and value data is returned as a direct reference to the
+    underlying mmap file so there's no allocation overhead. For read-write
+    transactions, this data may reference the mmap file or one of the in-memory
+    node values.
 
-- `Cursor` - This object is simply for traversing the B+tree of on-disk pages or
-  in-memory nodes. It can seek to a specific key, move to the first or last
-  value, or it can move forward or backward. The cursor handles the movement up
-  and down the B+tree transparently to the end user.
+*   `Cursor` - This object is simply for traversing the B+tree of on-disk pages or
+    in-memory nodes. It can seek to a specific key, move to the first or last
+    value, or it can move forward or backward. The cursor handles the movement up
+    and down the B+tree transparently to the end user.
 
-- `Tx.Commit()` - Converts the in-memory dirty nodes and the list of free pages
-  into pages to be written to disk. Writing to disk then occurs in two phases.
-  First, the dirty pages are written to disk and an `fsync()` occurs. Second, a
-  new meta page with an incremented transaction ID is written and another
-  `fsync()` occurs. This two phase write ensures that partially written data
-  pages are ignored in the event of a crash since the meta page pointing to them
-  is never written. Partially written meta pages are invalidated because they
-  are written with a checksum.
+*   `Tx.Commit()` - Converts the in-memory dirty nodes and the list of free pages
+    into pages to be written to disk. Writing to disk then occurs in two phases.
+    First, the dirty pages are written to disk and an `fsync()` occurs. Second, a
+    new meta page with an incremented transaction ID is written and another
+    `fsync()` occurs. This two phase write ensures that partially written data
+    pages are ignored in the event of a crash since the meta page pointing to them
+    is never written. Partially written meta pages are invalidated because they
+    are written with a checksum.
 
 If you have additional notes that could be helpful for others, please submit
 them via pull request.
@@ -887,115 +885,115 @@ them via pull request.
 
 Below is a list of public, open source projects that use Bolt:
 
-- [Algernon](https://github.com/xyproto/algernon) - A HTTP/2 web server with
-  built-in support for Lua. Uses BoltDB as the default database backend.
-- [Bazil](https://bazil.org/) - A file system that lets your data reside where
-  it is most convenient for it to reside.
-- [bolter](https://github.com/hasit/bolter) - Command-line app for viewing
-  BoltDB file in your terminal.
-- [boltcli](https://github.com/spacewander/boltcli) - the redis-cli for boltdb
-  with Lua script support.
-- [BoltHold](https://github.com/timshannon/bolthold) - An embeddable NoSQL store
-  for Go types built on BoltDB
-- [BoltStore](https://github.com/yosssi/boltstore) - Session store using Bolt.
-- [Boltdb Boilerplate](https://github.com/bobintornado/boltdb-boilerplate) -
-  Boilerplate wrapper around bolt aiming to make simple calls one-liners.
-- [BoltDbWeb](https://github.com/evnix/boltdbweb) - A web based GUI for BoltDB
-  files.
-- [BoltDB Viewer](https://github.com/zc310/rich_boltdb) - A BoltDB Viewer Can
-  run on Windows、Linux、Android system.
-- [bleve](http://www.blevesearch.com/) - A pure Go search engine similar to
-  ElasticSearch that uses Bolt as the default storage backend.
-- [btcwallet](https://github.com/btcsuite/btcwallet) - A bitcoin wallet.
-- [buckets](https://github.com/joyrexus/buckets) - a bolt wrapper streamlining
-  simple tx and key scans.
-- [cayley](https://github.com/google/cayley) - Cayley is an open-source graph
-  database using Bolt as optional backend.
-- [ChainStore](https://github.com/pressly/chainstore) - Simple key-value
-  interface to a variety of storage engines organized as a chain of operations.
-- [🌰 Chestnut](https://github.com/jrapoport/chestnut) - Chestnut is encrypted
-  storage for Go.
-- [Consul](https://github.com/hashicorp/consul) - Consul is service discovery
-  and configuration made easy. Distributed, highly available, and
-  datacenter-aware.
-- [DVID](https://github.com/janelia-flyem/dvid) - Added Bolt as optional storage
-  engine and testing it against Basho-tuned leveldb.
-- [dcrwallet](https://github.com/decred/dcrwallet) - A wallet for the Decred
-  cryptocurrency.
-- [drive](https://github.com/odeke-em/drive) - drive is an unofficial Google
-  Drive command line client for \*NIX operating systems.
-- [event-shuttle](https://github.com/sclasen/event-shuttle) - A Unix system
-  service to collect and reliably deliver messages to Kafka.
-- [Freehold](http://tshannon.bitbucket.org/freehold/) - An open, secure, and
-  lightweight platform for your files and data.
-- [Go Report Card](https://goreportcard.com/) - Go code quality report cards as
-  a (free and open source) service.
-- [GoWebApp](https://github.com/josephspurrier/gowebapp) - A basic MVC web
-  application in Go using BoltDB.
-- [GoShort](https://github.com/pankajkhairnar/goShort) - GoShort is a URL
-  shortener written in Golang and BoltDB for persistent key/value storage and
-  for routing it's using high performent HTTPRouter.
-- [gopherpit](https://github.com/gopherpit/gopherpit) - A web service to manage
-  Go remote import paths with custom domains
-- [gokv](https://github.com/philippgille/gokv) - Simple key-value store
-  abstraction and implementations for Go (Redis, Consul, etcd, bbolt, BadgerDB,
-  LevelDB, Memcached, DynamoDB, S3, PostgreSQL, MongoDB, CockroachDB and many
-  more)
-- [Gitchain](https://github.com/gitchain/gitchain) - Decentralized, peer-to-peer
-  Git repositories aka "Git meets Bitcoin".
-- [InfluxDB](https://influxdata.com) - Scalable datastore for metrics, events,
-  and real-time analytics.
-- [ipLocator](https://github.com/AndreasBriese/ipLocator) - A fast
-  ip-geo-location-server using bolt with bloom filters.
-- [ipxed](https://github.com/kelseyhightower/ipxed) - Web interface and api for
-  ipxed.
-- [Ironsmith](https://github.com/timshannon/ironsmith) - A simple, script-driven
-  continuous integration (build - > test -> release) tool, with no external
-  dependencies
-- [Kala](https://github.com/ajvb/kala) - Kala is a modern job scheduler
-  optimized to run on a single node. It is persistent, JSON over HTTP API, ISO
-  8601 duration notation, and dependent jobs.
-- [Key Value Access Langusge (KVAL)](https://github.com/kval-access-language) -
-  A proposed grammar for key-value datastores offering a bbolt binding.
-- [LedisDB](https://github.com/siddontang/ledisdb) - A high performance NoSQL,
-  using Bolt as optional storage.
-- [lru](https://github.com/crowdriff/lru) - Easy to use Bolt-backed
-  Least-Recently-Used (LRU) read-through cache with chainable remote stores.
-- [mbuckets](https://github.com/abhigupta912/mbuckets) - A Bolt wrapper that
-  allows easy operations on multi level (nested) buckets.
-- [MetricBase](https://github.com/msiebuhr/MetricBase) - Single-binary version
-  of Graphite.
-- [MuLiFS](https://github.com/dankomiocevic/mulifs) - Music Library Filesystem
-  creates a filesystem to organise your music files.
-- [NATS](https://github.com/nats-io/nats-streaming-server) - NATS Streaming uses
-  bbolt for message and metadata storage.
-- [Prometheus Annotation Server](https://github.com/oliver006/prom_annotation_server) -
-  Annotation server for PromDash & Prometheus service monitoring system.
-- [Rain](https://github.com/cenkalti/rain) - BitTorrent client and library.
-- [reef-pi](https://github.com/reef-pi/reef-pi) - reef-pi is an award winning,
-  modular, DIY reef tank controller using easy to learn electronics based on a
-  Raspberry Pi.
-- [Request Baskets](https://github.com/darklynx/request-baskets) - A web service
-  to collect arbitrary HTTP requests and inspect them via REST API or simple web
-  UI, similar to [RequestBin](http://requestb.in/) service
-- [Seaweed File System](https://github.com/chrislusf/seaweedfs) - Highly
-  scalable distributed key~file system with O(1) disk read.
-- [stow](https://github.com/djherbis/stow) - a persistence manager for objects
-  backed by boltdb.
-- [Storm](https://github.com/asdine/storm) - Simple and powerful ORM for BoltDB.
-- [SimpleBolt](https://github.com/xyproto/simplebolt) - A simple way to use
-  BoltDB. Deals mainly with strings.
-- [Skybox Analytics](https://github.com/skybox/skybox) - A standalone funnel
-  analysis tool for web analytics.
-- [Scuttlebutt](https://github.com/benbjohnson/scuttlebutt) - Uses Bolt to store
-  and process all Twitter mentions of GitHub projects.
-- [tentacool](https://github.com/optiflows/tentacool) - REST api server to
-  manage system stuff (IP, DNS, Gateway...) on a linux server.
-- [torrent](https://github.com/anacrolix/torrent) - Full-featured BitTorrent
-  client package and utilities in Go. BoltDB is a storage backend in
-  development.
-- [Wiki](https://github.com/peterhellberg/wiki) - A tiny wiki using Goji, BoltDB
-  and Blackfriday.
+*   [Algernon](https://github.com/xyproto/algernon) - A HTTP/2 web server with
+    built-in support for Lua. Uses BoltDB as the default database backend.
+*   [Bazil](https://bazil.org/) - A file system that lets your data reside where
+    it is most convenient for it to reside.
+*   [bolter](https://github.com/hasit/bolter) - Command-line app for viewing
+    BoltDB file in your terminal.
+*   [boltcli](https://github.com/spacewander/boltcli) - the redis-cli for boltdb
+    with Lua script support.
+*   [BoltHold](https://github.com/timshannon/bolthold) - An embeddable NoSQL store
+    for Go types built on BoltDB
+*   [BoltStore](https://github.com/yosssi/boltstore) - Session store using Bolt.
+*   [Boltdb Boilerplate](https://github.com/bobintornado/boltdb-boilerplate) -
+    Boilerplate wrapper around bolt aiming to make simple calls one-liners.
+*   [BoltDbWeb](https://github.com/evnix/boltdbweb) - A web based GUI for BoltDB
+    files.
+*   [BoltDB Viewer](https://github.com/zc310/rich_boltdb) - A BoltDB Viewer Can
+    run on Windows、Linux、Android system.
+*   [bleve](http://www.blevesearch.com/) - A pure Go search engine similar to
+    ElasticSearch that uses Bolt as the default storage backend.
+*   [btcwallet](https://github.com/btcsuite/btcwallet) - A bitcoin wallet.
+*   [buckets](https://github.com/joyrexus/buckets) - a bolt wrapper streamlining
+    simple tx and key scans.
+*   [cayley](https://github.com/google/cayley) - Cayley is an open-source graph
+    database using Bolt as optional backend.
+*   [ChainStore](https://github.com/pressly/chainstore) - Simple key-value
+    interface to a variety of storage engines organized as a chain of operations.
+*   [🌰 Chestnut](https://github.com/jrapoport/chestnut) - Chestnut is encrypted
+    storage for Go.
+*   [Consul](https://github.com/hashicorp/consul) - Consul is service discovery
+    and configuration made easy. Distributed, highly available, and
+    datacenter-aware.
+*   [DVID](https://github.com/janelia-flyem/dvid) - Added Bolt as optional storage
+    engine and testing it against Basho-tuned leveldb.
+*   [dcrwallet](https://github.com/decred/dcrwallet) - A wallet for the Decred
+    cryptocurrency.
+*   [drive](https://github.com/odeke-em/drive) - drive is an unofficial Google
+    Drive command line client for \*NIX operating systems.
+*   [event-shuttle](https://github.com/sclasen/event-shuttle) - A Unix system
+    service to collect and reliably deliver messages to Kafka.
+*   [Freehold](http://tshannon.bitbucket.org/freehold/) - An open, secure, and
+    lightweight platform for your files and data.
+*   [Go Report Card](https://goreportcard.com/) - Go code quality report cards as
+    a (free and open source) service.
+*   [GoWebApp](https://github.com/josephspurrier/gowebapp) - A basic MVC web
+    application in Go using BoltDB.
+*   [GoShort](https://github.com/pankajkhairnar/goShort) - GoShort is a URL
+    shortener written in Golang and BoltDB for persistent key/value storage and
+    for routing it's using high performent HTTPRouter.
+*   [gopherpit](https://github.com/gopherpit/gopherpit) - A web service to manage
+    Go remote import paths with custom domains
+*   [gokv](https://github.com/philippgille/gokv) - Simple key-value store
+    abstraction and implementations for Go (Redis, Consul, etcd, bbolt, BadgerDB,
+    LevelDB, Memcached, DynamoDB, S3, PostgreSQL, MongoDB, CockroachDB and many
+    more)
+*   [Gitchain](https://github.com/gitchain/gitchain) - Decentralized, peer-to-peer
+    Git repositories aka "Git meets Bitcoin".
+*   [InfluxDB](https://influxdata.com) - Scalable datastore for metrics, events,
+    and real-time analytics.
+*   [ipLocator](https://github.com/AndreasBriese/ipLocator) - A fast
+    ip-geo-location-server using bolt with bloom filters.
+*   [ipxed](https://github.com/kelseyhightower/ipxed) - Web interface and api for
+    ipxed.
+*   [Ironsmith](https://github.com/timshannon/ironsmith) - A simple, script-driven
+    continuous integration (build - > test -> release) tool, with no external
+    dependencies
+*   [Kala](https://github.com/ajvb/kala) - Kala is a modern job scheduler
+    optimized to run on a single node. It is persistent, JSON over HTTP API, ISO
+    8601 duration notation, and dependent jobs.
+*   [Key Value Access Langusge (KVAL)](https://github.com/kval-access-language) -
+    A proposed grammar for key-value datastores offering a bbolt binding.
+*   [LedisDB](https://github.com/siddontang/ledisdb) - A high performance NoSQL,
+    using Bolt as optional storage.
+*   [lru](https://github.com/crowdriff/lru) - Easy to use Bolt-backed
+    Least-Recently-Used (LRU) read-through cache with chainable remote stores.
+*   [mbuckets](https://github.com/abhigupta912/mbuckets) - A Bolt wrapper that
+    allows easy operations on multi level (nested) buckets.
+*   [MetricBase](https://github.com/msiebuhr/MetricBase) - Single-binary version
+    of Graphite.
+*   [MuLiFS](https://github.com/dankomiocevic/mulifs) - Music Library Filesystem
+    creates a filesystem to organise your music files.
+*   [NATS](https://github.com/nats-io/nats-streaming-server) - NATS Streaming uses
+    bbolt for message and metadata storage.
+*   [Prometheus Annotation Server](https://github.com/oliver006/prom_annotation_server) -
+    Annotation server for PromDash & Prometheus service monitoring system.
+*   [Rain](https://github.com/cenkalti/rain) - BitTorrent client and library.
+*   [reef-pi](https://github.com/reef-pi/reef-pi) - reef-pi is an award winning,
+    modular, DIY reef tank controller using easy to learn electronics based on a
+    Raspberry Pi.
+*   [Request Baskets](https://github.com/darklynx/request-baskets) - A web service
+    to collect arbitrary HTTP requests and inspect them via REST API or simple web
+    UI, similar to [RequestBin](http://requestb.in/) service
+*   [Seaweed File System](https://github.com/chrislusf/seaweedfs) - Highly
+    scalable distributed key~file system with O(1) disk read.
+*   [stow](https://github.com/djherbis/stow) - a persistence manager for objects
+    backed by boltdb.
+*   [Storm](https://github.com/asdine/storm) - Simple and powerful ORM for BoltDB.
+*   [SimpleBolt](https://github.com/xyproto/simplebolt) - A simple way to use
+    BoltDB. Deals mainly with strings.
+*   [Skybox Analytics](https://github.com/skybox/skybox) - A standalone funnel
+    analysis tool for web analytics.
+*   [Scuttlebutt](https://github.com/benbjohnson/scuttlebutt) - Uses Bolt to store
+    and process all Twitter mentions of GitHub projects.
+*   [tentacool](https://github.com/optiflows/tentacool) - REST api server to
+    manage system stuff (IP, DNS, Gateway...) on a linux server.
+*   [torrent](https://github.com/anacrolix/torrent) - Full-featured BitTorrent
+    client package and utilities in Go. BoltDB is a storage backend in
+    development.
+*   [Wiki](https://github.com/peterhellberg/wiki) - A tiny wiki using Goji, BoltDB
+    and Blackfriday.
 
 If you are using Bolt in a project please send a pull request to add it to the
 list.

@@ -37,10 +37,10 @@ governance proposal. `communitytax` is the parameter that determines the
 proportion of staking rewards diverted to the community pool, which is currently
 `0.020000000000000000` (2%) of all staking rewards.
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.distribution.communitytax }}`
-- `cosmoshub-4` default: `0.020000000000000000`
-- `cosmoshub-3` default: `0.020000000000000000`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.distribution.communitytax }}`
+*   `cosmoshub-4` default: `0.020000000000000000`
+*   `cosmoshub-3` default: `0.020000000000000000`
 
 #### Decreasing the value of `communitytax`
 
@@ -71,10 +71,10 @@ the active set in order for the block to be valid and to receive the
 `baseproposerreward` bonus. All in Bits has published more in-depth information
 [here](https://hub.cosmos.network/main/validators/validator-faq.html#how-are-fees-distributed).
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.distribution.baseproposerreward }}`
-- `cosmoshub-4` default: `0.010000000000000000`
-- `cosmoshub-3` default: `0.010000000000000000`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.distribution.baseproposerreward }}`
+*   `cosmoshub-4` default: `0.010000000000000000`
+*   `cosmoshub-3` default: `0.010000000000000000`
 
 #### Decreasing the value of `baseproposerreward`
 
@@ -117,10 +117,10 @@ signatures are included in the proposed block (additional to the requisite 2/3).
 All in Bits has published more in-depth information
 [here](https://hub.cosmos.network/main/validators/validator-faq.html#how-are-fees-distributed).
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.distribution.bonusproposerreward }}`
-- `cosmoshub-4` default: `0.040000000000000000`
-- `cosmoshub-3` default: `0.040000000000000000`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.distribution.bonusproposerreward }}`
+*   `cosmoshub-4` default: `0.040000000000000000`
+*   `cosmoshub-3` default: `0.040000000000000000`
 
 #### Decreasing the value of `bonusproposerreward`
 
@@ -201,10 +201,10 @@ staking rewards when `withdrawaddrenabled` is set to `true`. When
 `withdrawaddrenabled` is set to `false`, the delegator can no longer designate a
 separate address for withdrawals.
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.distribution.withdrawaddrenabled }}`
-- `cosmoshub-4` default: `true`
-- `cosmoshub-3` default: `true`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.distribution.withdrawaddrenabled }}`
+*   `cosmoshub-4` default: `true`
+*   `cosmoshub-3` default: `true`
 
 #### Changing the `withdrawaddrenabled` parameter
 
@@ -228,11 +228,9 @@ chain to halt. In
 [this reported case](https://github.com/cosmos/cosmos-sdk/issues/5808), the
 chain's parameter values were changed to be:
 
-```
-community_tax: "0.020000000000000000"
-base_proposer_reward: "0.999000000000000000"
-bonus_proposer_reward: "0.040000000000000000"
-```
+    community_tax: "0.020000000000000000"
+    base_proposer_reward: "0.999000000000000000"
+    bonus_proposer_reward: "0.040000000000000000"
 
 Though the system will not allow eg. `baseproposerreward` to be a value greater
 than 1.0, it will allow the [`communitytax`](#1-communitytax),

@@ -8,20 +8,20 @@ funcionalidad de la votación. Nótese que
 `gov` está activo en Cosmos Hub 3 y actualmente tiene tres parámetros con seis
 subkeys que pueden ser modificados por una propuesta de gobernanza:
 
-1. [`depositparams`](#1-depositparams)
+1.  [`depositparams`](#1-depositparams)
 
-   - [`mindeposit`](#mindeposit) - `512000000` `uatom` (micro-ATOMs)
-   - [`maxdepositperiod`](#maxdepositperiod) - `1209600000000000` (nanosegundos)
+    *   [`mindeposit`](#mindeposit) - `512000000` `uatom` (micro-ATOMs)
+    *   [`maxdepositperiod`](#maxdepositperiod) - `1209600000000000` (nanosegundos)
 
-2. [`votingparams`](#2-votingparams)
+2.  [`votingparams`](#2-votingparams)
 
-   - [`votingperiod`](#votingperiod) - `1209600000000000` (nanosegundos)
+    *   [`votingperiod`](#votingperiod) - `1209600000000000` (nanosegundos)
 
-3. [`tallyparams`](#3-tallyparams)
-   - [`quorum`](#quorum) - `0.400000000000000000` (proporción de la red)
-   - [`threshold`](#threshold) - `0.500000000000000000` (proporción del poder de
-     voto)
-   - [`veto`](#veto) - `0.334000000000000000` (proporción del poder de voto)
+3.  [`tallyparams`](#3-tallyparams)
+    *   [`quorum`](#quorum) - `0.400000000000000000` (proporción de la red)
+    *   [`threshold`](#threshold) - `0.500000000000000000` (proporción del poder de
+        voto)
+    *   [`veto`](#veto) - `0.334000000000000000` (proporción del poder de voto)
 
 Los valores de lanzamiento de cada subkey de los parámetros están indicados
 arriba, pero puede
@@ -142,16 +142,16 @@ votación es actualmente el mismo para cualquier tipo de propuesta de gobierno.
 La disminución del valor de subkey `votingperiod` reducirá el tiempo de votación
 de las propuestas de gobernanza. Esto podría significar:
 
-1. disminuir la proporción de la red que participa en la votación, y
-2. disminución de la probabilidad de que se alcance el quórum.
+1.  disminuir la proporción de la red que participa en la votación, y
+2.  disminución de la probabilidad de que se alcance el quórum.
 
 #### Aumentar el valor `votingperiod`
 
 El aumento del valor de subkey `votingperiod` aumentará el tiempo de votación de
 las propuestas de gobernanza. Esto puede:
 
-1. aumentar la proporción de la red que participa en la votación, y
-2. aumentar la probabilidad de que se alcance el quórum.
+1.  aumentar la proporción de la red que participa en la votación, y
+2.  aumentar la probabilidad de que se alcance el quórum.
 
 #### Observaciones
 
@@ -209,9 +209,9 @@ voto participativo) para que se apruebe una propuesta de gobierno. Aunque es
 necesario, un voto de mayoría simple 'yes' puede no ser suficiente para aprobar
 una propuesta en dos escenarios:
 
-1. No se alcanza un [quórum](./Governance.md#quorum) del 40% de la capacidad de
-   la red o
-2. Un voto de 'no-with-veto' del 33,4% del poder de voto o mayor.
+1.  No se alcanza un [quórum](./Governance.md#quorum) del 40% de la capacidad de
+    la red o
+2.  Un voto de 'no-with-veto' del 33,4% del poder de voto o mayor.
 
 Si se aprueba una propuesta de gobernanza, las cantidades depositadas se
 devuelven a los contribuyentes. Si se aprueba una propuesta basada en texto,
@@ -232,18 +232,18 @@ inmediatamente después de que termine el período de votación.
 La disminución del valor de subkey `threshold` disminuirá la proporción del
 poder de voto necesario para aprobar una propuesta. Esto puede:
 
-1. aumentará la probabilidad de que una propuesta sea aprobada, y
-2. aumentará la probabilidad de que un grupo minoritario realice cambios en la
-   red.
+1.  aumentará la probabilidad de que una propuesta sea aprobada, y
+2.  aumentará la probabilidad de que un grupo minoritario realice cambios en la
+    red.
 
 #### Aumentar el valor `threshold`
 
 Aumentar el valor de subkey `threshold` aumentará la proporción de poder de voto
 necesario para aprobar una propuesta. Esto puede:
 
-1. disminuir la probabilidad de que una propuesta sea aprobada, y
-2. disminuir la probabilidad de que un grupo minoritario realice cambios en la
-   red.
+1.  disminuir la probabilidad de que una propuesta sea aprobada, y
+2.  disminuir la probabilidad de que un grupo minoritario realice cambios en la
+    red.
 
 ## `veto`
 
@@ -265,9 +265,9 @@ fracasar una propuesta que de otro modo sería aprobada.
 Disminuir el valor de subkey `veto` disminuirá la proporción de poder de voto de
 los participantes requerida para vetar. Esto puede:
 
-1. permiten a un grupo minoritario más pequeño evitar que las propuestas sean
-   aprobadas, y
-2. disminuyen la probabilidad de que se aprueben propuestas controvertidas.
+1.  permiten a un grupo minoritario más pequeño evitar que las propuestas sean
+    aprobadas, y
+2.  disminuyen la probabilidad de que se aprueben propuestas controvertidas.
 
 #### Aumentar el valor `veto`
 
@@ -307,36 +307,36 @@ sido modificados mediante la propuesta de gobierno posterior al lanzamiento) con
 la aplicación de [línea de comandos gaiad](params-change/gaiad). Aquí están los
 comandos para cada uno:
 
-1. `depositparams` - `gaiad q ..` --> **to do** <--
+1.  `depositparams` - `gaiad q ..` --> **to do** <--
 
 ## Futuro
 
 La documentación actual sólo describe el producto mínimo viable para el módulo
 de gobernanza. Las mejoras futuras pueden incluir:
 
-- **`BountyProposals`:** Si es aceptada, un `BountyProposal` crea una recompensa
-  abierta. El `BountyProposal` especifica cuántos átomos se entregarán al
-  finalizar. Estos átomos serán tomados del `reserve pool`. Después de que un
-  `BountyProposal` es aceptado por el gobierno, cualquiera puede presentar un
-  `SoftwareUpgradeProposal` con el código para reclamar la recompensa. Tenga en
-  cuenta que una vez que el `BountyProposal` es aceptado, los fondos
-  correspondientes en la `reserve pool` se bloquean para que el pago siempre
-  pueda ser cumplido. Para vincular un `SoftwareUpgradeProposal` con una
-  recompensa abierta, el remitente del `SoftwareUpgradeProposal` utilizará el
-  atributo `Proposal.LinkedProposal`. Si un `SoftwareUpgradeProposal` vinculado
-  a una recompensa abierta es aceptado por la administración, los fondos
-  reservados se transfieren automáticamente al autor de la propuesta.
-- **Complex delegation:** Los delegadores podrán elegir otros representantes
-  además de sus validadores. En última instancia, la cadena de representantes
-  siempre terminaría en un validador, pero los delegadores podrían heredar el
-  voto de su representante elegido antes de heredar el voto de su validador. En
-  otras palabras, sólo heredarían el voto de su validador si su otro
-  representante designado no votara.
-- **Mejor proceso de revisión de propuestas:** La propuesta consta de dos partes
-  de `proposal.Deposit`, uno para la lucha contra el correo basura (igual que en
-  el MVP) y otro para recompensar a los auditores de terceros.
+*   **`BountyProposals`:** Si es aceptada, un `BountyProposal` crea una recompensa
+    abierta. El `BountyProposal` especifica cuántos átomos se entregarán al
+    finalizar. Estos átomos serán tomados del `reserve pool`. Después de que un
+    `BountyProposal` es aceptado por el gobierno, cualquiera puede presentar un
+    `SoftwareUpgradeProposal` con el código para reclamar la recompensa. Tenga en
+    cuenta que una vez que el `BountyProposal` es aceptado, los fondos
+    correspondientes en la `reserve pool` se bloquean para que el pago siempre
+    pueda ser cumplido. Para vincular un `SoftwareUpgradeProposal` con una
+    recompensa abierta, el remitente del `SoftwareUpgradeProposal` utilizará el
+    atributo `Proposal.LinkedProposal`. Si un `SoftwareUpgradeProposal` vinculado
+    a una recompensa abierta es aceptado por la administración, los fondos
+    reservados se transfieren automáticamente al autor de la propuesta.
+*   **Complex delegation:** Los delegadores podrán elegir otros representantes
+    además de sus validadores. En última instancia, la cadena de representantes
+    siempre terminaría en un validador, pero los delegadores podrían heredar el
+    voto de su representante elegido antes de heredar el voto de su validador. En
+    otras palabras, sólo heredarían el voto de su validador si su otro
+    representante designado no votara.
+*   **Mejor proceso de revisión de propuestas:** La propuesta consta de dos partes
+    de `proposal.Deposit`, uno para la lucha contra el correo basura (igual que en
+    el MVP) y otro para recompensar a los auditores de terceros.
 
-  [origen](https://github.com/cosmos/cosmos-sdk/blob/master/x/gov/spec/05\_future_improvements.md)
+    [origen](https://github.com/cosmos/cosmos-sdk/blob/master/x/gov/spec/05_future_improvements.md)
 
 # Especificaciones técnicas
 
@@ -345,35 +345,35 @@ sistema, los titulares del token nativo de la cadena pueden votar sobre las
 propuestas en una base de 1-token, 1-voto. A continuación hay una lista de las
 características que el módulo apoya actualmente:
 
-- **Entrega de propuestas**: Los usuarios pueden presentar propuestas con un
-  depósito. Una vez que se alcanza el depósito mínimo, la propuesta entra en el
-  período de votación.
-- **Voto**: Los participantes pueden votar sobre las propuestas que llegaron a
-  `MinDeposit`.
-- **Herencia y sanciones**: Los delegadores heredan su voto de validación si no
-  votan ellos mismos.
-- **Reclamación del depósito**: Los usuarios que depositaron en las propuestas
-  pueden recuperar sus depósitos si la propuesta fue aceptada O si la propuesta
-  nunca entró en el período de votación.
+*   **Entrega de propuestas**: Los usuarios pueden presentar propuestas con un
+    depósito. Una vez que se alcanza el depósito mínimo, la propuesta entra en el
+    período de votación.
+*   **Voto**: Los participantes pueden votar sobre las propuestas que llegaron a
+    `MinDeposit`.
+*   **Herencia y sanciones**: Los delegadores heredan su voto de validación si no
+    votan ellos mismos.
+*   **Reclamación del depósito**: Los usuarios que depositaron en las propuestas
+    pueden recuperar sus depósitos si la propuesta fue aceptada O si la propuesta
+    nunca entró en el período de votación.
 
 El módulo `gov` contiene los siguientes parámetros:
 
 | Key                | Type             | cosmoshub-3 genesis setting                                                                      |
 | ------------------ | ---------------- | :----------------------------------------------------------------------------------------------- |
-| depositparams      | object           | {"min_deposit":\[{"denom":"uatom","amount":"512000000"}],"max_deposit_period":"1209600000000000"} |
+| depositparams      | object           | {"min\_deposit":\[{"denom":"uatom","amount":"512000000"}],"max\_deposit\_period":"1209600000000000"} |
 | **Subkeys**        |
-| min_deposit        | array (coins)    | \[{"denom":"uatom","amount":"512000000"}]                                                         |
-| max_deposit_period | string (time ns) | "1209600000000000"                                                                               |
+| min\_deposit        | array (coins)    | \[{"denom":"uatom","amount":"512000000"}]                                                         |
+| max\_deposit\_period | string (time ns) | "1209600000000000"                                                                               |
 
 | Key           | Type             | cosmoshub-3 genesis setting          |
 | ------------- | ---------------- | :----------------------------------- |
-| votingparams  | object           | {"voting_period":"1209600000000000"} |
+| votingparams  | object           | {"voting\_period":"1209600000000000"} |
 | **Subkey**    |
-| voting_period | string (time ns) | "1209600000000000"                   |
+| voting\_period | string (time ns) | "1209600000000000"                   |
 
 | Key           | Type         | cosmoshub-3 genesis setting                                                                      |
 | ------------- | ------------ | :----------------------------------------------------------------------------------------------- |
-| depositparams | object       | {"min_deposit":\[{"denom":"uatom","amount":"512000000"}],"max_deposit_period":"1209600000000000"} |
+| depositparams | object       | {"min\_deposit":\[{"denom":"uatom","amount":"512000000"}],"max\_deposit\_period":"1209600000000000"} |
 | **Subkeys**   |
 | quorum        | string (dec) | "0.400000000000000000"                                                                           |
 | threshold     | string (dec) | "0.500000000000000000"                                                                           |

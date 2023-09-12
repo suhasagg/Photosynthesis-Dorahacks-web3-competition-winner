@@ -26,9 +26,9 @@
 
 ### 시작하기 전에
 
-- [렛저 기기에 코스모스 앱 설치하기](https://github.com/cosmos/ledger-cosmos/blob/master/README.md#installing)
-- [Golang 설치하기](https://golang.org/doc/install)
-- [Gaia 설치하기](https://cosmos.network/docs/cosmos-hub/installation.html)
+*   [렛저 기기에 코스모스 앱 설치하기](https://github.com/cosmos/ledger-cosmos/blob/master/README.md#installing)
+*   [Golang 설치하기](https://golang.org/doc/install)
+*   [Gaia 설치하기](https://cosmos.network/docs/cosmos-hub/installation.html)
 
 다음 명령어를 입력하여 Gaiacli가 올바르게 설치된 것을 확인하세요:
 
@@ -45,9 +45,9 @@ go version go1.11.5 darwin/amd64
 
 ### 렛저 키 추가하기
 
-- 렛저 기기를 연결하시고 잠금해제 하세요
-- 렛저 기기에서 코스모스 앱을 실행하세요
-- 렛저키를 사용해 Gaiacli에서 새로운 계정을 생성하세요
+*   렛저 기기를 연결하시고 잠금해제 하세요
+*   렛저 기기에서 코스모스 앱을 실행하세요
+*   렛저키를 사용해 Gaiacli에서 새로운 계정을 생성하세요
 
 ::: tip *키 명칭(keyName)* 파라미터에 의미있는 값을 입력하세요. `ledger` 플래그
 는 `gaiad`가 렛저 기기의 시드를 사용해 계정을 생성할 것을 알립니다. :::
@@ -175,11 +175,11 @@ Lunie 웹 지갑은 렛저 나노 S 기기를 사용해 서명하는 것을 지�
 
 ### 기기 연결하기
 
-- 렛저 기기를 컴퓨터에 연결하시고, 비밀번호를 입력하여 잠금해제한 후 코스모스 앱
-  을 실행하세요<!-- markdown-link-check-disable-next-line -->
-- 웹 브라우저에서 <https://lunie.io>를 가세요
-- "Sign In"을 클릭하세요
-- "Sign in with Ledger Nano S"를 선택하세요
+*   렛저 기기를 컴퓨터에 연결하시고, 비밀번호를 입력하여 잠금해제한 후 코스모스 앱
+    을 실행하세요<!-- markdown-link-check-disable-next-line -->
+*   웹 브라우저에서 <https://lunie.io>를 가세요
+*   "Sign In"을 클릭하세요
+*   "Sign in with Ledger Nano S"를 선택하세요
 
 ### 주소 확인하기
 
@@ -206,15 +206,15 @@ Lunie에 대해 더 알고싶으시면 이
 응용합니다. 렛저 기기는 이 오브젝트의 시리얼화된 JSON을 기기에서 표기하며, 트랜
 잭션 서명 전 검토하실 수 있습니다. 각 필드에 대한 설명은 다음과 같습니다:
 
-- `chain-id`: 트랜잭션을 전송할 체인, (예, `gaia-13003` 테스트넷 또는
-  `cosmoshub-2` 메인넷)
-- `account_number`: 계정에 최초로 자금을 입금할때 생성되는 계정의 고유 글로벌 ID
-- `sequence`: 계정의 논스 값. 이후 발생하는 트랜잭션 마다 이 값은 증가합니다.
-- `fee`: 트랜잭션 수수료, 가스 수량, 그리고 수수료의 단위를 설명하는 JSON 오브젝
-  트
-- `memo`: (선택 값) 트랜잭션 태깅 등의 용도로 사용되는 텍스트 값
-- `msgs_<index>/<field>`: 트랜잭션에 포함된 메시지 어레이. 더블클릭하여 하위
-  JSON 값을 확인하실 수 있습니다.
+*   `chain-id`: 트랜잭션을 전송할 체인, (예, `gaia-13003` 테스트넷 또는
+    `cosmoshub-2` 메인넷)
+*   `account_number`: 계정에 최초로 자금을 입금할때 생성되는 계정의 고유 글로벌 ID
+*   `sequence`: 계정의 논스 값. 이후 발생하는 트랜잭션 마다 이 값은 증가합니다.
+*   `fee`: 트랜잭션 수수료, 가스 수량, 그리고 수수료의 단위를 설명하는 JSON 오브젝
+    트
+*   `memo`: (선택 값) 트랜잭션 태깅 등의 용도로 사용되는 텍스트 값
+*   `msgs_<index>/<field>`: 트랜잭션에 포함된 메시지 어레이. 더블클릭하여 하위
+    JSON 값을 확인하실 수 있습니다.
 
 # 지원
 
@@ -224,9 +224,9 @@ Lunie에 대해 더 알고싶으시면 이
 [텔레그램 채널](https://t.me/cosmosproject)을 통해 문의하시거나 다음 커뮤니티 가
 이드를 참고하세요:
 
-- [Ztake](https://medium.com/@miranugumanova) -
-  [How to Redelegate Cosmos Atoms with the Lunie Web Wallet](https://medium.com/@miranugumanova/how-to-re-delegate-cosmos-atoms-with-lunie-web-wallet-8303752832c5)
-- [Cryptium Labs](https://medium.com/cryptium-cosmos) -
-  [How to store your ATOMS on your Ledger and delegate with the command line](https://medium.com/cryptium-cosmos/how-to-store-your-cosmos-atoms-on-your-ledger-and-delegate-with-the-command-line-929eb29705f)
+*   [Ztake](https://medium.com/@miranugumanova) -
+    [How to Redelegate Cosmos Atoms with the Lunie Web Wallet](https://medium.com/@miranugumanova/how-to-re-delegate-cosmos-atoms-with-lunie-web-wallet-8303752832c5)
+*   [Cryptium Labs](https://medium.com/cryptium-cosmos) -
+    [How to store your ATOMS on your Ledger and delegate with the command line](https://medium.com/cryptium-cosmos/how-to-store-your-cosmos-atoms-on-your-ledger-and-delegate-with-the-command-line-929eb29705f)
 
 <!-- markdown-link-check-enable -->

@@ -40,23 +40,23 @@ gaiad config chain-id cosmoshub-2
 
 有如下类型的 key：
 
-- `cosmos`
-  - 从通过`gaiad keys add`生成的账户私钥中产生
-  - 用于接收资金
-  - 例如 `cosmos15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc`
-- `cosmosvaloper`
-  - 用于关联一个验证人和其操作者
-  - 用于发起 staking 操作命令
-  - 例如 `cosmosvaloper1carzvgq3e6y3z5kz5y6gxp3wpy3qdrv928vyah`
-- `cosmospub`
-  - 从通过`gaiad keys add`生成的账户私钥中产生
-  - 例如
-    `cosmospub1zcjduc3q7fu03jnlu2xpl75s2nkt7krm6grh4cc5aqth73v0zwmea25wj2hsqhlqzm`
-- `cosmosvalconspub`
-  - 在使用`gaiad init`创建节点时生成
-  - 使用`gaiad tendermint show-validator`获得该值
-  - 例如
-    `cosmosvalconspub1zcjduepq0ms2738680y72v44tfyqm3c9ppduku8fs6sr73fx7m666sjztznqzp2emf`
+*   `cosmos`
+    *   从通过`gaiad keys add`生成的账户私钥中产生
+    *   用于接收资金
+    *   例如 `cosmos15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc`
+*   `cosmosvaloper`
+    *   用于关联一个验证人和其操作者
+    *   用于发起 staking 操作命令
+    *   例如 `cosmosvaloper1carzvgq3e6y3z5kz5y6gxp3wpy3qdrv928vyah`
+*   `cosmospub`
+    *   从通过`gaiad keys add`生成的账户私钥中产生
+    *   例如
+        `cosmospub1zcjduc3q7fu03jnlu2xpl75s2nkt7krm6grh4cc5aqth73v0zwmea25wj2hsqhlqzm`
+*   `cosmosvalconspub`
+    *   在使用`gaiad init`创建节点时生成
+    *   使用`gaiad tendermint show-validator`获得该值
+    *   例如
+        `cosmosvalconspub1zcjduepq0ms2738680y72v44tfyqm3c9ppduku8fs6sr73fx7m666sjztznqzp2emf`
 
 #### 生成 Key
 
@@ -290,12 +290,12 @@ action 标签始终等于相关 message 的`Type()`函数返回的消息类型�
 
 你可以在每个 SDK 的模块中找到目前的标签列表：
 
-- [Staking events](https://github.com/cosmos/cosmos-sdk/tree/main/x/staking#events)
-- [Governance events](https://github.com/cosmos/cosmos-sdk/tree/main/x/gov#events)
-- [Slashing events](https://github.com/cosmos/cosmos-sdk/tree/main/x/slashing#events)
-- [Distribution events](https://github.com/cosmos/cosmos-sdk/tree/main/x/distribution#events)
-- [Bank events](https://github.com/cosmos/cosmos-sdk/tree/main/x/bank#events)
-  :::
+*   [Staking events](https://github.com/cosmos/cosmos-sdk/tree/main/x/staking#events)
+*   [Governance events](https://github.com/cosmos/cosmos-sdk/tree/main/x/gov#events)
+*   [Slashing events](https://github.com/cosmos/cosmos-sdk/tree/main/x/slashing#events)
+*   [Distribution events](https://github.com/cosmos/cosmos-sdk/tree/main/x/distribution#events)
+*   [Bank events](https://github.com/cosmos/cosmos-sdk/tree/main/x/bank#events)
+    :::
 
 #### 匹配一笔交易的 hash
 
@@ -484,9 +484,9 @@ gaiad query staking params
 
 使用上面的命令，你将获得以下值：
 
-- unbonding 时间
-- 验证人的最大数量
-- 用于抵押的币种
+*   unbonding 时间
+*   验证人的最大数量
+*   用于抵押的币种
 
 所有这些值都将通过对一个`ParameterChange`提案的`governance`流程进行更新。
 
@@ -500,10 +500,10 @@ gaiad query staking pool
 
 使用`pool`命令，你将获得以下值：
 
-- 未绑定和已绑定的 token
-- token 总量
-- 当前的年度通货膨胀率以及上次发生通货膨胀的区块
-- 最后记录的绑定股权
+*   未绑定和已绑定的 token
+*   token 总量
+*   当前的年度通货膨胀率以及上次发生通货膨胀的区块
+*   最后记录的绑定股权
 
 #### 查询对验证人的绑定
 
@@ -520,15 +520,15 @@ gaiad query delegations-to <account_cosmosval>
 
 关于投票过程的一些考虑因素：
 
-- 投票由绑定`Atom`的持有者以 1 个绑定的`Atom`对应 1 票方式投出
-- 委托人不投票的话会将票权继承给其验证人
-- **验证人必须对每个提案进行投票**。如果验证人未对提案进行投票，则会对其进行削减
-  处罚。
-- 投票期结束时（主网上是 2 周）统计投票。每个地址可以多次投票以更新其`Option`值
-  （每次支付交易费用），只有最后一次投票将被视为有效。
-- 选民可以选择`Yes`，`No`，`NoWithVeto`和`Abstain`选项。在投票结束时，如
-  果`( YesVotes / ( YesVotes + NoVotes + NoWithVetoVotes ) ) > 1/2`且`( NoWithVetoVotes / ( YesVotes + NoVotes + NoWithVetoVotes )) < 1/3`提
-  案通过，否则就拒绝。
+*   投票由绑定`Atom`的持有者以 1 个绑定的`Atom`对应 1 票方式投出
+*   委托人不投票的话会将票权继承给其验证人
+*   **验证人必须对每个提案进行投票**。如果验证人未对提案进行投票，则会对其进行削减
+    处罚。
+*   投票期结束时（主网上是 2 周）统计投票。每个地址可以多次投票以更新其`Option`值
+    （每次支付交易费用），只有最后一次投票将被视为有效。
+*   选民可以选择`Yes`，`No`，`NoWithVeto`和`Abstain`选项。在投票结束时，如
+    果`( YesVotes / ( YesVotes + NoVotes + NoWithVetoVotes ) ) > 1/2`且`( NoWithVetoVotes / ( YesVotes + NoVotes + NoWithVetoVotes )) < 1/3`提
+    案通过，否则就拒绝。
 
 有关治理流程及其工作原理的更多信息，请查看 Governance 模块[规范]()。
 

@@ -90,8 +90,8 @@ func (app *StrideApp) setupUpgradeHandlers() {
 
 ## Increment the Module's Consensus Version
 
-- The consensus version is different from the chain version - it is specific to
-  each module and is incremented every time state is migrated
+*   The consensus version is different from the chain version - it is specific to
+    each module and is incremented every time state is migrated
 
 ```go
 // x/{moduleName}/module.go

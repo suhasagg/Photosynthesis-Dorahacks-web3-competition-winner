@@ -50,40 +50,40 @@ their elliptic curves.
 After the initial Evmos launch (`v1.1.2`), tokens got stuck from accounts with
 and without claims records (airdrop allocation):
 
-1. Osmosis/Cosmos Hub account without claims record sent IBC transfer to Evmos
-   `secp256k1` receiver address
+1.  Osmosis/Cosmos Hub account without claims record sent IBC transfer to Evmos
+    `secp256k1` receiver address
 
-   **Consequences**
+    **Consequences**
 
-   - IBC vouchers from IBC transfer got stuck in the receiver’s balance
+    *   IBC vouchers from IBC transfer got stuck in the receiver’s balance
 
-   **Recovery procedure**
+    **Recovery procedure**
 
-   - The receiver can send an IBC transfer from their Osmosis / Cosmos Hub
-     account (i.e `osmo1...` or `cosmos1...`) to its same Evmos account
-     (`evmos1...`) to recover the tokens by forwarding them to the corresponding
-     sending chain (Osmosis or Cosmos Hub)
+    *   The receiver can send an IBC transfer from their Osmosis / Cosmos Hub
+        account (i.e `osmo1...` or `cosmos1...`) to its same Evmos account
+        (`evmos1...`) to recover the tokens by forwarding them to the corresponding
+        sending chain (Osmosis or Cosmos Hub)
 
-2. Osmosis/Cosmos Hub account with claims record sent IBC transfer to Evmos
-   `secp256k1` receiver address
+2.  Osmosis/Cosmos Hub account with claims record sent IBC transfer to Evmos
+    `secp256k1` receiver address
 
-   **Consequences**
+    **Consequences**
 
-   - IBC vouchers from IBC transfer got stuck in the receiver’s balance
-   - IBC Transfer Action was claimed and the EVMOS rewards were transferred to
-     the receiver’s Evmos `secp256k1` account, resulting in stuck EVMOS tokens.
-   - Claims record of the sender was migrated to the receiver’s Evmos
-     `secp256k1` account
+    *   IBC vouchers from IBC transfer got stuck in the receiver’s balance
+    *   IBC Transfer Action was claimed and the EVMOS rewards were transferred to
+        the receiver’s Evmos `secp256k1` account, resulting in stuck EVMOS tokens.
+    *   Claims record of the sender was migrated to the receiver’s Evmos
+        `secp256k1` account
 
-   **Recovery procedure**
+    **Recovery procedure**
 
-   - The receiver can send an IBC transfer from their Osmosis / Cosmos Hub
-     account (i.e `osmo1...` or `cosmos1...`) to its same Evmos account
-     (`evmos1...`) to recover the tokens by forwarding them to the corresponding
-     sending chain (Osmosis or Cosmos Hub)
-   - Migrate once again the claims record to a valid account so that the
-     remaining 3 actions can be claimed
-   - Chain is restarted with restored Claims records
+    *   The receiver can send an IBC transfer from their Osmosis / Cosmos Hub
+        account (i.e `osmo1...` or `cosmos1...`) to its same Evmos account
+        (`evmos1...`) to recover the tokens by forwarding them to the corresponding
+        sending chain (Osmosis or Cosmos Hub)
+    *   Migrate once again the claims record to a valid account so that the
+        remaining 3 actions can be claimed
+    *   Chain is restarted with restored Claims records
 
 ## IBC Middleware Stack
 
@@ -106,9 +106,9 @@ order defined on creation (from top to bottom).
 For Evmos the middleware stack ordering is defined as follows (from top to
 bottom):
 
-1. IBC Transfer
-2. Claims Middleware
-3. Recovery Middleware
+1.  IBC Transfer
+2.  Claims Middleware
+3.  Recovery Middleware
 
 This means that the IBC transfer will be executed first, then the claim will be
 attempted and lastly the recovery will be executed. By performing the actions in
@@ -117,16 +117,16 @@ recover.
 
 **Example execution order**
 
-1. User attempts to recover `1000aevmos` that are stuck on the Evmos chain.
-2. User sends `100uosmo` from Osmosis to Evmos through an IBC transaction.
-3. Evmos receives the transaction, and goes through the IBC stack:
-   1. **IBC transfer**: the `100uosmo` IBC vouchers are added to the user
-      balance on evmos.
-   2. **Claims Middleware**: since `sender=receiver` -> perform no-op
-   3. **Recovery Middleware**: since `sender=receiver` -> recover user balance
-      (`1000aevmos` and `100uosmo`) by sending an IBC transfer from `receiver`
-      to the `sender` on the Osmosis chain.
-4. User receives `100uosmo` and `1000aevmos` (IBC voucher) on Osmosis.
+1.  User attempts to recover `1000aevmos` that are stuck on the Evmos chain.
+2.  User sends `100uosmo` from Osmosis to Evmos through an IBC transaction.
+3.  Evmos receives the transaction, and goes through the IBC stack:
+    1.  **IBC transfer**: the `100uosmo` IBC vouchers are added to the user
+        balance on evmos.
+    2.  **Claims Middleware**: since `sender=receiver` -> perform no-op
+    3.  **Recovery Middleware**: since `sender=receiver` -> recover user balance
+        (`1000aevmos` and `100uosmo`) by sending an IBC transfer from `receiver`
+        to the `sender` on the Osmosis chain.
+4.  User receives `100uosmo` and `1000aevmos` (IBC voucher) on Osmosis.
 
 ### Execution errors
 

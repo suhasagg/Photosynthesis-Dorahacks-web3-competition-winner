@@ -9,7 +9,7 @@ validator {synopsis}
 
 ## Pre-requisite Readings
 
-- [Validator Security](./security.md) {prereq}
+*   [Validator Security](./security.md) {prereq}
 
 ## Conduct Survey on General Controls of Hosting Data Centre
 

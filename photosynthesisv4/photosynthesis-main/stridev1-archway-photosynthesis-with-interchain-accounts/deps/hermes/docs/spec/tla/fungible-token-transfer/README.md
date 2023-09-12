@@ -71,18 +71,18 @@ Next ==
     \/ AcknowledgePacket
 ```
 
-- `AdvanceChain`: increments the height of the chain
-- `HandlePacketDatagrams`: based on the datagram type of the next incoming
-  datagram (created in [IBCTokenTransfer.tla](IBCTokenTransfer.tla); see below),
-  it calls the appropriate datagram handlers from ICS 04
-  ([ICS04PacketHandlers.tla](ICS04PacketHandlers.tla)), which in turn call the
-  ICS 20 module callbacks specified in
-  [ICS20FungibleTokenTransferHandlers.tla](ICS20FungibleTokenTransferHandlers.tla).
-  This result in an update of the application state (bank accounts, packet log,
-  provable and private store).
-- `SendPacket`: models that a user wants to initiate a transfer
-- `AcknowledgePacket`: writes an acknowledgement for a received packet on the
-  packet log.
+*   `AdvanceChain`: increments the height of the chain
+*   `HandlePacketDatagrams`: based on the datagram type of the next incoming
+    datagram (created in [IBCTokenTransfer.tla](IBCTokenTransfer.tla); see below),
+    it calls the appropriate datagram handlers from ICS 04
+    ([ICS04PacketHandlers.tla](ICS04PacketHandlers.tla)), which in turn call the
+    ICS 20 module callbacks specified in
+    [ICS20FungibleTokenTransferHandlers.tla](ICS20FungibleTokenTransferHandlers.tla).
+    This result in an update of the application state (bank accounts, packet log,
+    provable and private store).
+*   `SendPacket`: models that a user wants to initiate a transfer
+*   `AcknowledgePacket`: writes an acknowledgement for a received packet on the
+    packet log.
 
 #### [IBCTokenTransfer.tla](IBCTokenTransfer.tla)
 
@@ -97,10 +97,10 @@ Next ==
     \/ UNCHANGED vars
 ```
 
-- `ChainAction` performs an action of one non-deterministically chosen chain.
-- `EnvironmentAction` performs the relayer logic, that is, reads the packet log
-  and creates an appropriate datagram for the destination chain
-  (`CreateDatagrams`).
+*   `ChainAction` performs an action of one non-deterministically chosen chain.
+*   `EnvironmentAction` performs the relayer logic, that is, reads the packet log
+    and creates an appropriate datagram for the destination chain
+    (`CreateDatagrams`).
 
 ### Properties and invariants
 
@@ -125,17 +125,17 @@ This is implemented in the property `ICS20Prop` in the file
 
 We understand "Preservation of total supply" as conjunction of two properties
 
-- For each native denomination of a chain: the sum of the amounts in user
-  accounts in this denomination and the amounts in escrow accounts in this
-  denomination is constant.
+*   For each native denomination of a chain: the sum of the amounts in user
+    accounts in this denomination and the amounts in escrow accounts in this
+    denomination is constant.
 
 The following intuitive property can only be specified and guaranteed if all
 involved chains only perform valid transitions:
 
-- The amount in denomination *d* in escrow accounts in the chain in which *d* is
-  native is equal to the sum of: \* the amounts in-flight packets in a (prefixed
-  or unprefixed) denomination ending with \*d\* \* the amounts in accounts in a
-  prefixed denomination ending with *d*, in which \*d\* is **not** native
+*   The amount in denomination *d* in escrow accounts in the chain in which *d* is
+    native is equal to the sum of: \* the amounts in-flight packets in a (prefixed
+    or unprefixed) denomination ending with \*d\* \* the amounts in accounts in a
+    prefixed denomination ending with *d*, in which \*d\* is **not** native
 
 These two properties are implemented in the invariant `ICS20Inv` in the file
 [IBCTokenTransfer.tla](IBCTokenTransfer.tla).
@@ -168,13 +168,13 @@ originate from A to some chain C.
 
 The module `IBCTokenTransfer.tla` is parameterized by the constants:
 
-- `MaxHeight`, a natural number denoting the maximal height of the chains,
-- `MaxPacketSeq`, a natural number denoting the maximal packet sequence number,
-- `MaxBalance`, a natural number denoting the maximal bank account balance,
-- `NativeDenominationChainA`, a string denoting the native denomination of
-  `ChainA`,
-- `NativeDenominationChainB`, a string denoting the native denomination of
-  `ChainB`
+*   `MaxHeight`, a natural number denoting the maximal height of the chains,
+*   `MaxPacketSeq`, a natural number denoting the maximal packet sequence number,
+*   `MaxBalance`, a natural number denoting the maximal bank account balance,
+*   `NativeDenominationChainA`, a string denoting the native denomination of
+    `ChainA`,
+*   `NativeDenominationChainB`, a string denoting the native denomination of
+    `ChainB`
 
 We assume that the native denominations of the chains are different.
 
@@ -182,13 +182,13 @@ We assume that the native denominations of the chains are different.
 
 To import the specification in the TLA+ toolbox and run TLC:
 
-- add a new spec in TLA+ toolbox with the root-module file
-  `IBCTokenTransfer.tla`
-- create a model
-- assign a value to the constants (example values can be found in
-  `IBCTokenTransfer.cfg`)
-- choose "Temporal formula" as the behavior spec, and use the formula `Spec`
-- run TLC on the model
+*   add a new spec in TLA+ toolbox with the root-module file
+    `IBCTokenTransfer.tla`
+*   create a model
+*   assign a value to the constants (example values can be found in
+    `IBCTokenTransfer.cfg`)
+*   choose "Temporal formula" as the behavior spec, and use the formula `Spec`
+*   run TLC on the model
 
 #### Basic checks with TLC
 

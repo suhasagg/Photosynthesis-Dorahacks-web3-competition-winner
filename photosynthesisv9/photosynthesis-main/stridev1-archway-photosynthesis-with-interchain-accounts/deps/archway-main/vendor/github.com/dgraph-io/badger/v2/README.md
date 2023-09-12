@@ -35,41 +35,42 @@ For more details on our version naming schema please read
 
 ## Table of Contents
 
-- [Getting Started](#getting-started)
-  - [Installing](#installing)
-    - [Choosing a version](#choosing-a-version)
-  - [Opening a database](#opening-a-database)
-  - [Transactions](#transactions)
-    - [Read-only transactions](#read-only-transactions)
-    - [Read-write transactions](#read-write-transactions)
-    - [Managing transactions manually](#managing-transactions-manually)
-  - [Using key/value pairs](#using-keyvalue-pairs)
-  - [Monotonically increasing integers](#monotonically-increasing-integers)
+*   [Getting Started](#getting-started)
 
-  <!---->
+    *   [Installing](#installing)
+        *   [Choosing a version](#choosing-a-version)
+    *   [Opening a database](#opening-a-database)
+    *   [Transactions](#transactions)
+        *   [Read-only transactions](#read-only-transactions)
+        *   [Read-write transactions](#read-write-transactions)
+        *   [Managing transactions manually](#managing-transactions-manually)
+    *   [Using key/value pairs](#using-keyvalue-pairs)
+    *   [Monotonically increasing integers](#monotonically-increasing-integers)
 
-  - [Merge Operations](#merge-operations)
+    <!---->
 
-  <!---->
+    *   [Merge Operations](#merge-operations)
 
-  - [Setting Time To Live(TTL) and User Metadata on Keys](#setting-time-to-livettl-and-user-metadata-on-keys)
-  - [Iterating over keys](#iterating-over-keys)
-    - [Prefix scans](#prefix-scans)
-    - [Key-only iteration](#key-only-iteration)
-  - [Stream](#stream)
-  - [Garbage Collection](#garbage-collection)
-  - [Database backup](#database-backup)
-  - [Memory usage](#memory-usage)
-  - [Statistics](#statistics)
-- [Resources](#resources)
-  - [Blog Posts](#blog-posts)
-- [Contact](#contact)
-- [Design](#design)
-  - [Comparisons](#comparisons)
-  - [Benchmarks](#benchmarks)
-- [Projects Using Badger](#projects-using-badger)
-- [Contributing](#contributing)
-- [Frequently Asked Questions](#frequently-asked-questions)
+    <!---->
+
+    *   [Setting Time To Live(TTL) and User Metadata on Keys](#setting-time-to-livettl-and-user-metadata-on-keys)
+    *   [Iterating over keys](#iterating-over-keys)
+        *   [Prefix scans](#prefix-scans)
+        *   [Key-only iteration](#key-only-iteration)
+    *   [Stream](#stream)
+    *   [Garbage Collection](#garbage-collection)
+    *   [Database backup](#database-backup)
+    *   [Memory usage](#memory-usage)
+    *   [Statistics](#statistics)
+*   [Resources](#resources)
+    *   [Blog Posts](#blog-posts)
+*   [Contact](#contact)
+*   [Design](#design)
+    *   [Comparisons](#comparisons)
+    *   [Benchmarks](#benchmarks)
+*   [Projects Using Badger](#projects-using-badger)
+*   [Contributing](#contributing)
+*   [Frequently Asked Questions](#frequently-asked-questions)
 
 ## Getting Started
 
@@ -93,22 +94,22 @@ stored on disk.
 This is why we follow a version naming schema that differs from Semantic
 Versioning.
 
-- New major versions are released when the data format on disk changes in an
-  incompatible way.
-- New minor versions are released whenever the API changes but data
-  compatibility is maintained. Note that the changes on the API could be
-  backward-incompatible - unlike Semantic Versioning.
-- New patch versions are released when there's no changes to the data format nor
-  the API.
+*   New major versions are released when the data format on disk changes in an
+    incompatible way.
+*   New minor versions are released whenever the API changes but data
+    compatibility is maintained. Note that the changes on the API could be
+    backward-incompatible - unlike Semantic Versioning.
+*   New patch versions are released when there's no changes to the data format nor
+    the API.
 
 Following these rules:
 
-- v1.5.0 and v1.6.0 can be used on top of the same files without any concerns,
-  as their major version is the same, therefore the data format on disk is
-  compatible.
-- v1.6.0 and v2.0.0 are data incompatible as their major version implies, so
-  files created with v1.6.0 will need to be converted into the new format before
-  they can be used by v2.0.0.
+*   v1.5.0 and v1.6.0 can be used on top of the same files without any concerns,
+    as their major version is the same, therefore the data format on disk is
+    compatible.
+*   v1.6.0 and v2.0.0 are data incompatible as their major version implies, so
+    files created with v1.6.0 will need to be converted into the new format before
+    they can be used by v2.0.0.
 
 For a longer explanation on the reasons behind using a new versioning naming
 schema, you can read [VERSIONING.md](VERSIONING.md).
@@ -154,9 +155,7 @@ the data is stored in the memory. Reads and writes are much faster in in-memory
 mode, but all the data stored in Badger will be lost in case of a crash or
 close. To open badger in in-memory mode, set the `InMemory` option.
 
-```
-opt := badger.DefaultOptions("").WithInMemory(true)
-```
+    opt := badger.DefaultOptions("").WithInMemory(true)
 
 ### Transactions
 
@@ -608,42 +607,42 @@ if err := stream.Orchestrate(context.Background()); err != nil {
 
 Badger values need to be garbage collected, because of two reasons:
 
-- Badger keeps values separately from the LSM tree. This means that the
-  compaction operations that clean up the LSM tree do not touch the values at
-  all. Values need to be cleaned up separately.
+*   Badger keeps values separately from the LSM tree. This means that the
+    compaction operations that clean up the LSM tree do not touch the values at
+    all. Values need to be cleaned up separately.
 
-- Concurrent read/write transactions could leave behind multiple values for a
-  single key, because they are stored with different versions. These could
-  accumulate, and take up unneeded space beyond the time these older versions
-  are needed.
+*   Concurrent read/write transactions could leave behind multiple values for a
+    single key, because they are stored with different versions. These could
+    accumulate, and take up unneeded space beyond the time these older versions
+    are needed.
 
 Badger relies on the client to perform garbage collection at a time of their
 choosing. It provides the following method, which can be invoked at an
 appropriate time:
 
-- `DB.RunValueLogGC()`: This method is designed to do garbage collection while
-  Badger is online. Along with randomly picking a file, it uses statistics
-  generated by the LSM-tree compactions to pick files that are likely to lead to
-  maximum space reclamation. It is recommended to be called during periods of
-  low activity in your system, or periodically. One call would only result in
-  removal of at max one log file. As an optimization, you could also immediately
-  re-run it whenever it returns nil error (indicating a successful value log
-  GC), as shown below.
+*   `DB.RunValueLogGC()`: This method is designed to do garbage collection while
+    Badger is online. Along with randomly picking a file, it uses statistics
+    generated by the LSM-tree compactions to pick files that are likely to lead to
+    maximum space reclamation. It is recommended to be called during periods of
+    low activity in your system, or periodically. One call would only result in
+    removal of at max one log file. As an optimization, you could also immediately
+    re-run it whenever it returns nil error (indicating a successful value log
+    GC), as shown below.
 
-  ```go
-  ticker := time.NewTicker(5 * time.Minute)
-  defer ticker.Stop()
-  for range ticker.C {
-  again:
-  	err := db.RunValueLogGC(0.7)
-  	if err == nil {
-  		goto again
-  	}
-  }
-  ```
+    ```go
+    ticker := time.NewTicker(5 * time.Minute)
+    defer ticker.Stop()
+    for range ticker.C {
+    again:
+    	err := db.RunValueLogGC(0.7)
+    	if err == nil {
+    		goto again
+    	}
+    }
+    ```
 
-- `DB.PurgeOlderVersions()`: This method is **DEPRECATED** since v1.5.0. Now,
-  Badger's LSM tree automatically discards older/invalid versions of keys.
+*   `DB.PurgeOlderVersions()`: This method is **DEPRECATED** since v1.5.0. Now,
+    Badger's LSM tree automatically discards older/invalid versions of keys.
 
 **Note: The RunValueLogGC method would not garbage collect the latest value
 log.**
@@ -658,15 +657,11 @@ PATH to use this tool.
 The command below will create a version-agnostic backup of the database, to a
 file `badger.bak` in the current working directory
 
-```
-badger backup --dir <path/to/badgerdb>
-```
+    badger backup --dir <path/to/badgerdb>
 
 To restore `badger.bak` in the current working directory to a new database:
 
-```
-badger restore --dir <path/to/badgerdb>
-```
+    badger restore --dir <path/to/badgerdb>
 
 See `badger --help` for more details.
 
@@ -674,9 +669,7 @@ If you have a Badger database that was created using v0.8 (or below), you can
 use the `badger_backup` tool provided in v0.8.1, and then restore it using the
 command above to upgrade your database to work with the latest version.
 
-```
-badger_backup --dir <path/to/badgerdb> --backup-file badger.bak
-```
+    badger_backup --dir <path/to/badgerdb> --backup-file badger.bak
 
 We recommend all users to use the `Backup` and `Restore` APIs and tools.
 However, Badger is also rsync-friendly because all files are immutable, barring
@@ -685,15 +678,13 @@ way to perform a backup. In the following script, we repeat rsync to ensure that
 the LSM tree remains consistent with the MANIFEST file while doing a full
 backup.
 
-```
-#!/bin/bash
-set -o history
-set -o histexpand
-# Makes a complete copy of a Badger database directory.
-# Repeat rsync if the MANIFEST and SSTables are updated.
-rsync -avz --delete db/ dst
-while !! | grep -q "(MANIFEST\|\.sst)$"; do :; done
-```
+    #!/bin/bash
+    set -o history
+    set -o histexpand
+    # Makes a complete copy of a Badger database directory.
+    # Repeat rsync if the MANIFEST and SSTables are updated.
+    rsync -avz --delete db/ dst
+    while !! | grep -q "(MANIFEST\|\.sst)$"; do :; done
 
 ### Memory usage
 
@@ -701,17 +692,17 @@ Badger's memory usage can be managed by tweaking several options available in
 the `Options` struct that is passed in when opening the database using
 `DB.Open`.
 
-- `Options.ValueLogLoadingMode` can be set to `options.FileIO` (instead of the
-  default `options.MemoryMap`) to avoid memory-mapping log files. This can be
-  useful in environments with low RAM.
-- Number of memtables (`Options.NumMemtables`)
-  - If you modify `Options.NumMemtables`, also adjust
-    `Options.NumLevelZeroTables` and `Options.NumLevelZeroTablesStall`
-    accordingly.
-- Number of concurrent compactions (`Options.NumCompactors`)
-- Mode in which LSM tree is loaded (`Options.TableLoadingMode`)
-- Size of table (`Options.MaxTableSize`)
-- Size of value log file (`Options.ValueLogFileSize`)
+*   `Options.ValueLogLoadingMode` can be set to `options.FileIO` (instead of the
+    default `options.MemoryMap`) to avoid memory-mapping log files. This can be
+    useful in environments with low RAM.
+*   Number of memtables (`Options.NumMemtables`)
+    *   If you modify `Options.NumMemtables`, also adjust
+        `Options.NumLevelZeroTables` and `Options.NumLevelZeroTablesStall`
+        accordingly.
+*   Number of concurrent compactions (`Options.NumCompactors`)
+*   Mode in which LSM tree is loaded (`Options.TableLoadingMode`)
+*   Size of table (`Options.MaxTableSize`)
+*   Size of value log file (`Options.ValueLogFileSize`)
 
 If you want to decrease the memory usage of Badger instance, tweak these options
 (ideally one at a time) until you achieve the desired memory usage.
@@ -737,19 +728,19 @@ visibility into what Badger is doing.
 
 ### Blog Posts
 
-1. [Introducing Badger: A fast key-value store written natively in Go](https://open.dgraph.io/post/badger/)
-2. [Make Badger crash resilient with ALICE](https://blog.dgraph.io/post/alice/)
-3. [Badger vs LMDB vs BoltDB: Benchmarking key-value databases in Go](https://blog.dgraph.io/post/badger-lmdb-boltdb/)
-4. [Concurrent ACID Transactions in Badger](https://blog.dgraph.io/post/badger-txn/)
+1.  [Introducing Badger: A fast key-value store written natively in Go](https://open.dgraph.io/post/badger/)
+2.  [Make Badger crash resilient with ALICE](https://blog.dgraph.io/post/alice/)
+3.  [Badger vs LMDB vs BoltDB: Benchmarking key-value databases in Go](https://blog.dgraph.io/post/badger-lmdb-boltdb/)
+4.  [Concurrent ACID Transactions in Badger](https://blog.dgraph.io/post/badger-txn/)
 
 ## Design
 
 Badger was written with these design goals in mind:
 
-- Write a key-value database in pure Go.
-- Use latest research to build the fastest KV database for data sets spanning
-  terabytes.
-- Optimize for SSDs.
+*   Write a key-value database in pure Go.
+*   Use latest research to build the fastest KV database for data sets spanning
+    terabytes.
+*   Optimize for SSDs.
 
 Badger’s design is based on a paper titled *[WiscKey: Separating Keys from
 Values in SSD-conscious Storage][wisckey]*.
@@ -799,73 +790,73 @@ posts (linked above).
 
 Below is a list of known projects that use Badger:
 
-- [Dgraph](https://github.com/dgraph-io/dgraph) - Distributed graph database.
-- [Jaeger](https://github.com/jaegertracing/jaeger) - Distributed tracing
-  platform.
-- [go-ipfs](https://github.com/ipfs/go-ipfs) - Go client for the InterPlanetary
-  File System (IPFS), a new hypermedia distribution protocol.
-- [Riot](https://github.com/go-ego/riot) - An open-source, distributed search
-  engine.
-- [emitter](https://github.com/emitter-io/emitter) - Scalable, low latency,
-  distributed pub/sub broker with message storage, uses MQTT, gossip and badger.
-- [OctoSQL](https://github.com/cube2222/octosql) - Query tool that allows you to
-  join, analyse and transform data from multiple databases using SQL.
-- [Dkron](https://dkron.io/) - Distributed, fault tolerant job scheduling
-  system.
-- [Sandglass](https://github.com/celrenheit/sandglass) - distributed,
-  horizontally scalable, persistent, time sorted message queue.
-- [TalariaDB](https://github.com/grab/talaria) - Grab's Distributed, low latency
-  time-series database.
-- [Sloop](https://github.com/salesforce/sloop) - Salesforce's Kubernetes History
-  Visualization Project.
-- [Immudb](https://github.com/codenotary/immudb) - Lightweight, high-speed
-  immutable database for systems and applications.
-- [Usenet Express](https://usenetexpress.com/) - Serving over 300TB of data with
-  Badger.
-- [gorush](https://github.com/appleboy/gorush) - A push notification server
-  written in Go.
-- [0-stor](https://github.com/zero-os/0-stor) - Single device object store.
-- [Dispatch Protocol](https://github.com/dispatchlabs/disgo) - Blockchain
-  protocol for distributed application data analytics.
-- [GarageMQ](https://github.com/valinurovam/garagemq) - AMQP server written in
-  Go.
-- [RedixDB](https://alash3al.github.io/redix/) - A real-time persistent
-  key-value store with the same redis protocol.
-- [BBVA](https://github.com/BBVA/raft-badger) - Raft backend implementation
-  using BadgerDB for Hashicorp raft.
-- [Fantom](https://github.com/Fantom-foundation/go-lachesis) - aBFT Consensus
-  platform for distributed applications.
-- [decred](https://github.com/decred/dcrdata) - An open, progressive, and
-  self-funding cryptocurrency with a system of community-based governance
-  integrated into its blockchain.
-- [OpenNetSys](https://github.com/opennetsys/c3-go) - Create useful dApps in any
-  software language.
-- [HoneyTrap](https://github.com/honeytrap/honeytrap) - An extensible and
-  opensource system for running, monitoring and managing honeypots.
-- [Insolar](https://github.com/insolar/insolar) - Enterprise-ready blockchain
-  platform.
-- [IoTeX](https://github.com/iotexproject/iotex-core) - The next generation of
-  the decentralized network for IoT powered by scalability- and privacy-centric
-  blockchains.
-- [go-sessions](https://github.com/kataras/go-sessions) - The sessions manager
-  for Go net/http and fasthttp.
-- [Babble](https://github.com/mosaicnetworks/babble) - BFT Consensus platform
-  for distributed applications.
-- [Tormenta](https://github.com/jpincas/tormenta) - Embedded object-persistence
-  layer / simple JSON database for Go projects.
-- [BadgerHold](https://github.com/timshannon/badgerhold) - An embeddable NoSQL
-  store for querying Go types built on Badger
-- [Goblero](https://github.com/didil/goblero) - Pure Go embedded persistent job
-  queue backed by BadgerDB
-- [Surfline](https://www.surfline.com) - Serving global wave and weather
-  forecast data with Badger.
-- [Cete](https://github.com/mosuka/cete) - Simple and highly available
-  distributed key-value store built on Badger. Makes it easy bringing up a
-  cluster of Badger with Raft consensus algorithm by hashicorp/raft.
-- [Volument](https://volument.com/) - A new take on website analytics backed by
-  Badger.
-- [KVdb](https://kvdb.io/) - Hosted key-value store and serverless platform
-  built on top of Badger.
+*   [Dgraph](https://github.com/dgraph-io/dgraph) - Distributed graph database.
+*   [Jaeger](https://github.com/jaegertracing/jaeger) - Distributed tracing
+    platform.
+*   [go-ipfs](https://github.com/ipfs/go-ipfs) - Go client for the InterPlanetary
+    File System (IPFS), a new hypermedia distribution protocol.
+*   [Riot](https://github.com/go-ego/riot) - An open-source, distributed search
+    engine.
+*   [emitter](https://github.com/emitter-io/emitter) - Scalable, low latency,
+    distributed pub/sub broker with message storage, uses MQTT, gossip and badger.
+*   [OctoSQL](https://github.com/cube2222/octosql) - Query tool that allows you to
+    join, analyse and transform data from multiple databases using SQL.
+*   [Dkron](https://dkron.io/) - Distributed, fault tolerant job scheduling
+    system.
+*   [Sandglass](https://github.com/celrenheit/sandglass) - distributed,
+    horizontally scalable, persistent, time sorted message queue.
+*   [TalariaDB](https://github.com/grab/talaria) - Grab's Distributed, low latency
+    time-series database.
+*   [Sloop](https://github.com/salesforce/sloop) - Salesforce's Kubernetes History
+    Visualization Project.
+*   [Immudb](https://github.com/codenotary/immudb) - Lightweight, high-speed
+    immutable database for systems and applications.
+*   [Usenet Express](https://usenetexpress.com/) - Serving over 300TB of data with
+    Badger.
+*   [gorush](https://github.com/appleboy/gorush) - A push notification server
+    written in Go.
+*   [0-stor](https://github.com/zero-os/0-stor) - Single device object store.
+*   [Dispatch Protocol](https://github.com/dispatchlabs/disgo) - Blockchain
+    protocol for distributed application data analytics.
+*   [GarageMQ](https://github.com/valinurovam/garagemq) - AMQP server written in
+    Go.
+*   [RedixDB](https://alash3al.github.io/redix/) - A real-time persistent
+    key-value store with the same redis protocol.
+*   [BBVA](https://github.com/BBVA/raft-badger) - Raft backend implementation
+    using BadgerDB for Hashicorp raft.
+*   [Fantom](https://github.com/Fantom-foundation/go-lachesis) - aBFT Consensus
+    platform for distributed applications.
+*   [decred](https://github.com/decred/dcrdata) - An open, progressive, and
+    self-funding cryptocurrency with a system of community-based governance
+    integrated into its blockchain.
+*   [OpenNetSys](https://github.com/opennetsys/c3-go) - Create useful dApps in any
+    software language.
+*   [HoneyTrap](https://github.com/honeytrap/honeytrap) - An extensible and
+    opensource system for running, monitoring and managing honeypots.
+*   [Insolar](https://github.com/insolar/insolar) - Enterprise-ready blockchain
+    platform.
+*   [IoTeX](https://github.com/iotexproject/iotex-core) - The next generation of
+    the decentralized network for IoT powered by scalability- and privacy-centric
+    blockchains.
+*   [go-sessions](https://github.com/kataras/go-sessions) - The sessions manager
+    for Go net/http and fasthttp.
+*   [Babble](https://github.com/mosaicnetworks/babble) - BFT Consensus platform
+    for distributed applications.
+*   [Tormenta](https://github.com/jpincas/tormenta) - Embedded object-persistence
+    layer / simple JSON database for Go projects.
+*   [BadgerHold](https://github.com/timshannon/badgerhold) - An embeddable NoSQL
+    store for querying Go types built on Badger
+*   [Goblero](https://github.com/didil/goblero) - Pure Go embedded persistent job
+    queue backed by BadgerDB
+*   [Surfline](https://www.surfline.com) - Serving global wave and weather
+    forecast data with Badger.
+*   [Cete](https://github.com/mosuka/cete) - Simple and highly available
+    distributed key-value store built on Badger. Makes it easy bringing up a
+    cluster of Badger with Raft consensus algorithm by hashicorp/raft.
+*   [Volument](https://volument.com/) - A new take on website analytics backed by
+    Badger.
+*   [KVdb](https://kvdb.io/) - Hosted key-value store and serverless platform
+    built on top of Badger.
 
 If you are using Badger in a project please send a pull request to add it to the
 list.
@@ -895,12 +886,12 @@ and [#315](https://github.com/dgraph-io/badger/issues/315).
 
 There are multiple workarounds during iteration:
 
-1. Use `Item::ValueCopy` instead of `Item::Value` when retrieving value.
-2. Set `Prefetch` to true. Badger would then copy over the value and release the
-   file lock immediately.
-3. When `Prefetch` is false, don't call `Item::Value` and do a pure key-only
-   iteration. This might be useful if you just want to delete a lot of keys.
-4. Do the writes in a separate transaction after the reads.
+1.  Use `Item::ValueCopy` instead of `Item::Value` when retrieving value.
+2.  Set `Prefetch` to true. Badger would then copy over the value and release the
+    file lock immediately.
+3.  When `Prefetch` is false, don't call `Item::Value` and do a pure key-only
+    iteration. This might be useful if you just want to delete a lot of keys.
+4.  Do the writes in a separate transaction after the reads.
 
 ### My writes are really slow. Why?
 
@@ -954,10 +945,8 @@ provide local SSDs which clock 100K IOPS over 4KB blocks easily.
 
 ### I'm getting a closed channel error. Why?
 
-```
-panic: close of closed channel
-panic: send on closed channel
-```
+    panic: close of closed channel
+    panic: send on closed channel
 
 If you're seeing panics like above, this would be because you're operating on a
 closed DB. This can happen, if you call `Close()` before sending a write, or
@@ -988,31 +977,31 @@ migrate their data directory. Badger data can be migrated from version X of
 badger to version Y of badger by following the steps listed below. Assume you
 were on badger v1.6.0 and you wish to migrate to v2.0.0 version.
 
-1. Install badger version v1.6.0
+1.  Install badger version v1.6.0
 
-   - `cd $GOPATH/src/github.com/dgraph-io/badger`
-   - `git checkout v1.6.0`
-   - `cd badger && go install`
+    *   `cd $GOPATH/src/github.com/dgraph-io/badger`
+    *   `git checkout v1.6.0`
+    *   `cd badger && go install`
 
-     This should install the old badger binary in your $GOBIN.
+        This should install the old badger binary in your $GOBIN.
 
-2. Create Backup
-   - `badger backup --dir path/to/badger/directory -f badger.backup`
+2.  Create Backup
+    *   `badger backup --dir path/to/badger/directory -f badger.backup`
 
-3. Install badger version v2.0.0
+3.  Install badger version v2.0.0
 
-   - `cd $GOPATH/src/github.com/dgraph-io/badger`
-   - `git checkout v2.0.0`
-   - `cd badger && go install`
+    *   `cd $GOPATH/src/github.com/dgraph-io/badger`
+    *   `git checkout v2.0.0`
+    *   `cd badger && go install`
 
-     This should install new badger binary in your $GOBIN
+        This should install new badger binary in your $GOBIN
 
-4. Install badger version v2.0.0
+4.  Install badger version v2.0.0
 
-   - `badger restore --dir path/to/new/badger/directory -f badger.backup`
+    *   `badger restore --dir path/to/new/badger/directory -f badger.backup`
 
-     This will create a new directory on `path/to/new/badger/directory` and add
-     badger data in newer format to it.
+        This will create a new directory on `path/to/new/badger/directory` and add
+        badger data in newer format to it.
 
 NOTE - The above steps shouldn't cause any data loss but please ensure the new
 data is valid before deleting the old badger directory.
@@ -1027,10 +1016,10 @@ compression algorithm.
 
 ## Contact
 
-- Please use [discuss.dgraph.io](https://discuss.dgraph.io) for questions,
-  feature requests and discussions.
-- Please use [Github issue tracker](https://github.com/dgraph-io/badger/issues)
-  for filing bugs or feature requests.
-- Join
-  [![Slack Status](http://slack.dgraph.io/badge.svg)](http://slack.dgraph.io).
-- Follow us on Twitter [@dgraphlabs](https://twitter.com/dgraphlabs).
+*   Please use [discuss.dgraph.io](https://discuss.dgraph.io) for questions,
+    feature requests and discussions.
+*   Please use [Github issue tracker](https://github.com/dgraph-io/badger/issues)
+    for filing bugs or feature requests.
+*   Join
+    [![Slack Status](http://slack.dgraph.io/badge.svg)](http://slack.dgraph.io).
+*   Follow us on Twitter [@dgraphlabs](https://twitter.com/dgraphlabs).

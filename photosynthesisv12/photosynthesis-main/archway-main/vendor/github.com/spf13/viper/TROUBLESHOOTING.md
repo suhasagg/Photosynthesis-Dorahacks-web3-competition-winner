@@ -14,11 +14,9 @@ tags.
 Viper installation seems to fail a lot lately with the following (or a similar)
 error:
 
-```
-cannot find package "github.com/hashicorp/hcl/tree/hcl1" in any of:
-/usr/local/Cellar/go/1.15.7_1/libexec/src/github.com/hashicorp/hcl/tree/hcl1 (from $GOROOT)
-/Users/user/go/src/github.com/hashicorp/hcl/tree/hcl1 (from $GOPATH)
-```
+    cannot find package "github.com/hashicorp/hcl/tree/hcl1" in any of:
+    /usr/local/Cellar/go/1.15.7_1/libexec/src/github.com/hashicorp/hcl/tree/hcl1 (from $GOROOT)
+    /Users/user/go/src/github.com/hashicorp/hcl/tree/hcl1 (from $GOPATH)
 
 As the error message suggests, Go tries to look up dependencies in `GOPATH` mode
 (as it's commonly called) from the `GOPATH`. Viper opted to use
@@ -40,6 +38,6 @@ This is a YAML 1.1 feature according to
 
 Potential solutions are:
 
-1. Quoting values resolved as boolean
-2. Upgrading to YAML v3 (for the time being this is possible by passing the
-   `viper_yaml3` tag to your build)
+1.  Quoting values resolved as boolean
+2.  Upgrading to YAML v3 (for the time being this is possible by passing the
+    `viper_yaml3` tag to your build)

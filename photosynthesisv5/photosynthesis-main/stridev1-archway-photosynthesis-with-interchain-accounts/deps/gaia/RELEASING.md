@@ -55,10 +55,10 @@ PR should target at `Release/vn-1` rather than `main`.
 
 Before merge and release, the following tests checks need to be conducted:
 
-- check the `replace` line in `go.mod`, check all the versions in `go.mod` are
-  correct.
-- run tests and simulations by `make run-tests`.
-- test version compatibilities for minor releases.
+*   check the `replace` line in `go.mod`, check all the versions in `go.mod` are
+    correct.
+*   run tests and simulations by `make run-tests`.
+*   test version compatibilities for minor releases.
 
 ### Major and minor Release
 
@@ -71,32 +71,32 @@ Usually the first release on the `release/vn.0.x` is a release candidate.
 
 #### example of releasing `v8.0.0-rc0`
 
-1. checkout `release/v8.0.x` off `main`
-2. get the `v8-prepare-branch` ready including CHANGELOG.md, create a PR to
-   merge `v8-prepare-branch` to `main`, label this PR `A:backport/v8.0.x`.
-3. after merge `v8-prepare-branch` to `main`, mergifybot will create a new PR of
-   `mergify/bp/release/v8.0.x` to `release/v8.0.x`. Check the PR, and merge this
-   PR.
-4. checkout `release/v8.0.x` and tag `v8.0.0-rc0`.
+1.  checkout `release/v8.0.x` off `main`
+2.  get the `v8-prepare-branch` ready including CHANGELOG.md, create a PR to
+    merge `v8-prepare-branch` to `main`, label this PR `A:backport/v8.0.x`.
+3.  after merge `v8-prepare-branch` to `main`, mergifybot will create a new PR of
+    `mergify/bp/release/v8.0.x` to `release/v8.0.x`. Check the PR, and merge this
+    PR.
+4.  checkout `release/v8.0.x` and tag `v8.0.0-rc0`.
 
 #### example of releasing `v8.0.0`
 
-1. get the `v800-prepare-branch` ready including CHANGELOG.md, create a PR to
-   merge `v800-prepare-branch` to `main`, label this PR `A:backport/v8.0.x`.
-2. after merge `v800-prepare-branch` to `main`, mergifybot will create a new PR
-   of `mergify/bp/release/v8.0.x` to `release/v8.0.x`. Check the PR, and merge
-   this PR.
-3. checkout `release/v8.0.x` and tag `v8.0.0`.
+1.  get the `v800-prepare-branch` ready including CHANGELOG.md, create a PR to
+    merge `v800-prepare-branch` to `main`, label this PR `A:backport/v8.0.x`.
+2.  after merge `v800-prepare-branch` to `main`, mergifybot will create a new PR
+    of `mergify/bp/release/v8.0.x` to `release/v8.0.x`. Check the PR, and merge
+    this PR.
+3.  checkout `release/v8.0.x` and tag `v8.0.0`.
 
 #### example of releasing `v8.0.1`
 
-1. get the `v801-prepare-branch`(off `main`) ready including CHANGELOG.md,
-   create a PR to merge `v801-prepare-branch` to `main`, label this PR
-   `A:backport/v8.0.x`.
-2. after merge `v801-prepare-branch` to `main`, mergifybot will create a new PR
-   of `mergify/bp/release/v8.0.x` to `release/v8.0.x`. Check the PR, and merge
-   this PR.
-3. checkout `release/v8.0.x` and tag `v8.0.1`.
+1.  get the `v801-prepare-branch`(off `main`) ready including CHANGELOG.md,
+    create a PR to merge `v801-prepare-branch` to `main`, label this PR
+    `A:backport/v8.0.x`.
+2.  after merge `v801-prepare-branch` to `main`, mergifybot will create a new PR
+    of `mergify/bp/release/v8.0.x` to `release/v8.0.x`. Check the PR, and merge
+    this PR.
+3.  checkout `release/v8.0.x` and tag `v8.0.1`.
 
 ### backport release
 
@@ -108,10 +108,10 @@ example, `release/vn-1.0.x`. Commits to this new branch and merge into
 
 assume main branch is at `v8`.
 
-1. checkout `v705-prepare-branch` off `release/v7.0.x`, get the backport changes
-   ready including CHANGELOG.md on `v705-prepare-branch`.
-2. create a PR to merge `v705-prepare-branch` to `release/v7.0.x`, and merge.
-3. checkout `release/v7.0.x` tag `v7.0.5`.
+1.  checkout `v705-prepare-branch` off `release/v7.0.x`, get the backport changes
+    ready including CHANGELOG.md on `v705-prepare-branch`.
+2.  create a PR to merge `v705-prepare-branch` to `release/v7.0.x`, and merge.
+3.  checkout `release/v7.0.x` tag `v7.0.5`.
 
 ### Test building artifacts
 
@@ -130,30 +130,30 @@ directory `rm -r gaia/artifacts`.
 The following steps are the default for tagging a specific branch commit
 (usually on a branch labeled `release/vX.X.X`):
 
-1. Ensure you have checked out the commit you wish to tag
-2. `git pull --tags --dry-run`
-3. `git pull --tags`
-4. `git tag -s v3.0.1 -m 'Release v3.0.1'`
-   1. optional, add the `-s` tag to create a signed commit using your PGP key
-      (which should be added to github beforehand)
-5. `git push --tags --dry-run`
-6. `git push --tags`
+1.  Ensure you have checked out the commit you wish to tag
+2.  `git pull --tags --dry-run`
+3.  `git pull --tags`
+4.  `git tag -s v3.0.1 -m 'Release v3.0.1'`
+    1.  optional, add the `-s` tag to create a signed commit using your PGP key
+        (which should be added to github beforehand)
+5.  `git push --tags --dry-run`
+6.  `git push --tags`
 
 To re-create a tag:
 
-1. `git tag -d v4.0.0` to delete a tag locally
-2. `git push --delete origin v4.0.0`, to push the deletion to the remote
-3. Proceed with the above steps to create a tag
+1.  `git tag -d v4.0.0` to delete a tag locally
+2.  `git push --delete origin v4.0.0`, to push the deletion to the remote
+3.  Proceed with the above steps to create a tag
 
 To tag and build without a public release (e.g., as part of a timed security
 release):
 
-1. Follow the steps above for tagging locally, but do not push the tags to the
-   repository.
-2. After adding the tag locally, you can build the binary, e.g.,
-   `make build-reproducible`.
-3. To finalize the release, push the local tags, create a release based off the
-   newly pushed tag, and attach the binaries.
+1.  Follow the steps above for tagging locally, but do not push the tags to the
+    repository.
+2.  After adding the tag locally, you can build the binary, e.g.,
+    `make build-reproducible`.
+3.  To finalize the release, push the local tags, create a release based off the
+    newly pushed tag, and attach the binaries.
 
 ### Release notes
 
@@ -230,17 +230,17 @@ will be deemed EOL with no further updates.
 The intention of the Stable Release Policy is to ensure that all major release
 series that are not EOL, are maintained with the following categories of fixes:
 
-- Tooling improvements (including code formatting, linting, static analysis and
-  updates to testing frameworks)
-- Performance enhancements for running archival and synching nodes
-- Test and benchmarking suites, ensuring that fixes are sound and there are no
-  performance regressions
-- Library updates including point releases for core libraries such as IBC-Go,
-  Cosmos SDK, Tendermint and other dependencies
-- General maintenance improvements, that are deemed necessary by the stewarding
-  team, that help align different releases and reduce the workload on the
-  stewarding team
-- Security fixes
+*   Tooling improvements (including code formatting, linting, static analysis and
+    updates to testing frameworks)
+*   Performance enhancements for running archival and synching nodes
+*   Test and benchmarking suites, ensuring that fixes are sound and there are no
+    performance regressions
+*   Library updates including point releases for core libraries such as IBC-Go,
+    Cosmos SDK, Tendermint and other dependencies
+*   General maintenance improvements, that are deemed necessary by the stewarding
+    team, that help align different releases and reduce the workload on the
+    stewarding team
+*   Security fixes
 
 Issues that are likely excluded, are any issues that impact operating a block
 producing network.

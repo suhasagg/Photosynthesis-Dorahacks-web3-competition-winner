@@ -1,6 +1,8 @@
 ***
 
-## title: Cosmos Hub 2 Upgrade&#xA;order: 6
+title: Cosmos Hub 2 Upgrade
+order: 6
+--------
 
 <!-- markdown-link-check-disable -->
 
@@ -17,13 +19,13 @@ There is a strong social consensus around proposal
 upgrade procedure should be performed on
 `December 11, 2019 at or around 14:27 UTC` on block `2,902,000`.
 
-- [Cosmos Hub 2 Upgrade Instructions](#cosmos-hub-2-upgrade-instructions)
-  - [Preliminary](#preliminary)
-  - [Major Updates](#major-updates)
-  - [Risks](#risks)
-  - [Recovery](#recovery)
-  - [Upgrade Procedure](#upgrade-procedure)
-  - [Notes for Service Providers](#notes-for-service-providers)
+*   [Cosmos Hub 2 Upgrade Instructions](#cosmos-hub-2-upgrade-instructions)
+    *   [Preliminary](#preliminary)
+    *   [Major Updates](#major-updates)
+    *   [Risks](#risks)
+    *   [Recovery](#recovery)
+    *   [Upgrade Procedure](#upgrade-procedure)
+    *   [Notes for Service Providers](#notes-for-service-providers)
 
 ## Preliminary
 
@@ -60,22 +62,22 @@ found
 Some of the biggest changes to take note on when upgrading as a developer or
 client are the the following:
 
-- **Tagging/Events**: The entire system of what we used to call tags has been
-  replaced by a more robust and flexible system called events. Any client that
-  depended on querying or subscribing to tags should take note on the new format
-  as old queries will not work and must be updated. More in depth docs on the
-  events system can be found
-  [here](https://github.com/tendermint/tendermint/blob/master/rpc/core/events.go).
-  In addition, each module documents its own events in the specs (e.g.
-  [slashing](https://github.com/cosmos/cosmos-sdk/blob/v0.36.0/docs/spec/slashing/06\_events.md)).
-- **Height Queries**: Both the CLI and REST clients now (re-)enable height
-  queries via the `--height` and `?height` arguments respectively. An important
-  note to keep in mind are that height queries against pruning nodes will return
-  errors when a pruned height is queried against. When no height is provided,
-  the latest height will be used by default keeping current behavior intact. In
-  addition, many REST responses now wrap the query results in a new structure
-  `{"height": ..., "result": ...}`. That is, the height is now returned to the
-  client for which the resource was queried at.
+*   **Tagging/Events**: The entire system of what we used to call tags has been
+    replaced by a more robust and flexible system called events. Any client that
+    depended on querying or subscribing to tags should take note on the new format
+    as old queries will not work and must be updated. More in depth docs on the
+    events system can be found
+    [here](https://github.com/tendermint/tendermint/blob/master/rpc/core/events.go).
+    In addition, each module documents its own events in the specs (e.g.
+    [slashing](https://github.com/cosmos/cosmos-sdk/blob/v0.36.0/docs/spec/slashing/06_events.md)).
+*   **Height Queries**: Both the CLI and REST clients now (re-)enable height
+    queries via the `--height` and `?height` arguments respectively. An important
+    note to keep in mind are that height queries against pruning nodes will return
+    errors when a pruned height is queried against. When no height is provided,
+    the latest height will be used by default keeping current behavior intact. In
+    addition, many REST responses now wrap the query results in a new structure
+    `{"height": ..., "result": ...}`. That is, the height is now returned to the
+    client for which the resource was queried at.
 
 ## Risks
 
@@ -113,117 +115,117 @@ snapshot before restarting their nodes.
 **Note**: It is assumed you are currently operating a full-node running v0.34.6+
 of the *Cosmos SDK*.
 
-- The version/commit hash of Gaia v2.0.3:
-  `2f6783e298f25ff4e12cb84549777053ab88749a`
-- The upgrade height as agreed upon by governance: **2,902,000**
-- You may obtain the canonical UTC timestamp of the exported block by any of the
-  following methods:
-  - Block explorer
-  - Through manually querying an RPC node (e.g. `/block?height=2902000`)
-  - Through manually querying a Gaia REST client (e.g. `/blocks/2902000`)
+*   The version/commit hash of Gaia v2.0.3:
+    `2f6783e298f25ff4e12cb84549777053ab88749a`
+*   The upgrade height as agreed upon by governance: **2,902,000**
+*   You may obtain the canonical UTC timestamp of the exported block by any of the
+    following methods:
+    *   Block explorer
+    *   Through manually querying an RPC node (e.g. `/block?height=2902000`)
+    *   Through manually querying a Gaia REST client (e.g. `/blocks/2902000`)
 
-1. Verify you are currently running the correct version (v0.34.6+) of the
-   *Cosmos SDK*:
+1.  Verify you are currently running the correct version (v0.34.6+) of the
+    *Cosmos SDK*:
 
-   ```bash
-   $ gaiad version --long
-   cosmos-sdk: 0.34.6
-   git commit: 80234baf91a15dd9a7df8dca38677b66b8d148c1
-   vendor hash: f60176672270c09455c01e9d880079ba36130df4f5cd89df58b6701f50b13aad
-   build tags: netgo ledger
-   go version go1.12.2 linux/amd64
-   ```
+    ```bash
+    $ gaiad version --long
+    cosmos-sdk: 0.34.6
+    git commit: 80234baf91a15dd9a7df8dca38677b66b8d148c1
+    vendor hash: f60176672270c09455c01e9d880079ba36130df4f5cd89df58b6701f50b13aad
+    build tags: netgo ledger
+    go version go1.12.2 linux/amd64
+    ```
 
-2. Export existing state from `cosmoshub-2`:
+2.  Export existing state from `cosmoshub-2`:
 
-   **NOTE**: It is recommended for validators and operators to take a full data
-   snapshot at the export height before proceeding in case the upgrade does not
-   go as planned or if not enough voting power comes online in a sufficient and
-   agreed upon amount of time. In such a case, the chain will fallback to
-   continue operating `cosmoshub-2`. See [Recovery](#recovery) for details on
-   how to proceed.
+    **NOTE**: It is recommended for validators and operators to take a full data
+    snapshot at the export height before proceeding in case the upgrade does not
+    go as planned or if not enough voting power comes online in a sufficient and
+    agreed upon amount of time. In such a case, the chain will fallback to
+    continue operating `cosmoshub-2`. See [Recovery](#recovery) for details on
+    how to proceed.
 
-   Before exporting state via the following command, the `gaiad` binary must be
-   stopped!
+    Before exporting state via the following command, the `gaiad` binary must be
+    stopped!
 
-   ```bash
-   gaiad export --for-zero-height --height=2902000 > cosmoshub_2_genesis_export.json
-   ```
+    ```bash
+    gaiad export --for-zero-height --height=2902000 > cosmoshub_2_genesis_export.json
+    ```
 
-3. Verify the SHA256 of the (sorted) exported genesis file:
+3.  Verify the SHA256 of the (sorted) exported genesis file:
 
-   ```bash
-   $ jq -S -c -M '' cosmoshub_2_genesis_export.json | shasum -a 256
-   [PLACEHOLDER]  cosmoshub_2_genesis_export.json
-   ```
+    ```bash
+    $ jq -S -c -M '' cosmoshub_2_genesis_export.json | shasum -a 256
+    [PLACEHOLDER]  cosmoshub_2_genesis_export.json
+    ```
 
-4. At this point you now have a valid exported genesis state! All further steps
-   now require v2.0.3 of [Gaia](https://github.com/cosmos/gaia).
+4.  At this point you now have a valid exported genesis state! All further steps
+    now require v2.0.3 of [Gaia](https://github.com/cosmos/gaia).
 
-   **NOTE**: Go [1.13+](https://golang.org/dl/) is required!
+    **NOTE**: Go [1.13+](https://golang.org/dl/) is required!
 
-   ```bash
-   git clone https://github.com/cosmos/gaia.git && cd gaia && git checkout v2.0.3; make install
-   ```
+    ```bash
+    git clone https://github.com/cosmos/gaia.git && cd gaia && git checkout v2.0.3; make install
+    ```
 
-5. Verify you are currently running the correct version (v2.0.3) of the *Gaia*:
+5.  Verify you are currently running the correct version (v2.0.3) of the *Gaia*:
 
-   ```bash
-   $ gaiad version --long
-   name: gaia
-   server_name: gaiad
-   client_name: gaiacli
-   version: 2.0.3
-   commit: 2f6783e298f25ff4e12cb84549777053ab88749a
-   build_tags: netgo,ledger
-   go: go version go1.13.3 darwin/amd64
-   ```
+    ```bash
+    $ gaiad version --long
+    name: gaia
+    server_name: gaiad
+    client_name: gaiacli
+    version: 2.0.3
+    commit: 2f6783e298f25ff4e12cb84549777053ab88749a
+    build_tags: netgo,ledger
+    go: go version go1.13.3 darwin/amd64
+    ```
 
-6. Migrate exported state from the current v0.34.6+ version to the new v2.0.3
-   version:
+6.  Migrate exported state from the current v0.34.6+ version to the new v2.0.3
+    version:
 
-   ```bash
-   gaiad migrate v0.36 cosmoshub_2_genesis_export.json --chain-id=cosmoshub-3 --genesis-time=[PLACEHOLDER]> genesis.json
-   ```
+    ```bash
+    gaiad migrate v0.36 cosmoshub_2_genesis_export.json --chain-id=cosmoshub-3 --genesis-time=[PLACEHOLDER]> genesis.json
+    ```
 
-   **NOTE**: The `migrate` command takes an input genesis state and migrates it
-   to a targeted version. Both v0.36 and v0.37 are compatible as far as state
-   structure is concerned.
+    **NOTE**: The `migrate` command takes an input genesis state and migrates it
+    to a targeted version. Both v0.36 and v0.37 are compatible as far as state
+    structure is concerned.
 
-   Genesis time should be computed relative to the blocktime of `2,902,000`. The
-   genesis time shall be the blocktime of `2,902,000` + `60` minutes with the
-   subseconds truncated.
+    Genesis time should be computed relative to the blocktime of `2,902,000`. The
+    genesis time shall be the blocktime of `2,902,000` + `60` minutes with the
+    subseconds truncated.
 
-   An example shell command(tested on OS X Mojave) to compute this values is:
+    An example shell command(tested on OS X Mojave) to compute this values is:
 
-   ```bash
-   curl https://stargate.cosmos.network:26657/block\?height\=2902000 | jq -r '.result["block_meta"]["header"]["time"]'|xargs -0 date -v +60M  -j  -f "%Y-%m-%dT%H:%M:%S" +"%Y-%m-%dT%H:%M:%SZ"
-   ```
+    ```bash
+    curl https://stargate.cosmos.network:26657/block\?height\=2902000 | jq -r '.result["block_meta"]["header"]["time"]'|xargs -0 date -v +60M  -j  -f "%Y-%m-%dT%H:%M:%S" +"%Y-%m-%dT%H:%M:%SZ"
+    ```
 
-7. Now we must update all parameters that have been agreed upon through
-   governance. There is only a single parameter, `max_validators`, that we're
-   upgrading based on [proposal 10](https://www.mintscan.io/proposals/10)
+7.  Now we must update all parameters that have been agreed upon through
+    governance. There is only a single parameter, `max_validators`, that we're
+    upgrading based on [proposal 10](https://www.mintscan.io/proposals/10)
 
-   ```bash
-   cat genesis.json | jq '.app_state["staking"]["params"]["max_validators"]=125' > tmp_genesis.json && mv tmp_genesis.json genesis.json
-   ```
+    ```bash
+    cat genesis.json | jq '.app_state["staking"]["params"]["max_validators"]=125' > tmp_genesis.json && mv tmp_genesis.json genesis.json
+    ```
 
-8. Verify the SHA256 of the final genesis JSON:
+8.  Verify the SHA256 of the final genesis JSON:
 
-   ```bash
-   $ jq -S -c -M '' genesis.json | shasum -a 256
-   [PLACEHOLDER]  genesis.json
-   ```
+    ```bash
+    $ jq -S -c -M '' genesis.json | shasum -a 256
+    [PLACEHOLDER]  genesis.json
+    ```
 
-9. Reset state:
+9.  Reset state:
 
-   **NOTE**: Be sure you have a complete backed up state of your node before
-   proceeding with this step. See [Recovery](#recovery) for details on how to
-   proceed.
+    **NOTE**: Be sure you have a complete backed up state of your node before
+    proceeding with this step. See [Recovery](#recovery) for details on how to
+    proceed.
 
-   ```bash
-   gaiad unsafe-reset-all
-   ```
+    ```bash
+    gaiad unsafe-reset-all
+    ```
 
 10. Move the new `genesis.json` to your `.gaia/config/` directory
 
@@ -242,23 +244,23 @@ of the *Cosmos SDK*.
 
 ## Notes for Service Providers
 
-1. The transition from `cosmoshub-2` to `cosmoshub-3` contains an unusual amount
-   of API breakage. After this upgrade will maintain the CosmosSDK API stability
-   guarantee to avoid breaking APIs for at least 6 months and hopefully long.
-2. Anyone running signing infrastructure(wallets and exchanges) should be
-   conscious that the `type:` field on `StdTx` will have changed from
-   `"type":"auth/StdTx","value":...` to `"type":"cosmos-sdk/StdTx","value":...`
-3. As mentioned in the notes and SDK CHANGELOG, many queries to cosmos cli are
-   wrapped with `height` fields now.
-4. We highly recommend standing up a
-   [testnet](https://github.com/cosmos/gaia/blob/master/docs/deploy-testnet.md)
-   with the `gaia-2.0` release or joining the gaia-13006 testnet. More info for
-   joining the testnet can be found in the
-   [riot validator room](https://riot.im/app/#/room/#cosmos-validators:matrix.org).
-5. We expect that developers with iOS or Android based apps may have to notify
-   their users of downtime and ship an upgrade for cosmoshub-3 compatibility
-   unless they have some kind of switch they can throw for the new tx formats.
-   Server side applications should experience briefer service interruptions and
-   be able to just spin up new nodes and migrate to the new apis.
+1.  The transition from `cosmoshub-2` to `cosmoshub-3` contains an unusual amount
+    of API breakage. After this upgrade will maintain the CosmosSDK API stability
+    guarantee to avoid breaking APIs for at least 6 months and hopefully long.
+2.  Anyone running signing infrastructure(wallets and exchanges) should be
+    conscious that the `type:` field on `StdTx` will have changed from
+    `"type":"auth/StdTx","value":...` to `"type":"cosmos-sdk/StdTx","value":...`
+3.  As mentioned in the notes and SDK CHANGELOG, many queries to cosmos cli are
+    wrapped with `height` fields now.
+4.  We highly recommend standing up a
+    [testnet](https://github.com/cosmos/gaia/blob/master/docs/deploy-testnet.md)
+    with the `gaia-2.0` release or joining the gaia-13006 testnet. More info for
+    joining the testnet can be found in the
+    [riot validator room](https://riot.im/app/#/room/#cosmos-validators:matrix.org).
+5.  We expect that developers with iOS or Android based apps may have to notify
+    their users of downtime and ship an upgrade for cosmoshub-3 compatibility
+    unless they have some kind of switch they can throw for the new tx formats.
+    Server side applications should experience briefer service interruptions and
+    be able to just spin up new nodes and migrate to the new apis.
 
 <!-- markdown-link-check-enable -->

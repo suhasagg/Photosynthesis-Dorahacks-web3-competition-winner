@@ -6,19 +6,19 @@
 
 ## Table of Contents
 
-- [gaia/globalfee/v1beta1/query.proto](#gaia/globalfee/v1beta1/query.proto)
+*   [gaia/globalfee/v1beta1/query.proto](#gaia/globalfee/v1beta1/query.proto)
 
-  - [QueryMinimumGasPricesRequest](#gaia.globalfee.v1beta1.QueryMinimumGasPricesRequest)
+    *   [QueryMinimumGasPricesRequest](#gaia.globalfee.v1beta1.QueryMinimumGasPricesRequest)
 
-  - [QueryMinimumGasPricesResponse](#gaia.globalfee.v1beta1.QueryMinimumGasPricesResponse)
+    *   [QueryMinimumGasPricesResponse](#gaia.globalfee.v1beta1.QueryMinimumGasPricesResponse)
 
-  - [Query](#gaia.globalfee.v1beta1.Query)
+    *   [Query](#gaia.globalfee.v1beta1.Query)
 
-- [gaia/globalfee/v1beta1/genesis.proto](#gaia/globalfee/v1beta1/genesis.proto)
-  - [GenesisState](#gaia.globalfee.v1beta1.GenesisState)
-  - [Params](#gaia.globalfee.v1beta1.Params)
+*   [gaia/globalfee/v1beta1/genesis.proto](#gaia/globalfee/v1beta1/genesis.proto)
+    *   [GenesisState](#gaia.globalfee.v1beta1.GenesisState)
+    *   [Params](#gaia.globalfee.v1beta1.Params)
 
-- [Scalar Value Types](#scalar-value-types)
+*   [Scalar Value Types](#scalar-value-types)
 
 <a name="gaia/globalfee/v1beta1/query.proto"></a>
 
@@ -58,7 +58,7 @@ Query defines the gRPC querier service.
 
 | Method Name        | Request Type                                                                         | Response Type                                                                          | Description | HTTP Verb | Endpoint                                   |
 | ------------------ | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ----------- | --------- | ------------------------------------------ |
-| `MinimumGasPrices` | [QueryMinimumGasPricesRequest](#gaia.globalfee.v1beta1.QueryMinimumGasPricesRequest) | [QueryMinimumGasPricesResponse](#gaia.globalfee.v1beta1.QueryMinimumGasPricesResponse) |             | GET       | /gaia/globalfee/v1beta1/minimum_gas_prices |
+| `MinimumGasPrices` | [QueryMinimumGasPricesRequest](#gaia.globalfee.v1beta1.QueryMinimumGasPricesRequest) | [QueryMinimumGasPricesResponse](#gaia.globalfee.v1beta1.QueryMinimumGasPricesResponse) |             | GET       | /gaia/globalfee/v1beta1/minimum\_gas\_prices |
 
  <!-- end services -->
 

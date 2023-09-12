@@ -16,7 +16,7 @@ component ADRs)
 
 ## Changelog
 
-- {date}: {changelog}
+*   {date}: {changelog}
 
 ## Abstract
 
@@ -58,10 +58,10 @@ component ADRs)
 
 > Documents the following for readiness/deployment milestones
 
-- Integration requirements (CLI)
-- Testing (Simulations, Core Team Testing, Partner Testing)
-- Audits (Internal Dev review, Third-party review, Bug Bounty)
-- Networks (Testnets, Productionnets, Mainnets)
+*   Integration requirements (CLI)
+*   Testing (Simulations, Core Team Testing, Partner Testing)
+*   Audits (Internal Dev review, Third-party review, Bug Bounty)
+*   Networks (Testnets, Productionnets, Mainnets)
 
 ### Backwards Compatibility
 
@@ -71,18 +71,18 @@ component ADRs)
 
 > If relevant, will include:
 
-- Linked Hub Governance proposal
-- Core Community Governance
-- Steering Community
-- Timelines & Roadmap
+*   Linked Hub Governance proposal
+*   Core Community Governance
+*   Steering Community
+*   Timelines & Roadmap
 
 ## Project Integrations \[optional]
 
 > Document internal and/or external integration partners
 
-- Gaia Integrations
-- Integration Partner
-- IBC Readiness
+*   Gaia Integrations
+*   Integration Partner
+*   IBC Readiness
 
 #### Downstream User Impact Report
 

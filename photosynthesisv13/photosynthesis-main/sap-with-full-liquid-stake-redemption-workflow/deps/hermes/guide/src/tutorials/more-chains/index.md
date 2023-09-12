@@ -14,19 +14,19 @@ moving to the [next section](./start-local-chains.md).
 
 ## Sections
 
-- **[Start Local Chains](./start-local-chains.md)**
+*   **[Start Local Chains](./start-local-chains.md)**
 
-  - Start four local chains with `gm` and set up Hermes.
+    *   Start four local chains with `gm` and set up Hermes.
 
-- **[Build the topology](./build-the-topology.md)**
+*   **[Build the topology](./build-the-topology.md)**
 
-  - Add a relay path between every chain and relay on an arbitrary topology with
-    packet filters.
+    *   Add a relay path between every chain and relay on an arbitrary topology with
+        packet filters.
 
-- **[Start relaying](./start-relaying.md)**
+*   **[Start relaying](./start-relaying.md)**
 
-  - Exchange and relay packets between these chains.
+    *   Exchange and relay packets between these chains.
 
-- **[Add new instances of Hermes](./concurrent-instances.md)**
-  - Add new instances of Hermes to start relaying on the paths filtered out by
-    the first instance.
+*   **[Add new instances of Hermes](./concurrent-instances.md)**
+    *   Add new instances of Hermes to start relaying on the paths filtered out by
+        the first instance.

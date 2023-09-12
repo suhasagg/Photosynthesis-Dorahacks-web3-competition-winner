@@ -55,6 +55,4 @@ client state constructed from the state of `07-tendermint-0` client on `ibc-1`.
 hermes tx upgrade-chain --reference-chain ibc-0 --host-chain ibc-1 --host-client 07-tendermint-0 --amount 10000000 --height-offset 300
 ```
 
-```
-Success: transaction::Hash(779713508B6103E37FADE60483BEE964A90BD67E5F20037B2CC4AE0E90B707C3)
-```
+    Success: transaction::Hash(779713508B6103E37FADE60483BEE964A90BD67E5F20037B2CC4AE0E90B707C3)

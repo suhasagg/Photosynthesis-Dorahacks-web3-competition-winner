@@ -6,10 +6,10 @@ concept is very well summarized on semver.org with the following lines:
 
 > Given a version number MAJOR.MINOR.PATCH, increment the:
 >
-> 1. MAJOR version when you make incompatible API changes,
-> 2. MINOR version when you add functionality in a backwards-compatible manner,
->    and
-> 3. PATCH version when you make backwards-compatible bug fixes.
+> 1.  MAJOR version when you make incompatible API changes,
+> 2.  MINOR version when you add functionality in a backwards-compatible manner,
+>     and
+> 3.  PATCH version when you make backwards-compatible bug fixes.
 >
 > Additional labels for pre-release and build metadata are available as
 > extensions to the MAJOR.MINOR.PATCH format.
@@ -27,11 +27,11 @@ modified:
 
 Given a version number MAJOR.MINOR.PATCH, increment the:
 
-- MAJOR version when you make changes that require a transformation of the
-  dataset before it can be used again.
-- MINOR version when old datasets are still readable but the API might have
-  changed in backwards-compatible or incompatible ways.
-- PATCH version when you make backwards-compatible bug fixes.
+*   MAJOR version when you make changes that require a transformation of the
+    dataset before it can be used again.
+*   MINOR version when old datasets are still readable but the API might have
+    changed in backwards-compatible or incompatible ways.
+*   PATCH version when you make backwards-compatible bug fixes.
 
 Additional labels for pre-release and build metadata are available as extensions
 to the MAJOR.MINOR.PATCH format.

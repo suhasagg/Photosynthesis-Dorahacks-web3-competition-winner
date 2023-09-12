@@ -6,103 +6,103 @@
 
 ## Table of Contents
 
-- [stargaze/alloc/v1beta1/params.proto](#stargaze/alloc/v1beta1/params.proto)
-  - [DistributionProportions](#publicawesome.stargaze.alloc.v1beta1.DistributionProportions)
-  - [Params](#publicawesome.stargaze.alloc.v1beta1.Params)
-  - [WeightedAddress](#publicawesome.stargaze.alloc.v1beta1.WeightedAddress)
+*   [stargaze/alloc/v1beta1/params.proto](#stargaze/alloc/v1beta1/params.proto)
+    *   [DistributionProportions](#publicawesome.stargaze.alloc.v1beta1.DistributionProportions)
+    *   [Params](#publicawesome.stargaze.alloc.v1beta1.Params)
+    *   [WeightedAddress](#publicawesome.stargaze.alloc.v1beta1.WeightedAddress)
 
-- [stargaze/alloc/v1beta1/genesis.proto](#stargaze/alloc/v1beta1/genesis.proto)
-  - [GenesisState](#publicawesome.stargaze.alloc.v1beta1.GenesisState)
+*   [stargaze/alloc/v1beta1/genesis.proto](#stargaze/alloc/v1beta1/genesis.proto)
+    *   [GenesisState](#publicawesome.stargaze.alloc.v1beta1.GenesisState)
 
-- [stargaze/alloc/v1beta1/query.proto](#stargaze/alloc/v1beta1/query.proto)
+*   [stargaze/alloc/v1beta1/query.proto](#stargaze/alloc/v1beta1/query.proto)
 
-  - [QueryParamsRequest](#publicawesome.stargaze.alloc.v1beta1.QueryParamsRequest)
+    *   [QueryParamsRequest](#publicawesome.stargaze.alloc.v1beta1.QueryParamsRequest)
 
-  - [QueryParamsResponse](#publicawesome.stargaze.alloc.v1beta1.QueryParamsResponse)
+    *   [QueryParamsResponse](#publicawesome.stargaze.alloc.v1beta1.QueryParamsResponse)
 
-  - [Query](#publicawesome.stargaze.alloc.v1beta1.Query)
+    *   [Query](#publicawesome.stargaze.alloc.v1beta1.Query)
 
-- [stargaze/alloc/v1beta1/tx.proto](#stargaze/alloc/v1beta1/tx.proto)
+*   [stargaze/alloc/v1beta1/tx.proto](#stargaze/alloc/v1beta1/tx.proto)
 
-  - [MsgCreateVestingAccount](#publicawesome.stargaze.alloc.v1beta1.MsgCreateVestingAccount)
+    *   [MsgCreateVestingAccount](#publicawesome.stargaze.alloc.v1beta1.MsgCreateVestingAccount)
 
-  - [MsgCreateVestingAccountResponse](#publicawesome.stargaze.alloc.v1beta1.MsgCreateVestingAccountResponse)
+    *   [MsgCreateVestingAccountResponse](#publicawesome.stargaze.alloc.v1beta1.MsgCreateVestingAccountResponse)
 
-  - [MsgFundFairburnPool](#publicawesome.stargaze.alloc.v1beta1.MsgFundFairburnPool)
+    *   [MsgFundFairburnPool](#publicawesome.stargaze.alloc.v1beta1.MsgFundFairburnPool)
 
-  - [MsgFundFairburnPoolResponse](#publicawesome.stargaze.alloc.v1beta1.MsgFundFairburnPoolResponse)
+    *   [MsgFundFairburnPoolResponse](#publicawesome.stargaze.alloc.v1beta1.MsgFundFairburnPoolResponse)
 
-  - [Msg](#publicawesome.stargaze.alloc.v1beta1.Msg)
+    *   [Msg](#publicawesome.stargaze.alloc.v1beta1.Msg)
 
-- [stargaze/claim/v1beta1/claim_record.proto](#stargaze/claim/v1beta1/claim_record.proto)
+*   [stargaze/claim/v1beta1/claim\_record.proto](#stargaze/claim/v1beta1/claim_record.proto)
 
-  - [ClaimRecord](#publicawesome.stargaze.claim.v1beta1.ClaimRecord)
+    *   [ClaimRecord](#publicawesome.stargaze.claim.v1beta1.ClaimRecord)
 
-  - [Action](#publicawesome.stargaze.claim.v1beta1.Action)
+    *   [Action](#publicawesome.stargaze.claim.v1beta1.Action)
 
-- [stargaze/claim/v1beta1/params.proto](#stargaze/claim/v1beta1/params.proto)
-  - [ClaimAuthorization](#publicawesome.stargaze.claim.v1beta1.ClaimAuthorization)
-  - [Params](#publicawesome.stargaze.claim.v1beta1.Params)
+*   [stargaze/claim/v1beta1/params.proto](#stargaze/claim/v1beta1/params.proto)
+    *   [ClaimAuthorization](#publicawesome.stargaze.claim.v1beta1.ClaimAuthorization)
+    *   [Params](#publicawesome.stargaze.claim.v1beta1.Params)
 
-- [stargaze/claim/v1beta1/genesis.proto](#stargaze/claim/v1beta1/genesis.proto)
-  - [GenesisState](#publicawesome.stargaze.claim.v1beta1.GenesisState)
+*   [stargaze/claim/v1beta1/genesis.proto](#stargaze/claim/v1beta1/genesis.proto)
+    *   [GenesisState](#publicawesome.stargaze.claim.v1beta1.GenesisState)
 
-- [stargaze/claim/v1beta1/query.proto](#stargaze/claim/v1beta1/query.proto)
+*   [stargaze/claim/v1beta1/query.proto](#stargaze/claim/v1beta1/query.proto)
 
-  - [QueryClaimRecordRequest](#publicawesome.stargaze.claim.v1beta1.QueryClaimRecordRequest)
+    *   [QueryClaimRecordRequest](#publicawesome.stargaze.claim.v1beta1.QueryClaimRecordRequest)
 
-  - [QueryClaimRecordResponse](#publicawesome.stargaze.claim.v1beta1.QueryClaimRecordResponse)
+    *   [QueryClaimRecordResponse](#publicawesome.stargaze.claim.v1beta1.QueryClaimRecordResponse)
 
-  - [QueryClaimableForActionRequest](#publicawesome.stargaze.claim.v1beta1.QueryClaimableForActionRequest)
+    *   [QueryClaimableForActionRequest](#publicawesome.stargaze.claim.v1beta1.QueryClaimableForActionRequest)
 
-  - [QueryClaimableForActionResponse](#publicawesome.stargaze.claim.v1beta1.QueryClaimableForActionResponse)
+    *   [QueryClaimableForActionResponse](#publicawesome.stargaze.claim.v1beta1.QueryClaimableForActionResponse)
 
-  - [QueryModuleAccountBalanceRequest](#publicawesome.stargaze.claim.v1beta1.QueryModuleAccountBalanceRequest)
+    *   [QueryModuleAccountBalanceRequest](#publicawesome.stargaze.claim.v1beta1.QueryModuleAccountBalanceRequest)
 
-  - [QueryModuleAccountBalanceResponse](#publicawesome.stargaze.claim.v1beta1.QueryModuleAccountBalanceResponse)
+    *   [QueryModuleAccountBalanceResponse](#publicawesome.stargaze.claim.v1beta1.QueryModuleAccountBalanceResponse)
 
-  - [QueryParamsRequest](#publicawesome.stargaze.claim.v1beta1.QueryParamsRequest)
+    *   [QueryParamsRequest](#publicawesome.stargaze.claim.v1beta1.QueryParamsRequest)
 
-  - [QueryParamsResponse](#publicawesome.stargaze.claim.v1beta1.QueryParamsResponse)
+    *   [QueryParamsResponse](#publicawesome.stargaze.claim.v1beta1.QueryParamsResponse)
 
-  - [QueryTotalClaimableRequest](#publicawesome.stargaze.claim.v1beta1.QueryTotalClaimableRequest)
+    *   [QueryTotalClaimableRequest](#publicawesome.stargaze.claim.v1beta1.QueryTotalClaimableRequest)
 
-  - [QueryTotalClaimableResponse](#publicawesome.stargaze.claim.v1beta1.QueryTotalClaimableResponse)
+    *   [QueryTotalClaimableResponse](#publicawesome.stargaze.claim.v1beta1.QueryTotalClaimableResponse)
 
-  - [Query](#publicawesome.stargaze.claim.v1beta1.Query)
+    *   [Query](#publicawesome.stargaze.claim.v1beta1.Query)
 
-- [stargaze/claim/v1beta1/tx.proto](#stargaze/claim/v1beta1/tx.proto)
+*   [stargaze/claim/v1beta1/tx.proto](#stargaze/claim/v1beta1/tx.proto)
 
-  - [MsgClaimFor](#publicawesome.stargaze.claim.v1beta1.MsgClaimFor)
+    *   [MsgClaimFor](#publicawesome.stargaze.claim.v1beta1.MsgClaimFor)
 
-  - [MsgClaimForResponse](#publicawesome.stargaze.claim.v1beta1.MsgClaimForResponse)
+    *   [MsgClaimForResponse](#publicawesome.stargaze.claim.v1beta1.MsgClaimForResponse)
 
-  - [MsgInitialClaim](#publicawesome.stargaze.claim.v1beta1.MsgInitialClaim)
+    *   [MsgInitialClaim](#publicawesome.stargaze.claim.v1beta1.MsgInitialClaim)
 
-  - [MsgInitialClaimResponse](#publicawesome.stargaze.claim.v1beta1.MsgInitialClaimResponse)
+    *   [MsgInitialClaimResponse](#publicawesome.stargaze.claim.v1beta1.MsgInitialClaimResponse)
 
-  - [Msg](#publicawesome.stargaze.claim.v1beta1.Msg)
+    *   [Msg](#publicawesome.stargaze.claim.v1beta1.Msg)
 
-- [stargaze/mint/v1beta1/mint.proto](#stargaze/mint/v1beta1/mint.proto)
-  - [Minter](#stargaze.mint.v1beta1.Minter)
-  - [Params](#stargaze.mint.v1beta1.Params)
+*   [stargaze/mint/v1beta1/mint.proto](#stargaze/mint/v1beta1/mint.proto)
+    *   [Minter](#stargaze.mint.v1beta1.Minter)
+    *   [Params](#stargaze.mint.v1beta1.Params)
 
-- [stargaze/mint/v1beta1/genesis.proto](#stargaze/mint/v1beta1/genesis.proto)
-  - [GenesisState](#stargaze.mint.v1beta1.GenesisState)
+*   [stargaze/mint/v1beta1/genesis.proto](#stargaze/mint/v1beta1/genesis.proto)
+    *   [GenesisState](#stargaze.mint.v1beta1.GenesisState)
 
-- [stargaze/mint/v1beta1/query.proto](#stargaze/mint/v1beta1/query.proto)
+*   [stargaze/mint/v1beta1/query.proto](#stargaze/mint/v1beta1/query.proto)
 
-  - [QueryAnnualProvisionsRequest](#stargaze.mint.v1beta1.QueryAnnualProvisionsRequest)
+    *   [QueryAnnualProvisionsRequest](#stargaze.mint.v1beta1.QueryAnnualProvisionsRequest)
 
-  - [QueryAnnualProvisionsResponse](#stargaze.mint.v1beta1.QueryAnnualProvisionsResponse)
+    *   [QueryAnnualProvisionsResponse](#stargaze.mint.v1beta1.QueryAnnualProvisionsResponse)
 
-  - [QueryParamsRequest](#stargaze.mint.v1beta1.QueryParamsRequest)
+    *   [QueryParamsRequest](#stargaze.mint.v1beta1.QueryParamsRequest)
 
-  - [QueryParamsResponse](#stargaze.mint.v1beta1.QueryParamsResponse)
+    *   [QueryParamsResponse](#stargaze.mint.v1beta1.QueryParamsResponse)
 
-  - [Query](#stargaze.mint.v1beta1.Query)
+    *   [Query](#stargaze.mint.v1beta1.Query)
 
-- [Scalar Value Types](#scalar-value-types)
+*   [Scalar Value Types](#scalar-value-types)
 
 <a name="stargaze/alloc/v1beta1/params.proto"></a>
 
@@ -125,7 +125,7 @@
 
 | Field                                  | Type                                                                                     | Label    | Description                                                         |
 | -------------------------------------- | ---------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------- |
-| `distribution_proportions`             | [DistributionProportions](#publicawesome.stargaze.alloc.v1beta1.DistributionProportions) |          | distribution_proportions defines the proportion of the minted denom |
+| `distribution_proportions`             | [DistributionProportions](#publicawesome.stargaze.alloc.v1beta1.DistributionProportions) |          | distribution\_proportions defines the proportion of the minted denom |
 | `weighted_developer_rewards_receivers` | [WeightedAddress](#publicawesome.stargaze.alloc.v1beta1.WeightedAddress)                 | repeated | address to receive developer rewards                                |
 
 <a name="publicawesome.stargaze.alloc.v1beta1.WeightedAddress"></a>
@@ -278,7 +278,7 @@ Msg defines the alloc Msg service.
 
 <p align="right"><a href="#top">Top</a></p>
 
-## stargaze/claim/v1beta1/claim_record.proto
+## stargaze/claim/v1beta1/claim\_record.proto
 
 <a name="publicawesome.stargaze.claim.v1beta1.ClaimRecord"></a>
 
@@ -477,11 +477,11 @@ this line is used by starport scaffolding # 3
 
 | Method Name            | Request Type                                                                                               | Response Type                                                                                                | Description                                   | HTTP Verb | Endpoint                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------- | --------- | --------------------------------------------------------------- |
-| `ModuleAccountBalance` | [QueryModuleAccountBalanceRequest](#publicawesome.stargaze.claim.v1beta1.QueryModuleAccountBalanceRequest) | [QueryModuleAccountBalanceResponse](#publicawesome.stargaze.claim.v1beta1.QueryModuleAccountBalanceResponse) | this line is used by starport scaffolding # 2 | GET       | /stargaze/claim/v1beta1/module_account_balance                  |
+| `ModuleAccountBalance` | [QueryModuleAccountBalanceRequest](#publicawesome.stargaze.claim.v1beta1.QueryModuleAccountBalanceRequest) | [QueryModuleAccountBalanceResponse](#publicawesome.stargaze.claim.v1beta1.QueryModuleAccountBalanceResponse) | this line is used by starport scaffolding # 2 | GET       | /stargaze/claim/v1beta1/module\_account\_balance                  |
 | `Params`               | [QueryParamsRequest](#publicawesome.stargaze.claim.v1beta1.QueryParamsRequest)                             | [QueryParamsResponse](#publicawesome.stargaze.claim.v1beta1.QueryParamsResponse)                             |                                               | GET       | /stargaze/claim/v1beta1/params                                  |
-| `ClaimRecord`          | [QueryClaimRecordRequest](#publicawesome.stargaze.claim.v1beta1.QueryClaimRecordRequest)                   | [QueryClaimRecordResponse](#publicawesome.stargaze.claim.v1beta1.QueryClaimRecordResponse)                   |                                               | GET       | /stargaze/claim/v1beta1/claim_record/{address}                  |
-| `ClaimableForAction`   | [QueryClaimableForActionRequest](#publicawesome.stargaze.claim.v1beta1.QueryClaimableForActionRequest)     | [QueryClaimableForActionResponse](#publicawesome.stargaze.claim.v1beta1.QueryClaimableForActionResponse)     |                                               | GET       | /stargaze/claim/v1beta1/claimable_for_action/{address}/{action} |
-| `TotalClaimable`       | [QueryTotalClaimableRequest](#publicawesome.stargaze.claim.v1beta1.QueryTotalClaimableRequest)             | [QueryTotalClaimableResponse](#publicawesome.stargaze.claim.v1beta1.QueryTotalClaimableResponse)             |                                               | GET       | /stargaze/claim/v1beta1/total_claimable/{address}               |
+| `ClaimRecord`          | [QueryClaimRecordRequest](#publicawesome.stargaze.claim.v1beta1.QueryClaimRecordRequest)                   | [QueryClaimRecordResponse](#publicawesome.stargaze.claim.v1beta1.QueryClaimRecordResponse)                   |                                               | GET       | /stargaze/claim/v1beta1/claim\_record/{address}                  |
+| `ClaimableForAction`   | [QueryClaimableForActionRequest](#publicawesome.stargaze.claim.v1beta1.QueryClaimableForActionRequest)     | [QueryClaimableForActionResponse](#publicawesome.stargaze.claim.v1beta1.QueryClaimableForActionResponse)     |                                               | GET       | /stargaze/claim/v1beta1/claimable\_for\_action/{address}/{action} |
+| `TotalClaimable`       | [QueryTotalClaimableRequest](#publicawesome.stargaze.claim.v1beta1.QueryTotalClaimableRequest)             | [QueryTotalClaimableResponse](#publicawesome.stargaze.claim.v1beta1.QueryTotalClaimableResponse)             |                                               | GET       | /stargaze/claim/v1beta1/total\_claimable/{address}               |
 
  <!-- end services -->
 
@@ -630,7 +630,7 @@ Query/AnnualProvisions RPC method.
 
 | Field               | Type            | Label | Description                                                       |
 | ------------------- | --------------- | ----- | ----------------------------------------------------------------- |
-| `annual_provisions` | [bytes](#bytes) |       | annual_provisions is the current minting annual provisions value. |
+| `annual_provisions` | [bytes](#bytes) |       | annual\_provisions is the current minting annual provisions value. |
 
 <a name="stargaze.mint.v1beta1.QueryParamsRequest"></a>
 
@@ -663,7 +663,7 @@ Query provides defines the gRPC querier service.
 | Method Name        | Request Type                                                                        | Response Type                                                                         | Description                                               | HTTP Verb | Endpoint                                 |
 | ------------------ | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------- | --------- | ---------------------------------------- |
 | `Params`           | [QueryParamsRequest](#stargaze.mint.v1beta1.QueryParamsRequest)                     | [QueryParamsResponse](#stargaze.mint.v1beta1.QueryParamsResponse)                     | Params returns the total set of minting parameters.       | GET       | /stargaze/mint/v1beta1/params            |
-| `AnnualProvisions` | [QueryAnnualProvisionsRequest](#stargaze.mint.v1beta1.QueryAnnualProvisionsRequest) | [QueryAnnualProvisionsResponse](#stargaze.mint.v1beta1.QueryAnnualProvisionsResponse) | AnnualProvisions current minting annual provisions value. | GET       | /stargaze/mint/v1beta1/annual_provisions |
+| `AnnualProvisions` | [QueryAnnualProvisionsRequest](#stargaze.mint.v1beta1.QueryAnnualProvisionsRequest) | [QueryAnnualProvisionsResponse](#stargaze.mint.v1beta1.QueryAnnualProvisionsResponse) | AnnualProvisions current minting annual provisions value. | GET       | /stargaze/mint/v1beta1/annual\_provisions |
 
  <!-- end services -->
 

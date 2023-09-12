@@ -13,4 +13,3 @@ This release also improves the handling of account sequence mismatch errors,
 with a recovery mechanism to automatically retry or drop tx upon such errors.
 
 The relayer now also supports dynamic versions in channel open handshake (which is needed by Interchain Accounts), and enables full support for IBC v2.
-

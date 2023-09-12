@@ -19,14 +19,14 @@ We model a system where packet datagrams are both **submitted** by a relayer and
 **handled** by a chain after a delay period has passed. The system contains the
 following modules:
 
-- [IBCPacketDelay.tla](IBCPacketDelay.tla), the main module, which instantiates
-  two chains and models the behavior of a correct relayer as the environment
-  where the two chains operate;
-- [Chain.tla](Chain.tla), which models the behavior of a chain;
-- [IBCPacketDelayDefinitions.tla](IBCPacketDelayDefinitions.tla), which contains
-  definitions of operators that are shared between the different modules;
-- [ICS04PacketHandlers.tla](ICS04PacketHandlers.tla), which contains definitions
-  of operators that specify packet transmission and packet datagram handling.
+*   [IBCPacketDelay.tla](IBCPacketDelay.tla), the main module, which instantiates
+    two chains and models the behavior of a correct relayer as the environment
+    where the two chains operate;
+*   [Chain.tla](Chain.tla), which models the behavior of a chain;
+*   [IBCPacketDelayDefinitions.tla](IBCPacketDelayDefinitions.tla), which contains
+    definitions of operators that are shared between the different modules;
+*   [ICS04PacketHandlers.tla](ICS04PacketHandlers.tla), which contains definitions
+    of operators that specify packet transmission and packet datagram handling.
 
 ### Timestamps
 
@@ -47,20 +47,20 @@ In this specification, the relayer is a part of the environment in which the two
 chains operate. We define three actions that the environment (i.e., the relayer)
 can take:
 
-- `UpdateClients`, which updates the counterparty client heights of some chain.
-  This action abstracts the transmission of client datagrams.
-- `CreateDatagrams`, which creates datagrams depending on the packet log. This
-  action scans the packet log and adds the created packet datagram to the
-  outgoing packet datagram queue of the appropriate chain.
-- `SubmitDatagramsWithDelay`, which submits datagrams if delay has passed. This
-  action scans the outgoing packet datagram queue of a given chain, and checks
-  if the `proofHeight` of the datagram is a client height that is installed on
-  the chain. The following cases are possible: - if `proofHeight` is installed,
-  then check if a `MaxDelay` period has passed between the timestamp when the
-  client height was installed and the current `timestamp`, stored in the chain
-  store. If this is the case -- submit the datagram to the incoming packet
-  datagram queue of the chain; otherwise -- do nothing. - if `proofHeight` is
-  not installed, then install the it.
+*   `UpdateClients`, which updates the counterparty client heights of some chain.
+    This action abstracts the transmission of client datagrams.
+*   `CreateDatagrams`, which creates datagrams depending on the packet log. This
+    action scans the packet log and adds the created packet datagram to the
+    outgoing packet datagram queue of the appropriate chain.
+*   `SubmitDatagramsWithDelay`, which submits datagrams if delay has passed. This
+    action scans the outgoing packet datagram queue of a given chain, and checks
+    if the `proofHeight` of the datagram is a client height that is installed on
+    the chain. The following cases are possible: - if `proofHeight` is installed,
+    then check if a `MaxDelay` period has passed between the timestamp when the
+    client height was installed and the current `timestamp`, stored in the chain
+    store. If this is the case -- submit the datagram to the incoming packet
+    datagram queue of the chain; otherwise -- do nothing. - if `proofHeight` is
+    not installed, then install the it.
 
 ### Packet handlers
 
@@ -82,9 +82,9 @@ variable in the invariant `PacketDatagramsDelay`, described below.
 The module [IBCPacketDelay.tla](IBCPacketDelay.tla) defines the following
 invariants:
 
-- `TypeOK`, the type invariant,
-- `PacketDatagramsDelay`, which ensures that each packet datagram is processed
-  after a delay period.
+*   `TypeOK`, the type invariant,
+*   `PacketDatagramsDelay`, which ensures that each packet datagram is processed
+    after a delay period.
 
 ## Using the Model
 
@@ -92,23 +92,23 @@ invariants:
 
 The module `IBCPacketDelay.tla` is parameterized by the constants:
 
-- `MaxHeight`, a natural number denoting the maximal height of the chains,
-- `ChannelOrdering`, a string denoting whether the channels are ordered or
-  unordered,
-- `MaxPacketSeq`, a natural number denoting the maximal packet sequence number
-- `MaxDelay`, a natural number denoting the maximal packet delay
+*   `MaxHeight`, a natural number denoting the maximal height of the chains,
+*   `ChannelOrdering`, a string denoting whether the channels are ordered or
+    unordered,
+*   `MaxPacketSeq`, a natural number denoting the maximal packet sequence number
+*   `MaxDelay`, a natural number denoting the maximal packet delay
 
 ### Importing the specification into TLA+ toolbox
 
 To import the specification in the TLA+ toolbox and run TLC:
 
-- add a new spec in TLA+ toolbox with the root-module file `IBCPacketDelay.tla`
-- create a model
-- assign a value to the constants (example values can be found in
-  `IBCPacketDelay.cfg`)
-- choose "Temporal formula" as the behavior spec, and use the formula `Spec`
-- choose invariants/properties that should be checked
-- run TLC on the model
+*   add a new spec in TLA+ toolbox with the root-module file `IBCPacketDelay.tla`
+*   create a model
+*   assign a value to the constants (example values can be found in
+    `IBCPacketDelay.cfg`)
+*   choose "Temporal formula" as the behavior spec, and use the formula `Spec`
+*   choose invariants/properties that should be checked
+*   run TLC on the model
 
 #### Basic checks with TLC
 

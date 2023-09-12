@@ -7,18 +7,18 @@ high-level overview of the code base, you've come to the right place!
 
 Some important terms and acronyms that are commonly used include:
 
-- **IBC**: Refers to the **I**nter**B**lockchain **C**ommunication protocol, a
-  distributed protocol that allows different sovereign blockchains to
-  communicate with one another. The protocol has both on-chain and off-chain
-  components.
-- **ICS**: Refers to **I**nter**C**hain **S**tandards, which are stadardization
-  documents that capture the specifications of the IBC protocol across multiple
-  documents. For example, ICS02 captures the client abstraction of the IBC
-  protocol.
-- **IBC module**: Refers to a piece of on-chain logic on an IBC-enabled chain.
-- **Relayer**: Refers to an off-chain process that is responsible for relaying
-  packets between chains.
-- **Hermes**: Refers to the `ibc-rs` crate's particular relayer implementation.
+*   **IBC**: Refers to the **I**nter**B**lockchain **C**ommunication protocol, a
+    distributed protocol that allows different sovereign blockchains to
+    communicate with one another. The protocol has both on-chain and off-chain
+    components.
+*   **ICS**: Refers to **I**nter**C**hain **S**tandards, which are stadardization
+    documents that capture the specifications of the IBC protocol across multiple
+    documents. For example, ICS02 captures the client abstraction of the IBC
+    protocol.
+*   **IBC module**: Refers to a piece of on-chain logic on an IBC-enabled chain.
+*   **Relayer**: Refers to an off-chain process that is responsible for relaying
+    packets between chains.
+*   **Hermes**: Refers to the `ibc-rs` crate's particular relayer implementation.
 
 ## Bird's Eye View
 

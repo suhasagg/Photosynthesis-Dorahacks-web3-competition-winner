@@ -21,16 +21,16 @@ existing Protobuf3 libraries, please
 
 ## Amino Goals
 
-- Bring parity into logic objects and persistent objects by supporting
-  interfaces.
-- Have a unique/deterministic encoding of value.
-- Binary bytes must be decodeable with a schema.
-- Schema must be upgradeable.
-- Sufficient structure must be parseable without a schema.
-- The encoder and decoder logic must be reasonably simple.
-- The serialization must be reasonably compact.
-- A sufficiently compatible JSON format must be maintained (but not general
-  conversion to/from JSON)
+*   Bring parity into logic objects and persistent objects by supporting
+    interfaces.
+*   Have a unique/deterministic encoding of value.
+*   Binary bytes must be decodeable with a schema.
+*   Schema must be upgradeable.
+*   Sufficient structure must be parseable without a schema.
+*   The encoder and decoder logic must be reasonably simple.
+*   The serialization must be reasonably compact.
+*   A sufficiently compatible JSON format must be maintained (but not general
+    conversion to/from JSON)
 
 ## Amino vs JSON
 
@@ -47,10 +47,10 @@ Amino wants to be Protobuf4. The bulk of this spec will explain how Amino
 differs from Protobuf3. Here, we will illustrate two key selling points for
 Amino.
 
-- Protobuf3 doesn't support interfaces. It supports `oneof`, which works as a
-  kind of union type, but it doesn't translate well to "interfaces" and
-  "implementations" in modern langauges such as C++ classes, Java
-  interfaces/classes, Go interfaces/implementations, and Rust traits.
+*   Protobuf3 doesn't support interfaces. It supports `oneof`, which works as a
+    kind of union type, but it doesn't translate well to "interfaces" and
+    "implementations" in modern langauges such as C++ classes, Java
+    interfaces/classes, Go interfaces/implementations, and Rust traits.
 
 If Protobuf supported interfaces, users of externally defined schema files would
 be able to support caller-defined concrete types of an interface. Instead, the
@@ -66,8 +66,8 @@ duplication and help streamline development from inception to maturity.
 
 ## Amino in the Wild
 
-- Amino:binary spec in
-  [Tendermint](https://github.com/tendermint/tendermint/blob/master/docs/spec/blockchain/encoding.md)
+*   Amino:binary spec in
+    [Tendermint](https://github.com/tendermint/tendermint/blob/master/docs/spec/blockchain/encoding.md)
 
 # Amino Spec
 
@@ -122,17 +122,15 @@ This is assuming that all registered concrete types have unique natural names
 mine/grind to produce a particular sequence of prefix bytes, and avoid using
 dependencies that do so.
 
-```
-The Birthday Paradox: 1024 random registered types, Wire prefix bytes
-https://instacalc.com/51554
+    The Birthday Paradox: 1024 random registered types, Wire prefix bytes
+    https://instacalc.com/51554
 
-possible = 4278190080                               = 4,278,190,080
-registered = 1024                                   = 1,024
-pairs = ((registered)*(registered-1)) / 2           = 523,776
-no_collisions = ((possible-1) / possible)^pairs     = 0.99987757816
-any_collisions = 1 - no_collisions                  = 0.00012242184
-percent_any_collisions = any_collisions * 100       = 0.01224218414
-```
+    possible = 4278190080                               = 4,278,190,080
+    registered = 1024                                   = 1,024
+    pairs = ((registered)*(registered-1)) / 2           = 523,776
+    no_collisions = ((possible-1) / possible)^pairs     = 0.99987757816
+    any_collisions = 1 - no_collisions                  = 0.00012242184
+    percent_any_collisions = any_collisions * 100       = 0.01224218414
 
 Since 4 bytes are not sufficient to ensure no conflicts, sometimes it is
 necessary to prepend more than the 4 prefix bytes for disambiguation. Like the
@@ -141,14 +139,12 @@ name of the concrete type. There are 3 disambiguation bytes, and in binary form
 they always precede the prefix bytes. The first byte of the disambiguation bytes
 must not be a zero byte, so there are 2^(8x3)-2^(8x2) possible values.
 
-```
-// Sample Amino encoded binary bytes with 4 prefix bytes.
-> [0xBB 0x9C 0x83 0xDD] [...]
+    // Sample Amino encoded binary bytes with 4 prefix bytes.
+    > [0xBB 0x9C 0x83 0xDD] [...]
 
-// Sample Amino encoded binary bytes with 3 disambiguation bytes and 4
-// prefix bytes.
-> 0x00 <0xA8 0xFC 0x54> [0xBB 0x9C 0x83 0xDD] [...]
-```
+    // Sample Amino encoded binary bytes with 3 disambiguation bytes and 4
+    // prefix bytes.
+    > 0x00 <0xA8 0xFC 0x54> [0xBB 0x9C 0x83 0xDD] [...]
 
 The prefix bytes never start with a zero byte, so the disambiguation bytes are
 escaped with 0x00.
@@ -161,26 +157,20 @@ concrete type.
 To compute the disambiguation bytes, we take `hash := sha256(concreteTypeName)`,
 and drop the leading 0x00 bytes.
 
-```
-> hash := sha256("com.tendermint.consensus/MyConcreteName")
-> hex.EncodeBytes(hash) // 0x{00 00 A8 FC 54 00 00 00 BB 9C 83 DD ...} (example)
-```
+    > hash := sha256("com.tendermint.consensus/MyConcreteName")
+    > hex.EncodeBytes(hash) // 0x{00 00 A8 FC 54 00 00 00 BB 9C 83 DD ...} (example)
 
 In the example above, hash has two leading 0x00 bytes, so we drop them.
 
-```
-> rest = dropLeadingZeroBytes(hash) // 0x{A8 FC 54 00 00 00 BB 9C 83 DD ...}
-> disamb = rest[0:3]
-> rest = dropLeadingZeroBytes(rest[3:])
-> prefix = rest[0:4]
-```
+    > rest = dropLeadingZeroBytes(hash) // 0x{A8 FC 54 00 00 00 BB 9C 83 DD ...}
+    > disamb = rest[0:3]
+    > rest = dropLeadingZeroBytes(rest[3:])
+    > prefix = rest[0:4]
 
 The first 3 bytes are called the "disambiguation bytes" (in angle brackets). The
 next 4 bytes are called the "prefix bytes" (in square brackets).
 
-```
-> <0xA8 0xFC 0x54> [0xBB 0x9C 9x83 9xDD] // <Disamb Bytes> and [Prefix Bytes]
-```
+    > <0xA8 0xFC 0x54> [0xBB 0x9C 9x83 9xDD] // <Disamb Bytes> and [Prefix Bytes]
 
 ## Unsupported types
 

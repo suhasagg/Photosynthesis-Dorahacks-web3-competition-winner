@@ -8,8 +8,8 @@ Check the JSON-RPC methods supported on Evmos. {synopsis}
 
 ## Pre-requisite Readings
 
-- [Ethereum JSON-RPC](https://eth.wiki/json-rpc/API) {prereq}
-- [Geth JSON-RPC APIs](https://geth.ethereum.org/docs/rpc/server) {prereq}
+*   [Ethereum JSON-RPC](https://eth.wiki/json-rpc/API) {prereq}
+*   [Geth JSON-RPC APIs](https://geth.ethereum.org/docs/rpc/server) {prereq}
 
 ## Endpoints
 
@@ -216,7 +216,7 @@ Returns Keccak-256 (not the standardized SHA3-256) of the given data.
 
 1: input `hexutil.Bytes`
 
-- Required: ✓ Yes
+*   Required: ✓ Yes
 
 #### Result
 
@@ -358,10 +358,10 @@ Returns the account balance for a given account address and Block Number.
 
 #### Parameters
 
-- Account Address
+*   Account Address
 
-- Block Number or Block Hash
-  ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
+*   Block Number or Block Hash
+    ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```json
 // Request
@@ -377,12 +377,12 @@ Returns the storage address for a given account address.
 
 #### Parameters
 
-- Account Address
+*   Account Address
 
-- Integer of the position in the storage
+*   Integer of the position in the storage
 
-- Block Number or Block Hash
-  ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
+*   Block Number or Block Hash
+    ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```json
 // Request
@@ -398,10 +398,10 @@ Returns the total transaction for a given account address and Block Number.
 
 #### Parameters
 
-- Account Address
+*   Account Address
 
-- Block Number or Block Hash
-  ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
+*   Block Number or Block Hash
+    ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```json
 // Request
@@ -417,7 +417,7 @@ Returns the total transaction count for a given block number.
 
 #### Parameters
 
-- Block number
+*   Block number
 
 ```json
 // Request
@@ -433,7 +433,7 @@ Returns the total transaction count for a given block hash.
 
 #### Parameters
 
-- Block Hash
+*   Block Hash
 
 ```json
 // Request
@@ -449,10 +449,10 @@ Returns the code for a given account address and Block Number.
 
 #### Parameters
 
-- Account Address
+*   Account Address
 
-- Block Number or Block Hash
-  ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
+*   Block Number or Block Hash
+    ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```json
 // Request
@@ -476,9 +476,9 @@ victim.
 
 #### Parameters
 
-- Account Address
+*   Account Address
 
-- Message to sign
+*   Message to sign
 
 ```json
 // Request
@@ -494,26 +494,26 @@ Sends transaction from given account to a given account.
 
 #### Parameters
 
-- Object containing:
+*   Object containing:
 
-  `from`: `DATA`, 20 Bytes - The address the transaction is send from.
+    `from`: `DATA`, 20 Bytes - The address the transaction is send from.
 
-  `to`: `DATA`, 20 Bytes - (optional when creating new contract) The address the
-  transaction is directed to.
+    `to`: `DATA`, 20 Bytes - (optional when creating new contract) The address the
+    transaction is directed to.
 
-  `gas`: QUANTITY - (optional, default: 90000) Integer of the gas provided for
-  the transaction execution. It will return unused gas.
+    `gas`: QUANTITY - (optional, default: 90000) Integer of the gas provided for
+    the transaction execution. It will return unused gas.
 
-  `gasPrice`: QUANTITY - (optional, default: To-Be-Determined) Integer of the
-  gasPrice used for each paid gas
+    `gasPrice`: QUANTITY - (optional, default: To-Be-Determined) Integer of the
+    gasPrice used for each paid gas
 
-  `value`: QUANTITY - value sent with this transaction
+    `value`: QUANTITY - value sent with this transaction
 
-  `data`: `DATA` - The compiled code of a contract OR the hash of the invoked
-  method signature and encoded parameters. For details see Ethereum Contract ABI
+    `data`: `DATA` - The compiled code of a contract OR the hash of the invoked
+    method signature and encoded parameters. For details see Ethereum Contract ABI
 
-  `nonce`: QUANTITY - (optional) Integer of a nonce. This allows to overwrite
-  your own pending transactions that use the same nonce.
+    `nonce`: QUANTITY - (optional) Integer of a nonce. This allows to overwrite
+    your own pending transactions that use the same nonce.
 
 ```json
 // Request
@@ -535,7 +535,7 @@ method.
 
 #### Parameters
 
-- The signed transaction data
+*   The signed transaction data
 
 ```json
 // Request
@@ -552,26 +552,26 @@ block chain.
 
 #### Parameters
 
-- Object containing:
+*   Object containing:
 
-  `from`: `DATA`, 20 Bytes - (optional) The address the transaction is sent
-  from.
+    `from`: `DATA`, 20 Bytes - (optional) The address the transaction is sent
+    from.
 
-  `to`: `DATA`, 20 Bytes - The address the transaction is directed to.
+    `to`: `DATA`, 20 Bytes - The address the transaction is directed to.
 
-  `gas`: QUANTITY - gas provided for the transaction execution. eth_call
-  consumes zero gas, but this parameter may be needed by some executions.
+    `gas`: QUANTITY - gas provided for the transaction execution. eth\_call
+    consumes zero gas, but this parameter may be needed by some executions.
 
-  `gasPrice`: QUANTITY - gasPrice used for each paid gas
+    `gasPrice`: QUANTITY - gasPrice used for each paid gas
 
-  `value`: QUANTITY - value sent with this transaction
+    `value`: QUANTITY - value sent with this transaction
 
-  `data`: `DATA` - (optional) Hash of the method signature and encoded
-  parameters. For details see Ethereum Contract ABI in the Solidity
-  documentation
+    `data`: `DATA` - (optional) Hash of the method signature and encoded
+    parameters. For details see Ethereum Contract ABI in the Solidity
+    documentation
 
-- Block number or Block Hash
-  ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
+*   Block number or Block Hash
+    ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```json
 // Request
@@ -587,14 +587,14 @@ Returns an estimate value of the gas required to send the transaction.
 
 #### Parameters
 
-- Object containing:
+*   Object containing:
 
-  `from`: `DATA`, 20 Bytes - The address the transaction is send from.
+    `from`: `DATA`, 20 Bytes - The address the transaction is send from.
 
-  `to`: `DATA`, 20 Bytes - (optional when creating new contract) The address the
-  transaction is directed to.
+    `to`: `DATA`, 20 Bytes - (optional when creating new contract) The address the
+    transaction is directed to.
 
-  `value`: `QUANTITY` - value sent with this transaction
+    `value`: `QUANTITY` - value sent with this transaction
 
 ```json
 // Request
@@ -610,10 +610,10 @@ Returns information about a block by block number.
 
 #### Parameters
 
-- Block Number
+*   Block Number
 
-- If true it returns the full transaction objects, if false only the hashes of
-  the transactions.
+*   If true it returns the full transaction objects, if false only the hashes of
+    the transactions.
 
 ```json
 // Request
@@ -629,10 +629,10 @@ Returns the block info given the hash found in the command above and a bool.
 
 #### Parameters
 
-- Hash of a block.
+*   Hash of a block.
 
-- If true it returns the full transaction objects, if false only the hashes of
-  the transactions.
+*   If true it returns the full transaction objects, if false only the hashes of
+    the transactions.
 
 ```json
 // Request
@@ -648,7 +648,7 @@ Returns transaction details given the ethereum tx something.
 
 #### Parameters
 
-- hash of a transaction
+*   hash of a transaction
 
 ```json
 // Request
@@ -664,9 +664,9 @@ Returns transaction details given the block hash and the transaction index.
 
 #### Parameters
 
-- Hash of a block.
+*   Hash of a block.
 
-- Transaction index position.
+*   Transaction index position.
 
 ```json
 // Request
@@ -686,7 +686,7 @@ Tendermint | Ethereum | |---------|------------|----------| | Success | 0 | 1 |
 
 #### Parameters
 
-- Hash of a transaction
+*   Hash of a transaction
 
 ```json
 // Request
@@ -702,7 +702,7 @@ Create new filter using topics of some kind.
 
 #### Parameters
 
-- hash of a transaction
+*   hash of a transaction
 
 ```json
 // Request
@@ -743,7 +743,7 @@ successfully uninstalled, otherwise false.
 
 #### Parameters
 
-- The filter id
+*   The filter id
 
 ```json
 // Request
@@ -760,7 +760,7 @@ last poll.
 
 #### Parameters
 
-- The filter id
+*   The filter id
 
 ```json
 // Request
@@ -776,7 +776,7 @@ Returns an array of all logs matching filter with given id.
 
 #### Parameters
 
-- `QUANTITY` - The filter id
+*   `QUANTITY` - The filter id
 
 ```json
 // Request
@@ -792,29 +792,29 @@ Returns an array of all logs matching a given filter object.
 
 #### Parameters
 
-- Object containing:
+*   Object containing:
 
-  `fromBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block
-  number, or `"latest"` for the last mined block or `"pending"`, `"earliest"`
-  for not yet mined transactions.
+    `fromBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block
+    number, or `"latest"` for the last mined block or `"pending"`, `"earliest"`
+    for not yet mined transactions.
 
-  `toBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block
-  number, or `"latest"` for the last mined block or `"pending"`, `"earliest"`
-  for not yet mined transactions.
+    `toBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block
+    number, or `"latest"` for the last mined block or `"pending"`, `"earliest"`
+    for not yet mined transactions.
 
-  `address`: `DATA|Array`, 20 Bytes - (optional) Contract address or a list of
-  addresses from which logs should originate.
+    `address`: `DATA|Array`, 20 Bytes - (optional) Contract address or a list of
+    addresses from which logs should originate.
 
-  `topics`: Array of `DATA`, - (optional) Array of 32 Bytes `DATA` topics.
-  Topics are order-dependent. Each topic can also be an array of `DATA` with
-  “or” options.
+    `topics`: Array of `DATA`, - (optional) Array of 32 Bytes `DATA` topics.
+    Topics are order-dependent. Each topic can also be an array of `DATA` with
+    “or” options.
 
-  `blockhash`: (optional, future) With the addition of
-  [EIP-234](https://eips.ethereum.org/EIPS/eip-234), `blockHash` will be a new
-  filter option which restricts the logs returned to the single block with the
-  32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` =
-  `toBlock` = the block number with hash `blockHash`. If `blockHash` is present
-  in in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
+    `blockhash`: (optional, future) With the addition of
+    [EIP-234](https://eips.ethereum.org/EIPS/eip-234), `blockHash` will be a new
+    filter option which restricts the logs returned to the single block with the
+    32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` =
+    `toBlock` = the block number with hash `blockHash`. If `blockHash` is present
+    in in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
 
 ```json
 // Request
@@ -824,7 +824,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics"
 {"jsonrpc":"2.0","id":1,"result":[]}
 ```
 
-### eth_coinbase
+### eth\_coinbase
 
 Returns the account the mining rewards will be send to.
 
@@ -836,19 +836,19 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":1
 {"jsonrpc":"2.0","id":1,"result":"0x7cB61D4117AE31a12E393a1Cfa3BaC666481D02E"}
 ```
 
-### eth_getProof
+### eth\_getProof
 
 Returns the account- and storage-values of the specified account including the
 Merkle-proof.
 
 #### Parameters
 
-- Address of account or contract
+*   Address of account or contract
 
-- Integer of the position in the storage
+*   Integer of the position in the storage
 
-- Block Number or Block Hash
-  ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
+*   Block Number or Block Hash
+    ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```json
 // Request
@@ -873,9 +873,9 @@ with relevant data is send together with the subscription id.
 
 #### Parameters
 
-- Subscription Name
+*   Subscription Name
 
-- Optional Arguments
+*   Optional Arguments
 
 ```json
 // Request
@@ -891,7 +891,7 @@ Unsubscribe from an event using the subscription id
 
 #### Parameters
 
-- Subscription ID
+*   Subscription ID
 
 ```json
 // Request
@@ -916,11 +916,11 @@ Returns the address of the new account.
 
 **1:** privkey `string`
 
-- Required: ✓ Yes
+*   Required: ✓ Yes
 
 **2:** password `string`
 
-- Required: ✓ Yes
+*   Required: ✓ Yes
 
 ```json
 // Request
@@ -951,7 +951,7 @@ longer be used to send transactions.
 
 #### Parameters
 
-- Account Address
+*   Account Address
 
 ```json
 // Request
@@ -971,7 +971,7 @@ account.
 
 #### Parameters
 
-- Passphrase
+*   Passphrase
 
 ```json
 // Request
@@ -999,11 +999,11 @@ The account can be used with [`eth_sign`](#eth-sign) and
 
 #### Parameters
 
-- Account Address
+*   Account Address
 
-- Passphrase
+*   Passphrase
 
-- Duration
+*   Duration
 
 ```json
 // Request
@@ -1031,16 +1031,16 @@ in other RPC calls. :::
 
 #### Parameters
 
-- Object containing:
+*   Object containing:
 
-  `from`: `DATA`, 20 Bytes - The address the transaction is send from.
+    `from`: `DATA`, 20 Bytes - The address the transaction is send from.
 
-  `to`: `DATA`, 20 Bytes - (optional when creating new contract) The address the
-  transaction is directed to.
+    `to`: `DATA`, 20 Bytes - (optional when creating new contract) The address the
+    transaction is directed to.
 
-  `value`: QUANTITY - value sent with this transaction
+    `value`: QUANTITY - value sent with this transaction
 
-- Passphrase
+*   Passphrase
 
 ```json
 // Request
@@ -1059,11 +1059,11 @@ The sign method calculates an Ethereum specific signature with:
 
 #### Parameters
 
-- Message
+*   Message
 
-- Account Address
+*   Account Address
 
-- Password
+*   Password
 
 ```json
 // Request
@@ -1084,11 +1084,11 @@ calculate the signature in [`personal_sign`](#personal-sign).
 
 #### Parameters
 
-- Message
+*   Message
 
 <!-- markdown-link-check-disable-next-line -->
 
-- Signature returned from [`personal_sign`](#personal-sign)
+*   Signature returned from [`personal_sign`](#personal-sign)
 
 ```json
 // Request
@@ -1111,7 +1111,7 @@ Parameters must be given by position.
 
 1: url `string`
 
-- Required: ✓ Yes
+*   Required: ✓ Yes
 
 #### Client Examples
 
@@ -1147,9 +1147,9 @@ Unpair deletes a pairing between wallet and the node.
 
 #### Parameters (2)
 
-- URL
+*   URL
 
-- Pairing password
+*   Pairing password
 
 #### Client Examples
 
@@ -1188,7 +1188,7 @@ attempt to execute the transaction that corresponds to the given hash.
 
 #### Parameters
 
-- Trace Config
+*   Trace Config
 
 ```json
 // Request
@@ -1205,7 +1205,7 @@ block that is already present in the database.
 
 #### Parameters
 
-- Trace Config
+*   Trace Config
 
 ```json
 // Request
@@ -1244,7 +1244,7 @@ capped at 32 bytes.
 
 #### Parameters
 
-- Data
+*   Data
 
 ```json
 // Request
@@ -1270,7 +1270,7 @@ file.
 
 #### Parameters
 
-- Hex Gas Price
+*   Hex Gas Price
 
 ```json
 // Request
@@ -1290,7 +1290,7 @@ Start the CPU validation process with the given number of threads.
 
 #### Parameters
 
-- Hex Number of threads
+*   Hex Number of threads
 
 ```json
 // Request
@@ -1326,7 +1326,7 @@ average per block) to be.
 
 #### Parameters
 
-- Hex gas limit
+*   Hex gas limit
 
 ```json
 // Request
@@ -1345,7 +1345,7 @@ deposited.
 
 #### Parameters
 
-- Account Address
+*   Account Address
 
 ```json
 // Request

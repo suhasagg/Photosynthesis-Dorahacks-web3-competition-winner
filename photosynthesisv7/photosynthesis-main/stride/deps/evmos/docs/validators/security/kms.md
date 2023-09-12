@@ -10,9 +10,9 @@ Set up a Key Management System for Evmos {synopsis}
 Service (KMS) that allows separating key management from Tendermint nodes. In
 addition it provides other advantages such as:
 
-- Improved security and risk management policies
-- Unified API and support for various HSM (hardware security modules)
-- Double signing protection (software or hardware based)
+*   Improved security and risk management policies
+*   Unified API and support for various HSM (hardware security modules)
+*   Double signing protection (software or hardware based)
 
 It is recommended that the KMS service runs in a separate physical hosts.
 
@@ -20,28 +20,26 @@ It is recommended that the KMS service runs in a separate physical hosts.
 
 You will need the following prerequisites:
 
-- ✅ **Rust** (stable; **1.56+**): https://rustup.rs/
-- ✅ **C compiler**: e.g. gcc, clang
-- ✅ **pkg-config**
-- ✅ **libusb** (1.0+). Install instructions for common platforms
+*   ✅ **Rust** (stable; **1.56+**): https://rustup.rs/
+*   ✅ **C compiler**: e.g. gcc, clang
+*   ✅ **pkg-config**
+*   ✅ **libusb** (1.0+). Install instructions for common platforms
 
-  - ✅ Debian/Ubuntu
+    *   ✅ Debian/Ubuntu
 
-    ```bash
-    apt install libusb-1.0-0-dev
-    ```
+        ```bash
+        apt install libusb-1.0-0-dev
+        ```
 
-  - ✅ RedHat/CentOS
+    *   ✅ RedHat/CentOS
 
-    ```bash
-    yum install libusb1-devel
-    ```
+        ```bash
+        yum install libusb1-devel
+        ```
 
-  - ✅ macOS (Homebrew)
+    *   ✅ macOS (Homebrew)
 
-    ```
-    brew install libusb
-    ```
+            brew install libusb
 
 ::: tip For `x86_64` architecture only:
 

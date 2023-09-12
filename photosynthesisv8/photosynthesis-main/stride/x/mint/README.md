@@ -1,6 +1,9 @@
 ***
 
-## title: "Mint"&#xA;excerpt: ""&#xA;category: 6392913957c533007128548e
+title: "Mint"
+excerpt: ""
+category: 6392913957c533007128548e
+----------------------------------
 
 <!--
 order: 0
@@ -18,10 +21,10 @@ The mint module uses time basis epochs from the `x/epochs` module.
 The `x/mint` module is designed by Osmosis. It is used to handle the regular
 printing of new tokens within a chain. Its core function is to:
 
-- Mint new tokens once per epoch (default one week)
-- Have a "Reductioning factor" every period, which reduces the amount of rewards
-  per epoch. (default: period is 3 years, where a year is 52 epochs. The next
-  period's rewards are 2/3 of the prior period's rewards)
+*   Mint new tokens once per epoch (default one week)
+*   Have a "Reductioning factor" every period, which reduces the amount of rewards
+    per epoch. (default: period is 3 years, where a year is 52 epochs. The next
+    period's rewards are 2/3 of the prior period's rewards)
 
 ## Params
 
@@ -44,17 +47,17 @@ The minting module contains the following parameters:
 
 | Key                                        | Type         | Example                                |
 | ------------------------------------------ | ------------ | -------------------------------------- |
-| mint_denom                                 | string       | "uosmo"                                |
-| genesis_epoch_provisions                   | string (dec) | "500000000"                            |
-| epoch_identifier                           | string       | "weekly"                               |
-| reduction_period_in_epochs                 | int64        | 156                                    |
-| reduction_factor                           | string (dec) | "0.6666666666666"                      |
-| distribution_proportions.staking           | string (dec) | "0.4"                                  |
-| distribution_proportions.pool_incentives   | string (dec) | "0.3"                                  |
-| distribution_proportions.developer_rewards | string (dec) | "0.2"                                  |
-| distribution_proportions.community_pool    | string (dec) | "0.1"                                  |
-| weighted_developer_rewards_receivers       | array        | \[{"address": "osmoxx", "weight": "1"}] |
-| minting_rewards_distribution_start_epoch   | int64        | 10                                     |
+| mint\_denom                                 | string       | "uosmo"                                |
+| genesis\_epoch\_provisions                   | string (dec) | "500000000"                            |
+| epoch\_identifier                           | string       | "weekly"                               |
+| reduction\_period\_in\_epochs                 | int64        | 156                                    |
+| reduction\_factor                           | string (dec) | "0.6666666666666"                      |
+| distribution\_proportions.staking           | string (dec) | "0.4"                                  |
+| distribution\_proportions.pool\_incentives   | string (dec) | "0.3"                                  |
+| distribution\_proportions.developer\_rewards | string (dec) | "0.2"                                  |
+| distribution\_proportions.community\_pool    | string (dec) | "0.1"                                  |
+| weighted\_developer\_rewards\_receivers       | array        | \[{"address": "osmoxx", "weight": "1"}] |
+| minting\_rewards\_distribution\_start\_epoch   | int64        | 10                                     |
 
 ## EpochProvision
 
@@ -74,20 +77,20 @@ func (m Minter) EpochProvision(params Params) sdk.Coin {
 
 **Notes**
 
-1. `mint_denom` defines denom for minting token - uosmo
-2. `genesis_epoch_provisions` provides minting tokens per epoch at genesis.
-3. `epoch_identifier` defines the epoch identifier to be used for mint module
-   e.g. "weekly"
-4. `reduction_period_in_epochs` defines the number of epochs to pass to reduce
-   mint amount
-5. `reduction_factor` defines the reduction factor of tokens at every
-   `reduction_period_in_epochs`
-6. `distribution_proportions` defines distribution rules for minted tokens, when
-   developer rewards address is empty, it distribute tokens to community pool.
-7. `weighted_developer_rewards_receivers` provides the addresses that receives
-   developer rewards by weight
-8. `minting_rewards_distribution_start_epoch` defines the start epoch of minting
-   to make sure minting start after initial pools are set
+1.  `mint_denom` defines denom for minting token - uosmo
+2.  `genesis_epoch_provisions` provides minting tokens per epoch at genesis.
+3.  `epoch_identifier` defines the epoch identifier to be used for mint module
+    e.g. "weekly"
+4.  `reduction_period_in_epochs` defines the number of epochs to pass to reduce
+    mint amount
+5.  `reduction_factor` defines the reduction factor of tokens at every
+    `reduction_period_in_epochs`
+6.  `distribution_proportions` defines distribution rules for minted tokens, when
+    developer rewards address is empty, it distribute tokens to community pool.
+7.  `weighted_developer_rewards_receivers` provides the addresses that receives
+    developer rewards by weight
+8.  `minting_rewards_distribution_start_epoch` defines the start epoch of minting
+    to make sure minting start after initial pools are set
 
 ## Begin-Epoch
 
@@ -131,8 +134,8 @@ The minting module emits the following events:
 
 | Type | Attribute Key    | Attribute Value   |
 | ---- | ---------------- | ----------------- |
-| mint | epoch_number     | {epochNumber}     |
-| mint | epoch_provisions | {epochProvisions} |
+| mint | epoch\_number     | {epochNumber}     |
+| mint | epoch\_provisions | {epochProvisions} |
 | mint | amount           | {amount}          |
 
 ## Minter

@@ -8,8 +8,8 @@ Learn about the JSON-RPC server to interact with the EVM. {synopsis}
 
 ## Pre-requisite Readings
 
-- [EthWiki JSON-RPC API](https://eth.wiki/json-rpc/API) {prereq}
-- [Geth JSON-RPC Server](https://geth.ethereum.org/docs/rpc/server) {prereq}
+*   [EthWiki JSON-RPC API](https://eth.wiki/json-rpc/API) {prereq}
+*   [Geth JSON-RPC Server](https://geth.ethereum.org/docs/rpc/server) {prereq}
 
 The JSON-PRC Server provides an API that allows you to connect to the Evmos
 blockchain and interact with the EVM. This gives you direct access to reading
@@ -35,7 +35,7 @@ these APIs on the [`JSON-RPC Methods`](./endpoints.md) page.
 Ethereum JSON-RPC APIs use a name-space system. RPC methods are grouped into
 several categories depending on their purpose. All method names are composed of
 the namespace, an underscore, and the actual method name within the namespace.
-For example, the eth_call method resides in the eth namespace.
+For example, the eth\_call method resides in the eth namespace.
 
 Access to RPC methods can be enabled on a per-namespace basis. Find
 documentation for individual namespaces in the [Namespaces](./namespaces.md)
@@ -45,8 +45,8 @@ page.
 
 At present there are two key datatypes that are passed over JSON:
 
-- **quantities** and
-- **unformatted byte arrays**.
+*   **quantities** and
+*   **unformatted byte arrays**.
 
 Both are passed with a hex encoding, however with different requirements to
 formatting.
@@ -55,40 +55,40 @@ When encoding quantities (integers, numbers), encode as hex, prefix with `"0x"`,
 the most compact representation (slight exception: zero should be represented as
 `"0x0"`). Examples:
 
-- `0x41` (65 in decimal)
-- `0x400` (1024 in decimal)
-- WRONG: `0x` (should always have at least one digit - zero is `"0x0"`)
-- WRONG: `0x0400` (no leading zeroes allowed)
-- WRONG: `ff` (must be prefixed `0x`)
+*   `0x41` (65 in decimal)
+*   `0x400` (1024 in decimal)
+*   WRONG: `0x` (should always have at least one digit - zero is `"0x0"`)
+*   WRONG: `0x0400` (no leading zeroes allowed)
+*   WRONG: `ff` (must be prefixed `0x`)
 
 When encoding unformatted data (byte arrays, account addresses, hashes, bytecode
 arrays), encode as hex, prefix with `"0x"`, two hex digits per byte. Examples:
 
-- `0x41` (size 1, `"A"`)
-- `0x004200` (size 3, `"\0B\0"`)
-- `0x` (size 0, `""`)
-- WRONG: `0xf0f0f` (must be even number of digits)
-- WRONG: `004200` (must be prefixed `0x`)
+*   `0x41` (size 1, `"A"`)
+*   `0x004200` (size 3, `"\0B\0"`)
+*   `0x` (size 0, `""`)
+*   WRONG: `0xf0f0f` (must be even number of digits)
+*   WRONG: `004200` (must be prefixed `0x`)
 
 ## Default block parameter
 
 The following methods have an extra default block parameter:
 
-- [`eth_getBalance`](./endpoints.md#eth-getbalance)
-- [`eth_getCode`](./endpoints.md#eth-getcode)
-- [`eth_getTransactionCount`](./endpoints.md#eth-gettransactioncount)
-- [`eth_getStorageAt`](./endpoints.md#eth-getstorageat)
-- [`eth_call`](./endpoints.md#eth-call)
+*   [`eth_getBalance`](./endpoints.md#eth-getbalance)
+*   [`eth_getCode`](./endpoints.md#eth-getcode)
+*   [`eth_getTransactionCount`](./endpoints.md#eth-gettransactioncount)
+*   [`eth_getStorageAt`](./endpoints.md#eth-getstorageat)
+*   [`eth_call`](./endpoints.md#eth-call)
 
 When requests are made that act on the state of Evmos, the last default block
 parameter determines the height of the block.
 
 The following options are possible for the `defaultBlock` parameter:
 
-- `HEX String` - an integer block number
-- `String "earliest"` for the earliest/genesis block
-- `String "latest"` - for the latest mined block
-- `String "pending"` - for the pending state/transactions
+*   `HEX String` - an integer block number
+*   `String "earliest"` for the earliest/genesis block
+*   `String "latest"` - for the latest mined block
+*   `String "pending"` - for the pending state/transactions
 
 ## Curl Examples Explained
 

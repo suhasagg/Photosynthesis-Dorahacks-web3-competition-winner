@@ -13,11 +13,11 @@ going.
 The rest of this document outlines the best practices for contributing to this
 repository:
 
-- [Decision Making](#decision-making) - process for agreeing to changes
-- [Forking](#forking) - fork the repo to make pull requests
-- [Changelog](#changelog) - changes must be recorded in the changelog
-- [Pull Requests](#pull-requests) - what makes a good pull request
-- [Releases](#releases) - how to release new version of the crates
+*   [Decision Making](#decision-making) - process for agreeing to changes
+*   [Forking](#forking) - fork the repo to make pull requests
+*   [Changelog](#changelog) - changes must be recorded in the changelog
+*   [Pull Requests](#pull-requests) - what makes a good pull request
+*   [Releases](#releases) - how to release new version of the crates
 
 ## Decision Making
 
@@ -59,10 +59,10 @@ that PRs will sit open for long periods of time.
 Each stage of the process is aimed at creating feedback cycles which align
 contributors and maintainers in order to ensure that:
 
-- Contributors don’t waste their time implementing/proposing features which
-  won’t land in `master`
-- Maintainers have the necessary context in order to support and review
-  contributions
+*   Contributors don’t waste their time implementing/proposing features which
+    won’t land in `master`
+*   Maintainers have the necessary context in order to support and review
+    contributions
 
 ## Forking
 
@@ -74,10 +74,10 @@ make a pull request back upstream.
 When forking, add your fork's URL as a new git remote in your local copy of the
 repo. For instance, to create a fork and work on a branch of it:
 
-- Create the fork on GitHub, using the fork button.
-- `cd` to the original clone of the repo on your machine
-- `git remote rename origin upstream`
-- \`git remote add origin git@github.com:<location of fork>
+*   Create the fork on GitHub, using the fork button.
+*   `cd` to the original clone of the repo on your machine
+*   `git remote rename origin upstream`
+*   \`git remote add origin git@github.com:<location of fork>
 
 Now `origin` refers to your fork and `upstream` refers to the original version.
 Now `git push -u origin master` to update the fork, and make pull requests
@@ -154,9 +154,7 @@ under a specific release number in Changelog.
 
 Changelog entries should be formatted as follows:
 
-```
-- [pkg] Some description about the change ([#xxx](https://github.com/informalsystems/ibc-rs/issues/xxx)) (optional @contributor)
-```
+    - [pkg] Some description about the change ([#xxx](https://github.com/informalsystems/ibc-rs/issues/xxx)) (optional @contributor)
 
 Here, `pkg` is the part of the code that changed (typically a top-level crate,
 but could be <crate>/<module>), `xxx` is the issue number, and `contributor` is
@@ -191,10 +189,10 @@ Pull requests are made against `master` and are squash-merged into master.
 
 PRs must:
 
-- make reference to an issue outlining the context
-- update any relevant documentation and include tests
-- add a corresponding entry in the `.changelog` directory using `unclog`, see
-  the section above for more details.
+*   make reference to an issue outlining the context
+*   update any relevant documentation and include tests
+*   add a corresponding entry in the `.changelog` directory using `unclog`, see
+    the section above for more details.
 
 Pull requests should aim to be small and self-contained to facilitate quick
 review and merging. Larger change sets should be broken up across multiple PRs.
@@ -223,56 +221,56 @@ is more appropriate to shepherd the PR through to completion.
 
 Our release process is as follows:
 
-1. Update the [changelog](#changelog) to reflect and summarize all changes in
-   the release. This involves:
-   1. Running `unclog build -u` and copy pasting the output at the top of the
-      `CHANGELOG.md` file, making sure to update the header with the new
-      version.
-   2. Running `unclog release vX.Y.Z` to create a summary of all of the changes
-      in this release.
-   3. Committing the updated `CHANGELOG.md` file and `.changelog` directory to
-      the repo.
+1.  Update the [changelog](#changelog) to reflect and summarize all changes in
+    the release. This involves:
+    1.  Running `unclog build -u` and copy pasting the output at the top of the
+        `CHANGELOG.md` file, making sure to update the header with the new
+        version.
+    2.  Running `unclog release vX.Y.Z` to create a summary of all of the changes
+        in this release.
+    3.  Committing the updated `CHANGELOG.md` file and `.changelog` directory to
+        the repo.
 
-2. Push this to a branch `release/vX.Y.Z` according to the version number of the
-   anticipated release (e.g. `release/v0.18.0`) and open a **draft PR**.
+2.  Push this to a branch `release/vX.Y.Z` according to the version number of the
+    anticipated release (e.g. `release/v0.18.0`) and open a **draft PR**.
 
-3. Bump all relevant versions in the codebase to the new version and push these
-   changes to the release PR. This includes:
+3.  Bump all relevant versions in the codebase to the new version and push these
+    changes to the release PR. This includes:
 
-   1. All `Cargo.toml` files (making sure dependencies' versions are updated
-      too).
-   2. All crates' `lib.rs` files documentation references' `html_root_url`
-      parameters must point to the new version.
-   3. Every reference to Hermes version in the [guide](./guide).
+    1.  All `Cargo.toml` files (making sure dependencies' versions are updated
+        too).
+    2.  All crates' `lib.rs` files documentation references' `html_root_url`
+        parameters must point to the new version.
+    3.  Every reference to Hermes version in the [guide](./guide).
 
-   **Important:** The `ibc-proto` crate version must only be bumped if it has
-   changed since the last release. All other crates are bumped together.
+    **Important:** The `ibc-proto` crate version must only be bumped if it has
+    changed since the last release. All other crates are bumped together.
 
-4. Run `cargo doc --all-features --open` locally to double-check that all the
-   documentation compiles and seems up-to-date and coherent. Fix any potential
-   issues here and push them to the release PR.
+4.  Run `cargo doc --all-features --open` locally to double-check that all the
+    documentation compiles and seems up-to-date and coherent. Fix any potential
+    issues here and push them to the release PR.
 
-5. Mark the PR as **Ready for Review** and incorporate feedback on the release.
+5.  Mark the PR as **Ready for Review** and incorporate feedback on the release.
 
-6. Once approved, merge the PR.
+6.  Once approved, merge the PR.
 
-7. Pull `master` and run the [`release.sh`](./scripts/release.sh) script. If any
-   problem arises, submit a new PR, get it merged to `master` and try again. The
-   reason for not releasing straight from the release branch, and therefore
-   losing the ability to fix publishing problems as they arise, is that we would
-   like the embedded metadata of the published crates, namely the Git commit at
-   which the release was done, to match the Git commit on the `master` branch
-   which will be tagged. [See this article][crates.io-security] for a more
-   in-depth explanation. **Note:** This step requires the appropriate privileges
-   to push crates to [crates.io].
+7.  Pull `master` and run the [`release.sh`](./scripts/release.sh) script. If any
+    problem arises, submit a new PR, get it merged to `master` and try again. The
+    reason for not releasing straight from the release branch, and therefore
+    losing the ability to fix publishing problems as they arise, is that we would
+    like the embedded metadata of the published crates, namely the Git commit at
+    which the release was done, to match the Git commit on the `master` branch
+    which will be tagged. [See this article][crates.io-security] for a more
+    in-depth explanation. **Note:** This step requires the appropriate privileges
+    to push crates to [crates.io].
 
-8. Once all crates have been successfully released, create a signed tag and push
-   it to GitHub: `git tag -s -a vX.Y.Z`. In the tag message, write the version
-   and the link to the corresponding section of the changelog.
+8.  Once all crates have been successfully released, create a signed tag and push
+    it to GitHub: `git tag -s -a vX.Y.Z`. In the tag message, write the version
+    and the link to the corresponding section of the changelog.
 
-9. Once the tag is pushed, wait for the CI bot to create a GitHub release, and
-   update the release description to
-   `[📖 CHANGELOG](https://github.com/informalsystems/ibc-rs/blob/master/CHANGELOG.md#vXYZ)`.
+9.  Once the tag is pushed, wait for the CI bot to create a GitHub release, and
+    update the release description to
+    `[📖 CHANGELOG](https://github.com/informalsystems/ibc-rs/blob/master/CHANGELOG.md#vXYZ)`.
 
 10. Wait an hour or so, and check that the CI job has uploaded the Hermes
     binaries to the release.

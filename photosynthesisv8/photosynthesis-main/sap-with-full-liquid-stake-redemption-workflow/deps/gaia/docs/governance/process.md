@@ -9,12 +9,12 @@
 Several of the numbers involved in governance are parameters and can thus be
 changed by passing a parameter change proposal.
 
-- Minimum deposit: 64 ATOM
-- Maximum deposit period: 14 days
-- Voting period: 14 days
-- Quorum: 40% of participating voting power
-- Pass threshold: 50% of participating voting power
-- Veto threshold: 33.40% of participating voting power
+*   Minimum deposit: 64 ATOM
+*   Maximum deposit period: 14 days
+*   Voting period: 14 days
+*   Quorum: 40% of participating voting power
+*   Pass threshold: 50% of participating voting power
+*   Veto threshold: 33.40% of participating voting power
 
 ## 1. Deposit Period
 
@@ -52,14 +52,14 @@ ends.
 
 ### What do the voting options mean?
 
-1. **Abstain:** The voter wishes to contribute to quorum without voting for or
-   against a proposal.
-2. **Yes:** Approval of the proposal in its current form.
-3. **No:** Disapproval of the proposal in its current form.
-4. **NoWithVeto:** A ‘NoWithVeto’ vote indicates a proposal either (1) is deemed
-   to be spam, i.e., irrelevant to Cosmos Hub, (2) disproportionately infringes
-   on minority interests, or (3) violates or encourages violation of the rules
-   of engagement as currently set out by Cosmos Hub governance.
+1.  **Abstain:** The voter wishes to contribute to quorum without voting for or
+    against a proposal.
+2.  **Yes:** Approval of the proposal in its current form.
+3.  **No:** Disapproval of the proposal in its current form.
+4.  **NoWithVeto:** A ‘NoWithVeto’ vote indicates a proposal either (1) is deemed
+    to be spam, i.e., irrelevant to Cosmos Hub, (2) disproportionately infringes
+    on minority interests, or (3) violates or encourages violation of the rules
+    of engagement as currently set out by Cosmos Hub governance.
 
 As accepted by the community in
 [Proposal 75](https://ipfs.io/ipfs/QmVHVH9WeGy9tTNN9dViqvDn7N79XJJUseKXD1rpyLVckK),
@@ -76,16 +76,16 @@ you do not directly risk your ATOM by using this option.
 
 There are four criteria:
 
-1. Deposit is filled: A minimum deposit of 64 ATOM is required for the proposal
-   to enter the voting period
-   - anyone may contribute to this deposit
-   - the deposit must be reached within 14 days (this is the deposit period)
-2. Quorum is reached: A minimum of 40% of the network's total voting power
-   (staked ATOM) is required to participate
-3. Simple majority of 'Yes' votes: Greater than 50% of the participating voting
-   power must back the 'Yes' vote by the end of the 14-day voting period
-4. Not vetoed: Less than 33.4% of participating voting power must have backed
-   'NoWithVeto' by the end of the 14-day voting period
+1.  Deposit is filled: A minimum deposit of 64 ATOM is required for the proposal
+    to enter the voting period
+    *   anyone may contribute to this deposit
+    *   the deposit must be reached within 14 days (this is the deposit period)
+2.  Quorum is reached: A minimum of 40% of the network's total voting power
+    (staked ATOM) is required to participate
+3.  Simple majority of 'Yes' votes: Greater than 50% of the participating voting
+    power must back the 'Yes' vote by the end of the 14-day voting period
+4.  Not vetoed: Less than 33.4% of participating voting power must have backed
+    'NoWithVeto' by the end of the 14-day voting period
 
 Currently, the criteria for submitting and passing/failing all proposal types is
 the same.
@@ -99,12 +99,12 @@ their deposit amounts.
 
 ### How is voting tallied?
 
-- **Total voting power** refers to all staked ATOM at the end of the 14-day
-  voting period. Liquid ATOMs are not part of the total voting power and thus
-  cannot participate in voting.
-- **Participating voting power** refers to only the ATOM which have been used to
-  cast a vote on a particular proposal. Quorum is set to 40% of the
-  **participating** voting power.
+*   **Total voting power** refers to all staked ATOM at the end of the 14-day
+    voting period. Liquid ATOMs are not part of the total voting power and thus
+    cannot participate in voting.
+*   **Participating voting power** refers to only the ATOM which have been used to
+    cast a vote on a particular proposal. Quorum is set to 40% of the
+    **participating** voting power.
 
 Validators not in the active set can cast a vote, but their voting power
 (including the backing of their delegators) will not count toward the vote if

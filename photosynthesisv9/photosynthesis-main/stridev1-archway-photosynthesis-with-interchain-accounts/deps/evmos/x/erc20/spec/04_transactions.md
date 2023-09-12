@@ -26,15 +26,15 @@ type RegisterCoinProposal struct {
 
 The proposal content stateless validation fails if:
 
-- Title is invalid (length or char)
-- Description is invalid (length or char)
-- Metadata is invalid
-  - Name and Symbol are not blank
-  - Base and Display denominations are valid coin denominations
-  - Base and Display denominations are present in the DenomUnit slice
-  - Base denomination has exponent 0
-  - Denomination units are sorted in ascending order
-  - Denomination units not duplicated
+*   Title is invalid (length or char)
+*   Description is invalid (length or char)
+*   Metadata is invalid
+    *   Name and Symbol are not blank
+    *   Base and Display denominations are valid coin denominations
+    *   Base and Display denominations are present in the DenomUnit slice
+    *   Base denomination has exponent 0
+    *   Denomination units are sorted in ascending order
+    *   Denomination units not duplicated
 
 ## `RegisterERC20Proposal`
 
@@ -55,9 +55,9 @@ type RegisterERC20Proposal struct {
 
 The proposal Content stateless validation fails if:
 
-- Title is invalid (length or char)
-- Description is invalid (length or char)
-- ERC20Addresses is invalid
+*   Title is invalid (length or char)
+*   Description is invalid (length or char)
+*   ERC20Addresses is invalid
 
 ## `MsgConvertCoin`
 
@@ -78,9 +78,9 @@ type MsgConvertCoin struct {
 
 Message stateless validation fails if:
 
-- Coin is invalid (invalid denom or non-positive amount)
-- Receiver hex address is invalid
-- Sender bech32 address is invalid
+*   Coin is invalid (invalid denom or non-positive amount)
+*   Receiver hex address is invalid
+*   Sender bech32 address is invalid
 
 ## `MsgConvertERC20`
 
@@ -102,10 +102,10 @@ type MsgConvertERC20 struct {
 
 Message stateless validation fails if:
 
-- Contract address is invalid
-- Amount is not positive
-- Receiver bech32 address is invalid
-- Sender hex address is invalid
+*   Contract address is invalid
+*   Amount is not positive
+*   Receiver bech32 address is invalid
+*   Sender hex address is invalid
 
 ## `ToggleTokenConversionProposal`
 

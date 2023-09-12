@@ -24,10 +24,10 @@ include:
 
 **Window for being offline without being slashed, in blocks.**
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.slashing.SignedBlocksWindow }}`
-- `cosmoshub-4` default: `0.200000000000000000`
-- `cosmoshub-3` default: `0.200000000000000000`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.slashing.SignedBlocksWindow }}`
+*   `cosmoshub-4` default: `0.200000000000000000`
+*   `cosmoshub-3` default: `0.200000000000000000`
 
 If a validator in the active set is offline for too long, the validator will be
 slashed by [`SlashFractionDowntime`](#SlashFractionDowntime) and temporarily
@@ -93,10 +93,10 @@ That's ~37 hours instead of ~18.5 hours, assuming 7s block times.
 
 **Minimum proportion of blocks signed per window without being slashed.**
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.slashing.MinSignedPerWindow }}`
-- `cosmoshub-4` default: `0.050000000000000000`
-- `cosmoshub-3` default: `0.050000000000000000`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.slashing.MinSignedPerWindow }}`
+*   `cosmoshub-4` default: `0.050000000000000000`
+*   `cosmoshub-3` default: `0.050000000000000000`
 
 If a validator in the active set is offline for too long, the validator will be
 slashed by [`SlashFractionDowntime`](#SlashFractionDowntime) and temporarily
@@ -167,10 +167,10 @@ That's ~17.5 hours instead of ~18.5 hours, assuming 7s block times.
 **The suspension time (aka jail time) for a validator that is offline too long,
 in nanoseconds.**
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.slashing.DowntimeJailDuration }}`
-- `cosmoshub-4` default: `600000000000`
-- `cosmoshub-3` default: `600000000000`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.slashing.DowntimeJailDuration }}`
+*   `cosmoshub-4` default: `600000000000`
+*   `cosmoshub-3` default: `600000000000`
 
 A validator in the active set that's offline for too long, besides being
 slashed, will be temporarily removed from the active set (aka
@@ -204,10 +204,10 @@ staking rewards.
 **Proportion of stake-backing that is bruned for equivocation (aka
 double-signing).**
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.slashing.SlashFractionDoubleSign }}`
-- `cosmoshub-4` default: `0.050000000000000000`
-- `cosmoshub-3` default: `0.050000000000000000`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.slashing.SlashFractionDoubleSign }}`
+*   `cosmoshub-4` default: `0.050000000000000000`
+*   `cosmoshub-3` default: `0.050000000000000000`
 
 A validator proven to have signed two blocks at the same height is considered to
 have committed equivocation, and the system will then permanently burn ("slash")
@@ -237,10 +237,10 @@ operators to ensure that their validators are secure.
 
 **Proportion of stake that is slashed for being offline too long.**
 
-- on-chain value:
-  `{{ $themeConfig.currentParameters.slashing.SlashFractionDowntime }}`
-- `cosmoshub-4` default: `0.000100000000000000`
-- `cosmoshub-3` default: `0.000100000000000000`
+*   on-chain value:
+    `{{ $themeConfig.currentParameters.slashing.SlashFractionDowntime }}`
+*   `cosmoshub-4` default: `0.000100000000000000`
+*   `cosmoshub-3` default: `0.000100000000000000`
 
 If a validator in the active set is offline for too long, the system will
 permanently burn ("slash") that validator's total delegations (aka
@@ -267,8 +267,8 @@ operators to ensure that their validators are online.
 
 ### `MaxEvidenceAge`
 
-- deprecated in `cosmoshub-4`
-- `cosmoshub-3` default: `1814400000000000`
+*   deprecated in `cosmoshub-4`
+*   `cosmoshub-3` default: `1814400000000000`
 
 This parameter was present in `cosmoshub-3`, but was
 [deprecated](https://github.com/cosmos/cosmos-sdk/pull/5952) for `cosmoshub-4`

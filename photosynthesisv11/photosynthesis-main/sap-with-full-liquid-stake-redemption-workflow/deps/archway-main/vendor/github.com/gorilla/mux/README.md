@@ -16,34 +16,34 @@ The name mux stands for "HTTP request multiplexer". Like the standard
 registered routes and calls a handler for the route that matches the URL or
 other conditions. The main features are:
 
-- It implements the `http.Handler` interface so it is compatible with the
-  standard `http.ServeMux`.
-- Requests can be matched based on URL host, path, path prefix, schemes, header
-  and query values, HTTP methods or using custom matchers.
-- URL hosts, paths and query values can have variables with an optional regular
-  expression.
-- Registered URLs can be built, or "reversed", which helps maintaining
-  references to resources.
-- Routes can be used as subrouters: nested routes are only tested if the parent
-  route matches. This is useful to define groups of routes that share common
-  conditions like a host, a path prefix or other repeated attributes. As a
-  bonus, this optimizes request matching.
+*   It implements the `http.Handler` interface so it is compatible with the
+    standard `http.ServeMux`.
+*   Requests can be matched based on URL host, path, path prefix, schemes, header
+    and query values, HTTP methods or using custom matchers.
+*   URL hosts, paths and query values can have variables with an optional regular
+    expression.
+*   Registered URLs can be built, or "reversed", which helps maintaining
+    references to resources.
+*   Routes can be used as subrouters: nested routes are only tested if the parent
+    route matches. This is useful to define groups of routes that share common
+    conditions like a host, a path prefix or other repeated attributes. As a
+    bonus, this optimizes request matching.
 
 ***
 
-- [Install](#install)
-- [Examples](#examples)
-- [Matching Routes](#matching-routes)
-- [Static Files](#static-files)
-- [Serving Single Page Applications](#serving-single-page-applications) (e.g.
-  React, Vue, Ember.js, etc.)
-- [Registered URLs](#registered-urls)
-- [Walking Routes](#walking-routes)
-- [Graceful Shutdown](#graceful-shutdown)
-- [Middleware](#middleware)
-- [Handling CORS Requests](#handling-cors-requests)
-- [Testing Handlers](#testing-handlers)
-- [Full Example](#full-example)
+*   [Install](#install)
+*   [Examples](#examples)
+*   [Matching Routes](#matching-routes)
+*   [Static Files](#static-files)
+*   [Serving Single Page Applications](#serving-single-page-applications) (e.g.
+    React, Vue, Ember.js, etc.)
+*   [Registered URLs](#registered-urls)
+*   [Walking Routes](#walking-routes)
+*   [Graceful Shutdown](#graceful-shutdown)
+*   [Middleware](#middleware)
+*   [Handling CORS Requests](#handling-cors-requests)
+*   [Testing Handlers](#testing-handlers)
+*   [Full Example](#full-example)
 
 ***
 
@@ -354,9 +354,7 @@ url, err := r.Get("article").URL("category", "technology", "id", "42")
 
 ...and the result will be a `url.URL` with the following path:
 
-```
-"/articles/technology/42"
-```
+    "/articles/technology/42"
 
 This also works for host and query value variables:
 
@@ -646,15 +644,15 @@ not* write to `ResponseWriter` if they *are not* going to terminate it.
 intends to make it easier to strictly set the `Access-Control-Allow-Methods`
 response header.
 
-- You will still need to use your own CORS handler to set the other CORS headers
-  such as `Access-Control-Allow-Origin`
-- The middleware will set the `Access-Control-Allow-Methods` header to all the
-  method matchers (e.g.
-  `r.Methods(http.MethodGet, http.MethodPut, http.MethodOptions)` ->
-  `Access-Control-Allow-Methods: GET,PUT,OPTIONS`) on a route
-- If you do not specify any methods, then:
-  > *Important*: there must be an `OPTIONS` method matcher for the middleware to
-  > set the headers.
+*   You will still need to use your own CORS handler to set the other CORS headers
+    such as `Access-Control-Allow-Origin`
+*   The middleware will set the `Access-Control-Allow-Methods` header to all the
+    method matchers (e.g.
+    `r.Methods(http.MethodGet, http.MethodPut, http.MethodOptions)` ->
+    `Access-Control-Allow-Methods: GET,PUT,OPTIONS`) on a route
+*   If you do not specify any methods, then:
+    > *Important*: there must be an `OPTIONS` method matcher for the middleware to
+    > set the headers.
 
 Here is an example of using `CORSMethodMiddleware` along with a custom `OPTIONS`
 handler to set all the required CORS headers:

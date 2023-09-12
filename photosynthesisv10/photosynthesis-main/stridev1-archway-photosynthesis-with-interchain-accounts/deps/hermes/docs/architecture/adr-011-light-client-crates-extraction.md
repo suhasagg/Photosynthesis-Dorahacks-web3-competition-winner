@@ -2,7 +2,7 @@
 
 ## Changelog
 
-- 2022-07-29: Initial draft
+*   2022-07-29: Initial draft
 
 ## Context
 
@@ -28,7 +28,7 @@ pub enum AnyClientState {
 
 The rationale behind the `Any*` enum design choice is described in
 [ADR003 - Dealing with chain-specific datatypes](https://github.com/informalsystems/ibc-rs/blob/master/docs/architecture/adr-003-handler-implementation.md#dealing-with-chain-specific-datatypes)
-\->
+->
 
 > We could alternatively model all chain-specific datatypes as boxed trait
 > objects (`Box<dyn Trait>`), but this approach runs into a lot of limitations
@@ -78,11 +78,11 @@ This ADR proposes to break the circular dependency problem by removing the
 There are a total of 5 light client traits, each associated with an `Any*` enum
 that implements it ->
 
-- `AnyClient` implements `ClientDef`.
-- `AnyClientState` implements `ClientState`.
-- `AnyConsensusState` implements `ConsensusState`.
-- `AnyHeader` implements `Header`.
-- `AnyMisbehaviour` implements `Misbehaviour`.
+*   `AnyClient` implements `ClientDef`.
+*   `AnyClientState` implements `ClientState`.
+*   `AnyConsensusState` implements `ConsensusState`.
+*   `AnyHeader` implements `Header`.
+*   `AnyMisbehaviour` implements `Misbehaviour`.
 
 In order to replace the `Any*` enums with trait objects, these light client
 traits must be object safe. This essentially means that these traits cannot have
@@ -478,14 +478,14 @@ regardless of whether they are included in the registry.
 It is suggested that the proposed changes be split across multiple PRs in the
 following way ->
 
-- Remove `Any*` enums usage from light client implementations and make the light
-  client traits object safe.
-- Move tendermint specific code out of the `ibc` crate and into either the
-  `ibc-relayer` crate or the light client implementation.
-- Remove all `Any*` enums from the `ibc` crate. Pin other workspace crates to
-  stable `ibc` version.
-- Extract the light client implementations into separate crates.
-- Update all workspace crates to use new API.
+*   Remove `Any*` enums usage from light client implementations and make the light
+    client traits object safe.
+*   Move tendermint specific code out of the `ibc` crate and into either the
+    `ibc-relayer` crate or the light client implementation.
+*   Remove all `Any*` enums from the `ibc` crate. Pin other workspace crates to
+    stable `ibc` version.
+*   Extract the light client implementations into separate crates.
+*   Update all workspace crates to use new API.
 
 A long-lived branch may be used to not block development on the modules code in
 the meantime.
@@ -498,40 +498,40 @@ Proposed
 
 ### Positive
 
-- Light client implementations can be hosted in separate crates outside the
-  ibc-rs repo.
-- Light client implementations can be maintained & audited independently,
-  resulting in clearer ownership.
-- The `ibc` crate would be light client agnostic and wouldn't need to be updated
-  to add support for newer light clients.
-- Host chain implementations will be able to choose the light clients they wish
-  to support.
-- Facilitates separation of client-specific code.
+*   Light client implementations can be hosted in separate crates outside the
+    ibc-rs repo.
+*   Light client implementations can be maintained & audited independently,
+    resulting in clearer ownership.
+*   The `ibc` crate would be light client agnostic and wouldn't need to be updated
+    to add support for newer light clients.
+*   Host chain implementations will be able to choose the light clients they wish
+    to support.
+*   Facilitates separation of client-specific code.
 
 ### Negative
 
-- Restrictions due to object safety - associated types cannot be used,
-  supertraits cannot have `Sized` as supertrait, cannot derive common traits
-  (such as `Copy`, `serde::{Serialize, Deserialize}`, etc.) on types containing
-  trait objects, etc.
-- Possible performance hit due to heap allocations and dynamic dispatch.
+*   Restrictions due to object safety - associated types cannot be used,
+    supertraits cannot have `Sized` as supertrait, cannot derive common traits
+    (such as `Copy`, `serde::{Serialize, Deserialize}`, etc.) on types containing
+    trait objects, etc.
+*   Possible performance hit due to heap allocations and dynamic dispatch.
 
 ### Neutral
 
-- Client registry must be maintained and kept up-to-date, although host
-  implementations are not forced to rely on the registry to add support for
-  light clients that are not in the registry.
+*   Client registry must be maintained and kept up-to-date, although host
+    implementations are not forced to rely on the registry to add support for
+    light clients that are not in the registry.
 
 ## References
 
-- PRs for removing `Any*` enums:
-  - Remove all occurences of Any\* enums from light clients
-    ([PR #2332](https://github.com/informalsystems/ibc-rs/pull/2332))
-  - Remove Any\* enums
-    ([PR #2338](https://github.com/informalsystems/ibc-rs/pull/2338))
-- Experimental PR for extracting `ibc-base` crate
-  ([PR #2327](https://github.com/informalsystems/ibc-rs/pull/2327))
-- Rationale behind design choice for `Any*` enums
-  ([ADR003: Dealing with chain-specific datatypes](https://github.com/informalsystems/ibc-rs/blob/master/docs/architecture/adr-003-handler-implementation.md#dealing-with-chain-specific-datatypes))
-- `erased-serde`:
-  [How it works?](https://github.com/dtolnay/erased-serde/blob/master/explanation/main.rs)
+*   PRs for removing `Any*` enums:
+    *   Remove all occurences of Any\* enums from light clients
+        ([PR #2332](https://github.com/informalsystems/ibc-rs/pull/2332))
+    *   Remove Any\* enums
+        ([PR #2338](https://github.com/informalsystems/ibc-rs/pull/2338))
+*   Experimental PR for extracting `ibc-base` crate
+    ([PR #2327](https://github.com/informalsystems/ibc-rs/pull/2327))
+*   Rationale behind design choice for `Any*` enums
+    ([ADR003: Dealing with chain-specific datatypes](https://github.com/informalsystems/ibc-rs/blob/master/docs/architecture/adr-003-handler-implementation.md#dealing-with-chain-specific-datatypes))
+*   `erased-serde`:
+    [How it works?](https://github.com/dtolnay/erased-serde/blob/master/explanation/main.rs)

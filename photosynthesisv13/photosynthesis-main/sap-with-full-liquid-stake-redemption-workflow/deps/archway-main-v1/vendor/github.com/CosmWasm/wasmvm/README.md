@@ -43,9 +43,9 @@ which for example excludes all 32 bit systems.
 | Linux (glibc)   | aarch64 | shared  | ✅​libwasmvm.aarch64.so      |                                                                                                                                        |
 | Linux (glibc)   | aarch64 | static  | 🚫​                          |                                                                                                                                        |
 | Linux (musl)    | x86\_64  | shared  | 🚫​                          | Possible but not needed                                                                                                                |
-| Linux (musl)    | x86\_64  | static  | ✅​libwasmvm_muslc.x86\_64.a  |                                                                                                                                        |
+| Linux (musl)    | x86\_64  | static  | ✅​libwasmvm\_muslc.x86\_64.a  |                                                                                                                                        |
 | Linux (musl)    | aarch64 | shared  | 🚫​                          | Possible but not needed                                                                                                                |
-| Linux (musl)    | aarch64 | static  | ✅​libwasmvm_muslc.aarch64.a |                                                                                                                                        |
+| Linux (musl)    | aarch64 | static  | ✅​libwasmvm\_muslc.aarch64.a |                                                                                                                                        |
 | macOS           | x86\_64  | shared  | ✅​libwasmvm.dylib           | Fat/universal library with multiple archs ([#294])                                                                                     |
 | macOS           | x86\_64  | static  | 🚫​                          |                                                                                                                                        |
 | macOS           | aarch64 | shared  | ✅​libwasmvm.dylib           | Fat/universal library with multiple archs ([#294])                                                                                     |
@@ -77,9 +77,9 @@ There are two halfs to this code - go and rust. The first step is to ensure that
 there is a proper dll built for your platform. This should be `api/libwasmvm.X`,
 where X is:
 
-- `so` for Linux systems
-- `dylib` for MacOS
-- `dll` for Windows - Not currently supported due to upstream dependency
+*   `so` for Linux systems
+*   `dylib` for MacOS
+*   `dll` for Windows - Not currently supported due to upstream dependency
 
 If this is present, then `make test` will run the Go test suite and you can
 import this code freely. If it is not present you will have to build it for your
@@ -95,7 +95,7 @@ can just use `rustup` to install all this with no problems.
 We fix the Rust version in the CI and build containers, so the following should
 be in sync:
 
-- `.circleci/config.yml`
-- `builders/Dockerfile.*`
+*   `.circleci/config.yml`
+*   `builders/Dockerfile.*`
 
 For development you should be able to use any reasonably up-to-date Rust stable.

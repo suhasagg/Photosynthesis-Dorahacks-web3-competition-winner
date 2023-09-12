@@ -1,6 +1,8 @@
 ***
 
-## order: 2&#xA;title: Running a Validator
+order: 2
+title: Running a Validator
+--------------------------
 
 # Running a Validator
 
@@ -83,7 +85,7 @@ included in the command the field will default to empty (`--moniker` defaults to
 the machine name) if the field has never been set or remain the same if it has
 been set in the past.
 
-The \<key_name> specifies which validator you are editing. If you choose to not
+The \<key\_name> specifies which validator you are editing. If you choose to not
 include some of the flags below, remember that the --from flag **must** be
 included to identify the validator to update.
 
@@ -113,10 +115,10 @@ your validator is up and running. :::
 
 **Note**: The `commission-rate` value must adhere to the following rules:
 
-- Must be between 0 and the validator's `commission-max-rate`
-- Must not exceed the validator's `commission-max-change-rate` which is maximum
-  % point change rate **per day**. In other words, a validator can only change
-  its commission once per day and within `commission-max-change-rate` bounds.
+*   Must be between 0 and the validator's `commission-max-rate`
+*   Must not exceed the validator's `commission-max-change-rate` which is maximum
+    % point change rate **per day**. In other words, a validator can only change
+    its commission once per day and within `commission-max-change-rate` bounds.
 
 ## View Validator Description
 

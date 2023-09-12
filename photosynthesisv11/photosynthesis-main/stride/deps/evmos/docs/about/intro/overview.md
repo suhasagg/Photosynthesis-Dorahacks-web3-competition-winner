@@ -24,29 +24,29 @@ Blockchain Communication Protocol (IBC).
 
 Here’s a glance at some of the key features of Evmos:
 
-- Web3 and EVM compatibility
-- High throughput via
-  [Tendermint Core](https://github.com/tendermint/tendermint)
-- Horizontal scalability via [IBC](https://cosmos.network/ibc)
-- Fast transaction finality
+*   Web3 and EVM compatibility
+*   High throughput via
+    [Tendermint Core](https://github.com/tendermint/tendermint)
+*   Horizontal scalability via [IBC](https://cosmos.network/ibc)
+*   Fast transaction finality
 
 Evmos enables these key features by:
 
-- Implementing Tendermint Core's Application Blockchain Interface
-  ([ABCI](https://docs.tendermint.com/master/spec/abci/)) to manage the
-  blockchain
-- Leveraging
-  [modules](https://docs.cosmos.network/main/building-modules/intro.html) and
-  other mechanisms implemented by the
-  [Cosmos SDK](https://docs.cosmos.network/).
-- Utilizing [`geth`](https://github.com/ethereum/go-ethereum) as a library to
-  promote code reuse and improve maintainability.
-- Exposing a fully compatible Web3
-  [JSON-RPC](./../../developers/json-rpc/server.md) layer for interacting with
-  existing Ethereum clients and tooling
-  ([Metamask](./../../users/wallets/metamask.md),
-  [Remix](./../../developers/tools/remix.md),
-  [Truffle](./../../developers/tools/truffle.md), etc).
+*   Implementing Tendermint Core's Application Blockchain Interface
+    ([ABCI](https://docs.tendermint.com/master/spec/abci/)) to manage the
+    blockchain
+*   Leveraging
+    [modules](https://docs.cosmos.network/main/building-modules/intro.html) and
+    other mechanisms implemented by the
+    [Cosmos SDK](https://docs.cosmos.network/).
+*   Utilizing [`geth`](https://github.com/ethereum/go-ethereum) as a library to
+    promote code reuse and improve maintainability.
+*   Exposing a fully compatible Web3
+    [JSON-RPC](./../../developers/json-rpc/server.md) layer for interacting with
+    existing Ethereum clients and tooling
+    ([Metamask](./../../users/wallets/metamask.md),
+    [Remix](./../../developers/tools/remix.md),
+    [Truffle](./../../developers/tools/truffle.md), etc).
 
 The sum of these features allows developers to leverage existing Ethereum
 ecosystem tooling and software to seamlessly deploy smart contracts which

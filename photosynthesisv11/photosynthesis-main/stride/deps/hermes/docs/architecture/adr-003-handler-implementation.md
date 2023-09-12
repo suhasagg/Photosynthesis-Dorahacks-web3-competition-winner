@@ -2,10 +2,10 @@
 
 ## Changelog
 
-- 2020-08-06: Initial proposal
-- 2020-08-10: Rename Handler to Message Processor
-- 2020-08-14: Revamp definition of chain-specific messages, readers and keepers
-- 2021-12-29: Consolidate ADR with the implementation.
+*   2020-08-06: Initial proposal
+*   2020-08-10: Rename Handler to Message Processor
+*   2020-08-14: Revamp definition of chain-specific messages, readers and keepers
+*   2021-12-29: Consolidate ADR with the implementation.
 
 ## Context
 
@@ -645,14 +645,14 @@ Proposed
 
 ### Positive
 
-- clear separation of message handlers logic (processing and persistence logic)
-  from the store
-- provide support to mock the context of a handler and test the handler
-  functionality in isolation
+*   clear separation of message handlers logic (processing and persistence logic)
+    from the store
+*   provide support to mock the context of a handler and test the handler
+    functionality in isolation
 
 ### Negative
 
-- data type system around submodule ICS02 is relatively complex
+*   data type system around submodule ICS02 is relatively complex
 
 ### Neutral
 

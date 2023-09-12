@@ -36,15 +36,13 @@ moniker = "<your_custom_moniker>"
 최소 수수료보다 낮은 트랜잭션을 거절하는 스팸 방지 메커니즘을 활성화 하시려면
 `~/.gaia/config/gaiad.toml` 파일을 변경하시면 됩니다:
 
-```
-# This is a TOML config file.
-# For more information, see https://github.com/toml-lang/toml
+    # This is a TOML config file.
+    # For more information, see https://github.com/toml-lang/toml
 
-##### main base config options #####
+    ##### main base config options #####
 
-# Validators reject any tx from the mempool with less than the minimum fee per gas.
-minimum_fees = ""
-```
+    # Validators reject any tx from the mempool with less than the minimum fee per gas.
+    minimum_fees = ""
 
 당신의 풀노드가 활성화 되었습니다! [제네시스와 시드](#genesis-seeds)로 넘어가주
 세요.

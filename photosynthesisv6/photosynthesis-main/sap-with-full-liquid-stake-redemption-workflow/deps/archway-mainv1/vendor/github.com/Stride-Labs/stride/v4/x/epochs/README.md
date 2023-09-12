@@ -1,6 +1,9 @@
 ***
 
-## title: "Epochs"&#xA;excerpt: ""&#xA;category: 6392913957c533007128548e
+title: "Epochs"
+excerpt: ""
+category: 6392913957c533007128548e
+----------------------------------
 
 <!--
 order: 0
@@ -22,13 +25,13 @@ events.
 
 ## Contents
 
-1. **[Concepts](#concepts)**
-2. **[State](#state)**
-3. **[Events](#events)**
-4. **[Keeper](#keeper)**
-5. **[Hooks](#hooks)**
-6. **[Queries](#queries)**
-7. **[Future Improvements](#future-improvements)**
+1.  **[Concepts](#concepts)**
+2.  **[State](#state)**
+3.  **[Events](#events)**
+4.  **[Keeper](#keeper)**
+5.  **[Hooks](#hooks)**
+6.  **[Queries](#queries)**
+7.  **[Future Improvements](#future-improvements)**
 
 ## Concepts
 
@@ -46,12 +49,12 @@ will be the `end_time` of the previous epoch.
 
 Stride uses three epoch identifiers as found in `x/epochs/genesis.go`
 
-1. `DAY_EPOCH`: this identifies an epoch that lasts 24 hours.
-2. `STRIDE_EPOCH`: this identifies an epoch that lasts 5 minutes on local mode
-   tesnet (although this may be changed) and longer on public testnet and
-   mainnet, and is used in the `x/stakeibc/` module as a time interval in
-   accordance with which the Stride app chain performs certain functions, such
-   as autocompound stakig rewards.
+1.  `DAY_EPOCH`: this identifies an epoch that lasts 24 hours.
+2.  `STRIDE_EPOCH`: this identifies an epoch that lasts 5 minutes on local mode
+    tesnet (although this may be changed) and longer on public testnet and
+    mainnet, and is used in the `x/stakeibc/` module as a time interval in
+    accordance with which the Stride app chain performs certain functions, such
+    as autocompound stakig rewards.
 
 ## State
 
@@ -91,14 +94,14 @@ message EpochInfo {
 `current_epoch_start_time`, `epoch_counting_started`,
 `current_epoch_start_height`.
 
-1. `identifier` keeps epoch identification string.
-2. `start_time` keeps epoch counting start time, if block time passes
-   `start_time`, `epoch_counting_started` is set.
-3. `duration` keeps target epoch duration.
-4. `current_epoch` keeps current active epoch number.
-5. `current_epoch_start_time` keeps the start time of current epoch.
-6. `epoch_number` is counted only when `epoch_counting_started` flag is set.
-7. `current_epoch_start_height` keeps the start block height of current epoch.
+1.  `identifier` keeps epoch identification string.
+2.  `start_time` keeps epoch counting start time, if block time passes
+    `start_time`, `epoch_counting_started` is set.
+3.  `duration` keeps target epoch duration.
+4.  `current_epoch` keeps current active epoch number.
+5.  `current_epoch_start_time` keeps the start time of current epoch.
+6.  `epoch_number` is counted only when `epoch_counting_started` flag is set.
+7.  `current_epoch_start_height` keeps the start block height of current epoch.
 
 ***
 
@@ -110,14 +113,14 @@ The `epochs` module emits the following events:
 
 | Type        | Attribute Key | Attribute Value |
 | ----------- | ------------- | --------------- |
-| epoch_start | epoch_number  | {epoch_number}  |
-| epoch_start | start_time    | {start_time}    |
+| epoch\_start | epoch\_number  | {epoch\_number}  |
+| epoch\_start | start\_time    | {start\_time}    |
 
 ### EndBlocker
 
 | Type      | Attribute Key | Attribute Value |
 | --------- | ------------- | --------------- |
-| epoch_end | epoch_number  | {epoch_number}  |
+| epoch\_end | epoch\_number  | {epoch\_number}  |
 
 ## Keeper
 
@@ -154,10 +157,10 @@ The `BeforeEpochStart` hook does different things depending on the identifier.
 
 If in a `day` identifier it:
 
-1. begins unbondings
-2. sweeps unbonded tokens to the redemption account
-3. cleans up old records
-4. creates empty epoch unbonding records for the next day
+1.  begins unbondings
+2.  sweeps unbonded tokens to the redemption account
+3.  cleans up old records
+4.  creates empty epoch unbonding records for the next day
 
 If in a `stride_epoch` identifier it: 5. creates and deposits records on each
 host zone 6. sets withdrawal addresses 7. updates redemption rates (if the epoch
@@ -196,9 +199,9 @@ service Query {
 
 In current design each epoch should be at least 2 blocks as start block should
 be different from endblock. Because of this, each epoch time will be
-`max(blocks_time x 2, epoch_duration)`. If epoch_duration is set to `1s`, and
+`max(blocks_time x 2, epoch_duration)`. If epoch\_duration is set to `1s`, and
 `block_time` is `5s`, actual epoch time should be `10s`. We definitely recommend
-configure epoch_duration as more than 2x block_time, to use this module
+configure epoch\_duration as more than 2x block\_time, to use this module
 correctly. If you enforce to set it to 1s, it's same as 10s - could make module
 logic invalid.
 

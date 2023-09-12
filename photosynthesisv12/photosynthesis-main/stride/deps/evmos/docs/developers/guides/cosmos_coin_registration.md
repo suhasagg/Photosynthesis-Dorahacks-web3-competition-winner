@@ -12,10 +12,10 @@ Registration is? You're in the right place if you want to add functionality to
 convert a native Cosmos Coin to an ERC-20 token representation. If an ERC-20
 contract corresponding to your token already exists, and you want to add
 functionality to convert the ERC-20 token to a native Cosmos Coin denomination,
-check out [ERC-20 Registration](./erc20\_registration.md) instead.
+check out [ERC-20 Registration](./erc20_registration.md) instead.
 
 Still confused? Learn more about the differences
-[here](../../../x/erc20/spec/01\_concepts.md). :::
+[here](../../../x/erc20/spec/01_concepts.md). :::
 
 The ERC-20 Module (also known as `x/erc20`) allows users to instantly convert
 [ERC-20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20) tokens
@@ -27,8 +27,8 @@ integrate with Evmos and the Cosmos ecosystem. Using the module, developers can
 build smart contracts on Evmos and use the generated ERC-20 tokens for other
 [applications on the Cosmos ecosystem](https://mapofzones.com), such as:
 
-- earning $OSMO staking rewards
-- taking part in governance proposals by voting with $ATOM
+*   earning $OSMO staking rewards
+*   taking part in governance proposals by voting with $ATOM
 
 Registering a native Cosmos Coin means registering a new mapping between a
 Cosmos Coin denomination and a new ERC-20 token contract, also known as a Token
@@ -46,15 +46,15 @@ To register a Cosmos Coin, consider the following stages:
 
 The following topics must be addressed when drafting a Cosmos Coin Proposal:
 
-1. Provide the profile of the person(s)/entity making the proposal.
+1.  Provide the profile of the person(s)/entity making the proposal.
 
-   Who are you? What is your involvement in Cosmos and/or other blockchain
-   networks? If you are working with a team, who are the team members involved
-   and what is their relevant experience? What is the mission statement of your
-   organization or business? Do you have a website? Showcase some work you've
-   done and some proof of who you are.
+    Who are you? What is your involvement in Cosmos and/or other blockchain
+    networks? If you are working with a team, who are the team members involved
+    and what is their relevant experience? What is the mission statement of your
+    organization or business? Do you have a website? Showcase some work you've
+    done and some proof of who you are.
 
-2. Promote understanding of the ERC-20 Module.
+2.  Promote understanding of the ERC-20 Module.
 
 Make sure to mention the original
 [blog post](https://medium.com/evmos/introducing-evmos-erc20-module-f40a61e05273)
@@ -62,7 +62,7 @@ that introduced the ERC-20 Module, along with a brief explanation of what the
 ERC-20 Module does. It's also a good idea to link the
 [ERC-20 Module documentation](https://docs.evmos.org/modules/erc20/)!
 
-3. Describe how ERC-20 Module changes will be made.
+3.  Describe how ERC-20 Module changes will be made.
 
 Give a breakdown of the proposal's payload, and explain in layman terms what the
 proposal will do if it passes. Detail precautions taken during contract and
@@ -225,9 +225,9 @@ At this point you'll want to track which validator has voted and which has not.
 You'll want to re-engage directly with top stake-holders, ie. the
 highest-ranking validator operators, to ensure that:
 
-1. they are aware of your proposal;
-2. they can ask you any questions about your proposal; and
-3. they are prepared to vote.
+1.  they are aware of your proposal;
+2.  they can ask you any questions about your proposal; and
+3.  they are prepared to vote.
 
 Remember that any voter may change their vote at any time before the voting
 period ends. That historically doesn't happen often, but there may be an

@@ -2,14 +2,14 @@
 
 ## TL;DR
 
-- Tool to manage local gaiad instances - no Docker needed.
-- `scripts/gm/bin/gm install` to install it. Follow the instructions there for
-  dependencies.
-- `gm start` to start the nodes specified in the configuration.
-- Config file is in `$HOME/.gm/gm.toml` play around and add more nodes.
-- Tab completion is pretty good, use it! Or run `gm` by itself for help.
-- Pre-1.0 warning: Got a shell error?
-  [Raise an issue!](https://github.com/informalsystems/ibc-rs/issues/)
+*   Tool to manage local gaiad instances - no Docker needed.
+*   `scripts/gm/bin/gm install` to install it. Follow the instructions there for
+    dependencies.
+*   `gm start` to start the nodes specified in the configuration.
+*   Config file is in `$HOME/.gm/gm.toml` play around and add more nodes.
+*   Tab completion is pretty good, use it! Or run `gm` by itself for help.
+*   Pre-1.0 warning: Got a shell error?
+    [Raise an issue!](https://github.com/informalsystems/ibc-rs/issues/)
 
 ## Overview
 
@@ -18,27 +18,27 @@ Gaiad Manager (`gm` from now on) is an easily configurable command-line tool
 
 Typical problems running multiple `gaiad` instances involve:
 
-- Identifying binaries and configurations for startup and nodes on the system
-  for shutdown.
-- Managing port allocations on the local machine.
-- Copying and setting up configurations among nodes on the same network.
-- Managing `hermes` configuration for IBC.
+*   Identifying binaries and configurations for startup and nodes on the system
+    for shutdown.
+*   Managing port allocations on the local machine.
+*   Copying and setting up configurations among nodes on the same network.
+*   Managing `hermes` configuration for IBC.
 
 `gm` solves this by using a unified configuration file that describes the nodes
 and their relationship and automating configuration updates.
 
 ## Requirements
 
-- Bourne shell (`sh`)
-- [`sconfig`](https://github.com/freshautomations/sconfig/releases) and
-  [`stoml`](https://github.com/freshautomations/stoml/releases) installed in
-  your PATH (put them in `/usr/local/bin`)
-- `sed`, `tr` (trying to remove these in the future)
-- For shell-completion Bourne Again Shell (`bash`) for the local user
+*   Bourne shell (`sh`)
+*   [`sconfig`](https://github.com/freshautomations/sconfig/releases) and
+    [`stoml`](https://github.com/freshautomations/stoml/releases) installed in
+    your PATH (put them in `/usr/local/bin`)
+*   `sed`, `tr` (trying to remove these in the future)
+*   For shell-completion Bourne Again Shell (`bash`) for the local user
 
 ## How to run
 
-1. Install the dependencies.
+1.  Install the dependencies.
 
 On MacOS:
 
@@ -58,7 +58,7 @@ chmod 755 /usr/local/bin/sconfig
 chmod 755 /usr/local/bin/stoml
 ```
 
-2. Install `gm`
+2.  Install `gm`
 
 ```bash
 git clone https://github.com/informal/ibc-rs
@@ -68,11 +68,11 @@ ibc-rs/scripts/gm/bin/gm install
 Alternatively, you can create the folder `$HOME/.gm/bin` and copy the files from
 `scripts/gm/bin` in there. The rest is just fluff.
 
-3. Activate `gm`
+3.  Activate `gm`
 
-- Add `source $HOME/.gm/bin/shell-support` to a file that executes when a new
-  terminal window comes up (`$HOME/.bash_profile` or `$HOME/.bashrc`)
-- (Optional) Enable auto-completion On MacOS:
+*   Add `source $HOME/.gm/bin/shell-support` to a file that executes when a new
+    terminal window comes up (`$HOME/.bash_profile` or `$HOME/.bashrc`)
+*   (Optional) Enable auto-completion On MacOS:
 
 ```bash
 # Note: zsh is the default shell on MacOS, so no need to run this unless you explicitly use bash
@@ -81,11 +81,9 @@ brew install bash-completion
 
 On Linux:
 
-```
-apt install bash-completion || yum install bash-completion
-```
+    apt install bash-completion || yum install bash-completion
 
-- Restart your terminal
+*   Restart your terminal
 
 Note: The `shell-support` script allows bash-completion as well as creating a
 `gm` alias, so you don't need to add more entries to your PATH environment
@@ -126,20 +124,20 @@ wallet mnemonics.
 
 **Entries**:
 
-- `config` - The node configuration folder. If the node is a full-node, the
-  genesis file was copied from a validator config. The persistent_peers section
-  is automatically managed if the node has the `auto_maintain_config` parameter
-  enabled in `gm.toml`.
-- `data` - The data folder.
-- `keyring-test` - the keyring folder as defined by `gaiad testnet` with the
-  "test" keyring-backend.
-- `validator_seed.json` - the validator node's signing and wallet key.
-- `wallet_seed.json` - an extra wallet mnemonic defined on validator nodes with
-  some tokens for developer use.
-- `pid` - the file that contains the process ID of the running node. (a la
-  `/var/run`) Use `gm status` to see.
-- `log` - the log file that contains the output of the running node. Use
-  `gm log <node>` to see.
+*   `config` - The node configuration folder. If the node is a full-node, the
+    genesis file was copied from a validator config. The persistent\_peers section
+    is automatically managed if the node has the `auto_maintain_config` parameter
+    enabled in `gm.toml`.
+*   `data` - The data folder.
+*   `keyring-test` - the keyring folder as defined by `gaiad testnet` with the
+    "test" keyring-backend.
+*   `validator_seed.json` - the validator node's signing and wallet key.
+*   `wallet_seed.json` - an extra wallet mnemonic defined on validator nodes with
+    some tokens for developer use.
+*   `pid` - the file that contains the process ID of the running node. (a la
+    `/var/run`) Use `gm status` to see.
+*   `log` - the log file that contains the output of the running node. Use
+    `gm log <node>` to see.
 
 This setup allows developers to run a node outside of `gm` just by pointing the
 `gaiad --home-dir` to the folder.
@@ -149,27 +147,23 @@ This setup allows developers to run a node outside of `gm` just by pointing the
 Ports are defined by the `ports_start_at` parameter which will be the first port
 assigned. Port assignment is as follows:
 
-```
-| name            | port redirection   |
-|=================|====================|
-| RPC (26657)     | ports_start_at + 0 |
-| App (1317)      | ports_start_at + 1 |
-| GRPC (9091      | ports_start_at + 2 |
-| P2P (26656)     | ports_start_at + 3 |
-| PPROF (6060)    | ports_start_at + 4 |
-| GRPC-WEB (9091) | ports_start_at + 5 |
-```
+    | name            | port redirection   |
+    |=================|====================|
+    | RPC (26657)     | ports_start_at + 0 |
+    | App (1317)      | ports_start_at + 1 |
+    | GRPC (9091      | ports_start_at + 2 |
+    | P2P (26656)     | ports_start_at + 3 |
+    | PPROF (6060)    | ports_start_at + 4 |
+    | GRPC-WEB (9091) | ports_start_at + 5 |
 
 Example output of `gm ports` command when `node4.ports_start_at=27050`:
 
-```
-node4 RPC  : http://localhost:27050
-node4 APP  : http://localhost:27051
-node4 GRPC : http://localhost:27052
-node4 P2P  : http://localhost:27053
-node4 PPROF: http://localhost:27054
-node4 GRPCW: http://localhost:27055
-```
+    node4 RPC  : http://localhost:27050
+    node4 APP  : http://localhost:27051
+    node4 GRPC : http://localhost:27052
+    node4 P2P  : http://localhost:27053
+    node4 PPROF: http://localhost:27054
+    node4 GRPCW: http://localhost:27055
 
 Note: The GRPC-Web port was recently introduced (after gaiad v4.2.1). It will be
 ignored in earlier versions.
@@ -211,27 +205,27 @@ $ hermes create connection --a-chain ibc-0 --b-chain ibc-1
 
 ## Tribal knowledge (things they don't tell you)
 
-- the user is welcome to create additional nodes outside the scope of `gm` on
-  the local machine but `gm` will only manage nodes that are added to the
-  configuration file.
-- one quirk of the underlying tools is that if global variables are set, you
-  can't unset them locally: empty values in a node configuration will revert
-  back to the global setting.
-- The shortest node definition is a named subsection like this `[mynode1]`. Ths
-  inherently defines the following things:
-  - this node is a validator
-  - the chain_id of the network is `mynode1`
-  - a wallet is generated with extra tokens that can be used by the developer
-    (or by hermes)
-- If you want to create a full-node, you have to define the
-  `network="myvalidator"` option in the node configuration. If you do, the
-  following things are inherently defined:
-  - the node is connected to a validator called `myvalidator`
-  - the `genesis.json` file is copied from that validator and the
-    `persistent_peers` section is updated to point to the validator
-  - if Hermes is pointed to this node in the configuration (by adding the
-    `add_to_hermes=true` option), Hermes will get the wallet details from the
-    validator node and use that wallet for transactions
+*   the user is welcome to create additional nodes outside the scope of `gm` on
+    the local machine but `gm` will only manage nodes that are added to the
+    configuration file.
+*   one quirk of the underlying tools is that if global variables are set, you
+    can't unset them locally: empty values in a node configuration will revert
+    back to the global setting.
+*   The shortest node definition is a named subsection like this `[mynode1]`. Ths
+    inherently defines the following things:
+    *   this node is a validator
+    *   the chain\_id of the network is `mynode1`
+    *   a wallet is generated with extra tokens that can be used by the developer
+        (or by hermes)
+*   If you want to create a full-node, you have to define the
+    `network="myvalidator"` option in the node configuration. If you do, the
+    following things are inherently defined:
+    *   the node is connected to a validator called `myvalidator`
+    *   the `genesis.json` file is copied from that validator and the
+        `persistent_peers` section is updated to point to the validator
+    *   if Hermes is pointed to this node in the configuration (by adding the
+        `add_to_hermes=true` option), Hermes will get the wallet details from the
+        validator node and use that wallet for transactions
 
 ## Execution manual
 
@@ -407,11 +401,11 @@ gm hermes cc
 
 This will
 
-- create the node configuration and start all nodes
-- generate the keys for hermes
-- generate the config for hermes
-- print the `create client` commands for a full-mesh connection among the IBC
-  node networks.
+*   create the node configuration and start all nodes
+*   generate the keys for hermes
+*   generate the config for hermes
+*   print the `create client` commands for a full-mesh connection among the IBC
+    node networks.
 
 Pick and choose the connections from the list that you want to create or run
 `gm hermes cc --exec` to run all the commands.

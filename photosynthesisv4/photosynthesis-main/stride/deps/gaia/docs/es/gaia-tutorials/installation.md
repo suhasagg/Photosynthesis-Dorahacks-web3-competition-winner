@@ -39,19 +39,15 @@ cd gaia && make install
 Si este comando falla a causa del siguiente mensaje de error, es posible que ya
 haya establecido `LDFLAGS` antes de ejecutar este paso.
 
-```
-# github.com/cosmos/gaia/cmd/gaiad
-flag provided but not defined: -L
-usage: link [options] main.o
-...
-make: *** [install] Error 2
-```
+    # github.com/cosmos/gaia/cmd/gaiad
+    flag provided but not defined: -L
+    usage: link [options] main.o
+    ...
+    make: *** [install] Error 2
 
 Elimine esta variable de entorno e inténtelo de nuevo.
 
-```
-LDFLAGS="" make install
-```
+    LDFLAGS="" make install
 
 > *NOTA*: Si aún tiene problemas en este paso, por favor compruebe que tiene
 > instalada la última versión estable de GO.
@@ -96,11 +92,11 @@ que tengamos un sistema binario reproducible.**
 Para probar cualquier cambio hecho en el SDK o Tendermint, se debe agregar una
 cláusula de `replace` en `go.mod` proporcionando la ruta de entrada correcta.
 
-- Realice los cambios apropiados
-- Añada `replace github.com/cosmos/cosmos-sdk => /ruta/a/clon/cosmos-sdk` en
-  `go.mod`
-- Ejecute `make clean install` o `make clean build`
-- Compruebe sus cambios
+*   Realice los cambios apropiados
+*   Añada `replace github.com/cosmos/cosmos-sdk => /ruta/a/clon/cosmos-sdk` en
+    `go.mod`
+*   Ejecute `make clean install` o `make clean build`
+*   Compruebe sus cambios
 
 ## Siguiente
 

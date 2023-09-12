@@ -15,12 +15,12 @@ genesis airdrop for the EVMOS token to Cosmos Hub, Osmosis and Ethereum users.
 
 The Rektdrop is the first airdrop that:
 
-- Implements the [gasdrop](https://www.sunnya97.com/blog/gasdrop) mechanism by
-  Sunny Aggarwal
-- Covers the most number of chains and applications involved in an airdrop
-- Airdrops to bridge users
-- Includes reparations for users in exploits and negative market externalities
-  (i.e. MEV)
+*   Implements the [gasdrop](https://www.sunnya97.com/blog/gasdrop) mechanism by
+    Sunny Aggarwal
+*   Covers the most number of chains and applications involved in an airdrop
+*   Airdrops to bridge users
+*   Includes reparations for users in exploits and negative market externalities
+    (i.e. MEV)
 
 The snapshot of the airdrop was on **November 25th, 2021 at 19:00 UTC**
 

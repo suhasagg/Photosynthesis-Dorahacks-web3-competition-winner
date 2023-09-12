@@ -40,13 +40,13 @@ larger than 16 MB, but otherwise there are no restrictions.
 [Snapshot metadata](https://docs.tendermint.com/master/spec/abci/abci.html#snapshot),
 exchanged via ABCI and P2P, contains the following fields:
 
-- `height` (`uint64`): height at which the snapshot was taken
-- `format` (`uint32`): arbitrary application-specific format identifier (eg.
-  version)
-- `chunks` (`uint32`): number of binary chunks in the snapshot
-- `hash` (`bytes`): arbitrary snapshot hash for comparing snapshots across nodes
-- `metadata` (`bytes`): arbitrary binary snapshot metadata for use by
-  applications
+*   `height` (`uint64`): height at which the snapshot was taken
+*   `format` (`uint32`): arbitrary application-specific format identifier (eg.
+    version)
+*   `chunks` (`uint32`): number of binary chunks in the snapshot
+*   `hash` (`bytes`): arbitrary snapshot hash for comparing snapshots across nodes
+*   `metadata` (`bytes`): arbitrary binary snapshot metadata for use by
+    applications
 
 The `format` field allows applications to change their snapshot format in a
 backwards-compatible manner, by providing snapshots in multiple formats, and
@@ -77,10 +77,10 @@ When a peer is attempting to state sync, an existing Tendermint node will call
 the following ABCI methods on the application to provide snapshot data to this
 peer:
 
-- [`ListSnapshots`](https://docs.tendermint.com/master/spec/abci/abci.html#listsnapshots):
-  returns a list of available snapshots, with metadata
-- [`LoadSnapshotChunk`](https://docs.tendermint.com/master/spec/abci/abci.html#loadsnapshotchunk):
-  returns binary chunk data
+*   [`ListSnapshots`](https://docs.tendermint.com/master/spec/abci/abci.html#listsnapshots):
+    returns a list of available snapshots, with metadata
+*   [`LoadSnapshotChunk`](https://docs.tendermint.com/master/spec/abci/abci.html#loadsnapshotchunk):
+    returns binary chunk data
 
 Snapshots should typically be generated at regular intervals rather than
 on-demand: this improves state sync performance, since snapshot generation can
@@ -92,31 +92,31 @@ while a node is restoring it.
 It is entirely up to the application to decide how to take snapshots, but it
 should strive to satisfy the following guarantees:
 
-- **Asynchronous**: snapshotting should not halt block processing, and it should
-  therefore happen asynchronously, eg. in a separate thread
-- **Consistent**: snapshots should be taken at isolated heights, and should not
-  be affected by concurrent writes, eg. due to block processing in the main
-  thread
-- **Deterministic**: snapshot `chunks` and `metadata` should be identical (at
-  the byte level) across all nodes for a given `height` and `format`, to ensure
-  good availability of `chunks`
+*   **Asynchronous**: snapshotting should not halt block processing, and it should
+    therefore happen asynchronously, eg. in a separate thread
+*   **Consistent**: snapshots should be taken at isolated heights, and should not
+    be affected by concurrent writes, eg. due to block processing in the main
+    thread
+*   **Deterministic**: snapshot `chunks` and `metadata` should be identical (at
+    the byte level) across all nodes for a given `height` and `format`, to ensure
+    good availability of `chunks`
 
 As an example, this can be implemented as follows:
 
-1. Use a data store that supports transactions with snapshot isolation, such as
-   RocksDB or BadgerDB.
-2. Start a read-only database transaction in the main thread after committing a
-   block.
-3. Pass the database transaction handle into a newly spawned thread.
-4. Iterate over all data items in a deterministic order (eg. sorted by key)
-5. Serialize data items (eg. using
-   [Protobuf](https://developers.google.com/protocol-buffers/docs/overview)),
-   and write them to a byte stream.
-6. Hash the byte stream, and split it into fixed-size chunks (eg. of 10 MB)
-7. Store the chunks in the file system as separate files.
-8. Write the snapshot metadata to a database or file, including the byte stream
-   hash.
-9. Close the database transaction and exit the thread.
+1.  Use a data store that supports transactions with snapshot isolation, such as
+    RocksDB or BadgerDB.
+2.  Start a read-only database transaction in the main thread after committing a
+    block.
+3.  Pass the database transaction handle into a newly spawned thread.
+4.  Iterate over all data items in a deterministic order (eg. sorted by key)
+5.  Serialize data items (eg. using
+    [Protobuf](https://developers.google.com/protocol-buffers/docs/overview)),
+    and write them to a byte stream.
+6.  Hash the byte stream, and split it into fixed-size chunks (eg. of 10 MB)
+7.  Store the chunks in the file system as separate files.
+8.  Write the snapshot metadata to a database or file, including the byte stream
+    hash.
+9.  Close the database transaction and exit the thread.
 
 Applications may want to take additional steps as well, such as compressing the
 data, checksumming chunks, generating proofs for incremental verification, and
@@ -129,10 +129,10 @@ whether `LastBlockHeight == 0`), and if it doesn't, it will begin discovering
 snapshots via the P2P network. These snapshots will be provided to the local
 application via the following ABCI calls:
 
-- [`OfferSnapshot(snapshot, apphash)`](https://docs.tendermint.com/master/spec/abci/abci.html#offersnapshot):
-  offers a discovered snapshot to the application
-- [`ApplySnapshotChunk(index, chunk, sender)`](https://docs.tendermint.com/master/spec/abci/abci.html#applysnapshotchunk):
-  applies a snapshot chunk
+*   [`OfferSnapshot(snapshot, apphash)`](https://docs.tendermint.com/master/spec/abci/abci.html#offersnapshot):
+    offers a discovered snapshot to the application
+*   [`ApplySnapshotChunk(index, chunk, sender)`](https://docs.tendermint.com/master/spec/abci/abci.html#applysnapshotchunk):
+    applies a snapshot chunk
 
 Discovered snapshots are offered to the application and it can respond by
 accepting the snapshot, rejecting it, rejecting the format, rejecting the
@@ -259,9 +259,9 @@ join the network using state sync. To do this, the node should first be
 configured as usual, and the following pieces of information must be obtained
 for light client verification:
 
-- Two available RPC servers (at least)
-- Trusted height
-- Block ID hash of trusted height
+*   Two available RPC servers (at least)
+*   Trusted height
+*   Block ID hash of trusted height
 
 The trusted hash must be obtained from a trusted source (eg. a block explorer),
 but the RPC servers do not need to be trusted. Tendermint will use the hash to

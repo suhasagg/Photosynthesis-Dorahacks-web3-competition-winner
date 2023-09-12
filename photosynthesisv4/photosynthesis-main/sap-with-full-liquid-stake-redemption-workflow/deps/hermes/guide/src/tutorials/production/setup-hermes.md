@@ -17,26 +17,26 @@ that these wallets have funds allocated to each of them.
 
 You can add a private key using one of two different ways:
 
-- If you have a
-  [key-seed file](../../documentation/commands/keys/index.md#key-seed-file-private-key),
-  use the commands :
-  ` shell {{#template ../../templates/commands/hermes/keys_add_key_file chain=cosmoshub-4 key-file=key_file_hub.json}} {{#template ../../templates/commands/hermes/keys_add_key_file chain=osmosis-1 key-file=key_file_osmosis.json}}  `
+*   If you have a
+    [key-seed file](../../documentation/commands/keys/index.md#key-seed-file-private-key),
+    use the commands :
+    `shell {{#template ../../templates/commands/hermes/keys_add_key_file chain=cosmoshub-4 key-file=key_file_hub.json}} {{#template ../../templates/commands/hermes/keys_add_key_file chain=osmosis-1 key-file=key_file_osmosis.json}} `
 
-  > **NOTE**: Do not confuse the `chain-name` and the `chain-id` which follows
-  > the format `chain_name-version`.
+    > **NOTE**: Do not confuse the `chain-name` and the `chain-id` which follows
+    > the format `chain_name-version`.
 
-- If you have a `mnemonic`, you can restore a private key from a
-  [mnemonic-file](../../documentation/commands/keys/index.md#restore-a-private-key-to-a-chain-from-a-mnemonic).
-  The following steps create a `mnemonic-file` and restore its key for each
-  chain under names `keyhub` and `keyosmosis` :
-  ```shell
-  echo word1 ... word12or24 > mnemonic_file_hub
-  {{#template ../../templates/commands/hermes/keys_add_mnemonic chain=cosmoshub-4 mnemonic-file=mnemonic_file_hub.json key-name=keyhub}}
-  rm mnemonic_file_hub
-  echo word1 ... word12or24 > mnemonic_file_osmosis
-  {{#template ../../templates/commands/hermes/keys_add_mnemonic chain=osmosis-1 mnemonic-file=mnemonic_file_osmosis.json key-name=keyosmosis}}
-  rm mnemonic_file_osmosis
-  ```
+*   If you have a `mnemonic`, you can restore a private key from a
+    [mnemonic-file](../../documentation/commands/keys/index.md#restore-a-private-key-to-a-chain-from-a-mnemonic).
+    The following steps create a `mnemonic-file` and restore its key for each
+    chain under names `keyhub` and `keyosmosis` :
+    ```shell
+    echo word1 ... word12or24 > mnemonic_file_hub
+    {{#template ../../templates/commands/hermes/keys_add_mnemonic chain=cosmoshub-4 mnemonic-file=mnemonic_file_hub.json key-name=keyhub}}
+    rm mnemonic_file_hub
+    echo word1 ... word12or24 > mnemonic_file_osmosis
+    {{#template ../../templates/commands/hermes/keys_add_mnemonic chain=osmosis-1 mnemonic-file=mnemonic_file_osmosis.json key-name=keyosmosis}}
+    rm mnemonic_file_osmosis
+    ```
 
 ## Configuration file
 
@@ -53,19 +53,17 @@ configuration file for chains in the
 
 > **NOTE**: This command also automatically finds IBC paths and generates packet
 > filters from the
-> [\_IBC](https://github.com/cosmos/chain-registry/tree/master/\_IBC) folder in
+> [\_IBC](https://github.com/cosmos/chain-registry/tree/master/_IBC) folder in
 > the chain-registry.
 
 If the command runs successfully, it should output:
 
-```
-2022-08-26T11:40:35.164371Z  INFO ThreadId(01) using default configuration from '$HOME/.hermes/config.toml'
-2022-08-26T11:40:35.165353Z  INFO ThreadId(01) Fetching configuration for chains: ["cosmoshub", "osmosis"]
-2022-08-26T11:40:36.253328Z  WARN ThreadId(01) cosmoshub-4: uses key "keyhub"
-2022-08-26T11:40:36.253704Z  WARN ThreadId(01) osmosis-1: uses key "keyosmosis"
-2022-08-26T11:40:36.253860Z  WARN ThreadId(01) Gas parameters are set to default values.
-SUCCESS "Config file written successfully : $HOME/.hermes/config.toml."
-```
+    2022-08-26T11:40:35.164371Z  INFO ThreadId(01) using default configuration from '$HOME/.hermes/config.toml'
+    2022-08-26T11:40:35.165353Z  INFO ThreadId(01) Fetching configuration for chains: ["cosmoshub", "osmosis"]
+    2022-08-26T11:40:36.253328Z  WARN ThreadId(01) cosmoshub-4: uses key "keyhub"
+    2022-08-26T11:40:36.253704Z  WARN ThreadId(01) osmosis-1: uses key "keyosmosis"
+    2022-08-26T11:40:36.253860Z  WARN ThreadId(01) Gas parameters are set to default values.
+    SUCCESS "Config file written successfully : $HOME/.hermes/config.toml."
 
 And generate the following configuration :
 
@@ -87,9 +85,9 @@ transactions with lower gas.
 > **WARNING**: It is difficult to estimate how much gas you will spend as it
 > depends on many parameters like:
 >
-> - The volume of transactions. More congestion means higher gas prices.
-> - The transaction's size. Bigger transactions need more gas.
-> - The volume of IBC messages to relay.
+> *   The volume of transactions. More congestion means higher gas prices.
+> *   The transaction's size. Bigger transactions need more gas.
+> *   The volume of IBC messages to relay.
 >
 > We cannot provide a way to precisely set those parameters. However, you can
 > refer to
@@ -104,13 +102,13 @@ For the tutorial, we will follow the
 [example of Crypto Crew](https://github.com/notional-labs/notional/blob/master/relaying/hermes/all-ibc.toml)
 and set the gas parameters as follows.
 
-- For Cosmoshub:
+*   For Cosmoshub:
 
 ```toml
 {{#template ../../templates/files/hermes/production/default_gas_cosmoshub}}
 ```
 
-- For Osmosis:
+*   For Osmosis:
 
 ```toml
 {{#template ../../templates/files/hermes/production/default_gas_osmosis}}
@@ -132,14 +130,12 @@ Finally, perform a `health-check` to verify that your setup is correct with:
 
 If the command runs successfully, it should output:
 
-```
-2022-08-26T15:54:21.321683Z  INFO ThreadId(01) using default configuration from '$HOME/.hermes/config.toml'
-2022-08-26T15:54:21.321882Z  INFO ThreadId(01) [cosmoshub-4] performing health check...
-2022-08-26T15:54:22.909339Z  WARN ThreadId(01) chain is healthy chain=cosmoshub-4
-2022-08-26T15:54:22.909374Z  INFO ThreadId(01) [osmosis-1] performing health check...
-2022-08-26T15:54:23.954362Z  INFO ThreadId(01) chain is healthy chain=osmosis-1
-SUCCESS performed health check for all chains in the config
-```
+    2022-08-26T15:54:21.321683Z  INFO ThreadId(01) using default configuration from '$HOME/.hermes/config.toml'
+    2022-08-26T15:54:21.321882Z  INFO ThreadId(01) [cosmoshub-4] performing health check...
+    2022-08-26T15:54:22.909339Z  WARN ThreadId(01) chain is healthy chain=cosmoshub-4
+    2022-08-26T15:54:22.909374Z  INFO ThreadId(01) [osmosis-1] performing health check...
+    2022-08-26T15:54:23.954362Z  INFO ThreadId(01) chain is healthy chain=osmosis-1
+    SUCCESS performed health check for all chains in the config
 
 > **WARNING**: In the previous tutorials, after setting up Hermes, we started by
 > creating a new relay path. In production, the relay path most likely already

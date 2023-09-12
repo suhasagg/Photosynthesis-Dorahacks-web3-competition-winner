@@ -30,18 +30,16 @@ moniker = "<your_custom_moniker>"
 你可以编辑`~/.gaia/config/config.toml`文件来开启垃圾交易过滤机制以拒绝收到的手续
 费过低的交易：
 
-```
-# This is a TOML config file.
-# For more information, see https://github.com/toml-lang/toml
+    # This is a TOML config file.
+    # For more information, see https://github.com/toml-lang/toml
 
-##### main base config options #####
+    ##### main base config options #####
 
-# The minimum gas prices a validator is willing to accept for processing a
-# transaction. A transaction's fees must meet the minimum of any denomination
-# specified in this config (e.g. 10uatom).
+    # The minimum gas prices a validator is willing to accept for processing a
+    # transaction. A transaction's fees must meet the minimum of any denomination
+    # specified in this config (e.g. 10uatom).
 
-minimum-gas-prices = ""
-```
+    minimum-gas-prices = ""
 
 你的全节点已经初始化成功！
 
@@ -89,9 +87,7 @@ gaiad start
 Cosmos Hub 网络中的交易需要支付一笔交易手续费以得到处理。手续费支付执行交易所消
 耗的 gas。计算公式如下：
 
-```
-fees = gas * gasPrices
-```
+    fees = gas * gasPrices
 
 `gas`由交易本身决定。不同的交易需要不同数量的`gas`。一笔交易的`gas`数量在它被执
 行时计算，但有一种方式可以提前估算，那就是把标识`gas` 的值设置为`auto`。当然，这

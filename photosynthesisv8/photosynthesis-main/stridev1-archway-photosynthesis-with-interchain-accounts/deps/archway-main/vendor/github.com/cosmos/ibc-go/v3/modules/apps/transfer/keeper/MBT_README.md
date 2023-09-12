@@ -7,7 +7,7 @@ implementation.
 Model-based tests are based on the formal `TLA+` model of the Token transfer
 relay functions: see [relay.tla](relay_model/relay.tla). The tests themselves
 are simple `TLA+` assertions, that describe the desired shape of execution that
-send or receive tokens; see [relay_tests.tla](relay_model/relay_tests.tla) for
+send or receive tokens; see [relay\_tests.tla](relay_model/relay_tests.tla) for
 some examples. To be able to specify test assertions the TLA+ model contains the
 `history` variable, which records the whole execution history. So, by way of
 referring to `history` you simply specify declaratively what execution history

@@ -17,10 +17,10 @@ $ go get -u github.com/cosmos/btcutil/bech32
 
 ## Examples
 
-- [Bech32 decode Example](http://godoc.org/github.com/cosmos/btcutil/bech32#example-Bech32Decode)
-  Demonstrates how to decode a bech32 encoded string.
-- [Bech32 encode Example](http://godoc.org/github.com/cosmos/btcutil/bech32#example-BechEncode)
-  Demonstrates how to encode data into a bech32 string.
+*   [Bech32 decode Example](http://godoc.org/github.com/cosmos/btcutil/bech32#example-Bech32Decode)
+    Demonstrates how to decode a bech32 encoded string.
+*   [Bech32 encode Example](http://godoc.org/github.com/cosmos/btcutil/bech32#example-BechEncode)
+    Demonstrates how to encode data into a bech32 string.
 
 ## License
 

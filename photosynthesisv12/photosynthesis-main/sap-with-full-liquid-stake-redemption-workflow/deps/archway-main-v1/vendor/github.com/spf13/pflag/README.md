@@ -22,15 +22,11 @@ pflag is available using the standard `go get` command.
 
 Install by running:
 
-```
-go get github.com/spf13/pflag
-```
+    go get github.com/spf13/pflag
 
 Run tests by running:
 
-```
-go test github.com/spf13/pflag
-```
+    go test github.com/spf13/pflag
 
 ## Usage
 
@@ -146,35 +142,31 @@ Would result in something like
 
 ## Command line flag syntax
 
-```
---flag    // boolean flags, or flags with no option default values
---flag x  // only on flags without a default value
---flag=x
-```
+    --flag    // boolean flags, or flags with no option default values
+    --flag x  // only on flags without a default value
+    --flag=x
 
 Unlike the flag package, a single dash before an option means something
 different than a double dash. Single dashes signify a series of shorthand
 letters for flags. All but the last shorthand letter must be boolean flags or a
 flag with a default value
 
-```
-// boolean or flags where the 'no option default value' is set
--f
--f=true
--abc
-but
--b true is INVALID
+    // boolean or flags where the 'no option default value' is set
+    -f
+    -f=true
+    -abc
+    but
+    -b true is INVALID
 
-// non-boolean and flags without a 'no option default value'
--n 1234
--n=1234
--n1234
+    // non-boolean and flags without a 'no option default value'
+    -n 1234
+    -n=1234
+    -n1234
 
-// mixed
--abcs "hello"
--absd="hello"
--abcs1234
-```
+    // mixed
+    -abcs "hello"
+    -absd="hello"
+    -abcs1234
 
 Flag parsing stops after the terminator "--". Unlike the flag package, flags can
 be interspersed with arguments anywhere on the command line before this
@@ -192,7 +184,7 @@ command line to some 'normalized' form. The 'normalized' form is used for
 comparison. Two examples of using the custom normalization func follow.
 
 **Example #1**: You want -, \_, and . in flags to compare the same. aka
-\--my-flag == --my_flag == --my.flag
+\--my-flag == --my\_flag == --my.flag
 
 ```go
 func wordSepNormalizeFunc(f *pflag.FlagSet, name string) pflag.NormalizedName {
@@ -285,11 +277,9 @@ flags.PrintDefaults()
 
 **Output**:
 
-```
-  -v, --verbose           verbose output
-      --coolflag string   it's really cool flag (default "yeaah")
-      --usefulflag int    sometimes it's very useful (default 777)
-```
+      -v, --verbose           verbose output
+          --coolflag string   it's really cool flag (default "yeaah")
+          --usefulflag int    sometimes it's very useful (default 777)
 
 ## Supporting Go flags when using pflag
 

@@ -19,9 +19,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ***
 
-- [bats-core] is a continuation of [bats]. Copyright for portions of the
-  bats-core project are held by Sam Stephenson, 2014 as part of the project
-  [bats], licensed under MIT:
+*   [bats-core] is a continuation of [bats]. Copyright for portions of the
+    bats-core project are held by Sam Stephenson, 2014 as part of the project
+    [bats], licensed under MIT:
 
 Copyright (c) 2014 Sam Stephenson
 

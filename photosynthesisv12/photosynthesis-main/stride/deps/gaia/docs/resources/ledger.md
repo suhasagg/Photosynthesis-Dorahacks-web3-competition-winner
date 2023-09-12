@@ -1,6 +1,8 @@
 ***
 
-## order: 4&#xA;title: Ledger Support
+order: 4
+title: Ledger Support
+---------------------
 
 # Ledger Nano Support
 
@@ -26,22 +28,22 @@ Installing the `Cosmos` application on your ledger device is required before you
 can use either [Keplr](#keplr-+-ledger-nano) or
 [`gaiad`](#gaia-cli-+-ledger-nano). To do so, you need to:
 
-1. Install [Ledger Live](https://shop.ledger.com/pages/ledger-live) on your
-   machine.
+1.  Install [Ledger Live](https://shop.ledger.com/pages/ledger-live) on your
+    machine.
 
 <!-- markdown-link-check-disable -->
 
-2. Using Ledger Live,
-   [update your Ledger Nano S with the latest firmware](https://support.ledger.com/hc/en-us/articles/360002731113?docs=true).
+2.  Using Ledger Live,
+    [update your Ledger Nano S with the latest firmware](https://support.ledger.com/hc/en-us/articles/360002731113?docs=true).
 
 <!-- markdown-link-check-enable -->
 
-3. On the Ledger Live application, navigate to the `Manager` menu .
-   ![manager](../images/ledger-tuto-manager.png)
-4. Connect your Ledger Nano device and allow Ledger Manager from it.
-5. On the Ledger Live application, Search for `Cosmos`.
-   ![search](../images/ledger-tuto-search.png)
-6. Install the Cosmos application by clicking on `Install`.
+3.  On the Ledger Live application, navigate to the `Manager` menu .
+    ![manager](../images/ledger-tuto-manager.png)
+4.  Connect your Ledger Nano device and allow Ledger Manager from it.
+5.  On the Ledger Live application, Search for `Cosmos`.
+    ![search](../images/ledger-tuto-search.png)
+6.  Install the Cosmos application by clicking on `Install`.
 
 ::: tip To see the `Cosmos` application when you search for it, you might need
 to activate the `Developer Mode`, located in the Experimental features tab of
@@ -55,13 +57,13 @@ the Ledger Live application. :::
 [install the Cosmos app](#install-the-cosmos-ledger-application) on your Ledger
 Nano before following this section**
 
-1. Connect your Ledger device to your computer, unlock it with the PIN and open
-   the Cosmos app.
-2. Install the [Keplr browser extension](https://www.keplr.app/).
-3. Click on the Keplr extension icon and select `Import Ledger` and choose an
-   account name and password.
-4. Make sure your Ledger device is unlocked and has the Cosmos app open and then
-   follow the instructions on the Keplr pop-up.
+1.  Connect your Ledger device to your computer, unlock it with the PIN and open
+    the Cosmos app.
+2.  Install the [Keplr browser extension](https://www.keplr.app/).
+3.  Click on the Keplr extension icon and select `Import Ledger` and choose an
+    account name and password.
+4.  Make sure your Ledger device is unlocked and has the Cosmos app open and then
+    follow the instructions on the Keplr pop-up.
 
 That's it! You can now use Keplr with your Ledger Nano S. You can use the
 [Keplr web app](https://wallet.keplr.app/#/dashboard) to get a more detailed
@@ -75,11 +77,11 @@ your Ledger device. Indication will be prompted from the Keplr interface**
 You can double check that Keplr is displaying the correct address directly on
 your Ledger Nano device. To do so:
 
-1. Connect your Ledger to your computer and open the Cosmos application on the
-   device.
-2. Once the Cosmos app is open, click on the right button to access the
-   `Show Address` option.
-3. Click on both button, then select `Account 0` and `Index 0`.
+1.  Connect your Ledger to your computer and open the Cosmos application on the
+    device.
+2.  Once the Cosmos app is open, click on the right button to access the
+    `Show Address` option.
+3.  Click on both button, then select `Account 0` and `Index 0`.
 
 You should now see the same address that is displayed on the Keplr extension.
 
@@ -106,8 +108,8 @@ you, scroll down and follow instructions for using the Keplr wallet instead.
 
 ### Before you Begin
 
-- [Install Golang](https://golang.org/doc/install)
-- [Install Gaia](../getting-started/installation.md)
+*   [Install Golang](https://golang.org/doc/install)
+*   [Install Gaia](../getting-started/installation.md)
 
 Verify that gaiad is installed correctly with the following command
 
@@ -123,9 +125,9 @@ go version go1.11.5 darwin/amd64
 
 ### Add your Ledger key
 
-- Connect and unlock your Ledger device.
-- Open the Cosmos app on your Ledger.
-- Create an account in gaiad from your ledger key.
+*   Connect and unlock your Ledger device.
+*   Open the Cosmos app on your Ledger.
+*   Create an account in gaiad from your ledger key.
 
 ::: tip Be sure to change the *keyName* parameter to be a meaningful name. The
 `ledger` flag tells `gaiad` to use your Ledger to seed the account. :::
@@ -252,16 +254,16 @@ from the Cosmos SDK. The Ledger device displays a serialized JSON representation
 of this object for you to review before signing the transaction. Here are the
 fields and what they mean:
 
-- `chain-id`: The chain to which you are broadcasting the tx, such as the
-  `gaia-13003` testnet or `cosmoshub-2`: mainnet.
-- `account_number`: The global id of the sending account assigned when the
-  account receives funds for the first time.
-- `sequence`: The nonce for this account, incremented with each transaction.
-- `fee`: JSON object describing the transaction fee, its gas amount and coin
-  denomination
-- `memo`: optional text field used in various ways to tag transactions.
-- `msgs_<index>/<field>`: The array of messages included in the transaction.
-  Double click to drill down into nested fields of the JSON.
+*   `chain-id`: The chain to which you are broadcasting the tx, such as the
+    `gaia-13003` testnet or `cosmoshub-2`: mainnet.
+*   `account_number`: The global id of the sending account assigned when the
+    account receives funds for the first time.
+*   `sequence`: The nonce for this account, incremented with each transaction.
+*   `fee`: JSON object describing the transaction fee, its gas amount and coin
+    denomination
+*   `memo`: optional text field used in various ways to tag transactions.
+*   `msgs_<index>/<field>`: The array of messages included in the transaction.
+    Double click to drill down into nested fields of the JSON.
 
 ## Support
 
@@ -274,7 +276,7 @@ to ask for help.
 Here are a few relevant and helpful tutorials from the wonderful Cosmos
 community:
 
-- [Catdotfish](https://catdotfish.medium.com/) -
-  [How to use the Keplr Wallet](https://medium.com/chainapsis/how-to-use-keplr-wallet-40afc80907f6)
-- [Cryptium Labs](https://medium.com/cryptium) -
-  [How to store your ATOMS on your Ledger and delegate with the command line](https://medium.com/cryptium-cosmos/how-to-store-your-cosmos-atoms-on-your-ledger-and-delegate-with-the-command-line-929eb29705f)
+*   [Catdotfish](https://catdotfish.medium.com/) -
+    [How to use the Keplr Wallet](https://medium.com/chainapsis/how-to-use-keplr-wallet-40afc80907f6)
+*   [Cryptium Labs](https://medium.com/cryptium) -
+    [How to store your ATOMS on your Ledger and delegate with the command line](https://medium.com/cryptium-cosmos/how-to-store-your-cosmos-atoms-on-your-ledger-and-delegate-with-the-command-line-929eb29705f)

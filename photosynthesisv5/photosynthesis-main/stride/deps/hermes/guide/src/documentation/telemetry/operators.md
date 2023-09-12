@@ -5,23 +5,23 @@ the current state of the Hermes relayer and the networks it is connected to.
 
 ## General remarks about the metrics
 
-- All Hermes metrics are tracked and updated from the moment the Hermes service
-  (i.e., `start`) starts up. Metrics are automatically reset if the service is
-  restarted.
-- For maximum reliability, it is advised to combine monitoring of your Hermes
-  service with monitoring of your full nodes.
-- Some metrics require specific configurations to be enabled, this is described
-  in the `Configuration Dependencies` column.
+*   All Hermes metrics are tracked and updated from the moment the Hermes service
+    (i.e., `start`) starts up. Metrics are automatically reset if the service is
+    restarted.
+*   For maximum reliability, it is advised to combine monitoring of your Hermes
+    service with monitoring of your full nodes.
+*   Some metrics require specific configurations to be enabled, this is described
+    in the `Configuration Dependencies` column.
 
 ## Table of Contents
 
 Hermes' metrics are designed to be able to answer four basic questions:
 
-1. Is Hermes active (i.e., *submitting* any transactions to any network)?
-2. Are Hermes transactions successful (i.e., *confirmed* and included in the
-   network)?
-3. What is the overall IBC status of each network?
-4. How efficient, and how secure is the IBC status on each network?
+1.  Is Hermes active (i.e., *submitting* any transactions to any network)?
+2.  Are Hermes transactions successful (i.e., *confirmed* and included in the
+    network)?
+3.  What is the overall IBC status of each network?
+4.  How efficient, and how secure is the IBC status on each network?
 
 For each of this question, there is a dedicated subsection:
 
@@ -45,29 +45,29 @@ Notes & more details below:
 
 **What is a worker?**
 
-- A worker is a separate thread of execution and there are five types of
-  workers:
-  - `Client`: The worker that refreshed a client periodically and detects
-    misbehaviour.
-  - `Connection`: The worker that handles connection open handshake that may be
-    incomplete.
-  - `Channel`: The worker that handles channel open handshake that may be
-    incomplete.
-  - `Packet`: The worker that handles packet relaying.
-  - `Wallet`: The worker that periodically queries for the balance of each
-    wallet that Hermes is using and updates `wallet_balance` metric.
-- For example, if your metrics show that you have 0 packet workers
-  (`workers{type="packet"} 0`), that is a clear indication that Hermes is *not
-  relaying any packets at the moment*.
+*   A worker is a separate thread of execution and there are five types of
+    workers:
+    *   `Client`: The worker that refreshed a client periodically and detects
+        misbehaviour.
+    *   `Connection`: The worker that handles connection open handshake that may be
+        incomplete.
+    *   `Channel`: The worker that handles channel open handshake that may be
+        incomplete.
+    *   `Packet`: The worker that handles packet relaying.
+    *   `Wallet`: The worker that periodically queries for the balance of each
+        wallet that Hermes is using and updates `wallet_balance` metric.
+*   For example, if your metrics show that you have 0 packet workers
+    (`workers{type="packet"} 0`), that is a clear indication that Hermes is *not
+    relaying any packets at the moment*.
 
 **How do we define the latency of a submitted transaction?** The latency is
 defined as the difference between the moment when Hermes received an event
 (through the websocket) until the moment when the corresponding transaction(s)
 were submitted into a full node's mempool.
 
-- If a transaction is submitted it does not mean it was confirmed, see below for
-  more details.
-- This metric is tracked per chain, counterparty chain, channel and port.
+*   If a transaction is submitted it does not mean it was confirmed, see below for
+    more details.
+*   This metric is tracked per chain, counterparty chain, channel and port.
 
 **A note on wallet balances.** For the `wallet_balance`, we convert from a
 String into a f64, which can lead to a loss in precision in the displayed value.
@@ -89,12 +89,12 @@ config.toml.
 difference between the moment when Hermes received an event until the
 corresponding transaction(s) were confirmed.
 
-- Similarly to `tx_latency_submitted`, this metrics is tracked per chain,
-  counterparty chain, channel and port.
-- This metrics usually contains strictly larger values than
-  `tx_latency_submitted`, because Hermes first submits transactions into the
-  network's mempool, and then it takes some more time elapses until the network
-  includes those transactions in a block.
+*   Similarly to `tx_latency_submitted`, this metrics is tracked per chain,
+    counterparty chain, channel and port.
+*   This metrics usually contains strictly larger values than
+    `tx_latency_submitted`, because Hermes first submits transactions into the
+    network's mempool, and then it takes some more time elapses until the network
+    includes those transactions in a block.
 
 ## What is the overall IBC status of each network?
 
@@ -105,8 +105,8 @@ capture the activity of *all IBC relayers*.
 > *events* it receives via a websocket to the full nodes of each network. If
 > these events are not being updated, that is a good indication that either:
 >
-> - The network has no IBC activity, or
-> - The websocket connection to that network is broken.
+> *   The network has no IBC activity, or
+> *   The websocket connection to that network is broken.
 
 | Name                     | Description                                                                                                                           | OpenTelemetry type | Configuration Dependencies |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------- |
@@ -119,13 +119,13 @@ capture the activity of *all IBC relayers*.
 
 Notes:
 
-- Except for `ws_reconnect`, all these metrics should typically increase
-  regularly in the common-case. That is an indication that the network is
-  regularly producing new blocks and there is ongoing IBC activity, eg
-  `send_packet`, `acknowledgment`, and `timeout`.
-- The metric `ws_reconnect` signals that the websocket connection was broken and
-  Hermes had to re-establish that. It is usually an indication that your full
-  node may be falling behind or is experiencing instability.
+*   Except for `ws_reconnect`, all these metrics should typically increase
+    regularly in the common-case. That is an indication that the network is
+    regularly producing new blocks and there is ongoing IBC activity, eg
+    `send_packet`, `acknowledgment`, and `timeout`.
+*   The metric `ws_reconnect` signals that the websocket connection was broken and
+    Hermes had to re-establish that. It is usually an indication that your full
+    node may be falling behind or is experiencing instability.
 
 Since Hermes v1, we also introduced 3 metrics that sketch the backlog status of
 IBC relaying.
@@ -138,15 +138,15 @@ IBC relaying.
 
 Notes:
 
-- The `backlog_size` defines how many IBC packets users sent and were not yet
-  relayed (i.e., received on the destination network, or timed-out). If this
-  metric is increasing, it signals that the packet queue is increasing and there
-  may be some errors in the Hermes logs that need your attention.
-- If the `backlog_oldest_sequence` remains unchanged for more than a few
-  minutes, that means that the packet with the respective sequence number is
-  likely blocked and cannot be relayed. To understand for how long the packet is
-  block, Hermes will populate `backlog_oldest_timestamp` with the local time
-  when it first observed the `backlog_oldest_sequence` that is blocked.
+*   The `backlog_size` defines how many IBC packets users sent and were not yet
+    relayed (i.e., received on the destination network, or timed-out). If this
+    metric is increasing, it signals that the packet queue is increasing and there
+    may be some errors in the Hermes logs that need your attention.
+*   If the `backlog_oldest_sequence` remains unchanged for more than a few
+    minutes, that means that the packet with the respective sequence number is
+    likely blocked and cannot be relayed. To understand for how long the packet is
+    block, Hermes will populate `backlog_oldest_timestamp` with the local time
+    when it first observed the `backlog_oldest_sequence` that is blocked.
 
 ## How efficient and how secure is the IBC status on each network?
 
@@ -160,13 +160,13 @@ Notes:
 
 Notes:
 
-- The two metrics `cleared_send_packet_count` and `cleared_acknowledgment_count`
-  are only populated if `tx_confirmation = true`. These two metrics usually
-  correlate with `backlog_*` metrics. They are an indication that IBC packet
-  relaying may be unsuccessful and that Hermes periodically finds packets to
-  clear (i.e., unblock).
-- `queries` and `queries_cache_hits` values are complementary. For the total
-  number of queries, the two metrics should be summed for a specific query type.
+*   The two metrics `cleared_send_packet_count` and `cleared_acknowledgment_count`
+    are only populated if `tx_confirmation = true`. These two metrics usually
+    correlate with `backlog_*` metrics. They are an indication that IBC packet
+    relaying may be unsuccessful and that Hermes periodically finds packets to
+    clear (i.e., unblock).
+*   `queries` and `queries_cache_hits` values are complementary. For the total
+    number of queries, the two metrics should be summed for a specific query type.
 
 For security, we only expose one metric, described in the table below. Note that
 this metrics is disabled if `misbehaviour = false` in your Hermes config.toml.

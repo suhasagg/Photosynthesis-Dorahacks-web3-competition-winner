@@ -12,8 +12,8 @@ more than one signature to sign transactions. This can be useful for increasing
 the security of the account or for requiring the consent of multiple parties to
 make transactions. Multisig accounts can be created by specifying:
 
-- threshold number of signatures required
-- the public keys involved in signing
+*   threshold number of signatures required
+*   the public keys involved in signing
 
 To sign with a multisig account, the transaction must be signed individually by
 the different keys specified for the account. Then, the signatures will be

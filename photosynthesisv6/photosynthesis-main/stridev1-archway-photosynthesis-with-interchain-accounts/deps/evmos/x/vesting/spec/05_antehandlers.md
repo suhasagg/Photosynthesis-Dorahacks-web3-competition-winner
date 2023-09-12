@@ -24,10 +24,10 @@ performing EVM transactions.
 Validates if a transaction contains a staking delegation of unvested coins. This
 AnteHandler decorator will fail if:
 
-- the message is not a `MsgDelegate`
-- sender account cannot be found
-- sender account is not a `ClawbackVestingAccount`
-- the bond amount is greater than the coins already vested
+*   the message is not a `MsgDelegate`
+*   sender account cannot be found
+*   sender account is not a `ClawbackVestingAccount`
+*   the bond amount is greater than the coins already vested
 
 ### `EthVestingTransactionDecorator`
 
@@ -35,9 +35,9 @@ Validates if a clawback vesting account is permitted to perform Ethereum
 transactions, based on if it has its vesting schedule has surpassed the vesting
 cliff and first lockup period. This AnteHandler decorator will fail if:
 
-- the message is not a `MsgEthereumTx`
-- sender account cannot be found
-- sender account is not a `ClawbackVestingAccount`
-- block time is before surpassing vesting cliff end (with zero vested coins) AND
-- block time is before surpassing all lockup periods (with non-zero locked
-  coins)
+*   the message is not a `MsgEthereumTx`
+*   sender account cannot be found
+*   sender account is not a `ClawbackVestingAccount`
+*   block time is before surpassing vesting cliff end (with zero vested coins) AND
+*   block time is before surpassing all lockup periods (with non-zero locked
+    coins)

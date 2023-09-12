@@ -14,7 +14,7 @@ Once you have these prerequisites, you can
 
 ## Sections
 
-- **[Prerequisites](./pre-requisites.md)**
-  - Install the latest versions of `Rust` and `Golang`.
-- **[Installation](./installation.md)**
-  - Install Hermes.
+*   **[Prerequisites](./pre-requisites.md)**
+    *   Install the latest versions of `Rust` and `Golang`.
+*   **[Installation](./installation.md)**
+    *   Install Hermes.

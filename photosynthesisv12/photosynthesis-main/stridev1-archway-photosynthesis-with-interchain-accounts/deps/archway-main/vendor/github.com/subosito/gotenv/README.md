@@ -17,8 +17,8 @@ import "github.com/subosito/gotenv"
 
 To modify your app environment variables, `gotenv` expose 2 main functions:
 
-- `gotenv.Load`
-- `gotenv.Apply`
+*   `gotenv.Load`
+*   `gotenv.Apply`
 
 By default, `gotenv.Load` will look for a file called `.env` in the current
 working directory.
@@ -83,8 +83,8 @@ variables. If you want to override existing ones, you can see section below.
 Besides above functions, `gotenv` also provides another functions that overrides
 existing:
 
-- `gotenv.OverLoad`
-- `gotenv.OverApply`
+*   `gotenv.OverLoad`
+*   `gotenv.OverApply`
 
 Here's the example of this overrides behavior:
 

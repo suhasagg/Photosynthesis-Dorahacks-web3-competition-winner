@@ -34,7 +34,7 @@ transactions through its
 
 <!-- markdown-link-check-disable-next-line -->
 
-[feemarket](../../modules/feemarket/01\_concepts.md) module. This transaction
+[feemarket](../../modules/feemarket/01_concepts.md) module. This transaction
 type uses a base fee and a selectable priority tip that add up to the total
 transaction fees. The prioritized mempool presents an option to automatically
 make use of this mechanism regarding block generation.
@@ -76,8 +76,8 @@ version = "v1"
 
 More detailed information can be found here:
 
-- [Tendermint ADR-067 - Mempool Refactor](https://github.com/tendermint/tendermint/blob/main/docs/architecture/adr-067-mempool-refactor.md).
-- [Blogpost: Tendermint v0.35 Announcement](https://medium.com/tendermint/tendermint-v0-35-introduces-prioritized-mempool-a-makeover-to-the-peer-to-peer-network-more-61eea6ec572d)
-- [EIP-1559: Fee market change for ETH 1.0 chain](https://eips.ethereum.org/EIPS/eip-1559)
-- [EIP-1559 FAQ](https://notes.ethereum.org/@vbuterin/eip-1559-faq)
-- [Blogpost: What is EIP-1559? How will it change Ethereum?](https://consensys.net/blog/quorum/what-is-eip-1559-how-will-it-change-ethereum/)
+*   [Tendermint ADR-067 - Mempool Refactor](https://github.com/tendermint/tendermint/blob/main/docs/architecture/adr-067-mempool-refactor.md).
+*   [Blogpost: Tendermint v0.35 Announcement](https://medium.com/tendermint/tendermint-v0-35-introduces-prioritized-mempool-a-makeover-to-the-peer-to-peer-network-more-61eea6ec572d)
+*   [EIP-1559: Fee market change for ETH 1.0 chain](https://eips.ethereum.org/EIPS/eip-1559)
+*   [EIP-1559 FAQ](https://notes.ethereum.org/@vbuterin/eip-1559-faq)
+*   [Blogpost: What is EIP-1559? How will it change Ethereum?](https://consensys.net/blog/quorum/what-is-eip-1559-how-will-it-change-ethereum/)

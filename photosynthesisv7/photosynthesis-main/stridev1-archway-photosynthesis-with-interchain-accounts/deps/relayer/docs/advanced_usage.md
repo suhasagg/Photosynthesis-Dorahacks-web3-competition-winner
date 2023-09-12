@@ -9,23 +9,21 @@ If you started `rly` with the default `--debug-addr` argument, you can use
 
 **Example metrics**
 
-```
-go_goroutines 29
-...
-go_threads 39
-...
-observed_packets{chain="cosmoshub-4",channel="channel-141",path="hubosmo",port="transfer",type="acknowledge_packet"} 57
-observed_packets{chain="cosmoshub-4",channel="channel-141",path="hubosmo",port="transfer",type="recv_packet"} 103
-observed_packets{chain="cosmoshub-4",channel="channel-141",path="hubosmo",port="transfer",type="send_packet"} 58
-observed_packets{chain="osmosis-1",channel="channel-0",path="hubosmo",port="transfer",type="acknowledge_packet"} 107
-observed_packets{chain="osmosis-1",channel="channel-0",path="hubosmo",port="transfer",type="recv_packet"} 60
-observed_packets{chain="osmosis-1",channel="channel-0",path="hubosmo",port="transfer",type="send_packet"} 102
-...
-relayed_packets{chain="cosmoshub-4",channel="channel-141",path="hubosmo",port="transfer",type="acknowledge_packet"} 31
-relayed_packets{chain="cosmoshub-4",channel="channel-141",path="hubosmo",port="transfer",type="recv_packet"} 65
-relayed_packets{chain="osmosis-1",channel="channel-0",path="hubosmo",port="transfer",type="acknowledge_packet"} 36
-relayed_packets{chain="osmosis-1",channel="channel-0",path="hubosmo",port="transfer",type="recv_packet"} 35
-```
+    go_goroutines 29
+    ...
+    go_threads 39
+    ...
+    observed_packets{chain="cosmoshub-4",channel="channel-141",path="hubosmo",port="transfer",type="acknowledge_packet"} 57
+    observed_packets{chain="cosmoshub-4",channel="channel-141",path="hubosmo",port="transfer",type="recv_packet"} 103
+    observed_packets{chain="cosmoshub-4",channel="channel-141",path="hubosmo",port="transfer",type="send_packet"} 58
+    observed_packets{chain="osmosis-1",channel="channel-0",path="hubosmo",port="transfer",type="acknowledge_packet"} 107
+    observed_packets{chain="osmosis-1",channel="channel-0",path="hubosmo",port="transfer",type="recv_packet"} 60
+    observed_packets{chain="osmosis-1",channel="channel-0",path="hubosmo",port="transfer",type="send_packet"} 102
+    ...
+    relayed_packets{chain="cosmoshub-4",channel="channel-141",path="hubosmo",port="transfer",type="acknowledge_packet"} 31
+    relayed_packets{chain="cosmoshub-4",channel="channel-141",path="hubosmo",port="transfer",type="recv_packet"} 65
+    relayed_packets{chain="osmosis-1",channel="channel-0",path="hubosmo",port="transfer",type="acknowledge_packet"} 36
+    relayed_packets{chain="osmosis-1",channel="channel-0",path="hubosmo",port="transfer",type="recv_packet"} 35
 
 ***
 
@@ -47,23 +45,23 @@ Alternitavely, you can choose to update clients more frequently by using the
 
 Example:
 
-- Say... You are relaying on a path that has a client trusting period of 9
-  minutes.
-- If no messages are sent for 6 minutes and the client is 3 minutes (1/3) to
-  expiration, the relayer will automatically update the client.
-- If you wish to update the client more frequently, say anytime two minutes have
-  passed without a `MsgUpdateClient` being sent, use flag: `--time-threshold 2m`
+*   Say... You are relaying on a path that has a client trusting period of 9
+    minutes.
+*   If no messages are sent for 6 minutes and the client is 3 minutes (1/3) to
+    expiration, the relayer will automatically update the client.
+*   If you wish to update the client more frequently, say anytime two minutes have
+    passed without a `MsgUpdateClient` being sent, use flag: `--time-threshold 2m`
 
 Selecting a time-threshold that is greater than 2/3 of the client trusting
 period will deem itself useless.
 
 Use cases for configuring the `--time-threshold` flag:
 
-- The underlying chain node that the relayer is using as an endpoint has
-  restrictive pruning. Client updates are needed more frequently since states
-  2/3 trusting period ago would not be available due to pruning.
-- Mitiage relayer operational errors allowing more frequent updates incase a
-  relayer node goes down for > the client trusting period.
+*   The underlying chain node that the relayer is using as an endpoint has
+    restrictive pruning. Client updates are needed more frequently since states
+    2/3 trusting period ago would not be available due to pruning.
+*   Mitiage relayer operational errors allowing more frequent updates incase a
+    relayer node goes down for > the client trusting period.
 
 \* It is not mandatory for relayers to include the `MsgUpdateClient` when
 relaying packets, however most, if not all relayers currently do.
