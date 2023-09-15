@@ -4278,7 +4278,9 @@ Distribute Redeem Tokens Job Index
       }
     }
 
+
 # 🎯 Saturating redemption rate A/B Test Experiment 🧪 to avoid 🛑 Halting Host Zone Error code 🚫 (This Error code comes if redemption rate for host zone is not within safety 🛡 limits)
+
 
 🖥 Halted Host Zone Algorithm Explanation🖥
 
@@ -4317,32 +4319,45 @@ The combination of liquid staking blockchain operations and ML forecasting provi
 
 */2 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/rewardswithdrawal.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/rewardslogs.log
 
+
 */4 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/liquidstake.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakelogs
+
 
 This script starts process of liquid staking
 
+
 * * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q stakeibc list-host-zone > /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redemptionrate
+
 
 This task retrieves and logs the current redemption rates for the tokens.
 Since it's done every minute, it provides a granular view of how the redemption rate is changing over time.
 
+
 * * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/transactions.sh >> /root/transactions.txt
+
 
 */6 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/DistributeLiquidity.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributeliquiditylogs
 
+
 Running every 6 minutes ensures periodic distribution of liquidity, creating dynamics in the network.
 
+
 47 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/redeemstake.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemstake.log
+
 
 This will process liquid staking redemptions, turning liquid stake tokens back into regular tokens.
 It runs less frequently (once an hour) indicating that the act of redeeming stakes is a larger, less frequent operation in the system.
 
+
 5 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/DistributeRedeemedTokens.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/Distributeredeemtokens.log
+
 
 After tokens have been redeemed, this script distribute them appropriately among Dapps/users.
 It runs once an hour, closely aligned with the redeem stake operation.
 
+
 #1,15,30,45 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/gasfiller.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/gasfillerlogs.log
+
 
 The described cron schedule simulates a longer run of the Photosynthesis-Archway blockchain with different jobs (described in cron) that are related to liquid staking.
 The cron job frequencies have been designed to mimic the natural ebb and flow of a liquid staking blockchain network over a long run. By running certain tasks like rewards withdrawal and liquid staking more frequently, it simulates a busy network with constant liquid staking. Meanwhile, less frequent tasks like redeeming stakes or distributing redeemed tokens represent larger, periodic operations that might not happen as often but have significant impact on redemption rate and other parameters.
