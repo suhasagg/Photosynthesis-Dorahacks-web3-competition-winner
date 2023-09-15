@@ -4279,6 +4279,29 @@ Distribute Redeem Tokens Job Index
     }
 
 
+
+🔍 Determine Active Host Zones:
+
+Retrieve all active host zones 🌐 where staking and redemption activities can occur.
+
+💹 Calculate & Update Redemption Rates:
+
+For each host zone:
+Retrieve associated parameters: stSupply 📊, undelegatedBalance 💼, stakedBalance ⚖️, and moduleAcctBalance 📓.
+If stSupply is not zero 🚫:
+Calculate the redemption rate using the formula:
+(Unbonded Balance 💰 + Staked Balance ⚖️ + Module Account Balance 📓) / (stToken Supply 📦)
+Store the previous redemption rate 📔 and update with the new redemption rate 🔄.
+
+🪙 Stake Token Creation (Liquid Stake):
+
+A user sends native tokens 💸 to the Stride platform for staking.
+Verify the host zone is active ✅ and not halted 🛑.
+Check if the redemption rate is within safety bounds 🛡️.
+Create the equivalent number of stTokens for the user based on the current redemption rate 🔢.
+Log the transaction 📝 with all relevant details.
+
+
 # 🎯 Saturating redemption rate A/B Test Experiment 🧪 to avoid 🛑 Halting Host Zone Error code 🚫 (This Error code comes if redemption rate for host zone is not within safety 🛡 limits)
 
 
