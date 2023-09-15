@@ -4278,6 +4278,85 @@ Distribute Redeem Tokens Job Index
       }
     }
 
+# 🎯 Saturating redemption rate A/B Test Experiment 🧪 to avoid 🛑 Halting Host Zone Error code 🚫 (This Error code comes if redemption rate for host zone is not within safety 🛡 limits)
+
+🖥 Halted Host Zone Algorithm Explanation🖥
+
+✅ IsRedemptionRateWithinSafetyBounds: This function checks if the redemption rate of a given host zone is within the predefined safety bounds. It first fetches the default safety thresholds and then adjusts them if the host zone provides custom values. If the redemption rate of the zone is outside of these bounds, it logs an error and returns false.
+
+📦 BeginBlocker: At the beginning of every block, this function checks the redemption rate of all host zones. If any host zone has a redemption rate outside of the safety bounds, it halts that host zone and adds its associated asset to a blacklist 🚫.
+
+💧 LiquidStake: This function allows a user to liquid stake their native tokens in exchange for stTokens using the current redemption rate. The function has several safety checks including ensuring the host zone is valid, the redemption rate is within safety bounds, and the user has a sufficient balance.
+
+🔄 RedeemStake: This function enables a user to redeem their liquid staked tokens. It does so by:
+
+- Validating the provided addresses and host zone.
+- Checking if the host zone is halted.
+- Constructing a user redemption record.
+- Performing a variety of safety checks, including ensuring the redemption rate is within safety bounds and the user has a sufficient balance.
+
+🎯 Objective:
+The main aim of the experiment seems to be simulating the saturation of redemption rates in a liquid staking blockchain scenario. This means when the host zone (Photosynthesis - Archway chain responsible for handling liquid staking and redemption) is operational for extended periods, it is anticipated that the periodic liquid staking will increase the liquid stake, while the subsequent redemptions will decrease it. The experiment seems to aim to understand when (or if) the redemption rate reaches saturation.
+
+📈 Analysis and Anticipation:
+The experiment's flow appears to involve periods of liquid staking (increasing liquid tokens) and periods of redemption (decreasing liquid tokens). By observing this cycle over extended periods, the goal is to see if a point of saturation is reached.
+
+The results are used to provide insights into how the liquid staking blockchain system (stride) behaves under continuous staking and redemption scenarios, helping to understand its scalability, sustainability, and potential bottlenecks, providing training data for Redemption rate based ML models.
+
+🤖 Training an ML Model:
+Over time, these operations generate a wealth of data on liquid staking, redemption, liquidity distribution, and other relevant transactions. This data will be essential to train a Machine Learning model, which will:
+
+ 📊 Forecast: Predict future behaviors and trends related to liquid staking and redemption rates based on historical data.
+🔧 Optimization: Based on the forecasts, the model can suggest optimal strategies to maintain a balanced and efficient redemption rate, ensuring the liquid staking blockchain system operates smoothly.
+
+The combination of liquid staking blockchain operations and ML forecasting provide a robust system that not only operates efficiently but also predicts and optimizes future behaviors. Through continuous learning and adaptation, the system can potentially handle a growing number of Dapps and transactions while maintaining performance.
+
+📅 Longer Photosynthesis-Archway blockchain run is simulated using the following cron schedule simulating periods of liquid staking (increasing liquid tokens) and periods of redemption (decreasing liquid tokens) over longer time.
+
+📑 Cron schedule
+
+*/2 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/rewardswithdrawal.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/rewardslogs.log
+
+*/4 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/liquidstake.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/liquidstakelogs
+
+This script starts process of liquid staking
+
+* * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/strided --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/stride1 q stakeibc list-host-zone > /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redemptionrate
+
+This task retrieves and logs the current redemption rates for the tokens.
+Since it's done every minute, it provides a granular view of how the redemption rate is changing over time.
+
+* * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/transactions.sh >> /root/transactions.txt
+
+*/6 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/DistributeLiquidity.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/distributeliquiditylogs
+
+Running every 6 minutes ensures periodic distribution of liquidity, creating dynamics in the network.
+
+47 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/redeemstake.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemstake.log
+
+This will process liquid staking redemptions, turning liquid stake tokens back into regular tokens.
+It runs less frequently (once an hour) indicating that the act of redeeming stakes is a larger, less frequent operation in the system.
+
+5 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/DistributeRedeemedTokens.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/Distributeredeemtokens.log
+
+After tokens have been redeemed, this script distribute them appropriately among Dapps/users.
+It runs once an hour, closely aligned with the redeem stake operation.
+
+#1,15,30,45 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/gasfiller.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/gasfillerlogs.log
+
+The described cron schedule simulates a longer run of the Photosynthesis-Archway blockchain with different jobs (described in cron) that are related to liquid staking.
+The cron job frequencies have been designed to mimic the natural ebb and flow of a liquid staking blockchain network over a long run. By running certain tasks like rewards withdrawal and liquid staking more frequently, it simulates a busy network with constant liquid staking. Meanwhile, less frequent tasks like redeeming stakes or distributing redeemed tokens represent larger, periodic operations that might not happen as often but have significant impact on redemption rate and other parameters.
+
+
+# Redemption rate, Liquid Staking, Redemption, Claiming Workflow
+
+
+A) ![Redemption rate, Liquid Staking, Redemption, Claiming Workflow](https://i.imgur.com/kKxFOGt.png)
+
+
+B) ![Redemption rate, Liquid Staking, Redemption, Claiming Workflow](https://i.imgur.com/vUbOc3T.png)
+
+
 # Liquid Staking Ebook
 
 https://docs.google.com/document/d/19AIiO3EF6lUvVFPg2UgY3W5fs4Hb6G7Y/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
