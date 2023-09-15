@@ -4317,6 +4317,8 @@ The combination of liquid staking blockchain operations and ML forecasting provi
 
 📑 Cron schedule
 
+```bash
+
 */2 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/rewardswithdrawal.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/rewardslogs.log
 
 
@@ -4358,6 +4360,7 @@ It runs once an hour, closely aligned with the redeem stake operation.
 
 #1,15,30,45 * * * * /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/deps/archway-main/contrib/localnet/opt/gasfiller.sh >> /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/gasfillerlogs.log
 
+```
 
 The described cron schedule simulates a longer run of the Photosynthesis-Archway blockchain with different jobs (described in cron) that are related to liquid staking.
 The cron job frequencies have been designed to mimic the natural ebb and flow of a liquid staking blockchain network over a long run. By running certain tasks like rewards withdrawal and liquid staking more frequently, it simulates a busy network with constant liquid staking. Meanwhile, less frequent tasks like redeeming stakes or distributing redeemed tokens represent larger, periodic operations that might not happen as often but have significant impact on redemption rate and other parameters.
