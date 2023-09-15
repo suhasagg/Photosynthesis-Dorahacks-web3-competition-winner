@@ -1,0 +1,2505 @@
+{"message":"2023-09-13 13:05:01"}
+{"message":"2023-09-13 13:05:01"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:02"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:03"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:04"}
+{"message":"2023-09-13 13:05:05"}
+{"message":"2023-09-13 13:05:05"}
+{"message":"2023-09-13 13:05:05"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 12213406"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 12976580"}
+{"message":"2023-09-13 13:05:05"}
+{"message":"Total Tokens: 25189986"}
+{"message":"2023-09-13 13:05:05"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "20054078", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9995546315", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-13 13:05:07"}
+{"message":"2023-09-13 13:05:07"}
+{"message":"2023-09-13 13:05:08"}
+{"message":"2023-09-13 13:05:08"}
+{"message":"2023-09-13 13:05:08"}
+{"message":"2023-09-13 13:05:08"}
+{"message":"Liquid Amount: 20054078"}
+{"message":"2023-09-13 13:05:08"}
+{"message":"2023-09-13 13:05:08"}
+{"message":"2023-09-13 13:05:08"}
+{"message":"2023-09-13 13:05:08"}
+{"message":"total redemption amount: 9995546315"}
+{"message":"2023-09-13 13:05:08"}
+{"message":"2023-09-13 13:05:08"}
+{"message":"2023-09-13 13:05:08"}
+{"message":"2023-09-13 13:05:08"}
+{"message":"2023-09-13 13:05:08"}
+{"message":"2023-09-13 13:05:08"}
+{"message":"2023-09-13 13:05:08"}
+Debug: BEFORE_CLAIM = 9998092871
+Debug: AFTER_CLAIM = 9996066315
+Debug: DIFFERENCE = -2026556
+{"message":"Amount before claim: 9998092871"}
+{"message":"Amount after claim: 9996066315"}
+{"message":"Difference between before claim and after claim: -2026556"}
+Difference detected.
+{"message":"-2026556"}
+{"message":"Total Redemption Amount: -2026556"}
+{"message":"2023-09-13 13:05:09"}
+{"message":"2023-09-13 13:05:09"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .48"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 -972746uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 13:05:14"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .51"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw -1033543uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 13:05:19"}
+{"message":"2023-09-13 14:05:01"}
+{"message":"2023-09-13 14:05:01"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-13 14:05:01"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:02"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:03"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:04"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:05"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:06"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:07"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"2023-09-13 14:05:08"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 120742858"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 63887112"}
+{"message":"2023-09-13 14:05:09"}
+{"message":"Total Tokens: 184629970"}
+{"message":"2023-09-13 14:05:09"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "161926453", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9995189088", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-13 14:05:12"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"Liquid Amount: 161926453"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"total redemption amount: 9995189088"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"2023-09-13 14:05:12"}
+{"message":"2023-09-13 14:05:12"}
+Debug: BEFORE_CLAIM = 9988634154
+Debug: AFTER_CLAIM = 9995729088
+Debug: DIFFERENCE = 7094934
+{"message":"Amount before claim: 9988634154"}
+{"message":"Amount after claim: 9995729088"}
+{"message":"Difference between before claim and after claim: 7094934"}
+Difference detected.
+{"message":"7094934"}
+{"message":"Total Redemption Amount: 7094934"}
+{"message":"2023-09-13 14:05:13"}
+{"message":"2023-09-13 14:05:13"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .65"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 4611707uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "4193F62124DE8564A4E43216FF0E55D4DF89DA4B804C75B7B2D1713AD0439DCC" }
+{"message":"2023-09-13 14:05:20"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .34"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw 2412277uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "70F484002541C848E23511A92C4D140F68A471D08C8992F8374071B051D8FF07" }
+{"message":"2023-09-13 14:05:27"}
+{"message":"2023-09-13 15:05:00"}
+{"message":"2023-09-13 15:05:00"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-13 15:05:00"}
+{"message":"2023-09-13 15:05:00"}
+{"message":"2023-09-13 15:05:00"}
+{"message":"2023-09-13 15:05:00"}
+{"message":"2023-09-13 15:05:00"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:01"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:02"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:03"}
+{"message":"2023-09-13 15:05:04"}
+{"message":"2023-09-13 15:05:04"}
+{"message":"2023-09-13 15:05:04"}
+{"message":"2023-09-13 15:05:04"}
+{"message":"2023-09-13 15:05:04"}
+{"message":"2023-09-13 15:05:04"}
+{"message":"2023-09-13 15:05:04"}
+{"message":"2023-09-13 15:05:04"}
+{"message":"2023-09-13 15:05:04"}
+{"message":"2023-09-13 15:05:04"}
+{"message":"2023-09-13 15:05:04"}
+{"message":"2023-09-13 15:05:04"}
+{"message":"2023-09-13 15:05:04"}
+{"message":"2023-09-13 15:05:04"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:05"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:06"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:07"}
+{"message":"2023-09-13 15:05:08"}
+{"message":"2023-09-13 15:05:08"}
+{"message":"2023-09-13 15:05:08"}
+{"message":"2023-09-13 15:05:08"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 281817718"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 139782252"}
+{"message":"2023-09-13 15:05:08"}
+{"message":"Total Tokens: 421599970"}
+{"message":"2023-09-13 15:05:08"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "401452414", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "10031711172", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-13 15:05:11"}
+{"message":"2023-09-13 15:05:11"}
+{"message":"2023-09-13 15:05:11"}
+{"message":"2023-09-13 15:05:12"}
+{"message":"2023-09-13 15:05:12"}
+{"message":"2023-09-13 15:05:12"}
+{"message":"Liquid Amount: 401452414"}
+{"message":"2023-09-13 15:05:12"}
+{"message":"2023-09-13 15:05:12"}
+{"message":"2023-09-13 15:05:12"}
+{"message":"2023-09-13 15:05:12"}
+{"message":"total redemption amount: 10031711172"}
+{"message":"2023-09-13 15:05:12"}
+{"message":"2023-09-13 15:05:12"}
+{"message":"2023-09-13 15:05:12"}
+{"message":"2023-09-13 15:05:12"}
+{"message":"2023-09-13 15:05:12"}
+{"message":"2023-09-13 15:05:12"}
+{"message":"2023-09-13 15:05:12"}
+Debug: BEFORE_CLAIM = 9981238923
+Debug: AFTER_CLAIM = 10032271172
+Debug: DIFFERENCE = 51032249
+{"message":"Amount before claim: 9981238923"}
+{"message":"Amount after claim: 10032271172"}
+{"message":"Difference between before claim and after claim: 51032249"}
+Difference detected.
+{"message":"51032249"}
+{"message":"Total Redemption Amount: 51032249"}
+{"message":"2023-09-13 15:05:13"}
+{"message":"2023-09-13 15:05:13"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .66"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 33681284uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "6914E43C73CF93BBDD9D41837DF6B8A325ADCCDC46DCB4D4E09854C983612145" }
+{"message":"2023-09-13 15:05:21"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .33"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw 16840642uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+{ "code": 0, "codespace": "", "data": "", "events": [], "gas_used": "0", "gas_wanted": "0", "height": "0", "info": "", "logs": [], "raw_log": "[]", "timestamp": "", "tx": null, "txhash": "45BB47464993A2E082CA8445C705649C8B143E4D7F980D9D522C715B518AC422" }
+{"message":"2023-09-13 15:05:29"}
+{"message":"2023-09-13 16:05:01"}
+{"message":"2023-09-13 16:05:01"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-13 16:05:01"}
+{"message":"2023-09-13 16:05:01"}
+{"message":"2023-09-13 16:05:01"}
+{"message":"2023-09-13 16:05:01"}
+{"message":"2023-09-13 16:05:01"}
+{"message":"2023-09-13 16:05:01"}
+{"message":"2023-09-13 16:05:01"}
+{"message":"2023-09-13 16:05:01"}
+{"message":"2023-09-13 16:05:01"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:02"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:03"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:04"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:05"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:06"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:07"}
+{"message":"2023-09-13 16:05:08"}
+{"message":"2023-09-13 16:05:08"}
+{"message":"2023-09-13 16:05:08"}
+{"message":"2023-09-13 16:05:08"}
+{"message":"2023-09-13 16:05:08"}
+{"message":"2023-09-13 16:05:08"}
+{"message":"2023-09-13 16:05:08"}
+{"message":"2023-09-13 16:05:08"}
+{"message":"2023-09-13 16:05:08"}
+{"message":"2023-09-13 16:05:08"}
+{"message":"2023-09-13 16:05:08"}
+{"message":"2023-09-13 16:05:08"}
+{"message":"2023-09-13 16:05:08"}
+{"message":"2023-09-13 16:05:08"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 408324002"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 203805968"}
+{"message":"2023-09-13 16:05:09"}
+{"message":"Total Tokens: 612129970"}
+{"message":"2023-09-13 16:05:09"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "472296088", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9971666058", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-13 16:05:11"}
+{"message":"2023-09-13 16:05:11"}
+{"message":"2023-09-13 16:05:11"}
+{"message":"2023-09-13 16:05:11"}
+{"message":"2023-09-13 16:05:11"}
+{"message":"2023-09-13 16:05:11"}
+{"message":"Liquid Amount: 472296088"}
+{"message":"2023-09-13 16:05:12"}
+{"message":"2023-09-13 16:05:12"}
+{"message":"2023-09-13 16:05:12"}
+{"message":"2023-09-13 16:05:12"}
+{"message":"total redemption amount: 9971666058"}
+{"message":"2023-09-13 16:05:12"}
+{"message":"2023-09-13 16:05:12"}
+{"message":"2023-09-13 16:05:12"}
+{"message":"2023-09-13 16:05:12"}
+{"message":"2023-09-13 16:05:12"}
+{"message":"2023-09-13 16:05:12"}
+{"message":"2023-09-13 16:05:12"}
+Debug: BEFORE_CLAIM = 9974463058
+Debug: AFTER_CLAIM = 9972266058
+Debug: DIFFERENCE = -2197000
+{"message":"Amount before claim: 9974463058"}
+{"message":"Amount after claim: 9972266058"}
+{"message":"Difference between before claim and after claim: -2197000"}
+Difference detected.
+{"message":"-2197000"}
+{"message":"Total Redemption Amount: -2197000"}
+{"message":"2023-09-13 16:05:13"}
+{"message":"2023-09-13 16:05:13"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .66"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 -1450020uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 16:05:18"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .33"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw -725010uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 16:05:23"}
+{"message":"2023-09-13 17:05:01"}
+{"message":"2023-09-13 17:05:01"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-13 17:05:01"}
+{"message":"2023-09-13 17:05:01"}
+{"message":"2023-09-13 17:05:01"}
+{"message":"2023-09-13 17:05:01"}
+{"message":"2023-09-13 17:05:01"}
+{"message":"2023-09-13 17:05:01"}
+{"message":"2023-09-13 17:05:01"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:02"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:03"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:04"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:05"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:06"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:07"}
+{"message":"2023-09-13 17:05:08"}
+{"message":"2023-09-13 17:05:08"}
+{"message":"2023-09-13 17:05:08"}
+{"message":"2023-09-13 17:05:08"}
+{"message":"2023-09-13 17:05:08"}
+{"message":"2023-09-13 17:05:08"}
+{"message":"2023-09-13 17:05:08"}
+{"message":"2023-09-13 17:05:08"}
+{"message":"2023-09-13 17:05:08"}
+{"message":"2023-09-13 17:05:08"}
+{"message":"2023-09-13 17:05:08"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 485040244"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 246979726"}
+{"message":"2023-09-13 17:05:08"}
+{"message":"Total Tokens: 732019970"}
+{"message":"2023-09-13 17:05:08"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "463270045", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9962421869", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-13 17:05:13"}
+{"message":"2023-09-13 17:05:13"}
+{"message":"2023-09-13 17:05:13"}
+{"message":"2023-09-13 17:05:13"}
+{"message":"2023-09-13 17:05:13"}
+{"message":"2023-09-13 17:05:13"}
+{"message":"Liquid Amount: 463270045"}
+{"message":"2023-09-13 17:05:13"}
+{"message":"2023-09-13 17:05:13"}
+{"message":"2023-09-13 17:05:13"}
+{"message":"2023-09-13 17:05:13"}
+{"message":"total redemption amount: 9962421869"}
+{"message":"2023-09-13 17:05:13"}
+{"message":"2023-09-13 17:05:13"}
+{"message":"2023-09-13 17:05:13"}
+{"message":"2023-09-13 17:05:13"}
+{"message":"2023-09-13 17:05:14"}
+{"message":"2023-09-13 17:05:14"}
+{"message":"2023-09-13 17:05:14"}
+Debug: BEFORE_CLAIM = 9965112869
+Debug: AFTER_CLAIM = 9962981869
+Debug: DIFFERENCE = -2131000
+{"message":"Amount before claim: 9965112869"}
+{"message":"Amount after claim: 9962981869"}
+{"message":"Difference between before claim and after claim: -2131000"}
+Difference detected.
+{"message":"-2131000"}
+{"message":"Total Redemption Amount: -2131000"}
+{"message":"2023-09-13 17:05:14"}
+{"message":"2023-09-13 17:05:14"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .66"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 -1406460uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 17:05:20"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .33"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw -703230uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 17:05:25"}
+{"message":"2023-09-13 18:05:03"}
+{"message":"2023-09-13 18:05:03"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-13 18:05:03"}
+{"message":"2023-09-13 18:05:03"}
+{"message":"2023-09-13 18:05:04"}
+{"message":"2023-09-13 18:05:04"}
+{"message":"2023-09-13 18:05:04"}
+{"message":"2023-09-13 18:05:04"}
+{"message":"2023-09-13 18:05:04"}
+{"message":"2023-09-13 18:05:04"}
+{"message":"2023-09-13 18:05:04"}
+{"message":"2023-09-13 18:05:04"}
+{"message":"2023-09-13 18:05:04"}
+{"message":"2023-09-13 18:05:04"}
+{"message":"2023-09-13 18:05:04"}
+{"message":"2023-09-13 18:05:05"}
+{"message":"2023-09-13 18:05:05"}
+{"message":"2023-09-13 18:05:05"}
+{"message":"2023-09-13 18:05:05"}
+{"message":"2023-09-13 18:05:05"}
+{"message":"2023-09-13 18:05:05"}
+{"message":"2023-09-13 18:05:05"}
+{"message":"2023-09-13 18:05:05"}
+{"message":"2023-09-13 18:05:05"}
+{"message":"2023-09-13 18:05:05"}
+{"message":"2023-09-13 18:05:05"}
+{"message":"2023-09-13 18:05:05"}
+{"message":"2023-09-13 18:05:05"}
+{"message":"2023-09-13 18:05:05"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:06"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:07"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:08"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:09"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:10"}
+{"message":"2023-09-13 18:05:11"}
+{"message":"2023-09-13 18:05:11"}
+{"message":"2023-09-13 18:05:11"}
+{"message":"2023-09-13 18:05:11"}
+{"message":"2023-09-13 18:05:11"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 627397206"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 313522764"}
+{"message":"2023-09-13 18:05:11"}
+{"message":"Total Tokens: 940919970"}
+{"message":"2023-09-13 18:05:11"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "366436770", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9955493869", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-13 18:05:14"}
+{"message":"2023-09-13 18:05:14"}
+{"message":"2023-09-13 18:05:14"}
+{"message":"2023-09-13 18:05:15"}
+{"message":"2023-09-13 18:05:15"}
+{"message":"2023-09-13 18:05:15"}
+{"message":"Liquid Amount: 366436770"}
+{"message":"2023-09-13 18:05:15"}
+{"message":"2023-09-13 18:05:15"}
+{"message":"2023-09-13 18:05:15"}
+{"message":"2023-09-13 18:05:16"}
+{"message":"total redemption amount: 9955493869"}
+{"message":"2023-09-13 18:05:16"}
+{"message":"2023-09-13 18:05:16"}
+{"message":"2023-09-13 18:05:16"}
+{"message":"2023-09-13 18:05:16"}
+{"message":"2023-09-13 18:05:16"}
+{"message":"2023-09-13 18:05:16"}
+{"message":"2023-09-13 18:05:16"}
+Debug: BEFORE_CLAIM = 9957087869
+Debug: AFTER_CLAIM = 9955673869
+Debug: DIFFERENCE = -1414000
+{"message":"Amount before claim: 9957087869"}
+{"message":"Amount after claim: 9955673869"}
+{"message":"Difference between before claim and after claim: -1414000"}
+Difference detected.
+{"message":"-1414000"}
+{"message":"Total Redemption Amount: -1414000"}
+{"message":"2023-09-13 18:05:17"}
+{"message":"2023-09-13 18:05:17"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .66"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 -933240uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 18:05:22"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .33"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw -466620uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 18:05:28"}
+{"message":"2023-09-13 19:05:01"}
+{"message":"2023-09-13 19:05:01"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-13 19:05:01"}
+{"message":"2023-09-13 19:05:01"}
+{"message":"2023-09-13 19:05:01"}
+{"message":"2023-09-13 19:05:01"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:02"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:03"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:04"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:05"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:06"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:07"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 762790120"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 380819851"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"Total Tokens: 1143609971"}
+{"message":"2023-09-13 19:05:08"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "358152649", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9949598659", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-13 19:05:12"}
+{"message":"2023-09-13 19:05:12"}
+{"message":"2023-09-13 19:05:12"}
+{"message":"2023-09-13 19:05:12"}
+{"message":"2023-09-13 19:05:12"}
+{"message":"2023-09-13 19:05:12"}
+{"message":"Liquid Amount: 358152649"}
+{"message":"2023-09-13 19:05:13"}
+{"message":"2023-09-13 19:05:13"}
+{"message":"2023-09-13 19:05:13"}
+{"message":"2023-09-13 19:05:13"}
+{"message":"total redemption amount: 9949598659"}
+{"message":"2023-09-13 19:05:13"}
+{"message":"2023-09-13 19:05:13"}
+{"message":"2023-09-13 19:05:13"}
+{"message":"2023-09-13 19:05:13"}
+{"message":"2023-09-13 19:05:13"}
+{"message":"2023-09-13 19:05:13"}
+{"message":"2023-09-13 19:05:13"}
+Debug: BEFORE_CLAIM = 9951435659
+Debug: AFTER_CLAIM = 9949978659
+Debug: DIFFERENCE = -1457000
+{"message":"Amount before claim: 9951435659"}
+{"message":"Amount after claim: 9949978659"}
+{"message":"Difference between before claim and after claim: -1457000"}
+Difference detected.
+{"message":"-1457000"}
+{"message":"Total Redemption Amount: -1457000"}
+{"message":"2023-09-13 19:05:14"}
+{"message":"2023-09-13 19:05:14"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .66"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 -961620uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 19:05:19"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .33"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw -480810uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 19:05:24"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:01"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:02"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:03"}
+{"message":"2023-09-13 20:05:04"}
+{"message":"2023-09-13 20:05:04"}
+{"message":"2023-09-13 20:05:04"}
+{"message":"2023-09-13 20:05:04"}
+{"message":"2023-09-13 20:05:04"}
+{"message":"2023-09-13 20:05:04"}
+{"message":"2023-09-13 20:05:04"}
+{"message":"2023-09-13 20:05:04"}
+{"message":"2023-09-13 20:05:04"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 397670859"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 199589125"}
+{"message":"2023-09-13 20:05:04"}
+{"message":"Total Tokens: 597259984"}
+{"message":"2023-09-13 20:05:04"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+null
+{"message":"2023-09-13 20:21:49"}
+{"message":"2023-09-13 20:21:50"}
+{"message":"2023-09-13 20:21:50"}
+Debug: BEFORE_CLAIM = 9951435659
+Debug: AFTER_CLAIM = 9949978659
+Debug: DIFFERENCE = -1457000
+{"message":"Amount before claim: 9951435659"}
+{"message":"Amount after claim: 9949978659"}
+{"message":"Difference between before claim and after claim: -1457000"}
+Difference detected.
+{"message":"-1457000"}
+{"message":"Total Redemption Amount: -1457000"}
+{"message":"2023-09-13 20:21:51"}
+{"message":"2023-09-13 20:21:51"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .66"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 -961620uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 20:21:56"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .33"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw -480810uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 20:22:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:02"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:03"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:04"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:05"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 650599070"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 325400908"}
+{"message":"2023-09-13 21:05:06"}
+{"message":"Total Tokens: 975999978"}
+{"message":"2023-09-13 21:05:07"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "347079093", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9940330659", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-13 21:05:10"}
+{"message":"2023-09-13 21:05:10"}
+{"message":"2023-09-13 21:05:10"}
+{"message":"2023-09-13 21:05:10"}
+{"message":"2023-09-13 21:05:10"}
+{"message":"2023-09-13 21:05:10"}
+{"message":"Liquid Amount: 347079093"}
+{"message":"2023-09-13 21:05:10"}
+{"message":"2023-09-13 21:05:10"}
+{"message":"2023-09-13 21:05:10"}
+{"message":"2023-09-13 21:05:10"}
+{"message":"total redemption amount: 9940330659"}
+{"message":"2023-09-13 21:05:10"}
+{"message":"2023-09-13 21:05:10"}
+{"message":"2023-09-13 21:05:10"}
+{"message":"2023-09-13 21:05:10"}
+{"message":"2023-09-13 21:05:11"}
+{"message":"2023-09-13 21:05:11"}
+{"message":"2023-09-13 21:05:11"}
+Debug: BEFORE_CLAIM = 9942787659
+Debug: AFTER_CLAIM = 9940830659
+Debug: DIFFERENCE = -1957000
+{"message":"Amount before claim: 9942787659"}
+{"message":"Amount after claim: 9940830659"}
+{"message":"Difference between before claim and after claim: -1957000"}
+Difference detected.
+{"message":"-1957000"}
+{"message":"Total Redemption Amount: -1957000"}
+{"message":"2023-09-13 21:05:11"}
+{"message":"2023-09-13 21:05:11"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .66"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 -1291620uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 21:05:16"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .33"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw -645810uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 21:05:21"}
+{"message":"2023-09-13 22:05:01"}
+{"message":"2023-09-13 22:05:01"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-13 22:05:01"}
+{"message":"2023-09-13 22:05:01"}
+{"message":"2023-09-13 22:05:01"}
+{"message":"2023-09-13 22:05:01"}
+{"message":"2023-09-13 22:05:01"}
+{"message":"2023-09-13 22:05:01"}
+{"message":"2023-09-13 22:05:01"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:02"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:03"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:04"}
+{"message":"2023-09-13 22:05:05"}
+{"message":"2023-09-13 22:05:05"}
+{"message":"2023-09-13 22:05:05"}
+{"message":"2023-09-13 22:05:05"}
+{"message":"2023-09-13 22:05:05"}
+{"message":"2023-09-13 22:05:05"}
+{"message":"2023-09-13 22:05:05"}
+{"message":"2023-09-13 22:05:05"}
+{"message":"2023-09-13 22:05:05"}
+{"message":"2023-09-13 22:05:05"}
+{"message":"2023-09-13 22:05:05"}
+{"message":"2023-09-13 22:05:05"}
+{"message":"2023-09-13 22:05:05"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:06"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 926749662"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 463580308"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"Total Tokens: 1390329970"}
+{"message":"2023-09-13 22:05:07"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "334092705", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9933725659", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-13 22:05:11"}
+{"message":"2023-09-13 22:05:11"}
+{"message":"2023-09-13 22:05:12"}
+{"message":"2023-09-13 22:05:12"}
+{"message":"2023-09-13 22:05:12"}
+{"message":"2023-09-13 22:05:12"}
+{"message":"Liquid Amount: 334092705"}
+{"message":"2023-09-13 22:05:12"}
+{"message":"2023-09-13 22:05:12"}
+{"message":"2023-09-13 22:05:12"}
+{"message":"2023-09-13 22:05:12"}
+{"message":"total redemption amount: 9933725659"}
+{"message":"2023-09-13 22:05:12"}
+{"message":"2023-09-13 22:05:12"}
+{"message":"2023-09-13 22:05:12"}
+{"message":"2023-09-13 22:05:12"}
+{"message":"2023-09-13 22:05:12"}
+{"message":"2023-09-13 22:05:12"}
+{"message":"2023-09-13 22:05:12"}
+Debug: BEFORE_CLAIM = 9935536659
+Debug: AFTER_CLAIM = 9934105659
+Debug: DIFFERENCE = -1431000
+{"message":"Amount before claim: 9935536659"}
+{"message":"Amount after claim: 9934105659"}
+{"message":"Difference between before claim and after claim: -1431000"}
+Difference detected.
+{"message":"-1431000"}
+{"message":"Total Redemption Amount: -1431000"}
+{"message":"2023-09-13 22:05:13"}
+{"message":"2023-09-13 22:05:13"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .66"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 -944460uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 22:05:18"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .33"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw -472230uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 22:05:23"}
+{"message":"2023-09-13 23:05:01"}
+{"message":"2023-09-13 23:05:01"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-13 23:05:01"}
+{"message":"2023-09-13 23:05:01"}
+{"message":"2023-09-13 23:05:01"}
+{"message":"2023-09-13 23:05:01"}
+{"message":"2023-09-13 23:05:01"}
+{"message":"2023-09-13 23:05:01"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:02"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:03"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:04"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:05"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:06"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:07"}
+{"message":"2023-09-13 23:05:08"}
+{"message":"2023-09-13 23:05:08"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 1087963287"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 543576683"}
+{"message":"2023-09-13 23:05:08"}
+{"message":"Total Tokens: 1631539970"}
+{"message":"2023-09-13 23:05:08"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "354469364", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9927991659", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-13 23:05:11"}
+{"message":"2023-09-13 23:05:11"}
+{"message":"2023-09-13 23:05:12"}
+{"message":"2023-09-13 23:05:12"}
+{"message":"2023-09-13 23:05:12"}
+{"message":"2023-09-13 23:05:12"}
+{"message":"Liquid Amount: 354469364"}
+{"message":"2023-09-13 23:05:12"}
+{"message":"2023-09-13 23:05:12"}
+{"message":"2023-09-13 23:05:12"}
+{"message":"2023-09-13 23:05:12"}
+{"message":"total redemption amount: 9927991659"}
+{"message":"2023-09-13 23:05:12"}
+{"message":"2023-09-13 23:05:12"}
+{"message":"2023-09-13 23:05:12"}
+{"message":"2023-09-13 23:05:12"}
+{"message":"2023-09-13 23:05:12"}
+{"message":"2023-09-13 23:05:12"}
+{"message":"2023-09-13 23:05:12"}
+Debug: BEFORE_CLAIM = 9929588659
+Debug: AFTER_CLAIM = 9928291659
+Debug: DIFFERENCE = -1297000
+{"message":"Amount before claim: 9929588659"}
+{"message":"Amount after claim: 9928291659"}
+{"message":"Difference between before claim and after claim: -1297000"}
+Difference detected.
+{"message":"-1297000"}
+{"message":"Total Redemption Amount: -1297000"}
+{"message":"2023-09-13 23:05:13"}
+{"message":"2023-09-13 23:05:13"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .66"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 -856020uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 23:05:18"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .33"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw -428010uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-13 23:05:23"}
+{"message":"2023-09-14 00:05:01"}
+{"message":"2023-09-14 00:05:01"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-14 00:05:01"}
+{"message":"2023-09-14 00:05:01"}
+{"message":"2023-09-14 00:05:01"}
+{"message":"2023-09-14 00:05:01"}
+{"message":"2023-09-14 00:05:01"}
+{"message":"2023-09-14 00:05:01"}
+{"message":"2023-09-14 00:05:01"}
+{"message":"2023-09-14 00:05:01"}
+{"message":"2023-09-14 00:05:01"}
+{"message":"2023-09-14 00:05:01"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:02"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:03"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:04"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:05"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:06"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"2023-09-14 00:05:07"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 1222786424"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 609713546"}
+{"message":"2023-09-14 00:05:08"}
+{"message":"Total Tokens: 1832499970"}
+{"message":"2023-09-14 00:05:08"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "340683376", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9922803659", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-14 00:05:11"}
+{"message":"2023-09-14 00:05:11"}
+{"message":"2023-09-14 00:05:11"}
+{"message":"2023-09-14 00:05:11"}
+{"message":"2023-09-14 00:05:12"}
+{"message":"2023-09-14 00:05:12"}
+{"message":"Liquid Amount: 340683376"}
+{"message":"2023-09-14 00:05:12"}
+{"message":"2023-09-14 00:05:12"}
+{"message":"2023-09-14 00:05:12"}
+{"message":"2023-09-14 00:05:12"}
+{"message":"total redemption amount: 9922803659"}
+{"message":"2023-09-14 00:05:12"}
+{"message":"2023-09-14 00:05:12"}
+{"message":"2023-09-14 00:05:12"}
+{"message":"2023-09-14 00:05:12"}
+{"message":"2023-09-14 00:05:12"}
+{"message":"2023-09-14 00:05:12"}
+{"message":"2023-09-14 00:05:12"}
+Debug: BEFORE_CLAIM = 9924297659
+Debug: AFTER_CLAIM = 9923123659
+Debug: DIFFERENCE = -1174000
+{"message":"Amount before claim: 9924297659"}
+{"message":"Amount after claim: 9923123659"}
+{"message":"Difference between before claim and after claim: -1174000"}
+Difference detected.
+{"message":"-1174000"}
+{"message":"Total Redemption Amount: -1174000"}
+{"message":"2023-09-14 00:05:13"}
+{"message":"2023-09-14 00:05:13"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .66"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 -774840uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-14 00:05:18"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .33"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw -387420uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-14 00:05:23"}
+{"message":"2023-09-14 01:05:01"}
+{"message":"2023-09-14 01:05:01"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-14 01:05:01"}
+{"message":"2023-09-14 01:05:01"}
+{"message":"2023-09-14 01:05:01"}
+{"message":"2023-09-14 01:05:01"}
+{"message":"2023-09-14 01:05:01"}
+{"message":"2023-09-14 01:05:01"}
+{"message":"2023-09-14 01:05:01"}
+{"message":"2023-09-14 01:05:01"}
+{"message":"2023-09-14 01:05:01"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:02"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:03"}
+{"message":"2023-09-14 01:05:04"}
+{"message":"2023-09-14 01:05:04"}
+{"message":"2023-09-14 01:05:04"}
+{"message":"2023-09-14 01:05:04"}
+{"message":"2023-09-14 01:05:04"}
+{"message":"2023-09-14 01:05:04"}
+{"message":"2023-09-14 01:05:04"}
+{"message":"2023-09-14 01:05:04"}
+{"message":"2023-09-14 01:05:04"}
+{"message":"2023-09-14 01:05:04"}
+{"message":"2023-09-14 01:05:04"}
+{"message":"2023-09-14 01:05:04"}
+{"message":"2023-09-14 01:05:04"}
+{"message":"2023-09-14 01:05:04"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:05"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:06"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 1245453075"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 622486895"}
+{"message":"2023-09-14 01:05:07"}
+{"message":"Total Tokens: 1867939970"}
+{"message":"2023-09-14 01:05:08"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "352644323", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9917809659", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-14 01:05:10"}
+{"message":"2023-09-14 01:05:10"}
+{"message":"2023-09-14 01:05:10"}
+{"message":"2023-09-14 01:05:10"}
+{"message":"2023-09-14 01:05:11"}
+{"message":"2023-09-14 01:05:11"}
+{"message":"Liquid Amount: 352644323"}
+{"message":"2023-09-14 01:05:11"}
+{"message":"2023-09-14 01:05:11"}
+{"message":"2023-09-14 01:05:11"}
+{"message":"2023-09-14 01:05:11"}
+{"message":"total redemption amount: 9917809659"}
+{"message":"2023-09-14 01:05:11"}
+{"message":"2023-09-14 01:05:11"}
+{"message":"2023-09-14 01:05:11"}
+{"message":"2023-09-14 01:05:11"}
+{"message":"2023-09-14 01:05:11"}
+{"message":"2023-09-14 01:05:11"}
+{"message":"2023-09-14 01:05:11"}
+Debug: BEFORE_CLAIM = 9919246659
+Debug: AFTER_CLAIM = 9918089659
+Debug: DIFFERENCE = -1157000
+{"message":"Amount before claim: 9919246659"}
+{"message":"Amount after claim: 9918089659"}
+{"message":"Difference between before claim and after claim: -1157000"}
+Difference detected.
+{"message":"-1157000"}
+{"message":"Total Redemption Amount: -1157000"}
+{"message":"2023-09-14 01:05:11"}
+{"message":"2023-09-14 01:05:12"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .66"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 -763620uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-14 01:05:17"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .33"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw -381810uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-14 01:05:22"}
+{"message":"2023-09-14 02:05:01"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:02"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:03"}
+{"message":"2023-09-14 02:05:04"}
+{"message":"2023-09-14 02:05:04"}
+{"message":"2023-09-14 02:05:04"}
+{"message":"2023-09-14 02:05:04"}
+{"message":"2023-09-14 02:05:04"}
+{"message":"2023-09-14 02:05:04"}
+{"message":"2023-09-14 02:05:04"}
+{"message":"2023-09-14 02:05:04"}
+{"message":"2023-09-14 02:05:04"}
+{"message":"2023-09-14 02:05:04"}
+{"message":"2023-09-14 02:05:04"}
+{"message":"2023-09-14 02:05:04"}
+{"message":"2023-09-14 02:05:04"}
+{"message":"2023-09-14 02:05:04"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:05"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:06"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:07"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 1197648255"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 600461716"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"Total Tokens: 1798109971"}
+{"message":"2023-09-14 02:05:08"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "366436770", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9912915659", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-14 02:05:11"}
+{"message":"2023-09-14 02:05:11"}
+{"message":"2023-09-14 02:05:11"}
+{"message":"2023-09-14 02:05:11"}
+{"message":"2023-09-14 02:05:11"}
+{"message":"2023-09-14 02:05:11"}
+{"message":"Liquid Amount: 366436770"}
+{"message":"2023-09-14 02:05:11"}
+{"message":"2023-09-14 02:05:11"}
+{"message":"2023-09-14 02:05:11"}
+{"message":"2023-09-14 02:05:12"}
+{"message":"total redemption amount: 9912915659"}
+{"message":"2023-09-14 02:05:12"}
+{"message":"2023-09-14 02:05:12"}
+{"message":"2023-09-14 02:05:12"}
+{"message":"2023-09-14 02:05:12"}
+{"message":"2023-09-14 02:05:12"}
+{"message":"2023-09-14 02:05:12"}
+{"message":"2023-09-14 02:05:12"}
+Debug: BEFORE_CLAIM = 9914315659
+Debug: AFTER_CLAIM = 9913195659
+Debug: DIFFERENCE = -1120000
+{"message":"Amount before claim: 9914315659"}
+{"message":"Amount after claim: 9913195659"}
+{"message":"Difference between before claim and after claim: -1120000"}
+Difference detected.
+{"message":"-1120000"}
+{"message":"Total Redemption Amount: -1120000"}
+{"message":"2023-09-14 02:05:12"}
+{"message":"2023-09-14 02:05:12"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .66"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 -739200uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-14 02:05:18"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .33"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw -369600uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-14 02:05:23"}
+{"message":"2023-09-14 03:05:01"}
+{"message":"2023-09-14 03:05:01"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-14 03:05:01"}
+{"message":"2023-09-14 03:05:01"}
+{"message":"2023-09-14 03:05:01"}
+{"message":"2023-09-14 03:05:01"}
+{"message":"2023-09-14 03:05:01"}
+{"message":"2023-09-14 03:05:01"}
+{"message":"2023-09-14 03:05:01"}
+{"message":"2023-09-14 03:05:01"}
+{"message":"2023-09-14 03:05:01"}
+{"message":"2023-09-14 03:05:01"}
+{"message":"2023-09-14 03:05:01"}
+{"message":"2023-09-14 03:05:01"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:02"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:03"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:04"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:05"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:06"}
+{"message":"2023-09-14 03:05:07"}
+{"message":"2023-09-14 03:05:07"}
+{"message":"2023-09-14 03:05:07"}
+{"message":"2023-09-14 03:05:07"}
+{"message":"2023-09-14 03:05:07"}
+{"message":"2023-09-14 03:05:07"}
+{"message":"2023-09-14 03:05:07"}
+{"message":"2023-09-14 03:05:07"}
+{"message":"2023-09-14 03:05:07"}
+{"message":"2023-09-14 03:05:07"}
+{"message":"2023-09-14 03:05:07"}
+{"message":"2023-09-14 03:05:07"}
+{"message":"2023-09-14 03:05:07"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has tokens: 1227237945"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has tokens: 615252025"}
+{"message":"2023-09-14 03:05:08"}
+{"message":"Total Tokens: 1842489970"}
+{"message":"2023-09-14 03:05:08"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+{ "balances": [ { "amount": "304983490", "denom": "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" }, { "amount": "9908001659", "denom": "uarch" } ], "pagination": { "next_key": null, "total": "0" } }
+{"message":"2023-09-14 03:05:10"}
+{"message":"2023-09-14 03:05:10"}
+{"message":"2023-09-14 03:05:10"}
+{"message":"2023-09-14 03:05:10"}
+{"message":"2023-09-14 03:05:10"}
+{"message":"2023-09-14 03:05:10"}
+{"message":"Liquid Amount: 304983490"}
+{"message":"2023-09-14 03:05:10"}
+{"message":"2023-09-14 03:05:11"}
+{"message":"2023-09-14 03:05:11"}
+{"message":"2023-09-14 03:05:11"}
+{"message":"total redemption amount: 9908001659"}
+{"message":"2023-09-14 03:05:11"}
+{"message":"2023-09-14 03:05:11"}
+{"message":"2023-09-14 03:05:11"}
+{"message":"2023-09-14 03:05:11"}
+{"message":"2023-09-14 03:05:11"}
+{"message":"2023-09-14 03:05:11"}
+{"message":"2023-09-14 03:05:11"}
+Debug: BEFORE_CLAIM = 9909435659
+Debug: AFTER_CLAIM = 9908281659
+Debug: DIFFERENCE = -1154000
+{"message":"Amount before claim: 9909435659"}
+{"message":"Amount after claim: 9908281659"}
+{"message":"Difference between before claim and after claim: -1154000"}
+Difference detected.
+{"message":"-1154000"}
+{"message":"Total Redemption Amount: -1154000"}
+{"message":"2023-09-14 03:05:11"}
+{"message":"2023-09-14 03:05:11"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has a ratio of .66"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449 -761640uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-14 03:05:17"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has a ratio of .33"}
+{"message":"Executing: /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd tx --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 bank send archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw -380820uarch --from pval2 --keyring-backend=test --chain-id localnet --fees 17000uarch -y"}
+null
+{"message":"2023-09-14 03:05:22"}
+{"message":"2023-09-14 05:05:02"}
+{"message":"2023-09-14 05:05:02"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-14 05:05:02"}
+{"message":"2023-09-14 05:05:03"}
+{"message":"2023-09-14 05:05:03"}
+{"message":"Total Tokens: 0"}
+{"message":"2023-09-14 05:05:03"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+null
+{"message":"2023-09-14 05:05:05"}
+{"message":"2023-09-14 05:05:05"}
+{"message":"2023-09-14 05:05:05"}
+Debug: BEFORE_CLAIM = 9909435659
+Debug: AFTER_CLAIM = 9908281659
+Debug: DIFFERENCE = -1154000
+{"message":"Amount before claim: 9909435659"}
+{"message":"Amount after claim: 9908281659"}
+{"message":"Difference between before claim and after claim: -1154000"}
+Difference detected.
+{"message":"-1154000"}
+{"message":"Total Redemption Amount: -1154000"}
+{"message":"2023-09-14 05:05:05"}
+{"message":"2023-09-14 05:05:05"}
+{"message":"2023-09-14 06:05:01"}
+{"message":"2023-09-14 06:05:01"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-14 06:05:01"}
+{"message":"2023-09-14 06:05:01"}
+{"message":"2023-09-14 06:05:01"}
+{"message":"Total Tokens: 0"}
+{"message":"2023-09-14 06:05:01"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+null
+{"message":"2023-09-14 06:05:04"}
+{"message":"2023-09-14 06:05:04"}
+{"message":"2023-09-14 06:05:04"}
+Debug: BEFORE_CLAIM = 9909435659
+Debug: AFTER_CLAIM = 9908281659
+Debug: DIFFERENCE = -1154000
+{"message":"Amount before claim: 9909435659"}
+{"message":"Amount after claim: 9908281659"}
+{"message":"Difference between before claim and after claim: -1154000"}
+Difference detected.
+{"message":"-1154000"}
+{"message":"Total Redemption Amount: -1154000"}
+{"message":"2023-09-14 06:05:04"}
+{"message":"2023-09-14 06:05:04"}
+{"message":"2023-09-14 07:05:01"}
+{"message":"2023-09-14 07:05:01"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-14 07:05:01"}
+{"message":"2023-09-14 07:05:01"}
+{"message":"2023-09-14 07:05:01"}
+{"message":"Total Tokens: 0"}
+{"message":"2023-09-14 07:05:01"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+null
+{"message":"2023-09-14 07:05:04"}
+{"message":"2023-09-14 07:05:04"}
+{"message":"2023-09-14 07:05:04"}
+Debug: BEFORE_CLAIM = 9909435659
+Debug: AFTER_CLAIM = 9908281659
+Debug: DIFFERENCE = -1154000
+{"message":"Amount before claim: 9909435659"}
+{"message":"Amount after claim: 9908281659"}
+{"message":"Difference between before claim and after claim: -1154000"}
+Difference detected.
+{"message":"-1154000"}
+{"message":"Total Redemption Amount: -1154000"}
+{"message":"2023-09-14 07:05:04"}
+{"message":"2023-09-14 07:05:04"}
+{"message":"2023-09-14 08:05:01"}
+{"message":"2023-09-14 08:05:01"}
+{"message":"Contract archway16wlgh046lcea57sm4cdmck92wvkj6a0jth33u7 has redemption address: archway1a3mk2a26pp4jxfkqjr995rjy3eylc3grkwk449"}
+{"message":"Contract archway1k6qq8twqegcr63m3gpvekz97uwm680eecse9cr has redemption address: archway1cft62sz7s6f69xvrzk55xpnq52cg0hky8f85aw"}
+{"message":"2023-09-14 08:05:01"}
+{"message":"2023-09-14 08:05:01"}
+{"message":"2023-09-14 08:05:01"}
+{"message":"Total Tokens: 0"}
+{"message":"2023-09-14 08:05:02"}
+{"message":"/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/build/archwayd --home /media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/state/photo1 q bank balances archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m --chain-id localnet"}
+null
+{"message":"2023-09-14 08:05:04"}
+{"message":"2023-09-14 08:05:04"}
+{"message":"2023-09-14 08:05:04"}
+Debug: BEFORE_CLAIM = 9909435659
+Debug: AFTER_CLAIM = 9908281659
+Debug: DIFFERENCE = -1154000
+{"message":"Amount before claim: 9909435659"}
+{"message":"Amount after claim: 9908281659"}
+{"message":"Difference between before claim and after claim: -1154000"}
+Difference detected.
+{"message":"-1154000"}
+{"message":"Total Redemption Amount: -1154000"}
+{"message":"2023-09-14 08:05:04"}
+{"message":"2023-09-14 08:05:04"}
