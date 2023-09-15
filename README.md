@@ -4284,14 +4284,17 @@ Distribute Redeem Tokens Job Index
 
 Retrieve all active host zones 🌐 where staking and redemption activities can occur.
 
+
 💹 Calculate & Update Redemption Rates:
 
 For each host zone:
 Retrieve associated parameters: stSupply 📊, undelegatedBalance 💼, stakedBalance ⚖️, and moduleAcctBalance 📓.
 If stSupply is not zero 🚫:
-Calculate the redemption rate using the formula:
+Calculate the redemption rate 🧮 using the formula:
+
 (Unbonded Balance 💰 + Staked Balance ⚖️ + Module Account Balance 📓) / (stToken Supply 📦)
 Store the previous redemption rate 📔 and update with the new redemption rate 🔄.
+
 
 🪙 Stake Token Creation (Liquid Stake):
 
