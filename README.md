@@ -4401,6 +4401,7 @@ A) ![Redemption rate, Liquid Staking, Redemption, Claiming Workflow](https://i.i
 B) ![Redemption rate, Liquid Staking, Redemption, Claiming Workflow](https://i.imgur.com/vUbOc3T.png)
 
 
+
 # 🚀 Data Lake Integration: Power BI x Photosynthesis-Archway! 🌱📊
 
 🌟 Feature Highlights:
@@ -4447,22 +4448,19 @@ b) ![Insights Workflow](https://i.imgur.com/afUOAso.jpg)
 c) ![Insights Workflow](https://i.imgur.com/LpHcSTr.jpg)
 
 
-d) ![Insights Workflow](https://i.imgur.com/vUbOc3T.png)
+d) ![Insights Workflow](https://i.imgur.com/tx1pPuj.jpg)
 
 
-e) ![Insights Workflow](https://i.imgur.com/tx1pPuj.jpg)
+e) ![Insights Workflow](https://i.imgur.com/LP3rwZz.jpg)
 
 
-f) ![Insights Workflow](https://i.imgur.com/LP3rwZz.jpg)
+f) ![Insights Workflow](https://i.imgur.com/1pM0nBP.jpg)
 
 
-g) ![Insights Workflow](https://i.imgur.com/1pM0nBP.jpg)
+g) ![Insights Workflow](https://i.imgur.com/ZAR1wYv.jpg)
 
 
-h) ![Insights Workflow](https://i.imgur.com/ZAR1wYv.jpg)
-
-
-i) ![Insights Workflow](https://i.imgur.com/TIpMh7Q.jpg)
+h) ![Insights Workflow](https://i.imgur.com/TIpMh7Q.jpg)
 
 
 
