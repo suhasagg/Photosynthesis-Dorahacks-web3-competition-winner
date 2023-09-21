@@ -38,8 +38,10 @@
         ![Stride](https://i.imgur.com/E3aX28m.png)
     *   F) Stride Rate limit workflow
         ![Stride](https://i.imgur.com/kK6dwSn.png)
-        ![Stride](https://i.imgur.com/i1nSgof.png)
-        ![Stride](https://i.imgur.com/q9AKCUl.png)
+
+        ![Stride](https://i.imgur.com/i1nSgofh.png)
+
+        ![Stride](https://i.imgur.com/q9AKCUlh.png)
 
 ***
 
