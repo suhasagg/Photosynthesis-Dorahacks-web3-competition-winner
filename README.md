@@ -4463,6 +4463,13 @@ g) ![Insights Workflow](https://i.imgur.com/ZAR1wYv.jpg)
 h) ![Insights Workflow](https://i.imgur.com/TIpMh7Q.jpg)
 
 
+# 🔍🌐 Natural Language Queries 📝 on rewards 💰 liquid staking 🌊 data set 📊
+
+
+i) ![Natural Language Queries](https://i.imgur.com/aUu2T8n.jpg)
+
+
+j) ![Natural Language Queries](https://i.imgur.com/KHsLLG8.jpg)
 
 
 # Liquid Staking Ebook
