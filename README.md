@@ -36,6 +36,10 @@
         ![Stride](https://i.imgur.com/S8Nc9EM.png)
     *   E) Stride Airdrop Claim Module Workflow Diagram
         ![Stride](https://i.imgur.com/E3aX28m.png)
+    *   F) Stride Rate limit workflow
+        ![Stride](https://i.imgur.com/kK6dwSn.png)
+        ![Stride](https://i.imgur.com/i1nSgof.png)
+        ![Stride](https://i.imgur.com/q9AKCUl.png)
 
 ***
 
