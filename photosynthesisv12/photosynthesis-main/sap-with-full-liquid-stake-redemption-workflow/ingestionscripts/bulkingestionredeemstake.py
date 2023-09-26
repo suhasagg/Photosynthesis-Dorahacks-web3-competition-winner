@@ -5,7 +5,12 @@ import json
 import re
 import traceback
 
-es = Elasticsearch('http://localhost:9200')
+es = Elasticsearch(
+    ['https://localhost:9200'],
+    http_auth=('elastic', '_CduV5URIkiV_ZTy*lQc'),
+    verify_certs=True,
+    ca_certs="/media/usbHDD1/elasticsearch-8.10.0/config/certs/http_ca.crt"
+)
 
 
 def is_date_format(s):
@@ -102,7 +107,7 @@ def process_log(log_line):
 
         # Universal handling for any other JSON structure
         else:
-            # Just treating the entire JSON as one record
+            # treating the entire JSON as one record
             raw_data["timestamp"] = last_known_timestamp if last_known_timestamp else datetime.utcnow().isoformat()
             processed_records.append(raw_data)
 
@@ -117,37 +122,37 @@ def process_log(log_line):
         print(f"Offending log line: {log_line}")
         return False, f"Error: {str(e)}"
 
- 
-           
+
 
 def read_and_process_log_file(file_name, index_name, bulk_size=1000):
     total_logs = 0
     successful_logs = 0
     failed_logs = 0
-    bulk_ops = []
 
     with open(file_name, "r") as file:
+        bulk_ops = []
+
         for line in file:
             total_logs += 1
             accumulated_line = line.strip()
             success, processed_log = process_log(accumulated_line)
-
+           
+            
             if success:
-                # Ensure that the processed_log is always a list
-                if isinstance(processed_log, dict):  # If it's a single dict, convert to a list
-                    processed_log = [processed_log]
-
-                successful_logs += len(processed_log)
-
-                for log in processed_log:
+                successful_logs += 1
+                if isinstance(processed_log, list):
+                    for doc in processed_log:
+                        action = {
+                            "_index": index_name,
+                            "_source": doc
+                        }
+                        bulk_ops.append(action)
+                else:
                     action = {
                         "_index": index_name,
-                        "_source": log
+                        "_source": processed_log
                     }
                     bulk_ops.append(action)
-
-                    # To print normal dictionaries
-                    print(log)
             else:
                 failed_logs += 1
 
@@ -160,11 +165,20 @@ def read_and_process_log_file(file_name, index_name, bulk_size=1000):
                         print("Error:", error)
                         print(traceback.format_exc())  # Printing the stack trace
 
+        if bulk_ops:
+            try:
+                bulk(es, bulk_ops)
+            except BulkIndexError as e:
+                for error in e.errors:
+                    print("Error:", error)
+                    print(traceback.format_exc())  # Printing the stack trace
+
     print(f"\n--- Summary ---")
     print(f"Total logs processed: {total_logs}")
     print(f"Successfully ingested logs: {successful_logs}")
     print(f"Failed logs: {failed_logs}")
 
+ 
 def main():
     log_file_path = "/media/usbHDD1/photov10/Photosynthesis-Dorahacks-web3-competition-winner/photosynthesisv5/photosynthesis-main/sap-with-full-liquid-stake-redemption-workflow/dockernet/logs/redeemstake.log"
     index_name = "redeemstakedata"
@@ -179,4 +193,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
