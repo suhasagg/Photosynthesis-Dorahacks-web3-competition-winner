@@ -35,7 +35,6 @@
     *   B) Redemption Workflow
     *    ![Stride](https://i.imgur.com/2ar26a9.png)
     *    ![Stride](https://i.imgur.com/e40mmYk.png)
-    *    ![Stride](https://i.imgur.com/j9Nw3bA.png)
     *    ![Stride](https://i.imgur.com/QlRNKCj.png)
     *    ![Stride](https://i.imgur.com/MVeZMOG.png)
          
