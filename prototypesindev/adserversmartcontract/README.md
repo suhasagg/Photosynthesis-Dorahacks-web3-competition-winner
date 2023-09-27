@@ -1,7 +1,7 @@
 # Adserver smart contract
 
 Codacy grade A -
-https://app.codacy.com/gh/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/file/93328436253/issues/source?bid=34568294\&fileBranchId=34568294
+https://app.codacy.com/gh/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/file/93328436253/issues/source?bid=34568294&fileBranchId=34568294
 
 # Heavy Transaction Guaranteed Dapps on Daily Basis – A strong candidate for Archway Rewards and Photosynthesis liquid token
 
