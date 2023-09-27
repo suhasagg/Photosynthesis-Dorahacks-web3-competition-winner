@@ -4541,13 +4541,13 @@ j) ![Natural Language Queries](https://i.imgur.com/KHsLLG8.jpg)
 
 # Liquid Staking Ebook
 
-https://docs.google.com/document/d/19AIiO3EF6lUvVFPg2UgY3W5fs4Hb6G7Y/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
+https://docs.google.com/document/d/19AIiO3EF6lUvVFPg2UgY3W5fs4Hb6G7Y/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 # Photosynthesis-Dorahacks-web3-competition-winner
 
 Detailed presentation -
 
-https://docs.google.com/presentation/d/1Q67YKZkqZuK9tCAeGU6eWeCkjPSlA1HS/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
+https://docs.google.com/presentation/d/1Q67YKZkqZuK9tCAeGU6eWeCkjPSlA1HS/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 https://dorahacks.io/home
 
@@ -4762,29 +4762,29 @@ assets.
 
 # Matrix movie based NFTs
 
-https://docs.google.com/document/d/1dBiXoF6Z460nJxziE06b9JFu15co36Cm/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
+https://docs.google.com/document/d/1dBiXoF6Z460nJxziE06b9JFu15co36Cm/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 # Mission Impossible based NFTs
 
-https://docs.google.com/document/d/1BVwVHjStAMk0f0IYKlBXW9OoAZ6N0JBo/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
+https://docs.google.com/document/d/1BVwVHjStAMk0f0IYKlBXW9OoAZ6N0JBo/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 # Justin Bieber music studios based NFTs
 
-https://docs.google.com/document/d/1JWbt\_HTbAacJCPfN\_55iTAHrSz7uaXBd/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
+https://docs.google.com/document/d/1JWbt\_HTbAacJCPfN\_55iTAHrSz7uaXBd/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 # Some P2E Games
 
 Matrix Movie based P2E Game - Matrix infinity
 
-https://docs.google.com/document/d/1VYHsaFEsLstoP8ht56IZXzqwWGfC9pSD/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
+https://docs.google.com/document/d/1VYHsaFEsLstoP8ht56IZXzqwWGfC9pSD/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 Mission Impossible based P2E game - Mission impossible
 
-https://docs.google.com/document/d/15BiFBWG\_WbizrmiBwXIgdayjypqwUcDK/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
+https://docs.google.com/document/d/15BiFBWG\_WbizrmiBwXIgdayjypqwUcDK/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 WWE based P2E game - WWE universe
 
-https://docs.google.com/document/d/1CSBXgFoX03\_WUhLrChHUWwrE9jncgZDi/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
+https://docs.google.com/document/d/1CSBXgFoX03\_WUhLrChHUWwrE9jncgZDi/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 # In the News :
 
@@ -4903,13 +4903,13 @@ interacting with MatrixBrainBattery in a variety of different contexts.
 # Documentation
 
 1\)Photosynthesis Cosmwasm port documentation
-https://docs.google.com/document/d/14A\_hQHDp35WWcs5QaGqJ26TWRGKgK0qX/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
+https://docs.google.com/document/d/14A\_hQHDp35WWcs5QaGqJ26TWRGKgK0qX/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 2\)MatrixBrainBattery - P2E game and NFT Minting – Ultimate choice for Archway
 Rewards and Photosynthesis Algorithm
 
-https://docs.google.com/document/d/1PqFbmda3N09y3TfOuCQZUSSKpxzclvku/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
+https://docs.google.com/document/d/1PqFbmda3N09y3TfOuCQZUSSKpxzclvku/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 3\)Heavy Transaction Guaranteed Dapps on Daily Basis – A strong candidate for
 Archway Rewards and Photosynthesis liquid token\
-https://docs.google.com/document/d/1-pGzhqz7UHgB2O9qD4fcLAhwhTUgUI4A/edit?usp=sharing\&ouid=102246369981228451498\&rtpof=true\&sd=true
+https://docs.google.com/document/d/1-pGzhqz7UHgB2O9qD4fcLAhwhTUgUI4A/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
