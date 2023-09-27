@@ -33,18 +33,26 @@
     
     
     *   B) Redemption Workflow
+       
     *    ![Stride](https://i.imgur.com/2ar26a9.png)
     *    ![Stride](https://i.imgur.com/QlRNKCj.png)
     *    ![Stride](https://i.imgur.com/MVeZMOG.png)
+
          
     
-    *   C) Relationship Diagram ![Stride](https://i.imgur.com/oAK0xzg.png)
+    *   C) Relationship Diagram
+    
+    *    ![Stride](https://i.imgur.com/oAK0xzg.png)
+        
     
     *   D) Stride Chain Epoch Module Workflow Diagram
+      
         ![Stride](https://i.imgur.com/S8Nc9EM.png)
+        
     
     *   E) Stride Airdrop Claim Module Workflow Diagram
         ![Stride](https://i.imgur.com/E3aX28m.png)
+
     
     *   F) Stride Rate limit workflow
         ![Stride](https://i.imgur.com/kK6dwSn.png)
