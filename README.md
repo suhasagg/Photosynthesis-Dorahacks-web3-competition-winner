@@ -4903,7 +4903,7 @@ interacting with MatrixBrainBattery in a variety of different contexts.
 # Documentation
 
 1\)Photosynthesis Cosmwasm port documentation
-https://docs.google.com/document/d/14A_hQHDp35WWcs5QaGqJ26TWRGKgK0qX/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
+https://docs.google.com/document/d14A_hQHDp35WWcs5QaGqJ26TWRGKgK0qX/edit?usp=sharing&ouid=102246369981228451498&rtpof=true&sd=true
 
 2\)MatrixBrainBattery - P2E game and NFT Minting – Ultimate choice for Archway
 Rewards and Photosynthesis Algorithm
