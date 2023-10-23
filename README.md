@@ -4365,6 +4365,40 @@ The combination of liquid staking blockchain operations and ML forecasting provi
 
 📅 Longer Photosynthesis-Archway blockchain run is simulated using the following cron schedule simulating periods of liquid staking (increasing liquid tokens) and periods of redemption (decreasing liquid tokens) over longer time.
 
+
+1) rewardsdistributiontodapps(/home/photo/logs/rewardsdistributiontodapps)
+   🎁 rewardswithdrawaltodapps(/home/photo/logs/rewardswithdrawaltodapps)
+   📊 meta.RewardsAddress + "," + strconv.FormatInt(totalRewards.AmountOf("uarch").Int64()-int64(rewardMap[meta.RewardsAddress]), 10) + "," + strconv.FormatInt(int64(recordCounter)-int64(rewardsRecords[meta.RewardsAddress]), 10) + "," + latestimestamp.String() + "," + strconv.FormatInt(blockheight, 10)
+
+2) liquidstakeparameters(/home/photo/logs/liquidstakeparameters)
+   💧 Liquid stake Amount
+   🔄 epoch
+
+3) Distributionepoch (Get Last Stake Epoch)(/home/photo/logs/distributionepoch)
+   🕒 epoch
+
+4) liquiditydistributiontodapps(/home/photo/logs/liquiditydistributiontodapps)
+   🌊 Central liquidity Address, Dapp Address, stuarch, liquid tokens amount                                                                   
+   "archway1n3fvgm3ck5wylx6q4tsywglg82vxflj3h8e90m" + "," + contractAddr + "," + "ibc/15CE03505E1F9891F448F53C9A06FD6C6AF9E5BE7CBB0A4B45F7BE5C9CBFC145" + "," + strconv.FormatFloat(liquidityTokensAmount, 'f', 2, 64)
+
+5) enableredeemstake(/home/photo/logs/enableredeemstake)
+   🔄 Redeem Liquid tokens Amount
+   🕒 epoch
+
+6) redemptiondataforDapps(/home/photo/logs/redemptiondataforDapps)
+   🔄 meta.RedemptionAddress + ":" + meta.LiquidityProviderAddress
+
+7) redeemliquidityamountforDapps(/home/photo/logs/redeemliquidityamountforDapps)
+   🔄 meta.LiquidityProviderAddress + "," + centralliquidityAddr + "," + string(epoch)
+
+8) redeemepoch(/home/photo/logs/redeemepoch)
+   🔄 redeemepoch, err := getLastStakeEpoch("/home/photo/logs/redeemepoch")
+
+9) redemptionrate(latest queried redemption rate for photosynthesis-archway chain)
+   🔄 lastRedemptionRate, err := getLastRedemptionRate("/home/photo/logs/redemptionrate")
+
+Cron job can kindly be scheduled from any validator as all validators have identical copies of files described above due to the same node states. Cron routine can kindly be switched to any validator in case of validator downtime. 🔄🔁🌐
+
 📑 Cron schedule
 
 ```bash
