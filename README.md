@@ -4366,7 +4366,7 @@ The combination of liquid staking blockchain operations and ML forecasting provi
 📅 Longer Photosynthesis-Archway blockchain run is simulated using the following cron schedule simulating periods of liquid staking (increasing liquid tokens) and periods of redemption (decreasing liquid tokens) over longer time.
 
 
-# Files required by cron job and their format description 
+# 📂 Files required by cron job and their format description 📋
 
 
 1) rewardsdistributiontodapps(/home/photo/logs/rewardsdistributiontodapps)
