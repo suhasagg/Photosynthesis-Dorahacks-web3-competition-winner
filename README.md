@@ -4453,6 +4453,75 @@ The described cron schedule simulates a longer run of the Photosynthesis-Archway
 The cron job frequencies have been designed to mimic the natural ebb and flow of a liquid staking blockchain network over a long run. By running certain tasks like rewards withdrawal and liquid staking more frequently, it simulates a busy network with constant liquid staking. Meanwhile, less frequent tasks like redeeming stakes or distributing redeemed tokens represent larger, periodic operations that might not happen as often but have significant impact on redemption rate and other parameters.
 
 
+# Protocol to provide protection against filesystem tampering attacks 🔐 (file set consists of Photosynthesis-Archway chain logs and files utilized by cron jobs)
+
+Filesystem integrity checks and a validator selection algorithm into the cron/chain logs indexing job execution process.
+
+Steps to verify filesystem data across validators and decide how a validator is chosen to perform the actual job execution. The filesystem data is critical and must be consistent across all validators.
+
+# Protocol with Filesystem Integrity and Validator Selection
+
+1. Filesystem Snapshot and Hashing 📸🔍
+
+Before the run, validator takes a snapshot of the relevant filesystem data and computes a cryptographic hash of this snapshot. This hash represents the state of the data that the cron/chain logs indexing job will use.
+
+2. Share Filesystem Hashes 🔄📊
+
+Validators share their hashed results by indexing in ES Data Store.
+Along with the hash, validators share a digital signature to ensure the result's authenticity.
+Filesystem state is verified. This step ensures all validators agree on the data state before executing the job.
+
+3. External Script Filesystem Integrity Verification 🛠️📈
+
+Validators upload their filesystem hashes and metadata to a designated ES index.
+
+A third-party script (audit tool) periodically queries the ES index to retrieve the filesystem hashes and metadata from all validators.
+
+The script performs the following actions:
+
+Analysis: It compares the hashes across validators to determine consistency.
+Majority Consensus: The script determines if there is a majority consensus on the filesystem state.
+
+Logging: For each validator, the script logs:
+The validator's ID.
+The verification result (consistent/inconsistent with the majority).
+The hash value that was compared.
+A timestamp of when the analysis was performed.
+The script also logs a summary report indicating overall filesystem state consistency and any deviations found.
+
+4. Verified Filesystem State  ✅📁
+Only after filesystem integrity is verified, validators proceed with the execution of the cron/indexing job, using the data from the filesystem snapshot that passed the integrity check.
+
+5. Validator Selection Algorithm for Actual Execution 🎲🏅
+
+Below algorithm fairly and transparently chooses a validator for the actual job execution. The algorithm chooses validators based on below parameters combination with weights in sorted order.
+
+Stake-Based: Validators with more at stake (reputation, uptime, etc.) 
+
+Performance-Based: Validators with the best performance history are prioritized.
+
+Round-Robin: Each validator takes turns in a predefined order.
+
+Random Selection: Validators are chosen at random, ensuring unpredictability.
+
+6. Actual Job Execution with Verified Filesystem 🚀💾
+The selected validator then performs the actual job execution, having the verified filesystem data.
+
+7. Continuous Filesystem Monitoring 🕵️‍♂️🖥️
+Validators continuously monitor the filesystem integrity to detect and resolve discrepancies proactively.
+
+8. Error Handling, Alerting, and Validator Replacement 🚨🔄
+If filesystem inconsistencies persist, or if a validator fails to execute jobs correctly, an alerting mechanism flags these issues.
+Validators may be replaced based on the selection algorithm's criteria, taking into account their integrity and performance metrics.
+
+🌐Flow with Filesystem Integrity and Validator Selection🌐
+
+1)Job A requires data from the filesystem, so Validators 1, 2, and 3 compute and share hashes of the data state.
+2)After verifying filesystem integrity, Validators proceed with the run of Job A.
+3)Validator 2 is chosen for actual execution based on the selection algorithm.
+Validator 2 executes Job A.
+
+
 # 🎯 Strategy: Buffered Staking Approach with Grace Limits
 
 
