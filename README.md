@@ -4526,28 +4526,47 @@ Validator 2 executes Job A.
 
 
 # Periodic Execution:	
+
+
 Smart contracts: Smart contracts can be designed to trigger actions at predetermined intervals, but this will require external triggers or complex/customized on-chain logic. 
 (epoch, x/cw-callback), this might not be as precise as script schedulers available, put stress on existing Dapps. 🔄
+
+
 Cron job: Cron jobs are inherently designed for periodic execution, allowing precise scheduling of tasks. ⏰
 
 
 # Gas Fees:	
+
+
 Smart Contracts: Executing smart contracts will incur Photosynthesis-Archway chain gas fees, which might be significant depending on the frequency of different jobs.💸
+
+
 Cron job: Running scripts on validators will not directly incur Photosynthesis-Archway chain transaction fees. 🆓
 
 
 # Resource Usage:
+
 Smart contracts: execute on Photosynthesis-Archway chain, utilizing network resources. Resource-intensive tasks can be costly and may impact network performance. 🌐
+
+
 Cron job: Resource usage is confined to the individual validator nodes. The impact on the overall network is minimal, validator selection algorithm ensures a safe validator node.💻
 
 
 # Scalability:	
+
+
 Smart contracts: Scaling smart contract operations can be challenging and expensive, especially on heavily utilized networks. ⚖️
+
+
 Cron job: Scalability is dependent on the infrastructure capabilities of individual validators. 📈
 
 
 # Job Update Flexibility:	
+
+
 Smart Contracts: Updating smart contracts can be complex and requires redeploying new contracts. Not always agile for frequent updates, parameters tuning. 🔄
+
+
 Cron job: Relatively easy to update scripts and adjust schedules. Offers more agility for frequent changes, updates, customization, parameters tuning. ✏️
 
 
