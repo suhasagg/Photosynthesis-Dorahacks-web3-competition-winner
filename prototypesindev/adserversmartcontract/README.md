@@ -816,6 +816,18 @@ Protocol Scaling Algorithm
 
 These root hashes are synced at regular intervals (5-minute, hourly, daily) according to Merkle Tree generation schedule above which can be tuned.
 
+Applications:
+
+1)Handling High Traffic: The architecture is designed to handle high traffic volumes of ad data and cookie sync data using benefits of  distributed nature of IPFS.
+
+2)Asynchronous Data Handling: Asynchronous processing of data collection, Merkle Tree generation, and blockchain syncing allows for more efficient use of network resources and can mitigate latency issues.
+
+3)Scheduled Syncing: Regular, scheduled syncing of data and Merkle Tree root hashes prevents sudden spikes in network demand, contributing to smoother network traffic.
+
+4)Data Integrity and Security: The use of Merkle Trees ensures data integrity, as any alteration in the data leads to a different hash. This is crucial for ad data and cookie tracking.
+
+5)Tamper-Proof Audit Trail: Storing Merkle Tree root hashes on a blockchain provides a tamper-proof audit trail, enhancing transparency and trust in the data collected.
+
 
 
 ```
