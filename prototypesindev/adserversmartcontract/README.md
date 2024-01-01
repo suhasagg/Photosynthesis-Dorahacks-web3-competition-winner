@@ -786,9 +786,9 @@ Event created: Event {
     ],
 }
 Ad test_id3 deleted successfully.
-```
 
-# Protocol Scaling Algorithm
+
+Protocol Scaling Algorithm
                 
 +------------------+      +------------------+      +------------------+
 | Website          |      | Data Processing  |      | Merkle Tree      |
