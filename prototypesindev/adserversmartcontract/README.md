@@ -787,5 +787,34 @@ Event created: Event {
 }
 Ad test_id3 deleted successfully.
 
+# Protocol Scaling Algorithm
+                
++------------------+      +------------------+      +------------------+
+| Website          |      | Data Processing  |      | Merkle Tree      |
+| - Collect Ad     | ---> | and Aggregation  | ---> | Generation       |
+|   Clicks/        |      | - Data Formatting|      | - 5-min/hourly/  |
+|   Impressions    |      | - Data Encryption|      |   daily trees    |
+| - Ad Data as     |      | - Stream to IPFS |      | - Ad data as     |
+|   Input          |      |                  |      |   leaves         |
++------------------+      +------------------+      +------------------+
+                                                               |
+                                                               V
+                                                      +------------------+
+                                                      | IPFS             |
+                                                      | - Data Storage   |
+                                                      | - CID Generation |
+                                                      +------------------+
+                                                               |
+                                                               V
+                                                      +------------------+
+                                                      | CosmWasm Contract|
+                                                      | Photosynthesis-Archway Chain|
+                                                      | - Sync Merkle    |
+                                                      |   Tree Root Hash |
+                                                      +------------------+
+
+These root hashes are synced at regular intervals (5-minute, hourly, daily) according to Merkle Tree generation schedule above which can be tuned.
+
+
 
 ```
