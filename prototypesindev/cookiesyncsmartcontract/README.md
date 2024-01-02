@@ -239,4 +239,31 @@ Event created: Event {
 }
 Cookie Synced successfully.
 
+Protocol Scaling Algorithm
+
++------------------+      +------------------+      +------------------+
+| Website          |      | Data Processing  |      | Merkle Tree      |
+| - Collect Cookie | ---> | and Aggregation  | ---> | Generation       |
+|   Data           |      | - Data Formatting|      | - 5-min/hourly/  |
+|                  |      | - Data Encryption|      |   daily trees    |
+|                  |      | - Stream to IPFS |      | - Cookie data as |
++------------------+      +------------------+      |   leaves         |
+                                                    +------------------+
+                                                               |
+                                                               V
+                                                      +------------------+
+                                                      | IPFS             |
+                                                      | - Data Storage   |
+                                                      | - CID Generation |
+                                                      +------------------+
+                                                               |
+                                                               V
+                                                      +------------------+
+                                                      | CosmWasm Contract|
+                                                      | on Cosmos Chain  |
+                                                      | - Sync Merkle    |
+                                                      |   Tree Root Hash |
+                                                      +------------------+
+
+
 ```
