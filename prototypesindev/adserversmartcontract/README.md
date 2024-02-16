@@ -831,7 +831,7 @@ Applications:
 
 Campaign Delivery System Design for TV, Laptop, Mobile, and VR Devices 📱💻🖥️🕶️
 
-![image](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/13d0fd15-acee-4519-b953-d31fe70d9bb9)
+![image](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/9ad7d009-7e77-487d-9ab9-e8ef2300f8e5)
 
 System Objective: To develop a comprehensive, asynchronous campaign delivery system that integrates seamlessly with TV operating systems, laptops, mobile devices, and VR platforms, providing users with a non-intrusive, engaging way to access personalized campaigns.
 
