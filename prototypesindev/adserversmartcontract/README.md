@@ -875,9 +875,13 @@ Interactive Experiences: Interactive VR experiences allow users to engage with c
 Applications of This Architecture ✨
 
 Long Campaign Running Period: Campaigns can run over extended periods, ensuring maximum exposure. 🕰️
+
 Repeated Views: Users can revisit campaigns, increasing familiarity and reinforcing messaging. 🔁
+
 Full Campaigns Available 24/7: Access to campaigns anytime ensures no missed opportunities for engagement. 🌞🌜
-Max Conversion Interactivity: Interactive elements within campaigns boost engagement and potential for conversion. 📈
+
+Max Conversion Interactivity: Interactive elements within campaigns boost engagement and potential for conversion.🖱️📈
+
 No Campaign Misses for Users: The asynchronous delivery system ensures users receive all relevant campaigns, tailored to their interests and behaviors. 🚫📵
 
 
