@@ -282,6 +282,8 @@ Campaign Delivery: Use smart TVs and mobile devices 📺📱 to deliver campaign
 
 System Implementation Across Platforms
 
+https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/tree/main/prototypesindev/adserversmartcontract
+
 Smart TVs & Laptops
 
 High-Quality Video Campaigns: Stream video campaigns and interactive content that integrates with the user's viewing preferences, offering a rich, engaging experience directly on their Smart TV or laptop 🖥️💻.
