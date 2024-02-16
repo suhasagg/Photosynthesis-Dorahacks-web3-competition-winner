@@ -831,8 +831,6 @@ Applications:
 
 Campaign Delivery System Design for TV, Laptop, Mobile, and VR Devices 📱💻🖥️🕶️
 
-![Campaign TV/App](https://i.imgur.com/Tn1GUZnb.jpg?raw=true)
-
 System Objective: To develop a comprehensive, asynchronous campaign delivery system that integrates seamlessly with TV operating systems, laptops, mobile devices, and VR platforms, providing users with a non-intrusive, engaging way to access personalized campaigns.
 
 Target Platforms:
