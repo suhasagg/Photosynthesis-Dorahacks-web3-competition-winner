@@ -891,7 +891,7 @@ No Campaign Misses for Users: The asynchronous delivery system ensures users rec
 
 ```
 
-![GGR7CcEXMAADze-](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/36abbf98-56de-42a5-81b0-54c1cccdd513)
+![GGR7CcEXMAADze-](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/f23fe0d1-9fa4-4e82-959b-1d3cc365ddd5)
 
 
 ```
