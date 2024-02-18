@@ -849,7 +849,7 @@ Core Components:
    Smart TV OS: A dedicated app leveraging TV OS features for campaign updates. 📺
    Laptop and Mobile OS: App versions for Windows, macOS, iOS, and Android, using each OS's notification systems. 💻📱
    VR Platforms: VR experiences compatible with major VR systems (e.g., Oculus, HTC Vive), allowing users to explore campaigns in a 3D environment. 🕶️
-   Amazon, Facebook App - Campaign Section Integration support. 😊🌹😊🌹🎁🎁🌹🌹
+   Amazon, Facebook, Twitter App - Campaign Section Integration support. 😊🌹😊🌹😊🌹🎁🎁🎁🌹🌹🌹
    
 2. Campaign Channel/App Design
    User Interface: Intuitive interfaces suitable for each platform, including a 3D VR environment for immersive interaction. 🖌️
