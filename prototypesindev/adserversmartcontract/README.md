@@ -827,8 +827,12 @@ Applications:
 4)Data Integrity and Security: The use of Merkle Trees ensures data integrity, as any alteration in the data leads to a different hash. This is crucial for ad data and cookie tracking.
 
 5)Tamper-Proof Audit Trail: Storing Merkle Tree root hashes on a blockchain provides a tamper-proof audit trail, enhancing transparency and trust in the data collected.
+```
+
+![GGR7CcFXQAAGZUY](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/5086affc-61ed-4ac5-9b51-eaf9f768e749)
 
 
+```
 Campaign Delivery System Design for TV, Laptop, Mobile, and VR Devices 📱💻🖥️🕶️
 
 System Objective: To develop a comprehensive, asynchronous campaign delivery system that integrates seamlessly with TV operating systems, laptops, mobile devices, and VR platforms, providing users with a non-intrusive, engaging way to access personalized campaigns.
@@ -884,9 +888,6 @@ Full Campaigns Available 24/7: Access to campaigns anytime ensures no missed opp
 Max Conversion Interactivity: Interactive elements within campaigns boost engagement and potential for conversion.🖱️📈
 
 No Campaign Misses for Users: The asynchronous delivery system ensures users receive all relevant campaigns, tailored to their interests and behaviors. 🚫📵
-
-
-![GGR7CcFXQAAGZUY](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c4832171-8c9d-499c-a1c3-9659979ab28b)
 
 
 Integration with Dedicated YouTube Channels 📹 ✨
