@@ -256,6 +256,7 @@ Campaign Delivery: Utilize VR platforms and mobile devices 📱🕶️ to delive
 John Wick 🎯
 
 
+
 NFT Integration:
 
 
@@ -299,8 +300,7 @@ Fan Interaction:
 
 Create a community section within the app where fans can discuss theories, share fan art, and participate in contests related to the John Wick universe 🗣️🎨. Offer exclusive NFTs as rewards for contest winners.
 
-
-
+![d18840f2-b466-4710-bbc7-76b453da0417](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/3129f714-22ef-4202-87c8-ae638c874496)
 
 Mission: Impossible: 
 
