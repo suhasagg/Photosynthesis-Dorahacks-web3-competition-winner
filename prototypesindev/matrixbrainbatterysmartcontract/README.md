@@ -308,6 +308,7 @@ Create a community section within the app where fans can discuss theories, share
 
 ![d18840f2-b466-4710-bbc7-76b453da0417](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/3129f714-22ef-4202-87c8-ae638c874496)
 
+
 Mission: Impossible: 
 
 ![image](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/715b2540-b83e-4a32-9b12-73e91e3bcfef)
@@ -318,6 +319,10 @@ NFT Integration: Create NFTs featuring mission briefs, virtual gadgets, or inter
 Campaign Delivery: Through smart TVs and laptops 💻📺, deliver action-packed, personalized campaigns that could include interactive missions or puzzles mirroring the movie's themes, enhancing the user's engagement with the content.
 
 
+
+
+
+
 Journey to the Mysterious Island: 
 
 🏝️
@@ -325,6 +330,8 @@ Journey to the Mysterious Island:
 NFT Integration: Mint NFTs that represent digital explorations of the island, interactive maps, or puzzles 🗺️🧭. Artifacts or creatures from the movie could become collectible NFTs, engaging fans in a virtual treasure hunt 💎.
 
 Campaign Delivery: Deploy these interactive campaigns across mobile devices and VR 📱🕶️, allowing users to embark on digital adventures mirroring the film's quests, personalizing the journey based on their interactions.
+
+![rockv1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/faa43bb3-e1ba-4294-90d6-7cbfecfac66d)
 
 
 WWE Studios: 
@@ -335,6 +342,15 @@ WWE Studios:
 NFT Integration: Offer NFTs of memorable wrestling matches, digital autographs of wrestlers, or virtual meet-and-greets 🤼‍♂️✍️. These NFTs would immortalize unique moments from WWE films or events, providing fans with collectible memorabilia.
 
 Campaign Delivery: Use smart TVs and mobile devices 📺📱 to deliver campaigns that feature exclusive content, match highlights, or interviews. Fans could unlock special content or NFTs by engaging with the campaigns, enhancing their connection to the wrestling world.
+
+
+![09368ee5-d34f-458a-8413-365f5c32752a](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c5a76ddc-8907-42a5-bc0f-b4487a821cef)
+
+
+![319263d5-52f0-4de1-953d-589cdaa8d629](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/7beda68a-294a-4a01-9da0-4de473d76f3f)
+
+
+
 
 
 System Implementation Across Platforms
