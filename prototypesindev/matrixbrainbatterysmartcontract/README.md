@@ -255,6 +255,14 @@ The Matrix:
 ![406609298_337686302460579_4228559527774018386_n](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/798381d3-3d75-439e-9f1b-51b38469699c)
 
 
+![photo_2023-12-10_14-09-33](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2b37c1f9-dd53-4ddc-973f-0d0cc70f5c49)
+
+
+![photo_2024-02-21_03-05-35](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/3298fc94-b052-4b0e-8c70-16e4d9d8c4a4)
+
+
+![photo_2024-01-17_15-25-41](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/4c6d2b6d-0899-4896-b468-e15f4a363453)
+
 
 NFT Integration: Iconic scenes, digital artwork, and VR experiences from The Matrix universe can be minted as NFTs 🎨. These could include exclusive digital memorabilia or interactive experiences, such as a choice between the red or blue pill 💊, offering fans an engaging way to explore and own a piece of the movie's lore.
 
