@@ -318,6 +318,7 @@ NFT Integration: Create NFTs featuring mission briefs, virtual gadgets, or inter
 
 Campaign Delivery: Through smart TVs and laptops 💻📺, deliver action-packed, personalized campaigns that could include interactive missions or puzzles mirroring the movie's themes, enhancing the user's engagement with the content.
 
+![tomcruise](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/0cd9dd1a-a51a-4fd1-b90c-f9db9feebf17)
 
 
 
@@ -343,13 +344,17 @@ NFT Integration: Offer NFTs of memorable wrestling matches, digital autographs o
 
 Campaign Delivery: Use smart TVs and mobile devices 📺📱 to deliver campaigns that feature exclusive content, match highlights, or interviews. Fans could unlock special content or NFTs by engaging with the campaigns, enhancing their connection to the wrestling world.
 
+Bug mode:
+
+![kane](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c3567f22-f733-45b9-876c-7f5bac6c086d)
+
+
+Beast mode:
 
 ![09368ee5-d34f-458a-8413-365f5c32752a](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c5a76ddc-8907-42a5-bc0f-b4487a821cef)
 
 
 ![319263d5-52f0-4de1-953d-589cdaa8d629](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/7beda68a-294a-4a01-9da0-4de473d76f3f)
-
-
 
 
 
@@ -425,8 +430,6 @@ By incorporating these features, the app provides a unique platform for movie fa
 
 
 ![photo_2024-02-18_23-45-35](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/69c46288-1c60-4a1e-a398-2c163d278cd7)
-
-
 
 
 
