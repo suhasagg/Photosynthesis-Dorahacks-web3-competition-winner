@@ -245,6 +245,12 @@ https://twitter.com/coolcaptchas/status/1524023123426828289?s=20
 
 ![34ad6f19924635 5c60392c90caf](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c79f31fb-3d97-42b1-99e8-a23f85828e18)
 
+
+![merry-christmas-mascot-logo-vector-45280432](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/695df961-4fa8-4d62-88de-b35a1dc6e162)
+
+
+
+
                                      
 Movie theme Apps: 🎬 📱
 
