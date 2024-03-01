@@ -330,6 +330,9 @@ Create a community section within the app where fans can discuss theories, share
 ![d18840f2-b466-4710-bbc7-76b453da0417](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/3129f714-22ef-4202-87c8-ae638c874496)
 
 
+![02fcb84a-4608-4f43-9a1b-7a592fe41f4av1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/8527d419-d48b-41b7-85d7-1eaa2d4203ac)
+
+
 Mission: Impossible: 
 
 ![image](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/715b2540-b83e-4a32-9b12-73e91e3bcfef)
