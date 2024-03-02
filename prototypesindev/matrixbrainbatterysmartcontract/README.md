@@ -293,10 +293,16 @@ The Matrix:
 
 ![bullettime](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/f5b7f7d7-acf5-453b-9327-c1c892504ebf)
 
-
 ![e807003e-192f-4d16-acce-7321dd68c983](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/b0cc65d1-f8ec-4cb1-8342-8005ef5e0d87)
 
-Matrix style 🕶️ , Kung-fu battle 🥋, Bullet time effects 🕰️🔫, Visible bullet trajectories 🛡️, Holographic green code 💻🟢,Neon-lit digital cityscape 🌃💡,Cyberpunk atmosphere 🌌, Advanced virtual reality 🕹️👓, Motion dynamics effects 🌀
+Matrix style 🕶️ , Kung-fu battle 🥋, Bullet time effects 🕰️🔫, Visible bullet trajectories 🛡️, Holographic green code 💻🟢,Neon-lit digital cityscape 🌃💡,Cyberpunk atmosphere 🌌, Advanced virtual reality 🕹️👓, Motion dynamics effects 🌀, stTokens 
+
+
+![6ca8d66d-f586-49ed-9a6d-7ecedc52a16a (2)](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/5a0b2d5a-b27b-4224-89c5-ed987fc2f2ed)
+
+
+![757de8ce-5ac7-4d41-a892-037e2a66ecb0](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a8f55fbd-b1bb-4ba4-b68c-194a4bcd9a8e)
+
 
 NFT Integration: Iconic scenes, digital artwork, and VR experiences from The Matrix universe can be minted as NFTs 🎨. These could include exclusive digital memorabilia or interactive experiences, such as a choice between the red or blue pill 💊, offering fans an engaging way to explore and own a piece of the movie's lore.
 
