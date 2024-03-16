@@ -409,7 +409,8 @@ Campaign Delivery: Deploy these interactive campaigns across mobile devices and 
 ![rockv1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/faa43bb3-e1ba-4294-90d6-7cbfecfac66d)
 
 
-![Uploading dwayne-mortal-kombat.gif…]()
+
+![dwayne-mortal-kombat](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a2f2c47c-8135-430a-839d-bdbc6c7f7253)
 
 
 
