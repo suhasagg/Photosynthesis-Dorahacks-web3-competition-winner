@@ -442,6 +442,11 @@ Bug mode:
 ![wwe-bug1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/dfdd937b-0c54-424a-80ce-1d2b9b3a04f4)
 
 
+![23f30031-34b7-4903-a886-09a3f57bbc40](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/bce895b7-66fa-47c9-a80c-c12a25e03c68)
+
+
+
+
 Aqua mode:
 
 ![wwe-aqua](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/707949f9-0e8e-4199-a1ab-5e571f877b14)
