@@ -405,7 +405,12 @@ NFT Integration: Mint NFTs that represent digital explorations of the island, in
 
 Campaign Delivery: Deploy these interactive campaigns across mobile devices and VR 📱🕶️, allowing users to embark on digital adventures mirroring the film's quests, personalizing the journey based on their interactions.
 
+
 ![rockv1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/faa43bb3-e1ba-4294-90d6-7cbfecfac66d)
+
+
+![Uploading dwayne-mortal-kombat.gif…]()
+
 
 
 WWE Studios: 
