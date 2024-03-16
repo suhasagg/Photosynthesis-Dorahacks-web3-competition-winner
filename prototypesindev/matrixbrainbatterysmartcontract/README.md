@@ -445,6 +445,8 @@ Bug mode:
 ![23f30031-34b7-4903-a886-09a3f57bbc40](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/bce895b7-66fa-47c9-a80c-c12a25e03c68)
 
 
+![3934bb3c-b5f1-4f1d-9413-85cb5ff5ec54](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/fa8477ba-2b77-4dcd-a61c-3d3ad42de9b7)
+
 
 
 Aqua mode:
