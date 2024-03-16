@@ -404,6 +404,7 @@ Campaign Delivery: Deploy these interactive campaigns across mobile devices and 
 
 WWE Studios: 
 
+
 ![image](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/d52e1981-fa0c-4d49-9688-759fdc46cae2)
 
 
@@ -416,7 +417,30 @@ Bug mode:
 ![kane](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c3567f22-f733-45b9-876c-7f5bac6c086d)
 
 
+![wwe-bug1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/dfdd937b-0c54-424a-80ce-1d2b9b3a04f4)
+
+
+Aqua mode:
+
+![wwe-aqua](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/707949f9-0e8e-4199-a1ab-5e571f877b14)
+
+![wwe-aqua2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/fbb06663-87c1-46e8-92a5-4162988ea198)
+
+
+Plant mode:
+
+![wwe-plant](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/da3672a5-21c2-4f11-b587-d4a2df2b6ebf)
+
+![wwe-plant1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/908b2287-da2c-4ddf-87e7-4a9ae6c4b1ff)
+
+
 Beast mode:
+
+![wwe-beast4](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/41c97f78-0a0a-4188-ab77-c82ea8d384cf)
+
+
+![wwe-beast2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/b7e4567f-a528-4732-86bd-545175d2b329)
+
 
 ![09368ee5-d34f-458a-8413-365f5c32752a](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c5a76ddc-8907-42a5-bc0f-b4487a821cef)
 
