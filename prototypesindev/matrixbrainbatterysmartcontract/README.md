@@ -290,6 +290,11 @@ The Matrix:
 ![k2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2d2f267b-b1bb-4c82-acad-cd308b28cd7d)
 
 
+
+![661fa9d2-1a32-4ff1-b563-2d6c8ba47344](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2ae2556f-6f4b-4778-87bb-deb477c873d5)
+
+
+
 ![406609298_337686302460579_4228559527774018386_n](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/798381d3-3d75-439e-9f1b-51b38469699c)
 
 
@@ -433,6 +438,16 @@ Campaign Delivery: Deploy these interactive campaigns across mobile devices and 
 ![rockv1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/faa43bb3-e1ba-4294-90d6-7cbfecfac66d)
 
 
+
+![rockv2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/1d6314a6-1465-4a3b-8f68-03f8a1ff431b)
+
+
+
+![pyramid](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/00562802-35d5-4bcd-b06c-33e62a22557d)
+
+
+
+![pyramid](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/69d5c5ae-1702-49e4-b1dd-7008f7433b36)
 
 
 
