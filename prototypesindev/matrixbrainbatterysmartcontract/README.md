@@ -383,7 +383,18 @@ Create a community section within the app where fans can discuss theories, share
 ![d18840f2-b466-4710-bbc7-76b453da0417](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/3129f714-22ef-4202-87c8-ae638c874496)
 
 
+
+![cb9b338e-d855-4dd2-a3ea-d2b4c2999330](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ad4468f2-3555-4338-929f-329fcc7d783c)
+
+
+
+![416821759_1104529443880264_7472470542890757338_n](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/245ec913-85df-4c9d-9d28-081f810e847d)
+
+
+
 ![436268437042201 (1)](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/d55023cb-9297-4582-9aba-62d2b6c9a2a7)
+
+
 
 
 ![02fcb84a-4608-4f43-9a1b-7a592fe41f4av1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/8527d419-d48b-41b7-85d7-1eaa2d4203ac)
@@ -420,6 +431,8 @@ Campaign Delivery: Deploy these interactive campaigns across mobile devices and 
 
 
 ![rockv1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/faa43bb3-e1ba-4294-90d6-7cbfecfac66d)
+
+
 
 
 
