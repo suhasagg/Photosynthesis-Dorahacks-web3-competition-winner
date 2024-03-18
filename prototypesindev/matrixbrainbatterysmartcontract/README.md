@@ -507,6 +507,9 @@ Beast mode:
 
 
 
+![fe69a1e3-bf09-4016-a83b-5abc34c62a72](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/d95df775-1bce-4d77-99f0-56df66ceef59)
+
+
 
 ![IMG-20240206-WA0007](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/7cefb1f1-4649-4e25-8c96-1259c51d8f4c)
 
