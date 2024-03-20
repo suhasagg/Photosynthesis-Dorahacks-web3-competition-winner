@@ -514,6 +514,11 @@ Beast mode:
 ![IMG-20240206-WA0007](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/7cefb1f1-4649-4e25-8c96-1259c51d8f4c)
 
 
+WWE protective gear optimised using Sensors 💜🌹🧡🌹🎁🎁😍🥰🌸
+
+![wwe-protective-gear-optimised-using-sensors](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/fa1fc92c-37b9-4244-9bc5-2648527a62b9)
+
+
 
 System Implementation Across Platforms
 
