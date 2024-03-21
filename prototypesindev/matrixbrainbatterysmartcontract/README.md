@@ -339,7 +339,7 @@ Matrix style 🕶️ , Kung-fu battle 🥋, Bullet time effects 🕰️🔫, Vis
 Matrix Kungfu Batteries 🔋 ⚡ 🔌 🔄
 
 
-Matrix agents with aquatic features,plant mode,beast mode,reptilian nmode,bug-like features skillfully performing Shaolin kung fu styles in bullet time.
+Matrix agents with aquatic features,plant mode,beast mode,reptilian mode, bug-like features skillfully performing Shaolin kung fu styles in bullet time.
 🌊🌿🦎🐞 Matrix Agents 🥋 
 
 
