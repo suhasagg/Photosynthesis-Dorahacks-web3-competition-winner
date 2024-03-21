@@ -336,11 +336,22 @@ Matrix style 🕶️ , Kung-fu battle 🥋, Bullet time effects 🕰️🔫, Vis
 ![757de8ce-5ac7-4d41-a892-037e2a66ecb0](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a8f55fbd-b1bb-4ba4-b68c-194a4bcd9a8e)
 
 
-Matrix Kungfu Batteries
+Matrix Kungfu Batteries 🔋 ⚡ 🔌 🔄
+
+
+Matrix agents with aquatic features,plant mode,beast mode,reptilian nmode,bug-like features skillfully performing Shaolin kung fu styles in bullet time.
+🌊🌿🦎🐞 Matrix Agents 🥋 
+
+
+![03e47848-1b5c-47d0-85ae-505d45366f9a](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a38622b9-640f-4677-a87f-63f3f56580fd)
+
+
+![a4f4ccbc-7559-467f-996f-66cb3f18996b](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/07b4ff04-0e72-4095-ae19-4dd41f3e2f95)
 
 
 
 Beast Mode 
+
 
 ![beast1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/0cd3e62f-9b4a-4993-9607-8030800ca70b)
 
