@@ -353,7 +353,7 @@ Matrix agents with aquatic features,plant mode,beast mode,reptilian nmode,bug-li
 Beast Mode 
 
 
-![beast1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/0cd3e62f-9b4a-4993-9607-8030800ca70b)
+![401a1677-01a6-4631-ad21-f4a3b73fb634 (1)](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/3c925759-4bd8-4ab5-9eaf-a30a8475409a)
 
 
 ![beast12](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/24f8a2c3-2d77-48c0-90ae-5319fd11258e)
