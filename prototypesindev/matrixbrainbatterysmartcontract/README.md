@@ -336,6 +336,69 @@ Matrix style 🕶️ , Kung-fu battle 🥋, Bullet time effects 🕰️🔫, Vis
 ![757de8ce-5ac7-4d41-a892-037e2a66ecb0](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a8f55fbd-b1bb-4ba4-b68c-194a4bcd9a8e)
 
 
+Matrix Kungfu Batteries
+
+
+
+Beast Mode 
+
+![beast1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/0cd3e62f-9b4a-4993-9607-8030800ca70b)
+
+
+![beast12](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/24f8a2c3-2d77-48c0-90ae-5319fd11258e)
+
+
+![beast111](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/0e8440a6-a45a-47fe-802a-7311d98bbd4e)
+
+
+
+Aqua mode 
+
+![aqua121](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/92752148-85e5-4947-85dd-97f47c00710b)
+
+![aqua12](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/83910f5b-811f-44a5-863b-523c1266096d)
+
+![aqua](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2d7a24a1-db9f-458e-aacc-a50a91edaf91)
+
+![aqua2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/1323fbbe-0706-4364-b01b-235d43d9efd4)
+
+
+
+Plant mode
+
+
+![plant2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/e919a597-8885-4835-9b0d-1b7cc4c9e2eb)
+
+
+![plant1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/277ce07b-55f0-4ec4-bb11-5816fe8c7b55)
+
+
+![plant3](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/be850154-f4a6-48dc-b524-28dda4d6ed1d)
+
+
+
+Bug mode
+
+
+![bugmode](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a6723371-3eca-4d02-8f95-9f49277cb3d3)
+
+
+
+Reptile mode
+
+
+![reptile11](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/b17b6842-d45a-4b0f-9735-5a6651f1934e)
+
+
+![reptile12](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/04eacdde-607f-46e0-a184-110f4f4949da)
+
+
+![reptile1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/b8cc0c0f-1a74-4a5a-8292-b7d79c13997b)
+
+
+![reptile2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/f17f4d08-f46a-476f-990f-2f6a313afce1)
+
+
 NFT Integration: Iconic scenes, digital artwork, and VR experiences from The Matrix universe can be minted as NFTs 🎨. These could include exclusive digital memorabilia or interactive experiences, such as a choice between the red or blue pill 💊, offering fans an engaging way to explore and own a piece of the movie's lore.
 
 Campaign Delivery: Utilize VR platforms and mobile devices 📱🕶️ to deliver immersive experiences where users can interact with the digital world of The Matrix, receiving personalized content based on their preferences.
