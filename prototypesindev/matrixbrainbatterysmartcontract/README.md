@@ -258,11 +258,6 @@ Movie theme Apps: 🎬 📱
 ![0ee40015-b4a8-4efd-8cdf-c7968ec41b16](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/1a19aac5-9401-444e-9c3c-d8229038f27e)
 
 
-![matrix](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/92c64e53-f93b-4061-a535-a49b32e3f87e)
-
-
-
-
 ![photo_2024-03-01_19-27-06](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/e3debbf4-7a43-4842-8978-75fb2d31c172)
 
 
@@ -273,11 +268,12 @@ Movie theme Apps: 🎬 📱
 
 
 
-
-
 The Matrix: 
 
 ![946136104921358356](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/f9df53b0-a36a-45f0-a905-e58c3d503b5b)
+
+
+![matrix](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/92c64e53-f93b-4061-a535-a49b32e3f87e)
 
 
 ![2e059c79-70a4-4afa-aeac-507614fc65e4 (1)](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a777fd2c-38f5-4068-8638-2a43862dd3e6)
