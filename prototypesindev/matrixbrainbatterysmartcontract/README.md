@@ -238,7 +238,9 @@ https://twitter.com/coolcaptchas/status/1524023123426828289?s=20
     ]
 
 
+![Flag_of_Switzerland](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a9432827-cf8c-4084-ad19-93a6b1ab4981)
 
+![usaflag](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/1265a60b-e603-4b22-b7c7-e29d576106fd)
 
 ![smiley](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/70347e65-17da-46f7-a9f0-8dacc38247d7)
 
