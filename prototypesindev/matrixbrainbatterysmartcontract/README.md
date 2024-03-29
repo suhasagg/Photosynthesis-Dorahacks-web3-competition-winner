@@ -1,4 +1,4 @@
-# Matrix Brain Battery Smart Contract
+![25fd5de3-24be-48b5-b8fe-e4ae28da6c0f](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/60600213-078e-4759-9cc8-9fc0f74bfda5)# Matrix Brain Battery Smart Contract
 
 # MatrixBrainBattery - P2E game and NFT Minting – Ultimate choice for Archway Rewards and Photosynthesis Algorithm
 
@@ -430,10 +430,53 @@ Reptile mode
 ![reptile2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/f17f4d08-f46a-476f-990f-2f6a313afce1)
 
 
+Xenomorph Batteries 
+
+
+Beast Mode 
+
+![xenobeast](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/1eb1df3b-81b5-4b72-867d-779f2016086c)
+
+
+Plant Mode
+
+![xenoplant1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/657c728d-7530-4ce7-b17d-7a3eb2bcfd46)
+
+
+![xeno-plant](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/98bba5c4-b2f9-4ca4-a87f-01658c7d0e5a)
+
+
+
+Ice Mode
+
+![xeno-ice](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/7e7998ca-42e7-4349-82e8-1f800bbe2ef8)
+
+
+
+Bug Mode
+
+![xeno-bug](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/3dbdf015-d77c-4d5a-811e-c1fa70c93810)
+
+
+
+Bird Mode
+
+![xeno-bird](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/638deed1-e53b-4e64-b4e6-708d60a10716)
+
+
+Aqua mode
+
+![xeno-aqua](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/6c2db1d5-d3c4-48e5-9ac2-5ca7a0496824)
+
+
+Xeno in the Matrix  🏙️🕹️👽💥
+
+![xenoicity](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/82981e5a-f27c-4763-8546-2f73df6dea2c)
+
+
 NFT Integration: Iconic scenes, digital artwork, and VR experiences from The Matrix universe can be minted as NFTs 🎨. These could include exclusive digital memorabilia or interactive experiences, such as a choice between the red or blue pill 💊, offering fans an engaging way to explore and own a piece of the movie's lore.
 
 Campaign Delivery: Utilize VR platforms and mobile devices 📱🕶️ to deliver immersive experiences where users can interact with the digital world of The Matrix, receiving personalized content based on their preferences.
-
 
 
 ![416201215_4122376844569633_6849872945164606854_n](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/f6ab1d83-7718-4939-b2d5-b370c4e1126b)
