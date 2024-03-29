@@ -1,4 +1,5 @@
-![25fd5de3-24be-48b5-b8fe-e4ae28da6c0f](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/60600213-078e-4759-9cc8-9fc0f74bfda5)# Matrix Brain Battery Smart Contract
+
+# Matrix Brain Battery Smart Contract
 
 # MatrixBrainBattery - P2E game and NFT Minting – Ultimate choice for Archway Rewards and Photosynthesis Algorithm
 
@@ -462,6 +463,8 @@ Bug Mode
 Bird Mode
 
 ![xeno-bird](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/638deed1-e53b-4e64-b4e6-708d60a10716)
+
+![37e0f2b9-473e-4fe7-ad15-5168ebc64733](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/e004548b-6167-47ce-b797-133760bebe25)
 
 
 Aqua mode
