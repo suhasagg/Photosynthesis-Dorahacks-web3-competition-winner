@@ -576,6 +576,14 @@ Campaign Delivery: Through smart TVs and laptops 💻📺, deliver action-packed
 ![cruise2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/09ba3d75-64bc-457c-83fb-6183369e25ca)
 
 
+Fortnite, The Aqua Team 🌀, equipped with a formidable arsenal of aqua-based weaponry, hydro blasters to tide-turning tridents 💧
+
+![fortnite-aqua](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/d2f31393-3532-430f-aeca-05e017f16ffa)
+
+
+![aquaweapons](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ae8d9ba4-7f5c-4a0d-8f2e-d92a2912b28c)
+
+
 Journey to the Mysterious Island: 
 
 🏝️
