@@ -601,7 +601,35 @@ Fortnite, The Aqua Team 🌀, equipped with a formidable arsenal of aqua-based w
 
 ![forestzone](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ce8c5f4f-7cfa-4367-900f-7c0d3262ced1)
 
+
 ![ce73d66c-1f63-4620-8d67-6a0837b24fc4](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/77f63d5e-5e34-42f0-b624-7810d0700825)
+
+
+Solar Pulse Blaster ☀️💥, Photon Petal Discs 🌸💿, Sunbeam Staff ☀️🔮, Petal Shurikens 🌹🌟, Enigma Blossom 🌺✨, Sundew Sling 🌞🍃, Cactus Cannon 🌵💣 🪄
+
+
+![solr-weapon](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/d5a19707-ace1-4eb2-854d-4c5076a9b5f6)
+
+
+![solr-weapons2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/9ac40df8-0740-4acc-9657-d10c7d94f44b)
+
+
+![solr-weapon3](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/03eb6801-5806-48d4-883e-4652f8db0438)
+
+
+![solr-weapon5](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/6ee600f1-47ae-4229-b007-672ff354dc97)
+
+
+![rose-weapon](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2184ee30-920a-4d0b-bfa7-ca051c946b67)
+
+
+![rose-weapon2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/3e0dd72f-4723-4d8d-9094-4781baee2f4f)
+
+
+![plant-weapons](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/d2d27101-1d77-4c93-ab75-60dee00edbbb)
+
+
+![sundew-sling](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/f395fcba-d044-4604-9641-ba03089ecc2e)
 
 
 
