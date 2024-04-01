@@ -597,6 +597,14 @@ Fortnite, The Aqua Team 🌀, equipped with a formidable arsenal of aqua-based w
 ![29b364b1-0632-477c-af3a-e022b48c2722](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/63836205-3047-4c46-80ad-f89bb69601cc)
 
 
+🌿 Wildlands Warfare: Fortnite's Jungle Armory 🔫🛡🧡🌹💜🌹😊🌹🎮🎮💚🌸🌹
+
+![5bd8d0d9-88bc-49fa-9bd5-18386ba5dfd2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/01c7104d-51f3-41bd-a2cc-811324248f96)
+
+![ce73d66c-1f63-4620-8d67-6a0837b24fc4](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/77f63d5e-5e34-42f0-b624-7810d0700825)
+
+
+
 Journey to the Mysterious Island: 
 
 🏝️
