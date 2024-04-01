@@ -410,7 +410,6 @@ Plant mode
 
 Bug mode
 
-![bug](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/b163fa5a-36bc-4e90-82c2-ee30f0599f16)
 
 
 Reptile mode
@@ -453,8 +452,7 @@ Ice Mode
 
 Bug Mode
 
-![xeno-bug](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/3dbdf015-d77c-4d5a-811e-c1fa70c93810)
-
+![bug](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/b163fa5a-36bc-4e90-82c2-ee30f0599f16)
 
 
 Bird Mode
