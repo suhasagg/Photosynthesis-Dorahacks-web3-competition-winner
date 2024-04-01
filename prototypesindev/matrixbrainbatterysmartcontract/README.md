@@ -584,6 +584,13 @@ Fortnite, The Aqua Team 🌀, equipped with a formidable arsenal of aqua-based w
 ![aquaweapons](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ae8d9ba4-7f5c-4a0d-8f2e-d92a2912b28c)
 
 
+🚀 Galactic Battlegrounds: Arsenal of the Cosmos 🌌🔫🧡🌹💜🌹😊🌹
+
+![02396d8f-9b1a-4f5f-ac29-6db2e7e63953](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c3336990-e2c4-4aab-adf0-dcaf5dc58205)
+
+![15c4cad6-6292-45b8-832b-504a4b6bb532](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2fc3a6ec-ba62-47cf-84b3-42f9720a1be7)
+
+
 Journey to the Mysterious Island: 
 
 🏝️
