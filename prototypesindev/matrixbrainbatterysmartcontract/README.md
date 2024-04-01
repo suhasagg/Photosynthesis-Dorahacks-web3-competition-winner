@@ -239,6 +239,9 @@ https://twitter.com/coolcaptchas/status/1524023123426828289?s=20
     ]
 
 
+![1__-UHjQBIGgo877TvN-1-hw](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c52cfc55-343e-4de7-921a-d925e4867851)
+
+
 !<img src="https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/1265a60b-e603-4b22-b7c7-e29d576106fd" width="200">    <img src="https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a9432827-cf8c-4084-ad19-93a6b1ab4981" width="200">   
 
 
