@@ -410,9 +410,7 @@ Plant mode
 
 Bug mode
 
-
-![bug1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/49f63fef-803c-41b7-b9d9-2808706710d7)
-
+![bug](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/b163fa5a-36bc-4e90-82c2-ee30f0599f16)
 
 
 Reptile mode
