@@ -411,7 +411,7 @@ Plant mode
 Bug mode
 
 
-![bugmode](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a6723371-3eca-4d02-8f95-9f49277cb3d3)
+![bug1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/49f63fef-803c-41b7-b9d9-2808706710d7)
 
 
 
