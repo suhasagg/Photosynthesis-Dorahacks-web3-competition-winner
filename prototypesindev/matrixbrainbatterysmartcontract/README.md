@@ -599,7 +599,7 @@ Fortnite, The Aqua Team 🌀, equipped with a formidable arsenal of aqua-based w
 
 🌿 Wildlands Warfare: Fortnite's Jungle Armory 🔫🛡🧡🌹💜🌹😊🌹🎮🎮💚🌸🌹
 
-![5bd8d0d9-88bc-49fa-9bd5-18386ba5dfd2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/01c7104d-51f3-41bd-a2cc-811324248f96)
+![forestzone](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ce8c5f4f-7cfa-4367-900f-7c0d3262ced1)
 
 ![ce73d66c-1f63-4620-8d67-6a0837b24fc4](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/77f63d5e-5e34-42f0-b624-7810d0700825)
 
