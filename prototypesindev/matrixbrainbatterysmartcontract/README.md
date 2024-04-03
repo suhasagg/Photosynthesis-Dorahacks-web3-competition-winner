@@ -566,7 +566,9 @@ Campaign Delivery: Through smart TVs and laptops 💻📺, deliver action-packed
 
 ![tomcruise](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/0cd9dd1a-a51a-4fd1-b90c-f9db9feebf17)
 
+
 ![bird5](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/77f07d5d-25c7-4163-8dc2-3ea868e9a817)
+
 
 ![cruise](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/035ef34c-e7a3-4b51-bc31-46429f72aa4b)
 
@@ -576,6 +578,7 @@ Campaign Delivery: Through smart TVs and laptops 💻📺, deliver action-packed
 
 Fortnite, The Aqua Team 🌀, equipped with a formidable arsenal of aqua-based weaponry, hydro blasters to tide-turning tridents 💧
 
+
 ![fortnite-aqua](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/d2f31393-3532-430f-aeca-05e017f16ffa)
 
 
@@ -584,21 +587,72 @@ Fortnite, The Aqua Team 🌀, equipped with a formidable arsenal of aqua-based w
 
 Reef Revolver 🌊, a compact handgun 🔫 designed specifically for stealth operations 🕵️‍♂️ in deep-sea environments 🐠🌐.
 
+
 ![Reef Revolver](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a3ad6248-9a6b-4f88-9b35-0571a5589d3f)
+
+
+Assault rifle 🔫
+Extended magazine for prolonged underwater battles 🌊, with a grip mimicking the texture of ocean rocks 🪨.
+
+![assault-rifle](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ca023be6-6d72-4813-b17e-cfa0144f9e21)
+
 
 
 🚀 Galactic Battlegrounds: Arsenal of the Cosmos 🌌🔫🧡🌹💜🌹😊🌹
 
+
 ![02396d8f-9b1a-4f5f-ac29-6db2e7e63953](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c3336990-e2c4-4aab-adf0-dcaf5dc58205)
+
 
 ![15c4cad6-6292-45b8-832b-504a4b6bb532](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2fc3a6ec-ba62-47cf-84b3-42f9720a1be7)
 
 
+
 🧡🌹💜🌹🛩 Skyward Arsenal: The Fortnite Aerial Arena 🗺💥😊🌹🎮🎮💚🌸🌹
+
+
 
 ![b65c8935-9013-4842-b627-861b0d1470ff](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/736d9fee-916e-4c3f-98d4-78aca966da1b)
 
+
+
 ![29b364b1-0632-477c-af3a-e022b48c2722](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/63836205-3047-4c46-80ad-f89bb69601cc)
+
+
+
+![flight1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/58fcd855-1ed8-457e-8faf-a00bb9d4e45b)
+
+
+
+![batman-flight2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/eaffdada-c852-4ebb-9251-63a98d4f8eda)
+
+
+
+![flight3](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/49884d74-45e7-434b-9e85-39e5baf4f335)
+
+
+Daredevil Strategy - Guided Storm jet 🚀💨
+
+Turbulent Tease Cut, a stealth jet designed for agility and low radar detectability 🌪️🛩️
+
+Dominant Raptor - Dark Carbon Core, a bird-like drone 🦅🚁
+
+
+![raptor-flight](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ecac1004-d674-449d-8932-c31da65c3ab3)
+
+
+![signal-collector](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/5a7ee825-2ecf-41c8-b777-f7acd73c2447)
+
+
+
+Hawk-eyed Handgun 🔫👁️‍🗨️
+
+
+![hawk-eyed-gun](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/14283c3e-674d-4e69-87b7-610d1ac8defe)
+
+
+![hawk-eyed-gunv1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a606f567-8dac-4d79-bf99-45c9c2a34683)
+
 
 
 🌿 Wildlands Warfare: Fortnite's Jungle Armory 🔫🛡🧡🌹💜🌹😊🌹🎮🎮💚🌸🌹
