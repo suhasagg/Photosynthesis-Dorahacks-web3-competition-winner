@@ -690,6 +690,46 @@ Solar Pulse Blaster ☀️💥, Photon Petal Discs 🌸💿, Sunbeam Staff ☀�
 ![sundew-sling](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/f395fcba-d044-4604-9641-ba03089ecc2e)
 
 
+Firefly Flash Drive 💾🔦
+
+Data Storage Device 🗄️
+Compact, with bioluminescent indicators to show data transfer, just like the glow of a firefly. ✨📊
+
+
+Beetle Blast Protective Helmet 🪲🛡️
+Smooth, hard exoskeleton-like exterior mimicking a beetle's shell. Equipped with advanced optics for infrared vision. 🐜🔍
+
+
+![firefly-drive](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/762fb201-bd31-4960-9b60-199e31772e6d)
+
+
+![beetleblast](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/26424067-3fc5-4424-8e62-85712362025b)
+
+
+Panther Precision Rifle 🐾🔫
+Assault rifle 💥
+Sleek, dark design mimicking the grace of a panther; optimal for both stealth and power. 🖤🌌
+
+
+![panther-weapon](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/146b6593-f083-4876-b86f-c53edd7f0b87)
+
+
+Wolf Warrior Rifle 🐺🔫
+Assault rifle 💥
+Robust design, made for durability and strength in the field, just like the resilience of a wolf. 🛡️💪
+
+
+![wolf-gun](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/f01ac9cb-26a4-4795-8dbd-37d0b4e9993e)
+
+
+Cobra Carbine 🐍🔫
+Compact rifle 🛠️
+Streamlined form with quick-firing capabilities, echoing the fast strike of a cobra. ⚡🎯
+
+
+![cobra-canine](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/687537ae-ec01-4343-97c3-37c78d695adc)
+
+
 
 Journey to the Mysterious Island: 
 
