@@ -1026,6 +1026,9 @@ Course work Completed and Publications
 
 Course grade - 100/100
 
+
+
+
 <img src="https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ba5a4e1d-ddef-440e-9746-511dae0b5ab2" width="200">
 
 ![uvg](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/d9d1c9ae-17f9-4fa3-9028-b47a719b39e6)
@@ -1036,6 +1039,9 @@ https://drive.google.com/file/d/0B-dZqBe8jAliQkRMd2g3Q0NjNmM/view?usp=sharing&re
 
 
 
+
+
+
 <img src="https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/8542b89b-6733-4844-9d5a-9780b786bdbc" width="200">
 
 ![sna](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/74a7b7c7-1a48-4420-9d16-800ca61d6d41)
@@ -1043,6 +1049,9 @@ https://drive.google.com/file/d/0B-dZqBe8jAliQkRMd2g3Q0NjNmM/view?usp=sharing&re
 Social Network Analysis
 
 https://drive.google.com/file/d/0B-dZqBe8jAlicnpTeTktNnRNOUU/view?resourcekey=0-NM-20avK2wMUgiZ2_1gvSQ
+
+
+
 
 
 
@@ -1059,6 +1068,9 @@ https://sentic.net/wisdom2015aggarwal.pdf
 
 
 
+
+
+
 ![cgames conference](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/af895c25-d243-40f2-aeef-420765dd25bb)
 
 
@@ -1071,6 +1083,9 @@ Applications of Games with A Purpose
 
 
 
+
+
+
 ![www 2013 conference](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/7ca08f68-bfc0-4d0d-9901-314b198482ed)
 
 ![qa](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2c77509f-b001-4ea1-983f-ea42feb08985)
@@ -1080,6 +1095,8 @@ https://dl.acm.org/doi/10.1145/2487788.2488145
 Animated CAPTCHAs and Games for Advertising
 
 WWW'13 Workshop : Web Intelligence & Communities (WI & C 2013)
+
+
 
 
 
