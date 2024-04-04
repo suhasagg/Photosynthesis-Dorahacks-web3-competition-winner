@@ -606,7 +606,12 @@ Extended magazine for prolonged underwater battles 🌊, with a grip mimicking t
 Tidal Pistol 🌊🔫
 Curved design to reduce water drag 🌬️➰, brown-toned for natural camouflage 🍂🔍.
 
+
 ![tideturner](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2abcd957-5df3-4314-bc99-23e0b14d409d)
+
+
+![water-drag-reducer](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/647d6a07-db26-42dc-a510-b3e782c97816)
+
 
 
 Fin Blaster Handgun 🐟💥
