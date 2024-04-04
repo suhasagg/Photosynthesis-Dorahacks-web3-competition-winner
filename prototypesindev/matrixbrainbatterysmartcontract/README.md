@@ -1061,6 +1061,8 @@ WISDOM 2015 : 4th KDD Workshop on Issues of Sentiment Discovery and Opinion Mini
 https://ieeexplore.ieee.org/document/6632605?reload=true&arnumber=6632605
 
 Applications of Games with A Purpose
+
+
 18th International Conference on Computer Games : CGamesUSA 2013 Louisville USA. IEEE, 2013
 
 
