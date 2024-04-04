@@ -606,9 +606,6 @@ Curved design to reduce water drag 🌬️➰, brown-toned for natural camouflag
 ![tideturner](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2abcd957-5df3-4314-bc99-23e0b14d409d)
 
 
-![tidepistol](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/fb07b2d6-fcc3-4541-a32b-35a0c232e1b5)
-
-
 Fin Blaster Handgun 🐟💥
 Textured grip resembling fish scales for a secure hold underwater 🌊👌.
 
@@ -625,7 +622,11 @@ Grooved design for water resistance 💧🛡 and a magazine resembling coral str
 Manta Machine Pistol 🌊🔫
 Angular design inspired by manta rays 🌀🐠, with a wood-like handle for an organic touch 🌲✋.
 
+
 ![mantamachine](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/75e71167-1bd5-46a4-9f57-c56c15aa5b3f)
+
+
+![mantamachinepistol](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/fb07b2d6-fcc3-4541-a32b-35a0c232e1b5)
 
 
 Whirlpool Warrior Submachine gun 🌀🔫
