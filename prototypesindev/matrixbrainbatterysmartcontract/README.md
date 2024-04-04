@@ -597,6 +597,44 @@ Extended magazine for prolonged underwater battles 🌊, with a grip mimicking t
 ![assault-rifle](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ca023be6-6d72-4813-b17e-cfa0144f9e21)
 
 
+![aquaarsenal](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c22c14f3-fcc9-4407-991a-4aaba4933d84)
+
+
+Tidal Pistol 🌊🔫
+Curved design to reduce water drag 🌬️➰, brown-toned for natural camouflage 🍂🔍.
+
+![tideturner](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2abcd957-5df3-4314-bc99-23e0b14d409d)
+
+
+![tidepistol](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/fb07b2d6-fcc3-4541-a32b-35a0c232e1b5)
+
+
+Fin Blaster Handgun 🐟💥
+Textured grip resembling fish scales for a secure hold underwater 🌊👌.
+
+
+![blastweapon](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ea7484b1-5783-4622-ad79-d9ce790db70d)
+
+
+Coral Combat Pistol 🌺🔫 Handgun with extended magazine 📚
+Grooved design for water resistance 💧🛡 and a magazine resembling coral structures 🐚🎨.
+
+![coral-pistol](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/4c65d11a-d817-4e7c-a0c2-e3915979b6da)
+
+
+Manta Machine Pistol 🌊🔫
+Angular design inspired by manta rays 🌀🐠, with a wood-like handle for an organic touch 🌲✋.
+
+![mantamachine](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/75e71167-1bd5-46a4-9f57-c56c15aa5b3f)
+
+
+Whirlpool Warrior Submachine gun 🌀🔫
+Compact design for close-range underwater skirmishes 🔍🌊, with ocean wave-like engravings 🌊🖋.
+
+![whirpool-warrior](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/67b182b1-def9-4aa5-be3f-12a339d07f8d)
+
+
+
 
 🚀 Galactic Battlegrounds: Arsenal of the Cosmos 🌌🔫🧡🌹💜🌹😊🌹
 
