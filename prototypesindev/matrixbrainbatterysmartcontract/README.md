@@ -1060,13 +1060,14 @@ WISDOM 2015 : 4th KDD Workshop on Issues of Sentiment Discovery and Opinion Mini
 
 https://ieeexplore.ieee.org/document/6632605?reload=true&arnumber=6632605
 
-Applications of Games with A PurposeApplications of Games with A Purpose
-CGamesUSA 2013.
+Applications of Games with A Purpose
 18th International Conference on Computer Games : CGamesUSA 2013 Louisville USA. IEEE, 2013
 
 
 
 ![www 2013 conference](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/7ca08f68-bfc0-4d0d-9901-314b198482ed)
+
+![qa](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2c77509f-b001-4ea1-983f-ea42feb08985)
 
 https://dl.acm.org/doi/10.1145/2487788.2488145
 
