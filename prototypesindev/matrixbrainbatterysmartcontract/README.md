@@ -1026,7 +1026,7 @@ Course work Completed and Publications
 
 Course grade - 100/100
 
-![University of Alberta,Canada](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/e796b482-05fa-4ae4-8945-76b5a40ba90b)
+!<img src="https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/1265a60b-e603-4b22-b7c7-e29d576106fd" width="200">
 
 ![uvg](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/d9d1c9ae-17f9-4fa3-9028-b47a719b39e6)
 
@@ -1036,7 +1036,7 @@ https://drive.google.com/file/d/0B-dZqBe8jAliQkRMd2g3Q0NjNmM/view?usp=sharing&re
 
 
 
-![1200px-Seal_of_the_University_of_Michigan svg](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/4a1e7e8a-1c0f-4c16-a505-65664d6441be)
+!<img src="https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/1265a60b-e603-4b22-b7c7-e29d576106fd" width="200">
 
 ![sna](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/74a7b7c7-1a48-4420-9d16-800ca61d6d41)
 
