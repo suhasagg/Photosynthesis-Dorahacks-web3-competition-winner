@@ -1019,3 +1019,73 @@ This Music NFTs App aims to revolutionize the way fans interact with music and a
 
 
 
+Course work Completed and Publications
+
+![What-is-Research-Purpose-of-Research-phul4s3cbwe0xam190dnc4kz3z616ajmfkygodcdqg](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/9a197c61-233c-4dc7-b26b-f5df361db340)
+
+
+Course grade - 100/100
+
+![University of Alberta,Canada](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/e796b482-05fa-4ae4-8945-76b5a40ba90b)
+
+![uvg](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/d9d1c9ae-17f9-4fa3-9028-b47a719b39e6)
+
+Understanding Video Games
+
+https://drive.google.com/file/d/0B-dZqBe8jAliQkRMd2g3Q0NjNmM/view?usp=sharing&resourcekey=0-kpmPWtMgAxb2imsW4hZ1Mw
+
+
+
+![1200px-Seal_of_the_University_of_Michigan svg](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/4a1e7e8a-1c0f-4c16-a505-65664d6441be)
+
+![sna](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/74a7b7c7-1a48-4420-9d16-800ca61d6d41)
+
+Social Network Analysis
+
+https://drive.google.com/file/d/0B-dZqBe8jAlicnpTeTktNnRNOUU/view?resourcekey=0-NM-20avK2wMUgiZ2_1gvSQ
+
+
+
+![KDD conference](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a7ac67df-f2cb-48df-9ce7-e37f21abd7c4)
+
+Smiley Captcha And Smiley Games Solving Complex Problems
+
+WISDOM 2015 : 4th KDD Workshop on Issues of Sentiment Discovery and Opinion Mining
+
+
+
+
+![cgames conference](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/af895c25-d243-40f2-aeef-420765dd25bb)
+
+
+https://ieeexplore.ieee.org/document/6632605?reload=true&arnumber=6632605
+
+Applications of Games with A PurposeApplications of Games with A Purpose
+CGamesUSA 2013.
+18th International Conference on Computer Games : CGamesUSA 2013 Louisville USA. IEEE, 2013
+
+
+
+![www 2013 conference](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/7ca08f68-bfc0-4d0d-9901-314b198482ed)
+
+https://dl.acm.org/doi/10.1145/2487788.2488145
+
+Animated CAPTCHAs and Games for Advertising
+
+WWW'13 Workshop : Web Intelligence & Communities (WI & C 2013)
+
+
+
+![msr](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/601d80c3-b7bc-4fa6-b49c-08d62c27e39c)
+
+![cmu](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/5611b300-861c-4c57-ba79-ed9f85271832)
+
+https://www.humancomputation.com/2012/Program.html
+
+https://aaai.org/papers/aaaiw-ws0816-12-5208/
+
+CAPTCHAs with a Purpose
+
+AAAI-12 Workshop: Human Computation (HCOMP 2012)
+
+Workshops at the Twenty-Sixth AAAI Conference on Artificial Intelligence. 2012. Toronto, Canada
