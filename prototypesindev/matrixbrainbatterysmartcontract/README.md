@@ -1048,10 +1048,14 @@ https://drive.google.com/file/d/0B-dZqBe8jAlicnpTeTktNnRNOUU/view?resourcekey=0-
 
 ![KDD conference](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a7ac67df-f2cb-48df-9ce7-e37f21abd7c4)
 
+
+https://sentic.net/wisdom/#2015
+
 Smiley Captcha And Smiley Games Solving Complex Problems
 
 WISDOM 2015 : 4th KDD Workshop on Issues of Sentiment Discovery and Opinion Mining
 
+https://sentic.net/wisdom2015aggarwal.pdf
 
 
 
