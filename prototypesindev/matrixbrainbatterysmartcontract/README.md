@@ -1042,6 +1042,12 @@ A vibrant and stylish theme inspired by the character Clarissa ✨🌟🔮
 ![cl1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/69dd6ffb-683f-4ab0-b386-0091a549c333)
 
 
+![next-gen-nickv1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/54321715-5a9c-4d9e-8a11-7d17df3c3005)
+
+
+![next-gen-nickv2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/1fc129c3-76c1-4d96-925c-2f46d771dd9b)
+
+A next-generation touch added to the theme inspired by the character Clarissa 🌌✨🔮💡🖼️👾💻✨📚🌟
 
 
 Course work Completed and Publications
