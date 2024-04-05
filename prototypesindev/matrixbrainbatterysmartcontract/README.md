@@ -1018,6 +1018,31 @@ This Music NFTs App aims to revolutionize the way fans interact with music and a
 ![photo_2024-02-18_23-46-10](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/436743a7-8b60-4ae3-bd92-07db7498d998)
 
 
+Nickelodeon Retro
+
+![Nick_Retro_2010_logo](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/53edbfab-0f26-4f44-b154-8a6b9dd9184a)
+
+
+Comedic scene 📺 😆 reminiscent of the 'Kenan & Kel' show 🍊💦
+
+![kkel2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/b3e73d27-4382-43c8-b0fe-0b37f8690e7a)
+
+
+![kkel1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ab451606-051d-47b0-bb2a-b87811ecd05c)
+
+
+A vibrant and stylish theme inspired by the character Clarissa ✨🌟🔮
+
+![cl3](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a3842946-76b9-4eb8-8006-58b74c5541c5)
+
+
+![cl2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/5d7565ac-f0e0-41aa-b887-2acf8084ea33)
+
+
+![cl1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/69dd6ffb-683f-4ab0-b386-0091a549c333)
+
+
+
 
 Course work Completed and Publications
 
