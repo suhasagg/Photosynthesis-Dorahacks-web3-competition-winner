@@ -1050,6 +1050,19 @@ A vibrant and stylish theme inspired by the character Clarissa ✨🌟🔮
 A next-generation touch added to the theme inspired by the character Clarissa 🌌✨🔮💡🖼️👾💻✨📚🌟
 
 
+
+![vr-themed-friends-episodes](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/6a96f0de-8155-4c5f-96f4-febe2031e361)
+
+Monica's Culinary Conquest: Monica enters a VR cooking competition where she faces off against some of the world's best chefs. 🍳✨🥇
+
+Chandler's Comedy Club: Chandler finds himself in a world where he's the star comedian performing in front of a crowd that laughs at every joke. 
+
+Rachel's Fashion Realm: Rachel designs her own clothing line in a VR world where she's the top fashion icon. 👗👠💖
+
+Ross's Dinosaur Park: Ross lives out his childhood dream of visiting a land filled with dinosaurs. 🦖🌴🔍
+
+
+
 Course work Completed and Publications
 
 ![What-is-Research-Purpose-of-Research-phul4s3cbwe0xam190dnc4kz3z616ajmfkygodcdqg](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/9a197c61-233c-4dc7-b26b-f5df361db340)
