@@ -84,6 +84,9 @@ https://archid.app/domains/templerun.arch
 https://archid.app/domains/sonictails.arch
 
 
+https://discord.com/channels/892203409418092615/1004686093922357269
+
+
 In the News :
 
 https://www.facebook.com/groups/682232515824097/permalink/990244991689513/
