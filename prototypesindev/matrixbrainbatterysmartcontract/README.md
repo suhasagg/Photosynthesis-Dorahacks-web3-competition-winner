@@ -136,6 +136,8 @@ https://x.com/coolcaptchas/status/1774477559138578734
 
 https://x.com/coolcaptchas/status/1774998663816978920
 
+https://x.com/coolcaptchas/status/1778470725579649403
+
 https://x.com/coolcaptchas/status/1773569655216497091
 
 https://x.com/chill_nftdavao/status/1775161516066816339
