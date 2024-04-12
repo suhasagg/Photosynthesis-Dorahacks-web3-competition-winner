@@ -74,6 +74,83 @@ https://twitter.com/coolcaptchas/status/1526400514073989121?s=20
 
 https://twitter.com/coolcaptchas/status/1524023123426828289?s=20
 
+https://x.com/coolcaptchas/status/1778375754545312078
+
+https://x.com/coolcaptchas/status/1778357649236468044
+
+https://x.com/coolcaptchas/status/1778210619193450803
+
+https://x.com/coolcaptchas/status/1778189083015258217
+
+https://x.com/coolcaptchas/status/1778183245529817264
+
+https://x.com/coolcaptchas/status/1777938417327988955
+
+https://x.com/coolcaptchas/status/1777930823033119124
+
+https://x.com/coolcaptchas/status/1777922084464951636
+
+https://x.com/coolcaptchas/status/1777459235254870344
+
+https://x.com/coolcaptchas/status/1777920375520887015
+
+https://x.com/coolcaptchas/status/1777457256856199551
+
+https://x.com/coolcaptchas/status/1777390736218136715
+
+https://x.com/coolcaptchas/status/1777346624337178812
+
+https://x.com/coolcaptchas/status/1776945961824407858
+
+https://x.com/coolcaptchas/status/1776951776245330009
+
+https://x.com/coolcaptchas/status/1777013868214301083
+
+https://x.com/coolcaptchas/status/1776951776245330009
+
+https://x.com/coolcaptchas/status/1776945961824407858
+
+https://x.com/coolcaptchas/status/1776716396308938889
+
+https://x.com/coolcaptchas/status/1776681386424045947
+
+https://x.com/coolcaptchas/status/1776699190481240155
+
+https://x.com/coolcaptchas/status/1776695066045874637
+
+https://x.com/coolcaptchas/status/1775953179005616341
+
+https://x.com/coolcaptchas/status/1775861469516849249
+
+https://x.com/coolcaptchas/status/1775502941312459240
+
+https://x.com/coolcaptchas/status/1775220478959128641
+
+https://x.com/coolcaptchas/status/1775169492315971920
+
+https://x.com/coolcaptchas/status/1775157350061781369
+
+https://x.com/coolcaptchas/status/1775080566733537686
+
+https://x.com/coolcaptchas/status/1774477559138578734
+
+https://x.com/coolcaptchas/status/1774998663816978920
+
+https://x.com/coolcaptchas/status/1773569655216497091
+
+https://x.com/chill_nftdavao/status/1775161516066816339
+
+https://x.com/mjstheller/status/1777859187734954368
+
+https://x.com/rlacumba/status/1777297005506937167
+
+https://www.facebook.com/groups/5258743197571860/permalink/7303612329751593/
+
+https://www.facebook.com/groups/5258743197571860/permalink/7301292966650196/
+
+https://www.facebook.com/groups/5258743197571860/permalink/7248948761884617/
+
+
     [
         MatrixBrainBattery {
             name: "Battery1",
@@ -1157,3 +1234,12 @@ CAPTCHAs with a Purpose
 AAAI-12 Workshop: Human Computation (HCOMP 2012)
 
 Workshops at the Twenty-Sixth AAAI Conference on Artificial Intelligence. 2012. Toronto, Canada
+
+
+![xbox](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/8a752c73-2af4-4912-9cfe-e757090c8d68)
+
+
+
+
+
+
