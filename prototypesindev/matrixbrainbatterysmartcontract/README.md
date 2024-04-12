@@ -40,26 +40,47 @@ ArchID:
 <img src="https://cdn.discordapp.com/emojis/1014847480539652118.webp?size=96&quality=lossless" width="100">
 
 https://archid.app/domains/keanumatrixuniverse.arch
+
 https://archid.app/domains/keanureevesjohnwick.arch
+
 https://archid.app/domains/hollywoodnfts.arch
+
 https://archid.app/domains/holograms.arch
+
 https://archid.app/domains/cosmossdk.arch
+
 https://archid.app/domains/archwayliquidstaking.arch
+
 https://archid.app/domains/photosynthesis.arch
+
 https://archid.app/domains/cookieattentiontoken.arch
+
 https://archid.app/domains/adserver.arch
-https://archid.app/.../tomcruisemissionimpossibleuniverse...
+
+https://archid.app/domains/tomcruisemissionimpossibleuniverse.arch
+
 https://archid.app/domains/hollywoodnfts.arch
+
 https://archid.app/domains/wweuniverse.arch
+
 https://archid.app/domains/holograms.arch
+
 https://archid.app/domains/virtualreality.arch
+
 https://archid.app/domains/augmentedreality.arch
+
 https://archid.app/domains/videogamemaps.arch
+
 https://archid.app/domains/cyberpunk2077.arch
+
 https://archid.app/domains/nickcarternickelodeon.arch
+
 https://archid.app/domains/ninjafortnite.arch
+
 https://archid.app/domains/simcity.arch
+
 https://archid.app/domains/templerun.arch
+
 https://archid.app/domains/sonictails.arch
 
 
