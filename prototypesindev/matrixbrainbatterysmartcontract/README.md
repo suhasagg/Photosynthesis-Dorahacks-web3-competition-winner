@@ -851,6 +851,61 @@ Dominant Raptor - Dark Carbon Core, a bird-like drone 🦅🚁
 
 
 
+💚 Matrix Code Rain: Visual effects of green digital code cascading like rain across the sky and on some surfaces. 🌧️
+
+🕶️ Virtual Reality Interfaces: Elements that resemble virtual reality interfaces, such as digital grids and holographic displays. 🖥️
+
+🕴️ Matrix-Styled Agents: NPC characters or elements styled after the agents in "The Matrix," such as black-suited figures that appear as challenges or obstacles. 🎩
+
+🌌 Cyber Deco Elements: Dark, sleek design elements and technology that echo the cyberpunk aesthetic of "The Matrix." 🔲
+
+
+
+![matrix-fortnite-maps](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/5d7d903e-ecb1-4900-ac5d-26ea80201981)
+
+
+![matrix-fortnite-maps2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/7ea90d23-6c5f-4517-8deb-bc2431999f20)
+
+
+
+
+
+Matrix themed Fortnite Aqua Map 🌊
+
+🌊 Underwater Structures: Futuristic underwater bases and structures that players can enter and explore. 🏰
+
+🚤 Submarine Transportation: Submarines and other aquatic vehicles for navigation and combat. 🛥️
+
+🐠 Bioluminescent Fauna and Flora: Incorporate glowing marine life and vegetation that enhance the mysterious underwater environment. 🌿
+
+💧 Digital Water Effects: "Matrix"-style green code streaming through water currents and around the structures, mimicking the iconic digital rain. 📊
+
+
+![matrix-fortnite-aqua-maps](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/701bc80d-3e1f-4436-8c3e-5b34317c71a8)
+
+
+![matrix-fortnite-map-aqua2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/665ebcf5-40b6-404d-b0e7-61cfd130c394)
+
+
+
+Matrix themed Fortnite Space Map 🌌
+
+🛰️ Orbital Platforms: Structures and bases that float in orbit around a fictional planet, with bridges and tunnels connecting them. 🌌
+
+🚀 Zero-Gravity Zones: Areas where players can experience zero-gravity, enhancing mobility and combat dynamics. 🌠
+
+🌑 Asteroid Fields: Regions filled with moving asteroids that players can navigate, offering both cover and resources. 💫
+
+🔮 Digital Space Phenomena: "Matrix"-style digital code visual effects, such as code streaks across the sky or digital storms. 🌐
+
+
+![matrix-fortnite-space-map](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/f38f92cb-d914-4631-a914-b6787084c840)
+
+
+![matrix-fortnite-space-map2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/30feb85c-6976-434a-b4cc-3d89d8cc78de)
+
+
+
 Hawk-eyed Handgun 🔫👁️‍🗨️
 
 
