@@ -280,3 +280,6 @@ Applications:
 5)Tamper-Proof Audit Trail: Storing Merkle Tree root hashes on a blockchain provides a tamper-proof audit trail, enhancing transparency and trust in the data collected.
 
 ```
+
+![dancing-robot-lego-boost](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/f3fc062b-2e2b-4317-8ecc-c485fd5c09a6)
+
