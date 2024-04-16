@@ -1386,7 +1386,8 @@ Workshops at the Twenty-Sixth AAAI Conference on Artificial Intelligence. 2012. 
 ![holographicsmartphone](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/df922a9b-d4dc-4739-abc2-de3e9f0b318e)
 
 
-![legorobot](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c3dd22ba-3a22-4b43-8cca-295b33b207e1)
+
+![dancing-robot-lego-boost](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/4fc77cb8-aa63-4991-bce2-1195e3eb7283)
 
 
 
