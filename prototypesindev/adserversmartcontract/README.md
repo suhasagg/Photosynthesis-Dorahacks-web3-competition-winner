@@ -989,8 +989,8 @@ Step 3: Combine Scores Using a Weighted Formula 🔍
 Interest Score (I): Combine frequency and recency scores to compute an overall interest score for each IAB segment for a user.
 ```
 
-![User IAB Segment Interest Equation](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ade41c8e-a154-4cd2-840f-933969a589aa) 🧮
-
+![equation](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/58b20900-bd67-4e75-b43a-de6a6666f9ba) 🧮
+ 
 ```
 Step 4: Sort Campaigns 🗂️
 
