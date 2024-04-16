@@ -992,8 +992,11 @@ Interest Score (I): Combine frequency and recency scores to compute an overall i
 ![equation](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/58b20900-bd67-4e75-b43a-de6a6666f9ba) 🧮
 
 Where:
+
     • w1​,w2​ represent the weights assigned to frequency and recency.
+    
     • λ is the decay constant indicating how quickly past interactions lose relevance.
+    
     • t measures the time elapsed since the last interaction.
  
 ```
