@@ -987,10 +987,11 @@ Recency Score (R): Calculate the time decay factor for each segment based on the
 Step 3: Combine Scores Using a Weighted Formula 🔍
 
 Interest Score (I): Combine frequency and recency scores to compute an overall interest score for each IAB segment for a user.
+```
 
-![interest equation](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ade41c8e-a154-4cd2-840f-933969a589aa)  🧮
+![User IAB Segment Interest Equation](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ade41c8e-a154-4cd2-840f-933969a589aa) 🧮
 
-
+```
 Step 4: Sort Campaigns 🗂️
 
 Sort available campaigns based on their match with the user’s highest Interest Scores across IAB segments.
