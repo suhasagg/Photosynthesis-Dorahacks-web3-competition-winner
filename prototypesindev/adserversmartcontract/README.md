@@ -967,6 +967,42 @@ Campaigns get archived in the mobile app 📱 and can be reviewed by users at an
 This system ensures that every ad has its time to shine, again and again, bringing back cherished memories and maximizing user engagement!! 🌟💬🔄
 
 
+Campaign Sorting Steps:
 
+Step 1: Data Collection 📊
+
+Collect real-time and historical data on user interactions with campaigns.
+
+Categorize content and user interactions into IAB segments, geography, device, and more segments. 🌐
+Update the topic cloud for each user. ☁️
+
+
+Step 2: Calculate Interest Scores 📈
+
+Frequency Score (F): Count how often the user interacts with campaigns within each IAB segment. 🔢
+
+Recency Score (R): Calculate the time decay factor for each segment based on the last interaction. Older interactions have less weight, and recent interactions score higher. ⏳
+
+
+Step 3: Combine Scores Using a Weighted Formula 🔍
+
+Interest Score (I): Combine frequency and recency scores to compute an overall interest score for each IAB segment for a user.
+
+![equation](https://latex.codecogs.com/svg.latex?I=w_1%20\cdot%20F%20+%20w_2%20\cdot%20e^{-\lambda%20\cdot%20t}) 🧮
+
+
+Step 4: Sort Campaigns 🗂️
+
+Sort available campaigns based on their match with the user’s highest Interest Scores across IAB segments.
+Prioritize campaigns that not only fit the highest Interest Scores but also complement the user's topic cloud. 🎯
+
+
+Implementation and Benefits 🌟
+
+This algorithm can be implemented within the existing CMS and personalization engine. By leveraging this strategy, campaigns will be more effectively targeted, enhancing user engagement because the content will resonate more deeply on a personal level. ❤️
+
+Additionally, this sorting algorithm helps in minimizing ad fatigue, as it dynamically adjusts to changing interests and preferences, thus optimizing both advertiser spend and user experience. 🔄
+
+By integrating this advanced sorting algorithm, the campaign delivery system ensures that nostalgia and other user preferences are leveraged effectively, campaigns are delivered with an understanding of user behavior over time, and advertisers can achieve better engagement metrics at reduced costs. ✅📉
 
 ```
