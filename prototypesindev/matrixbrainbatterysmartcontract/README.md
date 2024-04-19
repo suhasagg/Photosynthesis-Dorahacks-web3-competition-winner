@@ -69,6 +69,8 @@ https://archid.app/domains/virtualreality.arch
 
 https://archid.app/domains/augmentedreality.arch
 
+https://archid.app/domains/colors.arch
+
 https://archid.app/domains/videogamemaps.arch
 
 https://archid.app/domains/cyberpunk2077.arch
