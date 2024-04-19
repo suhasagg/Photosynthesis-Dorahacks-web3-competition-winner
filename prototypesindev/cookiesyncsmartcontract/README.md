@@ -35,6 +35,8 @@ https://archid.app/domains/crossdevice.arch
 
 https://archid.app/domains/admanager.arch
 
+https://archid.app/domains/adserver.arch
+
 
 ```
 Saving state: CookiePacketData {
