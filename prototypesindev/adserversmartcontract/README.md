@@ -18,6 +18,26 @@ https://docs.google.com/document/d/1-pGzhqz7UHgB2O9qD4fcLAhwhTUgUI4A/edit?usp=sh
 Layer 2 chain derivative -
 https://github.com/suhasagg/BlockchainBridgeSystemDesign
 
+
+ArchID:
+
+<img src="https://cdn.discordapp.com/emojis/1014847480539652118.webp?size=96&quality=lossless" width="100">
+
+https://archid.app/domains/iab.arch
+
+https://archid.app/domains/cookieattentiontoken.arch
+
+https://archid.app/domains/cookiepersona.arch
+
+https://archid.app/domains/datamanagementplatform.arch
+
+https://archid.app/domains/crossdevice.arch
+
+https://archid.app/domains/admanager.arch
+
+https://archid.app/domains/adserver.arch
+
+
 ```
 Saving state: State {
     ads: [],
