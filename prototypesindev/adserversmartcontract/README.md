@@ -1037,75 +1037,100 @@ By integrating this advanced sorting algorithm, the campaign delivery system ens
 ```
 
 
+
+
 🚀 Async Campaign Chatting Feature 🎉 for Best Campaign User Experience ✨
+
 
 
 1. Chat Feature Development 🛠️
    - Custom chat module or integrate a third-party service to enable messaging within the app. This module supports starting new conversations, displaying existing conversations, and managing multiple chat threads.
 
+
 2. User Authentication 🔒
    - Use OAuth or a similar protocol to authenticate users. This ensures that the chat feature is accessible only to registered and logged-in users, enhancing security and providing personalized interactions.
+
 
 3. Real-Time Messaging ⚡
    - Implement WebSocket for a persistent connection between the client and the server or use Firebase Cloud Messaging (FCM) to handle the delivery and reception of messages in real-time.
 
+
 4. Notification System 📬
    - Develop or integrate a push notification system to notify users about new messages or actions needed. This can be done through Android’s native notification system or FCM.
 
+
 5. UI/UX Design 🎨
    -  Clean, intuitive user interface for the chat feature. Include essentials such as message bubbles, timestamps, sender identification, and multimedia message capabilities (like sending images and videos).
+
 
 6. Integration with Campaign Platform 🔄
    - Chat feature is integrated with the rest of the campaign platform functionalities. This involves linking chat sessions with specific campaign issues or queries to provide contextual support.
 
 
 
+
 Enhancements for Asynchronous Chat Support 🚀
+
 
 Message Queueing System 📥:
 Implement a message queueing system to manage asynchronous communication. This system stores messages sent by users when the support team is unavailable and ensures they are delivered when the team is ready to respond.
 
+
 Offline Messaging Capability 📶:
 Enable users to send messages even when they are offline or when the support team is not immediately available. These messages are stored locally and synced with the server once the connection is re-established.
+
 
 Scheduled Messages 📆:
 Allow users to schedule messages for future delivery, useful for inquiries about upcoming promotions or products. This feature can also notify users when a scheduled time for a discount or early bird offer is approaching.
 
+
 Read Receipts and Last Seen 👀:
 Incorporate read receipts and indicators showing when the support team last viewed the chat. This keeps users informed about the status of their queries and manages expectations regarding response times.
+
 
 Automated Responses 🤖:
 Develop an automated response system that can provide immediate basic answers to common questions or acknowledge the receipt of messages. 
 
+
 Push Notifications for Updates 🔔:
 Ensure that users receive push notifications for new messages or updates from the advertiser, especially for ongoing discussions about product demos or special offers. This keeps the user engaged and informed without needing to check the app constantly.
+
 
 Rich Media Support 🎥:
 Enhance the chat interface to support rich media, such as videos, images, and documents. This is useful for product demos and detailed explanations of offers or discounts.
 
+
 Searchable Chat Archives 🔍:
 Implement a feature that allows users to search their chat archives. This can help them quickly find information about past conversations regarding offers, product details, or support interactions.
+
 
 User Feedback Collection ✍️:
 Integrate a mechanism for collecting user feedback directly through the chat interface. This feedback can be about the chat experience itself or the products and offers discussed within the chat.
 
 
 
+
 YouTube Channel Interface Integration 🎥
+
 
 1. YouTube Messaging API 📝
    - Utilize the YouTube Data API to integrate messaging features directly on the channel. This involve solutions like linking to external chat platforms or embedding chat in the channel page.
+
+
 
 2. User Permissions 🛂
    - Handle permission requests carefully to access user data for messaging. Clearly communicate which permissions are needed and why, ensuring compliance with YouTube’s policies and user privacy standards.
    
 
+
 3. Real-Time Communication 🗨️
    - Implement real-time messaging on the YouTube interface, which may involve using WebSockets or polling mechanisms to retrieve messages without refreshing the page.
 
 
+
 4. Notification Integration 🔔
    - Integrate with YouTube’s notification system or develop a custom notification feature to alert users about new messages directly on YouTube.
+
 
 
 5. User Experience Enhancement 💡
