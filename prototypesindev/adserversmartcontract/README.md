@@ -1038,6 +1038,8 @@ By integrating this advanced sorting algorithm, the campaign delivery system ens
 
 
 
+```
+
 
 🚀 Async Campaign Chatting Feature 🎉 for Best Campaign User Experience ✨
 
@@ -1066,8 +1068,10 @@ By integrating this advanced sorting algorithm, the campaign delivery system ens
 6. Integration with Campaign Platform 🔄
    - Chat feature is integrated with the rest of the campaign platform functionalities. This involves linking chat sessions with specific campaign issues or queries to provide contextual support.
 
+```
 
 
+```
 
 Enhancements for Asynchronous Chat Support 🚀
 
@@ -1107,8 +1111,10 @@ Implement a feature that allows users to search their chat archives. This can he
 User Feedback Collection ✍️:
 Integrate a mechanism for collecting user feedback directly through the chat interface. This feedback can be about the chat experience itself or the products and offers discussed within the chat.
 
+```
 
 
+```
 
 YouTube Channel Interface Integration 🎥
 
@@ -1140,7 +1146,7 @@ YouTube Channel Interface Integration 🎥
 6. Integration with Campaign Content 🔗
    - Link chat functionalities with specific campaign content on the YouTube channel, such as enabling chat prompts on particular videos or campaign-related posts.
 
-
+```
 
 ![dancing-robot-lego-boost](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/07fcba66-4ec4-4427-a4ad-2e2f3a188fd4)
 
