@@ -1308,7 +1308,11 @@ Ross's Dinosaur Park: Ross lives out his childhood dream of visiting a land fill
 
 
 
+
+
 🎬 Hollywood Hairstyle NFTs 💇‍♂️💇‍♀️
+
+
 
 
 ![tomcruise](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2c66d14a-499b-46ee-9072-93f25b1c649e)
@@ -1316,6 +1320,9 @@ Ross's Dinosaur Park: Ross lives out his childhood dream of visiting a land fill
 
 
 ![keanu](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/8ec3ba67-ebcd-44b6-9a74-e54074d2df5d)
+
+
+
 
 
 
