@@ -403,6 +403,9 @@ https://www.facebook.com/groups/5258743197571860/permalink/7248948761884617/
 Movie theme Apps: 🎬 📱
 
 
+![netflix-logo](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/5b0ea76d-aa0c-42e3-8736-45bb5e2185c2)
+
+
 ![0ee40015-b4a8-4efd-8cdf-c7968ec41b16](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/1a19aac5-9401-444e-9c3c-d8229038f27e)
 
 
