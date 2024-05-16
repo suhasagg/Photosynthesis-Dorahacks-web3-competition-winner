@@ -830,6 +830,15 @@ Mission: Impossible:
 ![tctemplerun2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/30bcf205-3753-47d9-9707-4caccb372e9e)
 
 
+🌟 Tom Cruise Temple Run 2 Maps 🗺️
+
+Lost Jungle 🦧🌿
+🌋 Volcano Island 🏝️
+Frozen Shadows ❄️🧊
+Blazing Sands 🔥🏜️
+Sky Summit 🌄☁️
+Pirate Cove 🏴‍☠️🌊
+
 NFT Integration: Create NFTs featuring mission briefs, virtual gadgets, or interactive scenes allowing fans to engage with the IMF team 📜🔍. Limited edition NFTs could offer behind-the-scenes content, stunts, and insights from the cast and crew 🎥, adding a layer of exclusivity.
 
 Campaign Delivery: Through smart TVs and laptops 💻📺, deliver action-packed, personalized campaigns that could include interactive missions or puzzles mirroring the movie's themes, enhancing the user's engagement with the content.
