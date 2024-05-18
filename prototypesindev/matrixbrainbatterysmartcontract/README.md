@@ -1518,7 +1518,7 @@ Course grade - 100/100
 
 Understanding Video Games
 
-https://drive.google.com/file/d/0B-dZqBe8jAliQkRMd2g3Q0NjNmM/view?usp=sharing&resourcekey=0-kpmPWtMgAxb2imsW4hZ1Mw
+https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishment/973190~160861/pdf
 
 
 
