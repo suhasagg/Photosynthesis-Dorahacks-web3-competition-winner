@@ -818,6 +818,10 @@ Augmented Reality Dialogues: AR experiences where users can activate scenes from
 Decision-Based Interactive Stories: Similar to choose-your-own-adventure books, these NFTs could allow owners to make decisions at key dialogue points which will affect the outcome of the story. This is particularly engaging in a mobile or VR setting, providing a game-like experience that deepens the narrative immersion. 📖🚪🔄
 
 
+![keanureevessamurai](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2988d1ab-30ea-4335-8895-6b060db757a2)
+
+![keanureevestetris](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/8f6dceb6-c54d-454e-a43a-3215a6be9f07)
+
 
 Mission: Impossible: 
 
@@ -848,6 +852,16 @@ Frozen Shadows ❄️🧊
 Blazing Sands 🔥🏜️
 Sky Summit 🌄☁️
 Pirate Cove 🏴‍☠️🌊
+
+
+![tomcruisejurassicpark](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/04771550-0a26-4e9a-bc23-4f4c72078537)
+
+
+![tomcruisetetris](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/9198c83b-aa25-43a9-8231-47c84801bd1a)
+
+
+![tomcruisevalkyrie](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a2796af5-24a0-4fad-9690-9ea03081603a)
+
 
 NFT Integration: Create NFTs featuring mission briefs, virtual gadgets, or interactive scenes allowing fans to engage with the IMF team 📜🔍. Limited edition NFTs could offer behind-the-scenes content, stunts, and insights from the cast and crew 🎥, adding a layer of exclusivity.
 
@@ -1192,6 +1206,11 @@ Campaign Delivery: Deploy these interactive campaigns across mobile devices and 
 
 
 ![dwaynefastandfurious](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a5269dd9-ef34-429f-ac09-8eec9f5a8b87)
+
+
+![dwaynejohnsonplanetoftheapes](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/53f7719f-9e5c-460d-993d-3bb940ac7c23)
+
+
 
 
 
