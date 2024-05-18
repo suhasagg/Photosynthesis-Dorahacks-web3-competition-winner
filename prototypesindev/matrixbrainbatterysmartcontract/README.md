@@ -820,7 +820,13 @@ Decision-Based Interactive Stories: Similar to choose-your-own-adventure books, 
 
 ![keanureevessamurai](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2988d1ab-30ea-4335-8895-6b060db757a2)
 
+
 ![keanureevestetris](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/8f6dceb6-c54d-454e-a43a-3215a6be9f07)
+
+
+![keanuinfinitydisplay](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/4fcb3f84-1765-466e-9550-34689e96121d)
+
+
 
 
 Mission: Impossible: 
