@@ -1524,6 +1524,10 @@ https://drive.google.com/file/d/0B-dZqBe8jAliQkRMd2g3Q0NjNmM/view?usp=sharing&re
 
 Course grade - 106.52/100
 
+
+![stanford](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/670d2bb1-5292-4c51-a2b3-bb56775b9d7c)
+
+
 ![hci](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/67046a01-6b03-4a5c-a844-441611fc9a6c)
 
 
