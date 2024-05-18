@@ -1518,7 +1518,8 @@ Course grade - 100/100
 
 Understanding Video Games
 
-https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishment/973190~160861/pdf
+https://drive.google.com/file/d/0B-dZqBe8jAliQkRMd2g3Q0NjNmM/view?resourcekey=0-kpmPWtMgAxb2imsW4hZ1Mw
+
 
 
 
@@ -1533,7 +1534,8 @@ Course grade - 106.52/100
 
 Human-Computer Interaction
 
-https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishment/970447~160861/pdf
+https://drive.google.com/file/d/0B-dZqBe8jAliU0U5QkR6U1c2ZGM/view?resourcekey=0-4F-KRAXzK5k5Juvqc0C4wg
+
 
 
 
@@ -1543,7 +1545,7 @@ https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishme
 
 Social Network Analysis
 
-https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishment/970466~160861/pdf
+https://drive.google.com/file/d/0B-dZqBe8jAlicnpTeTktNnRNOUU/view?resourcekey=0-NM-20avK2wMUgiZ2_1gvSQ
 
 
 ![mastersdegree](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/5737ab91-7316-4228-b902-534acfc1c2ae)
