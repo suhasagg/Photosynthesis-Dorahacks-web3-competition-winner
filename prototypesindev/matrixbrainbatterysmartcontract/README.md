@@ -1507,8 +1507,8 @@ Course work Completed and Publications
 ![What-is-Research-Purpose-of-Research-phul4s3cbwe0xam190dnc4kz3z616ajmfkygodcdqg](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/9a197c61-233c-4dc7-b26b-f5df361db340)
 
 
-Course grade - 100/100
 
+Course grade - 100/100
 
 
 
@@ -1522,6 +1522,14 @@ https://drive.google.com/file/d/0B-dZqBe8jAliQkRMd2g3Q0NjNmM/view?usp=sharing&re
 
 
 
+Course grade - 106.52/100
+
+![hci](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/67046a01-6b03-4a5c-a844-441611fc9a6c)
+
+
+Human-Computer Interaction
+
+https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishment/970447~160861/pdf
 
 
 
@@ -1531,11 +1539,10 @@ https://drive.google.com/file/d/0B-dZqBe8jAliQkRMd2g3Q0NjNmM/view?usp=sharing&re
 
 Social Network Analysis
 
-https://drive.google.com/file/d/0B-dZqBe8jAlicnpTeTktNnRNOUU/view?resourcekey=0-NM-20avK2wMUgiZ2_1gvSQ
+https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishment/970466~160861/pdf
 
 
-
-
+![mastersdegree](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/5737ab91-7316-4228-b902-534acfc1c2ae)
 
 
 ![KDD conference](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/a7ac67df-f2cb-48df-9ce7-e37f21abd7c4)
