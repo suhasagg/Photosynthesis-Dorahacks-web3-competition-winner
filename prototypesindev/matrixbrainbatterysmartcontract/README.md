@@ -1164,6 +1164,36 @@ Streamlined form with quick-firing capabilities, echoing the fast strike of a co
 ![cobra-canine](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/687537ae-ec01-4343-97c3-37c78d695adc)
 
 
+![photo_2024-01-31_12-37-48](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/0766985b-5028-4266-9e8a-bacd1806e62e)
+
+
+![photo_2024-01-31_12-37-501](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/52985f86-573c-4605-a043-bb175fd29809)
+
+
+![photo_2024-01-31_12-37-54](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/1afaa761-735b-4275-88da-94e6d0997d57)
+
+
+![photo_2024-01-31_12-37-53](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/81ea9916-5f93-418c-a1c0-6555d8368891)
+
+
+![photo_2024-01-31_12-37-52](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/65906cec-884c-4538-a04f-2ce9cc1897fe)
+
+
+![photo_2024-01-31_12-37-51](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/78009d1e-7635-4625-ba58-cdb6ef37b560)
+
+
+![photo_2024-01-31_12-37-50](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/d74d6c86-d55b-454a-a27d-a812b65aed33)
+
+
+![photo_2024-01-31_12-37-49](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/06a73f5c-70f4-42c1-8b7a-88295bc406f1)
+
+
+![photo_2023-12-06_18-17-16](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/b2bf2fa2-7815-4827-90b6-0b8bb0c831c9)
+
+
+Fortnite characters inspired by Fruit Ninja Game 🧡🌹💜🌹🌸 (Banana Blitz, Apple Archer, Citrus Striker, Watermelon Crusher, Tropical Tactician) 🧡🌹🍌🍎🍊🍉🍍🥝🍓🍒💖
+
+
 
 Journey to the Mysterious Island: 
 
