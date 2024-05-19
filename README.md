@@ -20,13 +20,13 @@
 ***
 
 
-My video conferences in Archway Builder Call Logs!! 🎥📞📝❤️🧡💛💚💙💜🥰🥰🌹🌹
+My video conferences in Archway Builder Call Logs!! 🎥📞📝❤️🧡💛💚💙💜🥰🥰🎮🎮🌹🌹
 
 https://drive.google.com/file/d/1Odt7atltP6A1oKge887U269nZmD3tk9d/view
 
 
 
-Telegram Company Group 🎥📞📝❤️🧡💛💚💙💜🥰🥰🌹🌹
+Telegram Company Group 🎥📞📝❤️🧡💛💚💙💜🥰🥰🎮🎮🌹🌹
 
 https://drive.google.com/file/d/1u-4hbdFIg87vTmz_4KZTNHV-bvkq-B3t/view?usp=drive_link
 
