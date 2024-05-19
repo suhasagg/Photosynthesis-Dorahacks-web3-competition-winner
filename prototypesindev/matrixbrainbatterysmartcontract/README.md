@@ -404,6 +404,9 @@ https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/ass
 Movie theme Apps: 🎬 📱
 
 
+![28eb9523-84be-4cc2-ba87-276d0a134db1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/f90139f9-8c2e-496a-9a54-2dd0e9c467c8)
+
+
 ![netflix-logo](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/5b0ea76d-aa0c-42e3-8736-45bb5e2185c2)
 
 
