@@ -33,9 +33,6 @@ https://drive.google.com/file/d/1t1oy-DRtbILi59l1UlPVququNqn_Mm_X/view?usp=shari
 https://drive.google.com/file/d/1tNIOjS6TLFI5a4D6r3Bdv8IDEcxbDX4c/view?usp=sharing
 
 
-![tc1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/f219b253-df41-40a2-825d-13516e27a529)
-
-
 ![krv1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ecb76753-92c2-45b1-ad26-749e03e3d4cd)
 
 
