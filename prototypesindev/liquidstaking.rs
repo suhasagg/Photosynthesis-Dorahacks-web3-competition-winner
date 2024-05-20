@@ -210,5 +210,19 @@ fn distribute_redemption_amounts(deps: DepsMut, env: Env) -> StdResult<Response>
     }
 }
 
+// Calculate the ratio of a given stake amount to the total tokens
+fn calculate_ratio(stake_amount: &Uint128, total_tokens: &Uint128) -> Decimal {
+    if total_tokens.is_zero() {
+        Decimal::zero()
+    } else {
+        Decimal::from_ratio(*stake_amount, *total_tokens)
+    }
+}
+
+
+// Calculate the amount to distribute based on the total redemption tokens and the ratio
+fn calculate_amount(total_redemption_tokens: &Uint128, ratio: &Decimal) -> Uint128 {
+    ratio * *total_redemption_tokens
+}
        
 
