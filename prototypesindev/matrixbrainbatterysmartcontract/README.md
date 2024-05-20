@@ -1542,8 +1542,9 @@ Ross's Dinosaur Park: Ross lives out his childhood dream of visiting a land fill
 ![keanu](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/8ec3ba67-ebcd-44b6-9a74-e54074d2df5d)
 
 
+🌟 🌍 Discovery Channel NFTs 🌍 🌟 🎁🎁📜📜🎮🎮🌹🌹
 
-
+![bear-grylls](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c1635ef8-7262-42a3-889e-52c4a6965d69)
 
 
 Course work Completed and Publications
