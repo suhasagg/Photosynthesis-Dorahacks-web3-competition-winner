@@ -54,12 +54,11 @@ https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/ass
 
 
 Discord servers 🌐🔗 
-https://drive.google.com/drive/folders/1-AjWm1DboyI6f4zO8bRfwwlbZizjvSD4?usp=drive_link
+https://drive.google.com/drive/folders/1-AjWm1DboyI6f4zO8bRfwwlbZizjvSD4?usp=sharing
 
 
 Compressed Deployable code repository 📦💻 
 https://drive.google.com/file/d/1bxOzrGxvz21Sfu_vXZqZ-7rxqf3wbQAB/view?usp=drive_link
-
 
 
 ### 🖼️ **Workflows**
