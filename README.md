@@ -64,7 +64,7 @@ https://drive.google.com/file/d/1bxOzrGxvz21Sfu_vXZqZ-7rxqf3wbQAB/view?usp=drive
 ![uber](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/1a72754d-cb43-4522-ab34-a45f06a948aa)
 
 
-https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/8b2707c7-dfac-4ee3-a660-c9518f778fff
+![pokemonlight](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/8b2707c7-dfac-4ee3-a660-c9518f778fff)
 
 
 https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/eef1c91b-6dfa-473b-8ceb-40019f544fa5
