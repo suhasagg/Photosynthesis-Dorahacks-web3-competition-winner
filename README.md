@@ -52,6 +52,15 @@ https://drive.google.com/file/d/1tNIOjS6TLFI5a4D6r3Bdv8IDEcxbDX4c/view?usp=shari
 https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/d6ef9a2c-269c-46ea-bef1-e8f2307442f0
 
 
+Tripp Meditation Journey!! 🧘‍♀️🧘‍♂️🌺💮🌅🌄🌹🏵🌸🌻🌼💐
+
+https://youtu.be/hPRithmckaI?si=EnftkRfu-1EvRZKl 🧡🌹💜🌹
+
+
+Abzu Chapters 🐠 (Virtual Scuba Diving 🤿) Sea Adventure 🌊 (Whales Zone 🐋)
+
+https://youtu.be/M6KKX8D-iLg?si=V427ZftakUtTBgi7
+
 
 Discord servers 🌐🔗 
 https://drive.google.com/drive/folders/1-AjWm1DboyI6f4zO8bRfwwlbZizjvSD4?usp=sharing
