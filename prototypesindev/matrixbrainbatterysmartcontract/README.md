@@ -1676,6 +1676,8 @@ Workshops at the Twenty-Sixth AAAI Conference on Artificial Intelligence. 2012. 
 ![d-d](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/b6f414b4-6137-440e-979f-07164aea94af)
 
 
+Renewable sources of energy!! 🌍✨☀️ 🌬 🌊
+
 ![GO4U6phaQAEPJ38](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/7a909291-94e8-43f0-ba7d-623298b87756)
 
 ![GO4WA_XaEAA2PSd](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/d75bdc38-052a-40de-91fc-8d61daac9f37)
