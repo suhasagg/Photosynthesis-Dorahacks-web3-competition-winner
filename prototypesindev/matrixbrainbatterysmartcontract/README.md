@@ -1208,6 +1208,7 @@ Streamlined form with quick-firing capabilities, echoing the fast strike of a co
 
 Fortnite characters inspired by Fruit Ninja Game 🧡🌹💜🌹🌸 (Banana Blitz, Apple Archer, Citrus Striker, Watermelon Crusher, Tropical Tactician) 🧡🌹🍌🍎🍊🍉🍍🥝🍓🍒💖
 
+![GO_-U7eawAEBcJk](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/2c81b07a-7732-4bec-bf17-adc132248866)
 
 
 Journey to the Mysterious Island: 
