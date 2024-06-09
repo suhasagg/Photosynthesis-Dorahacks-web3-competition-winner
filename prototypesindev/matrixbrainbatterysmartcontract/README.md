@@ -431,7 +431,6 @@ https://x.com/KeanuReeve16852/status/1791515060654797153
 ![photo_2024-03-01_19-27-42](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c4ce10bf-4367-45ec-aa61-0eac5beaeffc)
 
 
-![photo_2024-03-01_19-27-50](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ab7829e9-87e1-4840-80bd-3605e3a05349)
 
 
 🎬🎥 Hollywood Movies 🎮🕹️ VideoGames 💎🎨 NFT Product ✨🌟
