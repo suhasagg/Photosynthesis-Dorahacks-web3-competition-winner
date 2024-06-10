@@ -1375,6 +1375,13 @@ WWE protective gear optimised using Sensors 💜🌹🧡🌹🎁🎁😍🥰🌸
 
 
 
+https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/125f9b80-c381-4abb-a140-93668f48972f
+
+
+https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/94c6e637-2498-45fc-b2bd-3e9effba87c9
+
+
+
 System Implementation Across Platforms
 
 https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/tree/main/prototypesindev/adserversmartcontract
