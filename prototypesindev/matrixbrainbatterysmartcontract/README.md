@@ -456,8 +456,7 @@ https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/ass
 https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/e80f49de-2387-4779-9c2b-1bf947430fd9
 
 
-https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/0d2d0e14-0b3e-4535-bcf7-e096b18ec996
-
+https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/484c971b-0a0e-4b10-bb98-77a6bbe355e2
 
 
 
