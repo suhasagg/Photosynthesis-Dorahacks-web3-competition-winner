@@ -1377,9 +1377,6 @@ Beast mode:
 
 
 
-
-
-
 ![09368ee5-d34f-458a-8413-365f5c32752a](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/c5a76ddc-8907-42a5-bc0f-b4487a821cef)
 
 
@@ -1389,6 +1386,10 @@ Beast mode:
 
 
 ![fe69a1e3-bf09-4016-a83b-5abc34c62a72](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/d95df775-1bce-4d77-99f0-56df66ceef59)
+
+
+
+https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/b9b03de2-f49e-4ade-b770-b2c4aa37fd72
 
 
 
