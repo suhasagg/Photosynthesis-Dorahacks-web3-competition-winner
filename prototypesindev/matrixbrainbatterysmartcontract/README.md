@@ -1562,6 +1562,16 @@ This Music NFTs App aims to revolutionize the way fans interact with music and a
 ![photo_2024-02-18_23-46-10](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/436743a7-8b60-4ae3-bd92-07db7498d998)
 
 
+Happy Friday!!💙❤️🧡💛💚💖💝🌸🌺🌼🏵️🎁🎁🌹🌹🎶🎵🔬🔬🌹🌹🍒🍇🍍🥝🍓🍈🍑🍐🍎🍏🍊🌹🌹💮💮🌹🌹🎮🎮🌹🌹🐚🐚🌹🌹
+
+Conch Shaped Alexa Designs!!
+
+![alexa1 jpg](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/6e8a5043-9f75-44b5-903b-9fe3b4a2f4d2)
+
+![alexa2 jpg](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/8205af8d-9b4a-474a-b65a-a7b4808aa936)
+
+
+
 Nickelodeon Retro
 
 ![Nick_Retro_2010_logo](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/53edbfab-0f26-4f44-b154-8a6b9dd9184a)
