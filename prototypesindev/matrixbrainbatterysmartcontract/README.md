@@ -479,6 +479,10 @@ https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/ass
 
 
 
+https://github.com/user-attachments/assets/9ef943bd-096c-426c-bcd7-b0291c4de1fe
+
+
+
 https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/8f1f9f3d-b803-4d1a-b63d-1ed2e2045325
 
 
@@ -496,16 +500,6 @@ https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/ass
 
 
 ![photo_2024-03-01_19-27-50](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/618b5c9c-0d4d-4768-b1cf-0a62a17caf4a)
-
-
-
-
-
-
-
-
-
-
 
 
 
