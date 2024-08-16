@@ -270,9 +270,10 @@ pub fn withdraw(
     staker_info.liquid_tokens -= liquid_token_amount;
     stakers(deps.storage).save(info.sender.as_bytes(), &staker_info)?;
 
-    // Update total staked and stToken supply in config
+    // Update total_staked, total_unbonded and stToken supply in config
     let mut config = config(deps.storage).load()?;
     config.total_staked -= original_staked;
+    config.total_unbonded += original_staked;
     config.st_token_supply -= liquid_token_amount;
     config(deps.storage).save(&config)?;
 
