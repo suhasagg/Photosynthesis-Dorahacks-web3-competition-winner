@@ -306,3 +306,109 @@ pub fn handle_ibc_withdraw(
 }
 
 
+
+pub fn receive_ibc_stake(
+    deps: DepsMut,
+    _env: Env,
+    _info: MessageInfo,
+    staker: Addr,
+    validator: Addr,
+    amount: Uint128,
+) -> StdResult<Response> {
+    // Verify the packet's authenticity and integrity
+    // Record the stake in the local state and associate it with the correct validator
+
+    let mut staker_info = stakers(deps.storage).load(staker.as_bytes()).unwrap_or_else(|_| StakerInfo {
+        staked_amount: Uint128::zero(),
+        liquid_tokens: Uint128::zero(),
+        reward_debt: Uint128::zero(),
+    });
+
+    let mut validator_info = validators(deps.storage).load(validator.as_bytes()).unwrap_or_else(|_| Validator {
+        address: validator.clone(),
+        total_staked: Uint128::zero(),
+    });
+
+    // Calculate the redemption rate
+    let redemption_rate = calculate_redemption_rate(deps.branch())?;
+
+    // Calculate the number of liquid tokens to mint based on the redemption rate
+    let liquid_tokens_to_mint = amount * redemption_rate;
+
+    // Update the staked amount and liquid tokens for the staker
+    staker_info.staked_amount += amount;
+    staker_info.liquid_tokens += liquid_tokens_to_mint;
+
+    // Update the total staked amount for the validator
+    validator_info.total_staked += amount;
+
+    // Save the updated staker and validator information
+    stakers(deps.storage).save(staker.as_bytes(), &staker_info)?;
+    validators(deps.storage).save(validator.as_bytes(), &validator_info)?;
+
+    // Mint liquid tokens to the staker
+    let mint_msg = CosmosMsg::Bank(BankMsg::Mint {
+        to_address: staker.to_string(),
+        amount: vec![Coin {
+            denom: "liquid_token".to_string(),
+            amount: liquid_tokens_to_mint,
+        }],
+    });
+
+    // Update the stToken supply in the configuration
+    let mut config = config(deps.storage).load()?;
+    config.st_token_supply += liquid_tokens_to_mint;
+    config.deps.save(&config)?;
+
+    // Return a response indicating successful processing of the IBC stake
+    Ok(Response::new()
+        .add_message(mint_msg)
+        .add_attribute("method", "receive_ibc_stake")
+        .add_attribute("staker", staker.to_string())
+        .add_attribute("validator", validator.to_string())
+        .add_attribute("amount", amount.to_string())
+        .add_attribute("liquid_tokens_minted", liquid_tokens_to_mint.to_string()))
+}
+
+
+
+
+pub fn receive_ibc_withdraw(
+    deps: DepsMut,
+    _env: Env,
+    _info: MessageInfo,
+    staker: Addr,
+    liquid_token_amount: Uint128,
+) -> StdResult<Response> {
+    // Verify the packet's authenticity and integrity
+    // Calculate the redemption rate
+    let redemption_rate = calculate_redemption_rate(deps.branch())?;
+
+    // Calculate the amount of staked assets to return based on the redemption rate
+    let original_staked = liquid_token_amount * redemption_rate;
+
+    // Create a BankMsg to send the staked assets to the staker's address
+    let send_msg = BankMsg::Send {
+        to_address: staker.to_string(),
+        amount: vec![Coin {
+            denom: "staked_token".to_string(),
+            amount: original_staked,
+        }],
+    };
+
+    // Update the stToken supply in the configuration
+    let mut config = config(deps.storage).load()?;
+    config.st_token_supply -= liquid_token_amount;
+    config.total_staked -= original_staked;
+    config.deps.save(&config)?;
+
+    // Return a response indicating successful processing of the IBC withdrawal
+    Ok(Response::new()
+        .add_message(send_msg)
+        .add_attribute("method", "receive_ibc_withdraw")
+        .add_attribute("staker", staker.to_string())
+        .add_attribute("liquid_token_amount", liquid_token_amount.to_string())
+        .add_attribute("redeemed_amount", original_staked.to_string()))
+}
+
+
