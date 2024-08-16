@@ -16,6 +16,8 @@ pub struct Config {
     pub reward_rate: Uint128,  // Annual percentage rate (APR)
     pub slashing_rate: Uint128, // Penalty rate for slashing
     pub previous_redemption_rate: Uint128,
+    pub total_unbonded: Uint128, 
+    pub module_account_balance: Uint128, 
     pub epoch_info: Option<EpochInfo>,
 }
 
@@ -73,6 +75,54 @@ pub fn initialize_epochs(
     Ok(Response::new()
         .add_attribute("method", "initialize_epochs")
         .add_attribute("epoch_duration", epoch_duration.to_string()))
+}
+
+
+pub fn update_config(
+    deps: DepsMut,
+    _env: Env,
+    info: MessageInfo,
+    total_unbonded: Uint128,
+    total_staked: Uint128,
+    module_account_balance: Uint128,
+    reward_pool: Option<Uint128>, // Optional
+    reward_rate: Option<Uint128>, // Optional
+    slashing_rate: Option<Uint128>, // Optional
+) -> StdResult<Response> {
+    // Load the existing config from storage
+    let mut config = config(deps.storage).load()?;
+
+    // Ensure that only the owner can update the config
+    if info.sender != config.owner {
+        return Err(StdError::unauthorized());
+    }
+
+    // Update the config fields with the provided parameters
+    config.total_unbonded = total_unbonded;
+    config.total_staked = total_staked;
+    config.module_account_balance = module_account_balance;
+
+    // Optionally update the other fields if provided
+    if let Some(reward_pool_value) = reward_pool {
+        config.reward_pool = reward_pool_value;
+    }
+    if let Some(reward_rate_value) = reward_rate {
+        config.reward_rate = reward_rate_value;
+    }
+    if let Some(slashing_rate_value) = slashing_rate {
+        config.slashing_rate = slashing_rate_value;
+    }
+
+    // Save the updated config back to storage
+    config(deps.storage).save(&config)?;
+
+    // Return a response indicating the update was successful
+    Ok(Response::new()
+        .add_attribute("method", "update_config")
+        .add_attribute("total_unbonded", total_unbonded.to_string())
+        .add_attribute("total_staked", total_staked.to_string())
+        .add_attribute("module_account_balance", module_account_balance.to_string())
+        .add_attribute("total_value", total_value.to_string()))
 }
 
 
