@@ -12,8 +12,11 @@ pub struct Config {
     pub owner: Addr,
     pub reward_pool: Uint128,
     pub total_staked: Uint128,
+    pub st_token_supply: Uint128,
     pub reward_rate: Uint128,  // Annual percentage rate (APR)
     pub slashing_rate: Uint128, // Penalty rate for slashing
+    pub previous_redemption_rate: Uint128,
+    pub epoch_info: Option<EpochInfo>,
 }
 
 #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
@@ -29,6 +32,15 @@ pub struct Validator {
     pub total_staked: Uint128,
 }
 
+
+#[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
+pub struct EpochInfo {
+    pub current_epoch: u64,
+    pub last_compounded_epoch: u64,
+    pub epoch_duration: u64, // Duration of each epoch in blocks or time
+}
+
+
 pub fn config(storage: &mut dyn cosmwasm_std::Storage) -> Bucket<Config> {
     bucket(storage, b"config")
 }
@@ -39,6 +51,28 @@ pub fn stakers(storage: &mut dyn cosmwasm_std::Storage) -> Bucket<StakerInfo> {
 
 pub fn validators(storage: &mut dyn cosmwasm_std::Storage) -> Bucket<Validator> {9
     bucket(storage, b"validators")
+}
+
+// Function to initialize the epochs
+pub fn initialize_epochs(
+    deps: DepsMut,
+    _env: Env,
+    info: MessageInfo,
+    epoch_duration: u64,
+) -> StdResult<Response> {
+    let epoch_info = EpochInfo {
+        current_epoch: 0,
+        last_compounded_epoch: 0,
+        epoch_duration,
+    };
+
+    let mut config = config(deps.storage).load()?;
+    config.epoch_info = Some(epoch_info);
+    config(deps.storage).save(&config)?;
+
+    Ok(Response::new()
+        .add_attribute("method", "initialize_epochs")
+        .add_attribute("epoch_duration", epoch_duration.to_string()))
 }
 
 
@@ -205,6 +239,81 @@ pub fn withdraw(
         .add_attribute("method", "withdraw")
         .add_attribute("liquid_token_amount", liquid_token_amount.to_string())
         .add_attribute("redeemed_amount", original_staked.to_string()))
+}
+
+
+
+pub fn auto_compound(
+    deps: DepsMut,
+    env: Env,
+    info: MessageInfo,
+) -> StdResult<Response> {
+    let mut config = config(deps.storage).load()?;
+    let epoch_info = config.epoch_info.as_mut().ok_or_else(|| StdError::generic_err("Epoch info not initialized"))?;
+
+    // Check if it's time to run the auto-compounding based on the epoch duration
+    if env.block.height < epoch_info.current_epoch + epoch_info.epoch_duration {
+        return Err(StdError::generic_err("Not time for auto-compounding yet"));
+    }
+
+    // Update the current epoch
+     epoch_info.last_compounded_epoch = env.block.height;
+     epoch_info.current_epoch += 1;
+     config.epoch_info = Some(*epoch_info);
+     config(deps.storage).save(&config)?;
+
+
+    // Perform auto-compounding for the current staker
+    let mut staker_info = stakers(deps.storage).load(info.sender.as_bytes())?;
+    if staker_info.staked_amount.is_zero() {
+        return Err(StdError::generic_err("No staked amount to compound."));
+    }
+
+    // Calculate pending rewards
+    let pending_rewards = (staker_info.staked_amount * config.reward_rate) - staker_info.reward_debt;
+
+    if pending_rewards.is_zero() {
+        return Err(StdError::generic_err("No rewards available to compound."));
+    }
+
+    // Calculate the redemption rate
+    let redemption_rate = calculate_redemption_rate(deps.branch())?;
+
+    // Calculate the amount of liquid tokens to mint based on the pending rewards
+    let liquid_tokens_to_mint = pending_rewards * redemption_rate;
+
+    // Update staker's staked amount and liquid tokens
+    staker_info.staked_amount += pending_rewards;
+    staker_info.liquid_tokens += liquid_tokens_to_mint;
+    staker_info.reward_debt += pending_rewards;
+
+    // Update the validator's total staked amount
+    let mut validator_info = validators(deps.storage).load(info.sender.as_bytes())?;
+    validator_info.total_staked += pending_rewards;
+
+    // Save the updated staker and validator information
+    stakers(deps.storage).save(info.sender.as_bytes(), &staker_info)?;
+    validators(deps.storage).save(info.sender.as_bytes(), &validator_info)?;
+
+    // Mint additional liquid tokens for the staker
+    let mint_msg = CosmosMsg::Bank(BankMsg::Mint {
+        to_address: info.sender.to_string(),
+        amount: vec![Coin {
+            denom: "liquid_token".to_string(),
+            amount: liquid_tokens_to_mint,
+        }],
+    });
+
+    // Update the protocol's total staked amount and stToken supply
+    config.total_staked += pending_rewards;
+    config.st_token_supply += liquid_tokens_to_mint;
+    config(deps.storage).save(&config)?;
+
+    Ok(Response::new()
+        .add_message(mint_msg)
+        .add_attribute("method", "auto_compound")
+        .add_attribute("compounded_amount", pending_rewards.to_string())
+        .add_attribute("liquid_tokens_minted", liquid_tokens_to_mint.to_string()))
 }
 
 
@@ -410,5 +519,3 @@ pub fn receive_ibc_withdraw(
         .add_attribute("liquid_token_amount", liquid_token_amount.to_string())
         .add_attribute("redeemed_amount", original_staked.to_string()))
 }
-
-
