@@ -515,6 +515,10 @@ https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/ass
 
 
 
+https://github.com/user-attachments/assets/fd03532b-598a-490d-8616-116fd135baad
+
+
+
 ![photo_2024-03-01_19-27-50](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/618b5c9c-0d4d-4768-b1cf-0a62a17caf4a)
 
 
@@ -1554,14 +1558,45 @@ By adding these features, the Music NFTs App not only serves as a platform for e
 This Music NFTs App aims to revolutionize the way fans interact with music and artists, offering an immersive, interactive platform that combines the exclusivity of NFT ownership with the cutting-edge experiences provided by VR and the latest audio-visual technologies.
 
 
-![nick2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/e794d81f-4567-40ac-84ae-ca6bac593a7b)
+![suhas](https://github.com/user-attachments/assets/a39d11d6-7077-4a78-adb5-9bf5eaaa2553)
 
+
+![nick2](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/e794d81f-4567-40ac-84ae-ca6bac593a7b)
 
 
 ![406109951_894622958920314_7579642384051649931_n](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/3a474d93-b923-4dfa-96ac-5f7b8e6f976a)
 
 
+
 ![403467377_706736198063114_693084520593602746_n](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ab6359d7-cfa3-457c-b04b-241b28b7a348)
+
+
+
+![justinbieber](https://github.com/user-attachments/assets/3cad0d5b-7faf-4b8b-861f-5144ead3a67f)
+
+
+
+![enrique](https://github.com/user-attachments/assets/1e9610a0-82e0-444e-9fb4-f85e1a986cf3)
+
+
+
+![enrique2](https://github.com/user-attachments/assets/b70244c7-3b27-4232-bc45-0b29fb78b2eb)
+
+
+
+![shaniatwain](https://github.com/user-attachments/assets/ff534a67-a6ac-498d-aef5-2133167c7f4f)
+
+
+
+![celinedion](https://github.com/user-attachments/assets/9f448e86-7acc-4aec-84a6-7d84b501b34b)
+
+
+
+![aqua2](https://github.com/user-attachments/assets/96ffaa8b-87e9-4ded-936c-5ea157a05009)
+
+
+
+![aqua1](https://github.com/user-attachments/assets/43d057c3-01c6-478e-8d6d-4f259d615b99)
 
 
 
