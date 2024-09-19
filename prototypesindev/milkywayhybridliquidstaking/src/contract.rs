@@ -1,16 +1,66 @@
 use cosmwasm_std::{
-    attr, BankMsg, Coin, Deps, DepsMut, Env, MessageInfo, Response, StdError, StdResult, Uint128,
-    Decimal, Binary, OverflowError,
+    attr, entry_point, to_binary, Addr, BankMsg, Binary, Coin, Decimal, Deps, DepsMut, Empty, Env,
+    MessageInfo, Response, StdError, StdResult, Uint128,
 };
-use cosmwasm_std::to_binary;
-use cosmwasm_std::Empty;
 use cw_storage_plus::Item;
+use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
-use schemars::JsonSchema;
-use cosmwasm_std::entry_point;
-use crate::msg::{ExecuteMsg, InstantiateMsg, QueryMsg};
-use crate::state::{StakeInfo, RewardInfo, RewardRecord, State, STATE};
+
+// ==================== State Definitions ====================
+
+#[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
+pub struct State {
+    pub current_epoch: u64,
+    pub staking_info: HashMap<String, StakeInfo>,
+    pub reward_info: HashMap<String, RewardInfo>,
+    pub reward_records: HashMap<String, RewardRecord>,
+    pub total_liquid_tokens: Uint128,
+    pub total_redemption_tokens: Uint128,
+    pub contract_addresses: Vec<String>,
+}
+
+pub const STATE: Item<State> = Item::new("state");
+
+#[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
+pub struct StakeInfo {
+    pub amount: Uint128,
+    pub last_updated_epoch: u64,
+}
+
+#[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
+pub struct RewardInfo {
+    pub total_rewards: Uint128,
+    pub last_claim_epoch: u64,
+}
+
+#[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
+pub struct RewardRecord {
+    pub epoch: u64,
+    pub amount: Uint128,
+}
+
+// ==================== Message Definitions ====================
+
+#[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
+pub struct InstantiateMsg {}
+
+#[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
+pub enum ExecuteMsg {
+    StakeTokens { amount: Uint128 },
+    WithdrawRewards {},
+    UpdateEpoch {},
+    DistributeLiquidTokens {},
+    DistributeRedemptionAmounts {},
+}
+
+#[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
+pub enum QueryMsg {
+    TotalStaked { staker: String },
+    TotalRewards { staker: String },
+}
+
+// ==================== Contract Functions ====================
 
 // Instantiate function
 #[entry_point]
@@ -73,12 +123,27 @@ fn stake_tokens(deps: DepsMut, info: MessageInfo, amount: Uint128) -> StdResult<
         return Err(StdError::generic_err("Cannot stake zero tokens"));
     }
 
+    // Verify that the staker has sent the correct amount of tokens
+    let sent_amount = info
+        .funds
+        .iter()
+        .find(|coin| coin.denom == "token")
+        .map(|coin| coin.amount)
+        .unwrap_or(Uint128::zero());
+
+    if sent_amount != amount {
+        return Err(StdError::generic_err("Incorrect token amount sent"));
+    }
+
     let mut state_data = STATE.load(deps.storage)?;
     let staker = info.sender.to_string();
-    let stake_info = state_data.staking_info.entry(staker.clone()).or_insert_with(|| StakeInfo {
-        amount: Uint128::zero(),
-        last_updated_epoch: state_data.current_epoch,
-    });
+    let stake_info = state_data
+        .staking_info
+        .entry(staker.clone())
+        .or_insert_with(|| StakeInfo {
+            amount: Uint128::zero(),
+            last_updated_epoch: state_data.current_epoch,
+        });
 
     stake_info.amount = stake_info
         .amount
@@ -87,10 +152,6 @@ fn stake_tokens(deps: DepsMut, info: MessageInfo, amount: Uint128) -> StdResult<
     STATE.save(deps.storage, &state_data)?;
 
     Ok(Response::new()
-        .add_message(BankMsg::Send {
-            to_address: "staking_pool".to_string(),
-            amount: vec![Coin { denom: "token".to_string(), amount }],
-        })
         .add_attribute("action", "stake_tokens")
         .add_attribute("staker", staker)
         .add_attribute("amount", amount.to_string()))
@@ -100,10 +161,13 @@ fn stake_tokens(deps: DepsMut, info: MessageInfo, amount: Uint128) -> StdResult<
 fn withdraw_rewards(deps: DepsMut, info: MessageInfo) -> StdResult<Response> {
     let mut state_data = STATE.load(deps.storage)?;
     let staker = info.sender.to_string();
-    let reward_info = state_data.reward_info.entry(staker.clone()).or_insert_with(|| RewardInfo {
-        total_rewards: Uint128::zero(),
-        last_claim_epoch: state_data.current_epoch,
-    });
+    let reward_info = state_data
+        .reward_info
+        .entry(staker.clone())
+        .or_insert_with(|| RewardInfo {
+            total_rewards: Uint128::zero(),
+            last_claim_epoch: state_data.current_epoch,
+        });
 
     let rewards_to_withdraw = reward_info.total_rewards;
     reward_info.total_rewards = Uint128::zero(); // Reset rewards after withdrawal
@@ -116,7 +180,10 @@ fn withdraw_rewards(deps: DepsMut, info: MessageInfo) -> StdResult<Response> {
     Ok(Response::new()
         .add_message(BankMsg::Send {
             to_address: staker.clone(),
-            amount: vec![Coin { denom: "token".to_string(), amount: rewards_to_withdraw }],
+            amount: vec![Coin {
+                denom: "token".to_string(),
+                amount: rewards_to_withdraw,
+            }],
         })
         .add_attribute("action", "withdraw_rewards")
         .add_attribute("staker", staker)
@@ -124,27 +191,66 @@ fn withdraw_rewards(deps: DepsMut, info: MessageInfo) -> StdResult<Response> {
 }
 
 
-// Distribute liquid tokens function
 fn distribute_liquid_tokens(deps: DepsMut, env: Env) -> StdResult<Response> {
     let mut state_data = STATE.load(deps.storage)?;
-    let mut messages = Vec::new(); // Collect all messages to be dispatched
+    let mut messages = Vec::new();
 
-    for contract in &state_data.contract_addresses {
-        let stake_amount = state_data
-            .staking_info
-            .get(contract)
-            .map(|info| info.amount)
-            .unwrap_or(Uint128::zero());
+    // Query the contract's balance
+    let contract_balance = deps
+        .querier
+        .query_balance(env.contract.address.clone(), "token")?;
+    let contract_balance_amount = contract_balance.amount;
 
-        let amount = calculate_distribution(&state_data.total_liquid_tokens, &stake_amount);
+    // Calculate the total staked amount
+    let total_staked: Uint128 = state_data
+        .staking_info
+        .values()
+        .map(|info| info.amount)
+        .sum();
+
+    // Calculate the tokens available for distribution 
+    let total_liquid_tokens = contract_balance_amount
+        .checked_sub(total_staked)
+        .map_err(StdError::overflow)?;
+
+    // Update total_liquid_tokens in state
+    state_data.total_liquid_tokens = total_liquid_tokens;
+
+    if total_liquid_tokens.is_zero() {
+        return Err(StdError::generic_err("No tokens available for distribution"));
+    }
+
+    // Log the calculated values
+    println!("Contract balance: {}", contract_balance_amount);
+    println!("Total staked: {}", total_staked);
+    println!("Total liquid tokens to distribute: {}", total_liquid_tokens);
+
+    // Detailed logs for each staker
+    for (staker, stake_info) in state_data.staking_info.iter() {
+        let stake_amount = stake_info.amount;
+
+        let (ratio, amount) = calculate_distribution_with_ratio(
+            &state_data.total_liquid_tokens,
+            &stake_amount,
+            &total_staked,
+        );
 
         if amount.is_zero() {
-            continue; // Skip zero distributions
+            continue;
         }
 
+        // Log detailed information for each staker
+        println!("Staker: {}", staker);
+        println!("  Total Staked: {}", stake_amount);
+        println!("  Staking Ratio: {:.4}", ratio);
+        println!("  Liquid Tokens Received: {}", amount);
+
         let msg = BankMsg::Send {
-            to_address: contract.clone(),
-            amount: vec![Coin { denom: "token".to_string(), amount }],
+            to_address: staker.clone(),
+            amount: vec![Coin {
+                denom: "token".to_string(),
+                amount,
+            }],
         };
 
         state_data.total_liquid_tokens = state_data
@@ -156,7 +262,7 @@ fn distribute_liquid_tokens(deps: DepsMut, env: Env) -> StdResult<Response> {
     }
 
     if messages.is_empty() {
-        return Err(StdError::generic_err("No contracts to distribute tokens"));
+        return Err(StdError::generic_err("No stakers to distribute tokens"));
     }
 
     STATE.save(deps.storage, &state_data)?;
@@ -166,33 +272,72 @@ fn distribute_liquid_tokens(deps: DepsMut, env: Env) -> StdResult<Response> {
         .add_attribute("action", "distribute_liquid_tokens"))
 }
 
-// Distribute redemption amounts function
-fn distribute_redemption_amounts(deps: DepsMut, _env: Env) -> StdResult<Response> {
-    let mut state_data = STATE.load(deps.storage)?;
-    let mut messages = Vec::new(); // Collect all messages to be dispatched
 
-    let total_tokens = state_data
-        .total_liquid_tokens
-        .checked_add(state_data.total_redemption_tokens)
+fn distribute_redemption_amounts(deps: DepsMut, env: Env) -> StdResult<Response> {
+    let mut state_data = STATE.load(deps.storage)?;
+    let mut messages = Vec::new();
+
+    // Query the contract's balance
+    let contract_balance = deps
+        .querier
+        .query_balance(env.contract.address.clone(), "token")?;
+    let contract_balance_amount = contract_balance.amount;
+
+    // Calculate the total staked amount
+    let total_staked: Uint128 = state_data
+        .staking_info
+        .values()
+        .map(|info| info.amount)
+        .sum();
+
+    // Calculate the tokens available for distribution 
+    let total_redemption_tokens = contract_balance_amount
+        .checked_sub(total_staked)
         .map_err(StdError::overflow)?;
 
-    for contract in &state_data.contract_addresses {
-        let stake_amount = state_data
-            .staking_info
-            .get(contract)
-            .map(|info| info.amount)
-            .unwrap_or(Uint128::zero());
+    // Update total_redemption_tokens in state
+    state_data.total_redemption_tokens = total_redemption_tokens;
 
-        let ratio = calculate_ratio(&stake_amount, &total_tokens);
-        let amount = calculate_amount(&state_data.total_redemption_tokens, &ratio);
+    if total_redemption_tokens.is_zero() {
+        return Err(StdError::generic_err(
+            "No tokens available for redemption distribution",
+        ));
+    }
+
+    // Log the calculated values
+    println!("Contract balance: {}", contract_balance_amount);
+    println!("Total staked: {}", total_staked);
+    println!(
+        "Total redemption tokens to distribute: {}",
+        total_redemption_tokens
+    );
+
+    // Detailed logs for each staker
+    for (staker, stake_info) in state_data.staking_info.iter() {
+        let stake_amount = stake_info.amount;
+
+        let (ratio, amount) = calculate_distribution_with_ratio(
+            &state_data.total_redemption_tokens,
+            &stake_amount,
+            &total_staked,
+        );
 
         if amount.is_zero() {
-            continue; // Skip zero distributions
+            continue;
         }
 
+        // Log detailed information for each staker
+        println!("Staker: {}", staker);
+        println!("  Total Staked: {}", stake_amount);
+        println!("  Staking Ratio: {:.4}", ratio);
+        println!("  Redemption Tokens Received: {}", amount);
+
         let msg = BankMsg::Send {
-            to_address: contract.clone(),
-            amount: vec![Coin { denom: "token".to_string(), amount }],
+            to_address: staker.clone(),
+            amount: vec![Coin {
+                denom: "token".to_string(),
+                amount,
+            }],
         };
 
         state_data.total_redemption_tokens = state_data
@@ -204,7 +349,9 @@ fn distribute_redemption_amounts(deps: DepsMut, _env: Env) -> StdResult<Response
     }
 
     if messages.is_empty() {
-        return Err(StdError::generic_err("No contracts to distribute redemption amounts"));
+        return Err(StdError::generic_err(
+            "No stakers to distribute redemption amounts",
+        ));
     }
 
     STATE.save(deps.storage, &state_data)?;
@@ -214,24 +361,19 @@ fn distribute_redemption_amounts(deps: DepsMut, _env: Env) -> StdResult<Response
         .add_attribute("action", "distribute_redemption_amounts"))
 }
 
-
-// Calculate the ratio of a given stake amount to the total tokens
-fn calculate_ratio(stake_amount: &Uint128, total_tokens: &Uint128) -> Decimal {
-    if total_tokens.is_zero() {
-        Decimal::zero()
+// Calculate distribution with staking ratio
+fn calculate_distribution_with_ratio(
+    total_tokens: &Uint128,
+    stake_amount: &Uint128,
+    total_staked: &Uint128,
+) -> (Decimal, Uint128) {
+    if total_staked.is_zero() {
+        (Decimal::zero(), Uint128::zero())
     } else {
-        Decimal::from_ratio(*stake_amount, *total_tokens)
+        let ratio = Decimal::from_ratio(*stake_amount, *total_staked);
+        let amount = ratio * *total_tokens;
+        (ratio, amount)
     }
-}
-
-// Calculate the amount to distribute based on the total redemption tokens and the ratio
-fn calculate_amount(total_redemption_tokens: &Uint128, ratio: &Decimal) -> Uint128 {
-    (*ratio * *total_redemption_tokens)
-}
-
-// Calculate distribution
-fn calculate_distribution(total_liquid_tokens: &Uint128, _amount: &Uint128) -> Uint128 {
-    *total_liquid_tokens // Simplified for demo
 }
 
 // Query total staked
@@ -254,15 +396,17 @@ fn query_total_rewards(deps: Deps, staker: String) -> StdResult<Binary> {
     }
 }
 
+// ==================== Unit Tests ====================
+
 #[cfg(test)]
 mod tests {
     use super::*;
-    use cosmwasm_std::{Addr, Coin, Uint128, StdError};
-    use cw_multi_test::{App, Contract, ContractWrapper, Executor};
-    use std::convert::TryInto;
+    use anyhow::Error;
+    use cosmwasm_std::{Addr, Coin};
+    use cw_multi_test::{App, AppBuilder, Contract, ContractWrapper, Executor};
 
     fn mock_app() -> App {
-        App::default()
+        AppBuilder::new().build(|_router, _api, _storage| {})
     }
 
     fn contract_staking() -> Box<dyn Contract<Empty>> {
@@ -271,7 +415,7 @@ mod tests {
     }
 
     #[test]
-    fn test_full_liquid_staking_workflow() -> Result<(), StdError> {
+    fn test_full_liquid_staking_workflow() -> Result<(), Error> {
         let mut app = mock_app();
 
         // Store the contract code
@@ -279,16 +423,14 @@ mod tests {
         println!("Contract code stored with code_id: {}", code_id);
 
         // Instantiate the contract
-        let contract_addr = app
-            .instantiate_contract(
-                code_id,
-                Addr::unchecked("owner"),
-                &InstantiateMsg {},
-                &[],
-                "StakingContract",
-                None,
-            )
-            .map_err(|err| StdError::generic_err(format!("Failed to instantiate contract: {:?}", err)))?;
+        let contract_addr = app.instantiate_contract(
+            code_id,
+            Addr::unchecked("owner"),
+            &InstantiateMsg {},
+            &[],
+            "StakingContract",
+            None,
+        )?;
         println!("Contract instantiated at address: {}", contract_addr);
 
         // Mint initial tokens to staker1 and staker2
@@ -298,8 +440,7 @@ mod tests {
                 denom: "token".to_string(),
                 amount: Uint128::new(3000),
             }],
-        }))
-        .map_err(|err| StdError::generic_err(format!("Failed to mint tokens to staker1: {:?}", err)))?;
+        }))?;
         println!("Minted 3000 tokens to staker1");
 
         app.sudo(cw_multi_test::SudoMsg::Bank(cw_multi_test::BankSudo::Mint {
@@ -308,24 +449,37 @@ mod tests {
                 denom: "token".to_string(),
                 amount: Uint128::new(2000),
             }],
-        }))
-        .map_err(|err| StdError::generic_err(format!("Failed to mint tokens to staker2: {:?}", err)))?;
+        }))?;
         println!("Minted 2000 tokens to staker2");
 
-
+        // Staker1 stakes 1000 tokens
+        let stake_amount_1 = Uint128::new(1000);
+        app.execute_contract(
+            Addr::unchecked("staker1"),
+            contract_addr.clone(),
+            &ExecuteMsg::StakeTokens {
+                amount: stake_amount_1,
+            },
+            &vec![Coin {
+                denom: "token".to_string(),
+                amount: stake_amount_1,
+            }],
+        )?;
+        println!("Staker1 staked 1000 tokens");
 
         // Staker2 stakes 500 tokens
         let stake_amount_2 = Uint128::new(500);
         app.execute_contract(
             Addr::unchecked("staker2"),
             contract_addr.clone(),
-            &ExecuteMsg::StakeTokens { amount: stake_amount_2 },
+            &ExecuteMsg::StakeTokens {
+                amount: stake_amount_2,
+            },
             &vec![Coin {
                 denom: "token".to_string(),
                 amount: stake_amount_2,
             }],
-        )
-        .map_err(|err| StdError::generic_err(format!("Failed to stake tokens by staker2: {:?}", err)))?;
+        )?;
         println!("Staker2 staked 500 tokens");
 
         // Simulate reward distribution by incrementing the epoch
@@ -334,8 +488,7 @@ mod tests {
             contract_addr.clone(),
             &ExecuteMsg::UpdateEpoch {},
             &[],
-        )
-        .map_err(|err| StdError::generic_err(format!("Failed to update epoch: {:?}", err)))?;
+        )?;
         println!("Epoch updated to simulate reward distribution");
 
         // Mint rewards to the contract
@@ -343,22 +496,66 @@ mod tests {
             to_address: contract_addr.to_string(),
             amount: vec![Coin {
                 denom: "token".to_string(),
-                amount: Uint128::new(1500), // Total rewards to be distributed
+                amount: Uint128::new(1500),
             }],
-        }))
-        .map_err(|err| StdError::generic_err(format!("Failed to mint rewards to contract: {:?}", err)))?;
-        println!("Minted 1500 tokens to contract address: {}", contract_addr);
+        }))?;
+        println!(
+            "Minted 1500 tokens to contract address: {}",
+            contract_addr
+        );
 
-       // Mint rewards to the contract
+        // Distribute liquid tokens
+        println!("Distributing liquid tokens...");
+        app.execute_contract(
+            Addr::unchecked("owner"),
+            contract_addr.clone(),
+            &ExecuteMsg::DistributeLiquidTokens {},
+            &[],
+        )?;
+        println!("Distributed liquid tokens");
+
+        // Query balances after distribution
+        let staker1_balance = app.wrap().query_balance("staker1", "token")?;
+        let staker2_balance = app.wrap().query_balance("staker2", "token")?;
+        println!("Staker1 balance: {}", staker1_balance.amount);
+        println!("Staker2 balance: {}", staker2_balance.amount);
+
+
+        // Mint redemption tokens to the contract
         app.sudo(cw_multi_test::SudoMsg::Bank(cw_multi_test::BankSudo::Mint {
             to_address: contract_addr.to_string(),
             amount: vec![Coin {
                 denom: "token".to_string(),
-                amount: Uint128::new(1500), // Total rewards to be distributed
+                amount: Uint128::new(1500),
             }],
-        }))
-        .map_err(|err| StdError::generic_err(format!("Failed to mint rewards to contract: {:?}", err)))?;
-        println!("Minted 1500 tokens to contract address: {}", contract_addr);
+        }))?;
+        println!(
+            "Minted 1500 redemption tokens to contract address: {}",
+            contract_addr
+        );
+
+        // Distribute redemption amounts
+        println!("Distributing redemption amounts...");
+        app.execute_contract(
+            Addr::unchecked("owner"),
+            contract_addr.clone(),
+            &ExecuteMsg::DistributeRedemptionAmounts {},
+            &[],
+        )?;
+        println!("Distributed redemption amounts");
+
+        // Query balances after redemption distribution
+        let staker1_balance_after = app.wrap().query_balance("staker1", "token")?;
+        let staker2_balance_after = app.wrap().query_balance("staker2", "token")?;
+        println!(
+            "Staker1 balance after redemption: {}",
+            staker1_balance_after.amount
+        );
+        println!(
+            "Staker2 balance after redemption: {}",
+            staker2_balance_after.amount
+        );
+
 
         Ok(())
     }
