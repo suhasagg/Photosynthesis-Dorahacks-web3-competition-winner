@@ -4589,6 +4589,11 @@ Validators may be replaced based on the selection algorithm's criteria, taking i
 Validator 2 executes Job A.
 
 
+# Advantages of using Cosmos SDK vs Cosmwam Rust Smart Contract for Liquid Staking
+
+https://docs.google.com/document/d/1-ONCO9ct8B2CVG8HEc2cT2_rFsj57nBe7U3YY7fj8e4/edit?usp=sharing
+
+
 # Advantages of using cron jobs vs cosmwasm rust smart contracts 
 
 
