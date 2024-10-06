@@ -85,11 +85,7 @@ https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/ass
 ![goku1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/55077d8d-ad80-4412-b526-910ded9af589)
 
  
-![36f18064-66b6-4c49-99e9-b9e258f91602](https://github.com/user-attachments/assets/0f19d08f-1d95-4801-8bd3-2f3f829e6d02)
-
  🌹✨ 🌹✨ 🌹✨
-
- ![802-1-2-600x600](https://github.com/user-attachments/assets/9bf9eede-0b33-45e7-81af-0973bb64f4f2)
 
 ### 
 🖼️ **Workflows**
