@@ -19,20 +19,6 @@
 
 ***
 
-
-My video conferences in Archway Builder Call Logs!! 🎥📞📝❤️🧡💛💚💙💜🥰🥰🎮🎮🌹🌹
-
-https://drive.google.com/file/d/1Odt7atltP6A1oKge887U269nZmD3tk9d/view
-
-
-
-Telegram Company Group 🎥📞📝❤️🧡💛💚💙💜🥰🥰🎮🎮🌹🌹
-
-https://drive.google.com/file/d/1t1oy-DRtbILi59l1UlPVququNqn_Mm_X/view?usp=sharing
-
-https://drive.google.com/file/d/1tNIOjS6TLFI5a4D6r3Bdv8IDEcxbDX4c/view?usp=sharing
-
-
 ![krv1](https://github.com/suhasagg/Photosynthesis-Dorahacks-web3-competition-winner/assets/3880512/ecb76753-92c2-45b1-ad26-749e03e3d4cd)
 
 
